@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ar9271-firmware/ar9271-firmware-1.3.ebuild,v 1.2 2012/12/10 07:42:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ar9271-firmware/ar9271-firmware-1.3.ebuild,v 1.3 2012/12/10 07:46:12 slyfox Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://linuxwireless.org/en/users/Drivers/ath9k_htc"
 SRC_URI="http://linuxwireless.org/download/htc_fw/${PV}/${FIRMWARE_NAME} -> ${P}-${FIRMWARE_NAME}
 	http://linuxwireless.org/download/htc_fw/${PV}/Changelog -> ${P}.Changelog"
 
-LICENSE="as-is"
+LICENSE="freedist"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 RESTRICT="binchecks strip"
