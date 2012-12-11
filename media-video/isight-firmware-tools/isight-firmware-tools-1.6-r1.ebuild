@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/isight-firmware-tools-1.6-r1.ebuild,v 1.1 2012/08/12 06:42:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/isight-firmware-tools-1.6-r1.ebuild,v 1.2 2012/12/11 11:17:30 ssuominen Exp $
 
 EAPI=4
-inherit eutils multilib versionator toolchain-funcs
+inherit eutils multilib versionator toolchain-funcs udev
 
 MY_MAJORV="$(get_version_component_range 1).6"
 DESCRIPTION="Extract, load or export firmware for the iSight webcams"
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.14:2
 	dev-libs/libgcrypt
-	>=sys-fs/udev-149
+	virtual/udev
 	virtual/libusb:0"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
@@ -35,7 +35,7 @@ src_prepare() {
 
 	# Fix for systems with lib64 but no symlink to lib
 	sed -i \
-		-e "s:@udevdir@:$($(tc-getPKG_CONFIG) --variable=udevdir udev):" \
+		-e "s:@udevdir@:$(udev_get_udevdir):" \
 		src/isight.rules.in.in || die
 }
 
@@ -45,7 +45,7 @@ src_configure() {
 }
 
 src_install() {
-	local udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	local udevdir="$(udev_get_udevdir)"
 
 	emake \
 		DESTDIR="${D}" \
