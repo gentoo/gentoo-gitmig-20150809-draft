@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.696 2012/12/11 00:02:48 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.697 2012/12/11 00:07:11 chithanh Exp $
+
+  11 Dec 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-server-1.13.0-r1.ebuild:
+  Enable libdrm uncondionally, bug #439138.
 
   11 Dec 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xorg-server-1.13.0-r1.ebuild, xorg-server-1.13.0.ebuild:

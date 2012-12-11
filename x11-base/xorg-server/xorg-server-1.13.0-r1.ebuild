@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.13.0-r1.ebuild,v 1.9 2012/12/11 00:02:48 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.13.0-r1.ebuild,v 1.10 2012/12/11 00:07:11 chithanh Exp $
 
 EAPI=4
 
@@ -21,6 +21,7 @@ RDEPEND=">=app-admin/eselect-opengl-1.0.8
 	>=x11-apps/rgb-1.0.3
 	>=x11-apps/xauth-1.0.3
 	x11-apps/xkbcomp
+	>=x11-libs/libdrm-2.4.20
 	>=x11-libs/libpciaccess-0.12.901
 	>=x11-libs/libXau-1.0.4
 	>=x11-libs/libXdmcp-1.0.2
@@ -94,7 +95,6 @@ DEPEND="${RDEPEND}
 	!minimal? (
 		>=x11-proto/xf86driproto-2.1.0
 		>=x11-proto/dri2proto-2.8
-		>=x11-libs/libdrm-2.4.20
 	)"
 
 PDEPEND="
@@ -142,7 +142,6 @@ src_configure() {
 		$(use_enable !minimal dri)
 		$(use_enable !minimal dri2)
 		$(use_enable !minimal glx)
-		$(use_enable !minimal libdrm)
 		$(use_enable xnest)
 		$(use_enable xorg)
 		$(use_enable xvfb)
@@ -150,6 +149,7 @@ src_configure() {
 		$(use_enable udev config-udev)
 		$(use_with doc doxygen)
 		$(use_with doc xmlto)
+		--enable-libdrm
 		--sysconfdir=/etc/X11
 		--localstatedir=/var
 		--enable-install-setuid
