@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.85 2012/10/26 22:58:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.86 2012/12/11 21:38:12 tetromino Exp $
+
+  11 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -nm-applet-0.8.4.ebuild, -files/nm-applet-0.8.4-utils-libm.patch:
+  Drop nm-0.8 as requested in bug #382045.
 
 *nm-applet-0.9.6.4 (26 Oct 2012)
 
