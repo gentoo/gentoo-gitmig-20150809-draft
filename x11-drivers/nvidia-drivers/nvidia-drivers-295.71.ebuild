@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.71.ebuild,v 1.6 2012/09/24 00:48:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.71.ebuild,v 1.7 2012/12/11 15:20:56 ssuominen Exp $
 
 EAPI="2"
 
 inherit eutils flag-o-matic linux-mod multilib nvidia-driver portability \
-	unpacker user versionator
+	unpacker user versionator udev
 
 X86_NV_PACKAGE="NVIDIA-Linux-x86-${PV}"
 AMD64_NV_PACKAGE="NVIDIA-Linux-x86_64-${PV}"
@@ -345,11 +345,10 @@ src_install() {
 		newins "${WORKDIR}"/nvidia nvidia.conf || die
 
 		# Ensures that our device nodes are created when not using X
-		exeinto /lib/udev
+		exeinto "$(udev_get_udevdir)"
 		doexe "${FILESDIR}"/nvidia-udev.sh
+		udev_newrules "${FILESDIR}"/nvidia.udev-rule 99-nvidia.rules
 
-		insinto /lib/udev/rules.d
-		newins "${FILESDIR}"/nvidia.udev-rule 99-nvidia.rules
 	elif use kernel_FreeBSD; then
 		if use x86-fbsd; then
 			insinto /boot/modules
