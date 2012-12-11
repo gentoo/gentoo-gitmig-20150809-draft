@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/nonolith-connect/nonolith-connect-1.1.ebuild,v 1.2 2012/12/11 09:47:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/nonolith-connect/nonolith-connect-1.1.ebuild,v 1.3 2012/12/11 09:48:39 ssuominen Exp $
 
 EAPI=4
 
-inherit base scons-utils toolchain-funcs
+inherit base scons-utils toolchain-funcs user
 
 DESCRIPTION="CEE (Control - Experiment - Explore) analog multitool"
 HOMEPAGE="http://www.nonolithlabs.com/cee/"
