@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ofed/ofed-1.5.4.1-r1.ebuild,v 1.1 2012/08/11 12:51:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ofed/ofed-1.5.4.1-r1.ebuild,v 1.2 2012/12/11 19:19:44 axs Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ IUSE_OFED_DRIVERS="
 		ofed_drivers_nes
 		ofed_drivers_psm"
 
-inherit openib toolchain-funcs
+inherit openib udev toolchain-funcs
 
 DESCRIPTION="OpenIB system files"
 SCRIPTDIR="${S}/ofed_scripts"
@@ -56,10 +56,7 @@ src_configure() { :; }
 src_compile() { :; }
 
 src_install() {
-	local udevdir=/lib/udev
-	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-	insinto "${udevdir}"/rules.d
-	newins "${SCRIPTDIR}/90-ib.rules" 40-ib.rules
+	udev_newrules "${SCRIPTDIR}/90-ib.rules" 40-ib.rules
 	insinto /etc/modprobe.d
 	newins "${FILESDIR}/openib.modprobe" openib.conf
 	newenvd "${FILESDIR}/openib.env" 02openib
