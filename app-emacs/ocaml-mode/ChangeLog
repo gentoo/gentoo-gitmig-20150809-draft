@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/ocaml-mode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.59 2012/05/24 10:47:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.60 2012/12/11 21:55:49 ulm Exp $
+
+*ocaml-mode-3.12.1-r1 (11 Dec 2012)
+
+  11 Dec 2012; Ulrich Müller <ulm@gentoo.org> +ocaml-mode-3.12.1-r1.ebuild,
+  +files/50ocaml-mode-gentoo-3.12.1.el:
+  Fix autoloading of inferior-caml-set-font-lock. Thanks to sgbmyr@gmail.com
+  in bug 446868.
 
   24 May 2012; Alexis Ballier <aballier@gentoo.org> ocaml-mode-3.12.1.ebuild:
   keyword ~amd64-fbsd
