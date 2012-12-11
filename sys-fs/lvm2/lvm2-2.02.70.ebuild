@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.70.ebuild,v 1.7 2012/12/10 20:41:45 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.70.ebuild,v 1.8 2012/12/11 21:48:10 ssuominen Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs autotools linux-info
@@ -150,7 +150,7 @@ src_configure() {
 		--with-usrlibdir=/usr/$(get_libdir) \
 		--enable-udev_rules \
 		--enable-udev_sync \
-		--with-udevdir=/$(get_libdir)/udev/rules.d/ \
+		--with-udevdir=/lib/udev/rules.d/ \
 		${myconf} \
 		CLDFLAGS="${LDFLAGS}" || die
 }

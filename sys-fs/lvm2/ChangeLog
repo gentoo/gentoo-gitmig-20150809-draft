@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.284 2012/12/10 20:41:45 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.285 2012/12/11 21:48:10 ssuominen Exp $
+
+  11 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> lvm2-2.02.67.ebuild,
+  lvm2-2.02.67-r1.ebuild, lvm2-2.02.67-r2.ebuild, lvm2-2.02.70.ebuild,
+  lvm2-2.02.70-r1.ebuild, lvm2-2.02.72.ebuild, lvm2-2.02.73.ebuild,
+  lvm2-2.02.73-r1.ebuild, lvm2-2.02.74.ebuild, lvm2-2.02.83.ebuild,
+  lvm2-2.02.84.ebuild:
+  Use /lib/udev instead of /$(get_libdir)/udev. The required ones should really
+  be converted to udev.eclass.
 
   10 Dec 2012; Ian Stakenvicius <axs@gentoo.org> lvm2-2.02.67.ebuild,
   lvm2-2.02.67-r1.ebuild, lvm2-2.02.67-r2.ebuild, lvm2-2.02.70.ebuild,
