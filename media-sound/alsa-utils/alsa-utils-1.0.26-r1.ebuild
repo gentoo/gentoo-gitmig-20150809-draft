@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.26-r1.ebuild,v 1.1 2012/11/06 23:17:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.26-r1.ebuild,v 1.2 2012/12/11 16:31:40 axs Exp $
 
 EAPI=4
-inherit eutils systemd toolchain-funcs
+inherit eutils systemd udev toolchain-funcs
 
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -38,16 +38,13 @@ src_configure() {
 	local myconf
 	use doc || myconf='--disable-xmlto'
 
-	local udevdir=/lib/udev
-	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-
 	econf \
 		$(use_enable libsamplerate alsaloop) \
 		$(use_enable nls) \
 		$(use_enable ncurses alsamixer) \
 		$(use_enable !minimal alsaconf) \
 		"$(systemd_with_unitdir)" \
-		--with-udev-rules-dir="${udevdir}"/rules.d \
+		--with-udev-rules-dir="$(udev_get_udevdir)"/rules.d \
 		${myconf}
 }
 
