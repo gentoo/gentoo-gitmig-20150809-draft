@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/acx-firmware
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx-firmware/ChangeLog,v 1.7 2012/11/18 10:58:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx-firmware/ChangeLog,v 1.8 2012/12/11 17:07:28 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> acx-firmware-20060207.ebuild:
+  virtualize udev dependency
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop mobile herd as talked in gentoo-dev ML
