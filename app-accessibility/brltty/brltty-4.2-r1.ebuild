@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2-r1.ebuild,v 1.2 2012/12/11 13:55:09 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2-r1.ebuild,v 1.3 2012/12/11 14:46:38 ssuominen Exp $
 
 EAPI="4"
 FINDLIB_USE="ocaml"
 
 inherit findlib eutils multilib toolchain-funcs java-pkg-opt-2 flag-o-matic \
-	autotools
+	autotools udev
 
 DESCRIPTION="Daemon that provides access to the Linux/Unix console for a blind person"
 HOMEPAGE="http://mielke.cc/brltty/"
@@ -116,10 +116,7 @@ src_install() {
 
 	insinto /etc
 	doins Documents/brltty.conf
-	local udevdir=/lib/udev
-	has_version virtual/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-	insinto "${udevdir}"/rules.d
-	newins Hotplug/udev.rules 70-brltty.rules
+	udev_newrules Hotplug/udev.rules 70-brltty.rules
 	newinitd "${FILESDIR}"/brltty.rc brltty
 
 	libdir="$(get_libdir)"
