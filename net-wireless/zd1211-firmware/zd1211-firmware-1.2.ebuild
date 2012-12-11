@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211-firmware/zd1211-firmware-1.2.ebuild,v 1.3 2007/06/26 19:48:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211-firmware/zd1211-firmware-1.2.ebuild,v 1.4 2012/12/11 04:13:24 axs Exp $
 
 DESCRIPTION="Firmware for ZyDAS ZD1211 USB-WLAN devices supported by the zd1211rw driver"
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 
 IUSE=""
-DEPEND="|| ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040923 )"
+DEPEND="|| ( virtual/udev >=sys-apps/hotplug-20040923 )"
 
 S="${WORKDIR}/${PN}"
 
