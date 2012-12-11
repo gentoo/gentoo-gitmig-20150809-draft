@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/knem
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/knem/ChangeLog,v 1.5 2012/10/12 10:44:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/knem/ChangeLog,v 1.6 2012/12/11 18:12:34 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> knem-1.0.0.ebuild:
+  use udev.eclass to install udev rules to support virtual/udev
 
 *knem-1.0.0 (12 Oct 2012)
 
