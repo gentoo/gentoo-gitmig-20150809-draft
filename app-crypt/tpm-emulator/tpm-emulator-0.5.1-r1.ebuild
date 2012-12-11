@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/tpm-emulator-0.5.1-r1.ebuild,v 1.1 2012/08/11 16:43:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/tpm-emulator-0.5.1-r1.ebuild,v 1.2 2012/12/11 14:03:27 axs Exp $
 
 EAPI=2
 inherit toolchain-funcs linux-mod eutils multilib user
@@ -69,8 +69,9 @@ src_install() {
 	newinitd "${FILESDIR}"/${PN}.initd-0.5.1 ${PN}
 	newconfd "${FILESDIR}"/${PN}.confd-0.5.1 ${PN}
 
+	# note: check if this needs /usr mounted and therefore should always install rules to /usr
 	local udevdir=/lib/udev
-	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	has_version virtual/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
 	insinto "${udevdir}"/rules.d
 	newins "${FILESDIR}"/${PN}.udev 60-${PN}.rules
 
