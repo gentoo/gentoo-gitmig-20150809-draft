@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.4.2-r1.ebuild,v 1.6 2012/09/27 20:19:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.4.2-r1.ebuild,v 1.7 2012/12/11 17:22:54 axs Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
-inherit eutils gnome2 multilib toolchain-funcs user
+inherit eutils gnome2 multilib toolchain-funcs udev user
 
 DESCRIPTION="Fork of bluez-gnome focused on integration with GNOME"
 HOMEPAGE="http://live.gnome.org/GnomeBluetooth"
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 COMMON_DEPEND=">=dev-libs/glib-2.29.90:2
 	>=x11-libs/gtk+-2.91.3:3[introspection?]
 	>=x11-libs/libnotify-0.7.0
-	sys-fs/udev
+	virtual/udev
 
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 	sendto? ( >=gnome-extra/nautilus-sendto-2.91 )
@@ -71,9 +71,7 @@ src_prepare() {
 src_install() {
 	gnome2_src_install
 
-	local udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-	insinto "${udevdir}"/rules.d
-	doins "${FILESDIR}"/80-rfkill.rules
+	udev_dorules "${FILESDIR}"/80-rfkill.rules
 }
 
 pkg_postinst() {
