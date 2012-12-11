@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/zen-sources-9999.ebuild,v 1.5 2011/10/17 18:46:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/zen-sources-9999.ebuild,v 1.6 2012/12/11 19:51:05 hwoarang Exp $
 
 EAPI="2"
 
@@ -15,8 +15,8 @@ CKV='2.6.99'
 
 ETYPE="sources"
 
-EGIT_REPO_URI="git://zen-kernel.org/kernel/zen-stable.git
-	http://git.zen-kernel.org/zen-stable/"
+EGIT_REPO_URI="git://github.com/damentz/zen-kernel.git
+	https://github.com/damentz/zen-kernel.git"
 
 inherit kernel-2 git-2
 detect_version

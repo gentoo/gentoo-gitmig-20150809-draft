@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/zen-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.55 2012/07/21 14:10:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.56 2012/12/11 19:51:05 hwoarang Exp $
+
+  11 Dec 2012; Markos Chandras <hwoarang@gentoo.org> zen-sources-9999.ebuild:
+  Update git repository. Bug #446874
 
   21 Jul 2012; Pacho Ramos <pacho@gentoo.org> -zen-sources-2.6.30_p11.ebuild,
   -zen-sources-2.6.31_p12.ebuild, -zen-sources-2.6.32_p7-r1.ebuild,
