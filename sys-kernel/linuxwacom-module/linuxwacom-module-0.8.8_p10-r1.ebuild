@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linuxwacom-module/linuxwacom-module-0.8.8_p10-r1.ebuild,v 1.1 2012/08/11 12:54:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linuxwacom-module/linuxwacom-module-0.8.8_p10-r1.ebuild,v 1.2 2012/12/11 10:51:02 ssuominen Exp $
 
 EAPI="2"
-inherit eutils toolchain-funcs linux-mod autotools
+inherit eutils toolchain-funcs linux-mod autotools udev
 
 # http://who-t.blogspot.com/2010/09/wacom-support-in-linux.html
 MY_PN="linuxwacom"
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 
-RDEPEND="sys-fs/udev
+RDEPEND="virtual/udev
 	sys-libs/ncurses"
 
 DEPEND="${RDEPEND}
@@ -84,12 +84,9 @@ src_install() {
 	cp src/*/wacom.{o,ko} src/ || die
 	linux-mod_src_install
 
-	local udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	udev_dorules src/util/60-wacom.rules
 
-	insinto "${udevdir}"/rules.d
-	doins src/util/60-wacom.rules || die
-
-	exeinto "${udevdir}"
+	exeinto "$(udev_get_udevdir)"
 	doexe "${FILESDIR}"/check_driver || die
 	doman "${FILESDIR}"/check_driver.1
 
