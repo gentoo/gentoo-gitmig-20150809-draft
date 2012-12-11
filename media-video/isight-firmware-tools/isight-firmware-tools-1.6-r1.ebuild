@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/isight-firmware-tools-1.6-r1.ebuild,v 1.2 2012/12/11 11:17:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/isight-firmware-tools-1.6-r1.ebuild,v 1.3 2012/12/11 11:18:47 ssuominen Exp $
 
 EAPI=4
 inherit eutils multilib versionator toolchain-funcs udev
@@ -33,7 +33,6 @@ src_prepare() {
 	# Fix build with -O0, bug #221325
 	epatch "${FILESDIR}"/${PN}-1.5.90-build-O0.patch
 
-	# Fix for systems with lib64 but no symlink to lib
 	sed -i \
 		-e "s:@udevdir@:$(udev_get_udevdir):" \
 		src/isight.rules.in.in || die
