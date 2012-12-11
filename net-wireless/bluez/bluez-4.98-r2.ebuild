@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.98-r2.ebuild,v 1.11 2012/07/23 15:40:24 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.98-r2.ebuild,v 1.12 2012/12/11 09:44:00 ssuominen Exp $
 
 EAPI="4"
 PYTHON_DEPEND="test-programs? 2"
@@ -25,8 +25,7 @@ IUSE="alsa caps +consolekit cups debug gstreamer pcmcia selinux test-programs us
 CDEPEND="
 	>=dev-libs/glib-2.14:2
 	sys-apps/dbus
-	>=sys-fs/udev-169
-	<sys-fs/udev-185
+	~virtual/udev-171
 	alsa? (
 		media-libs/alsa-lib[alsa_pcm_plugins_extplug(+),alsa_pcm_plugins_ioplug(+)]
 		media-libs/libsndfile
