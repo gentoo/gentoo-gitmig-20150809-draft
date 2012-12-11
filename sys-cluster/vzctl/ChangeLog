@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.95 2012/12/10 13:23:51 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.96 2012/12/11 18:17:36 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> vzctl-3.3-r1.ebuild,
+  vzctl-4.1.1.ebuild, vzctl-9999.ebuild:
+  use udev.eclass to get udevdir, to support virtual/udev
 
 *vzctl-4.1.1 (10 Dec 2012)
 

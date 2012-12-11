@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.3-r1.ebuild,v 1.2 2012/12/10 13:06:59 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.3-r1.ebuild,v 1.3 2012/12/11 18:17:36 axs Exp $
 
 EAPI="4"
 
-inherit bash-completion-r1 eutils toolchain-funcs
+inherit bash-completion-r1 eutils udev toolchain-funcs
 
 DESCRIPTION="OpenVZ ConTainers control utility"
 HOMEPAGE="http://openvz.org/"
@@ -29,9 +29,7 @@ src_prepare() {
 	# Set default OSTEMPLATE on gentoo added
 	sed -e 's:=redhat-:=gentoo-:' -i etc/dists/default || die
 
-	local udevdir=/lib/udev
-	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-	sed -i -e "s:/lib/udev:${udevdir}:" src/lib/dev.c || die
+	sed -i -e "s:/lib/udev:$(udev_get_udevdir):" src/lib/dev.c || die
 }
 
 src_configure() {
@@ -43,9 +41,7 @@ src_configure() {
 }
 
 src_install() {
-	local udevdir=/lib/udev
-	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-	emake DESTDIR="${D}" udevdir="${udevdir}"/rules.d install install-gentoo
+	emake DESTDIR="${D}" udevdir="$(udev_get_udevdir)"/rules.d install install-gentoo
 
 	# install the bash-completion script into the right location
 	rm -rf "${ED}"/etc/bash_completion.d
