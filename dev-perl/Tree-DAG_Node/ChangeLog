@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tree-DAG_Node
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-DAG_Node/ChangeLog,v 1.33 2012/11/12 19:42:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-DAG_Node/ChangeLog,v 1.34 2012/12/11 17:15:37 ago Exp $
+
+  11 Dec 2012; Agostino Sarubbo <ago@gentoo.org> Tree-DAG_Node-1.60.0.ebuild:
+  Stable for ppc64, wrt bug #441248
 
 *Tree-DAG_Node-1.90.0 (12 Nov 2012)
 
