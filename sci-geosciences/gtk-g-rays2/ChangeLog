@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gtk-g-rays2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gtk-g-rays2/ChangeLog,v 1.9 2012/05/27 08:50:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gtk-g-rays2/ChangeLog,v 1.10 2012/12/11 17:55:07 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> gtk-g-rays2-2.01.ebuild:
+  virtualize udev dependency
 
   27 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> gtk-g-rays2-2.01.ebuild:
   Remove useless doc useflag. Sort docs.
