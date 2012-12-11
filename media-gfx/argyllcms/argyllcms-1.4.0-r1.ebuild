@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/argyllcms-1.4.0-r1.ebuild,v 1.3 2012/12/03 11:08:36 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/argyllcms-1.4.0-r1.ebuild,v 1.4 2012/12/11 14:11:11 axs Exp $
 
 EAPI=5
 
@@ -72,8 +72,9 @@ src_install() {
 	insinto /usr/share/${PN}/ref
 	doins   ref/*
 
+	# note: if package needs /usr mounted for rules to succeed, rules should always be installed to /usr
 	local udevdir=/lib/udev
-	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	has_version virtual/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
 	insinto "${udevdir}"/rules.d
 	doins libusb/55-Argyll.rules
 }
