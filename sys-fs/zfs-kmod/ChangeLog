@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.9 2012/11/14 21:56:46 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.10 2012/12/11 19:43:44 ryao Exp $
+
+*zfs-kmod-0.6.0_rc12-r1 (11 Dec 2012)
+
+  11 Dec 2012; Richard Yao <ryao@gentoo.org> +zfs-kmod-0.6.0_rc12-r1.ebuild,
+  zfs-kmod-0.6.0_rc10.ebuild, zfs-kmod-0.6.0_rc11-r1.ebuild,
+  zfs-kmod-0.6.0_rc11.ebuild, zfs-kmod-0.6.0_rc12.ebuild, zfs-kmod-9999.ebuild:
+  Linux 3.7 Support; Stability Fixes; Performance Regression Fix; Fix bug
+  #411555
 
 *zfs-kmod-0.6.0_rc12 (14 Nov 2012)
 

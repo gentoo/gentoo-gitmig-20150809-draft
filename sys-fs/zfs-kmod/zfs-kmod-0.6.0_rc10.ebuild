@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc10.ebuild,v 1.5 2012/08/26 00:20:48 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc10.ebuild,v 1.6 2012/12/11 19:43:44 ryao Exp $
 
 EAPI="4"
 
@@ -13,7 +13,6 @@ inherit bash-completion-r1 flag-o-matic linux-mod toolchain-funcs autotools-util
 if [ ${PV} == "9999" ] ; then
 	inherit git-2
 	EGIT_REPO_URI="git://github.com/zfsonlinux/zfs.git"
-	S="${WORKDIR}/zfs-${MY_PV}"
 else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')

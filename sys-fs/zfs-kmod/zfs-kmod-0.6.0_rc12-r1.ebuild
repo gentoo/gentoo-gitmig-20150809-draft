@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc12.ebuild,v 1.2 2012/12/11 19:43:44 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc12-r1.ebuild,v 1.1 2012/12/11 19:43:44 ryao Exp $
 
 EAPI="4"
 
@@ -16,8 +16,9 @@ if [ ${PV} == "9999" ] ; then
 else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
-	SRC_URI="https://github.com/downloads/zfsonlinux/zfs/zfs-${MY_PV}.tar.gz"
 	S="${WORKDIR}/zfs-${MY_PV}"
+	SRC_URI="https://github.com/downloads/zfsonlinux/zfs/zfs-${MY_PV}.tar.gz
+		http://dev.gentoo.org/~ryao/dist/${PN}-${MY_PV}-p0.tar.xz"
 	KEYWORDS="~amd64"
 fi
 
@@ -55,12 +56,16 @@ pkg_setup() {
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 6 || die "Linux 3.6 is the latest supported version."; }
+		{ kernel_is le 3 7 || die "Linux 3.7 is the latest supported version."; }
 
 	check_extra_config
 }
 
 src_prepare() {
+	EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" \
+	epatch "${WORKDIR}/${PN}-${MY_PV}-patches"
+
 	autotools-utils_src_prepare
 }
 
