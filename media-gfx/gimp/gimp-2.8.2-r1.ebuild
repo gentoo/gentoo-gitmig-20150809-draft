@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.2-r1.ebuild,v 1.1 2012/11/25 19:38:46 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.2-r1.ebuild,v 1.2 2012/12/11 05:43:44 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -57,7 +57,7 @@ RDEPEND=">=dev-libs/glib-2.30.2:2
 	sys-libs/zlib
 	bzip2? ( app-arch/bzip2 )
 	postscript? ( app-text/ghostscript-gpl )
-	udev? ( sys-fs/udev[gudev] )"
+	udev? ( virtual/udev[gudev] )"
 DEPEND="${RDEPEND}
 	sys-apps/findutils
 	virtual/pkgconfig
