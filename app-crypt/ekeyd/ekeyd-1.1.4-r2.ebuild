@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.4-r2.ebuild,v 1.4 2012/11/23 10:33:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.4-r2.ebuild,v 1.5 2012/12/11 08:42:46 ssuominen Exp $
 
 EAPI=4
 
-inherit eutils multilib linux-info toolchain-funcs
+inherit eutils multilib linux-info toolchain-funcs udev
 
 DESCRIPTION="Entropy Key userspace daemon"
 HOMEPAGE="http://www.entropykey.co.uk/"
@@ -21,7 +21,7 @@ EKEYD_RDEPEND="dev-lang/lua
 EKEYD_DEPEND="${EKEYD_RDEPEND}"
 EKEYD_RDEPEND="${EKEYD_RDEPEND}
 	dev-lua/luasocket
-	kernel_linux? ( >=sys-fs/udev-147 )
+	kernel_linux? ( virtual/udev )
 	usb? ( !kernel_linux? ( sys-apps/usbutils ) )
 	munin? ( net-analyzer/munin )"
 
@@ -107,10 +107,9 @@ src_install() {
 		local rules=udev/fedora15/60-entropykey.rules
 		use usb && rules=udev/fedora15/60-entropykey-uds.rules
 
-		insinto /lib/udev/rules.d
-		newins ${rules} 70-${PN}.rules
+		udev_newrules ${rules} 70-${PN}.rules
 
-		exeinto /lib/udev
+		exeinto "$(udev_get_udevdir)"
 		doexe udev/entropykey.sh
 	fi
 
