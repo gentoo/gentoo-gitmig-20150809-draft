@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/nanoc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/ChangeLog,v 1.4 2012/08/13 19:14:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/ChangeLog,v 1.5 2012/12/11 18:57:01 graaff Exp $
+
+*nanoc-3.4.3 (11 Dec 2012)
+
+  11 Dec 2012; Hans de Graaff <graaff@gentoo.org> +nanoc-3.4.3.ebuild:
+  Version bump.
 
 *nanoc-3.4.0 (13 Aug 2012)
 
