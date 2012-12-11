@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coldplug/coldplug-20040920-r1.ebuild,v 1.3 2010/10/08 01:50:05 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coldplug/coldplug-20040920-r1.ebuild,v 1.4 2012/12/11 17:58:55 axs Exp $
 
 inherit eutils
 
@@ -19,7 +19,8 @@ IUSE=""
 # hotplug needs pcimodules utility provided by pcitutils-2.1.9-r1
 DEPEND=">=sys-apps/hotplug-20040920"
 # conflicts with udev now.
-RDEPEND="!>=sys-fs/udev-089"
+RDEPEND="!virtual/udev
+	!>=sys-fs/udev-089"
 
 src_install() {
 	newinitd ${FILESDIR}/coldplug.rc coldplug
