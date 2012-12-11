@@ -10,14 +10,5 @@
   large-scale linear programming (LP), mixed integer programming
   (MIP), and other related problems. It is a set of routines written
   in ANSI C and organized in the form of a callable library. 
-  GLPK supports the GNU MathProg language, which is a subset of the
-  AMPL language.  The GLPK package includes the following main
-  components: 
-  * Revised simplex method. 
-  * Primal-dual interior point method. 
-  * Branch-and-bound method. 
-  * Translator for GNU MathProg. 
-  * Application program interface (API). 
-  * Stand-alone LP/MIP solver.
 </longdescription>
 </pkgmetadata>
