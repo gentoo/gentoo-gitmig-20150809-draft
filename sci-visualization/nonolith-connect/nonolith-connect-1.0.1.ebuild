@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/nonolith-connect/nonolith-connect-1.0.1.ebuild,v 1.1 2012/02/21 13:41:48 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/nonolith-connect/nonolith-connect-1.0.1.ebuild,v 1.2 2012/12/11 09:47:47 ssuominen Exp $
 
 EAPI=4
 
-inherit base scons-utils toolchain-funcs
+inherit base scons-utils toolchain-funcs udev
 
 DESCRIPTION="CEE (Control - Experiment - Explore) analog multitool"
 HOMEPAGE="http://www.nonolithlabs.com/cee/"
@@ -16,7 +16,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND="dev-libs/boost
-	sys-fs/udev"
+	virtual/udev"
 DEPEND="${RDEPEND}"
 
 PATCHES=( "${FILESDIR}/${PV}-cflags-respect.patch" )
@@ -38,9 +38,8 @@ src_compile() {
 
 src_install() {
 	dobin nonolith-connect
-	newinitd "${FILESDIR}/nonolith-connect.initd" nonolith-connect
-	insinto /lib/udev
-	doins "${FILESDIR}/60-nonolith-connect.rules"
+	newinitd "${FILESDIR}"/nonolith-connect.initd nonolith-connect
+	udev_dorules "${FILESDIR}"/60-nonolith-connect.rules
 }
 
 pkg_postinst() {

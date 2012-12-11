@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/nonolith-connect
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/nonolith-connect/ChangeLog,v 1.2 2012/03/22 10:15:45 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/nonolith-connect/ChangeLog,v 1.3 2012/12/11 09:47:47 ssuominen Exp $
+
+  11 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
+  nonolith-connect-1.0.1.ebuild, nonolith-connect-1.1.ebuild:
+  Use virtual/udev instead of sys-fs/udev. Migrate 1.0.1 to udev.eclass for
+  correct rules.d path.
 
 *nonolith-connect-1.1 (22 Mar 2012)
 
