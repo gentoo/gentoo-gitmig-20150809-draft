@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.92 2012/10/07 09:04:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.93 2012/12/11 17:54:23 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> gpsd-3.7.ebuild,
+  gpsd-9999.ebuild:
+  virtualize udev by using udev.eclass to determine udevdir
 
   07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, #24135.

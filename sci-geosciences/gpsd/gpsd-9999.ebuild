@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-9999.ebuild,v 1.6 2012/08/12 08:18:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-9999.ebuild,v 1.7 2012/12/11 17:54:23 axs Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 SUPPORT_PYTHON_ABIS="1"
 SCONS_MIN_VERSION="1.2.1"
 
-inherit eutils user multilib distutils scons-utils toolchain-funcs
+inherit eutils udev user multilib distutils scons-utils toolchain-funcs
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.savannah.nongnu.org/gpsd.git"
@@ -91,9 +91,7 @@ src_prepare() {
 		distutils_src_prepare
 	fi
 
-	local udevdir=/lib/udev
-	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-	sed -i -e "s:/lib/udev:${udevdir}:" gpsd.rules SConstruct || die
+	sed -i -e "s:/lib/udev:$(udev_get_udevdir):" gpsd.rules SConstruct || die
 }
 
 src_configure() {
