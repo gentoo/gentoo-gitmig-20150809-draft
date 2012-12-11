@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/atmel-firmware/atmel-firmware-1.3.ebuild,v 1.5 2010/01/09 21:34:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/atmel-firmware/atmel-firmware-1.3.ebuild,v 1.6 2012/12/11 17:14:04 axs Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="pcmcia usb"
 
-RDEPEND="|| ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040923 )
+RDEPEND="|| ( virtual/udev >=sys-apps/hotplug-20040923 )
+		!<sys-fs/udev-096
 		>=net-wireless/wireless-tools-26-r1
 		pcmcia? ( virtual/pcmcia )"
 

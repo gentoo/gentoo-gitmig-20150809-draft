@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/atmel-firmware
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/atmel-firmware/ChangeLog,v 1.8 2012/11/18 11:03:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/atmel-firmware/ChangeLog,v 1.9 2012/12/11 17:14:04 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> atmel-firmware-1.3.ebuild:
+  virtualize the udev dependency
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop mobile herd as talked in gentoo-dev ML
