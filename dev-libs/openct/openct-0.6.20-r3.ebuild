@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.20-r3.ebuild,v 1.6 2012/12/04 13:18:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.20-r3.ebuild,v 1.7 2012/12/11 21:57:16 ssuominen Exp $
 
 EAPI=5
 
@@ -60,10 +60,7 @@ src_install() {
 	prune_libtool_files --all
 	rm "${D}"/usr/$(get_libdir)/openct-ifd.*
 
-	if use udev; then
-		insinto "$(udev_get_udevdir)"/rules.d
-		newins etc/openct.udev 70-openct.rules
-	fi
+	use udev && udev_newrules etc/openct.udev 70-openct.rules
 
 	newinitd "${FILESDIR}"/openct.rc.2 openct
 }
