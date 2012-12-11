@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-17.0-r2.ebuild,v 1.2 2012/12/10 18:08:00 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-17.0-r2.ebuild,v 1.3 2012/12/11 03:11:48 axs Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -34,7 +34,7 @@ HOMEPAGE="http://www.mozilla.com/en-US/thunderbird/"
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="bindist gconf +crypt +ipc ldap +lightning +minimal mozdom selinux"
+IUSE="bindist gconf +crypt +jit +ipc ldap +lightning +minimal mozdom selinux"
 
 PATCH="thunderbird-17.0-patches-01"
 PATCHFF="firefox-17.0-patches-0.3"
@@ -58,8 +58,8 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	>=x11-libs/cairo-1.10
 	>=x11-libs/pango-1.14.0
 	>=x11-libs/gtk+-2.14
+	kernel_linux? ( media-libs/alsa-lib )
 	>=media-libs/libvpx-1.0.0
-	elibc_glibc? ( media-libs/alsa-lib )
 	virtual/libffi
 	!x11-plugins/enigmail
 	system-sqlite? ( >=dev-db/sqlite-3.7.13[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
@@ -199,6 +199,9 @@ src_configure() {
 	mozconfig_use_enable lightning calendar
 	mozconfig_use_enable gconf
 	mozconfig_use_enable ldap
+	# Features know to cause problems with hardened.
+	mozconfig_use_enable jit methodjit
+	mozconfig_use_enable jit tracejit
 
 	# Bug #72667
 	if use mozdom; then
