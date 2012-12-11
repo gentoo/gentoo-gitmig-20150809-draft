@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.0-r1.ebuild,v 1.2 2012/12/11 09:02:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.0-r1.ebuild,v 1.3 2012/12/11 09:06:27 ssuominen Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -180,7 +180,7 @@ src_prepare() {
 
 	# Prevent the downloading of ipxe, seabios
 	epatch "${FILESDIR}"/${P/-tools/}-anti-download.patch
-	cp $DISTDIR/ipxe.tar.gz tools/firmware/etherboot/ || die
+	cp "${DISTDIR}"/ipxe.tar.gz tools/firmware/etherboot/ || die
 	mv ../seabios-dir-remote tools/firmware/ || die
 	pushd tools/firmware/ > /dev/null
 	ln -s seabios-dir-remote seabios-dir || die
@@ -213,7 +213,7 @@ src_compile() {
 
 	unset LDFLAGS
 	unset CFLAGS
-	emake CC=$(tc-getCC) LD=$(tc-getLD) -C tools ${myopt}
+	emake CC="$(tc-getCC)" LD="$(tc-getLD)" -C tools ${myopt}
 
 	if use doc; then
 		sh ./docs/check_pkgs || die "package check failed"
@@ -270,7 +270,7 @@ src_install() {
 
 	# For -static-libs wrt Bug 384355
 	if ! use static-libs; then
-		rm -f ${ED}usr/$(get_libdir)/*.a ${ED}usr/$(get_libdir)/ocaml/*/*.a
+		rm -f "${ED}"usr/$(get_libdir)/*.a "${ED}"usr/$(get_libdir)/ocaml/*/*.a
 	fi
 
 	#python_convert_shebangs -r 2 "${ED}"
