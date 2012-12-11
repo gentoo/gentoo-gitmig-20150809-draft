@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.1.7.2-r1.ebuild,v 1.1 2012/08/12 15:07:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-1.1.7.2-r1.ebuild,v 1.2 2012/12/11 16:48:03 axs Exp $
 
-inherit eutils linux-mod toolchain-funcs
+inherit eutils linux-mod udev toolchain-funcs
 
 MY_P=mISDN-${PV//./_}
 
@@ -170,8 +170,7 @@ src_install() {
 	insinto /usr/include/linux
 	doins "${MY_S}/include/linux/"*.h
 
-	local udevdir=/lib/udev
-	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	local udevdir="$(udev_get_udevdir)"
 	dodir "${udevdir}"/rules.d
 	echo 'KERNEL=="obj-*", NAME="mISDN", GROUP="uucp", MODE="0660"' \
 		> "${D}/${udevdir}"/rules.d/53-${PN}.rules
