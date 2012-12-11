@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-2.32.0.2.ebuild,v 1.6 2012/07/17 06:37:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-2.32.0.2.ebuild,v 1.7 2012/12/11 11:14:21 ssuominen Exp $
 
 EAPI=3
 
@@ -23,7 +23,7 @@ COMMON_DEPEND="
 	gnome-base/gconf:2
 	>=media-gfx/sane-backends-1.0.20
 	virtual/jpeg
-	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] )
+	virtual/udev[gudev]
 	>=sys-libs/zlib-1.2.3.1
 	x11-libs/cairo"
 RDEPEND="${COMMON_DEPEND}

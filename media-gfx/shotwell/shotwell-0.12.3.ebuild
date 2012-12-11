@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.12.3.ebuild,v 1.3 2012/11/13 19:06:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.12.3.ebuild,v 1.4 2012/12/11 11:15:25 ssuominen Exp $
 
 EAPI=4
 GCONF_DEBUG="no"
@@ -41,7 +41,7 @@ RDEPEND="
 	>=net-libs/libsoup-2.26.0:2.4
 	net-libs/rest:0.7
 	net-libs/webkit-gtk:3
-	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] )
+	virtual/udev[gudev]
 	x11-libs/gtk+:3"
 DEPEND="${RDEPEND}
 	dev-lang/vala:0.16
