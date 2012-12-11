@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/potrace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/ChangeLog,v 1.44 2012/09/08 08:46:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/ChangeLog,v 1.45 2012/12/11 17:50:01 ago Exp $
+
+  11 Dec 2012; Agostino Sarubbo <ago@gentoo.org> potrace-1.10-r1.ebuild:
+  Add ~ppc64, wrt bug #390671
 
   08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
@@ -150,4 +153,3 @@
 
   02 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +potrace-1.5.ebuild:
   Initial import.
-
