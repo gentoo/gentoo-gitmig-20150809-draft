@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7241 2012/12/10 23:56:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7242 2012/12/11 18:23:52 grobian Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Dec 2012; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Drop e-uae mask, all bugs have been fixed
 
   10 Dec 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add libtiff to MISC-FREE license group, bug 445934.
