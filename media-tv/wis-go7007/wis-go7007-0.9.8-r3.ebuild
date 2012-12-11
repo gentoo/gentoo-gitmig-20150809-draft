@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/wis-go7007/wis-go7007-0.9.8-r3.ebuild,v 1.3 2012/04/29 12:52:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/wis-go7007/wis-go7007-0.9.8-r3.ebuild,v 1.4 2012/12/11 11:12:16 ssuominen Exp $
 
-inherit eutils linux-mod
+inherit eutils linux-mod udev
 
 MY_PN=${PN}-linux
 DESCRIPTION="Linux drivers for go7007 chipsets (Plextor ConvertX PVR)"
@@ -12,12 +12,12 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="alsa"
-DEPEND="|| ( >=sys-fs/udev-103 sys-apps/hotplug )
+DEPEND="|| ( virtual/udev sys-apps/hotplug )
 		sys-apps/hotplug-base
 	sys-apps/fxload"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_PN}-${PV}"
+S=${WORKDIR}/${MY_PN}-${PV}
 
 pkg_setup() {
 	BUILD_TARGETS="all"
@@ -77,8 +77,7 @@ src_install() {
 	doins "${S}/firmware/*.bin"
 	insinto "/lib/firmware/ezusb"
 	doins "${S}/firmware/ezusb/*.hex"
-	insinto "/etc/udev/rules.d"
-	doins "${S}/udev/wis-ezusb.rules"
+	udev_dorules "${S}/udev/wis-ezusb.rules"
 
 	exeinto "/usr/bin"
 	use alsa && doexe "${S}/apps/gorecord"
