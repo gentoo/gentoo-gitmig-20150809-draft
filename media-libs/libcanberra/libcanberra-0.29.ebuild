@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.29.ebuild,v 1.12 2012/12/02 17:09:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.29.ebuild,v 1.13 2012/12/11 03:45:10 axs Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ COMMON_DEPEND="media-libs/libvorbis
 	>=sys-devel/libtool-2.2.6b
 	alsa? (
 		media-libs/alsa-lib
-		udev? ( >=sys-fs/udev-160 ) )
+		udev? ( >=virtual/udev-171 ) )
 	gstreamer? ( >=media-libs/gstreamer-0.10.15:0.10 )
 	gtk? ( >=x11-libs/gtk+-2.20.0:2 )
 	gtk3? ( x11-libs/gtk+:3 )
