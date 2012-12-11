@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.2-r3.ebuild,v 1.9 2012/12/09 00:21:10 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.2-r3.ebuild,v 1.10 2012/12/11 03:57:20 axs Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs python
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	=dev-lang/python-2*
 	virtual/pkgconfig"
 RDEPEND="${RDEPEND}
-	>=sys-fs/udev-152"
+	>=virtual/udev-171"
 
 src_prepare() {
 	epatch "${FILESDIR}"/libnl31-support.diff
