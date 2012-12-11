@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r1.ebuild,v 1.5 2012/12/07 19:44:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r1.ebuild,v 1.6 2012/12/11 14:50:49 axs Exp $
 
 EAPI="2"
 
@@ -186,7 +186,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	if has_version sys-fs/devfsd || ! has_version sys-fs/udev ; then
+	if has_version sys-fs/devfsd || ! has_version virtual/udev ; then
 		elog "This package has been designed with udev in mind. Other solutions, such as"
 		elog "devfs or a static /dev tree might work, but are generally discouraged and"
 		elog "not supported. If you decide to switch to udev, you might want to have a"
