@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/superlu-4.3.ebuild,v 1.5 2012/10/16 19:34:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/superlu-4.3.ebuild,v 1.6 2012/12/11 18:29:59 bicatali Exp $
 
 EAPI=4
 
 AUTOTOOLS_AUTORECONF=true
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 inherit autotools-utils fortran-2 toolchain-funcs multilib
 
@@ -27,7 +28,6 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_PN}_${PV}"
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
 PATCHES=( "${FILESDIR}"/${P}-autotools.patch )
 
 pkg_setup() {
@@ -36,12 +36,13 @@ pkg_setup() {
 }
 
 src_configure() {
-	local myeconfargs=( --with-blas="$(pkg-config --libs blas)" )
+	local myeconfargs=( --with-blas="$($(tc-getPKG_CONFIG) --libs blas)" )
 	autotools-utils_src_configure
+	rm EXAMPLE/*itersol1
 }
 
 src_test() {
-	cd "${AUTOTOOLS_BUILD_DIR}"/TESTING
+	cd "${BUILD_DIR}"/TESTING
 	emake -j1 \
 		CC="$(tc-getCC)" \
 		FORTRAN="$(tc-getFC)" \
@@ -49,7 +50,7 @@ src_test() {
 		CFLAGS="${CFLAGS}" \
 		FFLAGS="${FFLAGS}" \
 		LOADOPTS="${LDFLAGS}" \
-		BLASLIB="$(pkg-config --libs blas)" \
+		BLASLIB="$($(tc-getPKG_CONFIG) --libs blas)" \
 		SUPERLULIB="${S}/SRC/.libs/libsuperlu$(get_libname)" \
 		LD_LIBRARY_PATH="${S}/SRC/.libs" \
 		DYLD_LIBRARY_PATH="${S}/SRC/.libs"
