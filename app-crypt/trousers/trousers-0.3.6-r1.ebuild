@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.6-r1.ebuild,v 1.3 2012/12/11 14:05:08 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.6-r1.ebuild,v 1.4 2012/12/11 15:57:04 axs Exp $
 
 EAPI="3"
 
-inherit autotools eutils linux-info user toolchain-funcs
+inherit autotools eutils linux-info user udev toolchain-funcs
 
 #MY_P="${PN}-${PV%.*}-${PV##*.}"
 
@@ -89,11 +89,7 @@ src_install() {
 	use doc && dodoc doc/*
 	newinitd "${FILESDIR}/tcsd.initd" tcsd
 	newconfd "${FILESDIR}/tcsd.confd" tcsd
-	# note: if package needs /usr mounted for rules processing then rules need to always be installed in /usr
-	local udevdir=/lib/udev
-	has_version virtual/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-	insinto "${udevdir}"/rules.d
-	doins "${FILESDIR}"/61-trousers.rules
+	udev_dorules "${FILESDIR}"/61-trousers.rules
 	fowners tss:tss /var/lib/tpm
 }
 
