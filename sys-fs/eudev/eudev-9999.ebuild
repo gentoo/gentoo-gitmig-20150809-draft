@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.2 2012/12/10 21:05:59 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.3 2012/12/11 18:22:18 axs Exp $
 
 EAPI=4
 
@@ -56,7 +56,7 @@ RDEPEND="${COMMON_DEPEND}
 	!sys-fs/device-mapper
 	!<sys-fs/udev-init-scripts-18"
 
-PDEPEND="=virtual/udev-196"
+PDEPEND="!<virtual/udev-196"
 
 udev_check_KV()
 {
