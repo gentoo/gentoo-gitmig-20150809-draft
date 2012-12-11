@@ -1,13 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/files/openconnect.init.in,v 1.2 2012/12/05 18:53:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/files/openconnect.init.in,v 1.3 2012/12/11 19:45:50 hwoarang Exp $
 
 VPN="${RC_SVCNAME#*.}"
 VPNLOG="/var/log/openconnect/${VPN}"
 VPNLOGFILE="${VPNLOG}/openconnect.log"
 VPNERRFILE="${VPNLOG}/openconnect.err"
-VPNPID="/var/run/openconnect/${VPN}.pid"
+VPNPID="/run/openconnect/${VPN}.pid"
 VPNDIR="/etc/openconnect/${VPN}"
 PREUPSCRIPT="${VPNDIR}/preup.sh"
 PREDOWNSCRIPT="${VPNDIR}/predown.sh"
@@ -23,8 +23,13 @@ depend() {
 
 checkconfig() {
 	if [ $VPN = "openconnect" ]; then
-		eerror "You cannot call openconnect directly. You must create a symbolic link to it instead with the vpn name:"
+		eerror "You cannot call openconnect directly. You must create a symbolic link to it with the vpn name:"
+		echo
 		eerror "ln -s /etc/init.d/openconnect /etc/init.d/openconnect.vpn0"
+		echo
+		eerror "And then call it instead:"
+		echo
+		eerror "/etc/init.d/openconnect.vpn0 start"
 		return 1
 	fi
 }
@@ -62,7 +67,14 @@ start() {
 		mkdir -p "${VPNLOG}"
 	fi
 
-	local args=""
+        local piddir="${VPNPID%/*}"
+        if [ ! -d "$piddir" ] ; then
+                mkdir -p "$piddir"
+                if [ $? -ne 0 ]; then
+                        eerror "Directory $piddir for pidfile does not exist and cannot be created"
+                        return 1
+                fi
+        fi
 
 	if [ -x "${PREUPSCRIPT}" ] ; then 
 		"${PREUPSCRIPT}"
