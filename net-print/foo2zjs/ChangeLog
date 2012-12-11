@@ -1,6 +1,9 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.47 2012/01/18 21:01:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.48 2012/12/11 03:38:32 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> foo2zjs-99999999.ebuild:
+  virtualized the udev dependency
 
   18 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   +files/foo2zjs-udev.patch, foo2zjs-99999999.ebuild:

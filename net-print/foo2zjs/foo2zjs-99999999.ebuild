@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-99999999.ebuild,v 1.7 2012/01/18 21:01:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-99999999.ebuild,v 1.8 2012/12/11 03:38:32 axs Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ RESTRICT="bindist"
 RDEPEND="net-print/cups
 	net-print/foomatic-db-engine
 	net-print/foomatic-filters
-	sys-fs/udev
+	virtual/udev
 	!!net-print/hplip"
 DEPEND="${RDEPEND}
 	app-arch/unzip
