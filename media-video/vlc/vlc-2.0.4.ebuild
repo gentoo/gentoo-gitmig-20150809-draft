@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.4.ebuild,v 1.3 2012/12/03 00:34:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.4.ebuild,v 1.4 2012/12/11 05:46:05 patrick Exp $
 
 EAPI="4"
 
@@ -135,7 +135,7 @@ RDEPEND="
 		truetype? ( media-libs/freetype virtual/ttf-fonts
 			!fontconfig? ( media-fonts/dejavu ) )
 		twolame? ( media-sound/twolame )
-		udev? ( >=sys-fs/udev-142 )
+		udev? ( virtual/udev )
 		upnp? ( net-libs/libupnp )
 		v4l? ( media-libs/libv4l )
 		vaapi? ( x11-libs/libva )

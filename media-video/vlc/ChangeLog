@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.828 2012/12/03 00:34:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.829 2012/12/11 05:46:05 patrick Exp $
+
+  11 Dec 2012; Patrick Lauer <patrick@gentoo.org> vlc-2.0.1.ebuild,
+  vlc-2.0.2.ebuild, vlc-2.0.3.ebuild, vlc-2.0.4.ebuild, vlc-2.0.9999.ebuild,
+  vlc-9999.ebuild:
+  Migrating to virtual/udev
 
   03 Dec 2012; Zac Medico <zmedico@gentoo.org> vlc-2.0.4.ebuild:
   Add upstream BI_RGB patch for bug #438874.
