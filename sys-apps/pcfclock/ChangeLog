@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcfclock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcfclock/ChangeLog,v 1.17 2012/08/25 16:59:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcfclock/ChangeLog,v 1.18 2012/12/11 18:10:28 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> pcfclock-0.44-r6.ebuild:
+  use udev.eclass to determine udevdir for virtual/udev support
 
   25 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> pcfclock-0.44-r6.ebuild:
   Support reading udevdir from udev.pc pkg-config file.
