@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.32.0-r1.ebuild,v 1.7 2012/12/11 17:22:54 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.32.0-r1.ebuild,v 1.8 2012/12/11 21:59:34 ssuominen Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
 GCONF_DEBUG="yes"
 GNOME_TARBALL_SUFFIX="bz2"
 
-inherit eutils gnome2 multilib user autotools
+inherit eutils gnome2 multilib user autotools udev
 
 DESCRIPTION="Fork of bluez-gnome focused on integration with GNOME"
 HOMEPAGE="http://live.gnome.org/GnomeBluetooth"
@@ -93,8 +93,7 @@ src_prepare() {
 src_install() {
 	gnome2_src_install
 
-	insinto /$(get_libdir)/udev/rules.d
-	doins "${FILESDIR}"/80-rfkill.rules
+	udev_dorules "${FILESDIR}"/80-rfkill.rules
 }
 
 pkg_preinst() {

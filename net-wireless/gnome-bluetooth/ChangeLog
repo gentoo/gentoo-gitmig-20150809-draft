@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.120 2012/12/11 17:22:54 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.121 2012/12/11 21:59:34 ssuominen Exp $
+
+  11 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-bluetooth-2.32.0-r1.ebuild, gnome-bluetooth-3.2.2.ebuild:
+  Use the udev_dorules function from udev.eclass
 
   11 Dec 2012; Ian Stakenvicius <axs@gentoo.org>
   gnome-bluetooth-2.32.0-r1.ebuild, gnome-bluetooth-3.2.2.ebuild,
