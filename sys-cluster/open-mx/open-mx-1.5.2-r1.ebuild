@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/open-mx/open-mx-1.5.2-r1.ebuild,v 1.1 2012/08/12 15:02:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/open-mx/open-mx-1.5.2-r1.ebuild,v 1.2 2012/12/11 15:49:10 ssuominen Exp $
 
 EAPI=4
 
-inherit autotools eutils linux-mod multilib toolchain-funcs
+inherit autotools eutils linux-mod multilib toolchain-funcs udev
 
 DESCRIPTION="Open-MX - Myrinet Express over Generic Ethernet Hardware"
 HOMEPAGE="http://open-mx.gforge.inria.fr/"
@@ -66,10 +66,7 @@ src_install() {
 	rm -rf "${ED}/usr/sbin" || die
 	rm "${ED}/usr/bin/omx_check"
 	# install udev rules
-	local udevdir=/lib/udev
-	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-	insinto "${udevdir}"/rules.d
-	doins "${ED}/etc/open-mx/10-open-mx.rules"
+	udev_dorules "${ED}/etc/open-mx/10-open-mx.rules"
 	dodoc "${ED}/usr/share/open-mx/FAQ.html"
 	# Drop misc stuff
 	rm "${ED}/etc/open-mx/10-open-mx.rules" || die
