@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-8.93.ebuild,v 1.1 2010/10/03 11:11:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-8.93.ebuild,v 1.2 2012/12/11 14:39:22 jlec Exp $
 
 EAPI="2"
 
-inherit flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A multiple sequence alignment package"
 HOMEPAGE="http://www.tcoffee.org/Projects_home_page/t_coffee_home_page.html"
