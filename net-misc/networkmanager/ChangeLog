@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.153 2012/12/02 22:31:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.154 2012/12/11 21:43:28 tetromino Exp $
+
+  11 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -networkmanager-0.8.4.0-r2.ebuild,
+  -files/networkmanager-0.8.4.0-fix-tests.patch,
+  -files/networkmanager-0.8.4.0-ifnet-smarter-write.patch,
+  -files/networkmanager-0.8.4.0-shared-connection.patch:
+  Drop nm-0.8 as requested in bug #382045.
 
   02 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
   networkmanager-0.8.4.0-r2.ebuild, networkmanager-0.9.4.0-r5.ebuild,
