@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.23.ebuild,v 1.3 2012/12/11 14:13:12 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.23.ebuild,v 1.4 2012/12/11 16:13:31 axs Exp $
 
 EAPI="4"
 
-inherit eutils flag-o-matic multilib user
+inherit eutils flag-o-matic multilib udev user
 
 # gphoto and v4l are handled by their usual USE flags.
 # The pint backend was disabled because I could not get it to compile.
@@ -245,11 +245,7 @@ src_install () {
 		doexe tools/hotplug/libusbscanner
 		newdoc tools/hotplug/README README.hotplug
 	fi
-	# note: if pkg needs /usr mounted for rules to succeed (probable) then rules should install to /usr
-	local udevdir="/lib/udev"
-	has_version virtual/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-	insinto "${udevdir}"/rules.d
-	newins tools/udev/libsane.rules 41-libsane.rules
+	udev_newrules tools/udev/libsane.rules 41-libsane.rules
 	insinto "/usr/share/pkgconfig"
 	doins tools/sane-backends.pc
 
