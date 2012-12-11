@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.36.ebuild,v 1.2 2012/12/11 17:05:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.36.ebuild,v 1.3 2012/12/11 17:06:30 ago Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -19,7 +19,7 @@ SRC_URI="mirror://pypi/${MY_P:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86 ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="examples test"
 
 RDEPEND="dev-python/pygtk"
