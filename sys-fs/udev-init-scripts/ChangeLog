@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev-init-scripts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.22 2012/12/09 00:11:52 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.23 2012/12/11 02:27:27 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> udev-init-scripts-18.ebuild:
+  changed direct udev dependency to virtual/udev to support installation of
+  eudev
 
 *udev-init-scripts-18 (09 Dec 2012)
 
