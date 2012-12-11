@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/sysprof-1.2.0.ebuild,v 1.4 2012/11/21 11:16:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/sysprof-1.2.0.ebuild,v 1.5 2012/12/11 14:08:29 axs Exp $
 
 EAPI="4"
 
@@ -34,8 +34,9 @@ pkg_pretend() {
 
 src_install() {
 	# Install udev rules in the proper place
+	# note: if package needs /usr mounted for rules to succeed, rules should always install to /usr
 	local udevdir=/lib/udev
-	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	has_version virtual/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
 	export MAKEOPTS="${MAKEOPTS} udevdir=${udevdir}/rules.d"
 	default
 
