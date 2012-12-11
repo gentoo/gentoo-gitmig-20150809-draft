@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/infinipath-psm/infinipath-psm-2.9-r1.ebuild,v 1.1 2012/08/11 12:44:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/infinipath-psm/infinipath-psm-2.9-r1.ebuild,v 1.2 2012/12/11 15:37:27 ssuominen Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ OFED_SUFFIX="926.1005_open"
 OFED_SNAPSHOT="1"
 OFED_SRC_SNAPSHOT="1"
 
-inherit openib toolchain-funcs
+inherit openib udev
 
 DESCRIPTION="OpenIB userspace driver for the PathScale InfiniBand HCAs"
 KEYWORDS="~amd64 ~x86 ~amd64-linux"
@@ -31,9 +31,5 @@ src_prepare() {
 src_install() {
 	emake DESTDIR="${D}" install
 	dodoc README
-	# install udev rules
-	local udevdir=/lib/udev
-	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-	insinto "${udevdir}"/rules.d
-	doins "${FILESDIR}"/42-infinipath-psm.rules
+	udev_dorules "${FILESDIR}"/42-infinipath-psm.rules
 }
