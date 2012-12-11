@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/cman
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/ChangeLog,v 1.48 2011/10/18 20:54:50 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/ChangeLog,v 1.49 2012/12/11 22:16:13 robbat2 Exp $
+
+*cman-3.1.5-r1 (11 Dec 2012)
+
+  11 Dec 2012; Robin H. Johnson <robbat2@gentoo.org> +cman-3.1.5-r1.ebuild,
+  +files/cman.initd-3.1.5-r1:
+  Non-maintainer revbump with init.d sanity checks for configfs/dlm per
+  stabilization bug #442512; also convert init.d to be POSIX-sh safe. Please
+  note that configfs and DLM are required for cman.
 
   18 Oct 2011; Jeroen Roovers <jer@gentoo.org> cman-3.1.5.ebuild:
   Marked ~hppa (bug #386951).
@@ -10,4 +18,3 @@
   14 Sep 2011; Ultrabug <ultrabug@gentoo.org> +cman-3.1.5.ebuild,
   +files/cman.confd, +files/cman.initd, +files/qdiskd.initd, +metadata.xml:
   Initial import
-
