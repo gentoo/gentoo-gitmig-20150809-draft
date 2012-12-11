@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt73-firmware/rt73-firmware-1.8-r1.ebuild,v 1.2 2009/11/09 13:54:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt73-firmware/rt73-firmware-1.8-r1.ebuild,v 1.3 2012/12/11 17:44:46 axs Exp $
 
 inherit multilib
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
-RDEPEND="|| ( sys-fs/udev
+RDEPEND="|| ( virtual/udev
 		sys-apps/hotplug )"
 
 S="${WORKDIR}/${MY_P}"

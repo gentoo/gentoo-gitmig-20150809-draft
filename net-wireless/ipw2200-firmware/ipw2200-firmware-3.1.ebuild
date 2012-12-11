@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200-firmware/ipw2200-firmware-3.1.ebuild,v 1.3 2010/05/22 16:10:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200-firmware/ipw2200-firmware-3.1.ebuild,v 1.4 2012/12/11 17:32:34 axs Exp $
 
 MY_P=${P/firmware/fw}
 S=${WORKDIR}/${MY_P}
@@ -16,7 +16,8 @@ KEYWORDS="amd64 x86"
 
 IUSE=""
 DEPEND=""
-RDEPEND="|| ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040923 )"
+RDEPEND="|| ( virtual/udev >=sys-apps/hotplug-20040923 )
+	!<sys-fs/udev-096"
 
 src_install() {
 	insinto /lib/firmware

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1201-firmware/zd1201-firmware-0.14.ebuild,v 1.7 2012/09/28 08:12:02 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1201-firmware/zd1201-firmware-0.14.ebuild,v 1.8 2012/12/11 17:48:26 axs Exp $
 
 MY_P=zd1201-${PV}-fw
 S=${WORKDIR}/${MY_P}
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc64 x86"
 
 IUSE=""
-DEPEND="|| ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040923 )"
+DEPEND="|| ( virtual/udev >=sys-apps/hotplug-20040923 )
+	!<sys-fs/udev-096"
 
 src_compile() {
 	echo "Binary, no compile"

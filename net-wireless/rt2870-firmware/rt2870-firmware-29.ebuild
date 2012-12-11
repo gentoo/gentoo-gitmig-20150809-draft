@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2870-firmware/rt2870-firmware-29.ebuild,v 1.2 2012/04/06 10:22:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2870-firmware/rt2870-firmware-29.ebuild,v 1.3 2012/12/11 17:42:39 axs Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
-RDEPEND="|| ( sys-fs/udev sys-apps/hotplug )"
+RDEPEND="|| ( virtual/udev sys-apps/hotplug )"
 DEPEND=""
 
 src_install() {

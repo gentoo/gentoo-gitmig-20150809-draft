@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100-firmware/ipw2100-firmware-1.3.ebuild,v 1.5 2008/02/25 23:34:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100-firmware/ipw2100-firmware-1.3.ebuild,v 1.6 2012/12/11 17:30:41 axs Exp $
 
 inherit multilib
 
@@ -17,7 +17,8 @@ SLOT="${PV}"
 KEYWORDS="amd64 x86"
 
 IUSE=""
-DEPEND="|| ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040923 )"
+DEPEND="|| ( virtual/udev >=sys-apps/hotplug-20040923 )
+	!<sys-fs/udev-096"
 
 src_install() {
 	insinto $(get_libdir)/firmware

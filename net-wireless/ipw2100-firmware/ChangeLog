@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ipw2100-firmware
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100-firmware/ChangeLog,v 1.7 2012/11/18 11:17:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100-firmware/ChangeLog,v 1.8 2012/12/11 17:30:41 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> ipw2100-firmware-1.3.ebuild:
+  virtualize udev dependency
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop mobile herd as talked in gentoo-dev ML
