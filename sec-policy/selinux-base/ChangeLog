@@ -1,6 +1,15 @@
 # ChangeLog for sec-policy/selinux-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/ChangeLog,v 1.15 2012/12/04 20:21:53 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/ChangeLog,v 1.16 2012/12/11 10:52:53 ssuominen Exp $
+
+  11 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
+  selinux-base-2.20120215-r6.ebuild, selinux-base-2.20120215-r7.ebuild,
+  selinux-base-2.20120215-r8.ebuild, selinux-base-2.20120215-r9.ebuild,
+  selinux-base-2.20120215-r13.ebuild, selinux-base-2.20120215-r14.ebuild,
+  selinux-base-2.20120215-r15.ebuild, selinux-base-2.20120725-r5.ebuild,
+  selinux-base-2.20120725-r7.ebuild, selinux-base-2.20120725-r8.ebuild,
+  selinux-base-9999.ebuild:
+  Use virtual/udev instead of sys-fs/udev.
 
   04 Dec 2012; <swift@gentoo.org> selinux-base-9999.ebuild, metadata.xml:
   Add in support for unconfined USE flag and fix #445978
