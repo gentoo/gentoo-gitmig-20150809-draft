@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.9.4-r1.ebuild,v 1.1 2012/12/08 00:37:15 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.9.4-r1.ebuild,v 1.2 2012/12/11 03:40:27 axs Exp $
 
 EAPI=4
 
@@ -88,7 +88,7 @@ COMMONDEPEND="
 	)
 	spell? ( app-text/enchant )
 	ssl? ( dev-libs/openssl )
-	udev? ( sys-fs/udev )
+	udev? ( virtual/udev )
 	upnp? ( media-libs/herqq )
 	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )
 "

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.882 2012/12/08 11:53:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.883 2012/12/11 03:40:27 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> kdelibs-4.9.3.ebuild,
+  kdelibs-4.9.4-r1.ebuild:
+  virtualized the udev dependency
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org> -kdelibs-4.8.5.ebuild:
   Drop KDE 4.8
