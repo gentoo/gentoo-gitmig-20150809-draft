@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/tlsdate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tlsdate/ChangeLog,v 1.3 2012/11/09 04:07:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tlsdate/ChangeLog,v 1.4 2012/12/11 01:49:23 vapier Exp $
+
+*tlsdate-0.0.4-r1 (11 Dec 2012)
+
+  11 Dec 2012; Mike Frysinger <vapier@gentoo.org> +files/tlsdate.confd,
+  +files/tlsdate.rc, +files/tlsdated.confd, +files/tlsdated.rc,
+  +tlsdate-0.0.4-r1.ebuild:
+  Drop install of unused ca-roots file #446426 by Maxim Kammerer.  Add init.d
+  files for tlsdate/tlsdated #446428 by Maxim Kammerer.
 
 *tlsdate-0.0.4 (09 Nov 2012)
 
