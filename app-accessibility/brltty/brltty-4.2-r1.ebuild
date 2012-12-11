@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2-r1.ebuild,v 1.1 2012/08/11 14:19:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2-r1.ebuild,v 1.2 2012/12/11 13:55:09 axs Exp $
 
 EAPI="4"
 FINDLIB_USE="ocaml"
@@ -117,7 +117,7 @@ src_install() {
 	insinto /etc
 	doins Documents/brltty.conf
 	local udevdir=/lib/udev
-	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	has_version virtual/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
 	insinto "${udevdir}"/rules.d
 	newins Hotplug/udev.rules 70-brltty.rules
 	newinitd "${FILESDIR}"/brltty.rc brltty
