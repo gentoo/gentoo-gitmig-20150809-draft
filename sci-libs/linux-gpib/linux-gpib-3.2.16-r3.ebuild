@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.16-r3.ebuild,v 1.4 2012/09/11 14:11:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.16-r3.ebuild,v 1.5 2012/12/11 17:56:53 axs Exp $
 
 EAPI=4
 PERL_EXPORT_PHASE_FUNCTIONS=no
 GENTOO_DEPEND_ON_PERL=no
 PYTHON_DEPEND="python? 2"
 
-inherit base linux-mod autotools perl-module python toolchain-funcs user
+inherit base linux-mod autotools perl-module python toolchain-funcs udev user
 
 DESCRIPTION="Kernel module and driver library for GPIB (IEEE 488.2) hardware"
 HOMEPAGE="http://linux-gpib.sourceforge.net/"
@@ -107,11 +107,8 @@ src_install() {
 		cd "${S}" || die
 	fi
 
-	local udevdir=/lib/udev
-	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
 	echo "KERNEL==\"gpib[0-9]*\",	MODE=\"0660\", GROUP=\"gpib\"" >> 99-gpib.rules
-	insinto "${udevdir}"/rules.d
-	doins 99-gpib.rules
+	udev_dorules 99-gpib.rules
 
 	dodoc doc/linux-gpib.pdf ChangeLog AUTHORS README* NEWS
 
