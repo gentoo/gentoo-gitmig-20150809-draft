@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.118 2012/12/04 23:14:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.119 2012/12/11 09:02:38 ssuominen Exp $
+
+  11 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xen-tools-4.1.1-r6.ebuild, xen-tools-4.1.2-r3.ebuild,
+  xen-tools-4.2.0-r1.ebuild:
+  Move sys-power/iasl dependency from USE="hvm" to always required because
+  econf won't pass without it. Use udev.eclass to install udev rules into
+  correct directory. Convert to virtual/udev again after it was mistakenly
+  reverted 05 Dec 2012 by idella4.
 
   04 Dec 2012; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Change maintainer tag (bug #390951).
