@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.2.2.ebuild,v 1.5 2012/10/25 20:48:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.2.2.ebuild,v 1.6 2012/12/11 03:55:07 axs Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -22,7 +22,8 @@ COMMON_DEPEND="
 	>=x11-libs/gtk+-2.99.4:3[introspection?]
 	>=x11-libs/cairo-1.10
 	>=x11-libs/pango-1.28.0
-	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145-r1[extras] )
+	virtual/udev[gudev]
+	!<sys-fs/udev-145-r1
 	>=gnome-base/gnome-desktop-2.91.6:3
 	>=gnome-base/librsvg-2.32.0:2
 	>=media-libs/libcanberra-0.26[gtk3]

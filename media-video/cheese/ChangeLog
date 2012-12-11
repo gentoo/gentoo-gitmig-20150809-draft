@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.62 2012/10/25 20:48:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.63 2012/12/11 03:55:07 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> cheese-2.32.0.ebuild,
+  cheese-3.2.2.ebuild, cheese-3.4.2.ebuild:
+  virtualized the udev dependency
 
   25 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org> cheese-3.2.2.ebuild,
   -cheese-3.4.1.ebuild, cheese-3.4.2.ebuild:
