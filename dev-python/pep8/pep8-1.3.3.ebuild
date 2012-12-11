@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pep8/pep8-1.3.3.ebuild,v 1.1 2012/07/13 03:30:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pep8/pep8-1.3.3.ebuild,v 1.2 2012/12/11 17:04:39 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/jcrocholl/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/setuptools"

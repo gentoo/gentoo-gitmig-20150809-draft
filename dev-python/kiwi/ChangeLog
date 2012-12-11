@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kiwi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.19 2012/11/13 09:54:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.20 2012/12/11 17:05:15 ago Exp $
+
+  11 Dec 2012; Agostino Sarubbo <ago@gentoo.org> kiwi-1.9.36.ebuild:
+  Add ~ppc64, wrt bug #416677
 
 *kiwi-1.9.36 (13 Nov 2012)
 
