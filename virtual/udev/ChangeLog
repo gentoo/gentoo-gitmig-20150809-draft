@@ -1,6 +1,10 @@
 # ChangeLog for virtual/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.8 2012/12/10 05:58:27 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.9 2012/12/11 04:25:33 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> udev-171.ebuild,
+  udev-196.ebuild:
+  added eudev to the virtual representing libudev.so.1
 
   10 Dec 2012; Jonathan Callen <abcd@gentoo.org> udev-0.ebuild, udev-171.ebuild,
   udev-196.ebuild:
