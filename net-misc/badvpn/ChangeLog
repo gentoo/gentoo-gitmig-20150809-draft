@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/badvpn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/badvpn/ChangeLog,v 1.8 2012/10/17 11:06:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/badvpn/ChangeLog,v 1.9 2012/12/11 16:56:32 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> badvpn-1.999.123-r3.ebuild:
+  virtualize udev dependency
 
   17 Oct 2012; <ago@gentoo.org> badvpn-1.999.123-r3.ebuild:
   Stable for amd64, wrt bug #435912

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/badvpn/badvpn-1.999.123-r3.ebuild,v 1.3 2012/10/17 11:06:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/badvpn/badvpn-1.999.123-r3.ebuild,v 1.4 2012/12/11 16:56:32 axs Exp $
 
 EAPI=4
 inherit eutils cmake-utils user
@@ -35,7 +35,7 @@ RDEPEND="${COMMON_DEPEND}
 		net-firewall/iptables
 		net-wireless/wpa_supplicant
 		sys-apps/iproute2
-		>=sys-fs/udev-171
+		>=virtual/udev-171
 	)"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
