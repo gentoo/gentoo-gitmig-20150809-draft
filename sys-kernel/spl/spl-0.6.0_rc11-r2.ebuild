@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc11-r1.ebuild,v 1.1 2012/10/17 04:57:33 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc11-r2.ebuild,v 1.1 2012/12/11 19:42:28 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -56,6 +56,7 @@ src_prepare() {
 
 	# Linux 3.6 Support
 	epatch "${FILESDIR}/${P}-linux-3.6-compat.patch"
+	epatch "${FILESDIR}/${PN}-0.6.0_rc12-fix-3.6-compat-regression.patch"
 
 	autotools-utils_src_prepare
 }
