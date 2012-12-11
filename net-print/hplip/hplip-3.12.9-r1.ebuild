@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.9-r1.ebuild,v 1.6 2012/10/20 11:54:01 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.9-r1.ebuild,v 1.7 2012/12/11 17:01:02 axs Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="!minimal? 2"
 PYTHON_USE_WITH="threads xml"
 PYTHON_USE_WITH_OPT="!minimal"
 
-inherit eutils fdo-mime linux-info python autotools toolchain-funcs
+inherit eutils fdo-mime linux-info python udev autotools toolchain-funcs
 
 DESCRIPTION="HP Linux Imaging and Printing. Includes printer, scanner, fax drivers and service tools."
 HOMEPAGE="http://hplipopensource.com/hplip-web/index.html"
@@ -48,7 +48,7 @@ RDEPEND="${COMMON_DEPEND}
 	)
 	!minimal? (
 		dev-python/pygobject:2
-		kernel_linux? ( >=sys-fs/udev-114 )
+		kernel_linux? ( virtual/udev !<sys-fs/udev-114 )
 		scanner? (
 			dev-python/imaging
 			X? ( || (
@@ -105,8 +105,7 @@ src_prepare() {
 	epatch "${WORKDIR}"
 
 	# Fix for Gentoo bug #345725
-	local udevdir=/lib/udev
-	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	local udevdir="$(udev_get_udevdir)"
 	sed -i -e "s|/etc/udev|${udevdir}|g" \
 		$(find . -type f -exec grep -l /etc/udev {} +) || die
 

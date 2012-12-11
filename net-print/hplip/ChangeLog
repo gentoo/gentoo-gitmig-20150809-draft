@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.255 2012/11/30 15:47:05 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.256 2012/12/11 17:01:02 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> hplip-3.12.9-r1.ebuild,
+  hplip-3.12.10a.ebuild, hplip-3.12.10a-r1.ebuild, hplip-3.12.11.ebuild:
+  virtualize udev dependency, get udevdir via udev.eclass
 
 *hplip-3.12.11 (30 Nov 2012)
 
