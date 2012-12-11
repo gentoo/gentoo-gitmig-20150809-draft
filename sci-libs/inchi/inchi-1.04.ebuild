@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/inchi/inchi-1.04.ebuild,v 1.2 2012/10/24 14:48:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/inchi/inchi-1.04.ebuild,v 1.3 2012/12/11 17:46:53 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="
 
 LICENSE="IUPAC-InChi"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc static-libs"
 
 DEPEND="app-arch/unzip"
