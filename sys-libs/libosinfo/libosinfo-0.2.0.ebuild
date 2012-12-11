@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/libosinfo-0.2.0.ebuild,v 1.2 2012/09/16 00:58:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/libosinfo-0.2.0.ebuild,v 1.3 2012/12/11 15:45:42 ssuominen Exp $
 
 EAPI=4
 VALA_MIN_API_VERSION="0.16"
 VALA_USE_DEPEND="vapigen"
 
-inherit eutils toolchain-funcs vala
+inherit eutils toolchain-funcs vala udev
 
 DESCRIPTION="GObject library for managing information about real and virtual OSes"
 HOMEPAGE="http://fedorahosted.org/libosinfo/"
@@ -38,9 +38,6 @@ src_prepare() {
 }
 
 src_configure() {
-	local udevdir=/lib/udev
-	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-
 	# --enable-udev is only for rules.d file install
 	econf \
 		--disable-static \
@@ -51,7 +48,7 @@ src_configure() {
 		$(use_enable vala) \
 		--enable-udev \
 		--disable-coverage \
-		--with-udev-rulesdir="${udevdir}"/rules.d \
+		--with-udev-rulesdir="$(udev_get_udevdir)"/rules.d \
 		--with-html-dir=/usr/share/doc/${PF}/html
 }
 
