@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/arprec-2.2.15.ebuild,v 1.2 2012/11/30 17:15:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/arprec-2.2.16.ebuild,v 1.1 2012/12/11 00:47:27 bicatali Exp $
 
 EAPI=4
 
@@ -21,8 +21,6 @@ IUSE="doc fma fortran qd static-libs"
 
 DEPEND="qd? ( sci-libs/qd[fortran=] )"
 RDEPEND="${DEPEND}"
-
-PATCHES=( "${FILESDIR}"/${P}-fix-enabling.patch )
 
 src_configure() {
 	local myeconfargs=(
@@ -45,9 +43,12 @@ src_install() {
 		cd toolkit
 		./mathinit || die "mathinit failed"
 		exeinto /usr/libexec/${PN}
-		doexe mathtool
+		doexe .libs/mathtool
 		insinto /usr/libexec/${PN}
 		doins *.dat
+		echo > mathtool.exe "#!${EROOT}/bin/sh"
+		echo >> mathtool.exe "cd ${EROOT}/usr/libexec/arprec && exec ./mathtool"
+		newbin mathtool.exe mathtool
 		newdoc README README.mathtool
 	fi
 	use doc || rm "${ED}"/usr/share/doc/${PF}/*.pdf
