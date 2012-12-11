@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.95 2012/12/06 21:39:23 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.96 2012/12/11 21:26:41 axs Exp $
+
+*spidermonkey-1.8.7-r3 (11 Dec 2012)
+*spidermonkey-1.8.5-r4 (11 Dec 2012)
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> +spidermonkey-1.8.5-r4.ebuild,
+  +spidermonkey-1.8.7-r3.ebuild:
+  do not call python helpers when merging a binary package, bug 446910
 
 *spidermonkey-1.8.7-r2 (06 Dec 2012)
 *spidermonkey-1.8.5-r3 (06 Dec 2012)
