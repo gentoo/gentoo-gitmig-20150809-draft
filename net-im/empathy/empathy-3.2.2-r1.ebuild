@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.2.2-r1.ebuild,v 1.4 2012/10/25 20:56:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.2.2-r1.ebuild,v 1.5 2012/12/11 16:55:55 axs Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -66,7 +66,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.28:2
 		>=app-text/enchant-1.2
 		>=app-text/iso-codes-0.35 )
 	v4l? (
-		|| ( sys-fs/udev[gudev] sys-fs/udev[extras] )
+		virtual/udev[gudev]
 		media-plugins/gst-plugins-v4l2:0.10
 		>=media-video/cheese-2.91.91.1 )
 "

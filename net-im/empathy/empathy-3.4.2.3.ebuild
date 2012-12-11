@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.4.2.3.ebuild,v 1.5 2012/12/08 01:25:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.4.2.3.ebuild,v 1.6 2012/12/11 16:55:55 axs Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -67,7 +67,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.30:2
 	v4l? (
 		media-plugins/gst-plugins-v4l2:0.10
 		>=media-video/cheese-3.4:=
-		sys-fs/udev[gudev] )
+		virtual/udev[gudev] )
 "
 # FIXME: gst-plugins-bad is required for the valve plugin. This should move to good
 # eventually at which point the dep can be dropped
