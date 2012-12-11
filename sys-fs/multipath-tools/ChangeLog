@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/multipath-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.48 2012/12/11 10:04:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.49 2012/12/11 10:07:21 ssuominen Exp $
+
+  11 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
+  multipath-tools-0.4.8-r1.ebuild, multipath-tools-0.4.9-r5.ebuild:
+  Migrate latest to udev.eclass. Use virtual/udev instead of sys-fs/udev.
 
   11 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
   -multipath-tools-0.4.9-r3.ebuild, -multipath-tools-0.4.9-r4.ebuild:

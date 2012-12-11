@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.9-r5.ebuild,v 1.2 2012/08/25 22:35:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.9-r5.ebuild,v 1.3 2012/12/11 10:07:21 ssuominen Exp $
 
 EAPI=4
-inherit base eutils toolchain-funcs
+inherit base eutils toolchain-funcs udev
 
 DESCRIPTION="Device mapper target autoconfig"
 HOMEPAGE="http://christophe.varoqui.free.fr/"
@@ -18,7 +18,7 @@ RDEPEND="|| (
 		>=sys-fs/lvm2-2.02.45
 		>=sys-fs/device-mapper-1.00.19-r1
 	)
-	>=sys-fs/udev-124
+	virtual/udev
 	dev-libs/libaio
 	sys-libs/readline
 	!<sys-apps/baselayout-2"
@@ -41,7 +41,7 @@ src_compile() {
 }
 
 src_install() {
-	local udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	local udevdir="$(udev_get_udevdir)"
 
 	dodir /sbin /usr/share/man/man8
 	emake \
