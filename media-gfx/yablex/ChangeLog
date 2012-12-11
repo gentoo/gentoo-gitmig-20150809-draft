@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/yablex
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yablex/ChangeLog,v 1.7 2008/01/17 00:03:33 maekke Exp $
+# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yablex/ChangeLog,v 1.8 2012/12/11 09:56:51 xarthisius Exp $
+
+  11 Dec 2012; Kacper Kowalik <xarthisius@gentoo.org> yablex-20030826.ebuild:
+  Drop ~ppc wrt #418399
 
   17 Jan 2008; Markus Meier <maekke@gentoo.org> yablex-20030826.ebuild:
   quotes
@@ -22,4 +25,3 @@
   26 Nov 2003; Brandy Westcott brandy@gentoo.org yablex-20030826.ebuild:
   Initial import. Thanks to Matija Suklje <matija.suklje@rutka.net> for the
   request. Closes bug #30955.
-
