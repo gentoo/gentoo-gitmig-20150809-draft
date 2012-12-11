@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/files/cman.initd-3.1.5-r1,v 1.1 2012/12/11 22:16:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/files/cman.initd-3.1.5-r1,v 1.2 2012/12/11 23:54:24 robbat2 Exp $
 
 CMAN_TOOL="/usr/sbin/cman_tool"
 FENCE_TOOL="/usr/sbin/fence_tool"
@@ -176,6 +176,7 @@ start_cman() {
 	        if [ "$?" -ne 0 ]
         	then
                 	eend 1 "Failed to start cman"
+					return 1
 	        else
         	        eend 0
 
@@ -184,7 +185,9 @@ start_cman() {
         	        then
                 	        ebegin "Waiting for quorum (${CMAN_QUORUM_TIMEOUT} secs)"
                         	${CMAN_TOOL} -t ${CMAN_QUORUM_TIMEOUT} -q wait
-	                        eend $?
+							rc=$?
+	                        eend $rc
+							return $rc
         	        fi
 	        fi
 	else
@@ -307,10 +310,22 @@ start() {
     mkdir -p /var/run/cluster
 
 #	start_ccsd
-	start_cman
-	start_fenced
-	start_groupd
-	start_dlm_controld
+	if ! start_cman ; then
+		eerror "Failed to start cman"
+		return 1
+	fi
+	if ! start_fenced; then
+		eerror "Failed to start fenced"
+		return 1
+	fi
+	if ! start_groupd; then
+		eerror "Failed to start groupd"
+		return 1
+	fi
+	if ! start_dlm_controld; then
+		eerror "Failed to start dlm_controld"
+		return 1
+	fi
 #	start_gfs_controld
 }
 
