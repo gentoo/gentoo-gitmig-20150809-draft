@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdstyler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.54 2012/11/07 11:03:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.55 2012/12/11 16:45:35 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> dvdstyler-2.1.ebuild,
+  dvdstyler-2.3.4.ebuild:
+  virtualize the udev dependency
 
 *dvdstyler-2.3.4 (07 Nov 2012)
 

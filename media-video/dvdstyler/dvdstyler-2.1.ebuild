@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-2.1.ebuild,v 1.4 2012/05/05 08:58:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-2.1.ebuild,v 1.5 2012/12/11 16:45:35 axs Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ COMMON_DEPEND=">=app-cdr/dvd+rw-tools-7.1
 	virtual/jpeg
 	x11-libs/wxGTK:2.8[gstreamer,X]
 	gnome? ( >=gnome-base/libgnomeui-2 )
-	kernel_linux? ( sys-fs/udev )"
+	kernel_linux? ( virtual/udev )"
 RDEPEND="${COMMON_DEPEND}
 	>=app-cdr/dvdisaster-0.72.2"
 DEPEND="${COMMON_DEPEND}
