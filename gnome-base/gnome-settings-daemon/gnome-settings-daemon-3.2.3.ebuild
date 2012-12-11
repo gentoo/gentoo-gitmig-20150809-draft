@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.2.3.ebuild,v 1.4 2012/08/07 08:59:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.2.3.ebuild,v 1.5 2012/12/11 09:33:51 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -47,15 +47,13 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.74
 	colord? ( >=x11-misc/colord-0.1.13 )
 	cups? ( >=net-print/cups-1.4[dbus] )
 	packagekit? (
-		|| ( sys-fs/udev[gudev]
-			sys-fs/udev[extras] )
+		virtual/udev[gudev]
 		>=app-admin/packagekit-base-0.6.12 )
 	policykit? (
 		>=sys-auth/polkit-0.97
 		>=sys-apps/dbus-1.1.2[X] )
 	smartcard? ( >=dev-libs/nss-3.11.2 )
-	udev? ( || ( sys-fs/udev[gudev]
-		sys-fs/udev[extras] ) )"
+	udev? ( virtual/udev[gudev] )"
 # Themes needed by g-s-d, gnome-shell, gtk+:3 apps to work properly
 # <gnome-color-manager-3.1.1 has file collisions with g-s-d-3.1.x
 # <gnome-power-manager-3.1.3 has file collisions with g-s-d-3.1.x

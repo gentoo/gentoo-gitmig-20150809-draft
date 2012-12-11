@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.4.2.ebuild,v 1.4 2012/09/23 14:05:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.4.2.ebuild,v 1.5 2012/12/11 09:33:51 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -44,13 +44,13 @@ COMMON_DEPEND="
 	colord? ( >=x11-misc/colord-0.1.13 )
 	cups? ( >=net-print/cups-1.4[dbus] )
 	packagekit? (
-		sys-fs/udev[gudev]
+		virtual/udev[gudev]
 		>=app-admin/packagekit-base-0.6.12 )
 	smartcard? (
-		sys-fs/udev[gudev]
+		virtual/udev[gudev]
 		>=dev-libs/nss-3.11.2 )
 	systemd? ( >=sys-apps/systemd-31 )
-	udev? ( sys-fs/udev[gudev] )
+	udev? ( virtual/udev[gudev] )
 	wacom? ( >=dev-libs/libwacom-0.3
 		x11-drivers/xf86-input-wacom )"
 # Themes needed by g-s-d, gnome-shell, gtk+:3 apps to work properly
