@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.4.2.ebuild,v 1.7 2012/02/12 00:46:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.4.2.ebuild,v 1.8 2012/12/11 14:53:14 ssuominen Exp $
 
 EAPI="3"
 
 STUPID_NUM="3518"
 
-inherit eutils
+inherit eutils udev
 
 DESCRIPTION="CCID free software driver"
 HOMEPAGE="http://pcsclite.alioth.debian.org/ccid.html"
@@ -35,8 +35,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc README AUTHORS || die
-	insinto /lib/udev/rules.d
-	doins src/92_pcscd_ccid.rules || die
+	udev_newrules src/92_pcscd_ccid.rules
 }

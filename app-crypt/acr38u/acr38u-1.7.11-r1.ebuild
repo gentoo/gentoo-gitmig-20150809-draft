@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/acr38u-1.7.11-r1.ebuild,v 1.2 2012/12/11 13:58:03 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/acr38u-1.7.11-r1.ebuild,v 1.3 2012/12/11 14:50:43 ssuominen Exp $
 
 EAPI=4
 
-inherit multilib eutils versionator autotools toolchain-funcs
+inherit multilib eutils versionator autotools toolchain-funcs udev
 
 MY_P=ACR38_LINUX_$(get_version_component_range 1)00$(get_version_component_range 2)$(get_version_component_range 3)_P
 
@@ -53,8 +53,5 @@ src_install() {
 	prune_libtool_files
 
 	# note: for eudev support this pkg may always need to install rules to /usr
-	local udevdir=/lib/udev
-	has_version virtual/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-	insinto "${udevdir}"/rules.d
-	newins "${FILESDIR}"/${PV}.rules 92-pcscd-acr38u.rules
+	udev_newrules "${FILESDIR}"/${PV}.rules 92-pcscd-acr38u.rules
 }

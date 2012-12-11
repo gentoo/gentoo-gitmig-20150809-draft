@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/acr38u-1.7.10-r1.ebuild,v 1.3 2012/08/12 07:50:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/acr38u-1.7.10-r1.ebuild,v 1.4 2012/12/11 14:50:43 ssuominen Exp $
 
 EAPI=3
 
-inherit multilib eutils versionator autotools
+inherit multilib eutils versionator autotools udev
 
 MY_P=ACR38U_driver_Lnx_$(get_version_component_range 1)$(get_version_component_range 2)$(get_version_component_range 3)_P.tar.gz
 
@@ -47,6 +47,5 @@ src_install() {
 	# Remove useless .la files
 	find "${D}" -name '*.la' -delete
 
-	insinto /lib/udev/rules.d
-	doins "${FILESDIR}/92-pcscd-acr38u.rules"
+	udev_newrules "${FILESDIR}/92-pcscd-acr38u.rules"
 }
