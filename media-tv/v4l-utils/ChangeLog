@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/v4l-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/ChangeLog,v 1.28 2012/12/05 21:05:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/ChangeLog,v 1.29 2012/12/11 16:44:17 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> v4l-utils-0.8.8-r1.ebuild,
+  v4l-utils-0.8.9.ebuild:
+  virtualize udev by using udev.eclass to find udevdir
 
   05 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   v4l-utils-0.8.9.ebuild:
