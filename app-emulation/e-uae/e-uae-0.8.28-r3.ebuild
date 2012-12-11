@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.28-r3.ebuild,v 1.10 2011/03/27 10:22:51 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.28-r3.ebuild,v 1.11 2012/12/11 18:21:18 grobian Exp $
 
 EAPI="1"
 
@@ -101,6 +101,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-fix-JIT-cache-on-NX-cpu.patch"
 	epatch "${FILESDIR}/${P}-gtkui_64bit_fix.diff"
 	epatch "${FILESDIR}/${P}-themes_rendering_fix.diff"
+	# bug #425680
+	sed -i -e 's/getline/mygetline/' src/gui-none/nogui.c || die
 }
 
 src_compile() {
