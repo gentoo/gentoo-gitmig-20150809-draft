@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/enblend
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.49 2012/12/09 16:26:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.50 2012/12/11 22:33:45 maekke Exp $
+
+  11 Dec 2012; Markus Meier <maekke@gentoo.org> enblend-4.1.ebuild:
+  add missing sci-libs/gsl dependency by Martin Jansa in bug #446816
 
 *enblend-4.1 (09 Dec 2012)
 
