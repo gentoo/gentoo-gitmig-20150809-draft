@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/gnome-packagekit-3.2.1.ebuild,v 1.4 2012/05/05 06:25:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/gnome-packagekit-3.2.1.ebuild,v 1.5 2012/12/11 09:29:35 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -35,7 +35,7 @@ RDEPEND="
 	media-libs/fontconfig
 	x11-libs/libX11
 
-	udev? ( || ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] ) )"
+	udev? ( virtual/udev[gudev] )"
 DEPEND="${RDEPEND}
 	app-text/docbook-sgml-utils
 	>=app-text/gnome-doc-utils-0.3.2

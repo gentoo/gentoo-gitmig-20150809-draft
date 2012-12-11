@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/gnome-packagekit-3.4.2.ebuild,v 1.1 2012/05/19 22:57:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/gnome-packagekit-3.4.2.ebuild,v 1.2 2012/12/11 09:29:35 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -37,7 +37,7 @@ RDEPEND="
 
 	systemd? ( >=sys-apps/systemd-42 )
 	!systemd? ( sys-auth/consolekit )
-	udev? ( >=sys-fs/udev-171[gudev] )"
+	udev? ( >=virtual/udev-171[gudev] )"
 DEPEND="${RDEPEND}
 	app-text/docbook-sgml-utils
 	>=app-text/gnome-doc-utils-0.3.2
