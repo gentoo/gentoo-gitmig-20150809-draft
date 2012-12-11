@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/spectools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/ChangeLog,v 1.22 2012/11/21 10:10:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/ChangeLog,v 1.23 2012/12/11 17:47:41 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> spectools-2009.02.1.ebuild,
+  spectools-2011.08.1-r2.ebuild, spectools-9999.ebuild:
+  virtualize udev dependency, install rules via udev.eclass
 
   21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> spectools-2011.08.1-r2.ebuild:
   Stable for x86, wrt bug #441502

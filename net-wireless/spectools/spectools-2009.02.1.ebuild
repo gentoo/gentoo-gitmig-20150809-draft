@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-2009.02.1.ebuild,v 1.1 2012/02/19 22:27:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-2009.02.1.ebuild,v 1.2 2012/12/11 17:47:41 axs Exp $
 
 inherit eutils
 
@@ -24,7 +24,8 @@ DEPEND="=virtual/libusb-0*
 		gtk? ( =x11-libs/gtk+-2* )"
 # Maemo: Add hildon and bbus
 RDEPEND="${DEPEND}
-		>=sys-fs/udev-114"
+		virtual/udev
+		!<sys-fs/udev-114"
 
 src_unpack() {
 	unpack ${A}
