@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gtk-v4l/gtk-v4l-0.4.ebuild,v 1.1 2012/05/11 09:28:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gtk-v4l/gtk-v4l-0.4.ebuild,v 1.2 2012/12/11 11:10:46 ssuominen Exp $
 
 EAPI=4
 inherit eutils
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
 	>=media-libs/libv4l-0.6
-	|| ( >=sys-fs/udev-171-r5[gudev] <sys-fs/udev-171[extras] )
+	>=virtual/udev-171[gudev]
 	x11-libs/gtk+:3"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
