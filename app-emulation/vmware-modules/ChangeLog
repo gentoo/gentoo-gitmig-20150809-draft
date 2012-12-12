@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.98 2012/12/09 14:29:00 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.99 2012/12/12 11:46:57 ssuominen Exp $
+
+  12 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
+  vmware-modules-238.6.ebuild, vmware-modules-264.4.ebuild,
+  vmware-modules-271.1.ebuild:
+  Use udev.eclass and udev_dorules to install rules into correct directory wrt
+  #433912 by Martin von Gagern
 
 *vmware-modules-271.1 (09 Dec 2012)
 
