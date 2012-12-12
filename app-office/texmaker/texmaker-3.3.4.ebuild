@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-3.3.4.ebuild,v 1.6 2012/12/08 12:36:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-3.3.4.ebuild,v 1.7 2012/12/12 16:34:57 jlec Exp $
 
 EAPI=4
 
@@ -31,14 +31,16 @@ IUSE=""
 S="${WORKDIR}/${MY_P}"
 
 COMMON_DEPEND="
+	app-text/hunspell
 	app-text/poppler[qt4]
 	sys-libs/zlib
+	virtual/glu
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/qt-gui:4
 	x11-libs/qt-core:4
 	x11-libs/qt-webkit:4
-	app-text/hunspell"
+"
 RDEPEND="${COMMON_DEPEND}
 	virtual/latex-base
 	app-text/psutils

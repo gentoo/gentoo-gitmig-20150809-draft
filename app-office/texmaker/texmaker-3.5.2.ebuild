@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-3.5.2.ebuild,v 1.1 2012/11/07 15:45:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-3.5.2.ebuild,v 1.2 2012/12/12 16:34:57 jlec Exp $
 
 EAPI=4
 
@@ -31,6 +31,7 @@ IUSE=""
 S="${WORKDIR}/${MY_P}"
 
 COMMON_DEPEND="
+	app-text/hunspell
 	app-text/poppler[qt4]
 	sys-libs/zlib
 	x11-libs/libX11
@@ -38,7 +39,7 @@ COMMON_DEPEND="
 	x11-libs/qt-gui:4
 	x11-libs/qt-core:4
 	x11-libs/qt-webkit:4
-	app-text/hunspell"
+"
 RDEPEND="${COMMON_DEPEND}
 	virtual/latex-base
 	app-text/psutils
@@ -49,7 +50,7 @@ DEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	"${FILESDIR}"/${P}-hunspell.patch
-	"${FILESDIR}"/${PN}-3.3.3-qt48.patch
+#	"${FILESDIR}"/${PN}-3.3.3-qt48.patch
 	)
 src_configure() {
 	eqmake4 \
