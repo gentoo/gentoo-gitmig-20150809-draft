@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/freeze-2.5.0-r1.ebuild,v 1.1 2012/12/12 16:14:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/freeze-2.5.0-r1.ebuild,v 1.2 2012/12/12 16:29:58 jer Exp $
 
 EAPI=4
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Freeze/unfreeze compression program"
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/utils/compress/"
@@ -18,16 +18,9 @@ RDEPEND="
 	!<=media-libs/mlt-0.4.2
 	!media-libs/mlt[melt]
 "
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_prepare() {
-	# Hard links confuse prepman and these links are absolute.
-	# Fix pre-stripped binary and respect CFLAGS as well
-	sed -i -e 's:ln -f:ln -sf:g' \
-		-e 's:-strip $@::g' \
-		-e '/^CFLAGS/s:=.*:+= -I.:' \
-		Makefile.in || die "sed failed"
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 src_compile() {

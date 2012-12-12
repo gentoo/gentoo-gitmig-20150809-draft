@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/freeze
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.21 2012/12/12 16:14:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.22 2012/12/12 16:29:58 jer Exp $
+
+  12 Dec 2012; Jeroen Roovers <jer@gentoo.org> freeze-2.5.0-r1.ebuild,
+  +files/freeze-2.5.0-gentoo.patch:
+  Fix symlinks in /usr/bin and mandir.
 
 *freeze-2.5.0-r1 (12 Dec 2012)
 
