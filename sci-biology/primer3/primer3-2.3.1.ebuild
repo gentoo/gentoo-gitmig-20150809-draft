@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/primer3-2.3.1.ebuild,v 1.1 2012/07/19 12:21:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/primer3-2.3.1.ebuild,v 1.2 2012/12/12 13:10:00 jlec Exp $
 
 EAPI=4
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Primer Design for PCR reactions"
 HOMEPAGE="http://primer3.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -19,15 +19,13 @@ DEPEND="dev-lang/perl"
 RDEPEND=""
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.3.4-buildsystem.patch
+
 	if [[ ${CHOST} == *-darwin* ]]; then
 		sed -e "s:LIBOPTS ='-static':LIBOPTS =:" -i Makefile || die
 	fi
-	perl -i -ne 's/\$\(CPP\)/'$(tc-getCXX)'/; print unless /^(CC|CPP|CFLAGS|LDFLAGS)\s*=/' src/Makefile || die
-	sed \
-		-e '/oligotm/s:-o $@:$(LDFLAGS) -o $@:g' \
-		-e '/long_seq_tm_test/s:-o $@:$(LDFLAGS) -o $@:g' \
-		-e 's:CFLAGS:CXXFLAGS:g' \
-		-i src/Makefile || die
+
+	tc-export CC CXX AR RANLIB
 }
 
 src_compile() {
@@ -35,7 +33,8 @@ src_compile() {
 }
 
 src_test () {
-	emake -C test
+	emake -C test | tee "${T}"/test.log
+	grep -q "\[FAILED\]" && die "test failed. See "${T}"/test.log"
 }
 
 src_install () {

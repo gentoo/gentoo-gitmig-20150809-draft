@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci-biology</herd>
-	<longdescription>
+  <herd>sci-biology</herd>
+  <longdescription>
 		Primer3 picks primers for PCR reactions, considering: oligonucleotide
 		melting temperature, size, GC content, and primer-dimer possibilities;
 		PCR product size; positional constraints within the source sequence;
