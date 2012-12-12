@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/teyjus/teyjus-2.0.2.ebuild,v 1.1 2012/12/09 21:57:06 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/teyjus/teyjus-2.0.2.ebuild,v 1.2 2012/12/12 10:42:06 gienah Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ DESCRIPTION="Higher-order logic programming language Lambda Prolog"
 HOMEPAGE="http://teyjus.cs.umn.edu/"
 SRC_URI="http://teyjus.googlecode.com/files/${MY_P}.tar.gz"
 
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-3"
 IUSE="emacs examples +ocamlopt"
@@ -31,13 +31,32 @@ PATCHES=("${FILESDIR}/${PN}-2.0.2-flags.patch")
 
 SITEFILE=50${PN}-gentoo.el
 
+src_prepare() {
+	base_src_prepare
+	local cflags=""
+	for i in ${CFLAGS}
+	do
+		cflags="${cflags} -ccopt ${i}"
+	done
+	local lflags=""
+	for i in ${LDFLAGS}
+	do
+		lflags="${lflags} -cclib ${i}"
+	done
+	sed -e "s@CFLAGS +=@CFLAGS += ${CFLAGS}@" \
+		-e "s@LDFLAGS +=@LDFLAGS += ${LDFLAGS}@" \
+		-e "s@OCAMLFLAGS +=@OCAMLFLAGS +=${cflags}${lflags}@" \
+		-i "${S}/source/OMakefile" \
+		|| die "Could not set flags in ${S}/teyjus/source/OMakefile"
+}
+
 src_compile() {
 	addpredict "/usr/$(get_libdir)/omake/Pervasives.omc"
 	addpredict "/usr/$(get_libdir)/omake/build/C.omc"
 	addpredict "/usr/$(get_libdir)/omake/build/Common.omc"
 	addpredict "/usr/$(get_libdir)/omake/configure/Configure.omc"
 	addpredict "/usr/$(get_libdir)/omake/build/OCaml.omc"
-	omake all || die "omake all failed"
+	omake --verbose all || die "omake all failed"
 	if use emacs ; then
 		pushd "${S}/emacs" || die "Could change directory to emacs"
 		elisp-compile *.el || die "emacs elisp compile failed"
