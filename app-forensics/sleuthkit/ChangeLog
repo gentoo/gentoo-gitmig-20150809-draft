@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/sleuthkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.66 2012/11/25 10:02:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.67 2012/12/12 16:15:56 jer Exp $
+
+  12 Dec 2012; Jeroen Roovers <jer@gentoo.org> sleuthkit-4.0.0.ebuild:
+  Stable for HPPA (bug #446640).
 
 *sleuthkit-4.0.1 (25 Nov 2012)
 
