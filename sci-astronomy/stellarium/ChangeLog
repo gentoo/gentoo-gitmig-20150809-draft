@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.106 2012/10/17 03:08:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.107 2012/12/12 16:40:45 mr_bones_ Exp $
+
+  12 Dec 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  stellarium-0.11.4a.ebuild:
+  increase qt dep (bug #446960)
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   stellarium-0.11.4a.ebuild:
