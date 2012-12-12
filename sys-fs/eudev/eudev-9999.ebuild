@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.4 2012/12/11 19:14:13 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.5 2012/12/12 14:06:33 axs Exp $
 
 EAPI=4
 
@@ -50,13 +50,14 @@ fi
 RDEPEND="${COMMON_DEPEND}
 	hwdb? ( sys-apps/hwids )
 	openrc? ( >=sys-fs/udev-init-scripts-18 )
+	!sys-fs/udev
 	!sys-apps/coldplug
 	!sys-apps/systemd
 	!<sys-fs/lvm2-2.02.97
 	!sys-fs/device-mapper
 	!<sys-fs/udev-init-scripts-18"
 
-PDEPEND=">=virtual/udev-80"
+PDEPEND=">=virtual/udev-180"
 
 udev_check_KV()
 {
