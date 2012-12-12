@@ -1,6 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.245 2012/12/08 03:26:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.246 2012/12/12 10:25:59 zmedico Exp $
+
+  12 Dec 2012; Zac Medico <zmedico@gentoo.org> calibre-0.9.9.ebuild:
+  Add workaround for PyQt4-4.9.6 compile failure, bug #446790.
 
 *calibre-0.9.9 (08 Dec 2012)
 
