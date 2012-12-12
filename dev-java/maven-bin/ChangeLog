@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/maven-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.79 2012/12/07 22:55:11 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.80 2012/12/12 19:26:35 ago Exp $
+
+  12 Dec 2012; Agostino Sarubbo <ago@gentoo.org> maven-bin-1.1-r3.ebuild,
+  maven-bin-2.0.11-r2.ebuild, maven-bin-2.2.1-r2.ebuild,
+  maven-bin-3.0.4-r1.ebuild:
+  Stable for amd64, wrt bug #446404
 
   07 Dec 2012; Miroslav Šulc <fordfrog@gentoo.org> maven-bin-1.1-r1.ebuild,
   maven-bin-1.1-r3.ebuild, maven-bin-2.0.11.ebuild, maven-bin-2.0.11-r2.ebuild,
@@ -431,4 +436,3 @@
   produced by Maven are a result of consulting a well defined model for your
   project. Builds, documentation, source metrics, and source cross-references
   are all controlled by your POM.
-
