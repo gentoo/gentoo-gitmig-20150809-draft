@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1323.1.ebuild,v 1.4 2012/12/02 22:21:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1354.0.ebuild,v 1.1 2012/12/12 04:32:17 phajdan.jr Exp $
 
-EAPI="4"
+EAPI="5"
 PYTHON_DEPEND="2:2.6"
 
 CHROMIUM_LANGS="am ar bg bn ca cs da de el en_GB es es_LA et fa fi fil fr gu he
@@ -26,7 +26,7 @@ RDEPEND="app-arch/bzip2
 		dev-libs/libgcrypt
 		>=net-print/cups-1.3.11
 	)
-	>=dev-lang/v8-3.15.1.2
+	>=dev-lang/v8-3.15.7.2:=
 	>=dev-libs/elfutils-0.149
 	dev-libs/expat
 	>=dev-libs/icu-49.1.1-r1
@@ -34,6 +34,7 @@ RDEPEND="app-arch/bzip2
 	dev-libs/libxml2[icu]
 	dev-libs/libxslt
 	>=dev-libs/nss-3.12.3
+	dev-libs/protobuf
 	gnome? ( >=gnome-base/gconf-2.24.0 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.28.2 )
 	>=media-libs/alsa-lib-1.0.19
@@ -66,6 +67,8 @@ DEPEND="${RDEPEND}
 	dev-python/ply
 	dev-python/simplejson
 	>=dev-util/gperf-3.0.3
+	net-libs/webkit-gtk:2
+	sys-apps/hwids
 	>=sys-devel/bison-2.4.3
 	sys-devel/flex
 	>=sys-devel/make-3.81-r2
@@ -170,7 +173,6 @@ src_prepare() {
 		\! -path 'third_party/libjingle/*' \
 		\! -path 'third_party/libphonenumber/*' \
 		\! -path 'third_party/libusb/libusb.h' \
-		\! -path 'third_party/libva/*' \
 		\! -path 'third_party/libvpx/libvpx.h' \
 		\! -path 'third_party/libxml/chromium/*' \
 		\! -path 'third_party/libXNVCtrl/*' \
@@ -184,7 +186,6 @@ src_prepare() {
 		\! -path 'third_party/openmax/*' \
 		\! -path 'third_party/opus/*' \
 		\! -path 'third_party/ots/*' \
-		\! -path 'third_party/protobuf/*' \
 		\! -path 'third_party/pywebsocket/*' \
 		\! -path 'third_party/qcms/*' \
 		\! -path 'third_party/re2/*' \
@@ -264,6 +265,7 @@ src_configure() {
 		-Duse_system_libwebp=1
 		-Duse_system_libxml=1
 		-Duse_system_minizip=1
+		-Duse_system_protobuf=1
 		-Duse_system_speex=1
 		-Duse_system_v8=1
 		-Duse_system_xdg_utils=1
@@ -287,6 +289,10 @@ src_configure() {
 	myconf+="
 		-Dlinux_link_gsettings=1
 		-Dlinux_link_libpci=1"
+
+	# TODO: use the file at run time instead of effectively compiling it in.
+	myconf+="
+		-Dusb_ids_path=/usr/share/misc/usb.ids"
 
 	if ! use selinux; then
 		# Enable SUID sandbox.
