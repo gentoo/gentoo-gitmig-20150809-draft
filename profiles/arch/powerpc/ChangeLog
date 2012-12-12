@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.203 2012/11/30 18:00:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.204 2012/12/12 16:27:10 ago Exp $
+
+  12 Dec 2012; Agostino Sarubbo <ago@gentoo.org> package.use.mask:
+  remove media-sound/picard acoustid wrt to bug #426340
 
   30 Nov 2012; Joseph Jezak <josejx@gentoo.org> +ppc64/32ul/packages:
   Removed kgcc64 from ppc64-32ul profile, it's no longer needed.

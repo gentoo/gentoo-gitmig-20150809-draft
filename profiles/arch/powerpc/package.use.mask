@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.146 2012/12/08 17:52:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.147 2012/12/12 16:27:10 ago Exp $
 
 # Anthony G. Basile <blueness@gentoo.org> (15 Nove 2012)
 # Mask telepathy, no stable net-libs/telepathy-qt, bug #441456
@@ -33,10 +33,6 @@ net-misc/tor tor-hardening
 # Anthony G. Basile <blueness@gentoo.org> (16 Jul 2012)
 # Only work on amd64/x86
 net-libs/cyassl aes-ni cyassl-hardening 
-
-# Ben de Groot <yngwin@gentoo.org> (12 Jul 2012)
-# Requires media-libs/chromaprint which is unkeyworded
-media-sound/picard acoustid
 
 # Johannes Huber <johu@gentoo.org> (9 Jul 2012)
 # x11-libs/qt-openvg not keyworded correctly.
