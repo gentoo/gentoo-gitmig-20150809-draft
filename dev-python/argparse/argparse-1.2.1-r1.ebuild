@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/argparse-1.2.1-r1.ebuild,v 1.6 2012/12/12 18:44:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/argparse-1.2.1-r1.ebuild,v 1.7 2012/12/12 19:50:29 mgorny Exp $
 
 EAPI=4
 PYTHON_COMPAT_REAL=(
 	# actual targets
-	python{2_5,2_6,3_1} jython2_5
+	python{2_5,2_6,3_1}
 )
 PYTHON_COMPAT=(
 	${PYTHON_COMPAT_REAL[@]}
