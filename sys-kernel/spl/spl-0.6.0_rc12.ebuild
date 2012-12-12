@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc12.ebuild,v 1.1 2012/11/14 21:56:51 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc12.ebuild,v 1.2 2012/12/12 18:18:09 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -23,7 +23,7 @@ HOMEPAGE="http://zfsonlinux.org/"
 
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
-IUSE="custom-cflags debug"
+IUSE="custom-cflags debug debug-log"
 RESTRICT="test"
 
 RDEPEND="!sys-devel/spl"
