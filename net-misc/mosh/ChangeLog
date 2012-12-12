@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mosh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.32 2012/10/30 00:28:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.33 2012/12/12 18:29:41 ago Exp $
+
+  12 Dec 2012; Agostino Sarubbo <ago@gentoo.org> mosh-1.2.3.ebuild:
+  Stable for amd64, wrt bug #446988
 
   30 Oct 2012; Michael Weber <xmw@gentoo.org> mosh-1.2.2.ebuild,
   mosh-1.2.3.ebuild, mosh-9999.ebuild:
@@ -151,4 +154,3 @@
   06 Apr 2012; Michael Weber <xmw@gentoo.org> +mosh-1.1.3.ebuild,
   +mosh-9999.ebuild, +metadata.xml:
   Initial import.
-
