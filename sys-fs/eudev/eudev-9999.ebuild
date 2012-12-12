@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.6 2012/12/12 16:39:09 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.7 2012/12/12 16:45:02 axs Exp $
 
 EAPI=4
 
@@ -11,7 +11,6 @@ inherit autotools eutils linux-info
 if [[ ${PV} = 9999* ]]
 then
 	EGIT_REPO_URI="git://github.com/gentoo/eudev.git"
-	EGIT_MASTER="fixpaths"
 	inherit git-2
 else
 	SRC_URI="https://github.com/downloads/gentoo/${PN}/${P}.tar.gz"
