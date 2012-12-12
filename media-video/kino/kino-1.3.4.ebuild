@@ -1,10 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.3.4.ebuild,v 1.8 2012/12/02 17:06:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.3.4.ebuild,v 1.9 2012/12/12 11:43:54 ssuominen Exp $
 
-EAPI="4"
-
-inherit eutils
+EAPI=5
+inherit eutils udev
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://www.kinodv.org/"
@@ -54,10 +53,12 @@ RDEPEND="${CDEPEND}
 	sox? ( media-sound/sox )
 	vorbis? ( media-sound/vorbis-tools )"
 
+DOCS="AUTHORS BUGS ChangeLog NEWS README* TODO"
+
 src_prepare() {
 	# Deactivating automagic alsa configuration, bug #134725
 	if ! use alsa ; then
-		sed -i -e "s:HAVE_ALSA 1:HAVE_ALSA 0:" configure || die "sed failed"
+		sed -i -e "s:HAVE_ALSA 1:HAVE_ALSA 0:" configure || die
 	fi
 
 	# Fix bug #169590
@@ -66,7 +67,7 @@ src_prepare() {
 		-e '/\$(LIBQUICKTIME_LIBS) \\/d' \
 		-e '/^[[:space:]]*\$(SRC_LIBS)/ a\
 	\$(LIBQUICKTIME_LIBS) \\' \
-		src/Makefile.in || die "sed failed"
+		src/Makefile.in || die
 
 	# Fix test failure discovered in bug #193947
 	# https://sourceforge.net/tracker/?func=detail&aid=3304499&group_id=14103&atid=314103
@@ -79,10 +80,9 @@ ffmpeg/libavutil/bswap.h\
 ffmpeg/libswscale/yuv2rgb_template.c\
 src/export.h\
 src/message.cc\
-src/page_bttv.cc' po/POTFILES.in || die "sed failed"
+src/page_bttv.cc' po/POTFILES.in || die
 
-	sed -i -e 's:^#include <quicktime.h>:#include <lqt/quicktime.h>:' \
-		src/filehandler.h || die "sed failed"
+	sed -i -e 's:^#include <quicktime.h>:#include <lqt/quicktime.h>:' src/filehandler.h || die
 	epatch "${FILESDIR}/${P}-v4l1.patch"
 	epatch "${FILESDIR}/${P}-libav-0.7.patch"
 	epatch "${FILESDIR}/${P}-libav-0.8.patch"
@@ -90,16 +90,16 @@ src/page_bttv.cc' po/POTFILES.in || die "sed failed"
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		--disable-local-ffmpeg \
 		$(use_enable quicktime) \
 		$(use_with sparc dv1394) \
+		--with-udev-rules-dir="$(udev_get_udevdir)"/rules.d \
 		CPPFLAGS="-I${ROOT}usr/include/libavcodec -I${ROOT}usr/include/libavformat -I${ROOT}usr/include/libswscale"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc AUTHORS BUGS ChangeLog NEWS README* TODO
+	default
+	mv "${ED}/$(udev_get_udevdir)"/rules.d/{,99-}kino.rules
 	fowners root:root -R /usr/share/kino/help #177378
-	find "${ED}"usr -name '*.la' -exec rm -f {} + #385361
+	prune_libtool_files --all #385361
 }
