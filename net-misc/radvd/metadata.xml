@@ -9,4 +9,8 @@
 		<email>xmw@gentoo.org</email>
 		<name>Michael Weber</name>
 	</maintainer>
+	<maintainer>
+		<email>prometheanfire@gentoo.org</email>
+		<name>Matthew Thode</name>
+	</maintainer>
 </pkgmetadata>
