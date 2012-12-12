@@ -1,6 +1,9 @@
 # ChangeLog for virtual/fortran
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/fortran/ChangeLog,v 1.8 2012/05/12 19:35:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/fortran/ChangeLog,v 1.9 2012/12/12 18:20:16 jlec Exp $
+
+  12 Dec 2012; Justin Lecher <jlec@gentoo.org> fortran-0.ebuild, metadata.xml:
+  Shorten dependency declaration suggested by Arfrever
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> fortran-0.ebuild:
   keyword ~amd64-fbsd
