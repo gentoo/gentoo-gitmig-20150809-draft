@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/esearch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.102 2012/12/11 08:28:04 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.103 2012/12/12 15:39:09 pinkbyte Exp $
+
+  12 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> esearch-1.3.ebuild:
+  Stable on amd64, wrt bug #446834
 
   11 Dec 2012; Paul Varner <fuzzyray@gentoo.org> ChangeLog:
   Forcing signed manifest, since previous key was expired.
