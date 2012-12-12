@@ -8,9 +8,6 @@
 		and KDE based applications.
 	</longdescription>
 	<use>
-		<flag name="firefox3">Install GUI theme tweaks for version 3 of
-			<pkg>www-client/firefox</pkg>
-		</flag>
 		<flag name="mozilla">Install GUI theme tweaks for mozilla based
 			browsers <pkg>www-client/firefox</pkg>
 		</flag>

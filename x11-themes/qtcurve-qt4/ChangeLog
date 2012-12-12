@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.151 2012/12/06 04:24:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.152 2012/12/12 17:30:44 pesa Exp $
+
+  12 Dec 2012; Davide Pesavento <pesa@gentoo.org>
+  -files/qtcurve-qt4_kde49-kwin_decoration-macro.patch,
+  -qtcurve-qt4-1.8.13-r2.ebuild:
+  Remove old.
 
   06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   qtcurve-qt4-1.8.14.ebuild:
