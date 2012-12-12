@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/argparse-1.2.1-r1.ebuild,v 1.5 2012/12/10 12:22:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/argparse-1.2.1-r1.ebuild,v 1.6 2012/12/12 18:44:40 mgorny Exp $
 
 EAPI=4
 PYTHON_COMPAT_REAL=(
@@ -11,7 +11,7 @@ PYTHON_COMPAT=(
 	${PYTHON_COMPAT_REAL[@]}
 	# these versions provide built-in argparse
 	# but we still list them to warn user to migrate
-	python{2_7,3_2,3_3} pypy{1_8,1_9}
+	python{2_7,3_2}
 )
 
 inherit distutils-r1
