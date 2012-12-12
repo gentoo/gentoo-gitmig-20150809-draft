@@ -1,8 +1,8 @@
- src/Makefile | 59 ++++++++++++++++++++++++++++++-----------------------------
- 1 file changed, 30 insertions(+), 29 deletions(-)
+ src/Makefile | 61 ++++++++++++++++++++++++++++++------------------------------
+ 1 file changed, 31 insertions(+), 30 deletions(-)
 
 diff --git a/src/Makefile b/src/Makefile
-index 607ab45..b23ec23 100644
+index 607ab45..a88adf4 100644
 --- a/src/Makefile
 +++ b/src/Makefile
 @@ -52,15 +52,16 @@ TESTOPTS=
@@ -30,6 +30,15 @@ index 607ab45..b23ec23 100644
  # Note, for profiling, use
  # make O_OPTS='-pg -O0' LDFLAGS='-g -pg'
  
+@@ -92,7 +93,7 @@ LIBPRIMER3      = libprimer3.a
+ LIBPRIMER3_DYN  = libprimer3.so.1.0.0
+ LIBRARIES       = $(LIBPRIMER3) $(LIBDPAL) $(LIBTHAL) $(LIBOLIGOTM) 
+ DYNLIBS         = $(LIBPRIMER3_DYN) $(LIBDPAL_DYN) $(LIBTHAL_DYN) $(LIBOLIGOTM_DYN)
+-RANLIB          = ranlib
++RANLIB          ?= ranlib
+ 
+ PRIMER_OBJECTS1=primer3_boulder_main.o\
+                 format_output.o\
 @@ -127,85 +128,85 @@ $(LIBOLIGOTM): oligotm.o
  	$(RANLIB) $@
  
