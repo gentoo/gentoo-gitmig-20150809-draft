@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.342 2012/11/21 20:03:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.343 2012/12/12 18:30:31 ago Exp $
+
+  12 Dec 2012; Agostino Sarubbo <ago@gentoo.org> genkernel-3.4.45.ebuild:
+  Stable for amd64, wrt bug #441004
 
   21 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> genkernel-9999.ebuild:
   Ensure that 9999 still builds with the changelog moving to Git.
