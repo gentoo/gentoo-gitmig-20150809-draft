@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.78 2012/12/12 10:48:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.79 2012/12/12 15:50:57 blueness Exp $
+
+  12 Dec 2012; Anthony G. Basile <blueness@gentoo.org> serf-1.1.1.ebuild:
+  stable arm ppc, bug #446524
 
   12 Dec 2012; Agostino Sarubbo <ago@gentoo.org> serf-1.1.1.ebuild:
   Stable for x86, wrt bug #446524
