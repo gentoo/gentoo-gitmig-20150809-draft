@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/twelf/twelf-1.7.1.ebuild,v 1.1 2012/12/09 23:02:17 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/twelf/twelf-1.7.1.ebuild,v 1.2 2012/12/12 13:12:19 gienah Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ DESCRIPTION="Twelf is an implementation of the logical framework LF."
 HOMEPAGE="http://twelf.org/"
 SRC_URI="http://twelf.plparty.org/releases/${MY_P}.tar.gz"
 
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86"
 LICENSE="BSD-2"
 IUSE="doc emacs examples"
@@ -27,8 +27,7 @@ RDEPEND="dev-lang/mlton
 	emacs? (
 		virtual/emacs
 	)"
-DEPEND="${RDEPEND}
-	dev-util/omake"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}
 
