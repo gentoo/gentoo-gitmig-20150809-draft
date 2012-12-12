@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-4.4_pre6250.ebuild,v 1.1 2012/09/26 23:02:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-4.4_pre6250.ebuild,v 1.2 2012/12/12 19:04:08 ago Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -13,7 +13,7 @@ SRC_URI="http://people.apache.org/~Arfrever/gentoo/${P}.tar.xz"
 
 LICENSE="kvirc"
 SLOT="4"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~x86"
 IUSE="audiofile dcc_video +dcc_voice debug doc gsm +ipc ipv6 kde +nls oss +perl +phonon profile +python +qt-dbus +ssl theora +transparency webkit"
 
 RDEPEND="sys-libs/zlib
