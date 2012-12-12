@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.124 2012/12/06 04:17:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.125 2012/12/12 09:45:08 flameeyes Exp $
+
+*munin-2.0.9 (12 Dec 2012)
+
+  12 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> +munin-2.0.9.ebuild,
+  -munin-2.0.5-r1.ebuild, munin-2.0.8-r2.ebuild:
+  Remove old version; bump to 2.0.9, adding missing test dependencies and
+  avoiding install of /var/run; restrict tests on the current stable as some
+  dependencies are missing.
 
   06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> munin-2.0.8-r2.ebuild:
   x86 stable wrt bug #445250
