@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/chromaprint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/ChangeLog,v 1.5 2012/11/08 11:11:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/ChangeLog,v 1.6 2012/12/12 16:25:32 ago Exp $
+
+  12 Dec 2012; Agostino Sarubbo <ago@gentoo.org> chromaprint-0.7.ebuild:
+  Add ~ppc, wrt bug #426340
 
   08 Nov 2012; Alexis Ballier <aballier@gentoo.org> chromaprint-0.7.ebuild,
   +files/chromaprint-0.7-ffmpeg.patch:
@@ -23,4 +26,3 @@
   28 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +chromaprint-0.6.ebuild:
   Initial commit; required by recent release of media-sound/clementine wrt
   #400615 by Nikoli
-
