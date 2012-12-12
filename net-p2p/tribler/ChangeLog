@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/tribler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/ChangeLog,v 1.39 2012/12/08 21:01:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/ChangeLog,v 1.40 2012/12/12 18:31:50 ago Exp $
+
+  12 Dec 2012; Agostino Sarubbo <ago@gentoo.org> tribler-6.0.2.ebuild:
+  Stable for amd64, wrt bug #446526
 
 *tribler-6.0.3 (08 Dec 2012)
 
