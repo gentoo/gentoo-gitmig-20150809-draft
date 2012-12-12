@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/superlu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.18 2012/12/11 18:29:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.19 2012/12/12 20:14:44 jlec Exp $
+
+  12 Dec 2012; Justin Lecher <jlec@gentoo.org> superlu-4.1-r1.ebuild,
+  metadata.xml:
+  Respect AR and RANLIB; fix test failure, #430444
 
   11 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> -files/4.0-test.patch,
   -files/superlu-4.0-autotools.patch, -files/superlu-4.2-autotools.patch,
