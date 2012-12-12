@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.141 2012/12/10 10:17:07 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.142 2012/12/12 15:30:06 jer Exp $
+
+*geoip-1.4.8-r2 (12 Dec 2012)
+
+  12 Dec 2012; Jeroen Roovers <jer@gentoo.org> +geoip-1.4.8-r2.ebuild,
+  +files/geoipupdate-r2.sh, -files/geoipupdate.sh:
+  Prevent loss of the databases when download fails, by Micha Glave (bug
+  #446964).
 
   10 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> -geoip-1.4.8.ebuild:
   Update manifest, cause upstream change tarballs, remove old revision
