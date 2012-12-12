@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/jwhois
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.43 2012/12/09 18:24:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.44 2012/12/12 15:06:56 jmorgan Exp $
+
+  12 Dec 2012; Jack Morgan <jmorgan@gentoo.org> jwhois-4.0-r1.ebuild:
+  sparc stable wrt #441472
 
   09 Dec 2012; Agostino Sarubbo <ago@gentoo.org> jwhois-4.0-r1.ebuild:
   Stable for ppc64, wrt bug #441472
