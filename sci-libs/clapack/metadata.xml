@@ -1,7 +1,8 @@
+<?xml version="1.0"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
-<longdescription lang="en">
+  <herd>sci</herd>
+  <longdescription lang="en">
   LAPACK is a comprehensive library that does linear algebra
   operations including matrix inversions, least squared solutions to
   linear sets of equations, eigenvector analysis, singular value
