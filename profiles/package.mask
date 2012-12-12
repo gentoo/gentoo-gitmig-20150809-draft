@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14291 2012/12/12 04:36:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14292 2012/12/12 15:55:35 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -840,7 +840,7 @@ sys-apps/systemd-sysv-utils
 # Opera Next and Opera snapshots are unsupported and eternally unstable.
 # <http://my.opera.com/desktopteam/blog>
 www-client/opera-next
->=www-client/opera-12.12
+=www-client/opera-12.12*
 
 # Hanno Boeck <hanno@gentoo.org> (15 Dec 2011)
 # Breaks pam_mount, which is its only user in the tree.
