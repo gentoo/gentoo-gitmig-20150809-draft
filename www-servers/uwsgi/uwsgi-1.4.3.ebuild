@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.4.1-r1.ebuild,v 1.1 2012/11/21 10:27:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.4.3.ebuild,v 1.1 2012/12/12 09:48:32 ultrabug Exp $
 
-EAPI="4"
+EAPI="5"
 PYTHON_DEPEND="python? *"
 PYTHON_MODNAME="uwsgidecorators"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,7 +16,7 @@ PHP_EXT_OPTIONAL_USE="php"
 
 MY_P="${P/_/-}"
 
-inherit apache-module eutils python multilib pax-utils php-ext-source-r2 ruby-ng
+inherit apache-module eutils python multilib pax-utils php-ext-source-r2 ruby-ng versionator
 
 DESCRIPTION="uWSGI server for Python web applications"
 HOMEPAGE="http://projects.unbit.it/uwsgi/"
@@ -25,7 +25,7 @@ SRC_URI="http://projects.unbit.it/downloads/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="apache2 +caps +carbon cgi debug erlang gevent graylog2 json ldap lua +nagios pam perl +pcre php +python rrdtool rsyslog ruby spooler sqlite syslog +xml yaml zeromq"
+IUSE="apache2 +caps +carbon cgi debug erlang gevent graylog2 json ldap lua +nagios pam perl +pcre php probepg +python rrdtool rsyslog ruby spooler sqlite syslog +xml yaml zeromq"
 REQUIRED_USE="|| ( cgi erlang lua perl php python ruby )"
 
 # util-linux is required for libuuid when requesting zeromq support
@@ -42,6 +42,7 @@ CDEPEND="caps? ( sys-libs/libcap )
 		php_targets_php5-3? ( dev-lang/php:5.3[embed] )
 		php_targets_php5-4? ( dev-lang/php:5.4[embed] )
 	)
+	probepg? ( dev-db/postgresql-base:= )
 	ruby? ( $(ruby_implementations_depend) )
 	sqlite? ( dev-db/sqlite:3 )
 	rsyslog? ( app-admin/rsyslog )
@@ -161,6 +162,14 @@ web3 = true
 EOF
 	use caps || sed -i -e 's|sys/capability.h|DISABLED|' uwsgiconfig.py || die "sed failed"
 	use zeromq || sed -i -e 's|uuid/uuid.h|DISABLED|' uwsgiconfig.py || die "sed failed"
+
+	if use probepg ; then
+		PGPV="$(best_version dev-db/postgresql-base)"
+		PGSLOT="$(get_version_component_range 1-2 ${PGPV##dev-db/postgresql-base-})"
+		sed -i \
+			-e "s|pg_config|pg_config${PGSLOT/.}|" \
+			plugins/probepg/uwsgiplugin.py || die "sed failed"
+	fi
 }
 
 each_ruby_compile() {
@@ -226,6 +235,10 @@ src_compile() {
 
 	if use cgi ; then
 		python uwsgiconfig.py --plugin plugins/cgi gentoo || die "building plugin for cgi failed"
+	fi
+
+	if use probepg ; then
+		python uwsgiconfig.py --plugin plugins/probepg gentoo || die "building plugin for postgresql probe failed"
 	fi
 
 	if use apache2 ; then
