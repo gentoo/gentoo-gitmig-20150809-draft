@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.5 2012/12/12 14:06:33 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.6 2012/12/12 16:39:09 axs Exp $
+
+*eudev-1_beta1-r1 (12 Dec 2012)
+
+  12 Dec 2012; Ian Stakenvicius <axs@gentoo.org> -eudev-1_beta1.ebuild,
+  +eudev-1_beta1-r1.ebuild,
+  +files/eudev-1_beta1-include-all-search-paths.patch, eudev-9999.ebuild:
+  support all udev rules dirs
 
   12 Dec 2012; Ian Stakenvicius <axs@gentoo.org> eudev-9999.ebuild:
   fixed typos in deps on the live ebuild

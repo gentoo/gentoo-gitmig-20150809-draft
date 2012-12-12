@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta1.ebuild,v 1.4 2012/12/11 19:14:13 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta1-r1.ebuild,v 1.1 2012/12/12 16:39:09 axs Exp $
 
 EAPI=4
 
@@ -115,6 +115,8 @@ pkg_setup()
 
 src_prepare()
 {
+	epatch "${FILESDIR}"/${P}-include-all-search-paths.patch
+
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
 		-i rules/*.rules \
