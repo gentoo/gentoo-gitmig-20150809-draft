@@ -1,6 +1,14 @@
 # ChangeLog for app-text/psutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.26 2012/05/09 16:30:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.27 2012/12/12 08:16:41 ulm Exp $
+
+*psutils-1.17-r2 (12 Dec 2012)
+
+  12 Dec 2012; Ulrich Müller <ulm@gentoo.org> +psutils-1.17-r2.ebuild,
+  +files/psutils-1.17-no-fixmacps.patch:
+  Non-maintainer commit. Switch to tarball provided by Debian; the original
+  one contained files md*.ps that are not distributable. The fixmacps command
+  that was using them is therefore no longer available. Fixes bug 440938.
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> psutils-1.17-r1.ebuild:
   keyword ~amd64-fbsd
