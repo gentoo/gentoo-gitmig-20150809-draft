@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/freeze
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.20 2012/12/09 18:57:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.21 2012/12/12 16:14:01 jer Exp $
+
+*freeze-2.5.0-r1 (12 Dec 2012)
+
+  12 Dec 2012; Jeroen Roovers <jer@gentoo.org> freeze-2.5.0.ebuild,
+  +freeze-2.5.0-r1.ebuild:
+  Adjust sleuthkit blocker to a specific minimal version. Revision bump for an
+  ebuild that removes the fcat and fcat.1 symlinks (bug #444872).
 
   09 Dec 2012; Jeroen Roovers <jer@gentoo.org> freeze-2.5.0.ebuild:
   Block app-forensics/sleuthkit (bug #444872 by Marc Schiffbauer).
