@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14290 2012/12/11 18:23:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14291 2012/12/12 04:36:37 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -386,10 +386,6 @@ net-analyzer/nbaudit
 # Joerg Bornkessel <hd_brummy@gentoo.org> ( 2012/11/04 )
 # masked for testing, bug #422605
 =media-plugins/vdr-softdevice-0.5.0.20110417
-
-# Tomáš Chvátal <scarabeus@gentoo.org> (04 Nov 2012)
-# Masked for testing with gcc-4.7 and to verify reverse deps
->dev-libs/icu-49.9.1
 
 # Markos Chandras <hwoarang@gentoo.org> (04 Nov 2012)
 # Masked for testing
