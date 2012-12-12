@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.6.0-r1.ebuild,v 1.14 2012/10/04 21:41:50 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.6.0-r1.ebuild,v 1.15 2012/12/12 14:05:39 kensington Exp $
 
 EAPI=4
 
@@ -68,7 +68,7 @@ src_install() {
 	cmake-utils_src_install
 	# fixup broken cmake system library installs
 	if [[ ${CHOST} == *-darwin* ]] ; then
- 		local lib
+		local lib
 		for lib in "${EPREFIX}"/usr/lib/libphonon{.4,experimental.4.6.0}.dylib ; do
 			install_name_tool -id "${lib}" "${D}${lib}"
 		done
