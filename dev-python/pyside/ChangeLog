@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyside
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.45 2012/11/21 11:27:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.46 2012/12/12 17:42:38 pesa Exp $
+
+  12 Dec 2012; Davide Pesavento <pesa@gentoo.org> -pyside-1.1.1.ebuild:
+  Remove old.
 
   21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> pyside-1.1.2.ebuild:
   Stable for x86, wrt bug #438390
