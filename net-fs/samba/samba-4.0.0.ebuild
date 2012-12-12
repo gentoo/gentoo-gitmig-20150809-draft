@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_rc4.ebuild,v 1.2 2012/11/12 18:32:50 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0.ebuild,v 1.1 2012/12/12 04:50:23 polynomial-c Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ if [ "${PV}" = "4.9999" ]; then
 	KEYWORDS=""
 	inherit git-2
 else
-	SRC_URI="mirror://samba/rc/${MY_P}.tar.gz"
+	SRC_URI="mirror://samba/${MY_P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 
@@ -44,7 +44,7 @@ RDEPEND="dev-libs/iniparser
 	ads? ( client? ( net-fs/cifs-utils[ads] ) )
 	client? ( net-fs/cifs-utils )
 	cluster? ( >=dev-db/ctdb-1.0.114_p1 )
-	ldap? ( net-nds/openldap )
+	ldap? ( net-nds/openldap[kerberos] )
 	gnutls? ( >=net-libs/gnutls-1.4.0 )
 	selinux? ( sec-policy/selinux-samba )"
 DEPEND="${RDEPEND}
@@ -128,8 +128,9 @@ src_install() {
 	mkdir -p "${D}"/usr/$(get_libdir)/ldb/modules/ldb
 	mv "${D}"/usr/$(get_libdir)/ldb/*.so "${D}"/usr/$(get_libdir)/ldb/modules/ldb
 
-	# Install init script
-	newinitd "${CONFDIR}/samba4.initd" samba || die "newinitd failed"
+	# Install init script and conf.d file
+	newinitd "${CONFDIR}/samba4.initd-r1" samba || die "newinitd failed"
+	newconfd "${CONFDIR}/samba4.confd" samba || die "newconfd failed"
 }
 
 src_test() {
@@ -143,12 +144,7 @@ pkg_postinst() {
 	python_mod_optimize "${PN}"
 
 	# Warn that it's a release candidate
-	ewarn "This is not a final Samba release, however the Samba Team is now making"
-	ewarn "good progress towards a Samba 4.0 release, of which this is a preview."
-	ewarn "Be aware the this release contains the best of all of Samba's"
-	ewarn "technology parts, both a file server (that you can reasonably expect"
-	ewarn "to upgrade existing Samba 3.x releases to) and the AD domain"
-	ewarn "controller work previously known as 'samba4'."
+	ewarn "This is not necessarily compatible with samba-3. Read the wiki page."
 
 	einfo "See http://wiki.samba.org/index.php/Samba4/HOWTO for more"
 	einfo "information about samba 4."

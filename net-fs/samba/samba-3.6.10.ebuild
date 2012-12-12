@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.6.ebuild,v 1.2 2012/10/19 08:10:00 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.10.ebuild,v 1.1 2012/12/12 04:50:23 polynomial-c Exp $
 
 EAPI=4
 
@@ -14,8 +14,8 @@ HOMEPAGE="http://www.samba.org/"
 SRC_URI="mirror://samba/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="acl addns ads +aio avahi caps +client cluster cups debug doc examples fam
+KEYWORDS="~amd64 ~arm ~hppa ~x86 ~amd64-fbsd ~x86-fbsd"
+IUSE="acl addns ads +aio avahi caps +client cluster cups debug dmapi doc examples fam
 	ldap ldb +netapi pam quota +readline selinux +server +smbclient smbsharemodes
 	swat syslog winbind"
 
@@ -34,6 +34,7 @@ DEPEND="dev-libs/popt
 	cluster? ( >=dev-db/ctdb-1.13 )
 	cups? ( net-print/cups )
 	debug? ( dev-libs/dmalloc )
+	dmapi? ( sys-apps/dmapi )
 	fam? ( virtual/fam )
 	ldap? ( net-nds/openldap )
 	ldb? ( sys-libs/ldb )
@@ -108,6 +109,7 @@ pkg_setup() {
 		BINPROGS="${BINPROGS} bin/wbinfo"
 		SHAREDMODS="${SHAREDMODS}idmap_rid,idmap_hash"
 		use ads && SHAREDMODS="${SHAREDMODS},idmap_ad"
+		use cluster && SHAREDMODS="${SHAREDMODS},idmap_tdb2"
 		use ldap && SHAREDMODS="${SHAREDMODS},idmap_ldap,idmap_adex"
 	fi
 }
@@ -127,6 +129,9 @@ src_configure() {
 
 	# Filter out -fPIE
 	[[ ${CHOST} == *-*bsd* ]] && myconf+=" --disable-pie"
+
+	# http://wiki.samba.org/index.php/CTDB_Setup
+	use cluster && myconf+=" --disable-pie"
 
 	# Upstream refuses to make this configurable
 	use caps && export ac_cv_header_sys_capability_h=yes || export ac_cv_header_sys_capability_h=no
@@ -163,6 +168,7 @@ src_configure() {
 		--with-configdir=/etc/samba \
 		--with-logfilebase=/var/log/samba \
 		--with-pammodulesdir=$(getpam_mod_dir) \
+		$(use_with dmapi) \
 		--without-afs \
 		--without-fake-kaserver \
 		--without-vfs-afsacl \
