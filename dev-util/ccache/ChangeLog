@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.105 2012/11/22 21:00:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.106 2012/12/12 14:33:56 jmorgan Exp $
+
+  12 Dec 2012; Jack Morgan <jmorgan@gentoo.org> ccache-3.1.8.ebuild:
+  sparc stable wrt #441308
 
   22 Nov 2012; Markus Meier <maekke@gentoo.org> ccache-3.1.8.ebuild:
   arm stable, bug #441308
