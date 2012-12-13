@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ccp4i-6.1.3-r3.ebuild,v 1.6 2011/09/07 17:24:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ccp4i-6.1.3-r3.ebuild,v 1.7 2012/12/13 16:00:18 jlec Exp $
 
 EAPI=3
 
@@ -34,7 +34,8 @@ RDEPEND="
 	app-shells/tcsh
 	media-gfx/graphviz
 	>=dev-lang/tk-8.3
-	>=dev-tcltk/blt-2.4"
+	>=dev-tcltk/blt-2.4
+	sci-libs/ccp4-libs"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
@@ -92,7 +93,7 @@ pkg_postinst() {
 	_ccp4-setup() {
 		source "${EPREFIX}/etc/profile"
 		export USER=root
-		ccp4i -h > /dev/null
+		bash "${EPREFIX}"/usr/$(get_libdir)/ccp4/ccp4i/bin/ccp4i -h > /dev/null
 	}
 	VIRTUALX_COMMAND="_ccp4-setup" virtualmake
 	echo ""
