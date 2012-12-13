@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/vzquota
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vzquota/ChangeLog,v 1.28 2009/07/07 12:34:13 pva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vzquota/ChangeLog,v 1.29 2012/12/13 09:14:35 pinkbyte Exp $
+
+*vzquota-3.1 (13 Dec 2012)
+
+  13 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> +vzquota-3.1.ebuild:
+  Version bump wrt bug #437690
 
   07 Jul 2009; Peter Volkov <pva@gentoo.org> vzquota-3.0.12.ebuild:
   x86/amd64 stable, bug #199738. Remove old.
