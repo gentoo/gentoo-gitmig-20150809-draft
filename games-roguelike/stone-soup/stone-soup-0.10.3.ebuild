@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/stone-soup-0.10.3.ebuild,v 1.2 2012/09/04 20:19:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/stone-soup-0.10.3.ebuild,v 1.3 2012/12/13 17:18:41 hasufell Exp $
 
 ## TODO
 # add sound support (no build switch, no sound files)
@@ -23,7 +23,7 @@ SRC_URI="mirror://sourceforge/crawl-ref/Stone%20Soup/${PV}/${MY_P}-nodeps.tar.xz
 LICENSE="GPL-2 BSD BSD-2 public-domain CC0-1.0-Universal MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug +lua test +tiles"
+IUSE="debug test +tiles"
 # test is broken
 # see https://crawl.develz.org/mantis/view.php?id=6121
 #RESTRICT="!debug? ( test )"
@@ -39,7 +39,7 @@ RDEPEND="
 		media-libs/sdl-image[png]
 		)
 	!tiles? ( sys-libs/ncurses )
-	lua? ( >=dev-lang/lua-5.1.0 )"
+	>=dev-lang/lua-5.1.0[deprecated]"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	sys-devel/flex
@@ -71,7 +71,6 @@ src_compile() {
 		prefix="${GAMES_PREFIX}"
 		SAVEDIR="~/.crawl"
 		$(usex debug "FULLDEBUG=y DEBUG=y" "")
-		$(usex lua "" "NO_LUA_BINDINGS=y")
 		$(usex tiles "TILES=y" "")
 	)
 

@@ -1,6 +1,11 @@
 # ChangeLog for games-roguelike/stone-soup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/ChangeLog,v 1.7 2012/12/06 04:10:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/ChangeLog,v 1.8 2012/12/13 17:18:41 hasufell Exp $
+
+  13 Dec 2012; Julian Ospald <hasufell@gentoo.org> stone-soup-0.10.3.ebuild,
+  stone-soup-0.11.0.ebuild, stone-soup-0.11.1.ebuild,
+  stone-soup-0.11.1-r1.ebuild:
+  fix dependencies, remove broken lua useflag wrt #447056
 
   06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   stone-soup-0.11.0.ebuild:
