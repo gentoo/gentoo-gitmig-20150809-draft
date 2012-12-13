@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.7 2012/12/12 16:45:02 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.8 2012/12/13 15:13:32 ryao Exp $
 
 EAPI=4
 
-KV_min=2.6.39
+KV_min=2.6.31
 
 inherit autotools eutils linux-info
 
