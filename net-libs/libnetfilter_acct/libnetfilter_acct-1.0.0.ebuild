@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_acct/libnetfilter_acct-1.0.0.ebuild,v 1.4 2012/12/13 17:09:26 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_acct/libnetfilter_acct-1.0.0.ebuild,v 1.5 2012/12/13 17:36:06 pinkbyte Exp $
 
 EAPI=4
 
@@ -20,6 +20,11 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 CONFIG_CHECK="~NETFILTER_NETLINK_ACCT"
+
+pkg_setup() {
+	kernel_is lt 3 3 && ewarn "This package will work with kernel version 3.3 or higher"
+	linux-info_pkg_setup
+}
 
 src_configure() {
 	econf \
