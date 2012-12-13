@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.55.ebuild,v 1.1 2012/06/04 21:21:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.57.ebuild,v 1.1 2012/12/13 16:49:49 jer Exp $
 
 EAPI=3
 
@@ -48,15 +48,19 @@ pkg_postinst() {
 	xdg-icon-resource install --context mimetypes --size 64 \
 		"${ROOT}/usr/share/pixmaps/zim.png" \
 		application-x-zim-notebook || die "xdg-icon-resource install failed"
-	ewarn "Please emerge these packages for additional functionality"
-	ewarn "    dev-lang/R"
-	ewarn "    dev-python/gtkspell-python"
-	ewarn "    dev-vcs/bzr"
-	ewarn "    media-gfx/graphviz"
-	ewarn "    media-gfx/imagemagick"
-	ewarn "    media-gfx/scrot"
-	ewarn "    sci-visualization/gnuplot"
-	ewarn "    virtual/latex-base app-text/dvipng"
+	if ! has_version ${CATEGORY}/${PN}; then
+		einfo "Please emerge these packages for additional functionality"
+		einfo "    dev-lang/R"
+		einfo "    dev-python/gtkspell-python"
+		einfo "    dev-vcs/bzr"
+		einfo "    gnome-extra/zeitgeist"
+		einfo "    media-gfx/graphviz"
+		einfo "    media-gfx/imagemagick"
+		einfo "    media-gfx/scrot"
+		einfo "    media-sound/lilypond"
+		einfo "    sci-visualization/gnuplot"
+		einfo "    virtual/latex-base app-text/dvipng"
+	fi
 }
 
 pkg_postrm() {
