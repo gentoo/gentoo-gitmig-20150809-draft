@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzrtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/ChangeLog,v 1.33 2012/10/14 04:03:27 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/ChangeLog,v 1.34 2012/12/13 20:32:52 ago Exp $
+
+  13 Dec 2012; Agostino Sarubbo <ago@gentoo.org> bzrtools-2.5.ebuild:
+  Stable for ia64, wrt bug #418969
 
   14 Oct 2012; Anthony G. Basile <blueness@gentoo.org> bzrtools-2.5.ebuild:
   stable ppc ppc64, bug #418969
