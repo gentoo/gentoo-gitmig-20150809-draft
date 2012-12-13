@@ -1,6 +1,10 @@
 # ChangeLog for games-action/supertuxkart
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.29 2012/12/12 21:34:43 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.30 2012/12/13 14:41:53 pinkbyte Exp $
+
+  13 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> supertuxkart-0.8.ebuild:
+  Remove CCPL-Sampling+ from LICENSE, wrt bug #447094. Thanks to Andrius
+  Štikonas for discovering this issue
 
 *supertuxkart-0.8 (12 Dec 2012)
 

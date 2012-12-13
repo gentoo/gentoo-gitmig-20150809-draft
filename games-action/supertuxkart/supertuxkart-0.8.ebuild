@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.8.ebuild,v 1.1 2012/12/12 21:34:43 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.8.ebuild,v 1.2 2012/12/13 14:41:53 pinkbyte Exp $
 
 EAPI=2
 inherit cmake-utils eutils games
@@ -10,7 +10,7 @@ HOMEPAGE="http://supertuxkart.sourceforge.net/"
 SRC_URI="mirror://sourceforge/supertuxkart/SuperTuxKart/${PV}/${P}-src.tar.bz2
 	mirror://gentoo/${PN}.png"
 
-LICENSE="GPL-3 CCPL-Attribution-ShareAlike-3.0 CCPL-Attribution-2.0 CCPL-Sampling-Plus-1.0 public-domain ZLIB"
+LICENSE="GPL-3 CCPL-Attribution-ShareAlike-3.0 CCPL-Attribution-2.0 public-domain ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug"
