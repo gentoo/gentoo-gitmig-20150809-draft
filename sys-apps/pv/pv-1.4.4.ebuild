@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/pv-1.4.4.ebuild,v 1.1 2012/12/13 11:25:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/pv-1.4.4.ebuild,v 1.2 2012/12/13 17:49:38 jer Exp $
 
-EAPI="4"
-
+EAPI=4
 inherit toolchain-funcs
 
 DESCRIPTION="Pipe Viewer: a tool for monitoring the progress of data through a pipe"
@@ -14,13 +13,17 @@ LICENSE="Artistic-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc64-solaris ~x86-solaris"
 
-IUSE="nls"
+IUSE="debug nls"
 PV_LINGUAS="de fr pl pt"
 for lingua in ${PV_LINGUAS}; do
 	IUSE+=" linguas_${lingua}"
 done
 
 DOCS=( README doc/NEWS doc/TODO )
+
+src_prepare() {
+	sed -i configure -e 's|CFLAGS="-g -Wall"|:|g' || die
+}
 
 src_configure() {
 	local lingua
@@ -29,7 +32,7 @@ src_configure() {
 			sed -i configure -e "/ALL_LINGUAS=/s:${lingua}::g" || die
 		fi
 	done
-	econf $(use_enable nls)
+	econf $(use_enable debug debugging) $(use_enable nls)
 }
 
 src_test() {

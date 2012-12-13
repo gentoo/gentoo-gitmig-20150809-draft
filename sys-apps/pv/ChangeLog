@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.47 2012/12/13 11:25:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.48 2012/12/13 17:49:38 jer Exp $
+
+  13 Dec 2012; Jeroen Roovers <jer@gentoo.org> pv-1.4.4.ebuild:
+  Add IUSE=debug.
 
 *pv-1.4.4 (13 Dec 2012)
 
