@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-9999.ebuild,v 1.12 2012/12/11 18:17:36 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-9999.ebuild,v 1.13 2012/12/13 08:45:38 pinkbyte Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit bash-completion-r1 autotools git-2 udev toolchain-funcs
 
@@ -14,13 +14,15 @@ EGIT_REPO_URI="git://git.openvz.org/pub/${PN}
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="+ploop +cgroup"
 
 RDEPEND="
 	net-firewall/iptables
 	sys-apps/ed
-	sys-apps/iproute2
-	sys-fs/vzquota"
+	>=sys-apps/iproute2-3.0
+	sys-fs/vzquota
+	ploop? ( >=sys-cluster/ploop-1.5 )
+	cgroup? ( >=dev-libs/libcgroup-0.37 )"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -37,7 +39,9 @@ src_configure() {
 		--localstatedir=/var \
 		--enable-udev \
 		--enable-bashcomp \
-		--enable-logrotate
+		--enable-logrotate \
+		$(use_with ploop) \
+		$(use_with cgroup)
 }
 
 src_install() {
