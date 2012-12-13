@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-4.1.0.ebuild,v 1.2 2012/06/12 02:58:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-4.1.0.ebuild,v 1.3 2012/12/13 17:50:59 pinkbyte Exp $
 
 EAPI="2"
 
@@ -37,7 +37,8 @@ RDEPEND="${COMMON_DEPEND}
 	net-misc/wget
 	app-arch/gzip
 	!arm? ( dev-libs/gdome2 )
-	dev-libs/glib:2"
+	dev-libs/glib:2
+	dev-python/mako"
 
 pkg_setup() {
 	enewgroup ntop
