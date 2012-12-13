@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.0_alpha8.ebuild,v 1.2 2012/12/04 21:10:39 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.0_beta1.ebuild,v 1.1 2012/12/13 20:16:07 tommy Exp $
 
 EAPI="2"
 
-MY_P=${P/_alpha/-alpha}
+MY_P=${P/_beta1/-gamma}
 
 inherit enlightenment
 
@@ -24,13 +24,13 @@ __CONF_MODS="
 __NORM_MODS="
 	@access +@backlight +@battery +@clock +@comp +@connman +@cpufreq +@dropshadow
 	+@everything +@fileman +@fileman-opinfo +@gadman +@ibar +@ibox +@illume2
-	+@mixer	+@msgbus +@notification +@pager +@quickaccess +@shot +@start
+	+@mixer	+@msgbus +@notification +@pager +@quickaccess @shot +@start
 	+@syscon +@systray +@tasks +@temperature +@tiling +@winlist +@wizard +@xkbswitch"
 IUSE_E_MODULES="
 	${__CONF_MODS//@/enlightenment_modules_conf-}
 	${__NORM_MODS//@/enlightenment_modules_}"
 
-IUSE="pam spell static-libs +udev ukit ${IUSE_E_MODULES}"
+IUSE="emotion pam spell static-libs +udev ukit ${IUSE_E_MODULES}"
 
 RDEPEND="
 	pam? ( sys-libs/pam )
@@ -45,6 +45,7 @@ RDEPEND="
 	enlightenment_modules_shot? ( >=dev-libs/ecore-1.7.1[curl] )
 	|| ( >=media-libs/evas-1.7.1[eet,X,jpeg,png] >=media-libs/evas-1.7.1[eet,xcb,jpeg,png] )
 	>=dev-libs/eeze-1.7.1
+	emotion? ( >=media-libs/emotion-1.7.0 )
 	x11-libs/xcb-util-keysyms"
 DEPEND="${RDEPEND}"
 
@@ -61,6 +62,7 @@ src_configure() {
 		--disable-elementary
 		$(use_enable doc)
 		--disable-device-hal
+		$(use_enable emotion)
 		--disable-mount-hal
 		$(use_enable nls)
 		$(use_enable pam)
