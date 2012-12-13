@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20121210.ebuild,v 1.1 2012/12/10 08:06:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20121210.ebuild,v 1.2 2012/12/13 07:39:15 jlec Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ AUFS_VERSION="${PV%%_p*}"
 # highest branch version
 PATCH_MAX_VER=6
 # highest supported version
-KERN_MAX_VER=7
+KERN_MAX_VER=6
 # highest util branch version
 UTIL_MAX_VER=0
 
