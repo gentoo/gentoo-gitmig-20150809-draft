@@ -1,6 +1,10 @@
 # ChangeLog for virtual/lapack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/lapack/ChangeLog,v 1.6 2012/05/12 20:03:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/lapack/ChangeLog,v 1.7 2012/12/13 16:52:56 jlec Exp $
+
+  13 Dec 2012; Justin Lecher <jlec@gentoo.org> lapack-3.0.ebuild,
+  lapack-3.1.ebuild, metadata.xml:
+  Drop sci-libs/lapack-atlas from deps due to coming removal, #372323
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> lapack-3.1.ebuild:
   keyword ~amd64-fbsd
