@@ -79,39 +79,39 @@ fi
 # compile the flavor
 echo "Base"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_NJ} ${IUSES_NG} ${IUSES_NK}" > ${USEFILE}
-CFLAGS="${MYFLAGS}" CXXFLAGS="${MYFLAGS}" emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
+FEATURES="${FEATURES} splitdebug" CFLAGS="${MYFLAGS}" CXXFLAGS="${MYFLAGS}" emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
 mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-base-${BINVERSION}.tbz2  || die "Moving package failed"
 
 echo "Base - java"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_NG} ${IUSES_NK}" > ${USEFILE}
-CFLAGS="${MYFLAGS}" CXXFLAGS="${MYFLAGS}" emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
+FEATURES="${FEATURES} splitdebug" CFLAGS="${MYFLAGS}" CXXFLAGS="${MYFLAGS}" emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
 mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-base-java-${BINVERSION}.tbz2  || die "Moving package failed"
 
 # kde flavor
 echo "KDE"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_NJ} ${IUSES_NG} ${IUSES_K}" > ${USEFILE}
-CFLAGS="${MYFLAGS}" CXXFLAGS="${MYFLAGS}" emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
+FEATURES="${FEATURES} splitdebug" CFLAGS="${MYFLAGS}" CXXFLAGS="${MYFLAGS}" emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
 mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-kde-${BINVERSION}.tbz2  || die "Moving package failed"
 
 echo "KDE - java"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_NG} ${IUSES_K}" > ${USEFILE}
-CFLAGS="${MYFLAGS}" CXXFLAGS="${MYFLAGS}" emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
+FEATURES="${FEATURES} splitdebug" CFLAGS="${MYFLAGS}" CXXFLAGS="${MYFLAGS}" emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
 mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-kde-java-${BINVERSION}.tbz2  || die "Moving package failed"
 
 # gnome flavor
 echo "Gnome"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_NJ} ${IUSES_G} ${IUSES_NK}" > ${USEFILE}
-CFLAGS="${MYFLAGS}" CXXFLAGS="${MYFLAGS}" emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
+FEATURES="${FEATURES} splitdebug" CFLAGS="${MYFLAGS}" CXXFLAGS="${MYFLAGS}" emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
 mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-gnome-${BINVERSION}.tbz2  || die "Moving package failed"
 
 echo "Gnome -java"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_G} ${IUSES_NK}" > ${USEFILE}
-CFLAGS="${MYFLAGS}" CXXFLAGS="${MYFLAGS}" emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
+FEATURES="${FEATURES} splitdebug" CFLAGS="${MYFLAGS}" CXXFLAGS="${MYFLAGS}" emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
 mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-gnome-java-${BINVERSION}.tbz2  || die "Moving package failed"
 
