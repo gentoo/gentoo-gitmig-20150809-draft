@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/tix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.39 2012/09/09 21:30:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.40 2012/12/13 07:31:34 jlec Exp $
+
+  13 Dec 2012; Justin Lecher <jlec@gentoo.org> -files/tix-8.2.0-gentoo.diff,
+  -files/tix-8.4.2-tcl85.patch, tix-8.4.3.ebuild, +files/tix-8.4.3-link.patch,
+  metadata.xml:
+  EAPI BUmp to use new features
 
   09 Sep 2012; Anthony G. Basile <blueness@gentoo.org> tix-8.4.3.ebuild:
   Keyword ~ppc64, bug #413433
