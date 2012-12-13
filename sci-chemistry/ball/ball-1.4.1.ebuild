@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ball-1.4.1.ebuild,v 1.2 2012/07/26 15:17:02 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ball-1.4.1.ebuild,v 1.3 2012/12/13 10:58:27 jlec Exp $
 
 EAPI=4
 
@@ -48,6 +48,8 @@ PATCHES=(
 	"${FILESDIR}"/${P}-libsvm.patch
 	"${FILESDIR}"/${P}-pthread.patch
 	"${FILESDIR}"/${P}-python.patch
+	"${FILESDIR}"/${P}-missing-signed.patch
+	"${FILESDIR}"/${P}-gcc-4.7.patch
 	)
 
 pkg_setup() {
