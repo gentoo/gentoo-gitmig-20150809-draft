@@ -1,0 +1,111 @@
+ exodus/CMakeLists.txt         |  8 ++++----
+ exodus/cbind/CMakeLists.txt   |  6 +++---
+ exodus/forbind/CMakeLists.txt | 13 +++++++------
+ 3 files changed, 14 insertions(+), 13 deletions(-)
+
+diff --git a/exodus/CMakeLists.txt b/exodus/CMakeLists.txt
+index 935da5a..db8aed4 100644
+--- a/exodus/CMakeLists.txt
++++ b/exodus/CMakeLists.txt
+@@ -7,7 +7,7 @@ SET(EXODUSII_VERSION_PATCH "0")
+ SET(EXODUSII_VERSION "${EXODUSII_VERSION_MAJOR}.${EXODUSII_VERSION_MINOR}")
+ SET(EXODUSII_VERSION_FULL "${EXODUSII_VERSION}.${EXODUSII_VERSION_PATCH}")
+ 
+-SET(EXODUSII_BUILD_SHARED_LIBS "${BUILD_SHARED_LIBS}")
++SET(EXODUSII_BUILD_SHARED_${LIB_INSTALL_DIR}S "${BUILD_SHARED_LIBS}")
+ 
+ SUBDIRS(cbind forbind)
+ 
+@@ -21,7 +21,7 @@ find_path( NETCDF_INCLUDE_DIR netcdf.h
+ find_library( NETCDF_LIBRARY
+    NAMES netcdf
+    PATHS "$ENV{ACCESS}/lib"
+-         "$ENV{NETCDF_DIR}/lib"
++         "$ENV{NETCDF_DIR}/${LIB_INSTALL_DIR}"
+ 	 "$ENV{NETCDF_DIR}/libsrc/.libs"
+ )
+ 
+@@ -35,14 +35,14 @@ find_program (NETCDF_NCDUMP ncdump
+ find_library( HDF5_LIBRARY hdf5
+   $ENV{ACCESS}/lib/shared
+   $ENV{ACCESS}/lib
+-  $ENV{NETCDF_DIR}/lib
++  $ENV{NETCDF_DIR}/${LIB_INSTALL_DIR}
+   $ENV{NETCDF_DIR}/libsrc/.libs
+   /usr/local/hdf5/lib
+   )
+ find_library( HDF5HL_LIBRARY hdf5_hl
+   $ENV{ACCESS}/lib/shared
+   $ENV{ACCESS}/lib
+-  $ENV{NETCDF_DIR}/lib
++  $ENV{NETCDF_DIR}/${LIB_INSTALL_DIR}
+   $ENV{NETCDF_DIR}/libsrc/.libs
+   /usr/local/hdf5/lib
+   )
+diff --git a/exodus/cbind/CMakeLists.txt b/exodus/cbind/CMakeLists.txt
+index 9aa54e9..f020d65 100644
+--- a/exodus/cbind/CMakeLists.txt
++++ b/exodus/cbind/CMakeLists.txt
+@@ -259,9 +259,9 @@ ENDIF(EXODUS_LIBRARY_PROPERTIES)
+ 
+ IF(NOT EXODUS_INSTALL_NO_LIBRARIES)
+   INSTALL(TARGETS exoIIv2c
+-    RUNTIME DESTINATION lib COMPONENT Runtime
+-    LIBRARY DESTINATION lib COMPONENT Runtime
+-    ARCHIVE DESTINATION lib COMPONENT Development)
++    RUNTIME DESTINATION ${LIB_INSTALL_DIR} COMPONENT Runtime
++    LIBRARY DESTINATION ${LIB_INSTALL_DIR} COMPONENT Runtime
++    ARCHIVE DESTINATION ${LIB_INSTALL_DIR} COMPONENT Development)
+   INSTALL(FILES ${cbind_HEADERS} DESTINATION include COMPONENT Development)
+ ENDIF(NOT EXODUS_INSTALL_NO_LIBRARIES)
+ 
+diff --git a/exodus/forbind/CMakeLists.txt b/exodus/forbind/CMakeLists.txt
+index 4a5e7c7..484eedf 100644
+--- a/exodus/forbind/CMakeLists.txt
++++ b/exodus/forbind/CMakeLists.txt
+@@ -14,7 +14,7 @@ find_path( NETCDF_INCLUDE_DIR netcdf.h
+ find_library( NETCDF_LIBRARY
+    NAMES netcdf
+    PATHS "$ENV{ACCESS}/lib"
+-         "$ENV{NETCDF_DIR}/lib"
++         "$ENV{NETCDF_DIR}/${LIB_INSTALL_DIR}"
+ 	 "$ENV{NETCDF_DIR}/libsrc/.libs"
+ )
+ 
+@@ -28,20 +28,21 @@ find_program (NETCDF_NCDUMP ncdump
+ find_library( HDF5_LIBRARY hdf5
+   $ENV{ACCESS}/lib/shared
+   $ENV{ACCESS}/lib
+-  $ENV{NETCDF_DIR}/lib
++  $ENV{NETCDF_DIR}/${LIB_INSTALL_DIR}
+   $ENV{NETCDF_DIR}/libsrc/.libs
+   /usr/local/hdf5/lib
+   )
+ find_library( HDF5HL_LIBRARY hdf5_hl
+   $ENV{ACCESS}/lib/shared
+   $ENV{ACCESS}/lib
+-  $ENV{NETCDF_DIR}/lib
++  $ENV{NETCDF_DIR}/${LIB_INSTALL_DIR}
+   $ENV{NETCDF_DIR}/libsrc/.libs
+   /usr/local/hdf5/lib
+   )
+ 
+ INCLUDE_DIRECTORIES(
+   "${CMAKE_CURRENT_SOURCE_DIR}/include"
++  "${CMAKE_CURRENT_SOURCE_DIR}/../cbind/include"
+   "${CMAKE_CURRENT_BINARY_DIR}/include"
+   "${NETCDF_INCLUDE_DIR}"
+ )
+@@ -60,9 +61,9 @@ ENDIF(EXODUS_LIBRARY_PROPERTIES)
+ 
+ IF(NOT EXODUS_INSTALL_NO_LIBRARIES)
+   INSTALL(TARGETS exoIIv2for
+-    RUNTIME DESTINATION lib COMPONENT Runtime
+-    LIBRARY DESTINATION lib COMPONENT Runtime
+-    ARCHIVE DESTINATION lib COMPONENT Development)
++    RUNTIME DESTINATION ${LIB_INSTALL_DIR} COMPONENT Runtime
++    LIBRARY DESTINATION ${LIB_INSTALL_DIR} COMPONENT Runtime
++    ARCHIVE DESTINATION ${LIB_INSTALL_DIR} COMPONENT Development)
+   INSTALL(FILES ${forbind_HEADERS} DESTINATION include COMPONENT Development)
+ ENDIF(NOT EXODUS_INSTALL_NO_LIBRARIES)
+ 
