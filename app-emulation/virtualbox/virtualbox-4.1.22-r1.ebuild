@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.22.ebuild,v 1.5 2012/10/01 09:25:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.22-r1.ebuild,v 1.1 2012/12/13 18:47:39 polynomial-c Exp $
 
 EAPI=4
 
-inherit eutils fdo-mime flag-o-matic linux-info multilib pax-utils python qt4-r2 toolchain-funcs java-pkg-opt-2
+inherit eutils fdo-mime flag-o-matic linux-info multilib pax-utils python qt4-r2 toolchain-funcs java-pkg-opt-2 udev
 
 if [[ ${PV} == "9999" ]] ; then
 	# XXX: should finish merging the -9999 ebuild into this one ...
@@ -316,12 +316,15 @@ src_install() {
 	popd &>/dev/null || die
 
 	# New way of handling USB device nodes for VBox (bug #356215)
-	insinto /lib/udev
+	local udevdir="$(udev_get_udevdir)"
+	insinto ${udevdir}
 	doins VBoxCreateUSBNode.sh
-	fowners root:vboxusers /lib/udev/VBoxCreateUSBNode.sh
-	fperms 0750 /lib/udev/VBoxCreateUSBNode.sh
-	insinto /lib/udev/rules.d
+	fowners root:vboxusers ${udevdir}/VBoxCreateUSBNode.sh
+	fperms 0750 ${udevdir}/VBoxCreateUSBNode.sh
+	insinto ${udevdir}/rules.d
 	doins "${FILESDIR}"/10-virtualbox.rules
+	sed "s@%UDEVDIR%@${udevdir}@" \
+		-i "${D}"${udevdir}/rules.d/10-virtualbox.rules || die
 
 	insinto /usr/share/${PN}
 	if ! use headless && use qt4 ; then
