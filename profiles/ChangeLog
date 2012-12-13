@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7247 2012/12/13 16:53:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7248 2012/12/13 17:07:03 bicatali Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
+  Masked sci-astronomy/sextractor and sci-astronomy/scamp for removal
 
   13 Dec 2012; Justin Lecher <jlec@gentoo.org> base/package.use.mask,
   package.mask:
