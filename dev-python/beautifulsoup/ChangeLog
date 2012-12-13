@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/beautifulsoup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.77 2012/11/23 15:14:31 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.78 2012/12/13 22:16:56 ago Exp $
+
+  13 Dec 2012; Agostino Sarubbo <ago@gentoo.org> beautifulsoup-4.1.3.ebuild:
+  Stable for ia64, wrt bug #441272
 
   23 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
   beautifulsoup-4.1.3.ebuild:
