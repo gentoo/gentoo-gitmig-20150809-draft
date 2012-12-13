@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu-guest-agent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.5 2012/10/30 21:12:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.6 2012/12/13 20:06:02 ssuominen Exp $
+
+  13 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
+  qemu-guest-agent-1.1.1.ebuild, qemu-guest-agent-1.2.0.ebuild:
+  Use udev_newrules to install udev rules into correct path wrt #447116 by
+  Alexander Tsoy
 
   30 Oct 2012; Doug Goldstein <cardoe@gentoo.org> files/qemu-ga.init:
   Remove empty depend to fix bug #436310

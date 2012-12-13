@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/qemu-guest-agent-1.1.1.ebuild,v 1.3 2012/10/09 20:47:53 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/qemu-guest-agent-1.1.1.ebuild,v 1.4 2012/12/13 20:06:01 ssuominen Exp $
 
 EAPI=4
 
-inherit systemd
+inherit systemd udev
 
 MY_PN="qemu-kvm"
 MY_P="${MY_PN}-${PV}"
@@ -52,8 +52,7 @@ src_install() {
 		newins "${FILESDIR}/qemu-ga.logrotate" qemu-guest-agent
 	else
 		# systemd stuff
-		insinto /lib/udev/rules.d/
-		newins "${FILESDIR}/qemu-ga-systemd.udev" 99-qemu-guest-agent.rules
+		udev_newrules "${FILESDIR}/qemu-ga-systemd.udev" 99-qemu-guest-agent.rules
 
 		systemd_newunit "${FILESDIR}/qemu-ga-systemd.service" \
 			qemu-guest-agent.service
