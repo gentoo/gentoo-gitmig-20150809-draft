@@ -2,4 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>postgresql</herd>
+<use>
+	<flag name='database-designer'>Enable the Database Designer component</flag>
+</use>
 </pkgmetadata>
