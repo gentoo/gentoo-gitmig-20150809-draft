@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_acct/libnetfilter_acct-1.0.0.ebuild,v 1.3 2012/09/02 10:32:11 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_acct/libnetfilter_acct-1.0.0.ebuild,v 1.4 2012/12/13 17:09:26 pinkbyte Exp $
 
 EAPI=4
 
-inherit eutils multilib
+inherit eutils linux-info multilib
 
 DESCRIPTION="Userspace library providing interface to extended accounting infrastructure of NetFilter"
 HOMEPAGE="http://netfilter.org/projects/libnetfilter_acct"
@@ -18,6 +18,8 @@ IUSE="examples"
 RDEPEND="net-libs/libmnl"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+CONFIG_CHECK="~NETFILTER_NETLINK_ACCT"
 
 src_configure() {
 	econf \

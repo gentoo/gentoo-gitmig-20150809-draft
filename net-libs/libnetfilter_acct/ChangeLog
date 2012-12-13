@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnetfilter_acct
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_acct/ChangeLog,v 1.5 2012/10/23 12:29:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_acct/ChangeLog,v 1.6 2012/12/13 17:09:26 pinkbyte Exp $
+
+  13 Dec 2012; Sergey Popov <pinkbyte@gentoo.org>
+  libnetfilter_acct-1.0.0.ebuild, libnetfilter_acct-1.0.1.ebuild:
+  Add check for NETFILTER_NETLINK_ACCT kernel option, wrt bug #447092
 
 *libnetfilter_acct-1.0.1 (23 Oct 2012)
 
