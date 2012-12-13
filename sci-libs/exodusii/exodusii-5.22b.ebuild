@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/exodusii/exodusii-5.22b.ebuild,v 1.3 2012/12/13 14:09:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/exodusii/exodusii-5.22b.ebuild,v 1.4 2012/12/13 14:52:24 jlec Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P/ii/}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs test"
 
 DEPEND="sci-libs/netcdf"
