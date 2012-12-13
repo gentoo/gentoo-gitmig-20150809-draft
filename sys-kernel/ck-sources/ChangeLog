@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.211 2012/11/17 19:05:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.212 2012/12/13 18:47:56 hwoarang Exp $
+
+*ck-sources-3.4.23 (13 Dec 2012)
+
+  13 Dec 2012; Markos Chandras <hwoarang@gentoo.org> +ck-sources-3.4.23.ebuild,
+  metadata.xml:
+  Version bump. Bug 447008 thanks to Eric F. GARIOUD <eric-f.garioud@wanadoo.fr>
 
 *ck-sources-3.4.18 (17 Nov 2012)
 
