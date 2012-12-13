@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-awstats
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-awstats/ChangeLog,v 1.18 2012/12/03 08:52:43 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-awstats/ChangeLog,v 1.19 2012/12/13 10:05:20 swift Exp $
+
+  13 Dec 2012; Sven Vermeulen selinux-awstats-2.20120725-r8.ebuild:
+  Stabilization
 
 *selinux-awstats-2.20120725-r8 (03 Dec 2012)
 

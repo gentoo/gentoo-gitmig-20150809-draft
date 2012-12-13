@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-dmidecode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dmidecode/ChangeLog,v 1.17 2012/12/03 08:52:20 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dmidecode/ChangeLog,v 1.18 2012/12/13 10:04:55 swift Exp $
+
+  13 Dec 2012; Sven Vermeulen selinux-dmidecode-2.20120725-r8.ebuild:
+  Stabilization
 
 *selinux-dmidecode-2.20120725-r8 (03 Dec 2012)
 

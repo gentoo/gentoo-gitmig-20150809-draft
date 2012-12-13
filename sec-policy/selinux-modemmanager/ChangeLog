@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-modemmanager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-modemmanager/ChangeLog,v 1.17 2012/12/03 08:52:38 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-modemmanager/ChangeLog,v 1.18 2012/12/13 10:05:14 swift Exp $
+
+  13 Dec 2012; Sven Vermeulen selinux-modemmanager-2.20120725-r8.ebuild:
+  Stabilization
 
 *selinux-modemmanager-2.20120725-r8 (03 Dec 2012)
 

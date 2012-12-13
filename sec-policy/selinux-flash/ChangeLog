@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-flash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-flash/ChangeLog,v 1.5 2012/12/03 08:52:15 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-flash/ChangeLog,v 1.6 2012/12/13 10:04:49 swift Exp $
+
+  13 Dec 2012; Sven Vermeulen selinux-flash-2.20120725-r8.ebuild:
+  Stabilization
 
 *selinux-flash-2.20120725-r8 (03 Dec 2012)
 

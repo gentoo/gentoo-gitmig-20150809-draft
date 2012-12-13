@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-radius
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-radius/ChangeLog,v 1.17 2012/12/03 08:52:36 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-radius/ChangeLog,v 1.18 2012/12/13 10:05:12 swift Exp $
+
+  13 Dec 2012; Sven Vermeulen selinux-radius-2.20120725-r8.ebuild:
+  Stabilization
 
 *selinux-radius-2.20120725-r8 (03 Dec 2012)
 

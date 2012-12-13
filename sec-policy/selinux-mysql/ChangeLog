@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-mysql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mysql/ChangeLog,v 1.50 2012/12/03 08:52:42 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mysql/ChangeLog,v 1.51 2012/12/13 10:05:17 swift Exp $
+
+  13 Dec 2012; Sven Vermeulen selinux-mysql-2.20120725-r8.ebuild:
+  Stabilization
 
 *selinux-mysql-2.20120725-r8 (03 Dec 2012)
 

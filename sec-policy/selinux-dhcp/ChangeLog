@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-dhcp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dhcp/ChangeLog,v 1.54 2012/12/03 08:52:35 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dhcp/ChangeLog,v 1.55 2012/12/13 10:05:10 swift Exp $
+
+  13 Dec 2012; Sven Vermeulen selinux-dhcp-2.20120725-r8.ebuild:
+  Stabilization
 
 *selinux-dhcp-2.20120725-r8 (03 Dec 2012)
 
