@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.11.0.ebuild,v 1.1 2012/10/29 14:35:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.11.0.ebuild,v 1.2 2012/12/13 16:07:11 jlec Exp $
 
 EAPI=4
 
@@ -43,20 +43,6 @@ DOCS="THANKS.txt LATEST.txt TOCHANGE.txt"
 
 pkg_setup() {
 	fortran-2_pkg_setup
-	# scipy automatically detects libraries by default
-	export {FFTW,FFTW3,UMFPACK}=None
-	use umfpack && unset UMFPACK
-	# the missing symbols are in -lpythonX.Y, but since the version can
-	# differ, we just introduce the same scaryness as on Linux/ELF
-	[[ ${CHOST} == *-darwin* ]] \
-		&& append-ldflags -bundle "-undefined dynamic_lookup" \
-		|| append-ldflags -shared
-	[[ -z ${FC}  ]] && export FC="$(tc-getFC)"
-	# hack to force F77 to be FC until bug #278772 is fixed
-	[[ -z ${F77} ]] && export F77="$(tc-getFC)"
-	export F90="${FC}"
-	export SCIPY_FCONFIG="config_fc --noopt --noarch"
-	append-fflags -fPIC
 	python_pkg_setup
 }
 
@@ -85,6 +71,22 @@ pc_libs() {
 
 src_prepare() {
 	local libdir="${EPREFIX}"/usr/$(get_libdir)
+
+	# scipy automatically detects libraries by default
+	export {FFTW,FFTW3,UMFPACK}=None
+	use umfpack && unset UMFPACK
+	# the missing symbols are in -lpythonX.Y, but since the version can
+	# differ, we just introduce the same scaryness as on Linux/ELF
+	[[ ${CHOST} == *-darwin* ]] \
+		&& append-ldflags -bundle "-undefined dynamic_lookup" \
+		|| append-ldflags -shared
+	[[ -z ${FC}  ]] && export FC="$(tc-getFC)"
+	# hack to force F77 to be FC until bug #278772 is fixed
+	[[ -z ${F77} ]] && export F77="$(tc-getFC)"
+	export F90="${FC}"
+	export SCIPY_FCONFIG="config_fc --noopt --noarch"
+	append-fflags -fPIC
+
 	cat >> site.cfg <<-EOF
 		[blas]
 		include_dirs = $(pc_incdir cblas)
@@ -106,7 +108,7 @@ src_test() {
 			--home="${S}/test-${PYTHON_ABI}" --no-compile ${SCIPY_FCONFIG} \
 			|| die "install test failed"
 		pushd "${S}/test-${PYTHON_ABI}/"lib*/python > /dev/null
-		PYTHONPATH=. "$(PYTHON)" -c "import scipy; scipy.test('full')" \
+		PYTHONPATH=. "$(PYTHON)" -c "import scipy; scipy.test('full',verbose=10)" \
 			2>&1 | tee test.log
 		grep -q ^ERROR test.log && die "test failed"
 		popd > /dev/null
