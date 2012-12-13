@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.8.ebuild,v 1.2 2012/12/13 14:41:53 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.8.ebuild,v 1.3 2012/12/13 15:43:27 mr_bones_ Exp $
 
 EAPI=2
 inherit cmake-utils eutils games
@@ -44,10 +44,11 @@ src_prepare() {
 
 	# inconsistent handling of debug definition
 	# avoid using Debug build type
-	use debug &&
+	if use debug ; then
 		sed -i \
 			-e 's/add_definitions(-DNDEBUG)/add_definitions(-DDEBUG)/' \
 			CMakeLists.txt || die
+	fi
 }
 
 src_configure() {
