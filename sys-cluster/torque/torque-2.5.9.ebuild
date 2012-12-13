@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.9.ebuild,v 1.4 2012/03/07 02:21:39 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.9.ebuild,v 1.5 2012/12/13 16:21:38 jlec Exp $
 
-EAPI=2
-inherit flag-o-matic eutils linux-info
+EAPI=4
+
+inherit autotools-utils eutils flag-o-matic linux-info
 
 DESCRIPTION="Resource manager and queuing system based on OpenPBS"
 HOMEPAGE="http://www.adaptivecomputing.com/products/torque.php"
@@ -13,7 +14,7 @@ LICENSE="torque-2.5"
 
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="cpusets +crypt doc drmaa kernel_linux munge server +syslog threads tk xml"
+IUSE="cpusets +crypt doc drmaa kernel_linux munge server static-libs +syslog threads tk xml"
 
 # ed is used by makedepend-sh
 DEPEND_COMMON="sys-libs/ncurses
@@ -30,6 +31,8 @@ DEPEND="${DEPEND_COMMON}
 RDEPEND="${DEPEND_COMMON}
 	crypt? ( net-misc/openssh )
 	!crypt? ( net-misc/netkit-rsh )"
+
+DOCS=( Release_Notes )
 
 pkg_setup() {
 	PBS_SERVER_HOME="${PBS_SERVER_HOME:-/var/spool/torque}"
@@ -69,25 +72,26 @@ pkg_setup() {
 }
 
 src_configure() {
-	local myconf="--with-rcp=mom_rcp"
+	local myeconfargs=( --with-rcp=mom_rcp )
 
-	use crypt && myconf="--with-rcp=scp"
+	use crypt && myeconfargs+=( --with-rcp=scp )
 
-	econf \
-		$(use_enable tk gui) \
-		$(use_enable syslog) \
-		$(use_enable server) \
-		$(use_enable drmaa) \
-		$(use_enable threads high-availability) \
-		$(use_enable xml server-xml) \
-		$(use_enable munge munge-auth) \
-		--with-server-home=${PBS_SERVER_HOME} \
-		--with-environ=/etc/pbs_environment \
-		--with-default-server=${PBS_SERVER_NAME} \
-		--disable-gcc-warnings \
-		--with-tcp-retry-limit=2 \
-		${USE_CPUSETS} \
-		${myconf}
+	myeconfargs+=(
+		$(use_enable tk gui)
+		$(use_enable syslog)
+		$(use_enable server)
+		$(use_enable drmaa)
+		$(use_enable threads high-availability)
+		$(use_enable xml server-xml)
+		$(use_enable munge munge-auth)
+		--with-server-home=${PBS_SERVER_HOME}
+		--with-environ=/etc/pbs_environment
+		--with-default-server=${PBS_SERVER_NAME}
+		--disable-gcc-warnings
+		--with-tcp-retry-limit=2
+		${USE_CPUSETS}
+		)
+	autotools-utils_src_configure
 }
 
 # WARNING
@@ -125,7 +129,7 @@ pbs_createspool() {
 		fi
 		# (#149226) If we're running in src_*, then keepdir
 		if [[ "${root}" = "${D}" ]]; then
-			keepdir ${d} || die
+			keepdir ${d}
 		fi
 	done
 }
@@ -134,12 +138,9 @@ src_install() {
 	# Make directories first
 	pbs_createspool "${D}"
 
-	emake DESTDIR="${D}" install || die "make install failed"
+	autotools-utils_src_install
 
-	dodoc CHANGELOG README.* Release_Notes || die "dodoc failed"
-	if use doc; then
-		dodoc doc/admin_guide.ps doc/*.pdf || die "dodoc failed"
-	fi
+	use doc && dodoc doc/admin_guide.ps doc/*.pdf
 
 	# The build script isn't alternative install location friendly,
 	# So we have to fix some hard-coded paths in tclIndex for xpbs* to work
@@ -149,12 +150,12 @@ src_install() {
 	done
 
 	if use server; then
-		newinitd "${FILESDIR}"/pbs_server-init.d-munge pbs_server || die
-		newinitd "${FILESDIR}"/pbs_sched-init.d pbs_sched || die
+		newinitd "${FILESDIR}"/pbs_server-init.d-munge pbs_server
+		newinitd "${FILESDIR}"/pbs_sched-init.d pbs_sched
 	fi
-	newinitd "${FILESDIR}"/pbs_mom-init.d-munge pbs_mom || die
-	newconfd "${FILESDIR}"/torque-conf.d-munge torque || die
-	newenvd "${FILESDIR}"/torque-env.d 25torque || die
+	newinitd "${FILESDIR}"/pbs_mom-init.d-munge pbs_mom
+	newconfd "${FILESDIR}"/torque-conf.d-munge torque
+	newenvd "${FILESDIR}"/torque-env.d 25torque
 }
 
 pkg_preinst() {
@@ -179,7 +180,7 @@ pkg_postinst() {
 	elog "    If this is the first time torque has been installed, then you are not"
 	elog "ready to start the server.  Please refer to the documentation located at:"
 	elog "http://www.clusterresources.com/wiki/doku.php?id=torque:torque_wiki"
-
+	echo
 	elog "    For a basic setup, you may use emerge --config ${PN}"
 }
 
@@ -214,14 +215,14 @@ pkg_config() {
 			rc=1
 		else
 			${qmgr} "set server operators = root@$(hostname -f)" ${PBS_SERVER_NAME} \
-			&& ${qmgr} "create queue batch" ${PBS_SERVER_NAME} \
-			&& ${qmgr} "set queue batch queue_type = Execution" ${PBS_SERVER_NAME} \
-			&& ${qmgr} "set queue batch started = True" ${PBS_SERVER_NAME} \
-			&& ${qmgr} "set queue batch enabled = True" ${PBS_SERVER_NAME} \
-			&& ${qmgr} "set server default_queue = batch" ${PBS_SERVER_NAME} \
-			&& ${qmgr} "set server resources_default.nodes = 1" ${PBS_SERVER_NAME} \
-			&& ${qmgr} "set server scheduling = True" ${PBS_SERVER_NAME} \
-			|| die
+				&& ${qmgr} "create queue batch" ${PBS_SERVER_NAME} \
+				&& ${qmgr} "set queue batch queue_type = Execution" ${PBS_SERVER_NAME} \
+				&& ${qmgr} "set queue batch started = True" ${PBS_SERVER_NAME} \
+				&& ${qmgr} "set queue batch enabled = True" ${PBS_SERVER_NAME} \
+				&& ${qmgr} "set server default_queue = batch" ${PBS_SERVER_NAME} \
+				&& ${qmgr} "set server resources_default.nodes = 1" ${PBS_SERVER_NAME} \
+				&& ${qmgr} "set server scheduling = True" ${PBS_SERVER_NAME} \
+				|| die
 
 			"${ROOT}"/usr/bin/qterm -t quick ${PBS_SERVER_NAME} || rc=1
 

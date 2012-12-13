@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.144 2012/11/02 06:09:52 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.145 2012/12/13 16:21:38 jlec Exp $
+
+  13 Dec 2012; Justin Lecher <jlec@gentoo.org> torque-2.5.9.ebuild,
+  torque-3.0.6.ebuild, metadata.xml:
+  Move to EPAI=4 and autotools-utils for conveniened handling of static-libs,
+  #398019
 
 *torque-3.0.6 (02 Nov 2012)
 
