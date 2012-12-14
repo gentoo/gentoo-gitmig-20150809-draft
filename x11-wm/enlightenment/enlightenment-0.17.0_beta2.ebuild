@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.0_beta1.ebuild,v 1.1 2012/12/13 20:16:07 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.0_beta2.ebuild,v 1.1 2012/12/14 20:13:45 tommy Exp $
 
 EAPI="2"
 
-MY_P=${P/_beta1/-gamma}
+MY_P=${P/_beta2/-lucky}
 
-inherit enlightenment
+inherit autotools enlightenment
 
 DESCRIPTION="Enlightenment DR17 window manager"
 SRC_URI="http://download.enlightenment.org/releases/${MY_P}.tar.bz2"
@@ -34,18 +34,18 @@ IUSE="emotion pam spell static-libs +udev ukit ${IUSE_E_MODULES}"
 
 RDEPEND="
 	pam? ( sys-libs/pam )
-	>=dev-libs/efreet-1.7.1
-	>=dev-libs/eio-1.7.1
-	>=dev-libs/eina-1.7.1[mempool-chained]
-	|| ( >=dev-libs/ecore-1.7.1[X,evas,inotify] >=dev-libs/ecore-1.7.1[xcb,evas,inotify] )
-	>=media-libs/edje-1.7.2
+	>=dev-libs/efreet-1.7.3
+	>=dev-libs/eio-1.7.3
+	>=dev-libs/eina-1.7.3[mempool-chained]
+	|| ( >=dev-libs/ecore-1.7.3[X,evas,inotify] >=dev-libs/ecore-1.7.3[xcb,evas,inotify] )
+	>=media-libs/edje-1.7.3
 	>=dev-libs/e_dbus-1.7.1[libnotify,udev?]
 	ukit? ( >=dev-libs/e_dbus-1.7.1[udev] )
 	enlightenment_modules_connman? ( >=dev-libs/e_dbus-1.7.1[connman] )
-	enlightenment_modules_shot? ( >=dev-libs/ecore-1.7.1[curl] )
-	|| ( >=media-libs/evas-1.7.1[eet,X,jpeg,png] >=media-libs/evas-1.7.1[eet,xcb,jpeg,png] )
+	enlightenment_modules_shot? ( >=dev-libs/ecore-1.7.3[curl] )
+	|| ( >=media-libs/evas-1.7.3[eet,X,jpeg,png] >=media-libs/evas-1.7.3[eet,xcb,jpeg,png] )
 	>=dev-libs/eeze-1.7.1
-	emotion? ( >=media-libs/emotion-1.7.0 )
+	emotion? ( >=media-libs/emotion-1.7.3 )
 	x11-libs/xcb-util-keysyms"
 DEPEND="${RDEPEND}"
 
@@ -53,6 +53,8 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/quickstart.diff
+	sed -i 's:efl_version="1.7.3":efl_version="1.7.1":g' configure.ac
+	eautoreconf
 	enlightenment_src_prepare
 }
 
