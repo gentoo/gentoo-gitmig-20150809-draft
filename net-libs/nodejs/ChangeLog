@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/nodejs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.65 2012/12/14 03:16:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.66 2012/12/14 08:46:30 patrick Exp $
+
+*nodejs-0.9.3-r1 (14 Dec 2012)
+
+  14 Dec 2012; Patrick Lauer <patrick@gentoo.org> +nodejs-0.9.3-r1.ebuild:
+  Restoring accidentally removed 0.9 version
 
 *nodejs-0.8.16 (14 Dec 2012)
 
