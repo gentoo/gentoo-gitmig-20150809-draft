@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/asdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/ChangeLog,v 1.4 2012/10/10 10:30:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/ChangeLog,v 1.5 2012/12/14 12:34:46 grozin Exp $
+
+*asdf-2.26 (14 Dec 2012)
+
+  14 Dec 2012; Andrey Grozin <grozin@gentoo.org> +asdf-2.26.ebuild:
+  From the lisp overlay, version bumped
 
   10 Oct 2012; Anthony G. Basile <blueness@gentoo.org> asdf-1.89.ebuild:
   stable ppc ppc64, bug #436846
