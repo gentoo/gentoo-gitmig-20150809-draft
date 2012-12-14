@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.368 2012/11/27 20:23:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.369 2012/12/14 16:27:36 mgorny Exp $
+
+  14 Dec 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Remove redundant USE=upnp description; it matches the global flag meaning.
 
   27 Nov 2012; Anthony G. Basile <blueness@gentoo.org> tor-0.2.3.25.ebuild:
   Fix dependency on libevent[ssl] when USE=bufferevents, bug #444954
