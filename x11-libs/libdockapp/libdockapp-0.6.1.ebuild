@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.6.1.ebuild,v 1.12 2010/12/02 14:14:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.6.1.ebuild,v 1.13 2012/12/14 10:41:30 voyageur Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ DESCRIPTION="Window Maker Dock Applet Library"
 SRC_URI="http://solfertje.student.utwente.nl/~dalroi/libdockapp/files/${P}.tar.bz2"
 HOMEPAGE="http://solfertje.student.utwente.nl/~dalroi/libdockapp/"
 
-LICENSE="as-is"
+LICENSE="MIT public-domain"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 
