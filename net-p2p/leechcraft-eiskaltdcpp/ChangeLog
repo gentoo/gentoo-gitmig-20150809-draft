@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/leechcraft-eiskaltdcpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/leechcraft-eiskaltdcpp/ChangeLog,v 1.15 2012/10/08 16:03:39 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/leechcraft-eiskaltdcpp/ChangeLog,v 1.16 2012/12/14 15:47:07 mgorny Exp $
+
+  14 Dec 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Remove redundant USE=upnp description; it matches the global flag meaning.
 
 *leechcraft-eiskaltdcpp-0.5.85 (08 Oct 2012)
 

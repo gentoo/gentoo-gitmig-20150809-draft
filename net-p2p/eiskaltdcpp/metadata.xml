@@ -25,6 +25,5 @@
   <flag name="json">Enable JSON for cli and daemon</flag>
   <flag name="libcanberra">Enable sound notifications support over libcanberra in EiskaltDC++ Gtk</flag>
   <flag name="minimal">Don't install headers</flag>
-  <flag name="upnp">Forward ports using UPnP</flag>
 </use>
 </pkgmetadata>

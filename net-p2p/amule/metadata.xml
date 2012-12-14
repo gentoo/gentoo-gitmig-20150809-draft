@@ -6,6 +6,5 @@
     <flag name="daemon">Enable amule daemon</flag>
     <flag name="remote">Enable remote controlling of the client</flag>
     <flag name="stats">Enable statistic reporting</flag>
-    <flag name="upnp">Enables support for Intel UPnP stack.</flag>
   </use>
 </pkgmetadata>
