@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.60 2012/12/03 12:05:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.61 2012/12/14 08:40:18 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -156,6 +156,8 @@ EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install src_test
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # Array containing documents passed to dodoc command.
+#
+# In EAPIs 4+, can list directories as well.
 #
 # Example:
 # @CODE
@@ -485,7 +487,12 @@ autotools-utils_src_install() {
 
 	# XXX: support installing them from builddir as well?
 	if [[ ${DOCS} ]]; then
-		dodoc "${DOCS[@]}" || die "dodoc failed"
+		if [[ ${EAPI} == [23] ]]; then
+			dodoc "${DOCS[@]}" || die
+		else
+			# dies by itself
+			dodoc -r "${DOCS[@]}"
+		fi
 	else
 		local f
 		# same list as in PMS
