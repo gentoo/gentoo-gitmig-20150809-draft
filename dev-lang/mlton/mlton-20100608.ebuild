@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/mlton-20100608.ebuild,v 1.1 2012/10/16 09:07:05 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/mlton-20100608.ebuild,v 1.2 2012/12/14 11:09:19 ulm Exp $
 
 inherit eutils
 
@@ -12,13 +12,12 @@ SRC_URI="!binary? ( ${BASE_URI}/${P}.src.tgz )
 
 HOMEPAGE="http://www.mlton.org"
 
-LICENSE="as-is"
+LICENSE="HPND MIT"
 SLOT="0"
 # there is support for ppc64 and ia64, but no
 # binaries are provided and there is no native
 # code generation for these platforms
 KEYWORDS="-* ~amd64 ~x86"
-
 IUSE="binary doc"
 
 DEPEND="dev-libs/gmp
