@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/csync-0.50.8.ebuild,v 1.4 2012/08/28 13:21:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/csync-0.60.3.ebuild,v 1.1 2012/12/14 17:18:48 creffett Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit base cmake-utils
 
 DESCRIPTION="A file synchronizer especially designed for you, the normal user"
 HOMEPAGE="http://csync.org/"
-SRC_URI="http://download.owncloud.com/download/${P}.tar.bz2"
+SRC_URI="http://download.owncloud.com/download/o${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -27,20 +27,29 @@ RDEPEND="
 DEPEND="${DEPEND}
 	app-text/asciidoc
 	doc? ( app-doc/doxygen )
-	test? ( dev-libs/check )
+	test? ( dev-util/cmocka )
 "
 
 PATCHES=(
-	"${FILESDIR}/${PN}-automagicness.patch"
+	"${FILESDIR}/${PN}-0.60.2-automagicness.patch"
+	"${FILESDIR}/${PN}-0.60.2-removebadtest.patch"
 )
+
+S="${WORKDIR}/o${P}"
 
 src_prepare() {
 	base_src_prepare
 
-	# punt owncloud test as it uses weird cmocka framework
+	if ! use doc; then
+		sed -i \
+			-e 's:add_subdirectory(doc)::' \
+			CMakeLists.txt || die
+	fi
+
+	# proper docdir
 	sed -i \
-		-e 's:add_subdirectory(ownCloud)::' \
-		tests/CMakeLists.txt || die
+		-e "s:/doc/ocsync:/doc/${PF}:" \
+		doc/CMakeLists.txt || die
 }
 
 src_configure() {
