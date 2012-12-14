@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cvc3/cvc3-2.4.1.ebuild,v 1.4 2012/12/05 10:18:57 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cvc3/cvc3-2.4.1.ebuild,v 1.5 2012/12/14 09:49:53 ulm Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ DESCRIPTION="CVC3 is an automatic theorem prover for Satisfiability Modulo Theor
 HOMEPAGE="http://www.cs.nyu.edu/acsys/cvc3/index.html"
 SRC_URI="http://www.cs.nyu.edu/acsys/cvc3/releases/2.4.1/${P}.tar.gz"
 
-LICENSE="BSD MIT as-is zchaff? ( zchaff )"
+LICENSE="BSD MIT HPND zchaff? ( zchaff )"
 RESTRICT="mirror zchaff? ( bindist )"
 SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86"
