@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.17.ebuild,v 1.6 2012/12/14 18:45:45 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.17.ebuild,v 1.7 2012/12/14 21:14:26 mr_bones_ Exp $
 
 EAPI=3
 inherit eutils versionator toolchain-funcs flag-o-matic cmake-utils games
@@ -16,14 +16,16 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="dev-lang/lua
+DEPEND="dev-lang/lua
+	media-libs/libsdl[video]
 	media-libs/sdl-image[jpeg,png]
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-gfx
 	media-libs/sdl-net
+	media-libs/libpng
+	sys-libs/zlib
 	media-libs/glew
-	media-libs/sdl-ttf"
-DEPEND="${RDEPEND}
+	media-libs/sdl-ttf
 	>=dev-libs/boost-1.37"
 
 S=${WORKDIR}/${MY_P}
