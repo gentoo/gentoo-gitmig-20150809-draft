@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/sphinxbase-0.7.ebuild,v 1.3 2012/02/24 11:29:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/sphinxbase-0.7.ebuild,v 1.4 2012/12/14 11:11:58 ulm Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
@@ -13,7 +13,7 @@ DESCRIPTION="Support library required by the Sphinx Speech Recognition Engine"
 HOMEPAGE="http://cmusphinx.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cmusphinx/${P}.tar.gz"
 
-LICENSE="BSD as-is"
+LICENSE="BSD-2 HPND MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc lapack python static-libs"
