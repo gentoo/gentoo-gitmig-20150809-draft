@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.284 2012/12/12 15:35:16 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.285 2012/12/14 02:57:42 blueness Exp $
+
+  14 Dec 2012; Anthony G. Basile <blueness@gentoo.org>
+  gentoolkit-0.3.0.7.ebuild:
+  stable arm ppc ppc64, bug #446832
 
   12 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> gentoolkit-0.3.0.7.ebuild:
   Stable on amd64, wrt bug #446832
