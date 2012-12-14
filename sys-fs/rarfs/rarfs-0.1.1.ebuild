@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/rarfs/rarfs-0.1.1.ebuild,v 1.1 2012/12/14 08:42:50 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/rarfs/rarfs-0.1.1.ebuild,v 1.2 2012/12/14 08:49:32 pinkbyte Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}"
 DOCS=( AUTHORS ChangeLog NEWS README )
 
 src_install() {
-        install_prarfs() {
+	install_prarfs() {
 		python_convert_shebangs -q ${PYTHON_ABI} scripts/prarfs
 		newbin scripts/prarfs prarfs-${PYTHON_ABI}
 	}
