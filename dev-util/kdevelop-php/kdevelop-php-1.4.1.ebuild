@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/kdevelop-php-1.4.1.ebuild,v 1.1 2012/11/05 13:58:04 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/kdevelop-php-1.4.1.ebuild,v 1.2 2012/12/14 12:46:38 ago Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ IUSE="debug doc"
 if [[ $PV == *9999* ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 fi
 
 DEPEND="
