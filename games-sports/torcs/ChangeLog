@@ -1,6 +1,13 @@
 # ChangeLog for games-sports/torcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/ChangeLog,v 1.35 2012/03/22 15:05:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/ChangeLog,v 1.36 2012/12/14 22:57:22 hasufell Exp $
+
+*torcs-1.3.4 (14 Dec 2012)
+
+  14 Dec 2012; Julian Ospald <hasufell@gentoo.org> +torcs-1.3.4.ebuild,
+  +files/torcs-1.3.4-as-needed.patch, +files/torcs-1.3.4-flags.patch,
+  +files/torcs-1.3.4-no-automake.patch:
+  version bump wrt #415909
 
   22 Mar 2012; Mike Frysinger <vapier@gentoo.org> torcs-1.3.1.ebuild,
   files/torcs-1.3.1-libpng15.patch, +files/torcs-1.3.1-no-automake.patch:
