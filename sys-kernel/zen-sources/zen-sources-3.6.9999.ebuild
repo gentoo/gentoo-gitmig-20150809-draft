@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/zen-sources-9999.ebuild,v 1.6 2012/12/11 19:51:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/zen-sources-3.6.9999.ebuild,v 1.1 2012/12/14 19:27:43 hwoarang Exp $
 
 EAPI="2"
 
@@ -15,6 +15,7 @@ CKV='2.6.99'
 
 ETYPE="sources"
 
+EGIT_BRANCH="${PV/.9999}/master"
 EGIT_REPO_URI="git://github.com/damentz/zen-kernel.git
 	https://github.com/damentz/zen-kernel.git"
 
@@ -25,7 +26,7 @@ K_NOSETEXTRAVERSION="don't_set_it"
 DESCRIPTION="The Zen Kernel Live Sources"
 HOMEPAGE="http://zen-kernel.org"
 
-IUSE="+minimal"
+IUSE=""
 
 KEYWORDS=""
 
@@ -37,8 +38,5 @@ pkg_setup(){
 	ewarn "Git zen-sources are extremely unsupported, even from the upstream"
 	ewarn "developers. Use them at your own risk and don't bite us if your"
 	ewarn "system explodes"
-	if use minimal; then
-		EGIT_OPTIONS="--depth 1"
-	fi
 	kernel-2_pkg_setup
 }

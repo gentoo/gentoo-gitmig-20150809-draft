@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/zen-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.56 2012/12/11 19:51:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.57 2012/12/14 19:27:43 hwoarang Exp $
+
+*zen-sources-3.7.9999 (14 Dec 2012)
+*zen-sources-3.6.9999 (14 Dec 2012)
+
+  14 Dec 2012; Markos Chandras <hwoarang@gentoo.org>
+  +zen-sources-3.6.9999.ebuild, +zen-sources-3.7.9999.ebuild,
+  -zen-sources-9999.ebuild, metadata.xml:
+  Move from a single live ebuild to one live ebuild per major kernel release.
+  Bug #446874
 
   11 Dec 2012; Markos Chandras <hwoarang@gentoo.org> zen-sources-9999.ebuild:
   Update git repository. Bug #446874

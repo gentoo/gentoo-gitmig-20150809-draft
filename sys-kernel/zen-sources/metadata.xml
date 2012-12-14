@@ -9,8 +9,5 @@
 	<email>wired@gentoo.org</email>
 	<name>Alex Alexander</name>
 </maintainer>
-<use>
-	<flag name="minimal">Clone git tree with --depth 1 to reduce amount of data to download. Use with caution</flag>
-</use>
 </pkgmetadata>
 
