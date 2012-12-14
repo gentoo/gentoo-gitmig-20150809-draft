@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/raster3d
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.33 2012/10/19 10:24:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.34 2012/12/14 10:16:38 ulm Exp $
+
+  14 Dec 2012; Ulrich Müller <ulm@gentoo.org> raster3d-3.0.2.ebuild:
+  Fix LICENSE, Artistic License, Version 2.0 according to HOMEPAGE.
 
   19 Oct 2012; Justin Lecher <jlec@gentoo.org> raster3d-3.0.2.ebuild:
   Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-3.0.2.ebuild,v 1.9 2012/10/19 10:24:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-3.0.2.ebuild,v 1.10 2012/12/14 10:16:38 ulm Exp $
 
 EAPI=4
 
@@ -14,8 +14,8 @@ DESCRIPTION="Generation high quality raster images of proteins or other molecule
 HOMEPAGE="http://www.bmsc.washington.edu/raster3d/raster3d.html"
 SRC_URI="http://www.bmsc.washington.edu/${PN}/${MY_P}.tar.gz -> ${MY_P}.tar"
 
+LICENSE="Artistic-2"
 SLOT="0"
-LICENSE="as-is"
 KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="gd tiff"
 
