@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/xstr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/xstr/ChangeLog,v 1.3 2012/11/09 18:31:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/xstr/ChangeLog,v 1.4 2012/12/14 11:17:18 ulm Exp $
+
+  14 Dec 2012; Ulrich Müller <ulm@gentoo.org> xstr-0.2.1.ebuild:
+  Fix LICENSE, MIT (Expat) according to LICENSE file, bug 445046. Do not
+  install useless file in docdir.
 
   09 Nov 2012; Agostino Sarubbo <ago@gentoo.org> xstr-0.2.1.ebuild:
   Add ~amd64, wrt bug #442118
