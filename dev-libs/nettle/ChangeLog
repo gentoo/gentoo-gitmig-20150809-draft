@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.71 2012/12/14 21:45:31 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.72 2012/12/14 22:35:13 alonbl Exp $
+
+  14 Dec 2012;  <alonbl@gentoo.org> +files/nettle-2.5-build-ar.patch,
+  nettle-2.5-r1.ebuild:
+  Fix ar detection per bug#438160 by Sean McGovern
 
 *nettle-2.5-r1 (14 Dec 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.5-r1.ebuild,v 1.1 2012/12/14 21:45:31 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.5-r1.ebuild,v 1.2 2012/12/14 22:35:13 alonbl Exp $
 
 EAPI="4"
 
@@ -23,6 +23,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.5-missing-libm-link.patch
 	sed -i -e 's/solaris\*)/sunldsolaris*)/' configure.ac || die
 	epatch "${FILESDIR}/${P}-static-libs.patch"
+	epatch "${FILESDIR}/${P}-build-ar.patch"
 	eautoreconf
 }
 
