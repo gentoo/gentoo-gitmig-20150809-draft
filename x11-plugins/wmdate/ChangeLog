@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmdate
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdate/ChangeLog,v 1.13 2010/09/13 08:01:26 s4t4n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdate/ChangeLog,v 1.14 2012/12/14 10:43:17 voyageur Exp $
+
+  14 Dec 2012; Bernard Cafarelli <voyageur@gentoo.org> wmdate-0.7.ebuild:
+  Fix license, as found by ulm in bug #446784
 
   13 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> wmdate-0.7.ebuild:
   Honour Gentoo LDFLAGS, see bug #336979.
