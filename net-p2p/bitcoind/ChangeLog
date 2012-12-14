@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.51 2012/12/06 13:21:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.52 2012/12/14 15:33:57 mgorny Exp $
+
+  14 Dec 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Remove redundant USE=upnp description; it matches the global flag meaning.
 
 *bitcoind-0.6.4_rc4-r1 (06 Dec 2012)
 *bitcoind-0.7.2_rc2 (06 Dec 2012)
