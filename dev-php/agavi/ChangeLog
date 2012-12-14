@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/agavi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/agavi/ChangeLog,v 1.5 2011/03/06 11:17:22 olemarkus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/agavi/ChangeLog,v 1.6 2012/12/14 11:21:10 ulm Exp $
+
+  14 Dec 2012; Ulrich Müller <ulm@gentoo.org> agavi-1.0.4.ebuild:
+  Fix LICENSE, see LICENSE* files in package, bug 445234.
 
 *agavi-1.0.4 (06 Mar 2011)
 

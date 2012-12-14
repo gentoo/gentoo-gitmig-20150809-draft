@@ -1,18 +1,18 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/agavi/agavi-1.0.4.ebuild,v 1.1 2011/03/06 11:17:22 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/agavi/agavi-1.0.4.ebuild,v 1.2 2012/12/14 11:21:10 ulm Exp $
 
 EAPI="2"
 
 inherit php-pear-lib-r1
 
-KEYWORDS="~amd64 ~x86"
-
 DESCRIPTION="PHP5 MVC Application Framework."
 HOMEPAGE="http://www.agavi.org/"
 SRC_URI="http://www.agavi.org/download/${PV}.tgz"
-LICENSE="LGPL-2.1 as-is public-domain CCPL-Attribution-ShareAlike-2.5"
+
+LICENSE="LGPL-2.1+ icu unicode ZLIB public-domain"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 # currently fails to install with dev-php/PEAR-PEAR_PackageFileManager-1.7.0
