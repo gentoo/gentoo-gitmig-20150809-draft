@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vecmath-objectclub/vecmath-objectclub-1.14.ebuild,v 1.3 2012/08/04 15:30:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vecmath-objectclub/vecmath-objectclub-1.14.ebuild,v 1.4 2012/12/14 10:45:20 ulm Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Unofficial free implementation of Sun javax.vecmath by Kenji Hirana
 HOMEPAGE="http://www.objectclub.jp/download/vecmath_e"
 SRC_URI="http://www.objectclub.jp/download/files/vecmath/${MY_PN}-${PV}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="HPND"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
