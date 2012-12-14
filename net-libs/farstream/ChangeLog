@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/farstream
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/ChangeLog,v 1.15 2012/12/08 01:23:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/ChangeLog,v 1.16 2012/12/14 16:03:39 mgorny Exp $
+
+  14 Dec 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Remove redundant USE=upnp description; it matches the global flag meaning.
 
 *farstream-0.2.2 (08 Dec 2012)
 
