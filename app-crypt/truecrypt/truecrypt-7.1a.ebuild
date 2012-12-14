@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.1a.ebuild,v 1.3 2012/08/02 18:25:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.1a.ebuild,v 1.4 2012/12/14 22:26:47 alonbl Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ inherit flag-o-matic linux-info multilib toolchain-funcs wxwidgets eutils pax-ut
 DESCRIPTION="Free open-source disk encryption software"
 HOMEPAGE="http://www.truecrypt.org/"
 SRC_URI="${P}.tar.gz
-	mirror://gentoo/${PN}-pkcs11.h.bz2"
+	${P}-pkcs11.h"
 
 LICENSE="truecrypt-3.0"
 SLOT="0"
@@ -31,6 +31,11 @@ pkg_nofetch() {
 	elog "Please download the source archive \"TrueCrypt ${PV} Source.tar.gz\" from:"
 	elog "http://www.truecrypt.org/downloads2"
 	elog "Then put the file in ${DISTDIR}/${P}.tar.gz"
+
+	# until we support restricted fetch per URI
+	elog ""
+	elog "Please execute:"
+	elog "curl 'http://git.gnupg.org/cgi-bin/gitweb.cgi?p=scute.git;a=blob_plain;f=src/pkcs11.h;hb=38bdba0bb1ab93950489c645938c93ed577f9139' > ${DISTDIR}/${P}-pkcs11.h"
 }
 
 pkg_setup() {
@@ -54,7 +59,7 @@ src_prepare() {
 	epatch "${FILESDIR}/makefile-archdetect.diff"
 	epatch "${FILESDIR}/execstack-fix.diff"
 	mkdir "${T}"/pkcs11 || die
-	ln -s "${WORKDIR}"/truecrypt-pkcs11.h "${T}"/pkcs11/pkcs11.h || die
+	ln -s "${DISTDIR}"/${P}-pkcs11.h "${T}"/pkcs11/pkcs11.h || die
 }
 
 src_compile() {
