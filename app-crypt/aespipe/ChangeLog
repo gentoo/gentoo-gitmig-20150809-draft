@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/aespipe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.31 2012/09/18 04:39:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.32 2012/12/14 21:59:41 alonbl Exp $
+
+*aespipe-2.4c (14 Dec 2012)
+
+  14 Dec 2012;  <alonbl@gentoo.org> +aespipe-2.4c.ebuild:
+  Version bump per bug#426230, thanks to Gerald
 
   18 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
@@ -95,4 +100,3 @@
   11 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> aespipe-2.2a.ebuild:
   Initial import. Ebuild submitted by Venkat Manakkal <venkat@rayservers.com> in
   #20669.
-
