@@ -1,6 +1,19 @@
 # ChangeLog for dev-java/ecj-gcj
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ecj-gcj/ChangeLog,v 1.5 2012/09/16 13:12:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ecj-gcj/ChangeLog,v 1.6 2012/12/14 13:08:17 sera Exp $
+
+*ecj-gcj-3.6-r1 (14 Dec 2012)
+*ecj-gcj-3.5.2-r3 (14 Dec 2012)
+
+  14 Dec 2012; Ralph Sennhauser <sera@gentoo.org> +ecj-gcj-3.5.2-r3.ebuild,
+  +ecj-gcj-3.6-r1.ebuild, +files/ecj-gcj.in:
+  Respect LDFLAGS. #355057
+  Integrate prefix changes by Benda Xu <heroxbd@gentoo.org>. #416373
+  Stop using xargs, drop userland_GNU from IUSE and the dependency on
+  findutils.
+  Allow eselect-java be used instead of eselect-ecj.
+  EAPI bump, cleanup, add missing die.
+  Use same launcher for all slots, update rational for gcc-config lookup.
 
   16 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   ecj-gcj-3.6.ebuild:
