@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/gentoo-init
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gentoo-init/ChangeLog,v 1.12 2012/04/07 10:29:17 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gentoo-init/ChangeLog,v 1.13 2012/12/14 12:36:03 grozin Exp $
+
+*gentoo-init-1.0 (14 Dec 2012)
+
+  14 Dec 2012; Andrey Grozin <grozin@gentoo.org> +gentoo-init-1.0.ebuild,
+  +files/gentoo-init-1.lisp, +files/source-registry.conf:
+  From the lisp overlay
 
   07 Apr 2012; Jesus Rivero <neurogeek@gentoo.org> gentoo-init-0.1.ebuild:
   Changed DEPEND to depend on dev-lisp/asdf-binary-locations instead of
