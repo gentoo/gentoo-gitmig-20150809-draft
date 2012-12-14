@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.1-r2.ebuild,v 1.6 2012/12/01 22:12:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.1-r2.ebuild,v 1.7 2012/12/14 09:46:31 voyageur Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -99,6 +99,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.0-PPC_macro.patch
 	epatch "${FILESDIR}"/${P}-ivybridge_support.patch
 	epatch "${FILESDIR}"/${P}-fix_debug_line_info.patch
+	epatch "${FILESDIR}"/${P}-ExecutionEngine_tests_xfail_arm.patch
 
 	# Apply r600 OpenCL-related patches, bug #425688
 	epatch "${FILESDIR}"/cl-patches/*.patch
