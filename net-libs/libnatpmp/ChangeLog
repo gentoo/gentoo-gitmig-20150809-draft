@@ -1,4 +1,8 @@
 
+  14 Dec 2012; Anthony G. Basile <blueness@gentoo.org>
+  libnatpmp-20110808-r1.ebuild:
+  stable arm, bug #444804
+
   26 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
   libnatpmp-20120821.ebuild:
   keyword ~mips
