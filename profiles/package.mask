@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14297 2012/12/14 07:34:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14298 2012/12/14 12:21:17 grozin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andrey Grozin <grozin@gentoo.org> (14 Dec 2012)
+# Stuff from the lisp overlay, with some version bumps
+# Masked for testing
+>=dev-lisp/gentoo-init-1.0
+>=dev-lisp/asdf-2.26
+>=dev-lisp/sbcl-1.1.2
 
 # Sebastien Fabbro <bicatali@gentoo.org> (13 Dec 2012)
 # Necessary removal to get rid of very unstable sci-libs/lapack-atlas
