@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7250 2012/12/14 12:21:17 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7251 2012/12/14 15:18:13 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Dec 2012; Michał Górny <mgorny@gentoo.org> package.mask:
+  Unmask the python-utils-r1 Python ebuilds.
 
   14 Dec 2012; Andrey Grozin <grozin@gentoo.org> package.mask:
   Masked >=dev-lisp/gentoo-init-1.0, >=dev-lisp/asdf-2.26, >=dev-lisp/sbcl-1.1.2 for testing
