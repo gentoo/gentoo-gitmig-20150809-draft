@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.70 2012/10/20 16:40:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.71 2012/12/14 21:45:31 alonbl Exp $
+
+*nettle-2.5-r1 (14 Dec 2012)
+
+  14 Dec 2012;  <alonbl@gentoo.org> +files/nettle-2.5-static-libs.patch,
+  +nettle-2.5-r1.ebuild:
+  bug#405525 add support for USE static-libs
 
   20 Oct 2012; Raúl Porcel <armin76@gentoo.org> nettle-2.5.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #433235
