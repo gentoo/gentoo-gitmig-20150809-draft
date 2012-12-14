@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/argyllcms
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/ChangeLog,v 1.31 2012/12/14 08:31:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/ChangeLog,v 1.32 2012/12/14 08:54:19 jlec Exp $
+
+*argyllcms-1.4.0-r2 (14 Dec 2012)
+
+  14 Dec 2012; Justin Lecher <jlec@gentoo.org> +argyllcms-1.4.0-r2.ebuild:
+  Be verbose in build, #445522; Respect CFLAGS, CC, AR, RANLIB
 
   14 Dec 2012; Justin Lecher <jlec@gentoo.org> -argyllcms-1.4.0.ebuild,
   metadata.xml:
