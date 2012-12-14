@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/farsight2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.72 2012/12/08 00:58:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.73 2012/12/14 15:52:35 mgorny Exp $
+
+  14 Dec 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Remove redundant USE=upnp description; it matches the global flag meaning.
 
   08 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   farsight2-0.0.29.ebuild, farsight2-0.0.31.ebuild:

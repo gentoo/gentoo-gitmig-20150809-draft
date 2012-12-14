@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.43 2012/12/08 00:57:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.44 2012/12/14 15:52:15 mgorny Exp $
+
+  14 Dec 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Remove redundant USE=upnp description; it matches the global flag meaning.
 
 *libnice-0.1.3-r1 (08 Dec 2012)
 
