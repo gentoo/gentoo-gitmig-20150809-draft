@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/dwb-9999.ebuild,v 1.2 2012/05/03 06:01:05 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/dwb-9999.ebuild,v 1.3 2012/12/14 23:21:14 radhermit Exp $
 
 EAPI=4
 
@@ -30,7 +30,9 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	sed -i -e "/^CFLAGS += -\(pipe\|g\|O2\)/d" config.mk || die
+	sed -e '/^CFLAGS += -\(pipe\|g\|O2\)/d' \
+		-e 's:^PREFIX.*:PREFIX=/usr:' \
+		-i config.mk || die
 }
 
 src_compile() {
