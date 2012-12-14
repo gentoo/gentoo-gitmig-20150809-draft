@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/bpython-0.10.1.ebuild,v 1.4 2012/01/28 15:27:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/bpython-0.12.ebuild,v 1.1 2012/12/14 06:58:42 grozin Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.5"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 *-jython"
 PYTHON_USE_WITH="ncurses"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Syntax highlighting and autocompletion for the Python interpreter"
 HOMEPAGE="http://www.bpython-interpreter.org/ https://bitbucket.org/bobf/bpython/ http://pypi.python.org/pypi/bpython"
@@ -16,7 +16,7 @@ SRC_URI="http://www.bpython-interpreter.org/releases/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="gtk urwid"
 
 RDEPEND="dev-python/pygments
@@ -26,6 +26,11 @@ RDEPEND="dev-python/pygments
 DEPEND="${RDEPEND}"
 
 DOCS="sample-config sample.theme light.theme"
+
+src_prepare() {
+	distutils_src_prepare
+	epatch "${FILESDIR}"/${PN}-desktop.patch
+}
 
 src_install() {
 	distutils_src_install
@@ -42,6 +47,8 @@ src_install() {
 		python_execute_function -q delete_unneeded_modules
 	fi
 	if ! use urwid; then
+		rm -f "${ED}"usr/bin/bpython-urwid*
+
 		delete_urwid() {
 			rm -f "${ED}$(python_get_sitedir)/bpython/urwid.py"
 		}
