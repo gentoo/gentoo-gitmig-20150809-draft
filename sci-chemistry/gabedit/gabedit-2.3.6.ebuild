@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/gabedit-2.3.6.ebuild,v 1.7 2012/07/02 09:07:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/gabedit-2.3.6.ebuild,v 1.8 2012/12/14 10:12:42 ulm Exp $
 
 EAPI=2
 
@@ -14,8 +14,8 @@ DESCRIPTION="GUI for computational chemistry packages"
 HOMEPAGE="http://gabedit.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/GabeditDevloppment/${MY_PN}${MY_PV}/${MY_P}.tar.gz"
 
+LICENSE="MIT"
 SLOT="0"
-LICENSE="as-is"
 KEYWORDS="amd64 x86"
 IUSE="openmp"
 
