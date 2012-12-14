@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyserial
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.69 2012/12/08 20:44:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.70 2012/12/14 16:04:46 mgorny Exp $
+
+  14 Dec 2012; Michał Górny <mgorny@gentoo.org> pyserial-2.6-r1.ebuild:
+  Remove the (untested) jython support.
 
 *pyserial-2.6-r1 (08 Dec 2012)
 
