@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/gnurobots
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/ChangeLog,v 1.23 2011/03/23 07:34:49 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/ChangeLog,v 1.24 2012/12/15 18:47:21 dolsen Exp $
+
+  15 Dec 2012; Brian Dolbec <dolsen@gentoo.org> gnurobots-1.2.0.ebuild:
+  Update HOMEPAGE link, as reported by sobhan
 
   23 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> gnurobots-1.2.0.ebuild:
   Use SLOT dependencies for x11-libs/vte.
