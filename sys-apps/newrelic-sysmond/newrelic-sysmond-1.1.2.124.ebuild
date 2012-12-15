@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/newrelic-sysmond/newrelic-sysmond-1.1.2.124.ebuild,v 1.4 2012/11/19 16:48:27 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/newrelic-sysmond/newrelic-sysmond-1.1.2.124.ebuild,v 1.5 2012/12/15 16:53:46 pacho Exp $
 
 EAPI=4
 
@@ -52,7 +52,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "remember to set your license key via:"
-	elog
-	elog "    newrelic-config --set license_key=\$YOUR_KEY"
+	elog "Remember to set your license key via:"
+	elog "$ nrsysmond-config --set license_key=\$YOUR_KEY"
 }
