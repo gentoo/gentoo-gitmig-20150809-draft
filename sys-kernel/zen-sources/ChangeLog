@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/zen-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.57 2012/12/14 19:27:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.58 2012/12/15 10:55:44 hwoarang Exp $
+
+  15 Dec 2012; Markos Chandras <hwoarang@gentoo.org>
+  zen-sources-3.6.9999.ebuild, zen-sources-3.7.9999.ebuild:
+  Fix version for installation directory. Bump to EAPI 5
 
 *zen-sources-3.7.9999 (14 Dec 2012)
 *zen-sources-3.6.9999 (14 Dec 2012)

@@ -1,21 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/zen-sources-3.6.9999.ebuild,v 1.1 2012/12/14 19:27:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/zen-sources-3.6.9999.ebuild,v 1.2 2012/12/15 10:55:44 hwoarang Exp $
 
-EAPI="2"
+EAPI="5"
 
-COMPRESSTYPE=".lzma"
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
 K_SECURITY_UNSUPPORTED="1"
 K_DEBLOB_AVAILABLE=0
-# If these are not set, you will get weird behavior from kernel-2, due to the
-# huge $PV that is used otherwise.
-CKV='2.6.99'
+CKV="${PV/99/}"
 
 ETYPE="sources"
 
-EGIT_BRANCH="${PV/.9999}/master"
+EGIT_BRANCH="${PV/.9999/}/master"
 EGIT_REPO_URI="git://github.com/damentz/zen-kernel.git
 	https://github.com/damentz/zen-kernel.git"
 
