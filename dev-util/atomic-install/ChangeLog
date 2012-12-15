@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/atomic-install
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/atomic-install/ChangeLog,v 1.3 2012/08/31 08:58:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/atomic-install/ChangeLog,v 1.4 2012/12/15 12:45:07 mgorny Exp $
+
+*atomic-install-9999 (15 Dec 2012)
+
+  15 Dec 2012; Michał Górny <mgorny@gentoo.org> +atomic-install-9999.ebuild:
+  Import the live ebuild.
 
   31 Aug 2012; Michał Górny <mgorny@gentoo.org> atomic-install-0.1.1.ebuild,
   metadata.xml:
