@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-4.4.ebuild,v 1.2 2012/05/03 20:00:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-4.4.ebuild,v 1.3 2012/12/15 15:53:48 calchan Exp $
 
 EAPI="4"
 
-inherit fdo-mime
+inherit fdo-mime eutils
 
 DESCRIPTION="Free, easy, personal accounting for everyone"
 HOMEPAGE="http://homebank.free.fr/index.php"
@@ -20,6 +20,10 @@ RDEPEND=">=x11-libs/gtk+-2.20
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=dev-util/intltool-0.40.5"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-fix_tests.patch"
+}
 
 src_configure() {
 	econf $(use_with ofx)
