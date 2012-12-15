@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14299 2012/12/14 15:18:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14300 2012/12/15 00:31:15 mpagano Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Pagano <mpagano@gentoo.org> (14 Dec 2012)
+# Masked for testing
+>=apps-portage/portpeek-2.1.2
 
 # Andrey Grozin <grozin@gentoo.org> (14 Dec 2012)
 # Stuff from the lisp overlay, with some version bumps
