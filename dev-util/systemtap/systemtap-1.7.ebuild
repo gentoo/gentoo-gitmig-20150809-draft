@@ -1,10 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-1.7.ebuild,v 1.3 2012/03/27 11:40:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-1.7.ebuild,v 1.4 2012/12/15 19:34:20 tetromino Exp $
 
 EAPI=4
 
-inherit linux-info autotools
+PYTHON_DEPEND="2"
+
+inherit linux-info autotools python
 
 DESCRIPTION="A linux trace/probe tool"
 HOMEPAGE="http://sourceware.org/systemtap/"
@@ -28,7 +30,15 @@ ERROR_DEBUG_FS="${PN} works best with support for Debug Filesystem (DEBUG_FS) - 
 
 DOCS="AUTHORS HACKING NEWS README"
 
+pkg_setup() {
+	linux-info_pkg_setup
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_prepare() {
+	python_convert_shebangs 2 dtrace.in
+
 	sed -i \
 		-e 's:-Werror::g' \
 		configure.ac Makefile.am \

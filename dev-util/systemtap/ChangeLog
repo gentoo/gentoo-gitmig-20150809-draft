@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.102 2012/11/13 14:04:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.103 2012/12/15 19:34:20 tetromino Exp $
+
+  15 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  systemtap-1.6.ebuild, systemtap-1.7.ebuild, systemtap-2.0.ebuild:
+  Non-maintainer commit: fix /usr/bin/dtrace shebang and add missing python2
+  dependency (bug #379117).
 
   13 Nov 2012; Anthony G. Basile <blueness@gentoo.org> systemtap-2.0.ebuild:
   keyword ~arm, bug #351931

@@ -1,10 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-1.6.ebuild,v 1.5 2012/01/16 14:59:04 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-1.6.ebuild,v 1.6 2012/12/15 19:34:20 tetromino Exp $
 
 EAPI="2"
 
-inherit linux-info
+PYTHON_DEPEND="2"
+
+inherit linux-info python
 
 DESCRIPTION="A linux trace/probe tool"
 HOMEPAGE="http://sourceware.org/systemtap/"
@@ -34,6 +36,16 @@ CONFIG_CHECK="~KPROBES ~RELAY ~DEBUG_FS"
 ERROR_KPROBES="${PN} requires support for KProbes Instrumentation (KPROBES) - this can be enabled in 'Instrumentation Support -> Kprobes'."
 ERROR_RELAY="${PN} works with support for user space relay support (RELAY) - this can be enabled in 'General setup -> Kernel->user space relay support (formerly relayfs)'."
 ERROR_DEBUG_FS="${PN} works best with support for Debug Filesystem (DEBUG_FS) - this can be enabled in 'Kernel hacking -> Debug Filesystem'."
+
+pkg_setup() {
+	linux-info_pkg_setup
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
+	python_convert_shebangs 2 dtrace.in
+}
 
 src_configure() {
 	econf \
