@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>desktop-misc</herd>
-<maintainer>
-  <email>desktop-misc@gentoo.org</email>
-</maintainer>
 <longdescription>
   The Fast Light ToolKit is a cross-platform C++ user interface
   toolkit for X and OpenGL. FLTK (pronounced "fulltick") provides GUI
