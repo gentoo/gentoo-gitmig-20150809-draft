@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0.ebuild,v 1.4 2012/06/30 18:45:04 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0.ebuild,v 1.5 2012/12/15 14:13:24 hd_brummy Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit vdr-plugin-2
 
@@ -54,6 +54,10 @@ src_prepare() {
 
 	if has_version ">=media-video/vdr-1.7.27"; then
 		epatch "${FILESDIR}/vdr-1.7.27.diff"
+	fi
+
+	if has_version ">=media-video/vdr-1.7.33"; then
+	epatch "${FILESDIR}/${P}_vdr-1.7.33.diff"
 	fi
 
 	fix_vdr_libsi_include scanner.c
