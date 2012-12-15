@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obex-data-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.37 2012/11/20 08:12:17 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.38 2012/12/15 17:14:26 pacho Exp $
+
+  15 Dec 2012; Pacho Ramos <pacho@gentoo.org> obex-data-server-0.4.6.ebuild:
+  Fix imagemagick/graphicsmagick dep, #314217 by Wojciech Porczyk
 
 *obex-data-server-0.4.6 (20 Nov 2012)
 
