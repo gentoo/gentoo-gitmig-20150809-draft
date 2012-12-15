@@ -1,6 +1,17 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.136 2012/11/21 23:04:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.137 2012/12/15 19:01:29 tetromino Exp $
+
+  15 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/tracker-0.8.0-strigi.patch,
+  -files/tracker-0.8.17-build-with-eds232.patch,
+  -files/tracker-0.8.17-poppler-0.16.patch,
+  -files/tracker-0.8.17-tests-fixes.patch,
+  -files/tracker-0.8.17-use-upower.patch, tracker-0.12.10-r1.ebuild,
+  -tracker-0.14.2-r1.ebuild, tracker-0.14.3.ebuild, tracker-0.14.4.ebuild,
+  tracker-9999.ebuild, metadata.xml:
+  Rename upnp USE flag to upnp-av (bug #435768, thanks to Michał Górny). Drop
+  old.
 
 *tracker-0.14.4 (21 Nov 2012)
 

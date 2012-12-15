@@ -24,7 +24,6 @@
   <flag name="thunderbird">Install email data miner plugin for
     <pkg>mail-client/thunderbird</pkg> and
 	<pkg>mail-client/thunderbird-bin</pkg></flag>
-  <flag name="upnp">Add support for video extraction via <pkg>media-libs/gupnp-dlna</pkg>.</flag>
   <flag name="xps">Add support for XPS file format through <pkg>app-text/libgxps</pkg>.</flag>
 </use>
 </pkgmetadata>

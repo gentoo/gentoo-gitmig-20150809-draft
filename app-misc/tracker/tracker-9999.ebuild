@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.54 2012/11/07 21:06:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.55 2012/12/15 19:01:29 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -25,7 +25,7 @@ else
 	KEYWORDS="~amd64 ~x86"
 fi
 # USE="doc" is managed by eclass.
-IUSE="applet cue doc eds elibc_glibc exif firefox-bookmarks flac flickr gif gnome-keyring gsf gstreamer gtk iptc +iso +jpeg laptop +miner-fs mp3 networkmanager pdf playlist rss test thunderbird +tiff upnp +vorbis xine +xml xmp" # qt4 strigi
+IUSE="applet cue doc eds elibc_glibc exif firefox-bookmarks flac flickr gif gnome-keyring gsf gstreamer gtk iptc +iso +jpeg laptop +miner-fs mp3 networkmanager pdf playlist rss test thunderbird +tiff upnp-av +vorbis xine +xml xmp" # qt4 strigi
 [[ ${PV} = 9999 ]] || IUSE="${IUSE} nautilus"
 REQUIRED_USE="cue? ( gstreamer )"
 
@@ -70,8 +70,8 @@ RDEPEND="
 	gsf? ( >=gnome-extra/libgsf-1.13 )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10.31:0.10
-		upnp? ( >=media-libs/gupnp-dlna-0.5 )
-		!upnp? ( >=media-libs/gst-plugins-base-0.10.31:0.10 ) )
+		upnp-av? ( >=media-libs/gupnp-dlna-0.5 )
+		!upnp-av? ( >=media-libs/gst-plugins-base-0.10.31:0.10 ) )
 	!gstreamer? ( !xine? ( || ( media-video/totem media-video/mplayer ) ) )
 	gtk? (
 		>=dev-libs/libgee-0.3:0
@@ -152,7 +152,7 @@ src_unpack() {
 src_prepare() {
 	if use gstreamer ; then
 		G2CONF="${G2CONF} --enable-generic-media-extractor=gstreamer"
-		if use upnp; then
+		if use upnp-av; then
 			G2CONF="${G2CONF} --with-gstreamer-backend=gupnp-dlna"
 		else
 			G2CONF="${G2CONF} --with-gstreamer-backend=discoverer"
