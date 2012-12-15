@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.7.0.ebuild,v 1.2 2012/11/18 13:43:34 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.7.0.ebuild,v 1.3 2012/12/15 16:14:58 hasufell Exp $
 
 EAPI=4
-inherit cmake-utils nsplugins multilib
+inherit cmake-utils nsplugins multilib toolchain-funcs
 
 DESCRIPTION="High performance flash player"
 HOMEPAGE="http://lightspark.sourceforge.net/"
@@ -20,6 +20,7 @@ RDEPEND=">=dev-cpp/libxmlpp-2.33.1:2.6
 	media-fonts/liberation-fonts
 	media-libs/libpng
 	media-libs/libsdl
+	>=sys-devel/gcc-4.6.0[cxx]
 	>=sys-devel/llvm-3
 	x11-libs/cairo
 	x11-libs/gtk+:2
@@ -55,6 +56,15 @@ S=${WORKDIR}/${P/_rc*/}
 PATCHES=(
 	"${FILESDIR}"/${P}-libxmlpp-gles.patch
 )
+
+pkg_pretend() {
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		if [[ $(gcc-major-version) == 4 && $(gcc-minor-version) -lt 6 || $(gcc-major-version) -lt 4 ]] ; then
+			eerror "You need at least sys-devel/gcc-4.6.0"
+			die "You need at least sys-devel/gcc-4.6.0"
+		fi
+	fi
+}
 
 src_configure() {
 	local audiobackends
