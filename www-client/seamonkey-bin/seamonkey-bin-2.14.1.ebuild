@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.11.ebuild,v 1.3 2012/07/28 17:03:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.14.1.ebuild,v 1.1 2012/12/15 07:21:38 jdhore Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ HOMEPAGE="http://www.seamonkey-project.org/"
 RESTRICT="strip mirror binchecks"
 QA_EXECSTACK="opt/seamonkey/*"
 
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="startup-notification"
@@ -41,7 +41,10 @@ RDEPEND="dev-libs/dbus-glib
 	>=x11-libs/gtk+-2.10:2
 	x11-libs/libXrender
 	x11-libs/libXt
-	x11-libs/libXmu"
+	x11-libs/libXmu
+
+	!net-libs/libproxy[spidermonkey]
+"
 
 S="${WORKDIR}/${MOZ_PN}"
 
