@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eclean-kernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eclean-kernel/ChangeLog,v 1.5 2012/12/10 19:08:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eclean-kernel/ChangeLog,v 1.6 2012/12/15 11:26:13 mgorny Exp $
+
+*eclean-kernel-9999 (15 Dec 2012)
+
+  15 Dec 2012; Michał Górny <mgorny@gentoo.org> +eclean-kernel-9999.ebuild:
+  Import the live ebuild.
 
 *eclean-kernel-0.3.2 (10 Dec 2012)
 
