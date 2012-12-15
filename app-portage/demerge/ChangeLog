@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/demerge
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/ChangeLog,v 1.50 2011/12/14 22:59:24 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/ChangeLog,v 1.51 2012/12/15 20:24:51 armin76 Exp $
+
+*demerge-0.047-r1 (15 Dec 2012)
+
+  15 Dec 2012; Raúl Porcel <armin76@gentoo.org> +demerge-0.047-r1.ebuild:
+  Revbump to fix new make.conf patch, straight to stable
 
   14 Dec 2011; Pacho Ramos <pacho@gentoo.org> -demerge-0.043.ebuild,
   -demerge-0.044.ebuild, -demerge-0.045.ebuild, -demerge-0.046.ebuild,
