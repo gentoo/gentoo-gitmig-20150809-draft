@@ -1,10 +1,10 @@
 # ChangeLog for app-crypt/aespipe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.32 2012/12/14 21:59:41 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.33 2012/12/15 12:07:28 alonbl Exp $
 
 *aespipe-2.4c (14 Dec 2012)
 
-  14 Dec 2012;  <alonbl@gentoo.org> +aespipe-2.4c.ebuild:
+  14 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org> +aespipe-2.4c.ebuild:
   Version bump per bug#426230, thanks to Gerald
 
   18 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
