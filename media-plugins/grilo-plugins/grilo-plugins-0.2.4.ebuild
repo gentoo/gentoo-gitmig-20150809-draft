@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.2.4.ebuild,v 1.2 2012/12/10 13:00:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.2.4.ebuild,v 1.3 2012/12/15 18:41:09 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -14,7 +14,7 @@ HOMEPAGE="https://live.gnome.org/Grilo"
 LICENSE="LGPL-2.1+"
 SLOT="0.2"
 KEYWORDS="~amd64 ~x86"
-IUSE="daap +dvd tracker upnp +vimeo +youtube"
+IUSE="daap +dvd tracker upnp-av +vimeo +youtube"
 
 RDEPEND="
 	>=dev-libs/glib-2.28:2
@@ -31,7 +31,7 @@ RDEPEND="
 	youtube? (
 		>=dev-libs/libgdata-0.9.1
 		>=media-libs/libquvi-0.4.0 )
-	upnp? (
+	upnp-av? (
 		net-libs/gssdp
 		>=net-libs/gupnp-0.13
 		>=net-libs/gupnp-av-0.5 )
@@ -72,7 +72,7 @@ src_prepare() {
 		$(use_enable daap dmap)
 		$(use_enable dvd optical-media)
 		$(use_enable tracker)
-		$(use_enable upnp)
+		$(use_enable upnp-av upnp)
 		$(use_enable vimeo)
 		$(use_enable youtube)"
 

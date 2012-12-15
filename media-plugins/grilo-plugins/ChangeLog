@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/grilo-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/ChangeLog,v 1.16 2012/12/10 13:00:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/ChangeLog,v 1.17 2012/12/15 18:41:09 tetromino Exp $
+
+*grilo-plugins-0.2.5 (15 Dec 2012)
+
+  15 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  grilo-plugins-0.1.18.ebuild, grilo-plugins-0.1.20.ebuild,
+  -grilo-plugins-0.2.3.ebuild, grilo-plugins-0.2.4.ebuild,
+  +grilo-plugins-0.2.5.ebuild, metadata.xml:
+  Version bump. Rename upnp USE flag to upnp-av (bug #435772, thanks to Michał
+  Górny). Drop old.
 
   10 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   grilo-plugins-0.2.4.ebuild:
