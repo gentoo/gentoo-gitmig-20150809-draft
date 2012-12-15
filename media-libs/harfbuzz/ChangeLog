@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.11 2012/11/16 19:56:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.12 2012/12/15 22:02:38 phajdan.jr Exp $
+
+  15 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> harfbuzz-0.9.5.ebuild:
+  Keyword ~arm.
 
   16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> harfbuzz-0.9.5.ebuild:
   workaround for bug 399061
