@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libhome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.13 2012/11/27 19:00:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.14 2012/12/15 18:05:13 hasufell Exp $
+
+  15 Dec 2012; Julian Ospald <hasufell@gentoo.org>
+  -files/libhome-0.10.1-Makefile.patch, files/libhome-0.10.2-Makefile.patch:
+  respect LDFLAGS wrt #336203
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> -libhome-0.10.1.ebuild,
   metadata.xml:

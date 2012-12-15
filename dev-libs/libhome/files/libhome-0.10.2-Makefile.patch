@@ -1,8 +1,15 @@
-Index: libhome-0.10.1/Makefile.in
-===================================================================
---- libhome-0.10.1.orig/Makefile.in
-+++ libhome-0.10.1/Makefile.in
-@@ -114,27 +114,32 @@ home_expire_cache: home_expire_cache.o l
+--- Makefile.in
++++ Makefile.in
+@@ -61,7 +61,7 @@
+ LIBTOOL=./libtool
+ 
+ COMPILE=${LIBTOOL} --mode=compile ${CC} ${CPPFLAGS} ${CFLAGS}
+-LINK=${LIBTOOL} --mode=link ${CC} ${CFLAGS}
++LINK=${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${LDFLAGS}
+ 
+ 
+ hparam.o: version.h
+@@ -114,27 +114,32 @@
  install:: install-man install-lib
  
  install-man:: home.conf.5
