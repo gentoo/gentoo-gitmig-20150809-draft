@@ -1,5 +1,7 @@
---- otpCalc-0.97-orig/Makefile.in	2004-11-24 07:44:12.000000000 +0100
-+++ otpCalc-0.97/Makefile.in	2007-12-26 00:38:52.000000000 +0100
+Make it work with GTK+ 2.
+
+--- otpCalc-0.97-orig/Makefile.in
++++ otpCalc-0.97/Makefile.in
 @@ -3,8 +3,8 @@
  
  CC = @CC@
@@ -11,8 +13,8 @@
  
  prefix = @prefix@
  exec_prefix = @exec_prefix@
---- otpCalc-0.97-orig/callbacks.c	2004-11-24 06:57:45.000000000 +0100
-+++ otpCalc-0.97/callbacks.c	2007-12-26 00:38:52.000000000 +0100
+--- otpCalc-0.97-orig/callbacks.c
++++ otpCalc-0.97/callbacks.c
 @@ -236,7 +236,7 @@
  }
  
@@ -37,8 +39,8 @@
 -
 +	return FALSE;
  }
---- otpCalc-0.97-orig/gui.c	2004-11-24 07:46:53.000000000 +0100
-+++ otpCalc-0.97/gui.c	2007-12-26 00:38:52.000000000 +0100
+--- otpCalc-0.97-orig/gui.c
++++ otpCalc-0.97/gui.c
 @@ -29,7 +29,7 @@
  GtkWidget *te_response;
  
@@ -57,8 +59,8 @@
  	gtk_table_attach(GTK_TABLE(ta_top), mb_top, 0, 3, 0, 1,
  			 (GtkAttachOptions)(GTK_FILL),
  			 (GtkAttachOptions)(0), 0, 0);
---- otpCalc-0.97-orig/utility.c	2004-11-24 06:59:09.000000000 +0100
-+++ otpCalc-0.97/utility.c	2007-12-26 00:38:52.000000000 +0100
+--- otpCalc-0.97-orig/utility.c
++++ otpCalc-0.97/utility.c
 @@ -422,7 +422,7 @@
  			words[extract(message, 33, 11)],
  			words[extract(message, 44, 11)],

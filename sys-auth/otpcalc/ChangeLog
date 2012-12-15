@@ -1,6 +1,16 @@
 # ChangeLog for sys-auth/otpcalc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/ChangeLog,v 1.18 2012/05/04 18:57:20 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/ChangeLog,v 1.19 2012/12/15 12:33:05 ulm Exp $
+
+*otpcalc-0.97-r6 (15 Dec 2012)
+
+  15 Dec 2012; Ulrich Müller <ulm@gentoo.org> +otpcalc-0.97-r6.ebuild,
+  files/otpcalc-0.97-badindex.diff, +files/otpcalc-0.97-gtk-deprecated.patch,
+  files/otpcalc-0.97-gtk2-gentoo.patch,
+  files/otpcalc-0.97-sha1-byteorder.patch, files/otpcalc-0.97-skey-md5.patch,
+  files/otpcalc-crypto-proto.diff, files/otpcalc-man-table-format.diff:
+  Do not use deprecated GTK+ constructs, this prepares for migration to GTK+ 3.
+  Move some comments from ebuild to patches. Change EAPI to 5.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> otpcalc-0.97-r5.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

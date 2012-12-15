@@ -1,5 +1,7 @@
---- otpCalc.man.orig	2005-04-29 23:17:06.000000000 +0100
-+++ otpCalc.man	2005-04-29 23:19:03.000000000 +0100
+Make missing list appear in man page, bug 90900.
+
+--- otpCalc.man.orig
++++ otpCalc.man
 @@ -24,18 +24,20 @@
  the Challenge input:
  .IP

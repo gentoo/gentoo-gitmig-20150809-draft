@@ -1,5 +1,7 @@
---- otpCalc-0.97-orig/callbacks.c	2008-08-21 00:23:04.000000000 +0200
-+++ otpCalc-0.97/callbacks.c	2008-08-21 00:27:47.000000000 +0200
+Change default s/key hash to MD5 (same as sys-auth/skey).
+
+--- otpCalc-0.97-orig/callbacks.c
++++ otpCalc-0.97/callbacks.c
 @@ -90,7 +90,7 @@
  	unsigned char results[9];
  
@@ -9,8 +11,8 @@
  	hashes[MD4] = md4lite;
  	hashes[MD5] = md5lite;
  	hashes[RMD160] = rmd160lite;
---- otpCalc-0.97-orig/otpCalc.man	2008-08-21 00:23:04.000000000 +0200
-+++ otpCalc-0.97/otpCalc.man	2008-08-21 00:26:49.000000000 +0200
+--- otpCalc-0.97-orig/otpCalc.man
++++ otpCalc-0.97/otpCalc.man
 @@ -30,7 +30,7 @@
  cb l
  cb l
