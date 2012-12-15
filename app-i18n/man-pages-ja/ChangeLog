@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/man-pages-ja
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/ChangeLog,v 1.31 2011/11/24 02:08:07 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/ChangeLog,v 1.32 2012/12/15 14:47:40 ulm Exp $
+
+  15 Dec 2012; Ulrich Müller <ulm@gentoo.org> man-pages-ja-20070515.ebuild,
+  man-pages-ja-20101110.ebuild, man-pages-ja-20101110-r1.ebuild,
+  man-pages-ja-20111020.ebuild:
+  Update LICENSE, see license notices in source files.
 
 *man-pages-ja-20111020 (24 Nov 2011)
 
