@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.32.0-r2.ebuild,v 1.12 2012/05/05 08:58:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.32.0-r2.ebuild,v 1.13 2012/12/15 18:17:35 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -19,7 +19,7 @@ LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
-IUSE="bluetooth debug doc iplayer lirc nautilus nsplugin python tracker upnp +youtube" #zeroconf
+IUSE="bluetooth debug doc iplayer lirc nautilus nsplugin python tracker upnp-av +youtube" #zeroconf
 
 # TODO:
 # Cone (VLC) plugin needs someone with the right setup (remi ?)
@@ -69,7 +69,7 @@ RDEPEND=">=dev-libs/glib-2.25.11:2
 	nsplugin? ( media-plugins/gst-plugins-soup:0.10 )
 	python? ( ${PYTHON_DEPS} )
 	tracker? ( >=app-misc/tracker-0.8.1 )
-	upnp? ( media-video/coherence )
+	upnp-av? ( media-video/coherence )
 	youtube? (
 		<dev-libs/libgdata-0.9
 		>=dev-libs/libgdata-0.4
@@ -121,7 +121,7 @@ pkg_setup() {
 	use lirc && plugins="${plugins},lirc"
 	use python && plugins="${plugins},opensubtitles,jamendo,pythonconsole,dbus-service"
 	use tracker && plugins="${plugins},tracker"
-	use upnp && plugins="${plugins},coherence_upnp"
+	use upnp-av && plugins="${plugins},coherence_upnp"
 	use youtube && plugins="${plugins},youtube"
 	#use vala && plugins="${plugins},sample-vala"
 	#use zeroconf && plugins="${plugins},publish"
