@@ -1,14 +1,14 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.72 2012/12/14 22:35:13 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.73 2012/12/15 12:06:14 alonbl Exp $
 
-  14 Dec 2012;  <alonbl@gentoo.org> +files/nettle-2.5-build-ar.patch,
+  14 Dec 2012;  Alon Bar-Lev <alonbl@gentoo.org> +files/nettle-2.5-build-ar.patch,
   nettle-2.5-r1.ebuild:
   Fix ar detection per bug#438160 by Sean McGovern
 
 *nettle-2.5-r1 (14 Dec 2012)
 
-  14 Dec 2012;  <alonbl@gentoo.org> +files/nettle-2.5-static-libs.patch,
+  14 Dec 2012;  Alon Bar-Lev <alonbl@gentoo.org> +files/nettle-2.5-static-libs.patch,
   +nettle-2.5-r1.ebuild:
   bug#405525 add support for USE static-libs
 
