@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/apwal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/apwal/ChangeLog,v 1.16 2012/05/05 04:53:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/apwal/ChangeLog,v 1.17 2012/12/15 06:48:49 radhermit Exp $
+
+  15 Dec 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> apwal-0.4.5.ebuild,
   apwal-0.4.5-r1.ebuild:

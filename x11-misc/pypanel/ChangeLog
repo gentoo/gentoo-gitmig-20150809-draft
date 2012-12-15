@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pypanel
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.45 2011/07/01 21:25:44 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.46 2012/12/15 06:54:40 radhermit Exp $
+
+  15 Dec 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> -pypanel-2.4.ebuild:
   Remove old ebuilds. Requested by Arfrever
