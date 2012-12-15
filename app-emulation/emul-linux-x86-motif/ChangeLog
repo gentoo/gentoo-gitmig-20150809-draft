@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-motif
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-motif/ChangeLog,v 1.13 2012/12/02 10:55:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-motif/ChangeLog,v 1.14 2012/12/15 12:30:46 pacho Exp $
+
+  15 Dec 2012; Pacho Ramos <pacho@gentoo.org>
+  emul-linux-x86-motif-20121202.ebuild:
+  Add missing LGPL2+ license, bug #447300 by Ulrich Müller
 
 *emul-linux-x86-motif-20121202 (02 Dec 2012)
 
