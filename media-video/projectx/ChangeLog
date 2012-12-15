@@ -1,6 +1,9 @@
 # ChangeLog for media-video/projectx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.69 2012/12/15 09:27:19 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.70 2012/12/15 09:35:40 billie Exp $
+
+  15 Dec 2012; Daniel Pielmeier <billie@gentoo.org> -projectx-0.91.0.02.ebuild:
+  Remove old.
 
   15 Dec 2012; Daniel Pielmeier <billie@gentoo.org> -projectx-0.91.0.03.ebuild:
   Remove old.
