@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/aircrack-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.64 2012/12/15 18:59:51 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.65 2012/12/15 21:46:37 alonbl Exp $
+
+*aircrack-ng-1.1-r2 (15 Dec 2012)
+
+  15 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org> +aircrack-ng-1.1-r2.ebuild,
+  +files/aircrack-ng-1.1-CVE-2010-1159.patch, -aircrack-ng-1.1-r1.ebuild:
+  Fix CVE-2010-1159, per bug#311797 by Tim Sammut
 
   14 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org> -files/aircrack-ng-1.0_rc2-freebsd.patch:
   remove unused files

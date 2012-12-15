@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.1-r1.ebuild,v 1.1 2012/12/14 20:41:12 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.1-r2.ebuild,v 1.1 2012/12/15 21:46:37 alonbl Exp $
 
 EAPI="3"
 
@@ -33,6 +33,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.0_rc4-fix_build.patch"
 	epatch "${FILESDIR}/${P}-parallelmake.patch"
 	epatch "${FILESDIR}/${P}-sse-pic.patch"
+	epatch "${FILESDIR}/${P}-CVE-2010-1159.patch"
 }
 
 src_compile() {
