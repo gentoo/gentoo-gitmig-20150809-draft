@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/rarfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/rarfs/ChangeLog,v 1.3 2012/12/15 08:14:10 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/rarfs/ChangeLog,v 1.4 2012/12/15 08:17:25 pinkbyte Exp $
+
+  15 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> rarfs-0.1.1.ebuild:
+  Avoid installing empty docs, thanks to Tim Harder for discovering this
 
   15 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> rarfs-0.1.1.ebuild:
   Add missing pkgconfig dependency, thanks to Tim Harder
