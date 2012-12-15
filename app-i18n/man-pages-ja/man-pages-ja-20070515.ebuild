@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/man-pages-ja-20070515.ebuild,v 1.5 2012/12/15 14:47:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/man-pages-ja-20070515.ebuild,v 1.6 2012/12/15 21:15:23 ulm Exp $
 
 GENTOO_MAN_P="portage-${PN}-20060415"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.linux.or.jp/JM/ http://www.gentoo.gr.jp/jpmain/translation.
 SRC_URI="http://www.linux.or.jp/JM/${P}.tar.gz
 	http://dev.gentoo.org/~hattya/distfiles/${GENTOO_MAN_P}.tar.gz"
 
-LICENSE="GPL-2+ GPL-2 LGPL-2+ LGPL-2 BSD MIT ISC HPND FDL-1.1+ LDP-1 LDP-1a Texinfo-manual"
+LICENSE="GPL-2+ GPL-2 LGPL-2+ LGPL-2 BSD MIT ISC HPND FDL-1.1+ LDP-1 LDP-1a man-pages Texinfo-manual"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
