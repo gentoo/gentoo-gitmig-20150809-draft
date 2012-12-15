@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-3.0.3.ebuild,v 1.3 2012/09/27 10:44:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-3.0.3.ebuild,v 1.4 2012/12/15 18:52:58 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="cdr doc gajim +mail pidgin upnp"
+IUSE="cdr doc gajim +mail pidgin upnp-av"
 
 COMMON_DEPEND=">=x11-libs/gtk+-2.90.3:3[X(+)]
 	>=dev-libs/glib-2.25.9:2
@@ -26,7 +26,7 @@ COMMON_DEPEND=">=x11-libs/gtk+-2.90.3:3[X(+)]
 	pidgin? (
 		>=net-im/pidgin-2.0.0
 		>=dev-libs/dbus-glib-0.60 )
-	upnp? ( >=net-libs/gupnp-0.13.0 )"
+	upnp-av? ( >=net-libs/gupnp-0.13.0 )"
 RDEPEND="${COMMON_DEPEND}
 	>=gnome-base/nautilus-2.91.1[sendto]"
 DEPEND="${COMMON_DEPEND}
@@ -53,7 +53,7 @@ pkg_setup() {
 	_use_plugin mail evolution
 	_use_plugin pidgin
 	_use_plugin gajim
-	_use_plugin upnp
+	_use_plugin upnp-av upnp
 }
 
 src_prepare() {

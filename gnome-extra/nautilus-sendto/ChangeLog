@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/nautilus-sendto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/ChangeLog,v 1.61 2012/09/27 10:44:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/ChangeLog,v 1.62 2012/12/15 18:52:58 tetromino Exp $
+
+  15 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  nautilus-sendto-2.32.0.ebuild, nautilus-sendto-3.0.2.ebuild,
+  nautilus-sendto-3.0.3.ebuild, metadata.xml:
+  Rename upnp USE flag to upnp-av (bug #435770, thanks to Michał Górny).
 
   27 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   nautilus-sendto-3.0.3.ebuild:
