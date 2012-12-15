@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.168 2012/12/12 19:35:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.169 2012/12/15 11:02:14 mgorny Exp $
+
+  15 Dec 2012; Michał Górny <mgorny@gentoo.org> setuptools-0.6.30-r2.ebuild,
+  setuptools-0.6.32.ebuild:
+  Remove jython2.5 support, bug #447148.
 
   12 Dec 2012; Agostino Sarubbo <ago@gentoo.org> setuptools-0.6.30-r1.ebuild:
   Stable for amd64, wrt bug #446496
