@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.6g.ebuild,v 1.1 2012/12/14 23:25:00 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.6g.ebuild,v 1.2 2012/12/15 19:24:25 alonbl Exp $
 
 EAPI="3"
 
@@ -30,6 +30,7 @@ pkg_setup() {
 	BUILD_TARGETS="all"
 
 	BUILD_PARAMS=" \
+		V=1 \
 		LINUX_SOURCE=\"${KERNEL_DIR}\" \
 		KBUILD_OUTPUT=\"${KBUILD_OUTPUT}\" \
 		USE_KBUILD=y MODINST=n RUNDM=n"
