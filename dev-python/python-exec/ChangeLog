@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-exec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/ChangeLog,v 1.16 2012/12/04 11:39:27 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/ChangeLog,v 1.17 2012/12/15 12:48:22 mgorny Exp $
+
+*python-exec-9999 (15 Dec 2012)
+
+  15 Dec 2012; Michał Górny <mgorny@gentoo.org> +python-exec-9999.ebuild:
+  Import the live ebuild.
 
   04 Dec 2012; Anthony G. Basile <blueness@gentoo.org> python-exec-0.1.1.ebuild:
   stable ppc64, bug #445178
