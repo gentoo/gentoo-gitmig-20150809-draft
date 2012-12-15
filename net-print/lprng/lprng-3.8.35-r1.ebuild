@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.35-r1.ebuild,v 1.7 2012/10/07 14:13:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.35-r1.ebuild,v 1.8 2012/12/15 11:32:06 mgorny Exp $
 
 EAPI=4
 
@@ -52,7 +52,8 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1
+	# bash is necessary due to bashisms in libtool
+	emake -j1 SHELL=/bin/bash
 }
 
 src_install() {

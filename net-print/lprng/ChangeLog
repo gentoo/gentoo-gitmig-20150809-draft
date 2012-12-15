@@ -1,6 +1,10 @@
 # ChangeLog for net-print/lprng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.67 2012/10/07 14:13:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.68 2012/12/15 11:32:08 mgorny Exp $
+
+  15 Dec 2012; Michał Górny <mgorny@gentoo.org> lprng-3.8.35-r1.ebuild,
+  metadata.xml:
+  Fix build issues with non-bash /bin/sh. Take over the maintainership.
 
   07 Oct 2012; Raúl Porcel <armin76@gentoo.org> lprng-3.8.35-r1.ebuild:
   alpha/ia64/sh/sparc/x86 stable wrt #432488
