@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.9999.ebuild,v 1.2 2012/11/24 17:56:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.9999.ebuild,v 1.3 2012/12/15 16:50:08 ulm Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools elisp-common eutils flag-o-matic multilib
 
@@ -32,7 +32,7 @@ LICENSE="GPL-3+ FDL-1.3+ BSD HPND MIT W3C unicode PSF-2"
 SLOT="24"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="alsa aqua athena dbus games gconf gif gnutls gpm gsettings gtk +gtk3 gzip-el hesiod imagemagick jpeg kerberos libxml2 m17n-lib motif pax_kernel png selinux sound source svg tiff toolkit-scroll-bars wide-int X Xaw3d xft +xpm"
-REQUIRED_USE="aqua? ( !X )"
+REQUIRED_USE="?? ( aqua X )"
 
 RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.2
@@ -332,7 +332,7 @@ pkg_postinst() {
 	elog "Therefore, several Emacs versions can be installed at the same time."
 	elog "\"man emacs.eselect\" for details."
 	elog
-	elog "If you upgrade from a previous major version of Emacs, then it is"
+	elog "If you upgrade from Emacs version 24.2 or earlier, then it is"
 	elog "strongly recommended that you use app-admin/emacs-updater to rebuild"
 	elog "all byte-compiled elisp files of the installed Emacs packages."
 }
