@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.180 2012/12/08 12:42:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.181 2012/12/15 18:17:07 tetromino Exp $
+
+  15 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Mask totem[upnp-av] after upnp -> upnp-av rename since media-video/coherence
+  not keyworded (bug #435776).
 
   08 Dec 2012; Markus Meier <maekke@gentoo.org> use.mask:
   unmask synaptics input driver
