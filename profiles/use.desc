@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.497 2012/12/14 15:26:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.498 2012/12/15 17:00:34 mgorny Exp $
 
 # Keep them sorted
 
@@ -332,6 +332,7 @@ sybase - Adds support for the Sybase SQL Database Server
 sybase-ct - Adds support for Sybase-CT
 symlink - Force kernel ebuilds to automatically update the /usr/src/linux symlink
 syslog - Enables support for syslog
+systemd - Enable use of systemd-specific libraries and features like socket activation or session tracking
 sysvipc - Support for System V-compatible inter-process communication
 szip - Use the szip compression library
 taglib - Enable tagging support with taglib
