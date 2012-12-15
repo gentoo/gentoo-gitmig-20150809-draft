@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7257 2012/12/15 00:32:05 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7258 2012/12/15 12:40:27 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Dec 2012; Pacho Ramos <pacho@gentoo.org> package.mask:
+  bestcrypt was bumped fixing build problems
 
   15 Dec 2012; Michael Pagano <mpagano@gentoo.org> package.mask:
   Fix typo

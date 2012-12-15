@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14301 2012/12/15 00:32:05 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14302 2012/12/15 12:40:27 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -149,10 +149,6 @@ net-wireless/linux-wlan-ng
 # Runtime problems (#272751), no update since 2005 (bluez-3 times),
 # removal in a month.
 net-wireless/opd
-
-# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
-# Fails to build for a long time (#277164), removal in a month.
-app-crypt/bestcrypt
 
 # Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
 # Overflow issues (#277459), upstream lost interest on it.
