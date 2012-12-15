@@ -1,8 +1,8 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.72 2012/12/14 22:26:47 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.73 2012/12/15 18:55:25 alonbl Exp $
 
-  14 Dec 2012;  <alonbl@gentoo.org> truecrypt-7.1a.ebuild:
+  14 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org> truecrypt-7.1a.ebuild:
   Solve gentoo mirror breakage due to restrict fetch, bug#434458
 
   02 Aug 2012; Tim Harder <radhermit@gentoo.org> truecrypt-7.1a.ebuild:
