@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.424 2012/12/15 17:44:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.425 2012/12/15 17:56:55 jer Exp $
+
+  15 Dec 2012; Jeroen Roovers <jer@gentoo.org> -wireshark-1.6.10-r2.ebuild,
+  -files/wireshark-1.6.10-CVE-2012-3548.patch, -wireshark-1.6.11.ebuild,
+  -files/wireshark-1.8.2-CVE-2012-3548.patch,
+  -files/wireshark-1.8.2-python3.patch, -wireshark-1.8.3.ebuild,
+  -wireshark-1.8.3-r2.ebuild, -files/wireshark-1.8.3-dtls-sctp.patch:
+  Old.
 
   15 Dec 2012; Raúl Porcel <armin76@gentoo.org> wireshark-1.6.12.ebuild,
   wireshark-1.8.4.ebuild:
