@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.23 2012/12/03 02:33:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.24 2012/12/15 18:43:51 tetromino Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 sparc x86"
-IUSE="cdr daap doc gnome-keyring ipod libnotify lirc musicbrainz mtp nsplugin python test udev upnp webkit"
+IUSE="cdr daap doc gnome-keyring ipod libnotify lirc musicbrainz mtp nsplugin python test udev upnp-av webkit"
 
 # FIXME: double check what to do with fm-radio plugin
 # TODO: watchout for udev use flag changes
@@ -59,7 +59,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.18:2
 		webkit? (
 			dev-python/mako
 			dev-python/pywebkitgtk )
-		upnp? ( media-video/coherence )
+		upnp-av? ( media-video/coherence )
 	)"
 
 RDEPEND="${COMMON_DEPEND}
@@ -114,8 +114,8 @@ pkg_setup() {
 			ewarn "the context panel plugin."
 		fi
 
-		if use upnp; then
-			ewarn "You need python support in addition to upnp"
+		if use upnp-av; then
+			ewarn "You need python support in addition to upnp-av"
 		fi
 	fi
 
@@ -150,8 +150,7 @@ src_prepare() {
 
 	gnome2_src_prepare
 
-	# disable pyc compiling
-	echo > py-compile
+	python_clean_py-compile_files
 
 	# Fix python initialization problems, bug #318333
 	epatch "${FILESDIR}/${PN}-0.12-python-initialization.patch"

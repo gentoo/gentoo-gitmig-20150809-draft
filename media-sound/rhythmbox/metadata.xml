@@ -15,9 +15,6 @@
 		displaying HTML podcast episode descriptions.</flag>
 	<flag name="udev">Enable hardware detection via <pkg>sys-fs/udev</pkg>
 		replacing the deprecated <pkg>sys-apps/hal</pkg> code</flag>
-    <flag name="upnp">Build a plugin for local network music sharing which uses
-		UPnP protocols using <pkg>media-video/coherence</pkg>,
-		<pkg>dev-python/louie</pkg>, and <pkg>dev-python/twisted</pkg></flag>
 	<flag name="webkit">Enable context panel plugin</flag>
 	<flag name="zeitgeist">Build the plugin to inject events to <pkg>gnome-extra/zeitgeist</pkg></flag>
   </use>

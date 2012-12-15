@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.13.3.ebuild,v 1.11 2012/12/03 02:33:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.13.3.ebuild,v 1.12 2012/12/15 18:43:51 tetromino Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cdr daap doc gnome-keyring ipod +lastfm libnotify lirc musicbrainz mtp nsplugin python test udev upnp webkit"
+IUSE="cdr daap doc gnome-keyring ipod +lastfm libnotify lirc musicbrainz mtp nsplugin python test udev upnp-av webkit"
 
 # FIXME: double check what to do with fm-radio plugin
 # TODO: watchout for udev use flag changes
@@ -63,7 +63,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.26:2
 		webkit? (
 			dev-python/mako
 			dev-python/pywebkitgtk )
-		upnp? ( media-video/coherence )
+		upnp-av? ( media-video/coherence )
 	)
 	webkit? ( >=net-libs/webkit-gtk-1.1.7:2 )
 "
@@ -120,8 +120,8 @@ pkg_setup() {
 	fi
 
 	if ! use python; then
-		if use upnp; then
-			ewarn "You need python support in addition to upnp"
+		if use upnp-av; then
+			ewarn "You need python support in addition to upnp-av"
 		fi
 	fi
 

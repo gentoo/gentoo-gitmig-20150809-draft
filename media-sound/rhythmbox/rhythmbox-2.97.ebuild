@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.97.ebuild,v 1.4 2012/12/03 02:33:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.97.ebuild,v 1.5 2012/12/15 18:43:51 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="cdr clutter daap dbus doc gnome-keyring html ipod libnotify lirc
-musicbrainz mtp nsplugin +python test +udev upnp webkit zeitgeist"
+musicbrainz mtp nsplugin +python test +udev upnp-av webkit zeitgeist"
 # vala
 KEYWORDS="~amd64 ~x86"
 
@@ -76,9 +76,9 @@ RDEPEND="${COMMON_DEPEND}
 	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
 	>=media-plugins/gst-plugins-taglib-0.10.6:0.10
 	x11-themes/gnome-icon-theme-symbolic
-	upnp? (
+	upnp-av? (
 		>=media-libs/grilo-0.1.17:0.1
-		>=media-plugins/grilo-plugins-0.1.17:0.1[upnp] )
+		>=media-plugins/grilo-plugins-0.1.17:0.1[upnp-av] )
 	python? (
 		>=dev-python/gst-python-0.10.8:0.10
 
@@ -131,7 +131,7 @@ pkg_setup() {
 		$(use_enable musicbrainz)
 		$(use_enable nsplugin browser-plugin)
 		$(use_enable python)
-		$(use_enable upnp grilo)
+		$(use_enable upnp-av grilo)
 		$(use_with cdr brasero)
 		$(use_with daap mdns avahi)
 		$(use_with gnome-keyring)
