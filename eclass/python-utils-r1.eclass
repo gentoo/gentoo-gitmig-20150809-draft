@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.6 2012/12/01 22:10:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.7 2012/12/15 21:30:03 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -270,20 +270,22 @@ _python_ln_rel() {
 	local topath=${to%/*}/
 	local rel_path=
 
-	# remove double slashes
-	frpath=${frpath/\/\///}
-	topath=${topath/\/\///}
-
 	while [[ ${topath} ]]; do
-		local frseg=${frpath%%/*}
-		local toseg=${topath%%/*}
+		local frseg= toseg=
+
+		while [[ ! ${frseg} && ${frpath} ]]; do
+			frseg=${frpath%%/*}
+			frpath=${frpath#${frseg}/}
+		done
+
+		while [[ ! ${toseg} && ${topath} ]]; do
+			toseg=${topath%%/*}
+			topath=${topath#${toseg}/}
+		done
 
 		if [[ ${frseg} != ${toseg} ]]; then
 			rel_path=../${rel_path}${frseg:+${frseg}/}
 		fi
-
-		frpath=${frpath#${frseg}/}
-		topath=${topath#${toseg}/}
 	done
 	rel_path+=${frpath}${1##*/}
 
