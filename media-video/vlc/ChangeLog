@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.829 2012/12/11 05:46:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.830 2012/12/15 15:34:57 lu_zero Exp $
+
+*vlc-2.0.5 (15 Dec 2012)
+
+  15 Dec 2012; Luca Barbato <lu_zero@gentoo.org> +vlc-2.0.5.ebuild:
+  New version
 
   11 Dec 2012; Patrick Lauer <patrick@gentoo.org> vlc-2.0.1.ebuild,
   vlc-2.0.2.ebuild, vlc-2.0.3.ebuild, vlc-2.0.4.ebuild, vlc-2.0.9999.ebuild,
