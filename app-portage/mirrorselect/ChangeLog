@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.114 2012/11/15 04:49:30 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.115 2012/12/15 23:23:46 dolsen Exp $
+
+*mirrorselect-2.2.0 (15 Dec 2012)
+
+  15 Dec 2012; Brian Dolbec <dolsen@gentoo.org> -mirrorselect-2.1.0-r1.ebuild,
+  -mirrorselect-2.1.0-r2.ebuild, +mirrorselect-2.2.0.ebuild:
+  new release for the make.conf move and is now prefix and python-3 compatible,
+  remove old versions.
 
   15 Nov 2012; Brian Dolbec <dolsen@gentoo.org> mirrorselect-9999.ebuild:
   Restrict python 3.1 due to compatability issues.
@@ -505,7 +512,7 @@
   Adding support for block-selects. Fixes #25243
 
 *mirrorselect-0.6 (09 Jul 2003)
- 
+
   11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Added missing changelog entry.
 
@@ -537,7 +544,7 @@
   Removed static lists, in favour of all dynamic ones
 
   9 May 2003; John Mylchreest <johnm@gentoo.org> mirrorselect-0.3.ebuild files/mirrorselect :
-  Re-write. removed perl requirements, and sped up usage.  
+  Re-write. removed perl requirements, and sped up usage.
 
 *mirrorselect-0.2-r1 (27 Feb 2003)
 
@@ -549,7 +556,7 @@
   27 Feb 2003; Mark Guertin <gerk@gentoo.org> mirrorselect-0.2.ebuild :
   fixed missing deps (netselect and perl)
 
-  27 Feb 2003; Mark Guertin <gerk@gentoo.org> mirrorselect-0.2.ebuild 
+  27 Feb 2003; Mark Guertin <gerk@gentoo.org> mirrorselect-0.2.ebuild
   files/digest-mirrorselect-0.2 files/mirrorselect :
   new version, now has auto mode, just for spanky :), run with -a for
   automode or with no options to show usage
@@ -563,7 +570,7 @@
   Changed ~sparc keyword to sparc.
 
   10 Feb 2003; Mark Guertin <gerk@gentoo.org> mirrorselect-0.1-r2.ebuild:
-  Rev bump.  Added a santify check for small screens.  Older version would 
+  Rev bump.  Added a santify check for small screens.  Older version would
   cause garbage to be added to make.conf.  Thanks SpanKY.
 
   02 Feb 2003; Mark Guertin <gerk@gentoo.org> mirrorselect-0.1-r1.ebuild:
@@ -572,8 +579,8 @@
 *mirrorselect-0.1-r1 (30 Jan 2003)
   30 Jan 2003; Jon Nall <nall@gentoo.org> mirrorselect-0.1-r1.ebuild,
   files/mirrorselect :
-  made the GENTOO_MIRROR variable replacement a bit more robust; 
-  added support for parsing what's already in /etc/make.conf's 
+  made the GENTOO_MIRROR variable replacement a bit more robust;
+  added support for parsing what's already in /etc/make.conf's
   GENTOO_MIRROR variable and automatically checking those
 
 *mirrorselect-0.1 (30 Jan 2003)
