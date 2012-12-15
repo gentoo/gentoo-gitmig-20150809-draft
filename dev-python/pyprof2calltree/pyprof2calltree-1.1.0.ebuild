@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprof2calltree/pyprof2calltree-1.1.0.ebuild,v 1.1 2011/01/02 09:02:54 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprof2calltree/pyprof2calltree-1.1.0.ebuild,v 1.2 2012/12/15 08:02:55 ulm Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -14,6 +14,6 @@ HOMEPAGE="http://pypi.python.org/pypi/pyprof2calltree/"
 SRC_URI="mirror://pypi/p/${PN}/${PF}.tar.gz"
 IUSE=
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
