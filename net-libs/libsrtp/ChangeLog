@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsrtp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/ChangeLog,v 1.19 2012/11/10 01:21:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/ChangeLog,v 1.20 2012/12/15 22:13:35 phajdan.jr Exp $
+
+  15 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libsrtp-1.4.4_p20121108.ebuild:
+  Keyword ~arm.
 
 *libsrtp-1.4.4_p20121108 (10 Nov 2012)
 
