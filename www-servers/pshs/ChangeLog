@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/pshs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pshs/ChangeLog,v 1.4 2012/12/14 15:31:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pshs/ChangeLog,v 1.5 2012/12/15 12:44:58 mgorny Exp $
+
+*pshs-9999 (15 Dec 2012)
+
+  15 Dec 2012; Michał Górny <mgorny@gentoo.org> +pshs-9999.ebuild:
+  Import the live ebuild.
 
   14 Dec 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Remove redundant USE=upnp description; it matches the global flag meaning.
