@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r4.ebuild,v 1.7 2011/10/15 23:12:17 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r4.ebuild,v 1.8 2012/12/15 16:54:19 ulm Exp $
 
 EAPI="1"
 inherit eutils multilib toolchain-funcs
@@ -9,7 +9,7 @@ DESCRIPTION="A tiny pseudoshell which only permits scp and sftp"
 HOMEPAGE="http://www.sublimation.org/scponly/"
 SRC_URI="mirror://sourceforge/scponly/${P}.tgz"
 
-LICENSE="as-is"
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="+sftp scp winscp gftp rsync unison subversion wildcards quota passwd logging"
@@ -163,7 +163,7 @@ pkg_config() {
 
 	# subversion cli/svnserv compatibility
 	if built_with_use =${CATEGORY}/${PF} subversion; then
-	    BINARIES="${BINARIES} /usr/bin/svn /usr/bin/svnserve"
+		BINARIES="${BINARIES} /usr/bin/svn /usr/bin/svnserve"
 	fi
 
 	# passwd compatibility

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/scponly
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.52 2011/10/15 23:12:18 mattst88 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.53 2012/12/15 16:54:19 ulm Exp $
+
+  15 Dec 2012; Ulrich Müller <ulm@gentoo.org> scponly-4.8-r4.ebuild:
+  Fix LICENSE, see COPYING file, bug 446544.
 
   15 Oct 2011; Matt Turner <mattst88@gentoo.org> scponly-4.8-r4.ebuild:
   Drop ~mips, bug 371667.
