@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.33 2012/12/10 21:10:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.34 2012/12/15 12:34:02 mgorny Exp $
+
+*gentoopm-9999 (15 Dec 2012)
+
+  15 Dec 2012; Michał Górny <mgorny@gentoo.org> +gentoopm-9999.ebuild:
+  Import the live ebuild.
 
 *gentoopm-0.2.7 (10 Dec 2012)
 
