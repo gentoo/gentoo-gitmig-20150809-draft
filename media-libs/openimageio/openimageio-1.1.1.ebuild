@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.1.1.ebuild,v 1.4 2012/11/26 11:21:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.1.1.ebuild,v 1.5 2012/12/15 19:10:57 ssuominen Exp $
 
 EAPI=5
 
 PYTHON_DEPEND="python? 2:2.7"
 
-inherit cmake-utils multilib python vcs-snapshot
+inherit cmake-utils eutils multilib python vcs-snapshot
 
 DESCRIPTION="A library for reading and writing images"
 HOMEPAGE="http://sites.google.com/site/openimageio/ http://github.com/OpenImageIO"
@@ -56,6 +56,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-x86-build.patch #444784
+
 	# remove bundled code to make it build
 	# https://github.com/OpenImageIO/oiio/issues/403
 	rm */pugixml* || die
