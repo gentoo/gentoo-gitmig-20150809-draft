@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.6.ebuild,v 1.3 2012/12/10 00:46:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.6.ebuild,v 1.4 2012/12/15 18:13:37 jer Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ DESCRIPTION="Portable Rexx interpreter"
 HOMEPAGE="http://regina-rexx.sourceforge.net"
 SRC_URI="mirror://sourceforge/regina-rexx/Regina-REXX-${PV}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1 MPL-1.0"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
