@@ -1,10 +1,10 @@
 # ChangeLog for dev-libs/botan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.72 2012/12/15 01:03:30 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.73 2012/12/15 18:56:47 alonbl Exp $
 
 *botan-1.10.3 (15 Dec 2012)
 
-  15 Dec 2012;  <alonbl@gentoo.org> +botan-1.10.3.ebuild:
+  15 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org> +botan-1.10.3.ebuild:
   Version bump per bug#434050
 
 *botan-1.10.1 (20 Aug 2011)
