@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/klavaro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/ChangeLog,v 1.15 2012/08/08 11:02:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/ChangeLog,v 1.16 2012/12/15 16:10:12 pacho Exp $
+
+*klavaro-1.9.6 (15 Dec 2012)
+
+  15 Dec 2012; Pacho Ramos <pacho@gentoo.org> +klavaro-1.9.6.ebuild,
+  -klavaro-1.9.3.ebuild, -klavaro-1.9.5.ebuild:
+  Version bump, drop old
 
 *klavaro-1.9.5 (08 Aug 2012)
 
@@ -80,4 +86,3 @@
   26 Jun 2009; Romain Perier <mrpouet@gentoo.org>
   +klavaro-1.2.1.ebuild, +metadata.xml:
   New ebuild, import from scarabeus's overlay
-
