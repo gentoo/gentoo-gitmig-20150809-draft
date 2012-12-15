@@ -1,6 +1,11 @@
 # ChangeLog for net-im/ekg2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ChangeLog,v 1.48 2012/11/30 23:10:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ChangeLog,v 1.49 2012/12/15 12:45:25 mgorny Exp $
+
+*ekg2-9999 (15 Dec 2012)
+
+  15 Dec 2012; Michał Górny <mgorny@gentoo.org> +ekg2-9999.ebuild, metadata.xml:
+  Import the live ebuild.
 
   30 Nov 2012; Michał Górny <mgorny@gentoo.org> ekg2-0.3.1-r1.ebuild:
   EAPI bump, use the new prune_libtool_files function and python-single-r1.
