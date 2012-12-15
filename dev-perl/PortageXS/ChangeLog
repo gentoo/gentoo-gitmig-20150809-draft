@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/PortageXS
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/ChangeLog,v 1.44 2011/12/14 23:01:53 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/ChangeLog,v 1.45 2012/12/15 20:16:36 armin76 Exp $
+
+*PortageXS-0.02.10-r2 (15 Dec 2012)
+
+  15 Dec 2012; Raúl Porcel <armin76@gentoo.org> +PortageXS-0.02.10-r2.ebuild,
+  +files/PortageXS-0.02.10-portage_path_fix.patch,
+  +files/PortageXS-0.02.10-prefix.patch:
+  Add patch to fix bug #437414
 
   14 Dec 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due move to staffer, bug #99016
