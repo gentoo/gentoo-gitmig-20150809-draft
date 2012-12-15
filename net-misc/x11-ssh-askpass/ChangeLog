@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/x11-ssh-askpass
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/ChangeLog,v 1.28 2009/09/23 19:49:17 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/ChangeLog,v 1.29 2012/12/15 15:45:04 ulm Exp $
+
+  15 Dec 2012; Ulrich Müller <ulm@gentoo.org>
+  x11-ssh-askpass-1.2.4.1-r1.ebuild:
+  Update LICENSE, HPND according to README file, bug 445876.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   x11-ssh-askpass-1.2.4.1-r1.ebuild:
