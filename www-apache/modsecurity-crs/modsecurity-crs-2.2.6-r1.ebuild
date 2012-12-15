@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/modsecurity-crs-2.2.6-r1.ebuild,v 1.4 2012/11/24 22:45:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/modsecurity-crs-2.2.6-r1.ebuild,v 1.5 2012/12/15 17:56:31 armin76 Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/${GITHUB_USER}/${GITHUB_PROJECT}/tarball/v${PV} -> $
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="lua geoip"
 
 RDEPEND=">=www-apache/mod_security-2.7[lua?,geoip?]"
