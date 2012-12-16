@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/hibernate-script
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.91 2012/11/18 11:42:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.92 2012/12/16 14:20:36 pacho Exp $
+
+  16 Dec 2012; Pacho Ramos <pacho@gentoo.org> -hibernate-script-2.0-r2.ebuild,
+  -hibernate-script-2.0-r3.ebuild, metadata.xml:
+  Cleanup due retirement, #95685
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop mobile herd as talked in gentoo-dev ML
