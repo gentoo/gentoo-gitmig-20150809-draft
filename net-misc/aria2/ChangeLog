@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aria2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.85 2012/12/03 13:43:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.86 2012/12/16 16:28:46 ago Exp $
+
+  16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> aria2-1.15.2.ebuild:
+  Stable for x86, wrt bug #445762
 
   03 Dec 2012; <ago@gentoo.org> aria2-1.15.2.ebuild:
   Stable for amd64, wrt bug #445762
