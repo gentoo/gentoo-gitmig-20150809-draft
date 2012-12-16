@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>java</herd>
-  <maintainer>
-    <email>nelchael@gentoo.org</email>
-  </maintainer>
   <use>
 	  <flag name='admin'>Enable Resin admin webapp</flag>
   </use>
