@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/xhtml2pdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xhtml2pdf/ChangeLog,v 1.6 2012/06/28 07:57:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xhtml2pdf/ChangeLog,v 1.7 2012/12/16 14:15:25 pacho Exp $
+
+  16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due retirement, #95685
 
 *xhtml2pdf-0.0.4 (28 Jun 2012)
 
