@@ -1,6 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru-demo/lugaru-demo-1.0c.ebuild,v 1.1 2010/05/21 01:51:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru-demo/lugaru-demo-1.0c.ebuild,v 1.2 2012/12/16 10:30:11 tupone Exp $
+EAPI=4
 
 inherit eutils games
 
@@ -22,6 +23,8 @@ RDEPEND="sys-libs/glibc
 		x11-libs/libXext
 	)"
 
+QA_PREBUILT="${GAMES_PREFIX_OPT:1}"/${PN}/lugaru
+
 S=${WORKDIR}/data
 
 src_unpack() {
@@ -37,12 +40,12 @@ src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN}
 
 	insinto "${dir}"
-	doins -r Data || die "doins failed"
+	doins -r Data
 
 	dodoc *.txt
 
 	exeinto "${dir}"
-	doexe lugaru || die "doexe failed"
+	doexe lugaru
 	games_make_wrapper ${PN} ./lugaru "${dir}" "${dir}"
 
 	newicon lugaru.png ${PN}.png
