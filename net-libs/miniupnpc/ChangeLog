@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/miniupnpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.29 2012/11/26 23:26:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.30 2012/12/16 18:16:50 armin76 Exp $
+
+  16 Dec 2012; Raúl Porcel <armin76@gentoo.org> miniupnpc-1.6-r1.ebuild,
+  miniupnpc-1.6.20120509.ebuild, miniupnpc-1.7.ebuild:
+  sparc stable
 
   26 Nov 2012; Anthony G. Basile <blueness@gentoo.org> miniupnpc-1.7.ebuild:
   keyword ~mips
