@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20120813-r1.ebuild,v 1.6 2012/12/04 13:11:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20120813-r1.ebuild,v 1.7 2012/12/16 16:27:51 ago Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug doc fuse pax_kernel hfs inotify kernel-patch nfs ramfs"
 
 DEPEND="dev-vcs/git"
