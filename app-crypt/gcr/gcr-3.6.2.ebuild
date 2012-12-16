@@ -1,27 +1,35 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.6.2.ebuild,v 1.2 2012/12/16 09:47:06 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.6.2.ebuild,v 1.3 2012/12/16 14:23:23 eva Exp $
 
-EAPI="5"
+EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
 inherit gnome2 virtualx
+if [[ ${PV} = 9999 ]]; then
+	inherit gnome2-live
+fi
 
 DESCRIPTION="Libraries for cryptographic UIs and accessing PKCS#11 modules"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2+ LGPL-2+"
-SLOT="0/1" # subslot = suffix of libgcr-3
+SLOT="0"
 IUSE="debug +introspection"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
+if [[ ${PV} = 9999 ]]; then
+	IUSE="${IUSE} doc"
+	KEYWORDS=""
+else
+	KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
+fi
 
 COMMON_DEPEND="
 	>=app-crypt/gnupg-2
 	>=app-crypt/p11-kit-0.6
 	>=dev-libs/glib-2.32:2
-	>=dev-libs/libgcrypt-1.2.2:=
-	>=dev-libs/libtasn1-1:=
+	>=dev-libs/libgcrypt-1.2.2
+	>=dev-libs/libtasn1-1
 	>=sys-apps/dbus-1.0
 	>=x11-libs/gtk+-3.0:3
 	introspection? ( >=dev-libs/gobject-introspection-1.29 )
@@ -31,7 +39,6 @@ RDEPEND="${COMMON_DEPEND}
 "
 # gcr was part of gnome-keyring until 3.3
 DEPEND="${COMMON_DEPEND}
-	dev-libs/gobject-introspection-common
 	dev-util/gdbus-codegen
 	>=dev-util/gtk-doc-am-1.9
 	>=dev-util/intltool-0.35
@@ -50,9 +57,13 @@ src_prepare() {
 	DOCS="AUTHORS ChangeLog HACKING NEWS README"
 	G2CONF="${G2CONF}
 		$(use_enable introspection)
-		$(usex debug --enable-debug=yes --enable-debug=default)
+		--enable-debug=default
 		--disable-update-icon-cache
 		--disable-update-mime"
+
+	if use debug; then
+		G2CONF="${G2CONF} --enable-debug=yes"
+	fi
 
 	# Disable stupid flag changes
 	sed -e 's/CFLAGS="$CFLAGS -g"//' \
