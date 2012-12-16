@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl5000-ucode/iwl5000-ucode-8.83.5.1-r1.ebuild,v 1.1 2012/12/15 20:47:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl5000-ucode/iwl5000-ucode-8.83.5.1-r1.ebuild,v 1.2 2012/12/16 13:14:51 ago Exp $
 
 EAPI=5
 inherit linux-info
@@ -14,7 +14,7 @@ SRC_URI="http://intellinuxwireless.org/iwlwifi/downloads/${MY_PN}-${MY_PV}.tar.g
 
 LICENSE="ipw3945"
 SLOT="2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_PN}-${MY_PV}"
