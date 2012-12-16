@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cpuinfo-collection
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cpuinfo-collection/ChangeLog,v 1.5 2010/10/19 05:21:09 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cpuinfo-collection/ChangeLog,v 1.6 2012/12/16 22:32:08 ulm Exp $
+
+  16 Dec 2012; Ulrich Müller <ulm@gentoo.org>
+  cpuinfo-collection-20060720.ebuild, cpuinfo-collection-20070104.ebuild:
+  Fix LICENSE, bug 447394.
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org>
   cpuinfo-collection-20060720.ebuild, cpuinfo-collection-20070104.ebuild:
