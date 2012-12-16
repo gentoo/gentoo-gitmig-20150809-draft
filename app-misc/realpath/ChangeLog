@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/realpath
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.30 2012/12/10 08:56:34 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.31 2012/12/16 13:46:48 ago Exp $
+
+  16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> realpath-1.17.ebuild:
+  Stable for x86, wrt bug #441092
 
   10 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> realpath-1.17.ebuild:
   Stable on amd64, wrt bug #441092
@@ -294,4 +297,3 @@
 
   09 Jun 2003; Matthew Kennedy <mkennedy@gentoo.org> :
   Initial import.  Dependency of dev-lisp/common-lisp-controller.
-
