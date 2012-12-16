@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-3.3.ebuild,v 1.7 2012/12/09 00:18:24 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-3.3.ebuild,v 1.8 2012/12/16 21:10:08 zerochaos Exp $
 
 EAPI="2"
 
@@ -21,6 +21,10 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	tc-export CC LD
+}
+
+src_compile() {
+	emake V=1
 }
 
 src_install() {
