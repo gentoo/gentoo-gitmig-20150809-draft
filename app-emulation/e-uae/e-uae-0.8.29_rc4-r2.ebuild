@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.29_rc4-r2.ebuild,v 1.1 2012/12/11 18:07:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.29_rc4-r2.ebuild,v 1.2 2012/12/16 04:24:25 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -55,7 +55,7 @@ src_prepare() {
 
 src_configure() {
 	strip-flags
-	
+
 	local myconf
 
 	# Sound setup.

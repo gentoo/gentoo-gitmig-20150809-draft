@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-5.0.1.894247.ebuild,v 1.1 2012/12/09 14:29:56 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-5.0.1.894247.ebuild,v 1.2 2012/12/16 04:24:49 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -127,7 +127,7 @@ src_install() {
 	insinto "${VM_INSTALL_DIR}"/lib/vmware
 	doins -r lib/*
 
-	# Bug 432918 
+	# Bug 432918
 	dosym "${VM_INSTALL_DIR}"/lib/vmware/lib/libcrypto.so.0.9.8/libcrypto.so.0.9.8 \
 		"${VM_INSTALL_DIR}"/lib/vmware/lib/libvmwarebase.so.0/libcrypto.so.0.9.8
 	dosym "${VM_INSTALL_DIR}"/lib/vmware/lib/libssl.so.0.9.8/libssl.so.0.9.8 \
