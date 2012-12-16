@@ -1,6 +1,14 @@
 # ChangeLog for app-text/pandoc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.12 2012/12/06 22:53:18 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.13 2012/12/16 14:07:14 slyfox Exp $
+
+  16 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/pandoc-1.9.4.5-disable-writes-other-man.patch,
+  -files/pandoc-1.9.1.2-haddock-2.10.0.patch, -files/pandoc-1.9.3-ghc-7.5.patch,
+  -files/pandoc-1.9.4.1-file-enc.patch, -files/pandoc-1.9.4.1-ghc-7.5.patch,
+  -pandoc-1.8.1.1-r1.ebuild, -pandoc-1.9.1.2.ebuild, -pandoc-1.9.2.ebuild,
+  -pandoc-1.9.3.ebuild, -pandoc-1.9.4.1-r2.ebuild, pandoc-1.9.4.5.ebuild:
+  Fix failing tests. Remove old (bug #423309).
 
   06 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> pandoc-1.9.1.2.ebuild,
   pandoc-1.9.2.ebuild, pandoc-1.9.3.ebuild, pandoc-1.9.4.1-r2.ebuild,
