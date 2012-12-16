@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/ufed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.90 2012/11/27 15:39:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.91 2012/12/16 19:53:47 armin76 Exp $
+
+  16 Dec 2012; Raúl Porcel <armin76@gentoo.org> ufed-0.40.2-r1.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #444792
 
   27 Nov 2012; Jeroen Roovers <jer@gentoo.org> ufed-0.40.2-r1.ebuild:
   Stable for HPPA (bug #444792).
