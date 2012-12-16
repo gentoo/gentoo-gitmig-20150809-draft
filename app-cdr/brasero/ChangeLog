@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.147 2012/12/16 14:07:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.148 2012/12/16 17:39:16 tetromino Exp $
+
+  16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  brasero-3.6.1.ebuild:
+  Restore clean EAPI5 ebuild.
 
   16 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> brasero-3.6.1.ebuild:
   Version bump for Gnome 3.6.
