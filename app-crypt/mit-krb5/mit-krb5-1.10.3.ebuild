@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.10.3.ebuild,v 1.2 2012/08/18 09:16:11 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.10.3.ebuild,v 1.3 2012/12/16 19:38:25 ulm Exp $
 
 EAPI="4"
 inherit eutils flag-o-matic versionator
@@ -11,7 +11,7 @@ DESCRIPTION="MIT Kerberos V"
 HOMEPAGE="http://web.mit.edu/kerberos/www/"
 SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar"
 
-LICENSE="as-is"
+LICENSE="openafs-krb5-a BSD MIT OPENLDAP BSD-2 HPND BSD-4 ISC RSA CCPL-Attribution-ShareAlike-3.0 || ( BSD-2 GPL-2+ )"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86"
 IUSE="doc +keyutils openldap +pkinit +threads test xinetd"
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	virtual/yacc
 	doc? ( virtual/latex-base )
 	test? ( dev-lang/tcl
-	        dev-lang/python
+			dev-lang/python
 			dev-util/dejagnu )"
 
 S=${WORKDIR}/${MY_P}/src
@@ -93,7 +93,7 @@ src_install() {
 	dohtml -r doc/*.html
 
 	if use doc ; then
-	    dodoc doc/{api,implement}/*.ps
+		dodoc doc/{api,implement}/*.ps
 	fi
 
 	newinitd "${FILESDIR}"/mit-krb5kadmind.initd mit-krb5kadmind

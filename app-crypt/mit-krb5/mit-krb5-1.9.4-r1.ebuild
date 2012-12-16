@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.9.4-r1.ebuild,v 1.8 2012/09/22 07:47:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.9.4-r1.ebuild,v 1.9 2012/12/16 19:38:25 ulm Exp $
 
 EAPI=4
 inherit eutils flag-o-matic versionator
@@ -11,7 +11,7 @@ DESCRIPTION="MIT Kerberos V"
 HOMEPAGE="http://web.mit.edu/kerberos/www/"
 SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar"
 
-LICENSE="as-is"
+LICENSE="openafs-krb5-a BSD MIT OPENLDAP BSD-2 HPND BSD-4 ISC RSA"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc +keyutils openldap +pkinit +threads test xinetd"
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 	virtual/yacc
 	doc? ( virtual/latex-base )
 	test? ( dev-lang/tcl
-	        dev-lang/python
+			dev-lang/python
 			dev-util/dejagnu )"
 
 S=${WORKDIR}/${MY_P}/src
@@ -87,7 +87,7 @@ src_install() {
 
 	# die if we cannot respect a USE flag
 	if use doc ; then
-	    dodoc doc/{api,implement}/*.ps
+		dodoc doc/{api,implement}/*.ps
 	fi
 
 	newinitd "${FILESDIR}"/mit-krb5kadmind.initd mit-krb5kadmind

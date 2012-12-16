@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.341 2012/09/25 09:25:29 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.342 2012/12/16 19:38:25 ulm Exp $
+
+  16 Dec 2012; Ulrich Müller <ulm@gentoo.org> mit-krb5-1.9.4-r1.ebuild,
+  mit-krb5-1.10.2-r1.ebuild, mit-krb5-1.10.3.ebuild:
+  Fix LICENSE, see NOTICE file, bug 447292.
 
   25 Sep 2012; Eray Aslan <eras@gentoo.org> -mit-krb5-1.10.1-r2.ebuild,
   -mit-krb5-1.8.3-r6.ebuild, -mit-krb5-1.9.2-r2.ebuild, -mit-krb5-1.9.4.ebuild:
