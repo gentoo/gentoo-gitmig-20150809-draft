@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.116 2012/12/05 23:41:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.117 2012/12/16 14:11:58 eva Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -158,6 +158,11 @@ gnome2_src_configure() {
 	# Pass --disable-schemas-install when possible
 	if grep -q "disable-schemas-install" ${ECONF_SOURCE:-.}/configure; then
 		G2CONF="${G2CONF} --disable-schemas-install"
+	fi
+
+	# Pass --disable-schemas-compile when possible
+	if grep -q "disable-schemas-compile" ${ECONF_SOURCE:-.}/configure; then
+		G2CONF="${G2CONF} --disable-schemas-compile"
 	fi
 
 	# Avoid sandbox violations caused by gnome-vfs (bug #128289 and #345659)
