@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.26.5.ebuild,v 1.2 2012/12/16 06:13:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.26.5.ebuild,v 1.3 2012/12/16 06:45:16 tetromino Exp $
 
 EAPI="5"
 
@@ -45,18 +45,14 @@ src_prepare() {
 
 src_configure() {
 	# png always on to display icons (foser)
-	local myconf="
-		$(use_with jpeg libjpeg)
-		$(use_with jpeg2k libjasper)
-		$(use_with tiff libtiff)
-		$(use_enable introspection)
-		$(use_with X x11)
-		--with-libpng"
-
-	# Passing --disable-debug is not recommended for production use
-	use debug && myconf="${myconf} --enable-debug=yes"
-
-	econf ${myconf}
+	econf \
+		$(usex debug --enable-debug=yes "") \
+		$(use_with jpeg libjpeg) \
+		$(use_with jpeg2k libjasper) \
+		$(use_with tiff libtiff) \
+		$(use_enable introspection) \
+		$(use_with X x11) \
+		--with-libpng
 }
 
 src_install() {

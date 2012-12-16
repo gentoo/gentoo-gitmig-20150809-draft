@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.78 2012/12/16 06:13:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.79 2012/12/16 06:45:16 tetromino Exp $
+
+  16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gdk-pixbuf-2.26.5.ebuild:
+  EAPI5 stylistic cleanup
 
   16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gdk-pixbuf-2.26.5.ebuild, metadata.xml:
