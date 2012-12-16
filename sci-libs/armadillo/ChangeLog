@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/armadillo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/ChangeLog,v 1.20 2012/12/12 18:23:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/ChangeLog,v 1.21 2012/12/16 10:43:20 hwoarang Exp $
+
+  16 Dec 2012; Markos Chandras <hwoarang@gentoo.org> armadillo-3.4.4.ebuild:
+  stable on amd64 wrt bug #447130. Forced commit to workaround QA warnings due
+  to broken 3.0.2 ebuild
 
 *armadillo-3.6.0 (12 Dec 2012)
 
