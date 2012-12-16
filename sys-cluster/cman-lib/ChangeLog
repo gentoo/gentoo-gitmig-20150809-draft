@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/cman-lib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-lib/ChangeLog,v 1.9 2011/03/24 13:34:23 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-lib/ChangeLog,v 1.10 2012/12/16 13:51:26 ago Exp $
+
+  16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> cman-lib-2.03.09-r1.ebuild:
+  Stable for x86, wrt bug #441524
 
   24 Mar 2011; Christoph Mende <angelos@gentoo.org> cman-lib-2.03.09-r1.ebuild:
   Stable on amd64
@@ -46,4 +49,3 @@
   17 Mar 2008; Christian Zoffoli <xmerlin@gentoo.org>
   +files/cman-lib-2.02.00-include.patch, +cman-lib-2.02.00.ebuild:
   Initial Import
-
