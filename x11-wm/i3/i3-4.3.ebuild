@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.3.ebuild,v 1.4 2012/09/19 20:03:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.3.ebuild,v 1.5 2012/12/16 17:35:59 xarthisius Exp $
 
 EAPI=4
 
@@ -44,6 +44,9 @@ src_prepare() {
 	if ! use pango; then
 		sed -i common.mk -e '/PANGO/d' || die
 	fi
+
+	sed -e "s/ar rcs/$(tc-getAR) rcs/" \
+		-i libi3/libi3.mk || die #447496
 
 	cat <<- EOF > "${T}"/i3wm
 		#!/bin/sh
