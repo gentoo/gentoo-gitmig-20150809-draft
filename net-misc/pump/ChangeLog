@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pump
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.50 2011/04/15 21:41:41 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.51 2012/12/16 14:17:50 pacho Exp $
+
+  16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due retirement, #95685
 
   15 Apr 2011; Ulrich Mueller <ulm@gentoo.org> pump-0.8.24-r3.ebuild:
   Don't PROVIDE virtual/dhcpc, bug 358827.
