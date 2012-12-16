@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fddl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fddl/ChangeLog,v 1.1 2012/11/15 18:02:52 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fddl/ChangeLog,v 1.2 2012/12/16 10:36:36 hwoarang Exp $
+
+  16 Dec 2012; Markos Chandras <hwoarang@gentoo.org> fddl-20111124.ebuild:
+  Stable on amd64 wrt bug #447314
 
 *fddl-20111124 (15 Nov 2012)
 
@@ -8,4 +11,3 @@
   +metadata.xml:
   Initial commit wrt bug #442978. Package will be maintained by Mikle Kolyada
   through proxy maintainers
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fddl/fddl-20111124.ebuild,v 1.1 2012/11/15 18:02:52 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fddl/fddl-20111124.ebuild,v 1.2 2012/12/16 10:36:36 hwoarang Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~pinkbyte/distfiles/snapshots/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DOCS=( AUTHORS ChangeLog INSTALL RELEASE )
