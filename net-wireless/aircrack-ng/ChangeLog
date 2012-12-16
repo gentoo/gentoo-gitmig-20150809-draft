@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/aircrack-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.65 2012/12/15 21:46:37 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.66 2012/12/16 16:51:54 ago Exp $
+
+  16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> metadata.xml:
+  updated rick mail
 
 *aircrack-ng-1.1-r2 (15 Dec 2012)
 
