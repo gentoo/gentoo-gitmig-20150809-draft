@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/mutter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.12 2012/07/21 17:55:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.13 2012/12/16 19:08:41 eva Exp $
+
+*mutter-3.6.2 (16 Dec 2012)
+
+  16 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> -mutter-3.2.2.ebuild,
+  -mutter-3.2.2-r1.ebuild, +mutter-3.6.2.ebuild, metadata.xml:
+  Version bump for Gnome 3.6. Drop old revision. USE=introspection is now
+  global.
 
   21 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   mutter-3.4.1-r1.ebuild:
