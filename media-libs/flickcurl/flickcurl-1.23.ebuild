@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flickcurl/flickcurl-1.23.ebuild,v 1.2 2012/12/08 22:08:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flickcurl/flickcurl-1.23.ebuild,v 1.3 2012/12/16 13:48:08 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.dajobe.org/flickcurl/${P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 GPL-2 Apache-2.0 )"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc raptor static-libs"
 
 RDEPEND=">=net-misc/curl-7.10.0
