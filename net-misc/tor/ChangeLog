@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.369 2012/12/14 16:27:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.370 2012/12/16 19:29:18 armin76 Exp $
+
+  16 Dec 2012; Raúl Porcel <armin76@gentoo.org> tor-0.2.3.25.ebuild:
+  sparc stable wrt #444804
 
   14 Dec 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Remove redundant USE=upnp description; it matches the global flag meaning.
