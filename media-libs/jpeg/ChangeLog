@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.135 2012/11/14 14:46:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.136 2012/12/16 16:12:57 ulm Exp $
+
+  16 Dec 2012; Ulrich Müller <ulm@gentoo.org> jpeg-6b-r9.ebuild,
+  jpeg-8d.ebuild:
+  Fix LICENSE, see README file, bug 447278.
 
   14 Nov 2012; Justin Lecher <jlec@gentoo.org> jpeg-6b-r9.ebuild:
   Prefix fix for temporary installation directory
