@@ -1,26 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-3.6.1.ebuild,v 1.1 2012/12/16 15:31:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-3.6.1.ebuild,v 1.2 2012/12/16 19:45:25 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
 inherit gnome2
-if [[ ${PV} = 9999 ]]; then
-	inherit gnome2-live
-fi
 
-DESCRIPTION="Gnome hexadecimal editor"
-HOMEPAGE="http://www.gnome.org/"
+DESCRIPTION="GNOME hexadecimal editor"
+HOMEPAGE="https://live.gnome.org/Ghex"
 
-LICENSE="GPL-2 FDL-1.1"
+LICENSE="GPL-2+ FDL-1.1+"
 SLOT="2"
-if [[ ${PV} = 9999 ]]; then
-	KEYWORDS=""
-else
-	KEYWORDS="~amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
-fi
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
@@ -36,7 +29,6 @@ DEPEND="${RDEPEND}
 "
 
 src_configure() {
-	DOCS="AUTHORS NEWS README"
 	G2CONF="${G2CONF} --disable-static"
 	gnome2_src_configure
 }
