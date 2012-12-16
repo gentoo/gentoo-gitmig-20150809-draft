@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.4.2.ebuild,v 1.1 2012/05/25 02:08:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.4.2.ebuild,v 1.2 2012/12/16 21:27:28 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -12,9 +12,9 @@ inherit gnome2 multilib python eutils virtualx
 DESCRIPTION="A text editor for the GNOME desktop"
 HOMEPAGE="http://live.gnome.org/Gedit"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
-IUSE="doc +introspection +python spell zeitgeist"
+IUSE="+introspection +python spell zeitgeist"
 KEYWORDS="~amd64 ~mips ~sh ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
 
 # X libs are not needed for OSX (aqua)
@@ -53,13 +53,13 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	>=app-text/scrollkeeper-0.3.11
-	dev-libs/libxml2
+	dev-libs/libxml2:2
+	>=dev-util/gtk-doc-am-1
 	>=dev-util/intltool-0.40
 	dev-util/itstool
 	>=sys-devel/gettext-0.17
-	virtual/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1 )"
-# yelp-tools, gnome-common and gtk-doc-am needed to eautoreconf
+	virtual/pkgconfig"
+# yelp-tools, gnome-common needed to eautoreconf
 
 pkg_setup() {
 	DOCS="AUTHORS BUGS ChangeLog MAINTAINERS NEWS README"
