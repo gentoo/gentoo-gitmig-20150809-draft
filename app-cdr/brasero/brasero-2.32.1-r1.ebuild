@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1-r1.ebuild,v 1.11 2012/11/07 21:44:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1-r1.ebuild,v 1.12 2012/12/16 09:10:31 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -9,10 +9,10 @@ GCONF_DEBUG="no"
 
 inherit autotools eutils gnome2 multilib
 
-DESCRIPTION="Brasero (aka Bonfire) is yet another application to burn CD/DVD for the gnome desktop."
+DESCRIPTION="CD/DVD burning application for the GNOME desktop"
 HOMEPAGE="http://projects.gnome.org/brasero/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86"
 IUSE="+cdr +css doc dvd +introspection +libburn nautilus playlist test vcd"
@@ -51,11 +51,9 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	gnome-base/gnome-common:3
 	>=dev-util/gtk-doc-am-1.12
-	doc? ( >=dev-util/gtk-doc-1.12 )
 	test? ( app-text/docbook-xml-dtd:4.3 )"
 # eautoreconf deps
 #	gnome-base/gnome-common
-#	dev-util/gtk-doc-am
 PDEPEND="gnome-base/gvfs"
 
 pkg_setup() {
