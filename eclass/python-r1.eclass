@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.27 2012/12/16 21:42:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.28 2012/12/16 23:26:15 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -479,10 +479,6 @@ python_export_best() {
 # having a matching shebang will be refused.
 python_replicate_script() {
 	debug-print-function ${FUNCNAME} "${@}"
-
-	if [[ ${_PYTHON_SINGLE_R1} ]]; then
-		die "${FUNCNAME} must not be used with python-single-r1 eclass."
-	fi
 
 	local suffixes=()
 

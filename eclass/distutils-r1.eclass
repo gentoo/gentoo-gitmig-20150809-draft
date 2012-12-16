@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.32 2012/12/13 16:47:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.33 2012/12/16 23:26:15 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -282,7 +282,6 @@ _distutils-r1_rename_scripts() {
 	[[ ${path} ]] || die "${FUNCNAME}: no path given"
 
 	local f
-	# XXX: change this if we ever allow directories in bin/sbin
 	while IFS= read -r -d '' f; do
 		debug-print "${FUNCNAME}: found executable at ${f#${D}/}"
 

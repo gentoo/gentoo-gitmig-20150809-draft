@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.563 2012/12/16 21:42:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.564 2012/12/16 23:26:15 mgorny Exp $
+
+  16 Dec 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass,
+  python-r1.eclass:
+  Remove outdated comments and checks.
 
   16 Dec 2012; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
   Temporarily disable PYTHON_SINGLE_TARGET safety check because of issues with
