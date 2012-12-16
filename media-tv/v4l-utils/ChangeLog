@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/v4l-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/ChangeLog,v 1.30 2012/12/11 17:29:06 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/ChangeLog,v 1.31 2012/12/16 16:29:47 ago Exp $
+
+  16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> v4l-utils-0.8.9.ebuild:
+  Stable for x86, wrt bug #446036
 
   11 Dec 2012; Chema Alonso <nimiux@gentoo.org> v4l-utils-0.8.9.ebuild:
   Stable for amd64 wrt bug #446036
