@@ -3,25 +3,28 @@
 # Please see "/usr/sbin/rngd --help" and "man rngd" for more information
 
 # If a single device is preferred, then specify it here, otherwise we will
-# search for suitable devices. TPM is specified via a later option, not this
-# one.
+# search for suitable devices.
 #DEVICE=
-#TPM_DEVICE=
 
 # Random step (Number of bytes written to random-device at a time):
 STEP=64
 
 # Should TPM be avoided?
-NO_TPM=0
+# NO_TPM=0
 
-# Should RDRAND be avoided?
-NO_DRNG=0
+# Should RDRAND be avoided? Please note that unless this is commented
+# out, RDRAND _will_ be disabled, as any value will cause it to be
+# disabled.
+# NO_DRNG=1
 
 # Fill watermark
 # 0 <= n <= 4096
 WATERMARK=2048
 
-# Bug #292239: Remixing /dev/urandom back into /dev/random is considered a
-# security vulnerability in some cases where not enough entropy is present on
-# systems.
+# Bug #292239: Remixing /dev/urandom back into /dev/random is
+# considered a security vulnerability in some cases where not enough
+# entropy is present on systems. If you don't have a real random
+# hardware generator, you're suggested to use a software designed for
+# the particular task of creating new entropy, such as
+# sys-apps/haveged.
 DO_NOT_REMIX_URANDOM=1

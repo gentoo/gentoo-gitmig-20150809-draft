@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/rng-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.34 2012/12/16 00:02:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.35 2012/12/16 08:25:58 flameeyes Exp $
+
+*rng-tools-4-r3 (16 Dec 2012)
+
+  16 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> +rng-tools-4-r3.ebuild,
+  -rng-tools-4-r2.ebuild, files/rngd-confd-4.1, files/rngd-initd-4.1:
+  More fixes to the init script if there is no device at all. Also fix handling
+  of rdrand, as --no-drng=0 misbehaves.
 
 *rng-tools-4-r2 (16 Dec 2012)
 
