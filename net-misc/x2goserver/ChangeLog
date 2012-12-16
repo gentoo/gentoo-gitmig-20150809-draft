@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/x2goserver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.16 2012/12/03 13:43:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.17 2012/12/16 16:29:21 ago Exp $
+
+  16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> x2goserver-3.1.1.4-r1.ebuild:
+  Stable for x86, wrt bug #445766
 
   03 Dec 2012; <ago@gentoo.org> x2goserver-3.1.1.4-r1.ebuild:
   Stable for amd64, wrt bug #445766
@@ -90,4 +93,3 @@
   13 Mar 2009; Bernard Cafarelli <voyageur@gentoo.org>
   +files/x2goserver.init, +metadata.xml, +x2goserver-2.0.1.19.ebuild:
   Initial portage commit, from the NX overlay
-
