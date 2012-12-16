@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.57 2012/12/16 19:50:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.58 2012/12/16 21:43:56 ottxor Exp $
+
+  16 Dec 2012; Christoph Junghans <ottxor@gentoo.org> metadata.xml,
+  openntpd-3.9_p1-r3.ebuild, openntpd-3.9_p1-r4.ebuild:
+  fixed license issue (bug #426082)
 
   16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> openntpd-3.9_p1-r4.ebuild:
   Stable for ppc, wrt bug #426464

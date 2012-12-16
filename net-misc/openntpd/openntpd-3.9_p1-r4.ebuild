@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.9_p1-r4.ebuild,v 1.5 2012/12/16 19:50:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.9_p1-r4.ebuild,v 1.6 2012/12/16 21:43:56 ottxor Exp $
 
 EAPI="2"
 
-inherit eutils autotools
+inherit eutils autotools user
 
 MY_P=${P/_/}
 DEB_VER="8"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.openntpd.org/"
 SRC_URI="mirror://openbsd/OpenNTPD/${MY_P}.tar.gz
 	mirror://debian/pool/main/o/openntpd/${MY_P/-/_}+debian-${DEB_VER}.debian.tar.gz"
 
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="ssl selinux"

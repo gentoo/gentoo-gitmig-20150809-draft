@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-	<email>maintainer-needed@gentoo.org</email>
+		<email>ottxor@gentoo.org</email>
+		<name>Christoph Junghans</name>
 	</maintainer>
 	<longdescription lang="en">
 		OpenNTPD is a FREE, easy to use implementation of the Network Time
