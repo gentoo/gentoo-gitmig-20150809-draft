@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-7.1-r1.ebuild,v 1.2 2011/11/13 18:56:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-7.1-r1.ebuild,v 1.3 2012/12/16 15:33:39 ulm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ DESCRIPTION="The Boehm-Demers-Weiser conservative garbage collector"
 HOMEPAGE="http://www.hpl.hp.com/personal/Hans_Boehm/gc/"
 SRC_URI="http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/${MY_P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="boehm-gc"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~sparc x86"
 IUSE="cxx threads"
