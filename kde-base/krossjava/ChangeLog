@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krossjava
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/ChangeLog,v 1.109 2012/12/08 11:53:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/ChangeLog,v 1.110 2012/12/16 14:52:54 pacho Exp $
+
+  16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due retirement, #169737
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -krossjava-4.8.5.ebuild:
@@ -445,4 +448,3 @@
   23 May 2009; Alistair Bush <ali_bush@gentoo.org> +krossjava-4.2.3.ebuild,
   +files/krossjava-4.2.3_includes.patch, +metadata.xml:
   New Package.
-
