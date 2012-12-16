@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.91.5.ebuild,v 1.1 2012/12/06 06:50:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.91.5.ebuild,v 1.2 2012/12/16 12:20:59 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ HOMEPAGE="http://gtranslator.sourceforge.net/"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc gnome spell"
+IUSE="gnome spell"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.32:2
@@ -44,10 +44,11 @@ DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	app-text/gnome-doc-utils
 	>=app-text/scrollkeeper-0.1.4
+	>=dev-util/gtk-doc-am-1
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1 )"
+"
 # eautoreconf requires gnome-base/gnome-common
 
 pkg_setup() {
