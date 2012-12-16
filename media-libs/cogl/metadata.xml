@@ -4,8 +4,6 @@
 <herd>gnome</herd>
 <use>
   <flag name="gles2">Enable OpenGL ES 2.0 support</flag>
-  <flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
-    for introspection</flag>
   <flag name="pango">Build cogl-pango library for <pkg>x11-libs/pango</pkg>
     integration</flag>
 </use>

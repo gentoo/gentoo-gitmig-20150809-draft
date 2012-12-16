@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/clutter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.59 2012/12/05 23:12:48 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.60 2012/12/16 22:04:03 tetromino Exp $
+
+*clutter-1.12.2 (16 Dec 2012)
+
+  16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +clutter-1.12.2.ebuild, metadata.xml:
+  Version bump for gnome-3.6. Switch to global introspection USE flag.
 
   05 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   -clutter-1.2.14.ebuild, -clutter-1.6.16.ebuild, -clutter-1.6.20.ebuild,

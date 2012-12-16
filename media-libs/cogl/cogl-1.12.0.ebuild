@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.10.4.ebuild,v 1.5 2012/12/16 22:03:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.12.0.ebuild,v 1.1 2012/12/16 22:03:51 tetromino Exp $
 
 EAPI="5"
 CLUTTER_LA_PUNT="yes"
@@ -12,20 +12,21 @@ DESCRIPTION="A library for using 3D graphics hardware to draw pretty pictures"
 HOMEPAGE="http://www.clutter-project.org/"
 
 LICENSE="LGPL-2.1+ FDL-1.1+"
-SLOT="1.0/9"
+SLOT="1.0/11"
 IUSE="doc examples +introspection +opengl gles2 +pango"
 KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~x86"
 
 # XXX: need uprof for optional profiling support
 COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
-	x11-libs/cairo
+	x11-libs/cairo:=
 	>=x11-libs/gdk-pixbuf-2:2
-	x11-libs/libdrm
+	x11-libs/libdrm:=
 	x11-libs/libX11
 	>=x11-libs/libXcomposite-0.4
 	x11-libs/libXdamage
 	x11-libs/libXext
 	>=x11-libs/libXfixes-3
+	virtual/glu
 	virtual/opengl
 	gles2? ( media-libs/mesa[gles2] )
 
@@ -35,8 +36,8 @@ COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
 RDEPEND="${COMMON_DEPEND}
 	!<media-libs/clutter-1.7"
 DEPEND="${COMMON_DEPEND}
-	virtual/pkgconfig
 	sys-devel/gettext
+	virtual/pkgconfig
 	doc? ( app-text/docbook-xml-dtd:4.1.2
 		>=dev-util/gtk-doc-1.13 )
 	test? (	app-admin/eselect-opengl
@@ -56,7 +57,9 @@ src_prepare() {
 		$(use_enable opengl glx)
 		$(use_enable opengl gl)
 		$(use_enable gles2)
+		$(use_enable gles2 cogl-gles2)
 		$(use_enable gles2 xlib-egl-platform)
+		"$(usex gles2 --with-default-driver=gles2 "")"
 		--enable-glib
 		--enable-deprecated
 		$(use_enable introspection)
@@ -64,8 +67,8 @@ src_prepare() {
 		$(use_enable doc gtk-doc)"
 	# Really need --enable-gtk-doc for docs
 
-	# USE=doc build failure; in 1.12.x; bug #436308
-	epatch "${FILESDIR}/${PN}-1.10.4-cogl-clipping.xml.patch"
+	# https://bugzilla.gnome.org/show_bug.cgi?id=684731
+	epatch "${FILESDIR}/${PN}-1.12.0-fix-experimental-doc-build.patch"
 	gnome2_src_prepare
 }
 
@@ -86,4 +89,14 @@ src_install() {
 
 	# Remove silly examples-data directory
 	rm -rvf "${ED}/usr/share/cogl/examples-data/" || die
+}
+
+pkg_preinst() {
+	gnome2_pkg_preinst
+	preserve_old_lib /usr/$(get_libdir)/libcogl.so.9
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	preserve_old_lib_notify /usr/$(get_libdir)/libcogl.so.9
 }
