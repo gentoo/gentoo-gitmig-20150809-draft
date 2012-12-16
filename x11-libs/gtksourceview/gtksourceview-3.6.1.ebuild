@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-3.2.3.ebuild,v 1.10 2012/10/14 23:56:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-3.6.1.ebuild,v 1.1 2012/12/16 20:22:36 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
@@ -14,29 +14,28 @@ HOMEPAGE="http://projects.gnome.org/gtksourceview/"
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="3.0"
 IUSE="glade +introspection"
-KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 
-RDEPEND=">=x11-libs/gtk+-3.0:3[introspection?]
+# Note: has native OSX support, prefix teams, attack!
+RDEPEND=">=x11-libs/gtk+-3.4:3[introspection?]
 	>=dev-libs/libxml2-2.6:2
-	>=dev-libs/glib-2.28:2
+	>=dev-libs/glib-2.32:2
 	glade? ( >=dev-util/glade-3.9:3.10 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.0 )"
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
-	>=dev-util/intltool-0.40
+	>=dev-util/intltool-0.50
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig"
 
-pkg_setup() {
+src_prepare() {
 	DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README"
 	G2CONF="${G2CONF}
 		--disable-deprecations
 		--enable-providers
 		$(use_enable glade glade-catalog)
 		$(use_enable introspection)"
-}
 
-src_prepare() {
 	gnome2_src_prepare
 
 	sed -i -e 's:--warn-all::' gtksourceview/Makefile.in || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-3.4.2.ebuild,v 1.9 2012/10/28 16:35:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-3.4.2.ebuild,v 1.10 2012/12/16 20:22:36 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -28,16 +28,14 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig"
 
-pkg_setup() {
+src_prepare() {
 	DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README"
 	G2CONF="${G2CONF}
 		--disable-deprecations
 		--enable-providers
 		$(use_enable glade glade-catalog)
 		$(use_enable introspection)"
-}
 
-src_prepare() {
 	gnome2_src_prepare
 
 	sed -i -e 's:--warn-all::' gtksourceview/Makefile.in || die
