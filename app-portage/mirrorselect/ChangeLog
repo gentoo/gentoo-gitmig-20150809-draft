@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.116 2012/12/16 06:12:56 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.117 2012/12/16 06:31:59 dolsen Exp $
+
+  16 Dec 2012; Brian Dolbec <dolsen@gentoo.org>
+  files/2.2.0-Ignore-inaccessible-fsmirrors.patch:
+  Fix a missed debug level parameter, to quiet the output.
 
 *mirrorselect-2.2.0-r1 (16 Dec 2012)
 
