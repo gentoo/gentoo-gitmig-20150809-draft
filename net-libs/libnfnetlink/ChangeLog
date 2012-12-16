@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnfnetlink
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.57 2012/11/28 20:21:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.58 2012/12/16 19:43:05 armin76 Exp $
+
+  16 Dec 2012; Raúl Porcel <armin76@gentoo.org> libnfnetlink-1.0.1.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #442872
 
   28 Nov 2012; Brent Baude <ranger@gentoo.org> libnfnetlink-1.0.1.ebuild:
   Marking libnfnetlink-1.0.1 ppc for bug 442872
