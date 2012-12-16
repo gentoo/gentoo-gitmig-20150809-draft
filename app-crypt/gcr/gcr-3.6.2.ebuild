@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.6.2.ebuild,v 1.4 2012/12/16 17:42:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.6.2.ebuild,v 1.5 2012/12/16 18:22:30 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -40,11 +40,6 @@ DEPEND="${COMMON_DEPEND}
 "
 # eautoreconf needs:
 #	dev-libs/gobject-introspection-common
-
-if [[ ${PV} = 9999 ]]; then
-	DEPEND="${DEPEND}
-		doc? ( >=dev-util/gtk-doc-1.9 )"
-fi
 
 src_prepare() {
 	DOCS="AUTHORS ChangeLog HACKING NEWS README"
