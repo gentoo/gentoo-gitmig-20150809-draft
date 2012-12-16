@@ -3,11 +3,6 @@
 <pkgmetadata>
 <herd>voip</herd>
 <maintainer>
-        <email>volkmar@gentoo.org</email>
-        <name>Mounir Lamouri</name>
-	<description>Assign to herd and CC me</description>
-</maintainer>
-<maintainer>
         <email>neurogeek@gentoo.org</email>
         <name>Jesus Rivero</name>
 	<description>Assign to herd and CC me</description>

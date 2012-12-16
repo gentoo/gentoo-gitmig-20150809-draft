@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.38 2012/12/03 23:16:28 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.39 2012/12/16 14:59:09 pacho Exp $
+
+  16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due retirement, #260683
 
 *ptlib-2.10.9 (03 Dec 2012)
 
@@ -169,4 +172,3 @@
   +files/ptlib-2.6.2-gcc-allocator.patch, +metadata.xml,
   +ptlib-2.6.2.ebuild:
   Initial commit. Actually, somewhat bump of dev-libs/pwlib. Fix bug 238617
-
