@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.224 2012/12/15 18:43:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.225 2012/12/16 06:07:39 tetromino Exp $
+
+  16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
+  Switch to global dbus, udev, webkit USE flags.
 
   15 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   rhythmbox-0.12.8-r1.ebuild, rhythmbox-0.13.3.ebuild, -rhythmbox-2.96.ebuild,
