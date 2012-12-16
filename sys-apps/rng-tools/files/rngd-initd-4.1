@@ -1,0 +1,32 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/files/rngd-initd-4.1,v 1.1 2012/12/16 00:02:42 flameeyes Exp $
+
+depend() {
+	need localmount
+	after random
+	provide entropy
+}
+
+# Do NOT add /dev/tpm to this.
+DEFAULT_DEVICE="/dev/hw_random* /dev/hwrandom* /dev/i810_rng /dev/hwrng*"
+[ $DO_NOT_REMIX_URANDOM -eq 0 ] && DEFAULT_DEVICE="${DEFAULT_DEVICE} /dev/urandom"
+
+find_device() {
+	# The echo is to cause globbing
+	local d
+	for d in $* ; do
+		[ -e "${d}" ] && break
+	done
+	echo "${d}"
+}
+
+find_rng_device() {
+	echo "$(find_device $(echo ${DEVICE:-${DEFAULT_DEVICE}}) /dev/null)"
+}
+
+command=/usr/sbin/rngd
+pidfile="/var/run/${SVCNAME}.pid"
+command_args="--pid-file ${pidfile} --background --random-step ${STEP:-64} --no-tpm=${NO_TPM:-0} --no-drng=${NO_DRNG:-0} --fill-watermark ${WATERMARK} --rng-device $(find_rng_device)"
+start_stop_daemon_args="--retry SIGKILL/5 --wait 1000"

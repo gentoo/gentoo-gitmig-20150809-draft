@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/rng-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.33 2012/11/11 06:24:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.34 2012/12/16 00:02:42 flameeyes Exp $
+
+*rng-tools-4-r2 (16 Dec 2012)
+
+  16 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> +files/rngd-confd-4.1,
+  +files/rngd-initd-4.1, +rng-tools-4-r2.ebuild:
+  Update init script so that OpenRC can check on the daemon, also fix stop with
+  rdrand-capable CPUs (bug #442238), and disallow /dev/urandom mixin by default
+  (bug #292239). The init script no longer tries to second-guess the
+  configuration parameters, leaving the erroring out for missing sources to rngd
+  itself, as it was broken and would have caused more trouble when rdrand is
+  present.
 
 *rng-tools-4-r1 (11 Nov 2012)
 
