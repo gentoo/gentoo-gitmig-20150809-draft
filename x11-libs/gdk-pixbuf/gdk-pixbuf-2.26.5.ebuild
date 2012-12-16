@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.26.5.ebuild,v 1.1 2012/11/10 05:54:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.26.5.ebuild,v 1.2 2012/12/16 06:13:41 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils gnome.org multilib libtool
 
@@ -16,11 +16,11 @@ IUSE="+X debug +introspection jpeg jpeg2k tiff test"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.34.0:2
-	>=media-libs/libpng-1.4:0
+	>=media-libs/libpng-1.4:0=
 	introspection? ( >=dev-libs/gobject-introspection-0.9.3 )
-	jpeg? ( virtual/jpeg )
-	jpeg2k? ( media-libs/jasper )
-	tiff? ( >=media-libs/tiff-3.9.2:0 )
+	jpeg? ( virtual/jpeg:= )
+	jpeg2k? ( media-libs/jasper:= )
+	tiff? ( >=media-libs/tiff-3.9.2:0= )
 	X? ( x11-libs/libX11 )"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/gtk-doc-am-1.11
