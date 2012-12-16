@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/allison
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.22 2012/12/04 15:39:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.23 2012/12/16 18:03:20 armin76 Exp $
+
+  16 Dec 2012; Raúl Porcel <armin76@gentoo.org> allison-2.0.3-r1.ebuild:
+  alpha/ia64/sparc stable wrt #444458
 
   04 Dec 2012; <ago@gentoo.org> allison-2.0.3-r1.ebuild:
   Stable for x86, wrt bug #444458
