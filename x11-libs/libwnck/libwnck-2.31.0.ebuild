@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.31.0.ebuild,v 1.10 2012/12/16 07:01:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.31.0.ebuild,v 1.11 2012/12/16 09:04:08 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -25,7 +25,7 @@ RDEPEND=">=x11-libs/gtk+-2.19.7:2[introspection?]
 	introspection? ( >=dev-libs/gobject-introspection-0.6.14 )
 	startup-notification? ( >=x11-libs/startup-notification-0.4 )"
 DEPEND="${RDEPEND}
-	>=dev-util/gtk-doc-1.9
+	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.40
 	sys-devel/gettext
 	virtual/pkgconfig

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.296 2012/12/16 07:01:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.297 2012/12/16 09:04:08 tetromino Exp $
+
+  16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libwnck-2.31.0.ebuild, libwnck-3.2.1.ebuild, libwnck-3.4.4.ebuild:
+  We need gtk-doc-am, not all of gtk-doc.
 
   16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   -libwnck-2.30.7.ebuild, libwnck-2.31.0.ebuild, libwnck-3.2.1.ebuild,
