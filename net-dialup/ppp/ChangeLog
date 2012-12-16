@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.286 2012/11/29 16:20:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.287 2012/12/16 19:56:44 armin76 Exp $
+
+  16 Dec 2012; Raúl Porcel <armin76@gentoo.org> ppp-2.4.5-r3.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #444256
 
   29 Nov 2012; Jeroen Roovers <jer@gentoo.org> ppp-2.4.5-r3.ebuild:
   Stable for HPPA (bug #444256).
