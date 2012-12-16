@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/dsiutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/ChangeLog,v 1.18 2012/12/08 15:48:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/ChangeLog,v 1.19 2012/12/16 13:59:30 ago Exp $
+
+  16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> dsiutils-1.0.10-r2.ebuild:
+  Stable for x86, wrt bug #424337
 
   08 Dec 2012; Agostino Sarubbo <ago@gentoo.org> dsiutils-1.0.10-r2.ebuild:
   Stable for ppc64, wrt bug #424337
@@ -84,4 +87,3 @@
   02 Apr 2008; Alistair Bush <ali_bush@gentoo.org> +metadata.xml,
   +dsiutils-1.0.1.ebuild:
   New Package.
-
