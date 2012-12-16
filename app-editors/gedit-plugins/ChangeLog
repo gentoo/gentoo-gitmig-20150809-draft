@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/gedit-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.27 2012/12/10 01:28:17 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.28 2012/12/16 21:43:34 tetromino Exp $
+
+*gedit-plugins-3.6.1-r1 (16 Dec 2012)
+
+  16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gedit-plugins-2.32.0.ebuild, gedit-plugins-3.4.0.ebuild,
+  +gedit-plugins-3.6.1-r1.ebuild:
+  Version bump for gnome-3.6. Update license.
 
   10 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   -gedit-plugins-3.2.1-r1.ebuild, gedit-plugins-3.4.0.ebuild:

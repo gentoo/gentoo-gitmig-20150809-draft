@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.32.0.ebuild,v 1.7 2012/05/10 00:55:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.32.0.ebuild,v 1.8 2012/12/16 21:43:34 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ inherit gnome2 multilib python eutils
 DESCRIPTION="Offical plugins for gedit."
 HOMEPAGE="http://live.gnome.org/GeditPlugins"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 KEYWORDS="amd64 x86"
 SLOT="0"
 
