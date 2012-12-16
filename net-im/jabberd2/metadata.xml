@@ -4,10 +4,8 @@
 	<maintainer>
 		<email>marko.durkovic@gmail.com</email>
 		<name>Marko Durkovic</name>
-		<description>
-			Maintainer by proxy, through nelchael.
-		</description>
 	</maintainer>
+	<herd>proxy-maintainers</herd>
 	<herd>net-im</herd>
 	<use>
 		<flag name='memdebug'>Enable nad and pool debug. Requires USE="debug" to
