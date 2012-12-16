@@ -1,6 +1,12 @@
 # ChangeLog for sci-astronomy/galaxy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/galaxy/ChangeLog,v 1.7 2012/08/05 17:53:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/galaxy/ChangeLog,v 1.8 2012/12/16 19:34:33 xarthisius Exp $
+
+*galaxy-2.2 (16 Dec 2012)
+
+  16 Dec 2012; Kacper Kowalik <xarthisius@gentoo.org> +galaxy-2.2.ebuild,
+  -galaxy-2.1.ebuild:
+  Version bump, drop old. Use -pthread also for cflags
 
   05 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -galaxy-2.0.ebuild,
   galaxy-2.1.ebuild, metadata.xml:
