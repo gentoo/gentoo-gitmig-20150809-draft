@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.562 2012/12/16 14:11:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.563 2012/12/16 21:42:33 mgorny Exp $
+
+  16 Dec 2012; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Temporarily disable PYTHON_SINGLE_TARGET safety check because of issues with
+  paludis, bug #447524.
 
   16 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> gnome2.eclass:
   Pass --disable-schemas-compile from gsettings.m4 in gnome2_src_configure.
