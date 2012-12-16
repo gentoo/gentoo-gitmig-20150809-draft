@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/proxychains-3.1_p20110225-r1.ebuild,v 1.1 2012/10/04 22:27:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/proxychains-3.1_p20110225-r1.ebuild,v 1.2 2012/12/16 10:38:14 hwoarang Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=1
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~radhermit/distfiles/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE="static-libs"
 
 DEPEND="app-arch/xz-utils"
