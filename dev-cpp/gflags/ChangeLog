@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gflags
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.18 2012/11/19 18:09:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.19 2012/12/16 14:11:07 pacho Exp $
+
+  16 Dec 2012; Pacho Ramos <pacho@gentoo.org> -gflags-1.7.ebuild, metadata.xml:
+  Drop maintainer due retirement, #95685
 
   19 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> gflags-2.0.ebuild:
   Keyworded ~amd64-linux and ~x86-linux
