@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-3.4.1.ebuild,v 1.2 2012/12/16 14:49:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-3.4.1.ebuild,v 1.3 2012/12/16 19:16:05 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -11,7 +11,7 @@ inherit eutils gnome2
 DESCRIPTION="A GNOME application for managing encryption keys"
 HOMEPAGE="http://www.gnome.org/projects/seahorse/index.html"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+ FDL-1.1+"
 SLOT="0"
 IUSE="avahi debug ldap"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"

@@ -1,30 +1,23 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-3.6.3.ebuild,v 1.1 2012/12/16 14:49:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-3.6.3.ebuild,v 1.2 2012/12/16 19:16:05 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
 inherit gnome2
-if [[ ${PV} = 9999 ]]; then
-	inherit gnome2-live
-fi
 
 DESCRIPTION="A GNOME application for managing encryption keys"
 HOMEPAGE="http://www.gnome.org/projects/seahorse/index.html"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+ FDL-1.1+"
 SLOT="0"
 IUSE="avahi debug ldap"
-if [[ ${PV} = 9999 ]]; then
-	KEYWORDS=""
-else
-	KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-fi
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 
 COMMON_DEPEND="
-	>=app-crypt/gcr-3.3.4
+	>=app-crypt/gcr-3.3.4:=
 	>=dev-libs/glib-2.10:2
 	>=x11-libs/gtk+-3.4:3
 	>=app-crypt/libsecret-0.5
@@ -37,11 +30,10 @@ COMMON_DEPEND="
 		=app-crypt/gnupg-2.0*
 		=app-crypt/gnupg-1.4* )
 
-	avahi? ( >=net-dns/avahi-0.6 )
-	ldap? ( net-nds/openldap )
+	avahi? ( >=net-dns/avahi-0.6:= )
+	ldap? ( net-nds/openldap:= )
 "
 DEPEND="${COMMON_DEPEND}
-	app-text/yelp-tools
 	>=dev-util/intltool-0.35
 	sys-devel/gettext
 	virtual/pkgconfig
@@ -50,10 +42,6 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	!<app-crypt/seahorse-plugins-2.91.0_pre20110114
 "
-if [[ ${PV} = 9999 ]]; then
-	DEPEND="${DEPEND}
-		app-text/yelp-tools"
-fi
 
 src_prepare() {
 	# FIXME: Do not mess with CFLAGS with USE="debug"
@@ -65,7 +53,6 @@ src_prepare() {
 }
 
 src_configure() {
-	DOCS="AUTHORS ChangeLog NEWS README TODO THANKS"
 	G2CONF="${G2CONF}
 		--enable-pgp
 		--enable-ssh
@@ -74,8 +61,8 @@ src_configure() {
 		--enable-hkp
 		$(use_enable avahi sharing)
 		$(use_enable debug)
-		$(use_enable ldap)"
-	[[ ${PV} != 9999 ]] && G2CONF="${G2CONF} ITSTOOL=$(type -P true)"
+		$(use_enable ldap)
+		ITSTOOL=$(type -P true)"
 
 	gnome2_src_configure
 }
