@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.32.1.ebuild,v 1.10 2012/05/03 01:48:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.32.1.ebuild,v 1.11 2012/12/16 07:53:08 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -11,7 +11,7 @@ inherit gnome2 python
 DESCRIPTION="Extensible screen reader that provides access to the desktop"
 HOMEPAGE="http://projects.gnome.org/orca/"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-2+"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""

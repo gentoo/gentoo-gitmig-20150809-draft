@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.109 2012/05/20 09:32:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.110 2012/12/16 07:53:08 tetromino Exp $
+
+*orca-3.6.3-r1 (16 Dec 2012)
+
+  16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> orca-2.32.1.ebuild,
+  -orca-3.2.2.ebuild, orca-3.4.2.ebuild, +orca-3.6.3-r1.ebuild:
+  Bump for gnome-3.6 with numerous improvements; update to EAPI5 and
+  python-r1.eclass. Update license. Drop old.
 
 *orca-3.4.2 (20 May 2012)
 
