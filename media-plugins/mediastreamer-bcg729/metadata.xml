@@ -2,9 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>voip</herd>
-	<maintainer>
-		<email>volkmar@gentoo.org</email>
-		<name>Mounir Lamouri</name>
-		<description>Assign to herd and CC me</description>
-	</maintainer>
 </pkgmetadata>
