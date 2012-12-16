@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.5.ebuild,v 1.3 2012/12/15 22:02:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.9.ebuild,v 1.1 2012/12/16 10:19:03 scarabeus Exp $
 
 EAPI=5
 
@@ -15,11 +15,8 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/HarfBuzz"
 
 LICENSE="MIT"
 SLOT="0"
-
-# Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
 [[ ${PV} == 9999 ]] || \
 KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
-
 IUSE="static-libs"
 
 RDEPEND="
@@ -32,6 +29,8 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
+# needed for autoreconf
+[[ ${PV} == 9999 ]] && DEPEND+=" dev-util/gtk-doc-am"
 
 src_prepare() {
 	[[ ${PV} == 9999 ]] && eautoreconf
