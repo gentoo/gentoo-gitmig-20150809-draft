@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.171 2012/11/21 21:45:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.172 2012/12/16 17:48:53 armin76 Exp $
+
+  16 Dec 2012; Raúl Porcel <armin76@gentoo.org> wget-1.14.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #438858
 
   21 Nov 2012; Markus Meier <maekke@gentoo.org> wget-1.14.ebuild:
   arm stable, bug #438858
