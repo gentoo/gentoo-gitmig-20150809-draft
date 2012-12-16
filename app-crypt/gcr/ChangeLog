@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gcr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.11 2012/12/16 14:23:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.12 2012/12/16 17:42:41 tetromino Exp $
+
+  16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gcr-3.6.2.ebuild:
+  Restore clean EAPI5 ebuild.
 
   16 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> gcr-3.6.2.ebuild:
   Version bump for Gnome 3.6.
