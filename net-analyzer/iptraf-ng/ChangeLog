@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iptraf-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/ChangeLog,v 1.49 2012/11/20 20:59:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/ChangeLog,v 1.50 2012/12/16 15:17:35 armin76 Exp $
+
+  16 Dec 2012; Raúl Porcel <armin76@gentoo.org> iptraf-ng-1.1.3.1-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #441426
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> iptraf-ng-1.1.3.1-r1.ebuild:
   Stable for x86, wrt bug #441426
