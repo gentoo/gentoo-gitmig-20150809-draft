@@ -1,17 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.31.0.ebuild,v 1.9 2012/06/17 18:01:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.31.0.ebuild,v 1.10 2012/12/16 07:01:38 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit flag-o-matic gnome2
 
 DESCRIPTION="A window navigation construction kit"
 HOMEPAGE="http://www.gnome.org/"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-2+"
 SLOT="1"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 
@@ -25,24 +25,21 @@ RDEPEND=">=x11-libs/gtk+-2.19.7:2[introspection?]
 	introspection? ( >=dev-libs/gobject-introspection-0.6.14 )
 	startup-notification? ( >=x11-libs/startup-notification-0.4 )"
 DEPEND="${RDEPEND}
+	>=dev-util/gtk-doc-1.9
+	>=dev-util/intltool-0.40
 	sys-devel/gettext
 	virtual/pkgconfig
-	>=dev-util/intltool-0.40
-	doc? ( >=dev-util/gtk-doc-1.9 )
 	x86-interix? ( sys-libs/itx-bind )"
 # eautoreconf needs
-#	dev-util/gtk-doc-am
 #	gnome-base/gnome-common
 
-pkg_setup() {
+src_prepare() {
 	G2CONF="${G2CONF}
 		--disable-static
 		$(use_enable introspection)
 		$(use_enable startup-notification)"
 	DOCS="AUTHORS ChangeLog HACKING NEWS README"
-}
 
-src_prepare() {
 	# Regenerate pregenerated marshalers for <glib-2.31 compatibility
 	rm -v libwnck/wnck-marshal.{c,h} || die "rm failed"
 

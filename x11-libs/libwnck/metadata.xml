@@ -3,8 +3,6 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<use>
-		<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
-			for introspection</flag>
 		<flag name="tools">Install wnckprop-3 and wnck-urgency-monitor-3
 			command-line tools</flag>
 	</use>
