@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/itval
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/itval/ChangeLog,v 1.4 2012/11/15 18:08:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/itval/ChangeLog,v 1.5 2012/12/16 10:37:11 hwoarang Exp $
+
+  16 Dec 2012; Markos Chandras <hwoarang@gentoo.org> itval-1.2_p20121104.ebuild:
+  Stable on amd64 wrt bug #447332
 
 *itval-1.2_p20121104 (15 Nov 2012)
 
@@ -26,4 +29,3 @@
   23 May 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
   +itval-1.0.ebuild:
   Initial import for bug #143935 thanks to Robert Marmorstein
-
