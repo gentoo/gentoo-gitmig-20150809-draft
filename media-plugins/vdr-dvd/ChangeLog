@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-dvd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/ChangeLog,v 1.23 2012/09/02 17:11:24 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/ChangeLog,v 1.24 2012/12/16 19:33:30 hd_brummy Exp $
+
+  16 Dec 2012; Joerg Bornkessel <hd_brummy@gentoo.org> files/rc-addon.sh:
+  added missing plugin parameter --dvd
 
   02 Sep 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-dvd-0.3.7_pre20090106.ebuild:
