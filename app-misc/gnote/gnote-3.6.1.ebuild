@@ -1,26 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-3.6.1.ebuild,v 1.1 2012/12/16 15:27:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-3.6.1.ebuild,v 1.2 2012/12/16 19:38:00 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
 inherit gnome2
-if [[ ${PV} = 9999 ]]; then
-	inherit gnome2-live
-fi
 
 DESCRIPTION="Desktop note-taking application"
 HOMEPAGE="http://live.gnome.org/Gnote"
 
-LICENSE="GPL-3+"
+LICENSE="GPL-3+ FDL-1.1"
 SLOT="0"
-if [[ ${PV} = 9999 ]]; then
-	KEYWORDS=""
-else
-	KEYWORDS="~amd64 ~x86"
-fi
+KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 # Automagic glib-2.32 dep
@@ -29,10 +22,10 @@ COMMON_DEPEND="
 	>=dev-cpp/glibmm-2.28:2
 	>=dev-cpp/gtkmm-3.4:3.0
 	>=dev-libs/boost-1.34
-	>=dev-libs/glib-2.32
+	>=dev-libs/glib-2.32:2
 	>=dev-libs/libxml2-2:2
 	dev-libs/libxslt
-	>=sys-apps/util-linux-2.16
+	>=sys-apps/util-linux-2.16:=
 	>=x11-libs/gtk+-3:3
 	x11-libs/libX11
 "
@@ -43,17 +36,12 @@ DEPEND="${DEPEND}
 	>=dev-util/intltool-0.35.0
 	virtual/pkgconfig
 "
-if [[ ${PV} = 9999 ]]; then
-	DEPEND="${DEPEND}
-		app-text/yelp-tools"
-fi
 
 src_prepare() {
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
 	G2CONF="${G2CONF}
 		--disable-static
-		$(use_enable debug)"
-	[[ ${PV} != 9999 ]] && G2CONF="${G2CONF} ITSTOOL=$(type -P true)"
+		$(use_enable debug)
+		ITSTOOL=$(type -P true)"
 
 	# Do not alter CFLAGS
 	sed 's/-DDEBUG -g/-DDEBUG/' -i configure.ac configure || die
