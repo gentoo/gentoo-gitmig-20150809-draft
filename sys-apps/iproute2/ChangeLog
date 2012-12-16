@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.204 2012/12/14 06:40:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.205 2012/12/16 21:29:40 vapier Exp $
+
+  16 Dec 2012; Mike Frysinger <vapier@gentoo.org> iproute2-3.7.0.ebuild:
+  Update iproute2 tarball since upstream fixed the packaging and re-released it.
 
 *iproute2-3.7.0 (14 Dec 2012)
 

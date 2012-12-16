@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.7.0.ebuild,v 1.1 2012/12/14 06:40:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.7.0.ebuild,v 1.2 2012/12/16 21:29:40 vapier Exp $
 
 EAPI="4"
 
@@ -34,8 +34,6 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	>=sys-kernel/linux-headers-2.6.27
 	elibc_glibc? ( >=sys-libs/glibc-2.7 )"
-
-S=${WORKDIR}/${P/2} # fluke :/
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.1.0-mtu.patch #291907
