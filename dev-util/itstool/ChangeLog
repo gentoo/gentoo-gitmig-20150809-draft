@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/itstool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/itstool/ChangeLog,v 1.15 2012/10/04 14:51:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/itstool/ChangeLog,v 1.16 2012/12/16 10:47:31 tetromino Exp $
+
+  16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -itstool-1.1.2.ebuild, -itstool-1.1.3.ebuild, itstool-1.2.0.ebuild:
+  Update license; change "as-is" to "HPND" as recommended at
+  http://article.gmane.org/gmane.linux.gentoo.devel/80427; drop old.
 
   04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> itstool-1.2.0.ebuild:
   Stable for amd64, wrt bug #427544
