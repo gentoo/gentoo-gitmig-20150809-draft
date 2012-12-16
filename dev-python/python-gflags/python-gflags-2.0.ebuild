@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/python-gflags-2.0.ebuild,v 1.3 2012/06/27 05:05:34 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/python-gflags-2.0.ebuild,v 1.4 2012/12/16 16:14:31 mgorny Exp $
 
 EAPI="4"
 
-PYTHON_COMPAT="python2_5 python2_6 python2_7 pypy1_8 pypy1_9"
+PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy{1_8,1_9} )
 
-inherit python-distutils-ng
+inherit distutils-r1
 
-DESCRIPTION="Google's Python argument parsing library."
+DESCRIPTION="Google's Python argument parsing library"
 HOMEPAGE="http://code.google.com/p/python-gflags/"
 SRC_URI="http://python-gflags.googlecode.com/files/${P}.tar.gz"
 
@@ -17,11 +17,25 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-python/setuptools"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=""
 
-python_prepare_all() {
-	sed \
-		-e 's/data_files=\[("bin", \["gflags2man.py"\])\]/scripts=\["gflags2man.py"\]/' \
-		-i setup.py || die "sed failed"
+PATCHES=(
+	# The scripts are installed as 'data' rather than scripts.
+	# http://code.google.com/p/python-gflags/issues/detail?id=12
+	"${FILESDIR}"/${P}-scripts-install.patch
+
+	# Tests try to write to /tmp (sandbox).
+	# http://code.google.com/p/python-gflags/issues/detail?id=13
+	"${FILESDIR}"/${P}-tests-respect-tmpdir.patch
+)
+
+python_test() {
+	local t
+
+	cd tests || die
+	for t in *.py; do
+		# (it's ok to run the gflags_googletest.py too)
+		"${PYTHON}" "${t}" || die "Tests fail with ${EPYTHON}"
+	done
 }
