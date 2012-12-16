@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-0.9.8.7.ebuild,v 1.8 2012/08/29 22:22:13 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-0.9.8.11.ebuild,v 1.1 2012/12/16 23:40:38 xmw Exp $
 
 EAPI=4
 
@@ -11,11 +11,11 @@ inherit cmake-utils python vcs-snapshot
 
 DESCRIPTION="lightweight & open source microblogging client"
 HOMEPAGE="http://hotot.org"
-SRC_URI="https://github.com/shellex/Hotot/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/shellex/Hotot/tarball/f32d0fb4 -> ${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="chrome gtk kde qt4"
 
 RDEPEND="dev-python/dbus-python
