@@ -19,4 +19,8 @@
 		etc that are associated with annexed files but that benefit from full
 		revision control.
 	</longdescription>
+	<use>
+		<flag name="inotify">Enable inotify support (<pkg>dev-haskell/hinotify</pkg>)</flag>
+		<flag name="s3">Enable S3 support (<pkg>dev-haskell/hs3</pkg>)</flag>
+	</use>
 </pkgmetadata>
