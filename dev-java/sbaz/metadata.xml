@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>java</herd>
-	<maintainer>
-		<email>ali_bush@gentoo.org</email>
-		<name>Alistair Bush</name>
-	</maintainer>
 	<longdescription lang="en">
 		The Scala Bazaar system, "sbaz" in short, is a system used by Scala enthusiasts to share computer files with each other. In particular, it makes it easy to share libraries and applications. Just like with a real-life bazaar, working within a bazaar provides you with extra opportunities offered by other people, and gives you an easy way to share any offerings you wish to make to others in the community.
 	</longdescription>
