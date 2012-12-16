@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.99.5_p03-r1.ebuild,v 1.3 2012/12/16 17:48:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.99.5_p03-r1.ebuild,v 1.4 2012/12/16 17:49:25 ago Exp $
 
 EAPI=5
 inherit eutils linux-info toolchain-funcs udev
@@ -13,7 +13,7 @@ SRC_URI="http://support.reiner-sct.de/downloads/LINUX/V${PV/_p/_SP}/${MY_P}.tar.
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="fox kernel_linux xml"
 
 COMMON_DEPEND="sys-apps/pcsc-lite
