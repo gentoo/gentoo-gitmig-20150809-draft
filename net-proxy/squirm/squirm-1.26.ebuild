@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squirm/squirm-1.26.ebuild,v 1.1 2009/06/20 13:15:30 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squirm/squirm-1.26.ebuild,v 1.2 2012/12/16 13:48:17 ago Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://squirm.foote.com.au/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 IUSE=""
 
 src_prepare() {
