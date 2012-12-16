@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.98 2012/12/16 18:02:28 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.99 2012/12/16 19:54:27 aidecoe Exp $
+
+*dracut-024-r3 (16 Dec 2012)
+
+  16 Dec 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  files/024-0001-Fallback-to-external-blkid-and-path_id.patch,
+  +files/024-0002-dracut-functions.sh-support-for-altern.patch,
+  +files/024-0003-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  +dracut-024-r3.ebuild:
+  Use alternative dirs to search for udev rules. Use pkg-config to detect
+  primary udevdir at run-time. Fixes bug #447088.
 
   16 Dec 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-023-r2.ebuild,
   -dracut-024.ebuild:
