@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.5.0.ebuild,v 1.6 2012/11/22 08:49:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.5.0.ebuild,v 1.7 2012/12/16 12:38:14 eva Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -202,8 +202,11 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	elog "Don't forget to add yourself to the plugdev group "
-	elog "if you want to be able to access your camera."
+	if ! has_version "sys-auth/consolekit[acl]" ; then
+		elog "Don't forget to add yourself to the plugdev group "
+		elog "if you want to be able to access your camera."
+	fi
+
 	local old_udev_rules="${EROOT}"etc/udev/rules.d/99-libgphoto2.rules
 	if [[ -f ${old_udev_rules} ]]; then
 		rm -f "${old_udev_rules}"

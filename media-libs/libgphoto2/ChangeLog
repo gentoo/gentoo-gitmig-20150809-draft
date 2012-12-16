@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.224 2012/12/11 16:25:46 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.225 2012/12/16 12:38:14 eva Exp $
+
+  16 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  libgphoto2-2.4.14-r1.ebuild, libgphoto2-2.5.0.ebuild:
+  Hide plugdev message when it is not needed, bug #440450.
 
   11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> libgphoto2-2.4.14-r1.ebuild:
   virtualize udev by using udev.eclass to determine udevdir
