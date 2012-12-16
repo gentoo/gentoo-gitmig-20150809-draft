@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20120707.ebuild,v 1.4 2012/10/04 15:53:30 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20120707.ebuild,v 1.5 2012/12/16 19:08:40 jer Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ SLOT="0"
 if [ "${PV#9999}" != "${PV}" ]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+	KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 fi
 IUSE="10bit custom-cflags debug +interlaced pic static-libs +threads"
 
