@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.9.1-r1.ebuild,v 1.1 2012/12/15 23:02:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.9.1-r1.ebuild,v 1.2 2012/12/16 04:01:48 floppym Exp $
 
 EAPI="4"
 # python2.5 is not supported by pygments.
@@ -26,9 +26,11 @@ GLEP_SRC="${WORKDIR}/glep-0.4-r1"
 python_prepare_all() {
 	# It's easier to move them around now.
 	# TODO: add python_newmodule?
-	mkdir "${GLEP_SRC}"/{read,trans} || die
-	mv "${GLEP_SRC}"/{glepread,read/glep}.py || die
-	mv "${GLEP_SRC}"/{glepstrans,trans/gleps}.py || die
+	if use glep; then
+		mkdir "${GLEP_SRC}"/{read,trans} || die
+		mv "${GLEP_SRC}"/{glepread,read/glep}.py || die
+		mv "${GLEP_SRC}"/{glepstrans,trans/gleps}.py || die
+	fi
 
 	distutils-r1_python_prepare_all
 }
