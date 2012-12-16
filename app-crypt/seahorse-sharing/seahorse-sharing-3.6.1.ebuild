@@ -1,29 +1,22 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-sharing/seahorse-sharing-3.6.1.ebuild,v 1.1 2012/12/16 15:00:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-sharing/seahorse-sharing-3.6.1.ebuild,v 1.2 2012/12/16 19:20:27 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="yes" # disable asserts
 
 inherit gnome2
-if [[ ${PV} = 9999 ]]; then
-	inherit gnome2-live
-fi
 
 DESCRIPTION="Daemon for PGP public key sharing using DNS-SD and HKP"
 HOMEPAGE="http://projects.gnome.org/seahorse/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
-if [[ ${PV} = 9999 ]]; then
-	KEYWORDS=""
-else
-	KEYWORDS="~amd64 ~x86"
-fi
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 COMMON_DEPEND="dev-libs/glib:2
-	>=net-dns/avahi-0.6
+	>=net-dns/avahi-0.6:=
 	net-libs/libsoup:2.4
 	>=x11-libs/gtk+-3:3
 

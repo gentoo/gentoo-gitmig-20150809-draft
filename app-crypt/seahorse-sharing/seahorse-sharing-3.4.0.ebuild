@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-sharing/seahorse-sharing-3.4.0.ebuild,v 1.2 2012/05/03 18:16:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-sharing/seahorse-sharing-3.4.0.ebuild,v 1.3 2012/12/16 19:20:27 tetromino Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ inherit gnome2
 DESCRIPTION="Daemon for PGP public key sharing using DNS-SD and HKP"
 HOMEPAGE="http://projects.gnome.org/seahorse/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
