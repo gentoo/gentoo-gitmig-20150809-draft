@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.370 2012/12/16 19:29:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.371 2012/12/16 20:30:36 blueness Exp $
+
+  16 Dec 2012; Anthony G. Basile <blueness@gentoo.org>
+  -files/tor-0.2.2.24_alpha-respect-CFLAGS.patch, -files/torrc.sample.patch,
+  -tor-0.2.2.38.ebuild, -tor-0.2.2.39.ebuild, -tor-0.2.3.24_rc.ebuild:
+  Cleanup older vulnerable versions
 
   16 Dec 2012; Raúl Porcel <armin76@gentoo.org> tor-0.2.3.25.ebuild:
   sparc stable wrt #444804
