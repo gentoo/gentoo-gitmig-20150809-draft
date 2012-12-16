@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/free42-1.4.75.ebuild,v 1.5 2012/12/16 19:29:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/free42-1.4.75.ebuild,v 1.6 2012/12/16 20:02:53 nimiux Exp $
 
 EAPI=4
 
@@ -20,9 +20,11 @@ DEPEND="dev-libs/atk
 	x11-libs/gdk-pixbuf
 	x11-libs/gtk+:2
 	x11-libs/pango
-	media-libs/alsa-lib"
+	alsa? ( media-libs/alsa-lib )"
 
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	x11-libs/libX11
+	x11-libs/libXmu"
 
 S=${WORKDIR}/${PN}
 
