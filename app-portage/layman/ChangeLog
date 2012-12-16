@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.165 2012/11/19 02:45:55 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.166 2012/12/16 19:15:47 dolsen Exp $
+
+*layman-2.0.0 (16 Dec 2012)
+
+  16 Dec 2012; Brian Dolbec <dolsen@gentoo.org> +layman-2.0.0.ebuild:
+  Bumping rc5 up to 2.0.0 final.
 
   19 Nov 2012; Brian Dolbec <dolsen@gentoo.org> layman-9999.ebuild:
   fix the pyGPG dep to the correct category.
