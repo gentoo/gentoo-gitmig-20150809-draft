@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libpeas
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.9 2012/11/25 21:21:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.10 2012/12/16 21:23:19 tetromino Exp $
+
+*libpeas-1.6.2-r1 (16 Dec 2012)
+
+  16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/libpeas-1.2.0-PeasPluginInfo-annotation.patch,
+  -files/libpeas-1.4.0-pkgconfig.patch, -libpeas-1.6.0.ebuild,
+  -libpeas-1.6.1.ebuild, +libpeas-1.6.2-r1.ebuild:
+  Port to python-single-r1.eclass and EAPI5. Drop old.
 
 *libpeas-1.6.2 (25 Nov 2012)
 
