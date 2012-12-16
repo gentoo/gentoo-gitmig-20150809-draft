@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-CRC
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.13 2012/11/23 20:37:21 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.14 2012/12/16 18:19:21 armin76 Exp $
+
+  16 Dec 2012; Raúl Porcel <armin76@gentoo.org> Digest-CRC-0.180.0.ebuild:
+  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #443048
 
   23 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
   Digest-CRC-0.180.0.ebuild:
