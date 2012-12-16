@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/parted
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/ChangeLog,v 1.25 2012/11/23 18:17:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/ChangeLog,v 1.26 2012/12/16 19:32:29 armin76 Exp $
+
+  16 Dec 2012; Raúl Porcel <armin76@gentoo.org> parted-3.1-r1.ebuild:
+  Re-add ~alpha/~ia64/~s390/~sh/~sparc wrt #443048
 
   23 Nov 2012; Anthony G. Basile <blueness@gentoo.org> parted-3.1-r1.ebuild:
   keyword ~arm ~ppc ~pp64, bug #443048
