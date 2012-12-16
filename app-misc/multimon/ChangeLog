@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/multimon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/multimon/ChangeLog,v 1.18 2012/11/21 13:19:59 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/multimon/ChangeLog,v 1.19 2012/12/16 09:40:26 lu_zero Exp $
+
+*multimon-1.0-r3 (16 Dec 2012)
+
+  16 Dec 2012; Luca Barbato <lu_zero@gentoo.org> +multimon-1.0-r3.ebuild:
+  Import ubuntu fixes and improvements
 
   21 Nov 2012; Michael Palimaka <kensington@gentoo.org> -multimon-1.0.ebuild:
   Remove old.
