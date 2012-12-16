@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pep/pep-2.8.ebuild,v 1.14 2012/06/03 23:56:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pep/pep-2.8.ebuild,v 1.15 2012/12/16 17:49:20 armin76 Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://folk.uio.no/gisle/enjoy/${PN}${PV//./}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~mips ppc sparc x86 ~x86-linux ~ppc-macos"
+KEYWORDS="~mips ppc x86 ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND="app-arch/unzip"
