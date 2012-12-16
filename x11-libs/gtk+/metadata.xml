@@ -13,8 +13,6 @@
 	  in printing</flag>
 	<flag name="egl">Use EGL surfaces and Cairo GL in the wayland
 	  backend. This flag has no effect on X or aqua backends.</flag>
-    <flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
-      for introspection</flag>
     <flag name="packagekit">Enable support for the distro-neutral package
 	  manager GUI <pkg>app-admin/packagekit</pkg> in application chooser</flag>
   </use>

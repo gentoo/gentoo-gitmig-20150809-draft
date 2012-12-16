@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.14.ebuild,v 1.1 2012/12/06 06:13:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.14.ebuild,v 1.2 2012/12/16 06:40:24 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils flag-o-matic gnome.org virtualx autotools
 
@@ -27,11 +27,11 @@ COMMON_DEPEND="!aqua? (
 		x11-libs/libXfixes
 		x11-libs/libXcomposite
 		x11-libs/libXdamage
-		>=x11-libs/cairo-1.6[X,svg]
+		>=x11-libs/cairo-1.6:=[X,svg]
 		x11-libs/gdk-pixbuf:2[X,introspection?]
 	)
 	aqua? (
-		>=x11-libs/cairo-1.6[aqua,svg]
+		>=x11-libs/cairo-1.6:=[aqua,svg]
 		x11-libs/gdk-pixbuf:2[introspection?]
 	)
 	xinerama? ( x11-libs/libXinerama )
@@ -40,7 +40,7 @@ COMMON_DEPEND="!aqua? (
 	>=dev-libs/atk-1.29.2[introspection?]
 	media-libs/fontconfig
 	x11-misc/shared-mime-info
-	cups? ( net-print/cups )
+	cups? ( net-print/cups:= )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.3 )
 	!<gnome-base/gail-1000"
 DEPEND="${COMMON_DEPEND}
@@ -158,20 +158,15 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf="$(use_enable xinerama)
-		$(use_enable cups cups auto)
-		$(use_enable introspection)
-		--disable-papi"
-	if use aqua; then
-		myconf="${myconf} --with-gdktarget=quartz"
-	else
-		myconf="${myconf} --with-gdktarget=x11 --with-xinput"
-	fi
-
 	# Passing --disable-debug is not recommended for production use
-	use debug && myconf="${myconf} --enable-debug=yes"
-
-	econf ${myconf}
+	econf \
+		$(usex aqua --with-gdktarget=quartz --with-gdktarget=x11) \
+		$(usex aqua "" --with-xinput) \
+		$(usex debug --enable-debug=yes "") \
+		$(use_enable cups cups auto) \
+		$(use_enable introspection) \
+		$(use_enable xinerama) \
+		--disable-papi
 }
 
 src_test() {

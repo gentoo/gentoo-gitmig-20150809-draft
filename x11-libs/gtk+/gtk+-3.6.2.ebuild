@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.6.2.ebuild,v 1.2 2012/12/06 06:13:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.6.2.ebuild,v 1.3 2012/12/16 06:40:24 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils flag-o-matic gnome.org gnome2-utils multilib virtualx
 
@@ -49,13 +49,13 @@ COMMON_DEPEND="X? (
 	>=dev-libs/glib-2.33.1
 	>=x11-libs/pango-1.30[introspection?]
 	>=dev-libs/atk-2.5.3[introspection?]
-	>=x11-libs/cairo-1.10.0[aqua?,glib,svg,X?]
+	>=x11-libs/cairo-1.10.0:=[aqua?,glib,svg,X?]
 	>=x11-libs/gdk-pixbuf-2.26:2[introspection?,X?]
 	>=x11-libs/gtk+-2.24:2
 	media-libs/fontconfig
 	x11-misc/shared-mime-info
 	colord? ( >=x11-misc/colord-0.1.9 )
-	cups? ( >=net-print/cups-1.2 )
+	cups? ( >=net-print/cups-1.2:= )
 	introspection? ( >=dev-libs/gobject-introspection-1.32 )"
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xsl-stylesheets
@@ -133,31 +133,29 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf="$(use_enable aqua quartz-backend)
-		$(use_enable colord)
-		$(use_enable cups cups auto)
-		$(use_enable introspection)
-		$(use_enable packagekit)
-		$(use_enable wayland wayland-backend)
-		$(use_enable X x11-backend)
-		$(use_enable X xcomposite)
-		$(use_enable X xdamage)
-		$(use_enable X xfixes)
-		$(use_enable X xkb)
-		$(use_enable X xrandr)
-		$(use_enable xinerama)
-		--disable-papi
-		--enable-man
-		--enable-gtk2-dependency"
-
-	use wayland && myconf="${myconf} $(use_enable egl wayland-cairo-gl)"
-
 	# Passing --disable-debug is not recommended for production use
-	use debug && myconf="${myconf} --enable-debug=yes"
-
 	# need libdir here to avoid a double slash in a path that libtool doesn't
 	# grok so well during install (// between $EPREFIX and usr ...)
-	econf --libdir="${EPREFIX}/usr/$(get_libdir)" ${myconf}
+	econf \
+		$(use_enable aqua quartz-backend) \
+		$(usex wayland $(use_enable egl wayland-cairo-gl) "") \
+		$(use_enable colord) \
+		$(use_enable cups cups auto) \
+		$(usex debug --enable-debug=yes "") \
+		$(use_enable introspection) \
+		$(use_enable packagekit) \
+		$(use_enable wayland wayland-backend) \
+		$(use_enable X x11-backend) \
+		$(use_enable X xcomposite) \
+		$(use_enable X xdamage) \
+		$(use_enable X xfixes) \
+		$(use_enable X xkb) \
+		$(use_enable X xrandr) \
+		$(use_enable xinerama) \
+		--disable-papi \
+		--enable-man \
+		--enable-gtk2-dependency \
+		--libdir="${EPREFIX}/usr/$(get_libdir)"
 }
 
 src_test() {
