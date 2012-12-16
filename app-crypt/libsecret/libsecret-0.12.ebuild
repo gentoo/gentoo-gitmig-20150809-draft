@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/libsecret-0.12.ebuild,v 1.1 2012/12/09 22:33:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/libsecret-0.12.ebuild,v 1.2 2012/12/16 08:22:18 tetromino Exp $
 
 EAPI="5"
 VALA_MIN_API_VERSION=0.18
@@ -70,9 +70,4 @@ src_prepare() {
 
 src_test() {
 	Xemake check
-}
-
-src_install() {
-	gnome2_src_install
-	prune_libtool_files --all
 }
