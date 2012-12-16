@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/pcf2bdf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/pcf2bdf/ChangeLog,v 1.13 2009/11/25 09:48:33 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/pcf2bdf/ChangeLog,v 1.14 2012/12/16 17:09:07 ulm Exp $
+
+  16 Dec 2012; Ulrich Müller <ulm@gentoo.org> pcf2bdf-1.04-r1.ebuild:
+  Fix LICENSE, see README.txt, bug 445674.
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org> pcf2bdf-1.04-r1.ebuild:
   amd64 stable, bug #284020
