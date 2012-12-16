@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.115 2012/12/15 23:23:46 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.116 2012/12/16 06:12:56 dolsen Exp $
+
+*mirrorselect-2.2.0-r1 (16 Dec 2012)
+
+  16 Dec 2012; Brian Dolbec <dolsen@gentoo.org>
+  +files/2.2.0-Fix-setup.py-PVR.patch, -mirrorselect-2.2.0.ebuild,
+  +mirrorselect-2.2.0-r1.ebuild, mirrorselect-9999.ebuild,
+  +files/2.2.0-Ignore-inaccessible-fsmirrors.patch:
+  Fix bug 373195 and an incorrect egg-info version during install.
 
 *mirrorselect-2.2.0 (15 Dec 2012)
 

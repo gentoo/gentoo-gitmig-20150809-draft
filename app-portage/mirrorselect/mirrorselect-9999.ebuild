@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/mirrorselect-9999.ebuild,v 1.2 2012/11/15 04:49:30 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/mirrorselect-9999.ebuild,v 1.3 2012/12/16 06:12:56 dolsen Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -41,7 +41,7 @@ src_prepare() {
 }
 
 distutils_src_compile_pre_hook() {
-	echo VERSION="9999-${EGIT_VERSION}" "$(PYTHON)" setup.py set_version
+	echo Now setting version... VERSION="9999-${EGIT_VERSION}" "$(PYTHON)" setup.py set_version
 	VERSION="9999-${EGIT_VERSION}" "$(PYTHON)" setup.py set_version
 }
 
