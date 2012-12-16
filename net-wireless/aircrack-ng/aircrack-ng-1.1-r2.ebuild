@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.1-r2.ebuild,v 1.2 2012/12/16 16:54:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.1-r2.ebuild,v 1.3 2012/12/16 16:55:14 ago Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.aircrack-ng.org/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="+sqlite kernel_linux kernel_FreeBSD"
 
 DEPEND="dev-libs/openssl
