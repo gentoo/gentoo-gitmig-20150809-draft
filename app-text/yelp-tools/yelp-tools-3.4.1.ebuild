@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/yelp-tools-3.4.1.ebuild,v 1.3 2012/10/04 14:46:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/yelp-tools-3.4.1.ebuild,v 1.4 2012/12/16 10:22:55 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -10,7 +10,7 @@ inherit gnome2
 DESCRIPTION="Collection of tools for building and converting documentation"
 HOMEPAGE="http://www.gnome.org/"
 
-LICENSE="|| ( GPL-2 freedist ) GPL-2" # yelp.m4 is GPL2 || freely distributable
+LICENSE="|| ( GPL-2+ freedist ) GPL-2+" # yelp.m4 is GPL2 || freely distributable
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
