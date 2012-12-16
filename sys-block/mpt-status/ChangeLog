@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/mpt-status
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mpt-status/ChangeLog,v 1.8 2008/06/16 19:05:25 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mpt-status/ChangeLog,v 1.9 2012/12/16 14:19:36 pacho Exp $
+
+  16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due retirement, #95685
 
   16 Jun 2008; Robin H. Johnson <robbat2@gentoo.org>
   mpt-status-1.2.0.ebuild:
@@ -38,4 +41,3 @@
   +files/mpt-status-1.1.6-gentoo.patch, +metadata.xml,
   +mpt-status-1.1.6.ebuild:
   Initial version, requested in bug #125143.
-
