@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/x11
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.25 2012/09/12 14:44:14 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.26 2012/12/16 18:50:23 ago Exp $
+
+  16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> x11-1.5.0.1.ebuild:
+  Stable for amd64, wrt bug #447462
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> x11-1.4.6.1.ebuild,
   x11-1.5.0.0-r1.ebuild, x11-1.5.0.0.ebuild, x11-1.5.0.1.ebuild:

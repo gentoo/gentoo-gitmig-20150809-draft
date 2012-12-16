@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/syb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/ChangeLog,v 1.11 2012/09/18 06:27:07 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/ChangeLog,v 1.12 2012/12/16 18:50:49 ago Exp $
+
+  16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> syb-0.3.7.ebuild:
+  Stable for amd64, wrt bug #447462
 
 *syb-0.3.7 (18 Sep 2012)
 
