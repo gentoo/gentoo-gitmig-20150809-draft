@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-3.2.1.2.ebuild,v 1.10 2012/10/16 21:45:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-3.6.2.ebuild,v 1.1 2012/12/16 19:22:25 eva Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="no"
 
-inherit gnome2 eutils autotools
+inherit autotools eutils gnome2
 
 DESCRIPTION="GNOME default icon theme"
 HOMEPAGE="http://www.gnome.org/ http://people.freedesktop.org/~jimmac/icons/#git"
@@ -16,15 +16,15 @@ SRC_URI="${SRC_URI}
 LICENSE="|| ( LGPL-3 CCPL-Attribution-ShareAlike-3.0 )
 	branding? ( CCPL-Sampling-Plus-1.0 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="branding"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
 
 RDEPEND=">=x11-themes/hicolor-icon-theme-0.10"
 DEPEND="${RDEPEND}
 	>=x11-misc/icon-naming-utils-0.8.7
-	virtual/pkgconfig
 	>=dev-util/intltool-0.40
-	sys-devel/gettext"
+	sys-devel/gettext
+	virtual/pkgconfig"
 
 # This ebuild does not install any binaries
 RESTRICT="binchecks strip"
@@ -34,12 +34,10 @@ pkg_setup() {
 	DOCS="AUTHORS NEWS TODO"
 	G2CONF="${G2CONF}
 		--enable-icon-mapping
-		GTK_UPDATE_ICON_CACHE=$(type -p true)"
+		GTK_UPDATE_ICON_CACHE=$(type -P true)"
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	if use branding; then
 		for i in 16 22 24 32 48; do
 			cp "${WORKDIR}"/tango-gentoo-v1.1/${i}x${i}/gentoo.png \
@@ -50,7 +48,7 @@ src_prepare() {
 
 	# Revert upstream commit that is wrongly updating icon cache, upstream bug #642449
 	EPATCH_OPTS="-R" epatch "${FILESDIR}/${PN}-2.91.7-update-cache.patch"
-
-	eaclocal --force # workaround for weird autotools.eclass bug #438296, #419933
 	eautoreconf
+
+	gnome2_src_prepare
 }
