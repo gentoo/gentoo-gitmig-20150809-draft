@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.233 2012/11/21 11:29:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.234 2012/12/16 17:39:10 armin76 Exp $
+
+  16 Dec 2012; Raúl Porcel <armin76@gentoo.org> bind-tools-9.9.2.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #440318
 
   21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> bind-tools-9.9.2.ebuild:
   Stable for x86, wrt bug #440318
