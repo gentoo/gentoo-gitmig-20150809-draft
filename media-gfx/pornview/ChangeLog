@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pornview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.51 2012/12/01 21:25:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.52 2012/12/16 21:05:56 hasufell Exp $
+
+  16 Dec 2012; Julian Ospald <hasufell@gentoo.org> pornview-0.2.2.ebuild:
+  x86 stable wrt #445089
 
   01 Dec 2012; <ago@gentoo.org> pornview-0.2.2.ebuild:
   Stable for amd64, wrt bug #445089
