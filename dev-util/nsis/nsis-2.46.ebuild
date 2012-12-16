@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.46.ebuild,v 1.2 2010/05/23 19:11:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.46.ebuild,v 1.3 2012/12/16 16:35:10 ulm Exp $
 
 EAPI="2"
 mingw32_variants=$(echo {,i{6,5,4,3}86-{,pc-}}mingw32)
@@ -9,7 +9,7 @@ DESCRIPTION="Nullsoft Scriptable Install System"
 HOMEPAGE="http://nsis.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="ZLIB BZIP2 CPL-1.0"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="bzip2 config-log doc zlib"
