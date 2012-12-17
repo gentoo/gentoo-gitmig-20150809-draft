@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.361 2012/12/17 14:09:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.362 2012/12/17 19:18:52 eras Exp $
+
+*squid-3.2.5 (17 Dec 2012)
+*squid-3.1.22 (17 Dec 2012)
+
+  17 Dec 2012; Eray Aslan <eras@gentoo.org> +files/squid.initd-logrotate-r2,
+  +files/squid.initd-r2, +squid-3.1.22.ebuild, +squid-3.2.5.ebuild:
+  Security bump - bug #447596
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> -squid-2.7.9.ebuild,
   -squid-3.1.15.ebuild, -squid-3.1.16.ebuild, -squid-3.1.18.ebuild,
