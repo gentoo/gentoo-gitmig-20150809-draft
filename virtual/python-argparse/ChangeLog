@@ -1,6 +1,10 @@
 # ChangeLog for virtual/python-argparse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-argparse/ChangeLog,v 1.4 2012/12/15 10:55:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-argparse/ChangeLog,v 1.5 2012/12/17 19:38:35 mgorny Exp $
+
+  17 Dec 2012; Michał Górny <mgorny@gentoo.org> python-argparse-0.ebuild,
+  python-argparse-1.ebuild:
+  Bump to EAPI=5 to make Paludis happy, bug #447524.
 
   15 Dec 2012; Michał Górny <mgorny@gentoo.org> python-argparse-1.ebuild:
   Remove jython2.5 support, bug #447148.
