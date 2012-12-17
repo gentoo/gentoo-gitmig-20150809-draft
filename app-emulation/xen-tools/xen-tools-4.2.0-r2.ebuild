@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.0-r2.ebuild,v 1.1 2012/12/16 16:15:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.0-r2.ebuild,v 1.2 2012/12/17 00:42:19 mgorny Exp $
 
-EAPI="4"
+EAPI=5
 
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 PYTHON_REQ_USE='xml,threads'
