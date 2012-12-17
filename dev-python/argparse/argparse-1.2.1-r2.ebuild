@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/argparse-1.2.1-r2.ebuild,v 1.2 2012/12/15 10:58:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/argparse-1.2.1-r2.ebuild,v 1.3 2012/12/17 19:56:10 mgorny Exp $
 
-EAPI=4
+EAPI=5
 # Other implementations ship argparse.
 PYTHON_COMPAT=( python{2_5,2_6,3_1} )
 

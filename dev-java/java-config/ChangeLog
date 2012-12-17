@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-config
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.272 2012/12/05 19:05:48 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.273 2012/12/17 20:02:23 mgorny Exp $
+
+  17 Dec 2012; Michał Górny <mgorny@gentoo.org> java-config-2.1.12-r1.ebuild:
+  Bump to EAPI=5 to make Paludis happy, bug #447524.
 
 *java-config-2.1.12-r1 (05 Dec 2012)
 
