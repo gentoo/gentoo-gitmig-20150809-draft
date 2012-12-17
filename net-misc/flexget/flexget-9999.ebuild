@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.27 2012/11/02 23:05:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.28 2012/12/17 19:53:22 mgorny Exp $
 
-EAPI=4
+EAPI=5
 
 PYTHON_COMPAT=( python2_{6,7} )
 
