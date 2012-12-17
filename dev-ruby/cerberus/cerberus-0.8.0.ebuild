@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/cerberus-0.8.0.ebuild,v 1.1 2011/08/07 08:24:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/cerberus-0.8.0.ebuild,v 1.2 2012/12/17 15:43:57 ago Exp $
 
 EAPI="3"
 USE_RUBY="ruby18 ree18"
@@ -15,7 +15,7 @@ HOMEPAGE="http://rubyforge.org/projects/cerberus"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 # The json dependency is indirect via the vendored twitter code.
