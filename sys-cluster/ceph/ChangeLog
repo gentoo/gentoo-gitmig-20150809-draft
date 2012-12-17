@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/ceph
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.26 2012/09/14 08:49:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.27 2012/12/17 13:07:51 alexxy Exp $
+
+*ceph-0.55.1 (17 Dec 2012)
+
+  17 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org> +ceph-0.55.1.ebuild:
+  [sys-cluster/ceph] Version bump
 
 *ceph-0.51 (14 Sep 2012)
 
