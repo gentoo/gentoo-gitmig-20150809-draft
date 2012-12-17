@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-TCP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-TCP/ChangeLog,v 1.8 2012/11/13 17:51:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-TCP/ChangeLog,v 1.9 2012/12/17 18:31:01 ago Exp $
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> Test-TCP-1.180.0.ebuild:
+  Add ~ppc64, wrt bug #442188
 
   13 Nov 2012; Jeroen Roovers <jer@gentoo.org> Test-TCP-1.180.0.ebuild:
   Marked ~hppa (bug #442188).

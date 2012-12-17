@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ZMQ-Constants
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ZMQ-Constants/ChangeLog,v 1.3 2012/11/13 17:49:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ZMQ-Constants/ChangeLog,v 1.4 2012/12/17 18:30:18 ago Exp $
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> ZMQ-Constants-1.10.0.ebuild:
+  Add ~ppc64, wrt bug #442188
 
   13 Nov 2012; Jeroen Roovers <jer@gentoo.org> ZMQ-Constants-1.10.0.ebuild:
   Marked ~hppa (bug #442188).

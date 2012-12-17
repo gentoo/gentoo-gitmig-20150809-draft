@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Requires
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Requires/ChangeLog,v 1.23 2012/09/09 16:24:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Requires/ChangeLog,v 1.24 2012/12/17 18:30:42 ago Exp $
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> Test-Requires-0.60.0.ebuild:
+  Add ~ppc64, wrt bug #442188
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> Test-Requires-0.60.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #418803
