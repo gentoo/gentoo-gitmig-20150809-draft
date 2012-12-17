@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/dzip/dzip-2.9-r1.ebuild,v 1.4 2008/12/06 15:40:54 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/dzip/dzip-2.9-r1.ebuild,v 1.5 2012/12/17 13:39:30 ulm Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -8,7 +8,7 @@ DESCRIPTION="compressor/uncompressor for demo recordings from id's Quake"
 HOMEPAGE="http://speeddemosarchive.com/dzip/"
 SRC_URI="http://speeddemosarchive.com/dzip/dz${PV/./}src.zip"
 
-LICENSE="as-is"
+LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE=""
