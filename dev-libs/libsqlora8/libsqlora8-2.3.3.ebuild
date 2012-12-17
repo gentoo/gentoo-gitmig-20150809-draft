@@ -1,16 +1,15 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsqlora8/libsqlora8-2.3.3.ebuild,v 1.1 2011/05/11 23:27:04 xmw Exp $
-
-IUSE="threads orathreads"
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsqlora8/libsqlora8-2.3.3.ebuild,v 1.2 2012/12/17 20:05:40 ulm Exp $
 
 DESCRIPTION="libsqlora8 is a simple C-library to access Oracle databases via the OCI interface"
 SRC_URI="http://www.poitschke.de/libsqlora8/${P}.tar.gz"
 HOMEPAGE="http://www.poitschke.de/libsqlora8/index_noframe.html"
 
-LICENSE="as-is"
+LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE="threads orathreads"
 
 DEPEND=""
 
@@ -55,7 +54,7 @@ src_compile() {
 
 src_install () {
 	einstall
-	dodoc COPYING ChangeLog INSTALL NEWS NEWS-2.2
+	dodoc ChangeLog NEWS NEWS-2.2
 
 	# TODO
 	# Copy contents of doc and examples directory to doc

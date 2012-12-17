@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libsqlora8
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsqlora8/ChangeLog,v 1.10 2012/05/10 15:54:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsqlora8/ChangeLog,v 1.11 2012/12/17 20:05:40 ulm Exp $
+
+  17 Dec 2012; Ulrich Müller <ulm@gentoo.org> libsqlora8-2.3.3.ebuild:
+  Fix LICENSE, see COPYING file, bug 447636. Don't install useless files in
+  docdir.
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -libsqlora8-2.2.11.ebuild:
   Remove old
