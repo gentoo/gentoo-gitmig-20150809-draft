@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/gdbus-codegen-2.34.2.ebuild,v 1.2 2012/12/10 10:21:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/gdbus-codegen-2.34.2.ebuild,v 1.3 2012/12/17 19:53:28 mgorny Exp $
 
-EAPI="4"
+EAPI="5"
 GNOME_ORG_MODULE="glib"
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
 PYTHON_REQ_USE="xml"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.41 2012/12/10 10:21:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.42 2012/12/17 19:53:28 mgorny Exp $
+
+  17 Dec 2012; Michał Górny <mgorny@gentoo.org> gdbus-codegen-2.34.2.ebuild:
+  Bump to EAPI=5 to make Paludis happy, bug #447524.
 
   10 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gdbus-codegen-2.34.2.ebuild, gdbus-codegen-2.34.3.ebuild:
