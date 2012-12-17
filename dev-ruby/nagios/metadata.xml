@@ -5,4 +5,5 @@
 		<email>hollow@gentoo.org</email>
 		<name>Benedikt Böhm</name>
 	</maintainer>
+	<herd>ruby></herd>
 </pkgmetadata>
