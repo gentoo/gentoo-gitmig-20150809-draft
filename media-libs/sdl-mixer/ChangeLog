@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.111 2012/11/17 18:04:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.112 2012/12/17 01:35:51 vapier Exp $
+
+*sdl-mixer-1.2.12-r2 (17 Dec 2012)
+
+  17 Dec 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/sdl-mixer-1.2.12-mikmod-r587.patch,
+  +files/sdl-mixer-1.2.12-mikmod-r588.patch, +sdl-mixer-1.2.12-r2.ebuild:
+  Add fixes from upstream for working with newer mikmod versions #445980 by
+  Benjamin Réveillé.
 
   17 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org>
   -files/sdl-mixer-1.2.11-midi.patch, -files/sdl-mixer-1.2.11-multilib.patch,
