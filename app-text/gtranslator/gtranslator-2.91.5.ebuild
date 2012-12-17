@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.91.5.ebuild,v 1.2 2012/12/16 12:20:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.91.5.ebuild,v 1.3 2012/12/17 08:20:16 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ inherit gnome2 multilib python
 DESCRIPTION="An enhanced gettext po file editor for GNOME"
 HOMEPAGE="http://gtranslator.sourceforge.net/"
 
-LICENSE="GPL-3"
+LICENSE="GPL-3+ FDL-1.1+"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gnome spell"
@@ -22,6 +22,7 @@ COMMON_DEPEND="
 	>=x11-libs/gtk+-3.4.2:3
 	>=x11-libs/gtksourceview-3.0.0:3.0
 	>=dev-libs/gdl-2.91.91:3=
+	<dev-libs/gdl-3.5
 	>=dev-libs/libxml2-2.4.12:2
 	>=dev-libs/json-glib-0.12.0
 	>=dev-libs/libpeas-1.2[gtk]

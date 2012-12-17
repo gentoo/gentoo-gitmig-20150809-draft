@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-1.9.13.ebuild,v 1.12 2012/09/15 03:38:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-1.9.13.ebuild,v 1.13 2012/12/17 08:20:16 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -10,10 +10,10 @@ inherit autotools eutils gnome2
 DESCRIPTION="An enhanced gettext po file editor for GNOME"
 HOMEPAGE="http://gtranslator.sourceforge.net/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+ FDL-1.1+"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="doc http gnome spell"
+IUSE="http gnome spell"
 
 RDEPEND="
 	>=dev-libs/glib-2.25.10:2
@@ -38,8 +38,7 @@ DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
 	app-text/docbook-xml-dtd:4.1.2
 	gnome-base/gnome-common
-	dev-util/gtk-doc-am
-	doc? ( >=dev-util/gtk-doc-1 )"
+	dev-util/gtk-doc-am"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog HACKING INSTALL NEWS README THANKS"
