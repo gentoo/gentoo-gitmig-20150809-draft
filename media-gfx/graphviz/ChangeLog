@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.268 2012/08/07 21:02:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.269 2012/12/17 20:35:03 ago Exp $
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> graphviz-2.28.0.ebuild:
+  Add ~ppc64, wrt bug #419621
 
   07 Aug 2012; Alexis Ballier <aballier@gentoo.org> graphviz-2.28.0.ebuild:
   keyword ~amd64-fbsd, bug #419621
