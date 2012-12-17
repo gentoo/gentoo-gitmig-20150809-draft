@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/webfs-1.21-r2.ebuild,v 1.6 2012/12/04 10:04:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/webfs-1.21-r2.ebuild,v 1.7 2012/12/17 04:37:44 zmedico Exp $
 
 EAPI=4
 inherit eutils
@@ -21,6 +21,7 @@ RDEPEND="${DEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/webfs-1.21-Variables.mk-dont-strip-binaries-on-install.patch"
+	sed -e "s:/etc/mime.types:${EPREFIX}\\0:" -i GNUmakefile || die "sed failed"
 }
 
 src_compile() {
