@@ -1,25 +1,26 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/udevil-0.3.2.ebuild,v 1.3 2012/11/29 02:05:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/udevil-0.3.6.ebuild,v 1.1 2012/12/17 18:44:03 hasufell Exp $
 
-EAPI=4
+EAPI=5
 
-inherit eutils autotools user
+inherit eutils autotools user vcs-snapshot
 
 DESCRIPTION="mount and unmount removable devices without a password"
 HOMEPAGE="http://ignorantguru.github.com/udevil/"
-SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/${P}.tar.xz"
+SRC_URI="https://github.com/IgnorantGuru/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="systemd"
 
 RDEPEND=">=app-shells/bash-4.0
 	dev-libs/glib:2
 	sys-apps/util-linux
+	virtual/acl
 	>=virtual/udev-143
-	virtual/acl"
+	systemd? ( sys-apps/systemd )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext
@@ -30,13 +31,14 @@ pkg_setup(){
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.2.8-flags.patch"
+	epatch "${FILESDIR}/${P}-flags.patch"
 	eautoreconf
 }
 
 src_configure() {
 	econf \
-		--with-setfacl-prog="$(type -P setfacl)"
+		--with-setfacl-prog="$(type -P setfacl)" \
+		$(use_enable systemd)
 }
 
 src_install() {
