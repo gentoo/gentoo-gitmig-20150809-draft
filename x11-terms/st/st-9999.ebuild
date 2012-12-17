@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-9999.ebuild,v 1.5 2012/03/07 18:17:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-9999.ebuild,v 1.6 2012/12/17 21:56:50 xmw Exp $
 
 EAPI=3
 
-inherit mercurial savedconfig toolchain-funcs
+inherit git-2 savedconfig toolchain-funcs
 
 DESCRIPTION="simple terminal implementation for X"
 HOMEPAGE="http://st.suckless.org/"
-EHG_REPO_URI="http://hg.suckless.org/st"
+EGIT_REPO_URI="git://git.suckless.org/st"
 
 LICENSE="BSD"
 SLOT="0"

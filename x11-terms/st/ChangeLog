@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/st
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.8 2012/11/07 17:48:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.9 2012/12/17 21:56:50 xmw Exp $
+
+  17 Dec 2012; Michael Weber <xmw@gentoo.org> st-9999.ebuild:
+  Update live ebuild from mercurial to git (thanks Andreas Wiese, bug 447564)
 
   07 Nov 2012; Jeroen Roovers <jer@gentoo.org> st-0.3.ebuild:
   Show elog messages only on first install.
