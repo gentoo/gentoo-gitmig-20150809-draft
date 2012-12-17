@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/gnome-devel-docs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnome-devel-docs/ChangeLog,v 1.12 2012/05/14 06:05:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnome-devel-docs/ChangeLog,v 1.13 2012/12/17 11:31:40 tetromino Exp $
+
+*gnome-devel-docs-3.6.2 (17 Dec 2012)
+
+  17 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-devel-docs-2.30.1.ebuild, gnome-devel-docs-2.32.0.ebuild,
+  -gnome-devel-docs-3.2.1.ebuild, gnome-devel-docs-3.4.1.ebuild,
+  +gnome-devel-docs-3.6.2.ebuild:
+  Version bump for gnome-3.6. Update license. Drop old.
 
 *gnome-devel-docs-3.4.1 (14 May 2012)
 
