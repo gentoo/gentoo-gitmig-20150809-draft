@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mime-types
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.32 2012/10/05 18:13:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.33 2012/12/17 19:06:58 graaff Exp $
+
+  17 Dec 2012; Hans de Graaff <graaff@gentoo.org> -mime-types-1.16-r2.ebuild:
+  Cleanup.
 
   05 Oct 2012; Brent Baude <ranger@gentoo.org> mime-types-1.19.ebuild:
   Marking mime-types-1.19 ppc64 for bug 432844
