@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14303 2012/12/17 05:24:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14304 2012/12/17 08:46:35 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -536,6 +536,7 @@ app-i18n/ibus-table-yinma
 # Other stuff
 =app-accessibility/accerciser-3.6*
 =app-accessibility/orca-3.6*
+=app-admin/gnome-system-log-3.6*
 =app-arch/file-roller-3.6*
 =app-cdr/brasero-3.6*
 =app-crypt/gcr-3.6*
