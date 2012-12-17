@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/smart-live-rebuild-1.3.ebuild,v 1.2 2012/12/12 18:29:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/smart-live-rebuild-1.3.ebuild,v 1.3 2012/12/17 20:02:37 mgorny Exp $
 
-EAPI=4
+EAPI=5
 PYTHON_COMPAT=(python2_6 python2_7 python3_1 python3_2)
 
 inherit distutils-r1

@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/diffmask
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/diffmask/ChangeLog,v 1.16 2012/12/15 12:34:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/diffmask/ChangeLog,v 1.17 2012/12/17 20:02:20 mgorny Exp $
+
+  17 Dec 2012; Michał Górny <mgorny@gentoo.org> diffmask-0.3.3-r2.ebuild,
+  diffmask-9999.ebuild:
+  Bump to EAPI=5 to make Paludis happy, bug #447524.
 
 *diffmask-9999 (15 Dec 2012)
 
