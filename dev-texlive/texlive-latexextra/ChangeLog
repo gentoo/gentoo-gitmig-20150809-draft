@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-latexextra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexextra/ChangeLog,v 1.75 2012/10/03 18:21:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexextra/ChangeLog,v 1.76 2012/12/17 20:12:25 ago Exp $
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
+  texlive-latexextra-2012.ebuild:
+  Add ~ppc64, wrt bug #428248
 
   03 Oct 2012; Ulrich Müller <ulm@gentoo.org>
   texlive-latexextra-2011-r2.ebuild, texlive-latexextra-2012.ebuild:
