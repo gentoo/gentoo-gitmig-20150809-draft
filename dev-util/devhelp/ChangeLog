@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.142 2012/12/17 10:08:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.143 2012/12/17 16:27:10 ago Exp $
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> devhelp-3.4.1.ebuild,
+  devhelp-3.6.1-r1.ebuild:
+  Add ~ppc64, wrt bug #416571
 
 *devhelp-3.6.1-r1 (17 Dec 2012)
 
