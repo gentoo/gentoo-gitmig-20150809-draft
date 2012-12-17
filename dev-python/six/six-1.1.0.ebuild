@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/six/six-1.1.0.ebuild,v 1.9 2012/10/07 09:30:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/six/six-1.1.0.ebuild,v 1.10 2012/12/17 17:54:35 ago Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ia64 ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="doc"
 
 DEPEND="doc? ( dev-python/sphinx )"
