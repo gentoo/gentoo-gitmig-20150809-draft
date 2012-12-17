@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/chef-server-webui-0.10.10.ebuild,v 1.1 2012/06/17 15:45:19 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/chef-server-webui-10.16.2.ebuild,v 1.1 2012/12/17 13:11:23 hollow Exp $
 
-EAPI="4"
-USE_RUBY="ruby18"
+EAPI=4
+USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_TASK_TEST=""
