@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libhid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhid/ChangeLog,v 1.6 2012/12/10 16:46:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhid/ChangeLog,v 1.7 2012/12/17 20:56:20 ago Exp $
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libhid-0.2.16-r3.ebuild:
+  Add ~ppc64, wrt bug #414993
 
   10 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libhid-0.2.16-r3.ebuild:
   Add ~ppc, wrt bug #414993
