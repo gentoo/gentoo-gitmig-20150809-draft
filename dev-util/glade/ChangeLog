@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.176 2012/11/26 19:59:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.177 2012/12/17 06:03:07 tetromino Exp $
+
+*glade-3.14.2 (17 Dec 2012)
+*glade-3.8.3 (17 Dec 2012)
+
+  17 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> glade-3.8.2.ebuild,
+  +glade-3.8.3.ebuild, glade-3.12.1.ebuild, glade-3.12.2.ebuild,
+  +files/glade-3.14.1-doc-version.patch, +glade-3.14.2.ebuild, metadata.xml:
+  Version bumps for gnome-3.6 and for gtk2. Improve description, update
+  license, drop useless doc USE flag, switch to global introspection flag.
 
   26 Nov 2012; Gilles Dartiguelongue <eva@gentoo.org> -glade-3.10.2.ebuild,
   glade-3.12.2.ebuild:

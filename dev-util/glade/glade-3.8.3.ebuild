@@ -1,20 +1,21 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.8.2.ebuild,v 1.10 2012/12/17 06:03:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.8.3.ebuild,v 1.1 2012/12/17 06:03:07 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="yes"
 GNOME_ORG_MODULE="glade3"
 GNOME2_LA_PUNT="yes"
+PYTHON_DEPEND="python? 2"
 
-inherit eutils gnome2
+inherit eutils gnome2 python
 
 DESCRIPTION="A user interface designer for GTK+ and GNOME"
 HOMEPAGE="http://glade.gnome.org/"
 
 LICENSE="GPL-2+ FDL-1.1+"
-SLOT="3"
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
+SLOT="3/11" # subslot = suffix of libgladeui-1.so
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="gnome python"
 
 RDEPEND=">=dev-libs/glib-2.8:2
@@ -36,12 +37,19 @@ DEPEND="${RDEPEND}
 "
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
+}
+
+src_configure() {
 	G2CONF="${G2CONF}
 		--enable-libtool-lock
 		--disable-scrollkeeper
 		$(use_enable gnome)
 		$(use_enable python)"
+	gnome2_src_configure
 }
 
 pkg_preinst() {
@@ -52,4 +60,5 @@ pkg_preinst() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 	preserve_old_lib_notify /usr/$(get_libdir)/libgladeui-1.so.9
+	use python && python_need_rebuild
 }

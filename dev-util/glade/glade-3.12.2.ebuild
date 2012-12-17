@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.12.2.ebuild,v 1.2 2012/11/26 19:59:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.12.2.ebuild,v 1.3 2012/12/17 06:03:07 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -8,13 +8,13 @@ GNOME2_LA_PUNT="yes"
 
 inherit autotools eutils gnome2 versionator
 
-DESCRIPTION="A User Interface Designer"
+DESCRIPTION="A user interface designer for GTK+ and GNOME"
 HOMEPAGE="http://glade.gnome.org/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+ FDL-1.1+"
 SLOT="3.10"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="doc +introspection python"
+IUSE="+introspection python"
 
 RDEPEND="dev-libs/atk[introspection?]
 	>=dev-libs/glib-2.32:2
@@ -30,13 +30,13 @@ DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	>=app-text/gnome-doc-utils-0.18
 	app-text/scrollkeeper
+	>=dev-util/gtk-doc-am-1.13
 	>=dev-util/intltool-0.41.0
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
 
 	dev-libs/gobject-introspection-common
 	gnome-base/gnome-common
-	doc? ( >=dev-util/gtk-doc-1.13 )
 "
 # eautoreconf requires:
 #	dev-libs/gobject-introspection-common
