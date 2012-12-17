@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/spandsp-0.0.6_pre12-r1.ebuild,v 1.3 2011/02/27 18:55:02 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/spandsp-0.0.6_pre12-r1.ebuild,v 1.4 2012/12/17 17:33:46 ago Exp $
 
 EAPI="2"
 
