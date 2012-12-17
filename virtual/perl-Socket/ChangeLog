@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Socket
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Socket/ChangeLog,v 1.5 2012/11/13 17:16:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Socket/ChangeLog,v 1.6 2012/12/17 18:28:34 ago Exp $
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> perl-Socket-2.6.0.ebuild:
+  Add ~ppc64, wrt bug #442188
 
   13 Nov 2012; Jeroen Roovers <jer@gentoo.org> perl-Socket-2.6.0.ebuild:
   Marked ~hppa (bug #442188).
