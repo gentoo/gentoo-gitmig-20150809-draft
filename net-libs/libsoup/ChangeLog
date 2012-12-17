@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.295 2012/10/28 16:28:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.296 2012/12/17 05:14:55 tetromino Exp $
+
+*libsoup-2.40.2 (17 Dec 2012)
+
+  17 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -libsoup-2.36.1.ebuild, -libsoup-2.36.1-r1.ebuild,
+  -files/libsoup-2.36.1-SoupHTTPInputStream-GCancellable.patch,
+  +libsoup-2.40.2.ebuild, metadata.xml:
+  Version bump for gnome-3.6; libsoup's I/O code has been rewritten and
+  improved. Switch to global introspection flag. Drop old.
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org> libsoup-2.38.1.ebuild:
   ia64/sh/sparc stable wrt #427544
