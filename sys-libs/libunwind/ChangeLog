@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libunwind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.28 2012/11/20 16:41:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.29 2012/12/17 17:04:24 ago Exp $
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libunwind-1.0.1-r1.ebuild:
+  Stable for ia64, wrt bug #427136
 
   20 Nov 2012; Mike Frysinger <vapier@gentoo.org> libunwind-1.1.ebuild:
   Add USE=lzma to control liblzma usage.
