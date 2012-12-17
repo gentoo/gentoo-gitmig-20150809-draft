@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/wsdl4j
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j/ChangeLog,v 1.21 2011/01/16 10:38:36 robbat2 Exp $
+# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j/ChangeLog,v 1.22 2012/12/17 15:44:33 ago Exp $
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> wsdl4j-1.6.2.ebuild:
+  Add ~ppc64, wrt bug #398693
 
   10 Jan 2008; Vlastimil Babka <caster@gentoo.org> -wsdl4j-1.5.1-r1.ebuild,
   wsdl4j-1.6.2.ebuild:
@@ -88,4 +91,3 @@
   19 Apr 2004; Robin Johnson <robbat2@gentoo.org>
   wsdl4j-1.4.ebuild:
   initial ebuild, written by myself as a dep for axis.
-

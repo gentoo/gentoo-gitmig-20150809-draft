@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j/wsdl4j-1.6.2.ebuild,v 1.5 2008/01/10 23:17:18 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j/wsdl4j-1.6.2.ebuild,v 1.6 2012/12/17 15:44:33 ago Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${PV}.zip
 
 LICENSE="CPL-1.0"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
 
 DEPEND=">=virtual/jdk-1.4
 	test? ( =dev-java/junit-3.8* )
