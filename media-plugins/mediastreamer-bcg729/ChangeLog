@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mediastreamer-bcg729
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-bcg729/ChangeLog,v 1.3 2012/12/17 17:32:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-bcg729/ChangeLog,v 1.4 2012/12/17 17:34:18 ago Exp $
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
+  mediastreamer-bcg729-1.0.0.ebuild:
+  Add ~ppc64, wrt bug #443964
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
   mediastreamer-bcg729-1.0.0.ebuild:
