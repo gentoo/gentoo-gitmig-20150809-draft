@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrootuid/chrootuid-1.3-r1.ebuild,v 1.6 2012/10/09 23:31:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrootuid/chrootuid-1.3-r1.ebuild,v 1.7 2012/12/17 17:20:21 ago Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm ~ia64 ppc x86"
+KEYWORDS="amd64 arm ia64 ppc x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
