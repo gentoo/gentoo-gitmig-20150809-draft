@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/a8
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/a8/ChangeLog,v 1.7 2012/10/29 16:35:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/a8/ChangeLog,v 1.8 2012/12/17 22:14:59 hasufell Exp $
+
+  17 Dec 2012; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  grab it
 
   29 Oct 2012; Michał Górny <mgorny@gentoo.org> a8-0.10.ebuild, a8-0.11.ebuild:
   Use virtual for argparse.
