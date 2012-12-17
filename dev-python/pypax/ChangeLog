@@ -1,4 +1,8 @@
 
+*pypax-0.7.0 (17 Dec 2012)
+
+  17 Dec 2012; Anthony G. Basile <blueness@gentoo.org> +pypax-0.7.0.ebuild:
+  Version bump: improved flag setting logic
 
   06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pypax-0.6.0.ebuild:
   x86 stable wrt bug #445334
