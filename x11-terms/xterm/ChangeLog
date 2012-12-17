@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.370 2012/12/08 17:18:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.371 2012/12/17 20:37:02 maekke Exp $
+
+  17 Dec 2012; Markus Meier <maekke@gentoo.org> xterm-285.ebuild:
+  arm stable, bug #440872
 
   08 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xterm-285.ebuild:
   Stable for ppc64, wrt bug #440872
