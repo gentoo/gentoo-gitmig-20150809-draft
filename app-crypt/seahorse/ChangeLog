@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.158 2012/12/16 19:16:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.159 2012/12/17 19:34:28 tetromino Exp $
+
+  17 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  seahorse-3.6.3.ebuild:
+  Restore ppc ppc64 keywords since libsecret is now keyworded.
 
   16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   seahorse-3.4.1.ebuild, seahorse-3.6.3.ebuild:
