@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.149 2012/11/09 20:17:52 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.150 2012/12/17 17:47:29 ago Exp $
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> usbutils-006.ebuild:
+  Stable for ia64, wrt bug #436186
 
   09 Nov 2012; Richard Yao <ryao@gentoo.org> +files/usbutils-006-stdint.patch,
   usbutils-006.ebuild:
