@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.59 2012/12/16 21:47:51 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.60 2012/12/17 17:52:26 ago Exp $
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> openntpd-3.9_p1-r4.ebuild:
+  Stable for ia64, wrt bug #426464
 
 *openntpd-3.9_p1-r5 (16 Dec 2012)
 
