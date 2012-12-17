@@ -18,13 +18,5 @@ STEP=64
 # NO_DRNG=1
 
 # Fill watermark
-# 0 <= n <= 4096
+# 0 <= n <= `sysctl kernel.random.poolsize`
 WATERMARK=2048
-
-# Bug #292239: Remixing /dev/urandom back into /dev/random is
-# considered a security vulnerability in some cases where not enough
-# entropy is present on systems. If you don't have a real random
-# hardware generator, you're suggested to use a software designed for
-# the particular task of creating new entropy, such as
-# sys-apps/haveged.
-DO_NOT_REMIX_URANDOM=1

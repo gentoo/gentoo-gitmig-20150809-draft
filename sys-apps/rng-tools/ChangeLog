@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/rng-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.38 2012/12/17 11:19:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.39 2012/12/17 12:19:19 flameeyes Exp $
+
+  17 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> files/rngd-confd-4.1,
+  files/rngd-initd-4.1:
+  Remove direct uses of /dev/urandom — if the user wants to, they can do it
+  explicitly; also update the upper limit for the watermark in the comment so
+  that users know to check the poolsize (hardened can be much bigger than 4k).
+  No revision bump since it's non-default behaviour anyway.
 
 *rng-tools-4-r5 (17 Dec 2012)
 
