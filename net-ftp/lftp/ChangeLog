@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.387 2012/12/16 17:50:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.388 2012/12/17 11:55:25 jer Exp $
+
+  17 Dec 2012; Jeroen Roovers <jer@gentoo.org> -lftp-4.3.7.ebuild,
+  lftp-4.4.0.ebuild:
+  Add prefix changes by Christoph Junghans (bug #447540).
 
   16 Dec 2012; Raúl Porcel <armin76@gentoo.org> lftp-4.4.0.ebuild:
   alpha/ia64/s390/sparc stable wrt #440160
