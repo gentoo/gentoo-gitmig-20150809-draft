@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/quvi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.43 2012/12/17 04:21:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.44 2012/12/17 11:27:29 nimiux Exp $
+
+  17 Dec 2012; Chema Alonso <nimiux@gentoo.org> quvi-0.4.2.ebuild:
+  Marked stable for amd64 wrt bug #447554
 
   17 Dec 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
