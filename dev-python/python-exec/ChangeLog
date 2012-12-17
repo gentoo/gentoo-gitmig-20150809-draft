@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-exec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/ChangeLog,v 1.18 2012/12/16 16:34:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/ChangeLog,v 1.19 2012/12/17 19:43:44 mgorny Exp $
+
+  17 Dec 2012; Michał Górny <mgorny@gentoo.org> python-exec-0.1.1.ebuild,
+  python-exec-0.1.ebuild, python-exec-0.2.ebuild, python-exec-9999.ebuild:
+  Bump to EAPI=5 to make Paludis happy, bug #447524.
 
   16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> python-exec-0.1.1.ebuild:
   Stable for x86, wrt bug #445178
