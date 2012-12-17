@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lcab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lcab/ChangeLog,v 1.1 2012/11/22 21:50:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lcab/ChangeLog,v 1.2 2012/12/17 05:53:25 binki Exp $
+
+  17 Dec 2012; Nathan Phillip Brink <binki@gentoo.org> metadata.xml:
+  Add myself as a co-maintainer.
 
 *lcab-1.0_beta12 (22 Nov 2012)
 

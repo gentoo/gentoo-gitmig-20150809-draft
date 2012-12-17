@@ -5,4 +5,9 @@
  <email>vapier@gentoo.org</email>
  <description>do whatever</description>
 </maintainer>
+  <maintainer>
+    <email>binki@gentoo.org</email>
+    <name>Nathan Phillip Brink</name>
+    <description>Upstreamish</description>
+  </maintainer>
 </pkgmetadata>
