@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/help-extra-syntax
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/help-extra-syntax/ChangeLog,v 1.10 2010/10/07 03:20:27 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/help-extra-syntax/ChangeLog,v 1.11 2012/12/17 16:35:50 ulm Exp $
+
+  17 Dec 2012; Ulrich Müller <ulm@gentoo.org>
+  help-extra-syntax-20050106.ebuild, help-extra-syntax-20050106-r1.ebuild:
+  Change LICENSE to public-domain. No license is included with the package,
+  but the file has only 14 lines of code which is hardly copyrightable.
 
   07 Oct 2010; Mart Raudsepp <leio@gentoo.org>
   help-extra-syntax-20050106.ebuild, help-extra-syntax-20050106-r1.ebuild:
