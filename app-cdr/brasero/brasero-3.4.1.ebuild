@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-3.4.1.ebuild,v 1.3 2012/12/16 09:10:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-3.4.1.ebuild,v 1.4 2012/12/17 11:12:54 jlec Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="CD/DVD burning application for the GNOME desktop"
 HOMEPAGE="http://projects.gnome.org/brasero/"
@@ -75,6 +75,12 @@ pkg_setup() {
 		$(use_enable tracker search)"
 
 	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/0001-Fix-build-link-libbrasero-burn-against-libm-for-ceil.patch
+	eautoreconf
+	gnome2_src_prepare
 }
 
 pkg_postinst() {
