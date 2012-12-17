@@ -74,3 +74,5 @@ hb2
 # Robin H. Johnson <robbat2@gentoo.org>
 audit
 
+# see bug #446900 and bug #425494
+clang

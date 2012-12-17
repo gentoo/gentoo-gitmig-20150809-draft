@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.204 2012/12/12 16:27:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.205 2012/12/17 20:20:05 ago Exp $
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> ppc64/64ul/use.mask:
+  mask clang for ppc64 since llvm fails to compile
 
   12 Dec 2012; Agostino Sarubbo <ago@gentoo.org> package.use.mask:
   remove media-sound/picard acoustid wrt to bug #426340
