@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.183 2012/12/14 12:53:31 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.184 2012/12/17 10:42:50 pchrist Exp $
+
+*sbcl-1.0.55-r2 (17 Dec 2012)
+
+  17 Dec 2012; Panagiotis Christopoulos <pchrist@gentoo.org>
+  +sbcl-1.0.55-r2.ebuild:
+  add zlib support to .55-r2. Dropped keywords cause it needs testing.
+  Requested by Kyle Nusbaum on irc.
 
 *sbcl-1.1.2 (14 Dec 2012)
 
