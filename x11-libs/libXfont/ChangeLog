@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.170 2012/12/08 17:14:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.171 2012/12/17 20:27:11 maekke Exp $
+
+  17 Dec 2012; Markus Meier <maekke@gentoo.org> libXfont-1.4.5-r1.ebuild:
+  arm stable, bug #440872
 
   08 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libXfont-1.4.5-r1.ebuild:
   Stable for ppc64, wrt bug #440872
