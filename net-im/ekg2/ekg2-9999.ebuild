@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-9999.ebuild,v 1.4 2012/12/15 12:45:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-9999.ebuild,v 1.5 2012/12/17 00:37:17 mgorny Exp $
 
-EAPI=4
+EAPI=5
 
 #if LIVE
 AUTOTOOLS_AUTORECONF=yes
