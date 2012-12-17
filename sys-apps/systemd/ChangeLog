@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.64 2012/12/15 13:05:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.65 2012/12/17 00:36:00 mgorny Exp $
+
+  17 Dec 2012; Michał Górny <mgorny@gentoo.org> systemd-196.ebuild,
+  systemd-9999.ebuild:
+  Bump to EAPI=5 to make Paludis happy, bug #447524.
 
 *systemd-9999 (15 Dec 2012)
 

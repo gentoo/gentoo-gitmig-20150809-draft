@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-196.ebuild,v 1.3 2012/12/05 21:30:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-196.ebuild,v 1.4 2012/12/17 00:36:00 mgorny Exp $
 
-EAPI=4
+EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 inherit autotools-utils bash-completion-r1 linux-info pam \
