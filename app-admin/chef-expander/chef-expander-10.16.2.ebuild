@@ -1,12 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-expander/chef-expander-0.10.10.ebuild,v 1.1 2012/06/17 15:39:58 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-expander/chef-expander-10.16.2.ebuild,v 1.1 2012/12/17 10:22:06 hollow Exp $
 
-EAPI="4"
-USE_RUBY="ruby18"
+EAPI=4
+USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
-RUBY_FAKEGEM_TASK_TEST=""
+RUBY_FAKEGEM_TASK_TEST="spec"
+
+RUBY_FAKEGEM_EXTRADOC="README.rdoc"
 
 inherit ruby-fakegem
 
@@ -18,7 +20,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=""
+# specs require a live rabbitmq server
+RESTRICT="test"
 
 ruby_add_rdepend "~app-admin/chef-${PV}
 	>=dev-ruby/amqp-0.6.7
@@ -36,7 +39,8 @@ ruby_add_rdepend "~app-admin/chef-${PV}
 	>=dev-ruby/mixlib-log-1.2.0
 	>=dev-ruby/uuidtools-2.1.1
 	<dev-ruby/uuidtools-2.2
-	>=dev-ruby/yajl-ruby-0.7.7"
+	>=dev-ruby/yajl-ruby-1.0
+	<dev-ruby/yajl-ruby-2"
 
 all_ruby_install() {
 	all_fakegem_install
