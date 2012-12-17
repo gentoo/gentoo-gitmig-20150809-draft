@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.0.3-r1.ebuild,v 1.9 2012/11/05 08:27:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.0.3-r1.ebuild,v 1.10 2012/12/17 08:01:41 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -9,7 +9,7 @@ PYTHON_DEPEND="2"
 
 inherit autotools db-use eutils flag-o-matic gnome2 java-pkg-opt-2 python
 
-DESCRIPTION="Gnome Database Access Library"
+DESCRIPTION="GNOME database access library"
 HOMEPAGE="http://www.gnome-db.org/"
 LICENSE="GPL-2+ LGPL-2+"
 
