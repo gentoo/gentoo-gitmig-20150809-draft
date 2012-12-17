@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/include
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/include/ChangeLog,v 1.15 2012/12/16 15:27:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/include/ChangeLog,v 1.16 2012/12/17 03:59:44 radhermit Exp $
+
+  17 Dec 2012; Tim Harder <radhermit@gentoo.org> -include-0.3.2.ebuild:
+  Remove old.
 
   16 Dec 2012; Raúl Porcel <armin76@gentoo.org> include-0.4.2.ebuild:
   sparc stable wrt #441148
