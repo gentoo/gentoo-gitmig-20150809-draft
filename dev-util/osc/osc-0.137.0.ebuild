@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-0.137.0.ebuild,v 1.1 2012/12/05 10:55:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-0.137.0.ebuild,v 1.2 2012/12/17 10:00:35 scarabeus Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ IUSE=""
 
 # Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
 [[ "${PV}" == "9999" ]] || \
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND="
 	dev-python/urlgrabber
