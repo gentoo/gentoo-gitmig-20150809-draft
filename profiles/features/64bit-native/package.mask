@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.89 2012/12/01 21:03:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.90 2012/12/17 21:42:15 hasufell Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -131,6 +131,7 @@ games-rpg/nwn-data
 games-rpg/nwn-penultima
 games-rpg/nwn-penultimarerolled
 games-rpg/nwn-shadowlordsdreamcatcherdemon
+games-rpg/penumbra-collection
 games-rpg/rain-slick
 games-rpg/sacred-gold
 games-server/etqw-ded
