@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/hyphen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hyphen/ChangeLog,v 1.28 2012/12/08 12:16:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hyphen/ChangeLog,v 1.29 2012/12/17 15:24:39 scarabeus Exp $
+
+  17 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org> -hyphen-2.8.5.ebuild:
+  Remove older.
 
   08 Dec 2012; Markus Meier <maekke@gentoo.org> hyphen-2.8.6.ebuild:
   add ~arm, bug #440908
