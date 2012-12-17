@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git-bz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-bz/ChangeLog,v 1.4 2012/12/15 21:08:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-bz/ChangeLog,v 1.5 2012/12/17 19:30:00 mgorny Exp $
+
+  17 Dec 2012; Michał Górny <mgorny@gentoo.org> git-bz-0.12.12.15.ebuild,
+  git-bz-9999.ebuild:
+  Bump to EAPI=5 to make Paludis happy, bug #447524.
 
 *git-bz-0.12.12.15 (15 Dec 2012)
 
