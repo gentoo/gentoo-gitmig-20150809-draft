@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/mp3splt-2.2.8.ebuild,v 1.4 2010/10/10 18:41:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/mp3splt-2.2.8.ebuild,v 1.5 2012/12/17 21:34:36 sping Exp $
 
 EAPI=2
 inherit multilib
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ~ppc ~ppc64 sparc x86"
 IUSE=""
 
-RDEPEND=">=media-libs/libmp3splt-0.5.9"
+RDEPEND="<media-libs/libmp3splt-0.7.3"
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
