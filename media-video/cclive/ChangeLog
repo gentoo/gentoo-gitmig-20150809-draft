@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cclive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/ChangeLog,v 1.56 2012/12/17 04:09:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/ChangeLog,v 1.57 2012/12/17 04:22:47 radhermit Exp $
+
+  17 Dec 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
 *cclive-0.7.11 (17 Dec 2012)
 
