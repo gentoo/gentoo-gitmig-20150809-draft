@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.148 2012/12/16 19:54:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.149 2012/12/17 20:40:14 maekke Exp $
+
+  17 Dec 2012; Markus Meier <maekke@gentoo.org> tigervnc-1.2.0.ebuild:
+  arm stable, bug #443080
 
   16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> tigervnc-1.2.0.ebuild:
   Stable for ppc, wrt bug #443080
