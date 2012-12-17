@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-ntop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ntop/ChangeLog,v 1.38 2012/12/13 10:05:00 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ntop/ChangeLog,v 1.39 2012/12/17 20:01:50 swift Exp $
+
+  17 Dec 2012; Sven Vermeulen -selinux-ntop-2.20120215-r1.ebuild,
+  -selinux-ntop-2.20120215-r14.ebuild, -selinux-ntop-2.20120215-r15.ebuild,
+  -selinux-ntop-2.20120215.ebuild:
+  Removing older ebuilds
 
   13 Dec 2012; Sven Vermeulen selinux-ntop-2.20120725-r8.ebuild:
   Stabilization

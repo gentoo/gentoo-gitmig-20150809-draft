@@ -1,6 +1,13 @@
 # ChangeLog for sec-policy/selinux-postgresql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-postgresql/ChangeLog,v 1.48 2012/12/13 10:05:10 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-postgresql/ChangeLog,v 1.49 2012/12/17 20:01:53 swift Exp $
+
+  17 Dec 2012; Sven Vermeulen -selinux-postgresql-2.20120215-r1.ebuild,
+  -selinux-postgresql-2.20120215-r14.ebuild,
+  -selinux-postgresql-2.20120215-r15.ebuild,
+  -selinux-postgresql-2.20120215-r3.ebuild,
+  -selinux-postgresql-2.20120215.ebuild:
+  Removing older ebuilds
 
   13 Dec 2012; Sven Vermeulen selinux-postgresql-2.20120725-r8.ebuild:
   Stabilization

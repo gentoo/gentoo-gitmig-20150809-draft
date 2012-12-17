@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-telnet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-telnet/ChangeLog,v 1.21 2012/12/13 10:04:50 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-telnet/ChangeLog,v 1.22 2012/12/17 20:02:06 swift Exp $
+
+  17 Dec 2012; Sven Vermeulen -selinux-telnet-2.20120215-r14.ebuild,
+  -selinux-telnet-2.20120215-r15.ebuild, -selinux-telnet-2.20120215-r2.ebuild,
+  -selinux-telnet-2.20120215.ebuild:
+  Removing older ebuilds
 
   13 Dec 2012; Sven Vermeulen selinux-telnet-2.20120725-r8.ebuild:
   Stabilization

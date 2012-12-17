@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-corosync
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-corosync/ChangeLog,v 1.18 2012/12/13 10:04:53 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-corosync/ChangeLog,v 1.19 2012/12/17 20:01:26 swift Exp $
+
+  17 Dec 2012; Sven Vermeulen -selinux-corosync-2.20120215-r1.ebuild,
+  -selinux-corosync-2.20120215-r14.ebuild,
+  -selinux-corosync-2.20120215-r15.ebuild, -selinux-corosync-2.20120215.ebuild:
+  Removing older ebuilds
 
   13 Dec 2012; Sven Vermeulen selinux-corosync-2.20120725-r8.ebuild:
   Stabilization

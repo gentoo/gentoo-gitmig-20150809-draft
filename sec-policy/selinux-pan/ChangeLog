@@ -1,4 +1,9 @@
 
+  17 Dec 2012; Sven Vermeulen -selinux-pan-2.20120215-r1.ebuild,
+  -selinux-pan-2.20120215-r14.ebuild, -selinux-pan-2.20120215-r15.ebuild,
+  -selinux-pan-2.20120215.ebuild:
+  Removing older ebuilds
+
   13 Dec 2012; Sven Vermeulen selinux-pan-2.20120725-r8.ebuild:
   Stabilization
 
