@@ -1,6 +1,9 @@
 # ChangeLog for www-client/elinks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.152 2012/11/26 03:24:36 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.153 2012/12/18 15:50:54 ago Exp $
+
+  18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> elinks-0.12_pre5-r2.ebuild:
+  Stable for ia64, wrt bug #437196
 
   26 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Package will now be maintained by Kevin Faulkner through proxy maintainers
