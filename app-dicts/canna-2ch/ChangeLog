@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/canna-2ch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/ChangeLog,v 1.18 2012/12/10 00:11:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/ChangeLog,v 1.19 2012/12/18 17:03:13 ago Exp $
+
+  18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> canna-2ch-20040519.ebuild:
+  Stable for ia64, wrt bug #441080
 
   10 Dec 2012; Jeroen Roovers <jer@gentoo.org> canna-2ch-20040519.ebuild:
   Stable for HPPA (bug #441080).
@@ -59,4 +62,3 @@
   11 Sep 2003; Mamoru KOMACHI <usata@gentoo.org>
   canna-2ch-20030827.ebuild, files/20nichan.dics.dir:
   Initial import
-
