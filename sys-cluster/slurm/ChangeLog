@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/slurm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/ChangeLog,v 1.19 2012/12/18 04:31:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/ChangeLog,v 1.20 2012/12/18 04:32:28 alexxy Exp $
+
+  18 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org> slurm-2.4.5.ebuild:
+  [sys-cluster/slurm] Drop legacy patch
 
   18 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org>
   +files/slurm-2.5.0-nogtk.patch, slurm-2.5.0.ebuild:
