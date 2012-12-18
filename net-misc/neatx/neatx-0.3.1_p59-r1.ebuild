@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/neatx-0.3.1_p59-r1.ebuild,v 1.8 2012/08/21 13:34:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/neatx-0.3.1_p59-r1.ebuild,v 1.9 2012/12/18 13:58:43 voyageur Exp $
 
 EAPI="3"
 
@@ -49,6 +49,7 @@ src_prepare() {
 		|| die "configure.ac sed failed"
 	sed -e "s#/lib/neatx#/neatx#" \
 		-e "/^docdir/s#\$(PACKAGE)#${PF}#" \
+		-e "s#-Werror##" \
 		-i Makefile.am \
 		|| die "Makefile.am sed failed"
 	sed	-e "/DATA_DIR =/s#/lib/neatx#/neatx#" \
