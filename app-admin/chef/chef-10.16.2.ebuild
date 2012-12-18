@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/chef-10.16.2.ebuild,v 1.1 2012/12/17 09:35:03 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/chef-10.16.2.ebuild,v 1.2 2012/12/18 14:43:22 hollow Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19"
@@ -9,6 +9,8 @@ RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_TASK_TEST="spec"
 
 RUBY_FAKEGEM_EXTRADOC="README.rdoc"
+
+RUBY_FAKEGEM_GEMSPEC=${RUBY_FAKEGEM_NAME}.gemspec
 
 inherit ruby-fakegem user
 
@@ -28,7 +30,6 @@ ruby_add_rdepend ">=dev-ruby/bunny-0.6.0
 	dev-ruby/erubis
 	>=dev-ruby/highline-1.6.9
 	>=dev-ruby/json-1.4.4
-	<=dev-ruby/json-1.6.1
 	>=dev-ruby/mixlib-authentication-1.3.0
 	>=dev-ruby/mixlib-cli-1.1.0
 	>=dev-ruby/mixlib-config-1.1.2
@@ -48,6 +49,16 @@ ruby_add_rdepend ">=dev-ruby/bunny-0.6.0
 	dev-ruby/uuidtools
 	>=dev-ruby/yajl-ruby-1.1
 	<dev-ruby/yajl-ruby-2"
+
+each_ruby_prepare() {
+	ruby_fakegem_metadata_gemspec ../metadata ${RUBY_FAKEGEM_GEMSPEC}
+
+	# bunny
+	sed -i -e 's/"< 0.8.0", //' ${RUBY_FAKEGEM_GEMSPEC} || die "Unable to fix up dependencies."
+
+	# json
+	sed -i -e 's/"<= 1.6.1", //' ${RUBY_FAKEGEM_GEMSPEC} || die "Unable to fix up dependencies."
+}
 
 all_ruby_install() {
 	all_fakegem_install

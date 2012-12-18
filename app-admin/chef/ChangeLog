@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/chef
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/ChangeLog,v 1.14 2012/12/17 09:35:03 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/ChangeLog,v 1.15 2012/12/18 14:43:22 hollow Exp $
+
+  18 Dec 2012; Benedikt Böhm <hollow@gentoo.org> chef-10.16.2.ebuild:
+  fix gem dependency issues
 
 *chef-10.16.2 (17 Dec 2012)
 
