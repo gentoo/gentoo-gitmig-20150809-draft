@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-12.ebuild,v 1.1 2012/12/05 17:13:29 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-12-r1.ebuild,v 1.1 2012/12/18 10:23:37 ssuominen Exp $
 
 EAPI=4
 
@@ -54,7 +54,7 @@ src_prepare()
 src_configure()
 {
 	econf \
-		--bindir=/bin \
+		--bindir=/sbin \
 		--with-rootlibdir=/$(get_libdir) \
 		$(use_enable static-libs static) \
 		$(use_enable tools) \
@@ -72,12 +72,9 @@ src_install()
 	if use tools; then
 		local cmd
 		for cmd in depmod insmod lsmod modinfo modprobe rmmod; do
-			dosym kmod /bin/${cmd}
+			dosym kmod /sbin/${cmd}
 		done
-		# Compatibility symlink(s):
-		# These are both hardcoded in the Linux kernel source tree wrt #426698
-		dosym /bin/kmod /sbin/depmod
-		dosym /bin/kmod /sbin/modprobe
+		dosym /sbin/kmod /bin/lsmod
 	fi
 
 	cat <<-EOF > "${T}"/usb-load-ehci-first.conf
