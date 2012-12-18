@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.286 2012/12/11 22:24:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.287 2012/12/18 13:16:56 ago Exp $
+
+  18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> lvm2-2.02.97-r1.ebuild:
+  Stable for ia64, wrt bug #435076
 
   11 Dec 2012; Robin H. Johnson <robbat2@gentoo.org> -lvm2-2.02.67-r1.ebuild,
   -lvm2-2.02.67.ebuild, -lvm2-2.02.70-r1.ebuild, -lvm2-2.02.70.ebuild,
