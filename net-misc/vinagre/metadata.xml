@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>gnome</herd>
+	<herd>gnome</herd>
 	<use>
 		<flag name="applet">Enable vinagre applet for
 			<pkg>gnome-base/gnome-panel</pkg></flag>
@@ -13,4 +13,3 @@
 			<pkg>net-libs/telepathy-glib</pkg> client</flag>
 	</use>
 </pkgmetadata>
-
