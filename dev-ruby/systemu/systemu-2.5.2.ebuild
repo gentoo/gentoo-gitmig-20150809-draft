@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/systemu/systemu-2.5.2.ebuild,v 1.2 2012/12/18 16:03:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/systemu/systemu-2.5.2.ebuild,v 1.3 2012/12/18 16:05:05 ago Exp $
 
 EAPI=4
 # Test hangs on jruby
@@ -17,7 +17,7 @@ HOMEPAGE="http://codeforpeople.com/lib/ruby/systemu/"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 all_ruby_install() {
