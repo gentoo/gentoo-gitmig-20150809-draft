@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/cx_Freeze
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cx_Freeze/ChangeLog,v 1.1 2012/12/18 07:39:33 pinkbyte Exp $
+
+*cx_Freeze-4.3.1 (18 Dec 2012)
+
+  18 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> +cx_Freeze-4.3.1.ebuild,
+  +metadata.xml:
+  Initial commit, wrt bug #184263
+
