@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.144 2012/12/18 16:11:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.145 2012/12/18 21:52:42 scarabeus Exp $
 
 EAPI=4
 
@@ -71,7 +71,7 @@ IUSE="bluetooth +branding +cups dbus debug eds gnome gstreamer +gtk
 gtk3 jemalloc kde mysql nsplugin odk opengl pdfimport postgres
 telepathy test +vba +webdav"
 
-LO_EXTS="nlpsolver presenter-console presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
+LO_EXTS="nlpsolver presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
 # diagram: lo has 0.9.5 upstream is weirdly patched 0.9.4 -> wtf?
 # hunart: only on ooo extensions -> fubared download path somewhere on sf
