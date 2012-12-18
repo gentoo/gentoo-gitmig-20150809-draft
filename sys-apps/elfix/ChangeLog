@@ -1,5 +1,8 @@
 
   18 Dec 2012; Anthony G. Basile <blueness@gentoo.org> elfix-0.7.0.ebuild:
+  Minor clean up of use_enable syntax
+
+  18 Dec 2012; Anthony G. Basile <blueness@gentoo.org> elfix-0.7.0.ebuild:
   Remove USE=test which only works on a properly configured pax kernel
 
 *elfix-0.7.0 (17 Dec 2012)

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/elfix-0.7.0.ebuild,v 1.2 2012/12/18 02:02:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/elfix-0.7.0.ebuild,v 1.3 2012/12/18 02:08:42 blueness Exp $
 
 EAPI="4"
 
@@ -27,8 +27,8 @@ src_configure() {
 	rm -f "${S}/scripts/setup.py"
 	econf \
 		--disable-tests \
-		$(use_enable ptpax ptpax) \
-		$(use_enable xtpax xtpax)
+		$(use_enable ptpax) \
+		$(use_enable xtpax)
 }
 
 src_install() {
