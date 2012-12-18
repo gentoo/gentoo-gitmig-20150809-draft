@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.10.ebuild,v 1.1 2012/08/14 19:43:33 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.12.ebuild,v 1.1 2012/12/18 16:06:35 mschiff Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND="
 	dev-libs/libxml2
 	dev-libs/libxslt
 	>=net-libs/ldns-1.6.12
-	auditor? ( dev-lang/ruby[ssl] >=dev-ruby/dnsruby-1.53 )
+	auditor? ( dev-lang/ruby[ssl] dev-ruby/dnsruby )
 	curl? ( net-misc/curl )
 	mysql? (
 		virtual/mysql
