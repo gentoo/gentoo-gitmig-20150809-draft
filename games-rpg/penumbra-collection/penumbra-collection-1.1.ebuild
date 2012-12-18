@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/penumbra-collection/penumbra-collection-1.1.ebuild,v 1.2 2012/12/17 22:36:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/penumbra-collection/penumbra-collection-1.1.ebuild,v 1.3 2012/12/18 19:11:31 hasufell Exp $
 
 EAPI=5
 
@@ -126,10 +126,12 @@ src_install() {
 	games_make_wrapper penumbra-requiem ./requiem.bin \
 		"${gamedir}/BlackPlague" "${gamedir}/BlackPlague/lib"
 
-	for i in overture blackplague requiem; do
-		make_desktop_entry penumbra-${i} "Penumbra: Overture" \
-			penumbra-${i}
-	done
+	make_desktop_entry penumbra-overture "Penumbra: Overture" \
+		penumbra-overture
+	make_desktop_entry penumbra-blackplague "Penumbra: Black Plague" \
+		penumbra-blackplague
+	make_desktop_entry penumbra-requiem "Penumbra: Requiem" \
+		penumbra-requiem
 
 	docinto Overture
 	dodoc Overture/CHANGELOG.txt Overture/Manual.pdf Overture/README.linux
