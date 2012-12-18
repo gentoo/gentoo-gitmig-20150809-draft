@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.157 2012/12/15 18:17:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.158 2012/12/18 13:03:24 ago Exp $
+
+  18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> package.use.mask:
+  masking vlc and gstreamer for phonon
 
   15 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask totem[upnp-av] after upnp -> upnp-av rename since media-video/coherence
