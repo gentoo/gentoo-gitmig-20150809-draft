@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/cogl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.17 2012/12/16 22:03:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.18 2012/12/18 22:06:38 tetromino Exp $
+
+*cogl-1.12.0-r1 (18 Dec 2012)
+
+  18 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +cogl-1.12.0-r1.ebuild:
+  Prefer gl over gles2 as the default driver, since that's what most users
+  would want; thanks to Rafał Mużyło.
 
 *cogl-1.12.0 (16 Dec 2012)
 
