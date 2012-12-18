@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.138 2012/12/10 00:12:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.139 2012/12/18 16:59:03 ago Exp $
+
+  18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> anthy-9100h-r1.ebuild:
+  Stable for ia64, wrt bug #441080
 
   10 Dec 2012; Jeroen Roovers <jer@gentoo.org> anthy-9100h-r1.ebuild:
   Stable for HPPA (bug #441080).
@@ -514,4 +517,3 @@
   Initial import.  Ebuild first created by Satoshi Fuktommy
   <fuktommy@phaeton.cs.uec.ac.jp> and polished by MATSUU Takuto
   <matsuu@gentoo.org> at GentooJP BugTrack
-
