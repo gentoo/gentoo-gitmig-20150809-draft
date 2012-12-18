@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/hibernate-script
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.93 2012/12/17 09:28:23 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.94 2012/12/18 16:13:03 alonbl Exp $
+
+  18 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org> metadata.xml:
+  Assign myself as maintainer
 
 *hibernate-script-2.0-r5 (17 Dec 2012)
 
