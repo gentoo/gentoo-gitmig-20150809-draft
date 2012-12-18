@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.194 2012/12/16 15:18:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.195 2012/12/18 17:30:19 billie Exp $
+
+  18 Dec 2012; Daniel Pielmeier <billie@gentoo.org> -conky-1.9.0.ebuild:
+  Remove old.
 
   16 Dec 2012; Raúl Porcel <armin76@gentoo.org> conky-1.9.0-r1.ebuild:
   alpha/sparc stable wrt #442216
