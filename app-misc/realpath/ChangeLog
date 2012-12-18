@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/realpath
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.31 2012/12/16 13:46:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.32 2012/12/18 17:26:25 ago Exp $
+
+  18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> realpath-1.17.ebuild:
+  Stable for ia64, wrt bug #441092
 
   16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> realpath-1.17.ebuild:
   Stable for x86, wrt bug #441092
