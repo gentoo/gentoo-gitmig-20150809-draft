@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/NaturalDocs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.40 2012/12/05 01:32:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.41 2012/12/18 16:31:56 ago Exp $
+
+  18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> NaturalDocs-1.52.ebuild:
+  Stable for ia64, wrt bug #439732
 
   05 Dec 2012; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Change maintainer tag (bug #390951).
@@ -146,4 +149,3 @@
   12 Jun 2004; Josh Glover <jmglov@gentoo.org> NaturalDocs-1.22-r1.ebuild,
   metadata.xml:
   This package was submitted by Josh Glover in bug #47266
-
