@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.23.05.ebuild,v 1.2 2012/11/29 12:25:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.23.05.ebuild,v 1.3 2012/12/18 01:25:54 blueness Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkill but works well
@@ -117,6 +117,17 @@ pkg_postinst() {
 		ewarn "only with ${LINGUAS:0:2} support. If this is not what"
 		ewarn "you intended, please place the language you desire"
 		ewarn "_first_ in the list of LINGUAS in /etc/make.conf"
+		ewarn
+	fi
+
+	if use xtended; then
+		ewarn
+		ewarn "If you are upgrading webalizer from USE=-xtended to USE=xtended"
+		ewarn "you will need to delete webalizer.current and process all previous"
+		ewarn "days in the same month using 'webalizer /path/to/access_log.1'."
+		ewarn "For more information about using XTENDED webalizer, see:"
+		ewarn
+		ewarn "    http://www.patrickfrei.ch/webalizer/rb15/INSTALL"
 		ewarn
 	fi
 
