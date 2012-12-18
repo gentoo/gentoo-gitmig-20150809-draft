@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.32.2.ebuild,v 1.7 2012/12/18 08:49:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.32.2-r1.ebuild,v 1.1 2012/12/18 08:49:04 tetromino Exp $
 
-EAPI="3"
+EAPI="5"
 GCONF_DEBUG="yes"
+GNOME_TARBALL_SUFFIX="bz2"
 
 inherit eutils gnome2
 
@@ -12,7 +13,7 @@ HOMEPAGE="http://live.gnome.org/Vino"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="avahi crypt ipv6 jpeg gnome-keyring libnotify networkmanager ssl +telepathy zlib"
 
 RDEPEND=">=dev-libs/glib-2.17:2
@@ -24,15 +25,15 @@ RDEPEND=">=dev-libs/glib-2.17:2
 	dev-libs/dbus-glib
 	x11-libs/libXext
 	x11-libs/libXtst
-	avahi? ( >=net-dns/avahi-0.6[dbus] )
-	crypt? ( >=dev-libs/libgcrypt-1.1.90 )
+	avahi? ( >=net-dns/avahi-0.6:=[dbus] )
+	crypt? ( >=dev-libs/libgcrypt-1.1.90:= )
 	gnome-keyring? ( || ( gnome-base/libgnome-keyring <gnome-base/gnome-keyring-2.29.4 ) )
-	jpeg? ( virtual/jpeg:0 )
-	libnotify? ( >=x11-libs/libnotify-0.4.4 )
+	jpeg? ( virtual/jpeg:0= )
+	libnotify? ( >=x11-libs/libnotify-0.4.4:= )
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
-	ssl? ( >=net-libs/gnutls-1 )
+	ssl? ( >=net-libs/gnutls-1:= )
 	telepathy? ( >=net-libs/telepathy-glib-0.11.6 )
-	zlib? ( sys-libs/zlib )"
+	zlib? ( sys-libs/zlib:= )"
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
 	virtual/pkgconfig
@@ -42,7 +43,10 @@ DEPEND="${RDEPEND}
 		<gnome-base/gnome-keyring-2.29.4 )"
 # keyring is always required at build time per bug 322763
 
-pkg_setup() {
+# bug #394611; tight encoding requires zlib encoding
+REQUIRED_USE="jpeg? ( zlib )"
+
+src_prepare() {
 	G2CONF="${G2CONF}
 		$(use_enable avahi)
 		$(use_enable crypt gcrypt)
@@ -57,13 +61,14 @@ pkg_setup() {
 		$(use_with zlib libz)
 		--enable-libunique"
 	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
-}
-
-src_prepare() {
-	gnome2_src_prepare
 
 	# Fix autorestart loop, bug #277989
 	epatch "${FILESDIR}/${PN}-2.26.2-autorestart-loop.patch"
+
+	# clipboard leak to unauthenticated clients, bug #434930
+	epatch "${FILESDIR}/${PN}-3.6.2-clipboard-leak.patch"
+
+	gnome2_src_prepare
 }
 
 pkg_postinst() {
