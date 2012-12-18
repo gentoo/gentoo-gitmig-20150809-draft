@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sswf/sswf-1.8.2.ebuild,v 1.3 2012/05/05 08:58:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sswf/sswf-1.8.2.ebuild,v 1.4 2012/12/18 07:22:28 ulm Exp $
 
 DESCRIPTION="A C++ Library and a script language tool to create Flash (SWF) movies up to version 8."
 HOMEPAGE="http://sswf.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2
 	mirror://sourceforge/${PN}/${P}-doc.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug doc examples"
