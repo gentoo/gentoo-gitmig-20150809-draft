@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.286 2012/12/16 16:34:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.287 2012/12/18 17:09:45 jer Exp $
+
+  18 Dec 2012; Jeroen Roovers <jer@gentoo.org> gentoolkit-0.3.0.7.ebuild:
+  Stable for HPPA (bug #446832).
 
   16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gentoolkit-0.3.0.7.ebuild:
   Stable for x86, wrt bug #446832
