@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/leechcraft-musiczombie
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/leechcraft-muziczombie/ChangeLog,v 1.3 2012/12/18 17:39:50 maksbotan Exp $
+
+*leechcraft-musiczombie-9999 (18 Dec 2012)
+
+  18 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-musiczombie-9999.ebuild, +metadata.xml:
+  Add leechraft-musiczombie, thanks to 0xd34df00d
