@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.8.ebuild,v 1.6 2012/12/18 22:36:34 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.9.ebuild,v 1.1 2012/12/18 22:36:34 polynomial-c Exp $
 
-EAPI="3"
+EAPI="5"
 
 inherit cron eutils pam user
 
@@ -11,10 +11,11 @@ SRC_URI="https://fedorahosted.org/releases/c/r/cronie/${P}.tar.gz"
 HOMEPAGE="https://fedorahosted.org/cronie/wiki"
 
 LICENSE="ISC BSD BSD-2"
-KEYWORDS="amd64 ~arm ~sparc x86"
-IUSE="inotify pam"
+KEYWORDS="~amd64 ~arm ~sparc ~x86"
+IUSE="anacron inotify pam selinux"
 
-DEPEND="pam? ( virtual/pam )"
+DEPEND="pam? ( virtual/pam )
+	anacron? ( !sys-process/anacron )"
 RDEPEND="${DEPEND}"
 
 #cronie supports /etc/crontab
@@ -26,29 +27,43 @@ pkg_setup() {
 
 src_configure() {
 	SPOOL_DIR="/var/spool/cron/crontabs" econf \
-		$(use_with inotify ) \
-		$(use_with pam ) \
+		$(use_with inotify) \
+		$(use_with pam) \
+		$(use_with selinux) \
+		$(use_enable anacron) \
 		--with-daemon_username=cron \
-		--with-daemon_groupname=cron \
-		|| die "econf failed"
+		--with-daemon_groupname=cron
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "install failed"
+	emake install DESTDIR="${D}"
 
 	docrondir -m 1730 -o root -g crontab
 	fowners root:crontab /usr/bin/crontab
 	fperms 2751 /usr/bin/crontab
+
+	insinto /etc/conf.d
+	newins "${S}"/crond.sysconfig ${PN}
 
 	insinto /etc
 	newins "${FILESDIR}/${PN}-1.2-crontab" crontab
 	newins "${FILESDIR}/${PN}-1.2-cron.deny" cron.deny
 
 	keepdir /etc/cron.d
-	newinitd "${FILESDIR}/${PN}-1.2-initd" cronie
+	newinitd "${FILESDIR}/${PN}-1.3-initd" ${PN}
 	newpamd "${FILESDIR}/${PN}-1.4.3-pamd" crond
 
-	dodoc NEWS AUTHORS README
+	if use anacron ; then
+		keepdir /var/spool/anacron
+		fowners root:cron /var/spool/anacron
+		fperms 0750 /var/spool/anacron
+
+		insinto /etc
+
+		newinitd "${FILESDIR}"/anacron-1.0-initd anacron
+	fi
+
+	dodoc AUTHORS README contrib/*
 }
 
 pkg_postinst() {

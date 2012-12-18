@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.8-r1.ebuild,v 1.4 2012/04/06 18:26:25 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.8-r1.ebuild,v 1.5 2012/12/18 22:36:34 polynomial-c Exp $
 
 EAPI="3"
 
-inherit cron eutils pam
+inherit cron eutils pam user
 
 DESCRIPTION="Cronie is a standard UNIX daemon cron based on the original vixie-cron."
 SRC_URI="https://fedorahosted.org/releases/c/r/cronie/${P}.tar.gz"
