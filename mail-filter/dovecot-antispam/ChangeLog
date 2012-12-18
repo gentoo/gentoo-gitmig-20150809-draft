@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/dovecot-antispam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/ChangeLog,v 1.25 2012/03/03 20:00:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/ChangeLog,v 1.26 2012/12/18 18:21:50 radhermit Exp $
+
+  18 Dec 2012; Tim Harder <radhermit@gentoo.org> -dovecot-antispam-1.3.ebuild,
+  -dovecot-antispam-2.0_pre20101222.ebuild, metadata.xml:
+  Remove old.
 
   03 Mar 2012; Tim Harder <radhermit@gentoo.org>
   dovecot-antispam-2.0_pre20101222.ebuild:
