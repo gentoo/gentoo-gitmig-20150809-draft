@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/folks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.21 2012/05/07 07:45:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.22 2012/12/18 23:31:54 eva Exp $
+
+*folks-0.8.0 (18 Dec 2012)
+
+  18 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> -folks-0.2.1.ebuild,
+  -folks-0.6.6.ebuild, +folks-0.8.0.ebuild, metadata.xml:
+  Version bump for Gnome 3.6. Fix license. Drop old revisions.
 
 *folks-0.6.9 (07 May 2012)
 
