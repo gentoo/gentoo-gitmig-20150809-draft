@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mikmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/ChangeLog,v 1.22 2012/12/16 19:59:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/ChangeLog,v 1.23 2012/12/18 19:56:03 ago Exp $
+
+  18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> mikmod-3.2.2.ebuild:
+  Stable for ia64, wrt bug #445556
 
   16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> mikmod-3.2.2.ebuild:
   Stable for ppc, wrt bug #445556
