@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/larch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/larch/ChangeLog,v 1.3 2012/10/07 00:40:09 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/larch/ChangeLog,v 1.4 2012/12/18 15:40:27 mschiff Exp $
+
+*larch-1.20121216 (18 Dec 2012)
+
+  18 Dec 2012; Marc Schiffbauer <mschiff@gentoo.org> -larch-1.20120527.ebuild,
+  +larch-1.20121216.ebuild:
+  Version bump. Drop old version.
 
 *larch-1.20121006-r1 (07 Oct 2012)
 
