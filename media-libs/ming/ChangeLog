@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ming
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.99 2012/12/17 19:52:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.100 2012/12/18 19:17:25 ago Exp $
+
+  18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> ming-0.4.4.ebuild:
+  Stable for ia64, wrt bug #445440
 
   17 Dec 2012; Markus Meier <maekke@gentoo.org> ming-0.4.4.ebuild:
   arm stable, bug #445440
