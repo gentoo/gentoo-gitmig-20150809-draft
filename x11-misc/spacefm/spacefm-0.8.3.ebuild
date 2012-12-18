@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.8.3.ebuild,v 1.2 2012/12/02 22:17:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.8.3.ebuild,v 1.3 2012/12/18 18:32:12 hasufell Exp $
 
 EAPI=5
 
@@ -18,7 +18,6 @@ IUSE="+startup-notification"
 
 RDEPEND="dev-libs/glib:2
 	dev-util/desktop-file-utils
-	sys-apps/dbus
 	>=virtual/udev-143
 	virtual/freedesktop-icon-theme
 	x11-libs/cairo
@@ -65,6 +64,7 @@ pkg_postinst() {
 	elog "  x11-libs/gksu"
 	elog "  kde-base/kdesu"
 	elog "Other optional dependencies:"
+	elog "  sys-apps/dbus"
 	elog "  sys-process/lsof (device processes)"
 	elog "  virtual/eject (eject media)"
 	einfo
