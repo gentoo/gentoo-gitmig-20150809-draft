@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/emilia-pinball-0.3.1-r1.ebuild,v 1.7 2011/04/26 08:57:17 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/emilia-pinball-0.3.1-r1.ebuild,v 1.8 2012/12/18 19:59:10 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -18,7 +18,7 @@ IUSE=""
 
 RDEPEND="virtual/opengl
 	x11-libs/libSM
-	media-libs/libsdl[opengl,video,X]
+	media-libs/libsdl[joystick,opengl,video,X]
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer[vorbis]
 	>=sys-devel/libtool-2.2.6b"
@@ -42,21 +42,19 @@ src_configure() {
 }
 
 src_compile() {
-	emake CXXFLAGS="${CXXFLAGS}" || die "emake failed"
+	emake CXXFLAGS="${CXXFLAGS}" || die
 }
 
 src_install() {
-	dodoc README || die "dodoc failed"
-	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc README || die
+	emake DESTDIR="${D}" install || die
 	dosym "${GAMES_BINDIR}"/pinball "${GAMES_BINDIR}"/emilia-pinball
-	mv "${D}/${GAMES_PREFIX}/include" "${D}/usr/" \
-		|| die "mv failed (include)"
+	mv "${D}/${GAMES_PREFIX}/include" "${D}/usr/" || die
 	dodir /usr/bin
-	mv "${D}/${GAMES_BINDIR}/pinball-config" "${D}/usr/bin/" \
-		|| die "mv failed (bin)"
+	mv "${D}/${GAMES_BINDIR}/pinball-config" "${D}/usr/bin/" || die
 	sed -i \
 		-e 's:-I${prefix}/include/pinball:-I/usr/include/pinball:' \
-		"${D}"/usr/bin/pinball-config || die "sed failed"
+		"${D}"/usr/bin/pinball-config || die
 	newicon data/pinball.xpm ${PN}.xpm
 	make_desktop_entry emilia-pinball "Emilia pinball"
 	prepgamesdirs
