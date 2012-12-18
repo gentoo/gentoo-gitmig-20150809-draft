@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/penumbra-collection/penumbra-collection-1.1.ebuild,v 1.4 2012/12/18 19:23:39 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/penumbra-collection/penumbra-collection-1.1.ebuild,v 1.5 2012/12/18 23:05:52 hasufell Exp $
 
 EAPI=5
 
@@ -51,13 +51,16 @@ INSTALL_KEY_FILE=${gamedir}/collectionkey
 QA_PREBUILT="${gamedir}/Overture/penumbra.bin
 	${gamedir}/BlackPlague/requiem.bin
 	${gamedir}/BlackPlague/blackplague.bin"
-QA_PREBUILT_amd64="${QA_PREBUILT}
-	${gamedir}/BlackPlague/lib/libfltk.so.1.1
-	${gamedir}/BlackPlague/lib/libCgGL.so
-	${gamedir}/BlackPlague/lib/libCg.so
-	${gamedir}/Overture/lib/libfltk.so.1.1
-	${gamedir}/Overture/lib/libCgGL.so
-	${gamedir}/Overture/lib/libCg.so"
+
+if [[ $ARCH == amd64 ]] ; then
+	QA_PREBUILT="${QA_PREBUILT}
+		${gamedir}/BlackPlague/lib/libfltk.so.1.1
+		${gamedir}/BlackPlague/lib/libCgGL.so
+		${gamedir}/BlackPlague/lib/libCg.so
+		${gamedir}/Overture/lib/libfltk.so.1.1
+		${gamedir}/Overture/lib/libCgGL.so
+		${gamedir}/Overture/lib/libCg.so"
+fi
 
 S=${WORKDIR}/${MY_PN}
 
