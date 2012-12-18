@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/phonon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.46 2012/12/12 14:02:27 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.47 2012/12/18 13:05:33 ago Exp $
+
+  18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> phonon-4.6.0-r1.ebuild:
+  Stable for ia64, wrt bug #431190
 
   12 Dec 2012; Michael Palimaka <kensington@gentoo.org>
   -files/phonon-4.5.0-pow.patch, -phonon-4.5.0.ebuild, -phonon-4.5.1-r1.ebuild:
