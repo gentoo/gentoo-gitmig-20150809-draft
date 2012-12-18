@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.5.0.ebuild,v 1.2 2012/12/18 04:09:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.5.0.ebuild,v 1.3 2012/12/18 04:31:29 alexxy Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ else
 	S="${WORKDIR}/${MY_P}"
 fi
 
-inherit base eutils pam perl-module user ${INHERIT_GIT}
+inherit autotools base eutils pam perl-module user ${INHERIT_GIT}
 
 DESCRIPTION="SLURM: A Highly Scalable Resource Manager"
 HOMEPAGE="http://www.schedmd.com"
@@ -56,8 +56,8 @@ LIBSLURMDB_PERL_S="${WORKDIR}/${P}/contribs/perlapi/libslurmdb/perl"
 
 RESTRICT="primaryuri"
 
-PATHCES=(
-	"${FILESDIR}/${PN}-2.3.4-glibc2.16.patch"
+PATCHES=(
+	"${FILESDIR}/${PN}-2.5.0-nogtk.patch"
 )
 
 src_unpack() {
@@ -97,6 +97,15 @@ src_prepare() {
 	sed -e 's:/tmp:/var/tmp:g' \
 		-i "${S}/etc/slurm.conf.example" \
 			|| die "Can't sed for StateSaveLocation=*./tmp"
+	# disable sview since it need gtk+
+	sed -e '/sview/d' \
+		-i configure.ac
+	sed -e 's:sview::g' \
+		-i src/Makefile.am
+	# apply patches
+	epatch "${PATCHES[@]}"
+	elibtoolize
+	eautoreconf
 }
 
 src_configure() {

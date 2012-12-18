@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/slurm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/ChangeLog,v 1.18 2012/12/18 04:09:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/ChangeLog,v 1.19 2012/12/18 04:31:29 alexxy Exp $
+
+  18 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org>
+  +files/slurm-2.5.0-nogtk.patch, slurm-2.5.0.ebuild:
+  [sys-cluster/slurm] Fix hard dep for gtk+ O_o
 
   18 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org> slurm-2.4.5.ebuild,
   slurm-2.5.0.ebuild:
