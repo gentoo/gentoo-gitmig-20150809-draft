@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.19 2012/11/02 00:19:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.20 2012/12/18 17:51:01 jer Exp $
+
+  18 Dec 2012; Jeroen Roovers <jer@gentoo.org> mariadb-5.5.28.ebuild:
+  Drop HPPA keywording.
 
 *mariadb-5.5.28 (02 Nov 2012)
 
