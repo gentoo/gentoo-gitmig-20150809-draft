@@ -1,9 +1,15 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.288 2012/12/17 17:07:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.289 2012/12/18 08:06:46 ford_prefect Exp $
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pulseaudio-2.1-r1.ebuild:
   Stable for ia64, wrt bug #435074
+
+*pulseaudio-3.0 (18 Dec 2012)
+
+  18 Dec 2012; Arun Raghavan <ford_prefect@gentoo.org>
+  -pulseaudio-2.99.3.ebuild, +pulseaudio-3.0.ebuild:
+  Bump to 3.0. Only minor change since 2.99.3.
 
 *pulseaudio-2.99.3 (07 Dec 2012)
 
