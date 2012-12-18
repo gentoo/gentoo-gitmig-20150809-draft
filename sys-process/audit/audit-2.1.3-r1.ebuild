@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.1.3-r1.ebuild,v 1.8 2012/07/03 19:48:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.1.3-r1.ebuild,v 1.9 2012/12/18 19:27:31 robbat2 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -155,9 +155,17 @@ src_install() {
 	use python && python_clean_installation_image
 }
 
+pkg_preinst() {
+	default
+	# Preserve from the audit-1 series
+	preserve_old_lib /$(get_libdir)/libau{dit,parse}.so.0
+}
+
 pkg_postinst() {
 	lockdown_perms "${ROOT}"
 	use python && python_mod_optimize audit.py
+	# Preserve from the audit-1 series
+	preserve_old_lib_notify /$(get_libdir)/libau{dit,parse}.so.0
 }
 
 pkg_postrm() {

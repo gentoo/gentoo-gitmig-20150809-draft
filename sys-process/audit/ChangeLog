@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.80 2012/07/03 19:48:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.81 2012/12/18 19:27:31 robbat2 Exp $
+
+  18 Dec 2012; Robin H. Johnson <robbat2@gentoo.org> audit-2.0.5.ebuild,
+  audit-2.1.3-r1.ebuild, audit-2.1.3.ebuild:
+  Bug #383235: implement preserve_old_lib.
 
   03 Jul 2012; Jeroen Roovers <jer@gentoo.org> audit-2.1.3-r1.ebuild:
   Stable for HPPA (bug #418395).
@@ -356,4 +360,3 @@
 
   29 Apr 2005; Elfyn McBratney <beu@gentoo.org> :
   Initial ebuild, from yours truly.
-
