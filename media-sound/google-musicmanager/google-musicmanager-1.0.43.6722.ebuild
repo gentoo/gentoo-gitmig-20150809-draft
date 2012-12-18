@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.43.6722.ebuild,v 1.4 2012/12/12 02:18:05 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.43.6722.ebuild,v 1.5 2012/12/18 05:39:59 vapier Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://music.google.com"
 SRC_URI="x86? ( ${MY_URL}/${MY_PKG} )
 	amd64? ( ${MY_URL}/${MY_PKG/i386/amd64} )"
 
-LICENSE="google-talkplugin Apache-2.0 MIT LGPL-2.1 gSOAP BSD FDL-1.2 MPL-1.1 openssl ZLIB libtiff"
+LICENSE="Google-TOS Apache-2.0 MIT LGPL-2.1 gSOAP BSD FDL-1.2 MPL-1.1 openssl ZLIB libtiff"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="log"
