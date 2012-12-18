@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.24 2012/12/15 18:43:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.25 2012/12/18 17:51:39 tetromino Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 sparc x86"
-IUSE="cdr daap doc gnome-keyring ipod libnotify lirc musicbrainz mtp nsplugin python test udev upnp-av webkit"
+IUSE="cdr daap gnome-keyring ipod libnotify lirc musicbrainz mtp nsplugin python test udev upnp-av webkit"
 
 # FIXME: double check what to do with fm-radio plugin
 # TODO: watchout for udev use flag changes
@@ -71,14 +71,12 @@ RDEPEND="${COMMON_DEPEND}
 	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
 	>=media-plugins/gst-plugins-taglib-0.10.6:0.10"
 
-# gtk-doc-am needed for eautoreconf
-#	dev-util/gtk-doc-am
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
+	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.40
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.9.1
-	doc? ( >=dev-util/gtk-doc-1.4 )
 	test? ( dev-libs/check )"
 
 DOCS="AUTHORS ChangeLog DOCUMENTERS INTERNALS \

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.97.ebuild,v 1.5 2012/12/15 18:43:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.97.ebuild,v 1.6 2012/12/18 17:51:39 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -15,8 +15,7 @@ HOMEPAGE="http://www.rhythmbox.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="cdr clutter daap dbus doc gnome-keyring html ipod libnotify lirc
-musicbrainz mtp nsplugin +python test +udev upnp-av webkit zeitgeist"
+IUSE="cdr clutter daap dbus gnome-keyring html ipod libnotify lirc musicbrainz mtp nsplugin +python test +udev upnp-av webkit zeitgeist"
 # vala
 KEYWORDS="~amd64 ~x86"
 
@@ -92,14 +91,12 @@ RDEPEND="${COMMON_DEPEND}
 			dev-python/mako
 			>=net-libs/webkit-gtk-1.3.9:3[introspection] ) )
 "
-# gtk-doc-am needed for eautoreconf
-#	dev-util/gtk-doc-am
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
+	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.35
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.9.1
-	doc? ( >=dev-util/gtk-doc-1.4 )
 	test? ( dev-libs/check )"
 #	vala? ( >=dev-lang/vala-0.9.4:0.12 )
 DOCS="AUTHORS ChangeLog DOCUMENTERS INTERNALS \
