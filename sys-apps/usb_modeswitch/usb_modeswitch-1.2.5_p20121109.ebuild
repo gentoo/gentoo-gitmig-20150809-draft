@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-1.2.5_p20121109.ebuild,v 1.1 2012/11/28 23:00:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-1.2.5_p20121109.ebuild,v 1.2 2012/12/18 10:37:38 ssuominen Exp $
 
 EAPI=5
 inherit linux-info toolchain-funcs udev
@@ -16,11 +16,12 @@ SRC_URI="http://www.draisberghof.de/${PN}/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 COMMON_DEPEND="virtual/udev
-	virtual/libusb:0"
+	virtual/libusb:0
+	!<sys-apps/kmod-12-r1"
 RDEPEND="${COMMON_DEPEND}
 	dev-lang/tcl" # usb_modeswitch script is tcl
 DEPEND="${COMMON_DEPEND}
@@ -31,10 +32,6 @@ S=${WORKDIR}/${MY_P}
 CONFIG_CHECK="~USB_SERIAL"
 
 src_prepare() {
-	# NOTE: This one can be removed once >= kmod-11-r3 is marked stable since it
-	# puts modprobe back to /sbin which is already in the search patch earlier.
-	sed -i -e 's:/usr/sbin/modprobe:& /usr/bin/modprobe:' ${PN}.tcl || die #416223
-
 	sed -i -e '/install.*BIN/s:-s::' Makefile || die
 }
 
