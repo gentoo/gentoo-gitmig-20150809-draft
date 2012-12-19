@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.23.ebuild,v 1.5 2012/11/19 15:11:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.23.ebuild,v 1.6 2012/12/19 16:52:01 tetromino Exp $
 
 EAPI="2"
 
@@ -34,6 +34,7 @@ COMMON="<x11-base/xorg-server-1.12.99
 		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/pango[X]
+		|| ( x11-libs/pangox-compat <x11-libs/pango-1.31[X] )
 	)
 	kernel_linux? ( >=sys-libs/glibc-2.6.1 )
 	multilib? ( app-emulation/emul-linux-x86-opengl )
