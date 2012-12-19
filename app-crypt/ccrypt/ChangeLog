@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/ccrypt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.24 2012/09/08 02:02:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.25 2012/12/19 07:04:39 alonbl Exp $
+
+*ccrypt-1.10 (19 Dec 2012)
+
+  19 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org> +ccrypt-1.10.ebuild:
+  Version bump, per bug#446170, thanks to nihil39
 
   08 Sep 2012; Tim Harder <radhermit@gentoo.org> -ccrypt-1.7-r1.ebuild,
   -files/ccrypt-1.7-emacs.patch, -ccrypt-1.8.ebuild:
@@ -83,4 +88,3 @@
   07 Sep 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +ccrypt-1.7.ebuild:
   Initial ebuild by Bob Hepple <bhepple@freeshell.org> in bug #51239
-
