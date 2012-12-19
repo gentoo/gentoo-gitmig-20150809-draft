@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14310 2012/12/19 11:08:21 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14311 2012/12/19 13:51:24 mpagano Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -35,10 +35,6 @@
 # Masked for removal in 30 days. (17 Jan 2012)
 # This is provided by USE=xtended webalizer, bug #445226
 app-admin/webalizer-xtended
-
-# Mike Pagano <mpagano@gentoo.org> (14 Dec 2012)
-# Masked for testing
->=app-portage/portpeek-2.1.2
 
 # Andrey Grozin <grozin@gentoo.org> (14 Dec 2012)
 # Stuff from the lisp overlay, with some version bumps
