@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.1.ebuild,v 1.6 2012/09/24 00:42:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.1.ebuild,v 1.7 2012/12/19 16:57:44 tetromino Exp $
 
 EAPI=4
 
@@ -41,7 +41,8 @@ RESTRICT="strip mirror"
 RDEPEND="media-libs/fontconfig
 	x86? ( =dev-libs/openssl-0.9.8* )
 	cups? ( net-print/cups )
-	x86? ( x11-libs/gtk+:2 net-dns/libidn
+	x86? ( x11-libs/gtk+:2 x11-libs/pango[X] net-dns/libidn
+			|| ( x11-libs/pangox-compat <x11-libs/pango-1.31[X] )
 			ldap? ( net-nds/openldap )
 			!minimal? ( || ( www-client/firefox
 						www-client/firefox-bin
