@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-expander/chef-expander-10.16.2.ebuild,v 1.1 2012/12/17 10:22:06 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-expander/chef-expander-10.16.2.ebuild,v 1.2 2012/12/19 08:07:24 hollow Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19"
@@ -27,13 +27,10 @@ ruby_add_rdepend "~app-admin/chef-${PV}
 	>=dev-ruby/amqp-0.6.7
 	<dev-ruby/amqp-0.7
 	>=dev-ruby/bunny-0.6.0
-	<dev-ruby/bunny-0.7
 	>=dev-ruby/em-http-request-0.2.11
 	<dev-ruby/em-http-request-0.3
 	>=dev-ruby/eventmachine-0.12.10
-	<dev-ruby/eventmachine-0.13
 	>=dev-ruby/fast_xs-0.7.3
-	<dev-ruby/fast_xs-0.8
 	>=dev-ruby/highline-1.6.1
 	<dev-ruby/highline-1.7
 	>=dev-ruby/mixlib-log-1.2.0

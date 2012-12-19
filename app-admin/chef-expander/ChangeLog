@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/chef-expander
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-expander/ChangeLog,v 1.7 2012/12/17 10:22:06 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-expander/ChangeLog,v 1.8 2012/12/19 08:07:24 hollow Exp $
+
+  19 Dec 2012; Benedikt Böhm <hollow@gentoo.org> chef-expander-10.16.2.ebuild:
+  fix dependencies
 
 *chef-expander-10.16.2 (17 Dec 2012)
 
