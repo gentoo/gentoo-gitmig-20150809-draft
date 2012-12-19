@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-kolab/evolution-kolab-3.4.4.ebuild,v 1.1 2012/08/14 01:25:46 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-kolab/evolution-kolab-3.4.4.ebuild,v 1.2 2012/12/19 07:01:35 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="https://live.gnome.org/Evolution/Kolab"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="" # doc (gtk-doc fails); kerberos (does nothing useful for now)
+IUSE="" # kerberos (does nothing useful for now)
 
 RDEPEND=">=mail-client/evolution-${PV}:2.0
 	>=gnome-extra/evolution-data-server-${PV}
@@ -31,15 +31,12 @@ RDEPEND=">=mail-client/evolution-${PV}:2.0
 "
 DEPEND="${RDEPEND}
 	dev-util/gperf
+	>=dev-util/gtk-doc-am-1.14
 	>=dev-util/intltool-0.35.5
 	sys-devel/gettext
 	virtual/pkgconfig
 	dev-util/gtk-doc-am
 "
-#	doc? (
-#		app-text/docbook-xml-dtd:4.3
-#		>=dev-util/gtk-doc-1.14 )
-# eautoreconf needs gtk-doc-am
 
 RESTRICT="test" # test suite is non-functional
 
