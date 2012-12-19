@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.122 2012/12/01 21:03:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.123 2012/12/19 10:17:57 pinkbyte Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -70,7 +70,6 @@ games-arcade/jardinains
 games-arcade/gish-demo
 games-emulation/caps
 games-emulation/nestra
-games-emulation/snes9express
 games-emulation/zinc
 games-emulation/zsnes
 games-fps/avp
@@ -166,7 +165,6 @@ net-im/skype
 net-im/skypetab-ng
 net-misc/icaclient
 net-misc/ps3mediaserver
-net-p2p/sancho-bin
 sci-biology/foldingathome
 sci-electronics/eagle
 sci-chemistry/cara-bin
@@ -185,8 +183,3 @@ www-plugins/nspluginwrapper
 # AMD64 Team; <amd64@gentoo.org>
 # grub-1 is not available on no-multilib-profiles
 <sys-boot/grub-1.99
-
-# Diego Elio Pettenò <flameeyes@gentoo.org>
-# older hpacucli shipped only with 32-bit binaries
-<sys-block/hpacucli-9.30.15.0
-
