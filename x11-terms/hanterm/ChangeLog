@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/hanterm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.28 2011/08/02 05:51:11 mattst88 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.29 2012/12/19 14:25:19 naota Exp $
+
+  19 Dec 2012;  <naota@gentoo.org> hanterm-3.1.6-r2.ebuild,
+  hanterm-3.1.6-r4.ebuild:
+  Fix LICENSE. #446786
 
   02 Aug 2011; Matt Turner <mattst88@gentoo.org> hanterm-3.1.6-r2.ebuild,
   hanterm-3.1.6-r4.ebuild:

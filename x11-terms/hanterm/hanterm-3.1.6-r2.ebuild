@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.27 2011/08/02 05:51:11 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.28 2012/12/19 14:25:19 naota Exp $
 
 DESCRIPTION="Hanterm -- Korean terminal"
 HOMEPAGE="http://www.hanterm.org/"
 SRC_URI="http://download.kldp.net/hanterm/${P}.tar.gz"
 
-LICENSE="MIT as-is"
+LICENSE="MIT HPND"
 SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
