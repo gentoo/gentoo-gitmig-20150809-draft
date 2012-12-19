@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.786 2012/12/19 14:29:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.787 2012/12/19 15:34:09 jer Exp $
+
+  19 Dec 2012; Jeroen Roovers <jer@gentoo.org> -opera-12.11.1661.ebuild:
+  Old.
 
   19 Dec 2012; Agostino Sarubbo <ago@gentoo.org> opera-12.12_p1707.ebuild:
   Stable for amd64, wrt bug #446096
