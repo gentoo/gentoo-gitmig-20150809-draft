@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.4.3.ebuild,v 1.5 2012/12/18 15:28:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.4.3.ebuild,v 1.6 2012/12/19 20:22:04 scarabeus Exp $
 
 EAPI=4
 
@@ -333,11 +333,6 @@ src_prepare() {
 	eautoreconf
 	# hack in the autogen.sh
 	touch autogen.lastrun
-
-	# mysql dmake build is MESSY at minimal
-	sed -i \
-		-e "s:/usr/lib/:${EPREFIX}/usr/$(get_libdir):g" \
-		mysqlc/source/makefile.mk || die
 
 	# system pyuno mess
 	sed \
