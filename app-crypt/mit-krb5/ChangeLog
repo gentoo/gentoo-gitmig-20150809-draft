@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.342 2012/12/16 19:38:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.343 2012/12/19 16:51:08 ago Exp $
+
+  19 Dec 2012; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.10.3.ebuild:
+  Add ~ia64, wrt bug #412489
 
   16 Dec 2012; Ulrich Müller <ulm@gentoo.org> mit-krb5-1.9.4-r1.ebuild,
   mit-krb5-1.10.2-r1.ebuild, mit-krb5-1.10.3.ebuild:
