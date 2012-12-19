@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.159 2012/12/18 18:04:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.160 2012/12/19 16:49:47 ago Exp $
+
+  19 Dec 2012; Agostino Sarubbo <ago@gentoo.org> package.use.mask:
+  mask x11-libs/qt-bearer connman because requires to much depend still not
+  keyworded
 
   18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> package.use.mask:
   Remove net-libs/webkit-gtk webkit2
