@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/zniper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zniper/ChangeLog,v 1.4 2012/11/17 20:29:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zniper/ChangeLog,v 1.5 2012/12/19 08:18:23 pinkbyte Exp $
+
+  19 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> zniper-1.0-r1.ebuild:
+  Stable on amd64, wrt bug #447734
 
   17 Nov 2012; Agostino Sarubbo <ago@gentoo.org> zniper-1.0-r1.ebuild:
   Add ~amd64, wrt bug #443690
