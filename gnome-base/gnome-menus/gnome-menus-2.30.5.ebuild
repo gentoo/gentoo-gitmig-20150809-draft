@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.30.5.ebuild,v 1.12 2012/05/05 05:38:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.30.5.ebuild,v 1.13 2012/12/19 09:55:31 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ inherit eutils gnome2 python
 DESCRIPTION="The GNOME menu system, implementing the F.D.O cross-desktop spec"
 HOMEPAGE="http://www.gnome.org"
 
-LICENSE="GPL-2 LGPL-2"
+LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="debug +introspection python"
