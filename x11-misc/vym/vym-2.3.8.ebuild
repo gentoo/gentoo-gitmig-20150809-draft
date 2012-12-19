@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-2.0.12.ebuild,v 1.1 2012/06/04 19:27:02 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-2.3.8.ebuild,v 1.1 2012/12/19 03:02:24 jer Exp $
 
 EAPI=4
 inherit eutils qt4-r2
@@ -14,11 +14,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/qt-dbus:4
+DEPEND="
+	x11-libs/qt-dbus:4
 	x11-libs/qt-gui:4[qt3support]
-	x11-libs/qt-svg:4"
-RDEPEND="${DEPEND}
-	app-arch/zip"
+	x11-libs/qt-svg:4
+"
+RDEPEND="
+	${DEPEND}
+	app-arch/zip
+"
 
 DOCS="README.txt"
 
