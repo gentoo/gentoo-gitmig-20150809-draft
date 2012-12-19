@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4.ebuild,v 1.1 2012/12/18 08:20:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4.ebuild,v 1.2 2012/12/19 03:01:40 radhermit Exp $
 
 EAPI=5
 
@@ -78,7 +78,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.48.0-spell.patch \
 		"${FILESDIR}"/${PN}-0.48.2-libwpg.patch \
 		"${FILESDIR}"/${PN}-0.48.3.1-desktop.patch \
-		"${FILESDIR}"/${P}-python2.patch
+		"${FILESDIR}"/${P}-python2.patch \
+		"${FILESDIR}"/${PN}-0.48.4-fix-member-decl.patch
 
 	eautoreconf
 
