@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.341 2012/10/23 05:03:16 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.342 2012/12/19 14:48:59 sera Exp $
+
+*sun-jdk-1.6.0.38 (19 Dec 2012)
+
+  19 Dec 2012; Ralph Sennhauser <sera@gentoo.org> -sun-jdk-1.6.0.35.ebuild,
+  -sun-jdk-1.6.0.35-r1.ebuild, +sun-jdk-1.6.0.38.ebuild:
+  Version bump (ia64 not available).
+  Remove vulnerable.
 
   23 Oct 2012; Andreas Schuerch <nativemad@gentoo.org> sun-jdk-1.6.0.37.ebuild:
   x86 stable, see bug 438706
