@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.25.3.ebuild,v 1.1 2012/12/05 23:32:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.25.3.ebuild,v 1.2 2012/12/19 07:10:57 qnikst Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime flag-o-matic
@@ -18,7 +18,8 @@ IUSE="debug doc jpeg tiff xml"
 
 RDEPEND="jpeg? ( virtual/jpeg )
 	tiff? ( media-libs/tiff:0 )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	|| ( gnome-base/librsvg media-gfx/inkscape )"
 
 S=${WORKDIR}/${MY_P%%.3}
 
