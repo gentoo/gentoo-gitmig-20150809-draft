@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.7-r7.ebuild,v 1.7 2012/07/29 17:53:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.7-r7.ebuild,v 1.8 2012/12/19 07:26:21 ulm Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.time-travellers.org/oftpd"
 SRC_URI="http://www.time-travellers.org/oftpd/${P}.tar.gz
 	ftp://ftp.deepspace6.net/pub/ds6/sources/${PN}/${PN}-0.3.6-ipv6rel2.patch.gz"
 
-LICENSE="as-is"
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="amd64 arm ppc ppc64 sh sparc x86"
 IUSE="ipv6"

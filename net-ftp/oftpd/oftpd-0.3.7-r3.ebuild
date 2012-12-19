@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.7-r3.ebuild,v 1.7 2009/05/29 13:23:35 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.7-r3.ebuild,v 1.8 2012/12/19 07:26:21 ulm Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Secure, small, anonymous only ftpd"
 HOMEPAGE="http://www.time-travellers.org/oftpd"
 SRC_URI="http://www.time-travellers.org/oftpd/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="amd64 arm ~ppc ppc64 sh sparc x86"
 IUSE=""
