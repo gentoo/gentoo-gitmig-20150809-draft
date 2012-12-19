@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.92 2012/12/18 01:25:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.93 2012/12/19 14:30:11 ago Exp $
+
+  19 Dec 2012; Agostino Sarubbo <ago@gentoo.org> webalizer-2.23.05.ebuild:
+  Stable for amd64, wrt bug #445226
 
   18 Dec 2012; Anthony G. Basile <blueness@gentoo.org> webalizer-2.23.05.ebuild:
   Add pkg_postinst() message about upgrading to XTENDED, bug #445226, comment #4
