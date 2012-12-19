@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.29 2012/12/17 20:09:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.30 2012/12/19 09:22:17 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -134,12 +134,16 @@ fi
 
 _python_set_globals() {
 	local flags=( "${PYTHON_COMPAT[@]/#/python_targets_}" )
-	#local flags_st=( "${PYTHON_COMPAT[@]/#/-python_single_target_}" )
 	local optflags=${flags[@]/%/?}
-	#optflags+=,${flags_st[@]/%/(-)}
 
-	# PYTHON_SINGLE_TARGET safety check temporarily disabled
-	# because of issues with paludis, bug #447524.
+	# A nice QA trick here. Since a python-single-r1 package has to have
+	# at least one PYTHON_SINGLE_TARGET enabled (REQUIRED_USE),
+	# the following check will always fail on those packages. Therefore,
+	# it should prevent developers from mistakenly depending on packages
+	# not supporting multiple Python implementations.
+
+	local flags_st=( "${PYTHON_COMPAT[@]/#/-python_single_target_}" )
+	optflags+=,${flags_st[@]/%/(-)}
 
 	IUSE=${flags[*]}
 	REQUIRED_USE="|| ( ${flags[*]} )"
