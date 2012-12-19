@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.49 2012/11/13 20:27:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.50 2012/12/19 18:23:28 ago Exp $
+
+  19 Dec 2012; Agostino Sarubbo <ago@gentoo.org> unbound-1.4.18.ebuild:
+  Add ~ia64, wrt bug #441688
 
   13 Nov 2012; Anthony G. Basile <blueness@gentoo.org> unbound-1.4.18.ebuild:
   keyword ~mips, bug #441688
