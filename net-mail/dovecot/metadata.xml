@@ -8,7 +8,6 @@
         </maintainer>
   <use>
     <flag name="cydir">Add cydir storage support</flag>
-    <flag name="dbox">Add dbox storage support</flag>
     <flag name="managesieve">Add managesieve protocol support</flag>
     <flag name="mdbox">Add mdbox storage support</flag>
     <flag name="sdbox">Add sdbox storage support</flag>
