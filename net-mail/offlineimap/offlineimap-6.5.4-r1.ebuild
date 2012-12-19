@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.5.3.1.ebuild,v 1.1 2012/04/26 12:12:34 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.5.4-r1.ebuild,v 1.1 2012/12/19 05:32:34 tomka Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -19,10 +19,10 @@ SRC_URI="https://github.com/spaetz/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-IUSE="doc ssl"
+IUSE="doc ssl sqlite"
 
 DEPEND="doc? ( dev-python/docutils )"
-RDEPEND=""
+RDEPEND="sqlite? ( dev-python/pysqlite )"
 S="${WORKDIR}/${PN}"
 
 # github changed tarball internals again...
@@ -34,7 +34,7 @@ src_unpack() {
 src_prepare() {
 	distutils_src_prepare
 	# see http://pogma.com/2009/09/09/snow-leopard-and-offlineimap/ and bug 284925
-	epatch "${FILESDIR}"/"${P}"-darwin10.patch
+	epatch "${FILESDIR}"/"${PN}-6.5.3.1"-darwin10.patch
 }
 
 src_compile() {
@@ -54,6 +54,17 @@ src_install() {
 	fi
 }
 
+pkg_preinst() {
+	if has_version "<${CATEGORY}/${PN}-6.4" ; then
+		elog "If you upgraded from 6.3.* then you may need to update your config:"
+		elog ""
+		elog "If you use nametrans= settings on a remote repository, you will have"
+		elog "to add a \"reverse\" nametrans setting to the local repository, so that"
+		elog "it knows which folders it should (not) create on the remote side."
+		elog ""
+	fi
+}
+
 pkg_postinst() {
 	distutils_pkg_postinst
 
@@ -61,17 +72,15 @@ pkg_postinst() {
 	elog "You will need to configure offlineimap by creating ~/.offlineimaprc"
 	elog "Sample configurations are in /usr/share/doc/${PF}/"
 	elog ""
-
-	elog "If you upgraded from 6.3.* then you may need to update your config:"
-	elog ""
-	elog "If you use nametrans= settings on a remote repository, you will have"
-	elog "to add a \"reverse\" nametrans setting to the local repository, so that"
-	elog "it knows which folders it should (not) create on the remote side."
-	elog ""
 	elog "If you connect via ssl/tls and don't use CA cert checking, it will"
 	elog "display the server's cert fingerprint and require you to add it to the"
 	elog "configuration file to be sure it connects to the same server every"
 	elog "time. This serves to help fixing CVE-2010-4532 (offlineimap doesn't"
 	elog "check SSL server certificate) in cases where you have no CA cert."
 	elog ""
+
+	if use sqlite ; then
+		elog "The sqlite USE flag only enables a dependency on sqlite. To use"
+		elog "the sqlite backend you need to enable it in your .offlineimaprc"
+	fi
 }

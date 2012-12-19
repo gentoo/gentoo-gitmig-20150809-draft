@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/offlineimap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.86 2012/06/03 13:58:06 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.87 2012/12/19 05:32:34 tomka Exp $
+
+*offlineimap-6.5.4-r1 (19 Dec 2012)
+
+  19 Dec 2012; Thomas Kahle <tomka@gentoo.org> +offlineimap-6.5.4-r1.ebuild,
+  -files/offlineimap-6.3.1-darwin10.patch,
+  -files/offlineimap-6.3.1-version.patch, -offlineimap-6.3.1-r1.ebuild,
+  -offlineimap-6.3.2.2.ebuild, -offlineimap-6.5.3.1.ebuild, metadata.xml:
+  USE conditional dependency on pysqlite (for sqlite backend), remove old.
 
 *offlineimap-6.5.4 (03 Jun 2012)
 
@@ -383,4 +391,3 @@
 
   07 Jul 2003; Peter Johanson <latexer@gentoo.org> offlineimap-3.99.17.ebuild:
   Initial import. bug #20810. Thanks to Jean Jordaan <jean@upfrontsystems.co.za>.
-
