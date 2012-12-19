@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-0.11.0.ebuild,v 1.1 2012/12/18 23:36:38 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-0.11.0.ebuild,v 1.2 2012/12/19 00:40:55 chutzpah Exp $
 
 EAPI=5
 
@@ -14,6 +14,7 @@ HOMEPAGE="http://saltstack.org/"
 if [[ ${PV} == 9999* ]]; then
 	inherit git-2
 	EGIT_REPO_URI="git://github.com/${PN}stack/${PN}.git"
+	EGIT_BRANCH="develop"
 	SRC_URI=""
 	KEYWORDS=""
 else
