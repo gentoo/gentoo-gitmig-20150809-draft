@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/realpath-1.17.ebuild,v 1.6 2012/12/18 17:26:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/realpath-1.17.ebuild,v 1.7 2012/12/19 06:39:18 jer Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs flag-o-matic multilib prefix
@@ -37,7 +37,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	use nls || epatch "${FILESDIR}"/${P}-nonls.patch
+	use nls || epatch "${FILESDIR}"/${PN}-1.16-nonls.patch
 	epatch "${FILESDIR}"/${PN}-1.17-build.patch
 	epatch "${FILESDIR}"/${PN}-1.14-no-po4a.patch
 	epatch "${FILESDIR}"/${PN}-1.15-prefix.patch
