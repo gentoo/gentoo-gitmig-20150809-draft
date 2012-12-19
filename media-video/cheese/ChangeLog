@@ -1,6 +1,14 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.63 2012/12/11 03:55:07 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.64 2012/12/19 03:03:57 tetromino Exp $
+
+*cheese-3.6.2 (19 Dec 2012)
+
+  19 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  cheese-2.32.0.ebuild, -cheese-3.2.2.ebuild, cheese-3.4.2.ebuild,
+  +cheese-3.6.2.ebuild, metadata.xml:
+  Version bump for gnome-3.6 and gstreamer-1.0. Update license. Drop old.
+  Switch to global introspection flag.
 
   11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> cheese-2.32.0.ebuild,
   cheese-3.2.2.ebuild, cheese-3.4.2.ebuild:
