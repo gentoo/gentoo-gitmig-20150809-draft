@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/ext4magic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext4magic/ChangeLog,v 1.7 2012/09/24 14:00:50 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext4magic/ChangeLog,v 1.8 2012/12/19 07:42:23 pinkbyte Exp $
+
+  19 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> ext4magic-0.3.1.ebuild,
+  metadata.xml:
+  Add support for debugging and 'expert mode' through USE-flags, thanks to
+  gokturk
 
   24 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Package will be maintained by gokturk through proxy maintainers
