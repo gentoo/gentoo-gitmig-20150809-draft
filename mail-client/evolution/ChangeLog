@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.376 2012/11/26 16:19:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.377 2012/12/19 05:52:12 tetromino Exp $
+
+*evolution-3.6.2-r1 (19 Dec 2012)
+
+  19 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/evolution-3.2.1-reorder-mx-clutter-gtk.patch,
+  -evolution-3.2.3-r1.ebuild, -files/evolution-3.2.3-g_thread_init.patch,
+  -files/evolution-3.2.3-gmodule-explicit.patch,
+  -files/evolution-3.2.3-gtkhtml-4.4.patch, +evolution-3.6.2-r1.ebuild:
+  Version bump for gnome-3.6. Drop old.
 
   26 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   evolution-3.2.3-r1.ebuild, evolution-3.4.4.ebuild:
