@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/golly
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/ChangeLog,v 1.15 2012/06/18 22:38:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/ChangeLog,v 1.16 2012/12/19 14:30:23 ago Exp $
+
+  19 Dec 2012; Agostino Sarubbo <ago@gentoo.org> golly-2.4.ebuild:
+  Stable for amd64, wrt bug #447700
 
 *golly-2.4 (18 Jun 2012)
 
@@ -76,4 +79,3 @@
   Initial import from sunrise overlay. Thanks to Maks Verver
   <maksverver@geocities.com> on bug #323219 for the ebuild and patches,
   great work.
-
