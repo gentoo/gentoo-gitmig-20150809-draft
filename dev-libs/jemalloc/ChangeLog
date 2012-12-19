@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/jemalloc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.23 2012/11/25 12:46:43 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.24 2012/12/19 18:28:10 ago Exp $
+
+  19 Dec 2012; Agostino Sarubbo <ago@gentoo.org> jemalloc-3.2.0.ebuild:
+  Add ~ia64, wrt bug #429708
 
 *jemalloc-3.2.0 (25 Nov 2012)
 
@@ -107,4 +110,3 @@
   30 Dec 2010; Jory A. Pratt <anarchy@gentoo.org> +jemalloc-2.0.1.ebuild,
   +files/jemalloc-strip-optimization.patch, +metadata.xml:
   initial import to tree
-
