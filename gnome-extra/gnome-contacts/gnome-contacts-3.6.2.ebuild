@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/gnome-contacts-3.6.2.ebuild,v 1.1 2012/12/18 23:04:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/gnome-contacts-3.6.2.ebuild,v 1.2 2012/12/19 00:46:07 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -25,19 +25,19 @@ VALA_DEPEND="$(vala_depend)
 
 # Configure is wrong; it needs cheese-3.5.91, not 3.3.91
 RDEPEND="
-	>=dev-libs/folks-0.7.3[eds,telepathy]
+	>=dev-libs/folks-0.7.3:=[eds,telepathy]
 	>=dev-libs/glib-2.31.10:2
 	dev-libs/libgee:0
-	>=gnome-extra/evolution-data-server-3.5.3[gnome-online-accounts]
-	>=gnome-base/gnome-desktop-3.0:3
+	>=gnome-extra/evolution-data-server-3.5.3:=[gnome-online-accounts]
+	>=gnome-base/gnome-desktop-3.0:3=
 	net-libs/gnome-online-accounts
 	>=net-libs/telepathy-glib-0.17.5
 	x11-libs/cairo:=
 	x11-libs/gdk-pixbuf:2
-	x11-libs/libnotify
+	x11-libs/libnotify:=
 	>=x11-libs/gtk+-3.4:3
 	x11-libs/pango
-	v4l? ( >=media-video/cheese-3.5.91 )
+	v4l? ( >=media-video/cheese-3.5.91:= )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
