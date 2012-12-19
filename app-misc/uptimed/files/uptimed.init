@@ -1,24 +1,18 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/files/uptimed.init,v 1.4 2011/08/07 13:22:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/files/uptimed.init,v 1.5 2012/12/19 00:31:18 polynomial-c Exp $
 
-# Copyright 2002-2011 Sean Russell
+pidfile="/var/run/uptimed/uptimed.pid"
+command="/usr/sbin/uptimed"
+command_args="-p ${pidfile}"
+start_stop_daemon_args="--user uptimed"
 
-PIDFILE="/var/run/uptimed/uptimed.pid"
+start_pre() {
+	checkpath -d -o uptimed ${pidfile%/*}
 
-start() {
-	ebegin "Starting uptimed"
-	start-stop-daemon --quiet --start --user uptimed \
-		--exec /usr/sbin/uptimed --pidfile "${PIDFILE}" -- -b
-	start-stop-daemon --quiet --start --user uptimed \
-		--exec /usr/sbin/uptimed --pidfile "${PIDFILE}" \
-		-- -p ${PIDFILE}
-	eend $?
-}
-
-stop() {
-	ebegin "Stopping uptimed"
-	start-stop-daemon --quiet --stop --user uptimed --pidfile "${PIDFILE}"
-	eend $?
+	# Initialize bootid
+	start-stop-daemon --start ${start_stop_daemon_args} --exec ${command} \
+		-- -b \
+			|| eend $?
 }

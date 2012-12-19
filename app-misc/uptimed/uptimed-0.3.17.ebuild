@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.16-r4.ebuild,v 1.3 2012/05/23 13:23:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.17.ebuild,v 1.1 2012/12/19 00:31:18 polynomial-c Exp $
 
 inherit autotools user
 
@@ -10,7 +10,7 @@ SRC_URI="http://podgorny.cz/uptimed/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 pkg_setup() {
@@ -31,8 +31,6 @@ src_unpack() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
-	diropts -o uptimed -g uptimed
-	dodir /var/run/uptimed
 	keepdir /var/spool/uptimed
 	fowners uptimed:uptimed /var/spool/uptimed
 	dodoc ChangeLog README TODO AUTHORS CREDITS INSTALL.cgi sample-cgi/*
