@@ -1,20 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.7.0.5-r2.ebuild,v 1.1 2012/07/23 17:28:56 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.7.0.10.ebuild,v 1.1 2012/12/19 18:30:24 sera Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit java-vm-2 eutils prefix versionator
 
-UPDATE="$(get_version_component_range 4)"
-MY_PV="$(get_version_component_range 2)u${UPDATE}"
-S_PV="$(get_version_component_range 1-3)_0${UPDATE}"
+MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
+S_PV="$(replace_version_separator 3 '_')"
 
 X86_AT="jre-${MY_PV}-linux-i586.tar.gz"
 AMD64_AT="jre-${MY_PV}-linux-x64.tar.gz"
 
 # This URIs need updating when bumping!
-JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1637588.html"
+JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html"
 JCE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html"
 
 JCE_DIR="UnlimitedJCEPolicy"
@@ -30,9 +29,10 @@ SRC_URI="
 LICENSE="Oracle-BCLA-JavaSE"
 SLOT="1.7"
 KEYWORDS="~amd64 ~x86"
-
 IUSE="X alsa fontconfig jce nsplugin pax_kernel"
+
 RESTRICT="fetch strip"
+QA_PREBUILT="*"
 
 RDEPEND="
 	X? (
@@ -60,14 +60,14 @@ pkg_nofetch() {
 		AT=${AMD64_AT}
 	fi
 
-	einfo "Please download ${AT} from:"
-	einfo "${JRE_URI}"
-	einfo "and move it to ${DISTDIR}"
+	einfo "Please download '${AT}' from:"
+	einfo "'${JRE_URI}'"
+	einfo "and move it to '${DISTDIR}'"
 
 	if use jce; then
-		einfo "Also download ${JCE_FILE} from:"
-		einfo "${JCE_URI}"
-		einfo "and move it to ${DISTDIR}"
+		einfo "Also download '${JCE_FILE}' from:"
+		einfo "'${JCE_URI}'"
+		einfo "and move it to '${DISTDIR}'"
 	fi
 }
 
@@ -144,7 +144,9 @@ src_install() {
 		sun-jcontrol-${PN}-${SLOT}.png || die
 	sed -e "s#Name=.*#Name=Java Control Panel for Oracle JRE ${SLOT}#" \
 		-e "s#Exec=.*#Exec=/opt/${P}/bin/jcontrol#" \
-		-e "s#Icon=.*#Icon=sun-jcontrol-${PN}-${SLOT}.png#" \
+		-e "s#Icon=.*#Icon=sun-jcontrol-${PN}-${SLOT}#" \
+		-e "s#Application;##" \
+		-e "/Encoding/d" \
 		lib/desktop/applications/sun_java.desktop > \
 		"${T}"/jcontrol-${PN}-${SLOT}.desktop || die
 	domenu "${T}"/jcontrol-${PN}-${SLOT}.desktop
@@ -164,66 +166,3 @@ src_install() {
 	java-vm_revdep-mask
 	java-vm_sandbox-predict /dev/random /proc/self/coredump_filter
 }
-
-QA_TEXTRELS_x86="
-	opt/${P}/lib/i386/client/libjvm.so
-	opt/${P}/lib/i386/server/libjvm.so"
-QA_FLAGS_IGNORED+="
-	/opt/${P}/bin/java
-	/opt/${P}/bin/java_vm
-	/opt/${P}/bin/javaws
-	/opt/${P}/bin/keytool
-	/opt/${P}/bin/orbd
-	/opt/${P}/bin/pack200
-	/opt/${P}/bin/policytool
-	/opt/${P}/bin/rmid
-	/opt/${P}/bin/rmiregistry
-	/opt/${P}/bin/servertool
-	/opt/${P}/bin/tnameserv
-	/opt/${P}/bin/unpack200
-	/opt/${P}/lib/jexec"
-for java_system_arch in amd64 i386; do
-	QA_FLAGS_IGNORED+="
-		/opt/${P}/lib/${java_system_arch}/headless/libmawt.so
-		/opt/${P}/lib/${java_system_arch}/jli/libjli.so
-		/opt/${P}/lib/${java_system_arch}/libawt.so
-		/opt/${P}/lib/${java_system_arch}/libdcpr.so
-		/opt/${P}/lib/${java_system_arch}/libdeploy.so
-		/opt/${P}/lib/${java_system_arch}/libdt_socket.so
-		/opt/${P}/lib/${java_system_arch}/libfontmanager.so
-		/opt/${P}/lib/${java_system_arch}/libhprof.so
-		/opt/${P}/lib/${java_system_arch}/libinstrument.so
-		/opt/${P}/lib/${java_system_arch}/libj2gss.so
-		/opt/${P}/lib/${java_system_arch}/libj2pcsc.so
-		/opt/${P}/lib/${java_system_arch}/libj2pkcs11.so
-		/opt/${P}/lib/${java_system_arch}/libjaas_unix.so
-		/opt/${P}/lib/${java_system_arch}/libjava_crw_demo.so
-		/opt/${P}/lib/${java_system_arch}/libjavaplugin_jni.so
-		/opt/${P}/lib/${java_system_arch}/libjava.so
-		/opt/${P}/lib/${java_system_arch}/libjawt.so
-		/opt/${P}/lib/${java_system_arch}/libJdbcOdbc.so
-		/opt/${P}/lib/${java_system_arch}/libjdwp.so
-		/opt/${P}/lib/${java_system_arch}/libjfr.so
-		/opt/${P}/lib/${java_system_arch}/libjpeg.so
-		/opt/${P}/lib/${java_system_arch}/libjsdt.so
-		/opt/${P}/lib/${java_system_arch}/libjsig.so
-		/opt/${P}/lib/${java_system_arch}/libjsoundalsa.so
-		/opt/${P}/lib/${java_system_arch}/libjsound.so
-		/opt/${P}/lib/${java_system_arch}/libkcms.so
-		/opt/${P}/lib/${java_system_arch}/libmanagement.so
-		/opt/${P}/lib/${java_system_arch}/libmlib_image.so
-		/opt/${P}/lib/${java_system_arch}/libnet.so
-		/opt/${P}/lib/${java_system_arch}/libnio.so
-		/opt/${P}/lib/${java_system_arch}/libnpjp2.so
-		/opt/${P}/lib/${java_system_arch}/libnpt.so
-		/opt/${P}/lib/${java_system_arch}/librmi.so
-		/opt/${P}/lib/${java_system_arch}/libsctp.so
-		/opt/${P}/lib/${java_system_arch}/libsplashscreen.so
-		/opt/${P}/lib/${java_system_arch}/libsunec.so
-		/opt/${P}/lib/${java_system_arch}/libt2k.so
-		/opt/${P}/lib/${java_system_arch}/libunpack.so
-		/opt/${P}/lib/${java_system_arch}/libverify.so
-		/opt/${P}/lib/${java_system_arch}/libzip.so
-		/opt/${P}/lib/${java_system_arch}/server/libjvm.so
-		/opt/${P}/lib/${java_system_arch}/xawt/libmawt.so"
-done
