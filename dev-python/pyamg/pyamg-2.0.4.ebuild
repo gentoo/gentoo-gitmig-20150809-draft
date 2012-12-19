@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamg/pyamg-2.0.4.ebuild,v 1.2 2012/08/14 16:58:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamg/pyamg-2.0.4.ebuild,v 1.3 2012/12/19 16:55:37 bicatali Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
 RESTRICT="test" # quite buggy

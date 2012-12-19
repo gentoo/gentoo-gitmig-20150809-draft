@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci</herd>
-	<longdescription lang="en">AMG is a multilevel technique for solving large-scale linear systems
+<herd>sci</herd>
+<longdescription lang="en">
+  AMG is a multilevel technique for solving large-scale linear systems
   with optimal or near-optimal efficiency. Unlike geometric multigrid,
   AMG requires little or no geometric information about the underlying
   problem and develops a sequence of coarser grids directly from the
@@ -15,8 +16,9 @@
   * Adaptive Smoothed Aggregation (αSA)
   * Compatible Relaxation (CR)
   The predominant portion of PyAMG is written in Python with a smaller
-  amount of supporting C++ code for performance critical operations.</longdescription>
-	<upstream>
-		<remote-id type="google-code">pyamg</remote-id>
-	</upstream>
+  amount of supporting C++ code for performance critical operations.
+</longdescription>
+<upstream>
+  <remote-id type="google-code">pyamg</remote-id>
+</upstream>
 </pkgmetadata>
