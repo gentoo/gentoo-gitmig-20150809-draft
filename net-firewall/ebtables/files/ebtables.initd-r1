@@ -1,9 +1,10 @@
 #!/sbin/runscript
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/files/ebtables.initd-r1,v 1.1 2010/05/09 17:16:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/files/ebtables.initd-r1,v 1.2 2012/12/19 16:00:36 qnikst Exp $
 
-opts="save reload panic"
+extra_commands="save panic"
+extra_started_commands="reload"
 
 ebtables_bin="/sbin/ebtables"
 ebtables_save=${EBTABLES_SAVE}

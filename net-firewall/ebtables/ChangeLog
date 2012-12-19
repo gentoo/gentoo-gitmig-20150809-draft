@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/ebtables
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.49 2012/06/14 15:53:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.50 2012/12/19 16:00:36 qnikst Exp $
+
+*ebtables-2.0.10.4-r1 (19 Dec 2012)
+
+  19 Dec 2012;  <qnikst@gentoo.org> +ebtables-2.0.10.4-r1.ebuild,
+  files/ebtables.initd-r1:
+  non-maint: fix deprecated options in initscript thanks to  Vincent Brillault
+  <gentoo@lerya.net>
 
   14 Jun 2012; Michael Weber <xmw@gentoo.org> ebtables-2.0.10.4.ebuild:
   ppc stable (bug 404265)
@@ -222,4 +229,3 @@
   28 Feb 2004; <solar@gentoo.org> ebtables-2.0.6.ebuild, metadata.xml:
   initial import into portage of the ebtable utility that enables basic ethernet
   frame filtering on a bridge, MAC NAT and brouting.
-
