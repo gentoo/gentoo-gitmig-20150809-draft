@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgweather
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.87 2012/12/19 01:53:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.88 2012/12/19 04:04:02 tetromino Exp $
+
+  19 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libgweather-3.4.1.ebuild:
+  Fix broken src_configure stage, thanks to Nick Novikov for reporting.
 
 *libgweather-3.6.2 (19 Dec 2012)
 
