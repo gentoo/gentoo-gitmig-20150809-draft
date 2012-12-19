@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.21-r12.ebuild,v 1.1 2012/12/07 18:43:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.21-r12.ebuild,v 1.2 2012/12/19 08:22:15 grobian Exp $
 
 EAPI="3"
 
@@ -79,7 +79,6 @@ src_prepare() {
 	# ignores, disagrees or simply doesn't respond/apply
 	epatch "${PATCHDIR}"/bdb-prefix.patch # fix bdb detection
 	epatch "${PATCHDIR}"/interix-btowc.patch
-	epatch "${PATCHDIR}"/emptycharset-segfault.patch
 	epatch "${PATCHDIR}"/gpgkeyverify-segfault.patch
 	# same category, but functional bits
 	epatch "${PATCHDIR}"/dont-reveal-bbc.patch
