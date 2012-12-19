@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.130 2012/11/03 00:58:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.131 2012/12/19 18:32:31 mgorny Exp $
+
+*pytz-2012h-r1 (19 Dec 2012)
+
+  19 Dec 2012; Michał Górny <mgorny@gentoo.org>
+  +files/pytz-2009h-zoneinfo-noinstall.patch, +pytz-2012h-r1.ebuild:
+  Migrate to distutils-r1 and clean up.
 
 *pytz-2012h (03 Nov 2012)
 
@@ -481,4 +487,3 @@
   24 Nov 2005; Marien Zwart <marienz@gentoo.org> +metadata.xml,
   +pytz-2005m.ebuild:
   New ebuild, based on an ebuild from André Malo <nd@perlig.de> (bug #111513)
-
