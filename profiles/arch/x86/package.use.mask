@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.103 2012/12/09 08:02:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.104 2012/12/19 11:15:01 pinkbyte Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -23,10 +23,6 @@ media-libs/freetype -infinality
 # Anthony G. Basile <blueness@gentoo.org> (12 Jul 2012)
 # sha512 support in cyassl is broken on x86
 net-libs/cyassl sha512
-
-# Rick Farina <zerochaos@gentoo.org> (09 July 2012)
-# limited testing of net-libs/libbtbb is all this mask is needed for
-net-analyzer/wireshark -btbb
 
 # Rick Farina <zerochaos@gentoo.org> (05 July 2012)
 # masked in base, unmask x86/amd64 only
@@ -68,7 +64,7 @@ gnustep-base/gnustep-make -libobjc2
 
 # Doug Goldstein <cardoe@gentoo.org> (17 Jan 2012)
 # The SPICE server is only supported on 64-bit platforms and not on 32-bit
-app-emulation/qemu-kvm spice
+app-emulation/qemu	spice
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (09 Jan 2012)
 # jsc JIT compilation is supported only on amd64/arm/x86 and their prefixes, so
@@ -103,10 +99,6 @@ dev-libs/glib -systemtap
 # PPS should work on all arches, but only keyworded on amd64/x86
 >=net-misc/ntp-4.2.6_p3-r1 -parse-clocks
 
-# Alexey Shvetsov <alexxy@gentoo.org> (4 Jul 2011)
-# unmask maui use flag for torque
-sys-cluster/torque -maui
-
 # Alexey Shvetsov <alexxy@gentoo.org> (1 Jul 2011)
 # Use mask infiniband for stable corosync and glusterfs
 =sys-cluster/glusterfs-3.1.2 infiniband
@@ -132,10 +124,6 @@ media-video/mplayer2 -bluray
 # sys-devel/llvm is keyworded on x86
 media-libs/mesa -llvm
 
-# Dane Smith <c1pher@gentoo.org> (10 Nov 2010)
-# Valgrind is only available on amd64/x86/ppc/ppc64.
-net-libs/gnutls -valgrind
-
 # Nirbheek Chauhna <nirbheek@gentoo.org> (26 Jun 2010)
 # Inter-process communication doesn't work on anything except x86/amd64/arm
 # due to lack of atomic ops, bug 325185
@@ -153,11 +141,11 @@ sys-power/pm-utils -video_cards_intel -video_cards_radeon
 
 # Jim Ramsay <lack@gentoo.org> (24 March 2011)
 # '64bit' '32bit' 'nspluginwrapper' are for amd64 only
-www-plugins/adobe-flash nspluginwrapper 32bit 64bit
+www-plugins/adobe-flash 32bit 64bit
 
 # Andrey Grozin <grozin@gentoo.org> (24 Dec 2009)
 # openmcl (aka clozurecl) is only available on x86 and amd64
-sci-mathematics/maxima -openmcl -clozurecl
+sci-mathematics/maxima -clozurecl
 
 # Mounir Lamouri <volkmar@gentoo.org> (07 Nov 2009)
 # Masked in base, unmak for amd64/x86. Bug 267264
