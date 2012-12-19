@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/leechcraft-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/ChangeLog,v 1.29 2012/10/13 14:12:16 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/ChangeLog,v 1.30 2012/12/19 07:57:32 maksbotan Exp $
+
+  19 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  -leechcraft-core-0.5.70.ebuild, -leechcraft-core-0.5.75-r1.ebuild,
+  -leechcraft-core-0.5.80.ebuild:
+  Remove old LeechCraft versions
 
   13 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> leechcraft-core-9999.ebuild:
   Live version does not build anymore with gcc 4.5 or older

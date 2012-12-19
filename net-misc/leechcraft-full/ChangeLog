@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/leechcraft-full
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.31 2012/11/10 18:35:13 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.32 2012/12/19 07:59:40 maksbotan Exp $
+
+  19 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  -leechcraft-full-0.5.70.ebuild, -leechcraft-full-0.5.75.ebuild,
+  -leechcraft-full-0.5.80.ebuild, leechcraft-full-9999.ebuild:
+  Remove old LeechCraft versions
 
   10 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> leechcraft-full-9999.ebuild:
   Add x11-plugins/leechcraft-tpi dependency
