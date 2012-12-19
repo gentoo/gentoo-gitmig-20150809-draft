@@ -1,6 +1,18 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.116 2012/12/15 20:13:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.117 2012/12/19 10:10:21 tetromino Exp $
+
+*alacarte-3.6.1-r1 (19 Dec 2012)
+
+  19 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/alacarte-0.11.5-python-2.6.patch, -alacarte-0.13.2-r50.ebuild,
+  -files/alacarte-0.13.2-selection_browse.patch,
+  -files/alacarte-0.13.2-settings_menu.patch, -alacarte-0.13.3.ebuild,
+  -files/alacarte-0.13.3-cursor-changed-selection-none.patch,
+  -files/alacarte-0.13.3-icon-crash.patch,
+  -files/alacarte-0.13.3-no-pygtk-checks.patch, alacarte-0.13.4.ebuild,
+  +alacarte-3.6.1-r1.ebuild:
+  Version bump for gnome-3.6. Drop old.
 
   15 Dec 2012; Sven Wegener <swegener@gentoo.org> alacarte-0.13.2.ebuild,
   alacarte-0.13.2-r50.ebuild:
