@@ -1,6 +1,10 @@
 # ChangeLog for app-text/yelp-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/ChangeLog,v 1.13 2012/12/17 17:03:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/ChangeLog,v 1.14 2012/12/19 15:54:58 jer Exp $
+
+  19 Dec 2012; Jeroen Roovers <jer@gentoo.org> yelp-tools-3.4.1.ebuild,
+  yelp-tools-3.6.1.ebuild:
+  Marked ~hppa (bug #447432).
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> yelp-tools-3.6.1.ebuild:
   Add ~ppc, wrt bug #447432
