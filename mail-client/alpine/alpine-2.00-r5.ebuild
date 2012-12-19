@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/alpine-2.00-r5.ebuild,v 1.6 2012/12/18 17:27:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/alpine-2.00-r5.ebuild,v 1.7 2012/12/19 08:55:28 eras Exp $
 
 EAPI=4
 
-inherit eutils flag-o-matic autotools multilib
+inherit eutils flag-o-matic autotools multilib toolchain-funcs
 
 CHAPPA_PL=115
 DESCRIPTION="alpine is an easy to use text-based based mail and news client"
@@ -86,6 +86,10 @@ src_configure() {
 		$(use_with ipv6) \
 		$(use topal || use_with smime) \
 		${myconf}
+}
+
+src_compile() {
+	emake AR=$(tc-getAR)
 }
 
 src_install() {
