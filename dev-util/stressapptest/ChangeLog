@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/stressapptest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stressapptest/ChangeLog,v 1.2 2012/11/27 06:54:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stressapptest/ChangeLog,v 1.3 2012/12/19 21:32:13 vapier Exp $
+
+  19 Dec 2012; Mike Frysinger <vapier@gentoo.org> stressapptest-1.0.4.ebuild:
+  Add some ~arm love.
 
   27 Nov 2012; Mike Frysinger <vapier@gentoo.org> stressapptest-1.0.4.ebuild:
   Depend on libaio since we use it.
