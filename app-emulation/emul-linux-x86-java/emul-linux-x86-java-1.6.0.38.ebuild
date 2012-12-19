@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.35.ebuild,v 1.3 2012/09/02 18:04:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.38.ebuild,v 1.1 2012/12/19 18:54:58 sera Exp $
 
 EAPI="4"
 
 inherit java-vm-2 eutils prefix versionator
 
 # This URIs need to be updated when bumping!
-JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre6u35-downloads-1836473.html"
+JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre6u38-downloads-1877409.html"
 
 MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
 S_PV="$(replace_version_separator 3 '_')"
@@ -20,14 +20,11 @@ SRC_URI="${X86_AT}"
 
 LICENSE="Oracle-BCLA-JavaSE"
 SLOT="1.6"
-KEYWORDS="-* amd64"
-IUSE="X alsa nsplugin pax_kernel"
+KEYWORDS="-* ~amd64"
+IUSE="+X alsa nsplugin pax_kernel"
 
 RESTRICT="fetch strip"
-QA_TEXTRELS="
-	opt/${P}/lib/i386/client/libjvm.so
-	opt/${P}/lib/i386/motif21/libmawt.so
-	opt/${P}/lib/i386/server/libjvm.so"
+QA_PREBUILT="*"
 
 RDEPEND="
 	X? ( app-emulation/emul-linux-x86-xlibs )
@@ -42,9 +39,9 @@ S="${WORKDIR}/jre${S_PV}"
 pkg_nofetch() {
 	einfo "Due to Oracle no longer providing the distro-friendly DLJ bundles, the package has become fetch restricted again."
 	einfo ""
-	einfo "Please download ${X86_AT} from:"
-	einfo "${JRE_URI}"
-	einfo "and move it to ${DISTDIR}"
+	einfo "Please download '${X86_AT}' from:"
+	einfo "'${JRE_URI}'"
+	einfo "and move it to '${DISTDIR}'"
 }
 
 src_unpack() {
@@ -96,7 +93,9 @@ src_install() {
 		sun-jcontrol-${PN}-${SLOT}.png || die
 	sed -e "s#Name=.*#Name=Java Control Panel for Oracle JDK ${SLOT} (${PN})#" \
 		-e "s#Exec=.*#Exec=${dest}/bin/jcontrol#" \
-		-e "s#Icon=.*#Icon=sun-jcontrol-${PN}-${SLOT}.png#" \
+		-e "s#Icon=.*#Icon=sun-jcontrol-${PN}-${SLOT}#" \
+		-e "s#Application;##" \
+		-e "/Encoding/d" \
 		lib/desktop/applications/sun_java.desktop > \
 		"${T}"/jcontrol-${PN}-${SLOT}.desktop || die
 	domenu "${T}"/jcontrol-${PN}-${SLOT}.desktop
@@ -111,61 +110,3 @@ src_install() {
 	set_java_env "${FILESDIR}/${VMHANDLE}.env-r1"
 	java-vm_revdep-mask
 }
-
-QA_FLAGS_IGNORED="
-	/opt/${P}/bin/java
-	/opt/${P}/bin/java_vm
-	/opt/${P}/bin/javaws
-	/opt/${P}/bin/keytool
-	/opt/${P}/bin/orbd
-	/opt/${P}/bin/pack200
-	/opt/${P}/bin/policytool
-	/opt/${P}/bin/rmid
-	/opt/${P}/bin/rmiregistry
-	/opt/${P}/bin/servertool
-	/opt/${P}/bin/tnameserv
-	/opt/${P}/bin/unpack200
-	/opt/${P}/lib/i386/client/libjvm.so
-	/opt/${P}/lib/i386/headless/libmawt.so
-	/opt/${P}/lib/i386/jli/libjli.so
-	/opt/${P}/lib/i386/libawt.so
-	/opt/${P}/lib/i386/libcmm.so
-	/opt/${P}/lib/i386/libdcpr.so
-	/opt/${P}/lib/i386/libdeploy.so
-	/opt/${P}/lib/i386/libdt_socket.so
-	/opt/${P}/lib/i386/libfontmanager.so
-	/opt/${P}/lib/i386/libhprof.so
-	/opt/${P}/lib/i386/libinstrument.so
-	/opt/${P}/lib/i386/libioser12.so
-	/opt/${P}/lib/i386/libj2gss.so
-	/opt/${P}/lib/i386/libj2pcsc.so
-	/opt/${P}/lib/i386/libj2pkcs11.so
-	/opt/${P}/lib/i386/libjaas_unix.so
-	/opt/${P}/lib/i386/libjava_crw_demo.so
-	/opt/${P}/lib/i386/libjavaplugin_jni.so
-	/opt/${P}/lib/i386/libjava.so
-	/opt/${P}/lib/i386/libjawt.so
-	/opt/${P}/lib/i386/libJdbcOdbc.so
-	/opt/${P}/lib/i386/libjdwp.so
-	/opt/${P}/lib/i386/libjpeg.so
-	/opt/${P}/lib/i386/libjsig.so
-	/opt/${P}/lib/i386/libjsoundalsa.so
-	/opt/${P}/lib/i386/libjsound.so
-	/opt/${P}/lib/i386/libmanagement.so
-	/opt/${P}/lib/i386/libmlib_image.so
-	/opt/${P}/lib/i386/libnative_chmod_g.so
-	/opt/${P}/lib/i386/libnative_chmod.so
-	/opt/${P}/lib/i386/libnet.so
-	/opt/${P}/lib/i386/libnio.so
-	/opt/${P}/lib/i386/libnpjp2.so
-	/opt/${P}/lib/i386/libnpt.so
-	/opt/${P}/lib/i386/librmi.so
-	/opt/${P}/lib/i386/libsplashscreen.so
-	/opt/${P}/lib/i386/libunpack.so
-	/opt/${P}/lib/i386/libverify.so
-	/opt/${P}/lib/i386/libzip.so
-	/opt/${P}/lib/i386/motif21/libmawt.so
-	/opt/${P}/lib/i386/native_threads/libhpi.so
-	/opt/${P}/lib/i386/server/libjvm.so
-	/opt/${P}/lib/i386/xawt/libmawt.so
-	/opt/${P}/lib/jexec"
