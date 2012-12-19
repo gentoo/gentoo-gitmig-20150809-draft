@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/passook
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/ChangeLog,v 1.20 2012/12/01 19:41:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/ChangeLog,v 1.21 2012/12/19 16:21:20 jer Exp $
+
+  19 Dec 2012; Jeroen Roovers <jer@gentoo.org> passook-20121001.ebuild:
+  Stable for HPPA (bug #441046).
 
   01 Dec 2012; Raúl Porcel <armin76@gentoo.org> passook-1.0.0.ebuild,
   passook-20121001.ebuild:
