@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.8-r4.ebuild,v 1.3 2012/06/14 02:20:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.8-r4.ebuild,v 1.4 2012/12/19 01:14:36 polynomial-c Exp $
 
 EAPI="2"
 
 inherit user
 
 DESCRIPTION="Proxy DNS server with permanent caching"
-HOMEPAGE="http://www.phys.uu.nl/~rombouts/pdnsd.html"
-SRC_URI="http://www.phys.uu.nl/~rombouts/pdnsd/releases/${P}-par.tar.gz"
+HOMEPAGE="http://members.home.nl/p.a.rombouts/pdnsd/"
+SRC_URI="http://members.home.nl/p.a.rombouts/pdnsd/releases/${P}-par.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
