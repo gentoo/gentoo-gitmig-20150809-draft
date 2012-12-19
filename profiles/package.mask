@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14309 2012/12/19 03:17:46 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14310 2012/12/19 11:08:21 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -452,11 +452,6 @@ x11-apps/grandr
 # Mask experimental software
 =mail-client/squirrelmail-1.4.23*
 
-# Doug Goldstein <cardoe@gentoo.org> (23 Oct 2012)
-# A cgroup CPU pinning patch caused problems for some people
-# where they couldn't start a VM.
-=app-emulation/libvirt-0.10.2-r2
-
 # Sergey Popov <pinkbyte@gentoo.org> (22 Oct 2012)
 # Mask net-misc/libteam snapshot ebuilds until release
 net-misc/libteam
@@ -699,11 +694,6 @@ dev-util/pccts
 # Mask development releases
 =media-sound/lilypond-2.17*
 
-# Doug Goldstein <cardoe@gentoo.org> (25 Aug 2012)
-# Mask the release candidates
-=app-emulation/libvirt-0.10.0_rc1
-=app-emulation/libvirt-0.10.0_rc2
-
 # Julian Ospald <hasufell@gentoo.org> (19 Aug 2012)
 # Masked for removal in 30 days
 # games-strategy/megaglest supersedes games-strategy/glest
@@ -878,12 +868,6 @@ www-client/opera-next
 # current version of google-talkplugin never clear what you get
 =www-plugins/google-talkplugin-9999
 
-# Michael Weber <xmw@gentoo.org> (04 Nov 2011)
-# Masked due security issue bug 385967
-=net-misc/radvd-1.7
-=net-misc/radvd-1.8
-=net-misc/radvd-1.8.1
-
 # Diego E. Pettenò <flameeyes@gentoo.org> (30 Oct 2011)
 # Working on more reliable versioning, consider experimental for now.
 >=dev-lang/luajit-2.0.0_beta8
@@ -911,7 +895,6 @@ dev-perl/perl-PBS
 # Joerg Bornkessel <hd_brummy@gentoo.org> (17 Sep 2011)
 # media-video/vdr-xvdr-9999, masked git live ebuild
 =media-plugins/vdr-xvdr-9999
-=media-plugins/xbmc-addon-vdr-9999
 
 # Alexis Ballier <aballier@gentoo.org> (20 Aug 2011)
 # dev-tex/pdftex-1.40.11 is 100% identical to the one in TeX Live 2010;
@@ -959,10 +942,6 @@ sci-chemistry/webmo
 # Mask perl-5.14. See tracker bug #356171
 =dev-lang/perl-5.14*
 
-# Tim Harder <radhermit@gentoo.org> (3 Jun 2011)
-# Mask release candidates
-=app-office/scribus-1.4.0_rc*
-
 # Hans de Graaff <graaff@gentoo.org> (15 May 2011)
 # Mask new versions until thread-related crashes have been fixed.
 # See bug 367423.
@@ -997,7 +976,6 @@ sci-chemistry/webmo
 # http://bugs.gentoo.org/354423
 >=app-pda/libopensync-0.30
 >=app-pda/libopensync-plugin-file-0.30
->=app-pda/libopensync-plugin-google-calendar-0.30
 >=app-pda/libopensync-plugin-irmc-0.30
 >=app-pda/libopensync-plugin-palm-0.30
 >=app-pda/libopensync-plugin-python-0.30
@@ -1108,11 +1086,6 @@ app-crypt/hmaccalc
 # Masking libmapi as it depends on masked samba4
 >=net-libs/libmapi-0.9
 
-# Matthias Schwarzott <zzam@gentoo.org> (22 Jan 2010)
-# since long time included in media-tv/gentoo-vdr-scripts
-media-tv/vdr-dvd-scripts
-media-tv/vdrplugin-rebuild
-
 # Christian Parpart <trapni@gentoo.org> (23 Dec 2009)
 # Masked for testing/feedback.
 media-sound/teamspeak-server-bin
@@ -1177,10 +1150,6 @@ dev-lisp/gcl
 # * No support for auth backends other than PAM
 # * Many more...
 =gnome-base/gdm-2.3*
-
-# Benedikt Böhm <hollow@gentoo.org> (19 Apr 2009)
-# masked for testing
-=net-analyzer/centreon-1.4.2.7
 
 # Tiziano Müller <dev-zero@gentoo.org> (08 Apr 2009)
 # pre-releases
