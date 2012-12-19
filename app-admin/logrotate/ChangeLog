@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.130 2012/12/18 17:14:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.131 2012/12/19 23:00:04 nimiux Exp $
+
+  19 Dec 2012; Chema Alonso <nimiux@gentoo.org>
+  files/logrotate-3.8.3-fix-acl-tests.patch:
+  Fixed tests to check for setfacl command wrt bug #447510 comment #10
 
   18 Dec 2012; Jeroen Roovers <jer@gentoo.org> logrotate-3.8.3.ebuild:
   Stable for HPPA (bug #447510).

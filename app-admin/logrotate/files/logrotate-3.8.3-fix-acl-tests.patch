@@ -1,6 +1,6 @@
 diff -Nur a/Makefile b/Makefile
 --- a/Makefile	2012-10-04 09:59:14.000000000 +0200
-+++ b/Makefile	2012-11-11 16:17:11.340052857 +0100
++++ b/Makefile	2012-12-19 23:31:28.269943187 +0100
 @@ -116,7 +116,7 @@
  
  .PHONY : test
@@ -12,25 +12,32 @@ diff -Nur a/Makefile b/Makefile
  	[ -d $(PREFIX)$(BINDIR) ] || mkdir -p $(PREFIX)$(BINDIR)
 diff -Nur a/test/test b/test/test
 --- a/test/test	2012-10-04 09:59:14.000000000 +0200
-+++ b/test/test	2012-11-11 16:03:55.410050512 +0100
-@@ -4,6 +4,7 @@
++++ b/test/test	2012-12-19 23:46:19.449938180 +0100
+@@ -4,6 +4,14 @@
  M="-m ./mailer"
  S=-"s state"
  RLR="$LOGROTATE $M $S"
 +TEST_ACL="$1"
++
++# Check if setfacl command works
++ACL_TEST_FILE="test-`date +%Y-%m-%d-%H-%M-%S`"
++touch ${ACL_TEST_FILE}
++setfacl -m u:nobody:rwx ${ACL_TEST_FILE} > /dev/null 2>&1
++ACL_OK="$?"
++rm ${ACL_TEST_FILE}
  
  cleanup() {
      rm -f test*.log* anothertest*.log* state test-config. scriptout mail-out compress-args
-@@ -686,6 +687,8 @@
+@@ -686,6 +694,8 @@
  test.log.1 0 zero
  EOF
  
-+if [[ "${TEST_ACL}" = "acl" ]] ; then
++if [[ "${TEST_ACL}" = "acl" && ${ACL_OK} -eq 0 ]] ; then
 +
  cleanup 32
  
  # ------------------------------- Test 32 ------------------------------------
-@@ -713,6 +716,13 @@
+@@ -713,6 +723,13 @@
  test.log.1 0 zero
  EOF
  
@@ -39,12 +46,12 @@ diff -Nur a/test/test b/test/test
 +
 +fi
 +
-+if [[ "${TEST_ACL}" = "acl" ]] ; then
++if [[ "${TEST_ACL}" = "acl" && ${ACL_OK} -eq 0 ]] ; then
 +
  cleanup 33
  
  # ------------------------------- Test 33 ------------------------------------
-@@ -740,6 +750,11 @@
+@@ -740,6 +757,11 @@
  test.log.1 0 zero
  EOF
  
@@ -56,16 +63,16 @@ diff -Nur a/test/test b/test/test
  cleanup 34
  
  # ------------------------------- Test 34 ------------------------------------
-@@ -759,6 +774,8 @@
+@@ -759,6 +781,8 @@
  test.log 0 zero
  EOF
  
-+if [[ "${TEST_ACL}" = "acl" ]] ; then
++if [[ "${TEST_ACL}" = "acl" && ${ACL_OK} -eq 0 ]] ; then
 +
  cleanup 35
  
  # ------------------------------- Test 35 ------------------------------------
-@@ -786,4 +803,9 @@
+@@ -786,4 +810,9 @@
  test.log.1 0 zero
  EOF
  
