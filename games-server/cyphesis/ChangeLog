@@ -1,6 +1,10 @@
 # ChangeLog for games-server/cyphesis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.28 2012/12/01 18:06:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.29 2012/12/19 10:50:03 tupone Exp $
+
+  19 Dec 2012; Tupone Alfredo <tupone@gentoo.org> cyphesis-0.6.0.ebuild:
+  Moving to EAPI 5 and set AR. Fix Bug #447346 by Vicente Olivert Riera
+  Adding depends on dev-libs/boost
 
   01 Dec 2012; Michael Sterrett <mr_bones_@gentoo.org> -cyphesis-0.5.25.ebuild,
   -files/cyphesis-0.5.25-gentoo.patch:
