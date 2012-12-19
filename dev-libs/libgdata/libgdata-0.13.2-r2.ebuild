@@ -1,49 +1,55 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.12.0.ebuild,v 1.2 2012/12/19 04:08:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.13.2-r2.ebuild,v 1.1 2012/12/19 04:08:55 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
-inherit eutils gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="GLib-based library for accessing online service APIs using the GData protocol"
 HOMEPAGE="http://live.gnome.org/libgdata"
 
 LICENSE="LGPL-2.1+"
-SLOT="0"
+SLOT="0/13" # subslot = libgdata soname version
 IUSE="gnome +introspection static-libs"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 # gtk+ is needed for gdk
 # configure checks for gtk:3, but only uses it for demos which are not installed
-RDEPEND=">=dev-libs/glib-2.30:2
-	>=x11-libs/gdk-pixbuf-2.14:2
+RDEPEND="
+	>=dev-libs/glib-2.31:2
 	>=dev-libs/libxml2-2:2
-	>=net-libs/libsoup-2.37.91:2.4[introspection?]
 	>=net-libs/liboauth-0.9.4
-
-	gnome-base/gnome-keyring
-
-	gnome? ( >=net-libs/libsoup-gnome-2.37.91:2.4[introspection?] )
-	introspection? ( >=dev-libs/gobject-introspection-0.9.7 )"
+	>=net-libs/libsoup-2.37.91:2.4[introspection?]
+	>=x11-libs/gdk-pixbuf-2.14:2
+	gnome? (
+		app-crypt/gcr:=
+		>=net-libs/gnome-online-accounts-3.2
+		>=net-libs/libsoup-gnome-2.37.91:2.4[introspection?] )
+	introspection? ( >=dev-libs/gobject-introspection-0.9.7 )
+"
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.14
 	>=dev-util/intltool-0.40
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
-pkg_setup() {
+src_prepare() {
 	DOCS="AUTHORS ChangeLog HACKING NEWS README"
 	G2CONF="${G2CONF}
 		$(use_enable static-libs static)
 		$(use_enable gnome)
 		$(use_enable introspection)"
-}
 
-src_prepare() {
-	# Regenerate marshalers for <glib-2.31 compat
-	rm -v gdata/gdata-marshal.{c,h} || die
+	# Two patches to correct deps in libgdata.pc, bug #444270
+	# upstream, in 0.13.3
+	epatch "${FILESDIR}/${P}-Requires.private.patch"
+	# https://bugzilla.gnome.org/show_bug.cgi?id=690281
+	epatch "${FILESDIR}/${PN}-0.13.2-libgdata.pc-unused-deps.patch"
+
+	eautoreconf
 
 	gnome2_src_prepare
 

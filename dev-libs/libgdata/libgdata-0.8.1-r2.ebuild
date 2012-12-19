@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.8.1-r2.ebuild,v 1.8 2012/04/16 18:07:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.8.1-r2.ebuild,v 1.9 2012/12/19 04:08:55 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -10,10 +10,10 @@ inherit autotools eutils gnome2
 DESCRIPTION="GLib-based library for accessing online service APIs using the GData protocol"
 HOMEPAGE="http://live.gnome.org/libgdata"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1+"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86"
-IUSE="doc gnome +introspection"
+IUSE="gnome +introspection"
 
 # gtk+ is needed for gdk
 RDEPEND=">=dev-libs/glib-2.19:2
@@ -26,9 +26,9 @@ RDEPEND=">=dev-libs/glib-2.19:2
 	gnome? ( >=net-libs/libsoup-gnome-2.26.1:2.4[introspection?] )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.7 )"
 DEPEND="${RDEPEND}
+	>=dev-util/gtk-doc-am-1.14
 	>=dev-util/intltool-0.40
-	gnome-base/gnome-common
-	doc? ( >=dev-util/gtk-doc-1.14 )"
+	gnome-base/gnome-common"
 # eautoreconf requires gnome-base/gnome-common
 
 pkg_setup() {

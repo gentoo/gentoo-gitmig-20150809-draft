@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.10.2.ebuild,v 1.3 2012/09/23 05:53:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.10.2.ebuild,v 1.4 2012/12/19 04:08:55 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -11,9 +11,9 @@ inherit eutils gnome2
 DESCRIPTION="GLib-based library for accessing online service APIs using the GData protocol"
 HOMEPAGE="http://live.gnome.org/libgdata"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1+"
 SLOT="0"
-IUSE="doc gnome +introspection static-libs"
+IUSE="gnome +introspection static-libs"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 # gtk+ is needed for gdk
@@ -29,8 +29,9 @@ RDEPEND=">=dev-libs/glib-2.19:2
 	gnome? ( >=net-libs/libsoup-gnome-2.26.1:2.4[introspection?] )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.7 )"
 DEPEND="${RDEPEND}
+	>=dev-util/gtk-doc-am-1.14
 	>=dev-util/intltool-0.40
-	doc? ( >=dev-util/gtk-doc-1.14 )"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog HACKING NEWS README"
