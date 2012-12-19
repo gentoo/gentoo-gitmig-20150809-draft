@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.8.0.ebuild,v 1.14 2012/05/05 03:52:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.8.0.ebuild,v 1.15 2012/12/19 16:46:43 tetromino Exp $
 
 EAPI="3"
 
@@ -22,7 +22,8 @@ RDEPEND=">=dev-libs/glib-2.2.1:2
 	gtk? ( >=x11-libs/gtk+-2.2.1:2
 		>=media-libs/t1lib-5:5
 		>=dev-libs/gmetadom-0.1.8
-		x11-libs/pango )
+		x11-libs/pango
+		|| ( x11-libs/pangox-compat <x11-libs/pango-1.31[X] ) )
 	mathml? ( media-fonts/texcm-ttf )
 	t1lib?	( >=media-libs/t1lib-5:5 )"
 DEPEND="${RDEPEND}

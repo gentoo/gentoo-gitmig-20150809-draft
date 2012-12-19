@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.2.0.ebuild,v 1.23 2012/09/10 05:53:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.2.0.ebuild,v 1.24 2012/12/19 16:43:18 tetromino Exp $
 
 EAPI="2"
 
@@ -18,6 +18,7 @@ IUSE=""
 RDEPEND=">=dev-libs/glib-2:2
 	>=x11-libs/gtk+-2:2
 	>=x11-libs/pango-1[X]
+	|| ( x11-libs/pangox-compat <x11-libs/pango-1.31[X] )
 	x11-libs/libX11
 	x11-libs/libXmu
 	virtual/glu
