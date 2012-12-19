@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.342 2012/12/19 14:48:59 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.343 2012/12/19 14:55:19 sera Exp $
+
+  19 Dec 2012; Ralph Sennhauser <sera@gentoo.org> -files/sun-jdk-1.6.env,
+  -files/fontconfig.Gentoo.properties:
+  Remove unused auxiliary files.
 
 *sun-jdk-1.6.0.38 (19 Dec 2012)
 
