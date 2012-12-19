@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.103 2012/12/15 19:34:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.104 2012/12/19 16:53:04 ago Exp $
+
+  19 Dec 2012; Agostino Sarubbo <ago@gentoo.org> systemtap-2.0.ebuild:
+  Add ~ia64, wrt bug #351931
 
   15 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   systemtap-1.6.ebuild, systemtap-1.7.ebuild, systemtap-2.0.ebuild:
