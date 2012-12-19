@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-bearer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-bearer/ChangeLog,v 1.20 2012/12/17 15:52:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-bearer/ChangeLog,v 1.21 2012/12/19 16:12:21 ago Exp $
+
+  19 Dec 2012; Agostino Sarubbo <ago@gentoo.org> qt-bearer-4.8.4.ebuild:
+  Add ~ia64, wrt bug #412915
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> qt-bearer-4.8.4.ebuild:
   Add ~ppc64, wrt bug #412915
