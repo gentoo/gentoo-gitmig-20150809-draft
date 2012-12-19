@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libunwind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.29 2012/12/17 17:04:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.30 2012/12/19 17:32:09 bicatali Exp $
+
+  19 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> libunwind-1.1.ebuild:
+  Keyword amd64-linux and x86-linux
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libunwind-1.0.1-r1.ebuild:
   Stable for ia64, wrt bug #427136
