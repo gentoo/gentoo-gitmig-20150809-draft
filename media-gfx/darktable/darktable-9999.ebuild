@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-9999.ebuild,v 1.3 2012/12/10 22:14:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-9999.ebuild,v 1.4 2012/12/19 19:15:46 radhermit Exp $
 
 EAPI="5"
 
-inherit cmake-utils toolchain-funcs gnome2-utils git-2
+inherit cmake-utils toolchain-funcs gnome2-utils git-2 eutils
 
 EGIT_REPO_URI="git://github.com/darktable-org/darktable.git"
 
@@ -14,7 +14,8 @@ HOMEPAGE="http://www.darktable.org/"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="colord facebook flickr geo gnome-keyring gphoto2 kde nls opencl openmp +rawspeed +slideshow"
+IUSE="colord facebook flickr geo gnome-keyring gphoto2 graphicsmagick jpeg2k kde
+nls opencl openmp +rawspeed +slideshow"
 
 RDEPEND="
 	dev-db/sqlite:3
@@ -26,6 +27,8 @@ RDEPEND="
 	gnome-keyring? ( gnome-base/gnome-keyring )
 	gnome-base/librsvg:2
 	gphoto2? ( media-libs/libgphoto2 )
+	graphicsmagick? ( media-gfx/graphicsmagick )
+	jpeg2k? ( media-libs/openjpeg )
 	kde? (
 		dev-libs/dbus-glib
 		kde-base/kwalletd
@@ -58,10 +61,11 @@ pkg_pretend() {
 }
 
 src_prepare() {
-	base_src_prepare
 	sed -e "s:\(/share/doc/\)darktable:\1${PF}:" \
 		-e "s:LICENSE::" \
 		-i doc/CMakeLists.txt || die
+
+	epatch_user
 }
 
 src_configure() {
@@ -72,6 +76,8 @@ src_configure() {
 		$(cmake-utils_use_use geo GEO)
 		$(cmake-utils_use_use gnome-keyring GNOME_KEYRING)
 		$(cmake-utils_use_use gphoto2 CAMERA_SUPPORT)
+		$(cmake-utils_use_use graphicsmagick GRAPHICSMAGICK)
+		$(cmake-utils_use_use jpeg2k OPENJPEG)
 		$(cmake-utils_use_use kde KWALLET)
 		$(cmake-utils_use_use nls NLS)
 		$(cmake-utils_use_use opencl OPENCL)

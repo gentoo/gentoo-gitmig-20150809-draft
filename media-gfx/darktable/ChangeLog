@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/darktable
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.31 2012/12/10 22:14:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.32 2012/12/19 19:15:46 radhermit Exp $
+
+  19 Dec 2012; Tim Harder <radhermit@gentoo.org> darktable-9999.ebuild,
+  metadata.xml:
+  Add graphicsmagick and jpeg2k use flags.
 
   10 Dec 2012; Tim Harder <radhermit@gentoo.org> +darktable-9999.ebuild:
   Re-add live ebuild.
