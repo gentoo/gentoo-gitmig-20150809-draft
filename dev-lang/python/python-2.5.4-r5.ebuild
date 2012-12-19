@@ -1,13 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r5.ebuild,v 1.5 2012/12/03 04:14:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r5.ebuild,v 1.6 2012/12/19 18:03:41 floppym Exp $
 
 EAPI="1"
 
-# Bootstrapping Python 2 requires Python 2.
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
-
-inherit autotools eutils flag-o-matic multilib pax-utils python-any-r1 toolchain-funcs
+inherit autotools eutils flag-o-matic multilib pax-utils python-utils-r1 toolchain-funcs
 
 MY_P="Python-${PV}"
 
@@ -22,6 +19,11 @@ LICENSE="PSF-2.2"
 SLOT="2.5"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="-berkdb build doc elibc_uclibc examples gdbm ipv6 +ncurses +readline sqlite +ssl +threads tk +wide-unicode wininst +xml"
+# Do not add a dependency on dev-lang/python to this ebuild.
+# If you need to apply a patch which requires python for bootstrapping, please
+# run the bootstrap code on your dev box and include the results in the
+# patchset. See bug 447752.
+
 
 # NOTE: dev-python/{elementtree,celementtree,pysqlite}
 #       do not conflict with the ones in python proper. - liquidx
@@ -48,7 +50,6 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 	)
 	doc? ( dev-python/python-docs:${SLOT} )"
 DEPEND="${RDEPEND}
-	${PYTHON_DEPS}
 	virtual/pkgconfig"
 RDEPEND+=" !build? ( app-misc/mime-types )"
 PDEPEND="app-admin/eselect-python
@@ -63,8 +64,6 @@ pkg_setup() {
 		ewarn "removed in Python 3. A maintained alternative of 'bsddb3' module"
 		ewarn "is provided by dev-python/bsddb3."
 	fi
-
-	python-any-r1_pkg_setup
 }
 
 src_unpack() {

@@ -1,15 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.3-r3.ebuild,v 1.4 2012/12/02 18:21:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.3-r3.ebuild,v 1.5 2012/12/19 18:03:41 floppym Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="none"
 WANT_LIBTOOL="none"
 
-# Bootstrapping Python 2 requires Python 2.
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
-
-inherit autotools eutils flag-o-matic multilib pax-utils python-any-r1 toolchain-funcs
+inherit autotools eutils flag-o-matic multilib pax-utils python-utils-r1 toolchain-funcs
 
 MY_P="Python-${PV}"
 PATCHSET_REVISION="1"
@@ -23,6 +20,11 @@ LICENSE="PSF-2"
 SLOT="2.7"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="-berkdb build doc elibc_uclibc examples gdbm ipv6 +ncurses +readline sqlite +ssl +threads tk +wide-unicode wininst +xml"
+
+# Do not add a dependency on dev-lang/python to this ebuild.
+# If you need to apply a patch which requires python for bootstrapping, please
+# run the bootstrap code on your dev box and include the results in the
+# patchset. See bug 447752.
 
 RDEPEND="app-arch/bzip2
 	>=sys-libs/zlib-1.1.3
@@ -53,7 +55,6 @@ RDEPEND="app-arch/bzip2
 	)
 	!!<sys-apps/portage-2.1.9"
 DEPEND="${RDEPEND}
-	${PYTHON_DEPS}
 	virtual/pkgconfig
 	>=sys-devel/autoconf-2.65
 	!sys-devel/gcc[libffi]"
@@ -77,8 +78,6 @@ pkg_setup() {
 			ewarn "You might need to migrate your databases."
 		fi
 	fi
-
-	python-any-r1_pkg_setup
 }
 
 src_prepare() {
