@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libconfig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.45 2012/12/19 09:35:49 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.46 2012/12/19 09:37:16 pinkbyte Exp $
+
+  19 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> libconfig-1.4.9.ebuild:
+  Stable on amd64, wrt bug #447744
 
   19 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> libconfig-1.4.9.ebuild:
   QA: use prune_libtool_files instead of manual removing *.la files
