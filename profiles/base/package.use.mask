@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.417 2012/12/15 19:08:34 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.418 2012/12/19 10:59:01 pinkbyte Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -47,11 +47,6 @@ www-servers/ocsigen ocamlduce
 # Please do so without asking permission if you see them gone.
 >=sys-fs/udev-171 extras
 
-# Alexandre Rostovtsev <tetromino@gentoo.org> (12 Oct 2012)
-# Temporary flag to allow osmesa + win32 on amd64 for overlay users.
-# Remove this mask (and the flag itself) when bug #430268 is resolved.
-app-emulation/wine osmesa-multilib
-
 # GNOME <gnome@gentoo.org> (02 Oct 2012)
 # Mask USE="udisks" and use USE="gdu" as the default for <gnome-base/gvfs-1.12.3-r1
 # This allows stabilization without sys-fs/udisks:2 which requires too new udev for now
@@ -82,10 +77,6 @@ sys-auth/pam_mktemp prevent-removal
 # fontconfig-infinality dependency not yet keyworded on most arches
 media-libs/freetype infinality
 
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (26 Jul 2012)
-# Prevents install of gl.pc which breaks building of many packages, bug #428164
-=media-libs/mesa-8.1_rc1_pre20120724 osmesa
-
 # Ole Markus With <olemarkus@gentoo.org> (20 Jul 2012)
 # Kolab support broken with newer c-client. Masking use flag until either
 # problem is solved or the kolab patch is removed. Bug #416859
@@ -108,10 +99,6 @@ www-client/netsurf pdf-writer javascript gstreamer
 # Diego Elio Pettenò <flameeyes@gentoo.org> (16 Jul 2012)
 # Stop glibc/uclibc from using iconv in blender
 media-gfx/blender iconv
-
-# Rick Farina <zerochaos@gentoo.org> (09 July 2012)
-# libbtbb currently only tested on amd64/x86/arm, hopefully this won't always be needed
-net-analyzer/wireshark btbb
 
 # Rick Farina <zerochaos@gentoo.org> (05 July 2012)
 # cuda is available on x86/amd64 only
@@ -210,10 +197,6 @@ sys-auth/consolekit acl
 # directfb build issues, bug #405817.
 www-plugins/gnash directfb
 
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (24 Feb 2012)
-# lirc support is broken in older gnash
-<www-plugins/gnash-0.8.10 lirc
-
 # Justin Lecher <jlec@gentoo.org> (13. Feb 2012)
 # Is broken somehow, upstream informed
 >=sci-chemistry/pymol-1.5.0.1 vmd
@@ -244,7 +227,7 @@ www-plugins/gnash directfb
 <x11-libs/qt-sql-4.8.3 c++0x qpa
 <x11-libs/qt-svg-4.8.3 c++0x qpa
 <x11-libs/qt-test-4.8.3 c++0x qpa
-<x11-libs/qt-webkit-4.8.3 c++0x qpa
+<x11-libs/qt-webkit-4.8.3 qpa
 <x11-libs/qt-xmlpatterns-4.8.3 c++0x qpa
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Jan 2012)
@@ -314,43 +297,21 @@ www-client/chromium pulseaudio
 # Temporarily mask instead of dropping keywords, bug 384647
 dev-libs/glib systemtap
 
-# Markos Chandras <hwoarang@gentoo.org> (19 Aug 2011)
-# Masking rbd spice from qemu-kvm per bug #364889
-app-emulation/qemu-kvm rbd
-
 # Nirbheek Chauhan <nirbheek@gentoo.org> (16 Aug 2011)
 # Mask introspection on ebuilds that went stable before it was unmasked.
 # As these ebuilds are cleaned from the tree, the masks can be removed.
 <dev-libs/glib-2.30.0 introspection
-<dev-libs/atk-1.32.0-r1 introspection
 <app-cdr/brasero-2.32.1-r1 introspection
 <app-crypt/seahorse-2.32.0-r1 introspection
-<app-text/evince-2.32.0-r4 introspection
-<dev-libs/libgdata-0.8.1-r1 introspection
 <dev-libs/libunique-1.1.6-r1 introspection
-<dev-libs/totem-pl-parser-2.32.5-r1 introspection
-<dev-python/pygobject-2.28 introspection
-<dev-util/anjuta-2.32.1.1-r1 introspection
-<gnome-base/dconf-0.5.1-r3 introspection
-<gnome-base/gconf-2.32.4 introspection
 <gnome-base/gnome-menus-2.30.5-r1 introspection
-<gnome-base/gnome-panel-2.32.1-r3 introspection
 <gnome-base/nautilus-2.32.2.1-r2 introspection
-<gnome-extra/gucharmap-2.32.1-r1 introspection
 <media-libs/babl-0.1.4-r1 introspection
-<media-libs/clutter-1.6 introspection
 <media-libs/clutter-gtk-1 introspection
-<media-libs/gstreamer-0.10.33 introspection
-<media-libs/gst-plugins-base-0.10.33 introspection
 <media-libs/libchamplain-0.9 introspection
 <net-libs/gssdp-0.8 introspection
 <net-libs/gupnp-0.15 introspection
-<net-libs/libsoup-2.34 introspection
-<net-libs/libsoup-gnome-2.34 introspection
-<net-wireless/gnome-bluetooth-2.32.0-r1 introspection
 <www-client/epiphany-3 introspection
-<x11-libs/libwnck-2.30.6-r1 introspection
-<x11-libs/pango-1.28.4 introspection
 
 # Robin H. Johnson <robbat2@gentoo.org> (10 Jul 2011)
 # PPS should work on all arches, but only keyworded on amd64/x86
@@ -397,10 +358,6 @@ media-libs/mesa llvm
 # Upstream didn't release patches for aria yet
 >=sci-chemistry/cns-1.3 aria
 
-# Patrick Lauer <patrick@gentoo.org> (15 Sep 2010)
-# Feature broken in dovecot-1, see #337014
-<net-mail/dovecot-2 bzip2
-
 # Tomáš Chvátal <scarabeus@gentoo.org> (8 Sep 2010)
 # drm don't even build here so mask everywhere expect live.
 # openvg require openvg-1.1 implemenatation so mask until there is some
@@ -410,10 +367,6 @@ media-libs/mesa llvm
 # Alex Legler <a3li@gentoo.org> (1 Sep 2010)
 # This feature is marked as experimental by upstream.
 dev-lang/ruby-enterprise fastthreading
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (29 Jun 2010)
-# Mask clutter till clutter games are usable
-=gnome-extra/gnome-games-2.3* clutter
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (26 Jun 2010)
 # Inter-process communication doesn't work on anything except x86/amd64/arm
@@ -476,11 +429,6 @@ app-misc/strigi log
 # X use flag only for amd64/x86, bug 285951.
 media-gfx/iscan X
 
-# Alex Legler <a3li@gentoo.org> (16 Sep 2009)
-# Maintainer of the kolab patch is not available (wrobel).
-# Bump is needed for security bug 285052.
->=www-apps/horde-webmail-1.2.4 kolab
-
 # Tomáš Chvátal <scarabeus@gentoo.org> (10 Sep 2009)
 # quakeforge has video_cards_tdfx enabled only for x86
 games-fps/quakeforge video_cards_tdfx
@@ -489,7 +437,7 @@ games-fps/quakeforge video_cards_tdfx
 # gcl is an old piece of crap that has a lot of problems
 # Andrey Grozin <grozin@gentoo.org> (24 Dec 2009)
 # openmcl (aka clozurecl) is only available on x86 and amd64
-sci-mathematics/maxima gcl openmcl clozurecl
+sci-mathematics/maxima gcl clozurecl
 
 # Tomas Chvatal <scarabeus@gentoo.org> (31 Jan 2009)
 # mask cuda for boinc. Works only on amd64 and x86
@@ -546,7 +494,6 @@ media-video/vlc media-library
 # Leave it unmasked for live ebuild, people should know what they do if they use
 # it anyway
 <media-video/ffmpeg-9999 celt
-<media-video/libav-9999 celt
 
 # Alexis Ballier <aballier@gentoo.org> <5 Oct 2011>
 # harfbuzz support does not build for now, leave the useflag be and unmask it later

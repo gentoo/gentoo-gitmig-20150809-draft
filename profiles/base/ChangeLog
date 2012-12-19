@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.473 2012/12/15 19:08:34 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.474 2012/12/19 10:59:01 pinkbyte Exp $
+
+  19 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
+  Clean up from obsolete package atoms, wrt bug #444181
 
   25 Dec 2012; <anarchy@gentoo.org> package.use.mask
   Mask PGO useflag on firefox until major work can be done to properly
