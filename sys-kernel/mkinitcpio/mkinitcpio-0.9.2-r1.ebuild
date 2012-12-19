@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mkinitcpio/mkinitcpio-0.9.2-r1.ebuild,v 1.6 2012/12/03 02:13:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mkinitcpio/mkinitcpio-0.9.2-r1.ebuild,v 1.7 2012/12/19 11:19:38 ssuominen Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ RDEPEND="app-arch/cpio
 	sys-apps/file
 	sys-apps/findutils
 	sys-apps/grep
-	>=sys-apps/kmod-7
+	>=sys-apps/kmod-12-r1
 	>=sys-apps/util-linux-2.21
 	udev? ( >virtual/udev-171 )
 	device-mapper? ( sys-fs/lvm2[static] )
@@ -97,14 +97,6 @@ src_install() {
 	sed -e "s/KV/${KV_FULL}/g" \
 		"${FILESDIR}"/gentoo.preset \
 		> "${D}"/etc/mkinitcpio.d/${KV_FULL}.preset || die
-
-	# This file doesn't belong to this package because it's already
-	# being installed by the module loader packages kmod and m-i-t.
-	# If this needs to be copied into the initramfs itself, the version
-	# from kmod or m-i-t can be used'so this should never be useful here.
-	# Comment out for now wrt bug #442384, -ssuominen 2012/12
-	#insinto /usr/lib/modprobe.d
-	#doins "${FILESDIR}/usb-load-ehci-first.conf"
 }
 
 pkg_postinst() {
