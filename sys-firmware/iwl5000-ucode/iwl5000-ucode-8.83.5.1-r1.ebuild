@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl5000-ucode/iwl5000-ucode-8.83.5.1-r1.ebuild,v 1.2 2012/12/16 13:14:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl5000-ucode/iwl5000-ucode-8.83.5.1-r1.ebuild,v 1.3 2012/12/19 16:46:23 jer Exp $
 
 EAPI=5
 inherit linux-info
@@ -16,6 +16,7 @@ LICENSE="ipw3945"
 SLOT="2"
 KEYWORDS="amd64 ~x86"
 IUSE=""
+RDEPEND="!=${CATEGORY}/${P}"
 
 S="${WORKDIR}/${MY_PN}-${MY_PV}"
 
