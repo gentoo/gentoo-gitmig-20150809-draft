@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libverto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/ChangeLog,v 1.8 2012/11/30 08:11:28 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/ChangeLog,v 1.9 2012/12/19 16:51:59 ago Exp $
+
+  19 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libverto-0.2.5.ebuild:
+  Add ~ia64, wrt bug #412489
 
   30 Nov 2012; Eray Aslan <eras@gentoo.org> libverto-0.2.4.ebuild,
   libverto-0.2.5.ebuild:
