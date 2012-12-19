@@ -1,12 +1,12 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/files/pdnsd.rc7,v 1.1 2012/12/19 01:14:36 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/files/pdnsd.rc7,v 1.2 2012/12/19 01:18:33 polynomial-c Exp $
 
-command="/usr/sbin/pdnsd"
-command_args="-s -t -d -p /var/run/pdnsd.pid ${PDNSDCONFIG}"
-extra_started_commands="reload"
 pidfile="/var/run/pdnsd.pid"
+command="/usr/sbin/pdnsd"
+command_args="-s -t -d -p ${pidfile} ${PDNSDCONFIG}"
+extra_started_commands="reload"
 
 depend() {
 	need net
