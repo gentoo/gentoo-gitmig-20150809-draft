@@ -1,6 +1,17 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.227 2012/10/23 05:04:57 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.228 2012/12/19 17:54:04 sera Exp $
+
+*sun-jre-bin-1.6.0.38 (19 Dec 2012)
+
+  19 Dec 2012; Ralph Sennhauser <sera@gentoo.org> -sun-jre-bin-1.6.0.33.ebuild,
+  -sun-jre-bin-1.6.0.33-r1.ebuild, -sun-jre-bin-1.6.0.33-r2.ebuild,
+  -sun-jre-bin-1.6.0.34.ebuild, -sun-jre-bin-1.6.0.35.ebuild,
+  +sun-jre-bin-1.6.0.38.ebuild, -files/sun-jre-bin-1.6.env,
+  -files/fontconfig.Gentoo.properties:
+  Version bump.
+  Remove vulnerable.
+  Remove unused auxiliary files
 
   23 Oct 2012; Andreas Schuerch <nativemad@gentoo.org>
   sun-jre-bin-1.6.0.37.ebuild:

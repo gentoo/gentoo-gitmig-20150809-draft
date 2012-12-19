@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.34.ebuild,v 1.2 2012/08/31 22:01:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.38.ebuild,v 1.1 2012/12/19 17:54:04 sera Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit java-vm-2 eutils prefix versionator
 
 # This URIs need to be updated when bumping!
-JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre6-downloads-1637595.html"
+JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre6u38-downloads-1877409.html"
 
 MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
 S_PV="$(replace_version_separator 3 '_')"
@@ -21,15 +21,15 @@ HOMEPAGE="http://www.oracle.com/technetwork/java/javase/"
 SRC_URI="
 	amd64? ( ${AMD64_AT} )
 	x86? ( ${X86_AT} )"
-#	ia64? ( ${IA64_AT} )
+	#ia64? ( ${IA64_AT} )
 
 LICENSE="Oracle-BCLA-JavaSE"
 SLOT="1.6"
-KEYWORDS="amd64 ~x86"
-
+KEYWORDS="~amd64 ~x86"
 IUSE="X alsa jce nsplugin pax_kernel"
 
 RESTRICT="fetch strip"
+QA_PREBUILT="*"
 
 RDEPEND="
 	X? (
@@ -62,9 +62,9 @@ pkg_nofetch() {
 	einfo "has become fetch restricted again. Alternatives are switching to"
 	einfo "dev-java/icedtea-bin:6 or the source-based dev-java/icedtea:6"
 	einfo ""
-	einfo "Please download ${AT} from:"
-	einfo "${JRE_URI}"
-	einfo "and move it to ${DISTDIR}"
+	einfo "Please download '${AT}' from:"
+	einfo "'${JRE_URI}'"
+	einfo "and move it to '${DISTDIR}'"
 }
 
 src_unpack() {
@@ -135,7 +135,9 @@ src_install() {
 		sun-jcontrol-${PN}-${SLOT}.png || die
 	sed -e "s#Name=.*#Name=Java Control Panel for Oracle JDK ${SLOT} (${PN})#" \
 		-e "s#Exec=.*#Exec=${dest}/bin/jcontrol#" \
-		-e "s#Icon=.*#Icon=sun-jcontrol-${PN}-${SLOT}.png#" \
+		-e "s#Icon=.*#Icon=sun-jcontrol-${PN}-${SLOT}#" \
+		-e "s#Application;##" \
+		-e "/Encoding/d" \
 		lib/desktop/applications/sun_java.desktop > \
 		"${T}"/jcontrol-${PN}-${SLOT}.desktop || die
 	domenu "${T}"/jcontrol-${PN}-${SLOT}.desktop
@@ -151,66 +153,8 @@ src_install() {
 	java-vm_revdep-mask
 }
 
-QA_TEXTRELS_x86="
-	opt/${P}/lib/i386/client/libjvm.so
-	opt/${P}/lib/i386/motif21/libmawt.so
-	opt/${P}/lib/i386/server/libjvm.so"
-QA_FLAGS_IGNORED="
-	/opt/${P}/bin/java
-	/opt/${P}/bin/java_vm
-	/opt/${P}/bin/javaws
-	/opt/${P}/bin/keytool
-	/opt/${P}/bin/orbd
-	/opt/${P}/bin/pack200
-	/opt/${P}/bin/policytool
-	/opt/${P}/bin/rmid
-	/opt/${P}/bin/rmiregistry
-	/opt/${P}/bin/servertool
-	/opt/${P}/bin/tnameserv
-	/opt/${P}/bin/unpack200
-	/opt/${P}/lib/jexec"
-for java_system_arch in amd64 i386; do
-	QA_FLAGS_IGNORED+="
-		/opt/${P}/lib/${java_system_arch}/headless/libmawt.so
-		/opt/${P}/lib/${java_system_arch}/jli/libjli.so
-		/opt/${P}/lib/${java_system_arch}/libawt.so
-		/opt/${P}/lib/${java_system_arch}/libcmm.so
-		/opt/${P}/lib/${java_system_arch}/libdcpr.so
-		/opt/${P}/lib/${java_system_arch}/libdeploy.so
-		/opt/${P}/lib/${java_system_arch}/libdt_socket.so
-		/opt/${P}/lib/${java_system_arch}/libfontmanager.so
-		/opt/${P}/lib/${java_system_arch}/libhprof.so
-		/opt/${P}/lib/${java_system_arch}/libinstrument.so
-		/opt/${P}/lib/${java_system_arch}/libioser12.so
-		/opt/${P}/lib/${java_system_arch}/libj2gss.so
-		/opt/${P}/lib/${java_system_arch}/libj2pcsc.so
-		/opt/${P}/lib/${java_system_arch}/libj2pkcs11.so
-		/opt/${P}/lib/${java_system_arch}/libjaas_unix.so
-		/opt/${P}/lib/${java_system_arch}/libjava_crw_demo.so
-		/opt/${P}/lib/${java_system_arch}/libjavaplugin_jni.so
-		/opt/${P}/lib/${java_system_arch}/libjava.so
-		/opt/${P}/lib/${java_system_arch}/libjawt.so
-		/opt/${P}/lib/${java_system_arch}/libJdbcOdbc.so
-		/opt/${P}/lib/${java_system_arch}/libjdwp.so
-		/opt/${P}/lib/${java_system_arch}/libjpeg.so
-		/opt/${P}/lib/${java_system_arch}/libjsig.so
-		/opt/${P}/lib/${java_system_arch}/libjsoundalsa.so
-		/opt/${P}/lib/${java_system_arch}/libjsound.so
-		/opt/${P}/lib/${java_system_arch}/libmanagement.so
-		/opt/${P}/lib/${java_system_arch}/libmlib_image.so
-		/opt/${P}/lib/${java_system_arch}/libnative_chmod_g.so
-		/opt/${P}/lib/${java_system_arch}/libnative_chmod.so
-		/opt/${P}/lib/${java_system_arch}/libnet.so
-		/opt/${P}/lib/${java_system_arch}/libnio.so
-		/opt/${P}/lib/${java_system_arch}/libnpjp2.so
-		/opt/${P}/lib/${java_system_arch}/libnpt.so
-		/opt/${P}/lib/${java_system_arch}/librmi.so
-		/opt/${P}/lib/${java_system_arch}/libsplashscreen.so
-		/opt/${P}/lib/${java_system_arch}/libunpack.so
-		/opt/${P}/lib/${java_system_arch}/libverify.so
-		/opt/${P}/lib/${java_system_arch}/libzip.so
-		/opt/${P}/lib/${java_system_arch}/motif21/libmawt.so
-		/opt/${P}/lib/${java_system_arch}/native_threads/libhpi.so
-		/opt/${P}/lib/${java_system_arch}/server/libjvm.so
-		/opt/${P}/lib/${java_system_arch}/xawt/libmawt.so"
-done
+pkg_postinst() {
+	java-vm-2_pkg_postinst
+
+	elog "If you want Oracles JRE 7 'emerge oracle-jre-bin' instead."
+}
