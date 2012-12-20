@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.498 2012/12/15 17:00:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.499 2012/12/20 03:28:15 tetromino Exp $
 
 # Keep them sorted
 
@@ -251,6 +251,7 @@ openexr - Support for the OpenEXR graphics file format
 opengl - Adds support for OpenGL (3D graphics)
 openmp - Build support for the OpenMP (support parallel computing), requires >=sys-devel/gcc-4.2 built with USE="openmp"
 oracle - Enable Oracle Database support
+orc - Use dev-lang/orc for just-in-time optimization of array operations
 osc - Enables support for Open Sound Control
 oscar - Enable Oscar (AIM/ICQ) IM protocol support
 oss - Adds support for OSS (Open Sound System)
