@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/wash
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/ChangeLog,v 1.15 2010/07/12 14:23:37 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/ChangeLog,v 1.16 2012/12/20 21:49:11 pacho Exp $
+
+  20 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer, bug #81411
 
   12 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> wash-2.12.ebuild,
   +files/wash-2.12-ghc-io.patch:
@@ -72,4 +75,3 @@
   26 Oct 2004; Andres Loeh <kosmikus@gentoo.org> WASH-2.0.5.ebuild,
   metadata.xml:
   Initial import, as requested in bug #56997.
-

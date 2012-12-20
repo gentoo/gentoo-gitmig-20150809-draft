@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>haskell</herd>
-<maintainer>
-<email>araujo@gentoo.org</email>
-<name>Luis F. Araujo</name>
-</maintainer>
 <longdescription lang="en">
 	HaRP, or Haskell Regular Patterns, is a Haskell extension that extends the
 	normal pattern matching facility with the power of regular expressions. This
