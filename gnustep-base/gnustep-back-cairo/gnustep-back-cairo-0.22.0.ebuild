@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/gnustep-back-cairo-0.22.0.ebuild,v 1.6 2012/06/07 14:42:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/gnustep-back-cairo-0.22.0.ebuild,v 1.7 2012/12/20 13:08:49 ago Exp $
 
 EAPI=4
 inherit gnustep-base
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-back-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="opengl xim"
 
 RDEPEND="${GNUSTEP_CORE_DEPEND}
