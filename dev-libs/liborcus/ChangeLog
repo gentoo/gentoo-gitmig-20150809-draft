@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liborcus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/ChangeLog,v 1.8 2012/11/30 12:22:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/ChangeLog,v 1.9 2012/12/20 11:18:24 scarabeus Exp $
+
+  20 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org> -liborcus-0.1.0.ebuild:
+  Drop unused oldest version.
 
   30 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> liborcus-0.3.0.ebuild:
   Seems like part of the commit was not included in the branch. Fixes
