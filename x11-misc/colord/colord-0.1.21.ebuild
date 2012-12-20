@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.21.ebuild,v 1.9 2012/11/28 10:30:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.21.ebuild,v 1.10 2012/12/20 05:29:30 tetromino Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="System service to accurately color manage input and output devices"
 HOMEPAGE="http://www.freedesktop.org/software/colord/"
 SRC_URI="http://www.freedesktop.org/software/colord/releases/${P}.tar.xz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm ~mips ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="doc examples gtk +gusb +introspection scanner +udev vala"
