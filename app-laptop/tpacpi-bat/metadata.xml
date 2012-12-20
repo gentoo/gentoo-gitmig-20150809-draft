@@ -6,6 +6,6 @@
 		<name>Christoph Junghans</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">teleshoes/tpbattstat-applet</remote-id>
+		<remote-id type="github">teleshoes/tpacpi-bat</remote-id>
 	</upstream>
 </pkgmetadata>
