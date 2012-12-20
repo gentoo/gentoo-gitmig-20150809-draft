@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcmatrix/libcmatrix-3.11.0.ebuild,v 1.2 2012/07/23 07:11:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcmatrix/libcmatrix-3.11.0.ebuild,v 1.3 2012/12/20 19:28:49 jlec Exp $
 
 EAPI="3"
 
@@ -16,11 +16,9 @@ SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="atlas sse threads"
+IUSE="sse threads"
 
-RDEPEND="
-	sci-libs/minuit
-	atlas? ( || ( sci-libs/atlas sci-libs/blas-atlas ) )"
+RDEPEND="sci-libs/minuit"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${PN}R3
@@ -39,7 +37,6 @@ src_prepare() {
 src_configure() {
 	econf \
 		--with-minuit \
-		$(use_with atlas) \
 		$(use_with sse) \
 		$(use_with threads)
 }
