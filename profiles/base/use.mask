@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.150 2012/12/09 08:09:17 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.151 2012/12/20 05:58:06 floppym Exp $
 
 # not ready for primetime
 packagekit
@@ -313,3 +313,8 @@ fdk
 # Alexandre Rostovtsev <tetromino@gentoo.org> (09 Dec 2012)
 # dev-lang/orc is useful only for some specific arches (amd64/x86/arm/...)
 orc
+
+# Mike Gilbert <floppym@gentoo.org> (08 Oct 2012)
+# Mask for testing.
+python_targets_pypy2_0
+python_single_target_pypy2_0
