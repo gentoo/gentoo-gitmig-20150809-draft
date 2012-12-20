@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-3.6.0.ebuild,v 1.1 2012/12/16 12:50:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-3.6.0.ebuild,v 1.2 2012/12/20 05:29:52 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -18,13 +18,15 @@ IUSE=""
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.28:2
-	>=media-gfx/sane-backends-1.0.20
-	>=sys-libs/zlib-1.2.3.1
-	virtual/jpeg
-	virtual/udev[gudev]
-	x11-libs/cairo
+	>=media-gfx/sane-backends-1.0.20:=
+	>=sys-libs/zlib-1.2.3.1:=
+	virtual/jpeg:=
+	virtual/udev:=[gudev]
+	x11-libs/cairo:=
 	>=x11-libs/gtk+-3:3
-	x11-misc/colord[scanner]
+	|| (
+		>=x11-misc/colord-0.1.24:=[udev]
+		x11-misc/colord:=[scanner] )
 "
 RDEPEND="${COMMON_DEPEND}
 	x11-misc/xdg-utils

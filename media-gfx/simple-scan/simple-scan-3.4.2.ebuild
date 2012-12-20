@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-3.4.2.ebuild,v 1.4 2012/12/11 11:14:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-3.4.2.ebuild,v 1.5 2012/12/20 05:29:52 tetromino Exp $
 
 EAPI="4"
 
@@ -25,7 +25,9 @@ COMMON_DEPEND="
 	>=sys-libs/zlib-1.2.3.1
 	x11-libs/cairo
 	>=x11-libs/gtk+-3:3
-	x11-misc/colord[scanner]
+	|| (
+		>=x11-misc/colord-0.1.24[udev]
+		x11-misc/colord[scanner] )
 "
 RDEPEND="${COMMON_DEPEND}
 	x11-misc/xdg-utils
