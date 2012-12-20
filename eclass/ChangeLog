@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.569 2012/12/20 06:26:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.570 2012/12/20 06:34:57 floppym Exp $
+
+  20 Dec 2012; Mike Gilbert <floppym@gentoo.org> python.eclass:
+  Remove pypy version mapping table from wrapper scripts. We can add it back if
+  pypy is ever ported to py3k and we are still using this eclass.
 
   20 Dec 2012; Mike Gilbert <floppym@gentoo.org> python.eclass:
   Add pypy version mapping for 2.0 => 2.7.

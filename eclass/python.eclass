@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.163 2012/12/20 06:26:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.164 2012/12/20 06:34:57 floppym Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -1300,14 +1300,14 @@ cpython_shebang_re = re.compile(r"^#![ \t]*(?:${EPREFIX}/usr/bin/python|(?:${EPR
 python_shebang_options_re = re.compile(r"^#![ \t]*${EPREFIX}/usr/bin/(?:jython|pypy-c|python)(?:\d+(?:\.\d+)?)?[ \t]+(-\S)")
 python_verification_output_re = re.compile("^GENTOO_PYTHON_TARGET_SCRIPT_PATH supported\n$")
 
-pypy_versions_mapping = {
-	"1.5": "2.7",
-	"1.6": "2.7",
-	"1.7": "2.7",
-	"1.8": "2.7",
-	"1.9": "2.7",
-	"2.0": "2.7",
-}
+#pypy_versions_mapping = {
+#	"1.5": "2.7",
+#	"1.6": "2.7",
+#	"1.7": "2.7",
+#	"1.8": "2.7",
+#	"1.9": "2.7",
+#	"2.0": "2.7",
+#}
 
 def get_PYTHON_ABI(python_interpreter):
 	cpython_matched = cpython_interpreter_re.match(python_interpreter)
@@ -1318,7 +1318,8 @@ def get_PYTHON_ABI(python_interpreter):
 	elif jython_matched is not None:
 		PYTHON_ABI = jython_matched.group(1) + "-jython"
 	elif pypy_matched is not None:
-		PYTHON_ABI = pypy_versions_mapping[pypy_matched.group(1)] + "-pypy-" + pypy_matched.group(1)
+		#PYTHON_ABI = pypy_versions_mapping[pypy_matched.group(1)] + "-pypy-" + pypy_matched.group(1)
+		PYTHON_ABI = "2.7-pypy-" + pypy_matched.group(1)
 	else:
 		PYTHON_ABI = None
 	return PYTHON_ABI
