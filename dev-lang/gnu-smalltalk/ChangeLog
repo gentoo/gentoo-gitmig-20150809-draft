@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gnu-smalltalk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.50 2012/06/06 03:07:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.51 2012/12/20 21:50:33 pacho Exp $
+
+  20 Dec 2012; Pacho Ramos <pacho@gentoo.org> -gnu-smalltalk-3.2.1.ebuild,
+  -gnu-smalltalk-3.2.2.ebuild, -gnu-smalltalk-3.2.3.ebuild, metadata.xml:
+  Drop maintainer, bug #81411
 
   06 Jun 2012; Zac Medico <zmedico@gentoo.org> gnu-smalltalk-3.2.1.ebuild,
   gnu-smalltalk-3.2.2.ebuild, gnu-smalltalk-3.2.3.ebuild,
@@ -253,4 +257,3 @@
   +files/2.1.8-gst-package-mktemp-gentoo.patch,
   +files/50gnu-smalltalk-gentoo.el, +gnu-smalltalk-2.1.8.ebuild:
   Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
-

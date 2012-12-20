@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/pike
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.43 2012/10/04 15:28:42 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.44 2012/12/20 21:51:53 pacho Exp $
+
+  20 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer, bug #81411
 
   04 Oct 2012; Christoph Junghans <ottxor@gentoo.org> pike-7.8.352-r2.ebuild:
   added prefix support (bug #433846)
