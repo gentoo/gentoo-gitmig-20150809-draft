@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.546 2012/12/17 17:14:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.547 2012/12/20 13:35:59 nativemad Exp $
+
+  20 Dec 2012; Andreas Schuerch <nativemad@gentoo.org> samba-3.6.9.ebuild:
+  x86 stable, see bug 432754
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> samba-3.6.10.ebuild:
   Add ~ppc64, wrt bug #444688
