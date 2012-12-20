@@ -1,9 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.29 2012/04/22 17:37:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.30 2012/12/20 20:07:24 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
 
 inherit distutils flag-o-matic git-2
 
@@ -39,14 +41,22 @@ RDEPEND="${DEPEND}
 	setproctitle? ( dev-python/setproctitle )
 	webinterface? ( dev-python/mako )"
 
+DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
+
 pkg_setup() {
 	append-ldflags $(no-as-needed)
-	python_set_active_version 2
 	python_pkg_setup
 }
 
 src_prepare() {
 	distutils_src_prepare
+	fix_boost_python() {
+		# fix libboost_python. It needs the python ABI on the side. #444522
+		sed -i -e "s/'boost_python'/'boost_python-${PYTHON_ABI}'/" setup.py \
+			|| die "sed setup.py failed"
+	}
+	python_execute_function -s fix_boost_python
+
 	python_convert_shebangs -r 2 .
 }
 
