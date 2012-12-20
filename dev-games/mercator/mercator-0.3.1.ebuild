@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/mercator-0.3.1.ebuild,v 1.1 2012/07/10 21:32:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/mercator-0.3.1.ebuild,v 1.2 2012/12/20 10:01:24 ago Exp $
 
 EAPI=2
 inherit base
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.worldforge.org/dev/eng/libraries/mercator"
 SRC_URI="mirror://sourceforge/worldforge/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc"
 SLOT="0"
 
