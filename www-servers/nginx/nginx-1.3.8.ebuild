@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.3.8.ebuild,v 1.2 2012/12/10 08:57:32 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.3.8.ebuild,v 1.3 2012/12/20 08:11:46 hollow Exp $
 
 EAPI="4"
 
@@ -341,10 +341,6 @@ src_install() {
 	newinitd "${FILESDIR}"/nginx.initd nginx
 	doman man/nginx.8
 	dodoc CHANGES* README
-
-	# Keepdir because these are hardcoded above
-	keepdir /var/log/${PN} /var/tmp/${PN}/{client,proxy,fastcgi,scgi,uwsgi}
-	keepdir /var/www/localhost/htdocs
 	mv "${ED}"/usr/html "${ED}"/var/www/localhost/htdocs || die
 
 	# logrotate
