@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.162 2012/12/20 06:07:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.163 2012/12/20 06:26:16 floppym Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -1306,6 +1306,7 @@ pypy_versions_mapping = {
 	"1.7": "2.7",
 	"1.8": "2.7",
 	"1.9": "2.7",
+	"2.0": "2.7",
 }
 
 def get_PYTHON_ABI(python_interpreter):
