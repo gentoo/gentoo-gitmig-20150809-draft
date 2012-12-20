@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.64 2012/12/08 12:27:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.65 2012/12/20 11:14:37 scarabeus Exp $
+
+  20 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libreoffice-l10n-3.5.7.ebuild, -libreoffice-l10n-3.6.3.2.ebuild,
+  libreoffice-l10n-3.6.4.3.ebuild:
+  Stabilise latest, drop older.
 
   08 Dec 2012; Markus Meier <maekke@gentoo.org>
   libreoffice-l10n-3.6.3.2.ebuild:
