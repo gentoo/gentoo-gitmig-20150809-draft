@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.122 2012/12/17 10:54:06 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.123 2012/12/20 23:37:50 mgorny Exp $
+
+  20 Dec 2012; Michał Górny <mgorny@gentoo.org> xen-tools-4.2.0-r2.ebuild:
+  Use python_fix_shebang() to fix shebangs.
 
   18 Dec 2012; Ian Delaney <idella4@gentoo.org> files/ipxe-nopie.patch:
   patched patch ipxe-nopie.patch, thanks to patch submitted by user uen in Bug

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.0-r2.ebuild,v 1.2 2012/12/17 00:42:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.0-r2.ebuild,v 1.3 2012/12/20 23:37:50 mgorny Exp $
 
 EAPI=5
 
@@ -240,11 +240,7 @@ src_install() {
 		XEN_PYTHON_NATIVE_INSTALL=y install-tools
 
 	# Fix the remaining Python shebangs.
-	# TODO: add an appropriate func to python-single-r1.
-	sed -e "1s:python:${EPYTHON}:" \
-		-i "${ED}"usr/sbin/{xenmon.py,xen-ringwatch} || die 'shebang sed failed'
-	find "${D}$(python_get_sitedir)" -name '*.py' \
-		-exec sed -e "1s:python:${EPYTHON}:" -i {} + || die 'shebang find+sed failed'
+	python_fix_shebang "${ED}"
 
 	# Remove RedHat-specific stuff
 	rm -rf "${ED}"tmp || die
