@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/cantarell/cantarell-0.0.10.1.ebuild,v 1.1 2012/09/29 09:37:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cantarell/cantarell-0.0.12.ebuild,v 1.1 2012/12/20 16:47:35 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 GNOME_ORG_MODULE="${PN}-fonts"
 
 inherit font gnome.org
 
-DESCRIPTION="Cantarell fonts, default fontset for GNOME Shell"
-HOMEPAGE="http://live.gnome.org/CantarellFonts"
+DESCRIPTION="Default fontset for GNOME Shell"
+HOMEPAGE="https://live.gnome.org/CantarellFonts"
 
 LICENSE="OFL-1.1"
 SLOT="0"
