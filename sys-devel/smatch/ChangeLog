@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/smatch
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/smatch/ChangeLog,v 1.2 2011/09/21 08:38:29 mgorny Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/smatch/ChangeLog,v 1.3 2012/12/20 02:46:28 vapier Exp $
+
+*smatch-1.57 (20 Dec 2012)
+
+  20 Dec 2012; Mike Frysinger <vapier@gentoo.org> +smatch-1.57.ebuild,
+  smatch-9999.ebuild:
+  Version bump.
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> smatch-9999.ebuild:
   Migrate to git-2.
@@ -10,4 +16,3 @@
   08 Sep 2011; Mike Frysinger <vapier@gentoo.org> +smatch-9999.ebuild,
   +metadata.xml:
   Initial ebuild.
-
