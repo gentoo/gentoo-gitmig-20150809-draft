@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.13.0-r1.ebuild,v 1.11 2012/12/17 20:38:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.13.0-r1.ebuild,v 1.12 2012/12/20 23:48:57 vapier Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="X.Org X servers"
 KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
 
 IUSE_SERVERS="dmx kdrive xnest xorg xvfb"
-IUSE="${IUSE_SERVERS} ipv6 minimal nptl selinux tslib +udev"
+IUSE="${IUSE_SERVERS} ipv6 minimal nptl selinux +suid tslib +udev"
 
 RDEPEND=">=app-admin/eselect-opengl-1.0.8
 	dev-libs/openssl
@@ -125,7 +125,6 @@ src_configure() {
 	# localstatedir is used for the log location; we need to override the default
 	#	from ebuild.sh
 	# sysconfdir is used for the xorg.conf location; same applies
-	#	--enable-install-setuid needed because sparcs default off
 	# NOTE: fop is used for doc generating ; and i have no idea if gentoo
 	#	package it somewhere
 	XORG_CONFIGURE_OPTIONS=(
@@ -135,6 +134,7 @@ src_configure() {
 		$(use_enable kdrive kdrive-kbd)
 		$(use_enable kdrive kdrive-mouse)
 		$(use_enable kdrive kdrive-evdev)
+		$(use_enable suid install-setuid)
 		$(use_enable tslib)
 		$(use_enable !minimal record)
 		$(use_enable !minimal xfree86-utils)
@@ -152,7 +152,6 @@ src_configure() {
 		--enable-libdrm
 		--sysconfdir=/etc/X11
 		--localstatedir=/var
-		--enable-install-setuid
 		--with-fontrootdir=/usr/share/fonts
 		--with-xkb-output=/var/lib/xkb
 		--disable-config-hal
