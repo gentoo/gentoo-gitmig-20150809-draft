@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.8.0.ebuild,v 1.1 2012/12/18 23:31:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.8.0.ebuild,v 1.2 2012/12/20 15:48:15 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ DESCRIPTION="libfolks is a library that aggregates people from multiple sources"
 HOMEPAGE="http://telepathy.freedesktop.org/wiki/Folks"
 
 LICENSE="LGPL-2.1+"
-SLOT="0"
+SLOT="0/25" # subslot = libfolks soname version
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-linux"
 # TODO: --enable-profiling
 IUSE="eds socialweb +telepathy test tracker utils vala"
@@ -24,13 +24,13 @@ COMMON_DEPEND="
 	dev-libs/dbus-glib
 	<dev-libs/libgee-0.7:0[introspection]
 	dev-libs/libxml2
-	sys-libs/ncurses
-	sys-libs/readline
+	sys-libs/ncurses:=
+	sys-libs/readline:=
 
 	eds? ( >=gnome-extra/evolution-data-server-3.5.4:= )
 	socialweb? ( >=net-libs/libsocialweb-0.25.20 )
 	telepathy? (
-		>=dev-libs/libzeitgeist-0.3.14
+		>=dev-libs/libzeitgeist-0.3.14:=
 		>=net-libs/telepathy-glib-0.19 )
 	tracker? ( >=app-misc/tracker-0.14:= )
 "
