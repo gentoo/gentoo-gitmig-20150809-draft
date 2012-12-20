@@ -1,6 +1,13 @@
 # ChangeLog for app-mobilephone/smstools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.18 2012/06/02 05:02:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.19 2012/12/20 10:41:42 chainsaw Exp $
+
+*smstools-3.1.15 (20 Dec 2012)
+
+  20 Dec 2012; Tony Vroon <chainsaw@gentoo.org> +smstools-3.1.15.ebuild,
+  +files/smsd.initd3:
+  Cope with sudden new /run semantics, fix by Tomasz Chilinski in bug #435664.
+  Bump to version 3.1.15 as requested by Kilburn Abrahams in bug #439376.
 
   02 Jun 2012; Zac Medico <zmedico@gentoo.org> smstools-2.2.20.ebuild,
   smstools-3.1.14-r1.ebuild, smstools-3.1.14-r2.ebuild, smstools-3.1.14.ebuild:
