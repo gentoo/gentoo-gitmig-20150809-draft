@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.100 2012/12/20 10:44:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.101 2012/12/20 11:11:32 scarabeus Exp $
+
+  20 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libreoffice-bin-3.5.5.3.ebuild, -libreoffice-bin-3.6.3.2.ebuild:
+  Remove older broken and sec-vuln versions.
 
   20 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libreoffice-bin-3.6.4.3.ebuild:
   Stable for x86, wrt bug #445032
