@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/leechcraft-lemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/leechcraft-lemon/ChangeLog,v 1.1 2012/12/18 13:23:19 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/leechcraft-lemon/ChangeLog,v 1.2 2012/12/20 13:50:20 maksbotan Exp $
+
+  20 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  leechcraft-lemon-9999.ebuild:
+  Add qt-bearer dependency
 
 *leechcraft-lemon-9999 (18 Dec 2012)
 
