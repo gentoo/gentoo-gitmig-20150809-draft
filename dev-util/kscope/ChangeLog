@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kscope
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/ChangeLog,v 1.52 2011/08/07 18:36:32 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/ChangeLog,v 1.53 2012/12/20 16:55:03 kensington Exp $
+
+  20 Dec 2012; Michael Palimaka <kensington@gentoo.org> -kscope-1.9.4.ebuild:
+  Remove old.
 
   07 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   kscope-1.9.4-r1.ebuild, +files/kscope-1.9.4-underlinking.patch:
@@ -210,4 +213,3 @@
 
   04 Jul 2004; Carsten Lohrke <carlo@gentoo.org> +kscope-0.7.ebuild:
   Initial ebuild.
-
