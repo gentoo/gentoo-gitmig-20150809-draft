@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.84 2012/12/01 18:56:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.85 2012/12/20 06:46:22 graaff Exp $
+
+  20 Dec 2012; Hans de Graaff <graaff@gentoo.org> -nokogiri-1.4.4-r1.ebuild,
+  -nokogiri-1.5.2.ebuild:
+  Cleanup.
 
   01 Dec 2012; Raúl Porcel <armin76@gentoo.org> nokogiri-1.5.5.ebuild:
   alpha/ia64/sparc/x86 stable wrt #440094
