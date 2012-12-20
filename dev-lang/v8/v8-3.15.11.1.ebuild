@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.15.11.1.ebuild,v 1.1 2012/12/15 23:26:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.15.11.1.ebuild,v 1.2 2012/12/20 17:07:15 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -18,6 +18,10 @@ KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd ~x64-macos ~x86-macos"
 IUSE=""
 
 DEPEND="${PYTHON_DEPS}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-vfp2-r0.patch
+}
 
 src_compile() {
 	tc-export AR CC CXX RANLIB

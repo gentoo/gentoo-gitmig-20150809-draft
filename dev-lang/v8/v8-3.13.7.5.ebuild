@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.13.7.5.ebuild,v 1.3 2012/11/07 16:20:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.13.7.5.ebuild,v 1.4 2012/12/20 17:07:15 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -24,6 +24,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.10.8.10-freebsd9.patch
+	epatch "${FILESDIR}"/${PN}-vfp2-r0.patch
 }
 
 src_compile() {
