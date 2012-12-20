@@ -1,9 +1,9 @@
 # ChangeLog for dev-haskell/haskell-src-exts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src-exts/ChangeLog,v 1.20 2012/12/20 21:49:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src-exts/ChangeLog,v 1.21 2012/12/20 21:54:16 pacho Exp $
 
   20 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
-  Add myself as comaintainer
+  Clean maintainer, bug #81411
 
 *haskell-src-exts-1.13.5 (18 Nov 2012)
 
