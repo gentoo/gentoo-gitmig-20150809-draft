@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/newlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/ChangeLog,v 1.19 2012/11/20 14:21:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/ChangeLog,v 1.20 2012/12/20 22:15:20 vapier Exp $
+
+*newlib-2.0.0 (20 Dec 2012)
+
+  20 Dec 2012; Mike Frysinger <vapier@gentoo.org> +newlib-2.0.0.ebuild:
+  Version bump.
 
   20 Nov 2012; Luca Barbato <lu_zero@gentoo.org> newlib-1.18.0.ebuild,
   newlib-1.19.0.ebuild, newlib-1.20.0.ebuild:
@@ -87,4 +92,3 @@
   21 Aug 2006; Luca Barbato <lu_zero@gentoo.org> +metadata.xml,
   +newlib-1.14.0.ebuild:
   Import from overlay
-
