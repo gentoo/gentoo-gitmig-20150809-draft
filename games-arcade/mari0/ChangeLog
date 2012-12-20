@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/mari0
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/mari0/ChangeLog,v 1.7 2012/11/21 13:38:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mari0/ChangeLog,v 1.8 2012/12/20 20:26:09 hasufell Exp $
+
+  20 Dec 2012; Julian Ospald <hasufell@gentoo.org> mari0-1.6.ebuild:
+  stable x86 wrt #435896
 
   21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> mari0-1.6.ebuild:
   revert, it was a keywordreq for ppc
