@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.114 2012/12/20 13:07:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.115 2012/12/20 15:07:36 voyageur Exp $
+
+  20 Dec 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/50-gnustep-revdep, -gnustep-base-1.20.1.ebuild:
+  Remove version using old gnustep layout
 
   20 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gnustep-base-1.24.0-r1.ebuild:
   Stable for sparc, wrt bug #410601

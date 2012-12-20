@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-art
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.89 2012/12/20 13:08:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.90 2012/12/20 15:02:00 voyageur Exp $
+
+  20 Dec 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  -gnustep-back-art-0.18.0.ebuild:
+  Remove version using old gnustep layout
 
   20 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gnustep-back-art-0.22.0.ebuild:
   Stable for sparc, wrt bug #410601
