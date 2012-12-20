@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1354.0.ebuild,v 1.1 2012/12/12 04:32:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1364.2.ebuild,v 1.1 2012/12/20 16:50:28 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2:2.6"
@@ -14,19 +14,20 @@ inherit chromium eutils flag-o-matic multilib \
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-SRC_URI="http://commondatastorage.googleapis.com/chromium-browser-official/${P}.tar.bz2"
+SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}-lite.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="bindist cups gnome gnome-keyring kerberos pulseaudio selinux system-ffmpeg tcmalloc"
 
-RDEPEND="app-arch/bzip2
+RDEPEND="app-accessibility/speech-dispatcher
+	app-arch/bzip2
 	cups? (
 		dev-libs/libgcrypt
 		>=net-print/cups-1.3.11
 	)
-	>=dev-lang/v8-3.15.7.2:=
+	>=dev-lang/v8-3.15.11.1:=
 	>=dev-libs/elfutils-0.149
 	dev-libs/expat
 	>=dev-libs/icu-49.1.1-r1
@@ -39,6 +40,7 @@ RDEPEND="app-arch/bzip2
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.28.2 )
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/flac
+	media-libs/harfbuzz
 	>=media-libs/libjpeg-turbo-1.2.0-r1
 	media-libs/libpng
 	media-libs/libvpx
@@ -62,12 +64,14 @@ RDEPEND="app-arch/bzip2
 		sys-libs/libselinux
 	)"
 DEPEND="${RDEPEND}
+	!arm? (
+		>=dev-lang/nacl-toolchain-newlib-0_p9093
+		dev-lang/yasm
+	)
 	dev-lang/perl
-	dev-lang/yasm
 	dev-python/ply
 	dev-python/simplejson
 	>=dev-util/gperf-3.0.3
-	net-libs/webkit-gtk:2
 	sys-apps/hwids
 	>=sys-devel/bison-2.4.3
 	sys-devel/flex
@@ -111,41 +115,47 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# if ! use arm; then
-	#	ebegin "Preparing NaCl newlib toolchain"
-	#	pushd "${T}" >/dev/null || die
-	#	mkdir sdk || die
-	#	cp -a /usr/$(get_libdir)/nacl-toolchain-newlib sdk/nacl-sdk || die
-	#	mkdir -p "${S}"/native_client/toolchain/.tars || die
-	#	tar czf "${S}"/native_client/toolchain/.tars/naclsdk_linux_x86.tgz sdk || die
-	#	popd >/dev/null || die
-	#	eend $?
-	# fi
+	if ! use arm; then
+		ebegin "Preparing NaCl newlib toolchain"
+		pushd "${T}" >/dev/null || die
+		mkdir sdk || die
+		cp -a /usr/$(get_libdir)/nacl-toolchain-newlib sdk/nacl-sdk || die
+		mkdir -p "${S}"/native_client/toolchain/.tars || die
+		tar czf "${S}"/native_client/toolchain/.tars/naclsdk_linux_x86.tgz sdk || die
+		popd >/dev/null || die
+		eend $?
+	fi
 
 	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug 383371.
 	# sed -i '1i#define OF(x) x' \
 	#	third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.h || die
 
 	# Fix build without NaCl glibc toolchain.
-	# epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
+	epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
+
+	# Fix build without NaCl pnacl toolchain.
+	epatch "${FILESDIR}/${PN}-no-pnacl-r0.patch"
+
+	# Backport a fix for libpng shim headers.
+	epatch "${FILESDIR}/${PN}-system-libpng-r0.patch"
 
 	# Missing gyp files in tarball.
 	# https://code.google.com/p/chromium/issues/detail?id=144823
-	# if [[ -e chrome/test/data/nacl/nacl_test_data.gyp ]]; then
-	#	die "tarball fixed, please remove workaround"
-	# fi
+	if [[ -e chrome/test/data/nacl/nacl_test_data.gyp ]]; then
+		die "tarball fixed, please remove workaround"
+	fi
 
-	# mkdir -p chrome/test/data/nacl
-	# cat > chrome/test/data/nacl/nacl_test_data.gyp <<-EOF
-	# {
-	#   'targets': [
-	#     {
-	#       'target_name': 'nacl_tests',
-	#       'type': 'none',
-	#     },
-	#   ],
-	# }
-	# EOF
+	mkdir -p chrome/test/data/nacl
+	cat > chrome/test/data/nacl/nacl_test_data.gyp <<-EOF
+	{
+	  'targets': [
+	    {
+	      'target_name': 'nacl_tests',
+	      'type': 'none',
+	    },
+	  ],
+	}
+	EOF
 
 	epatch "${FILESDIR}/${PN}-system-ffmpeg-r0.patch"
 
@@ -162,8 +172,6 @@ src_prepare() {
 		\! -path 'third_party/flac/flac.h' \
 		\! -path 'third_party/flot/*' \
 		\! -path 'third_party/gpsd/*' \
-		\! -path 'third_party/harfbuzz/*' \
-		\! -path 'third_party/harfbuzz-ng/*' \
 		\! -path 'third_party/hunspell/*' \
 		\! -path 'third_party/hyphen/*' \
 		\! -path 'third_party/iccjpeg/*' \
@@ -232,15 +240,11 @@ src_configure() {
 	# drivers, bug #413637.
 	myconf+=" $(gyp_use tcmalloc linux_use_tcmalloc)"
 
-	# TODO: build with NaCl (pnacl is sort of required).
-	myconf+=" -Ddisable_nacl=1"
-
 	# Disable glibc Native Client toolchain, we don't need it (bug #417019).
-	# myconf+=" -Ddisable_glibc=1"
+	myconf+=" -Ddisable_glibc=1"
 
 	# TODO: also build with pnacl
-	# myconf+=" -Ddisable_pnacl=1
-	#	-Dbuild_pnacl_newlib=0"
+	myconf+=" -Ddisable_pnacl=1"
 
 	# Make it possible to remove third_party/adobe.
 	echo > "${T}/flapper_version.h" || die
@@ -255,6 +259,7 @@ src_configure() {
 	myconf+="
 		-Duse_system_bzip2=1
 		-Duse_system_flac=1
+		-Duse_system_harfbuzz=1
 		-Duse_system_icu=1
 		-Duse_system_libevent=1
 		-Duse_system_libjpeg=1
@@ -288,7 +293,8 @@ src_configure() {
 	# This makes breakages easier to detect by revdep-rebuild.
 	myconf+="
 		-Dlinux_link_gsettings=1
-		-Dlinux_link_libpci=1"
+		-Dlinux_link_libpci=1
+		-Dlinux_link_libspeechd=1"
 
 	# TODO: use the file at run time instead of effectively compiling it in.
 	myconf+="
@@ -443,12 +449,12 @@ src_install() {
 
 	doexe out/Release/chromedriver || die
 
-	# if ! use arm; then
-	#	doexe out/Release/nacl_helper{,_bootstrap} || die
-	#	insinto "${CHROMIUM_HOME}"
-	#	doins out/Release/nacl_irt_*.nexe || die
-	#	doins out/Release/libppGoogleNaClPluginChrome.so || die
-	# fi
+	if ! use arm; then
+		doexe out/Release/nacl_helper{,_bootstrap} || die
+		insinto "${CHROMIUM_HOME}"
+		doins out/Release/nacl_irt_*.nexe || die
+		doins out/Release/libppGoogleNaClPluginChrome.so || die
+	fi
 
 	newexe "${FILESDIR}"/chromium-launcher-r2.sh chromium-launcher.sh || die
 	if [[ "${CHROMIUM_SUFFIX}" != "" ]]; then
