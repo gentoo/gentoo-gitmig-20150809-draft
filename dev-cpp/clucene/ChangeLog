@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/clucene
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.60 2012/12/01 19:09:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.61 2012/12/20 16:36:36 kensington Exp $
+
+  20 Dec 2012; Michael Palimaka <kensington@gentoo.org>
+  -clucene-2.3.3.4-r3.ebuild:
+  Remove old.
 
   01 Dec 2012; Raúl Porcel <armin76@gentoo.org> clucene-2.3.3.4-r4.ebuild:
   alpha/arm/ia64/sparc stable wrt #441938
