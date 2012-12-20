@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.73 2012/12/16 15:22:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.74 2012/12/20 15:03:40 kensington Exp $
+
+  20 Dec 2012; Michael Palimaka <kensington@gentoo.org> -wv2-0.4.2.ebuild:
+  Remove old.
 
   16 Dec 2012; Raúl Porcel <armin76@gentoo.org> wv2-0.4.2-r1.ebuild:
   alpha/ia64/sparc stable wrt #443420
