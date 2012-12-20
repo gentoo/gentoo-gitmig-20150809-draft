@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.290 2012/12/18 08:08:30 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.291 2012/12/20 03:41:40 tetromino Exp $
+
+  20 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
+  Switch to global orc USE flag.
 
   18 Dec 2012; Arun Raghavan <ford_prefect@gentoo.org>
   -pulseaudio-0.9.22-r2.ebuild, -pulseaudio-2.0-r1.ebuild,

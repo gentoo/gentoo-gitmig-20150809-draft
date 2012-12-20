@@ -44,9 +44,6 @@
     <flag name="equalizer">
       Enable the equalizer module (requires <pkg>sci-libs/fftw</pkg>).
     </flag>
-    <flag name="orc">
-      Use <pkg>dev-lang/orc</pkg> for runtime optimisations.
-    </flag>
     <flag name="ssl">
       Use <pkg>dev-libs/openssl</pkg> to provide support for RAOP
       (AirPort) streaming.
