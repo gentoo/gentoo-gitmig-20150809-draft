@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.571 2012/12/20 21:01:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.572 2012/12/20 23:35:17 mgorny Exp $
+
+  20 Dec 2012; Michał Górny <mgorny@gentoo.org> python-any-r1.eclass,
+  python-r1.eclass, python-single-r1.eclass, python-utils-r1.eclass:
+  Commonize the code for obtaining the Python interpreter dependency string.
 
   20 Dec 2012; Justin Lecher <jlec@gentoo.org> flag-o-matic.eclass:
   Add fix for nen gnu compiler which use -x as command line arg internally,

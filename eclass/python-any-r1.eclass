@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.2 2012/12/07 18:00:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.3 2012/12/20 23:35:17 mgorny Exp $
 
 # @ECLASS: python-any-r1
 # @MAINTAINER:
@@ -202,25 +202,13 @@ python-any-r1_pkg_setup() {
 		fi
 	done
 
+	local PYTHON_PKG_DEP
 	for i in "${rev_impls[@]}"; do
-		local d
-		case "${i}" in
-			python*)
-				d='dev-lang/python';;
-			jython*)
-				d='dev-java/jython';;
-			pypy*)
-				d='dev-python/pypy';;
-			*)
-				die "Invalid implementation: ${i}"
-		esac
-		local v=${i##*[a-z]}
-
-		if has_version "${d}:${v/_/.}${usestr}"; then
-			python_export "${i}" EPYTHON PYTHON
-			break
-		fi
+		python_export "${i}" PYTHON_PKG_DEP EPYTHON PYTHON
+		has_version "${PYTHON_PKG_DEP}" && break
 	done
+
+	die $EPYTHON
 }
 
 _PYTHON_ANY_R1=1

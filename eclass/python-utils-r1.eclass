@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.8 2012/12/20 06:05:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.9 2012/12/20 23:35:17 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -83,6 +83,17 @@ _PYTHON_ALL_IMPLS=(
 # /usr/lib64/python2.6/site-packages
 # @CODE
 
+# @ECLASS-VARIABLE: PYTHON_PKG_DEP
+# @DESCRIPTION:
+# The complete dependency on a particular Python package as a string.
+#
+# Set and exported on request using python_export().
+#
+# Example value:
+# @CODE
+# dev-lang/python:2.7[xml]
+# @CODE
+
 # @FUNCTION: python_export
 # @USAGE: [<impl>] <variables>...
 # @DESCRIPTION:
@@ -149,6 +160,30 @@ python_export() {
 
 				export PYTHON_SITEDIR=${EPREFIX}${dir}/site-packages
 				debug-print "${FUNCNAME}: PYTHON_SITEDIR = ${PYTHON_SITEDIR}"
+				;;
+			PYTHON_PKG_DEP)
+				local d
+				case ${impl} in
+					python*)
+						PYTHON_PKG_DEP='dev-lang/python';;
+					jython*)
+						PYTHON_PKG_DEP='dev-java/jython';;
+					pypy*)
+						PYTHON_PKG_DEP='dev-python/pypy';;
+					*)
+						die "Invalid implementation: ${impl}"
+				esac
+
+				# slot
+				PYTHON_PKG_DEP+=:${impl##*[a-z-]}
+
+				# use-dep
+				if [[ ${PYTHON_REQ_USE} ]]; then
+					PYTHON_PKG_DEP+=[${PYTHON_REQ_USE}]
+				fi
+
+				export PYTHON_PKG_DEP
+				debug-print "${FUNCNAME}: PYTHON_PKG_DEP = ${PYTHON_PKG_DEP}"
 				;;
 			*)
 				die "python_export: unknown variable ${var}"

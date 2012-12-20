@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.30 2012/12/19 09:22:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.31 2012/12/20 23:35:17 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -149,30 +149,15 @@ _python_set_globals() {
 	REQUIRED_USE="|| ( ${flags[*]} )"
 	PYTHON_USEDEP=${optflags// /,}
 
-	local usestr
-	[[ ${PYTHON_REQ_USE} ]] && usestr="[${PYTHON_REQ_USE}]"
-
 	# 1) well, python-exec would suffice as an RDEP
 	# but no point in making this overcomplex, BDEP doesn't hurt anyone
 	# 2) python-exec should be built with all targets forced anyway
 	# but if new targets were added, we may need to force a rebuild
 	PYTHON_DEPS="dev-python/python-exec[${PYTHON_USEDEP}]"
-	local i
+	local i PYTHON_PKG_DEP
 	for i in "${PYTHON_COMPAT[@]}"; do
-		local d
-		case ${i} in
-			python*)
-				d='dev-lang/python';;
-			jython*)
-				d='dev-java/jython';;
-			pypy*)
-				d='dev-python/pypy';;
-			*)
-				die "Invalid implementation: ${i}"
-		esac
-
-		local v=${i##*[a-z]}
-		PYTHON_DEPS+=" python_targets_${i}? ( ${d}:${v/_/.}${usestr} )"
+		python_export "${i}" PYTHON_PKG_DEP
+		PYTHON_DEPS+=" python_targets_${i}? ( ${PYTHON_PKG_DEP} )"
 	done
 }
 _python_set_globals
