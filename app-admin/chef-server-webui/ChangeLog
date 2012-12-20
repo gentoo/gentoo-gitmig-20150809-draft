@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/chef-server-webui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/ChangeLog,v 1.13 2012/12/17 13:11:23 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/ChangeLog,v 1.14 2012/12/20 10:01:29 hollow Exp $
+
+  20 Dec 2012; Benedikt Böhm <hollow@gentoo.org>
+  files/initd/chef-server-webui:
+  improve init script
 
 *chef-server-webui-10.16.2 (17 Dec 2012)
 

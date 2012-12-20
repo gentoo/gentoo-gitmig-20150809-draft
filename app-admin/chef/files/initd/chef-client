@@ -2,29 +2,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-depend() {
-	need net
-}
-
-CHEF_CLIENT_BINARY=${CHEF_CLIENT_BINARY:-/usr/bin/chef-client}
-CHEF_CLIENT_PIDFILE=${CHEF_CLIENT_PIDFILE:-/var/run/chef/client.pid}
 CONFIGFILE=${CONFIGFILE:-/etc/chef/client.rb}
 INTERVAL=${INTERVAL:-1800}
 SPLAY=${SPLAY:-20}
 
-start() {
-	ebegin "Starting Chef client"
-	start-stop-daemon --start \
-		--pidfile ${CHEF_CLIENT_PIDFILE} \
-		--exec ${CHEF_CLIENT_BINARY} \
-		-- \
-		-d -c ${CONFIGFILE} -i ${INTERVAL} -s ${SPLAY} \
-		${CHEF_CLIENT_OPTS}
-	eend $?
+command=${CHEF_CLIENT_BINARY:-/usr/bin/chef-client}
+command_args="-d -c ${CONFIGFILE} -i ${INTERVAL} -s ${SPLAY} ${CHEF_CLIENT_OPTS}"
+pidfile=${CHEF_CLIENT_PIDFILE:-/var/run/chef/client.pid}
+
+depend() {
+	need net
 }
 
-stop() {
-	ebegin "Shutting down Chef client"
-	start-stop-daemon --stop --pidfile ${CHEF_CLIENT_PIDFILE}
-	eend $?
+start_pre() {
+	checkpath -q -d -m 0755 -o chef:chef /var/run/chef
 }
