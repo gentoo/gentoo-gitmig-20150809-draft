@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.9 2012/12/20 23:35:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.10 2012/12/20 23:36:15 mgorny Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -177,6 +177,50 @@ python-single-r1_pkg_setup() {
 			python_export "${impl}" EPYTHON PYTHON
 			break
 		fi
+	done
+}
+
+# @FUNCTION: python_fix_shebang
+# @USAGE: <path>...
+# @DESCRIPTION:
+# Replace the shebang in Python scripts with the current Python
+# implementation (EPYTHON). If a directory is passed, works recursively
+# on all Python scripts.
+#
+# Only files having a 'python' shebang will be modified; other files
+# will be skipped. If a script has a complete shebang matching
+# the chosen interpreter version, it is left unmodified. If a script has
+# a complete shebang matching other version, the command dies.
+python_fix_shebang() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	[[ ${1} ]] || die "${FUNCNAME}: no paths given"
+	[[ ${EPYTHON} ]] || die "${FUNCNAME}: EPYTHON unset (pkg_setup not called?)"
+
+	local path f
+	for path; do
+		while IFS= read -r -d '' f; do
+			local shebang=$(head -n 1 "${f}")
+
+			case "${shebang}" in
+				'#!'*${EPYTHON}*)
+					debug-print "${FUNCNAME}: in file ${f#${D}}"
+					debug-print "${FUNCNAME}: shebang matches EPYTHON: ${shebang}"
+					;;
+				'#!'*python[23].[0123456789]*|'#!'*pypy-c*|'#!'*jython*)
+					debug-print "${FUNCNAME}: in file ${f#${D}}"
+					debug-print "${FUNCNAME}: incorrect specific shebang: ${shebang}"
+
+					die "${f#${D}} has a specific Python shebang not matching EPYTHON"
+					;;
+				'#!'*python*)
+					debug-print "${FUNCNAME}: in file ${f#${D}}"
+					debug-print "${FUNCNAME}: rewriting shebang: ${shebang}"
+
+					einfo "Fixing shebang in ${f#${D}}"
+					_python_rewrite_shebang "${f}"
+			esac
+		done < <(find "${path}" -type f -print0)
 	done
 }
 
