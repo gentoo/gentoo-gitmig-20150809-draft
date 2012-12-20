@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-3.4.2.ebuild,v 1.1 2012/05/20 10:57:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-3.4.2.ebuild,v 1.2 2012/12/20 16:27:56 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -11,7 +11,7 @@ inherit eutils gnome2 virtualx
 DESCRIPTION="A file manager for the GNOME desktop"
 HOMEPAGE="http://live.gnome.org/Nautilus"
 
-LICENSE="GPL-2 LGPL-2 FDL-1.1"
+LICENSE="GPL-2+ LGPL-2+ FDL-1.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="doc exif gnome +introspection packagekit +previewer sendto tracker xmp"
@@ -38,17 +38,16 @@ COMMON_DEPEND=">=dev-libs/glib-2.31.9:2
 DEPEND="${COMMON_DEPEND}
 	>=dev-lang/perl-5
 	>=dev-util/gdbus-codegen-2.31.0
+	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.40.1
 	sys-devel/gettext
 	virtual/pkgconfig
-	x11-proto/xproto
-	doc? ( >=dev-util/gtk-doc-1.4 )"
+	x11-proto/xproto"
 RDEPEND="${COMMON_DEPEND}
 	packagekit? ( app-admin/packagekit-base )
 	sendto? ( !<gnome-extra/nautilus-sendto-3.0.1 )"
 # For eautoreconf
 #	gnome-base/gnome-common
-#	dev-util/gtk-doc-am"
 PDEPEND="gnome? (
 		>=x11-themes/gnome-icon-theme-1.1.91
 		x11-themes/gnome-icon-theme-symbolic )
@@ -57,7 +56,7 @@ PDEPEND="gnome? (
 	sendto? ( >=gnome-extra/nautilus-sendto-3.0.1 )
 	>=gnome-base/gvfs-0.1.2"
 
-pkg_setup() {
+src_prepare() {
 	G2CONF="${G2CONF}
 		--disable-update-mimedb
 		$(use_enable exif libexif)
@@ -67,10 +66,6 @@ pkg_setup() {
 		$(use_enable tracker)
 		$(use_enable xmp)"
 	DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS README THANKS TODO"
-}
-
-src_prepare() {
-	gnome2_src_prepare
 
 	# Restore the nautilus-2.x Delete shortcut (Ctrl+Delete will still work);
 	# bug #393663
@@ -79,9 +74,7 @@ src_prepare() {
 	# https://bugzilla.gnome.org/show_bug.cgi?id=664573
 	epatch "${FILESDIR}/${PN}-3.2.1-key-press-forwarding.patch"
 
-	# Remove crazy CFLAGS
-	sed 's:-DG.*DISABLE_DEPRECATED::g' -i configure.in configure \
-		|| die "sed 1 failed"
+	gnome2_src_prepare
 }
 
 src_test() {
