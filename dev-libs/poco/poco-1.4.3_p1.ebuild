@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/poco-1.4.3_p1.ebuild,v 1.6 2012/06/06 03:47:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/poco-1.4.3_p1.ebuild,v 1.7 2012/12/20 16:12:53 tommy Exp $
 
 EAPI="2"
 
@@ -19,6 +19,7 @@ KEYWORDS="amd64 ~arm x86"
 IUSE="doc examples iodbc mysql odbc sqlite ssl test"
 
 DEPEND=">=dev-libs/libpcre-8.13
+	<=dev-libs/libpcre-8.31
 	dev-libs/expat
 	sys-libs/zlib
 	mysql? ( virtual/mysql )
