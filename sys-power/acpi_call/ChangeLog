@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/acpi_call
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpi_call/ChangeLog,v 1.4 2012/12/20 04:44:07 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpi_call/ChangeLog,v 1.5 2012/12/20 04:46:11 ottxor Exp $
+
+  20 Dec 2012; Christoph Junghans <ottxor@gentoo.org> metadata.xml:
+  updated metadata.xml
 
 *acpi_call-1.0.0 (20 Dec 2012)
 
