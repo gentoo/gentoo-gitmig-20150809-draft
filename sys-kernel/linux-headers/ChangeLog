@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.361 2012/11/21 20:14:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.362 2012/12/20 03:20:33 vapier Exp $
+
+*linux-headers-3.7 (20 Dec 2012)
+
+  20 Dec 2012; Mike Frysinger <vapier@gentoo.org> +linux-headers-3.7.ebuild:
+  Version bump.
 
   21 Nov 2012; Anthony G. Basile <blueness@gentoo.org> linux-headers-3.6.ebuild:
   stable arm ppc ppc64, bug #443532
