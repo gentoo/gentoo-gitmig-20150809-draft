@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>haskell</herd>
-<maintainer>
-<email>araujo@gentoo.org</email>
-<name>Luis F. Araujo</name>
-</maintainer>
 <longdescription lang="en">
 Haskell-Source with eXtensions (HSX, haskell-src-exts) is an extension of the
 standard haskell-src package, and handles most common syntactic extensions to
