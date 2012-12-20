@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.85 2012/12/15 19:24:25 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.86 2012/12/20 13:43:36 alonbl Exp $
+
+  20 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org> loop-aes-3.6e.ebuild:
+  Check for CONFIG_MODULES, per bug#447948, thanks to Agostino Sarubbo
 
   15 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org> loop-aes-3.6g.ebuild:
   Enable verbose build, per bug#447318
