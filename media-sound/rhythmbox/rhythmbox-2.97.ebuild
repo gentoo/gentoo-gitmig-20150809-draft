@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.97.ebuild,v 1.6 2012/12/18 17:51:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.97.ebuild,v 1.7 2012/12/20 15:58:46 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -142,7 +142,7 @@ pkg_setup() {
 
 src_prepare() {
 	gnome2_src_prepare
-	echo > py-compile
+	use python && python_clean_py-compile_files
 }
 
 src_test() {
@@ -166,5 +166,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup /usr/$(get_libdir)/rhythmbox/plugins
+	use python && python_mod_cleanup /usr/$(get_libdir)/rhythmbox/plugins
 }

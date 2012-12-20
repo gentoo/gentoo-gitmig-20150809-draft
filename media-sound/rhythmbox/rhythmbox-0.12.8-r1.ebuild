@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.25 2012/12/18 17:51:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.26 2012/12/20 15:58:46 tetromino Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
@@ -148,15 +148,16 @@ src_prepare() {
 
 	gnome2_src_prepare
 
-	python_clean_py-compile_files
-
 	# Fix python initialization problems, bug #318333
 	epatch "${FILESDIR}/${PN}-0.12-python-initialization.patch"
 
 	# Fix building with recent glibc, bug #333373
 	epatch "${FILESDIR}/${P}-namespace-conflict.patch"
 
-	use python && python_convert_shebangs -r 2 .
+	if use python; then
+		python_convert_shebangs -r 2 .
+		python_clean_py-compile_files
+	fi
 }
 
 src_compile() {

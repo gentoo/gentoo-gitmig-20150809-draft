@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.13.3.ebuild,v 1.13 2012/12/18 17:51:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.13.3.ebuild,v 1.14 2012/12/20 15:58:46 tetromino Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -148,9 +148,7 @@ pkg_setup() {
 
 src_prepare() {
 	gnome2_src_prepare
-
-	# disable pyc compiling
-	echo > py-compile
+	use python && python_clean_py-compile_files
 }
 
 src_compile() {
