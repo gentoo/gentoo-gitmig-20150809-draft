@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/defcon-demo/defcon-demo-1.42.ebuild,v 1.5 2011/10/19 21:40:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/defcon-demo/defcon-demo-1.42.ebuild,v 1.6 2012/12/20 07:25:37 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils toolchain-funcs games
 
 MY_PN=defcon
@@ -32,6 +32,8 @@ RDEPEND=">=sys-libs/glibc-2.3
 		x11-libs/libXdmcp"
 DEPEND=""
 
+QA_PREBUILT="${GAMES_PREFIX_OPT:1}/${PN}/lib/defcon.bin.x86"
+
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
@@ -49,23 +51,23 @@ src_prepare() {
 }
 
 src_compile() {
-	$(tc-getCC) -fPIC -shared -ldl -o lib/chdir.so chdir.c || die
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -fPIC -shared -o lib/chdir.so chdir.c || die
 }
 
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN}
 
 	insinto "${dir}/lib"
-	doins lib/*.dat || die
+	doins lib/*.dat
 
 	exeinto "${dir}"/lib
-	doexe lib/*.{sh,x86,so} || die
+	doexe lib/*.{sh,x86,so}
 
 	dodoc manual.pdf doc/*txt
 	doicon doc/defcon.ico
 
 	# Can be upgraded to full version, so is not installed as "demo"
-	dogamesbin "${T}"/defcon || die "dogamesbin failed"
+	dogamesbin "${T}"/defcon
 	make_desktop_entry ${MY_PN} "Defcon" /usr/share/pixmaps/defcon.ico
 
 	prepgamesdirs
