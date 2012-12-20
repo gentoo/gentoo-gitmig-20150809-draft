@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7271 2012/12/20 03:28:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7272 2012/12/20 05:55:56 floppym Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Dec 2012; Mike Gilbert <floppym@gentoo.org>
+  desc/python_single_target.desc, desc/python_targets.desc:
+  Add pypy2_0 use-expand values.
 
   20 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> use.desc:
   Add global orc USE flag, as discussed on gentoo-dev.
