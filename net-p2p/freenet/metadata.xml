@@ -5,8 +5,5 @@
 		<email>tommy@gentoo.org</email>
 		<name>Thomas Sachau (Tommy[D])</name>
 	</maintainer>
-	<use>
-		<flag name='freemail'>Add Freemail support</flag>
-	</use>
 </pkgmetadata>
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1422.ebuild,v 1.1 2012/10/30 18:31:09 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1423.ebuild,v 1.1 2012/12/20 14:59:50 tommy Exp $
 
 EAPI="2"
 DATE=20121030
@@ -14,7 +14,7 @@ SRC_URI="http://github.com/${PN}/fred-official/zipball/build0${PV#*p} -> ${P}.zi
 	mirror://gentoo/seednodes-${DATE}.fref.bz2
 	mirror://gentoo/freenet-ant-1.7.1.jar"
 
-LICENSE="as-is GPL-2"
+LICENSE="GPL-2+ GPL-2 MIT BSD-2 Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
