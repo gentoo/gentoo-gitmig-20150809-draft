@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/mscgen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mscgen/ChangeLog,v 1.9 2012/10/03 10:27:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mscgen/ChangeLog,v 1.10 2012/12/20 13:48:09 nativemad Exp $
+
+  20 Dec 2012; Andreas Schuerch <nativemad@gentoo.org> mscgen-0.20.ebuild:
+  x86 stable, see bug 435976. Thanks Myckel Habets for testing.
 
   03 Oct 2012; Agostino Sarubbo <ago@gentoo.org> mscgen-0.20.ebuild:
   Stable for amd64, wrt bug #435976
