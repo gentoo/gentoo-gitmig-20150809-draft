@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.28 2012/12/02 01:58:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.29 2012/12/20 05:46:52 floppym Exp $
+
+*pypy-2.0_beta1 (20 Dec 2012)
+
+  20 Dec 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/2.0-distutils-fix_handling_of_executables_and_flags.patch,
+  +files/2.0-no-static-hack.patch, +pypy-2.0_beta1.ebuild:
+  Version bump for testing, bug 445450. No keywords.
 
   02 Dec 2012; Mike Gilbert <floppym@gentoo.org> pypy-1.8-r2.ebuild,
   pypy-1.9-r2.ebuild:
