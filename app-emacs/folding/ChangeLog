@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/folding
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/folding/ChangeLog,v 1.22 2012/02/19 13:54:31 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/folding/ChangeLog,v 1.23 2012/12/20 18:49:26 ulm Exp $
+
+*folding-2012.0226.1623 (20 Dec 2012)
+
+  20 Dec 2012; Ulrich Müller <ulm@gentoo.org> folding-2009.0905.0811.ebuild,
+  +folding-2012.0226.1623.ebuild:
+  Version bump, bug 447912. Specify LICENSE more precisely.
 
   19 Feb 2012; Tobias Klausmann <klausman@gentoo.org>
   folding-2009.0905.0811.ebuild:
