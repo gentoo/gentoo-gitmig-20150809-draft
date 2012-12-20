@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/colord-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/colord-gtk/ChangeLog,v 1.5 2012/10/17 23:37:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/colord-gtk/ChangeLog,v 1.6 2012/12/20 05:29:57 tetromino Exp $
+
+*colord-gtk-0.1.24 (20 Dec 2012)
+
+  20 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -colord-gtk-0.1.22-r1.ebuild, colord-gtk-0.1.23.ebuild,
+  +colord-gtk-0.1.24.ebuild, metadata.xml:
+  Version bump. Update license, switch to global introspection flag. Drop old.
 
   17 Oct 2012; Jeroen Roovers <jer@gentoo.org> colord-gtk-0.1.22-r1.ebuild,
   colord-gtk-0.1.23.ebuild:

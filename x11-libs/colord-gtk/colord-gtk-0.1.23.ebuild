@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/colord-gtk/colord-gtk-0.1.23.ebuild,v 1.2 2012/10/17 23:37:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/colord-gtk/colord-gtk-0.1.23.ebuild,v 1.3 2012/12/20 05:29:57 tetromino Exp $
 
 EAPI="4"
 VALA_MIN_API_VERSION="0.14"
@@ -12,7 +12,7 @@ DESCRIPTION="GTK support library for colord"
 HOMEPAGE="http://www.freedesktop.org/software/colord/"
 SRC_URI="http://www.freedesktop.org/software/colord/releases/${P}.tar.xz"
 
-LICENSE="LGPL-3"
+LICENSE="LGPL-3+"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="doc +introspection vala"
