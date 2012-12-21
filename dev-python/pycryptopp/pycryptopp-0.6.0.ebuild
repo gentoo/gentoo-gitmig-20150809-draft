@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycryptopp/pycryptopp-0.6.0.ebuild,v 1.1 2012/12/18 19:52:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycryptopp/pycryptopp-0.6.0.ebuild,v 1.2 2012/12/21 19:14:19 radhermit Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -21,7 +21,7 @@ IUSE=""
 
 RDEPEND="dev-libs/crypto++"
 DEPEND="${RDEPEND}
-	dev-python/setuptools"
+	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 DOCS="NEWS.rst"
 
