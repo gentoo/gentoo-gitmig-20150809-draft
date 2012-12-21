@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/wepdecrypt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/ChangeLog,v 1.17 2012/09/18 04:48:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/ChangeLog,v 1.18 2012/12/21 23:25:01 alonbl Exp $
+
+*wepdecrypt-0.8-r2 (21 Dec 2012)
+
+  21 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org> +files/wepdecrypt-0.8-dyn.patch,
+  +wepdecrypt-0.8-r2.ebuild:
+  Allow dynamic build of gwepdecrypt, per bug#402823, thanks to Adrian Bassett
 
   18 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
@@ -77,4 +83,3 @@
   21 Jun 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +wepdecrypt-0.6.ebuild:
   initial ebuild (bug #82727) thanks to wepdecrypt Fernando Tarín Morales
-
