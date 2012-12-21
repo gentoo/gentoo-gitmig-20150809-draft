@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mboxgrep/mboxgrep-0.7.9-r1.ebuild,v 1.4 2012/02/05 18:10:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mboxgrep/mboxgrep-0.7.9-r1.ebuild,v 1.5 2012/12/21 13:39:38 eras Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 SLOT="0"
-LICENSE="as-is"
+LICENSE="GPL-2+"
 KEYWORDS="ppc x86"
 IUSE=""
 
