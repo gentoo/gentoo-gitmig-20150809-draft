@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/elementary
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/ChangeLog,v 1.3 2012/12/16 20:03:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/ChangeLog,v 1.4 2012/12/21 20:56:22 tommy Exp $
+
+*elementary-1.7.4 (21 Dec 2012)
+
+  21 Dec 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -elementary-1.7.1.ebuild, -elementary-1.7.2.ebuild, +elementary-1.7.4.ebuild,
+  metadata.xml:
+  Version bump, drop old
 
   16 Dec 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Drop no-herd from metadata.xml

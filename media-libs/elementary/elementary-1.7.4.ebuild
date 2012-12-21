@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/elementary-1.7.2.ebuild,v 1.1 2012/11/23 21:39:27 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/elementary-1.7.4.ebuild,v 1.1 2012/12/21 20:56:22 tommy Exp $
 
 EAPI=2
 
@@ -12,13 +12,15 @@ SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~x86"
-IUSE="dbus debug examples fbcon opengl quicklaunch sdl X xcb xdg static-libs"
+IUSE="dbus debug emotion ethumb examples fbcon opengl quicklaunch sdl X xcb xdg static-libs"
 
 DEPEND="
 	>=dev-libs/ecore-1.7.0[evas,fbcon?,opengl?,sdl?,X?,xcb?]
 	>=media-libs/evas-1.7.0[fbcon?,opengl?,X?,xcb?]
 	>=media-libs/edje-1.7.0
 	dbus? ( >=dev-libs/e_dbus-1.7.0 )
+	emotion? ( >=media-libs/emotion-1.7.0 )
+	ethumb? ( >=media-libs/ethumb-1.7.0 )
 	xdg? ( >=dev-libs/efreet-1.7.0 )
 	"
 RDEPEND="${DEPEND}"
@@ -33,8 +35,8 @@ src_configure() {
 		--disable-ecore-win32
 		--disable-ecore-wince
 		--disable-emap
-		--disable-emotion
-		--disable-ethumb
+		$(use_enable emotion)
+		$(use_enable ethumb)
 		--disable-eweather
 		$(use_enable examples build-examples)
 		$(use_enable examples install-examples)
