@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/csync
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/ChangeLog,v 1.9 2012/12/14 17:18:48 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/ChangeLog,v 1.10 2012/12/21 13:23:42 creffett Exp $
+
+*csync-0.60.4 (21 Dec 2012)
+
+  21 Dec 2012; Chris Reffett <creffett@gentoo.org> +csync-0.60.4.ebuild,
+  +files/csync-0.60.4-automagicness.patch:
+  Version bump.
 
 *csync-0.60.3 (14 Dec 2012)
 
