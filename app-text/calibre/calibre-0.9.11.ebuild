@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.9.ebuild,v 1.2 2012/12/12 10:25:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.11.ebuild,v 1.1 2012/12/21 20:52:27 zmedico Exp $
 
 EAPI=4
 PYTHON_DEPEND=2:2.7
@@ -88,12 +88,6 @@ src_prepare() {
 '-e', 's|^LFLAGS .*|\\\\\\\\0 ${LDFLAGS}|', \
 '-i', 'Makefile'])" \
 		-i setup/extensions.py || die "sed failed to patch extensions.py"
-
-	# Disable destructive regex for Bug #446790.
-	if has_version '>=dev-python/PyQt4-4.9.6' ; then
-		sed -e "s|dat = re\.compile(r'QtGui\.QApplication\.translate.*|#\\0|" \
-			-i src/calibre/gui2/__init__.py || die
-	fi
 }
 
 src_install() {
