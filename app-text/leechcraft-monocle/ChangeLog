@@ -1,6 +1,10 @@
 # ChangeLog for app-text/leechcraft-monocle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/leechcraft-monocle/ChangeLog,v 1.8 2012/12/19 07:53:09 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/leechcraft-monocle/ChangeLog,v 1.9 2012/12/21 13:33:09 pinkbyte Exp $
+
+  21 Dec 2012; Sergey Popov <pinkbyte@gentoo.org>
+  leechcraft-monocle-0.5.85.ebuild, leechcraft-monocle-9999.ebuild:
+  Remove obsolete pkg_pretend function - overrided by eclass one
 
   19 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org>
   -leechcraft-monocle-0.5.75.ebuild, -leechcraft-monocle-0.5.80.ebuild:
