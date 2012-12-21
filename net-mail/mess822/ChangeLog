@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mess822
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/ChangeLog,v 1.16 2012/01/05 16:09:43 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/ChangeLog,v 1.17 2012/12/21 13:42:04 eras Exp $
+
+  21 Dec 2012; Eray Aslan <eras@gentoo.org> mess822-0.58-r2.ebuild:
+  Fix license - bug #446478
 
   05 Jan 2012; Eray Aslan <eras@gentoo.org> -mess822-0.58-r1.ebuild:
   remove old
