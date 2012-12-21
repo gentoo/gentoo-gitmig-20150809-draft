@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.332 2012/12/04 12:10:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.333 2012/12/21 03:15:28 blueness Exp $
+
+  21 Dec 2012; Anthony G. Basile <blueness@gentoo.org> files/klogd.initd,
+  files/ntpd.initd, files/syslogd.initd, files/watchdog.initd:
+  Add pidfile to initd for klogd, ntpd and watchdog, bug #444718
 
   04 Dec 2012; Anthony G. Basile <blueness@gentoo.org> +files/klogd.confd,
   +files/klogd.initd, +files/ntpd.confd, +files/ntpd.initd,
