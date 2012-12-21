@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libieee1284
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/ChangeLog,v 1.32 2012/05/12 11:03:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/ChangeLog,v 1.33 2012/12/21 03:46:01 vapier Exp $
+
+  21 Dec 2012; Mike Frysinger <vapier@gentoo.org> libieee1284-0.2.11-r2.ebuild:
+  Only setup python when USE=python #446612 by Elfenbein, Karsten.
 
   12 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
   libieee1284-0.2.11-r1.ebuild, libieee1284-0.2.11-r2.ebuild:

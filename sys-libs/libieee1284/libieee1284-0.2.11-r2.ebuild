@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.11-r2.ebuild,v 1.6 2012/05/12 11:03:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.11-r2.ebuild,v 1.7 2012/12/21 03:46:01 vapier Exp $
 
 EAPI="3"
 
@@ -26,18 +26,19 @@ DEPEND="${RDEPEND}
 	)"
 
 pkg_setup() {
-	python_set_active_version 2
+	use python && python_set_active_version 2
 }
 
 src_configure() {
 	econf \
-		--enable-shared $(use_enable static-libs static) \
+		--enable-shared \
+		$(use_enable static-libs static) \
 		$(use_with python) \
 		--disable-dependency-tracking
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	find "${D}" -name '*.la' -delete
-	dodoc AUTHORS NEWS README* TODO doc/interface* || die
+	dodoc AUTHORS NEWS README* TODO doc/interface*
 }
