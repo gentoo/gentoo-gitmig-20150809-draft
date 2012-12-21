@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/poco
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/ChangeLog,v 1.20 2012/12/20 16:56:18 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/ChangeLog,v 1.21 2012/12/21 13:15:07 tommy Exp $
+
+*poco-1.4.5-r1 (21 Dec 2012)
+
+  21 Dec 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +files/poco-1.4.4-patch-for-libpcre-8.32.patch, -poco-1.4.5.ebuild,
+  +poco-1.4.5-r1.ebuild:
+  Revision bump, add patch for libpcre-8.32, drop restriction for
+  <=libpcre-8.31, patch by Eleriseth (FMS user)
 
 *poco-1.4.5 (20 Dec 2012)
 
