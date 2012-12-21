@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.23-r6.ebuild,v 1.9 2012/11/05 21:56:02 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.23-r6.ebuild,v 1.10 2012/12/21 13:27:37 eras Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://asg.web.cmu.edu/sasl/"
 SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz
 	ntlm_unsupported_patch? ( mirror://gentoo/${ntlm_patch} )"
 
-LICENSE="BSD-4"
+LICENSE="BSD-with-attribution"
 SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="authdaemond berkdb crypt gdbm kerberos openldap mysql ntlm_unsupported_patch pam postgres sample srp ssl urandom"
