@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/xe-2.16.2.ebuild,v 1.4 2012/05/04 04:38:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/xe-2.16.2.ebuild,v 1.5 2012/12/21 07:53:22 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit games
 
 DESCRIPTION="a multi system emulator for many console and handheld video game systems"
@@ -25,29 +25,28 @@ RDEPEND="x11-libs/libXv
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
+dir=${games_get_libdir}/${PN}
+
+QA_PREBUILT="${dir:1}/modules/*
+	${GAMES_BINDIR:1}/xe.bin"
+
 src_unpack() {
 	unpack ${A}
 	mv -v * ${P} || die
 }
 
 src_prepare() {
-	sed -i \
-		-e '/strip/d' \
-		-e '/^CC/d' \
-		-e '/CC/s/$/ $(LDFLAGS)/' \
-		-e 's/@//' \
-		Makefile \
-		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 src_install() {
-	newgamesbin xe xe.bin || die "newgamesbin failed"
-	newgamesbin "${FILESDIR}"/xe-${PV} xe || die "newgamesbin failed"
+	newgamesbin xe xe.bin
+	newgamesbin "${FILESDIR}"/xe-${PV} xe
 	sed -i \
 		-e "s:GENTOODIR:$(games_get_libdir)/${PN}:" "${D}/${GAMES_BINDIR}/xe" \
 		|| die "sed failed"
 	insinto "$(games_get_libdir)"/${PN}
-	doins -r modules/ rc/ || die "doins failed"
+	doins -r modules/ rc/
 	keepdir "$(games_get_libdir)"/${PN}/bios
 	dodoc README.txt
 	dohtml manual.html
