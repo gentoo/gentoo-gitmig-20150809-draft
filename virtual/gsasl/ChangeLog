@@ -1,6 +1,9 @@
 # ChangeLog for virtual/gsasl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gsasl/ChangeLog,v 1.15 2012/10/20 17:47:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gsasl/ChangeLog,v 1.16 2012/12/21 12:53:51 eras Exp $
+
+  21 Dec 2012; Eray Aslan <eras@gentoo.org> -gsasl-1.6.1.ebuild:
+  Remove old
 
   20 Oct 2012; Jeroen Roovers <jer@gentoo.org> gsasl-2.ebuild:
   Marked ~hppa (bug #439040).
@@ -62,4 +65,3 @@
   +gsasl-0.2.28.ebuild, +gsasl-0.2.29.ebuild, +gsasl-1.1.ebuild,
   +gsasl-1.4.1.ebuild, +metadata.xml:
   Switch to new style virtuals (bug #237400).
-
