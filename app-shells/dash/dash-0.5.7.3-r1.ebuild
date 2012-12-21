@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.7.3.ebuild,v 1.1 2012/11/07 08:06:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.7.3-r1.ebuild,v 1.1 2012/12/21 04:48:26 vapier Exp $
 
 EAPI="4"
 
@@ -45,10 +45,10 @@ src_prepare() {
 
 src_configure() {
 	use static && append-ldflags -static
+	# Do not pass --enable-glob due to #443552.
 	econf \
 		--bindir=/bin \
 		--enable-fnmatch \
-		--enable-glob \
 		$(use_with libedit)
 }
 
