@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.1.0.20.ebuild,v 1.1 2012/12/02 12:48:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.1.0.20.ebuild,v 1.2 2012/12/21 01:09:03 hasufell Exp $
 
 EAPI=5
 inherit eutils gnome2-utils pax-utils
@@ -19,9 +19,7 @@ RESTRICT="mirror strip" #299368
 
 EMUL_X86_VER=20120520
 
-DEPEND="x11-libs/qt-core:4"
-RDEPEND="${DEPEND}
-	virtual/ttf-fonts
+RDEPEND="virtual/ttf-fonts
 	amd64? (
 		>=app-emulation/emul-linux-x86-baselibs-${EMUL_X86_VER}
 		>=app-emulation/emul-linux-x86-qtlibs-${EMUL_X86_VER}
@@ -34,6 +32,7 @@ RDEPEND="${DEPEND}
 		x11-libs/libXext
 		x11-libs/libXScrnSaver
 		x11-libs/libXv
+		x11-libs/qt-core:4
 		x11-libs/qt-dbus:4
 		x11-libs/qt-gui:4[accessibility,dbus]
 		x11-libs/qt-webkit:4
