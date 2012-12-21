@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14316 2012/12/21 17:45:15 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14317 2012/12/21 21:55:48 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -632,6 +632,7 @@ gnome-extra/gnome-clocks
 =net-libs/libsoup-gnome-2.40*
 net-libs/libzapojit
 >=net-libs/rest-0.7.90
+=net-im/telepathy-logger-0.6*
 =net-libs/telepathy-glib-0.20*
 =net-libs/webkit-gtk-1.10*
 =net-misc/vinagre-3.6*
