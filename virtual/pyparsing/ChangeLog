@@ -1,0 +1,10 @@
+# ChangeLog for virtual/pyparsing
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/pyparsing/ChangeLog,v 1.1 2012/12/21 21:58:01 mgorny Exp $
+
+*pyparsing-1 (21 Dec 2012)
+*pyparsing-0 (21 Dec 2012)
+
+  21 Dec 2012; Michał Górny <mgorny@gentoo.org> +metadata.xml,
+  +pyparsing-0.ebuild, +pyparsing-1.ebuild:
+  Introduce a virtual for pyparsing.
