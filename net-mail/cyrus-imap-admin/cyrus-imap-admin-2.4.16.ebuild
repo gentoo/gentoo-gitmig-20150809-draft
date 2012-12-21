@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.4.16.ebuild,v 1.7 2012/08/05 18:15:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.4.16.ebuild,v 1.8 2012/12/21 13:23:49 eras Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Utilities and Perl modules to administer a Cyrus IMAP server."
 HOMEPAGE="http://www.cyrusimap.org/"
 SRC_URI="ftp://ftp.cyrusimap.org/cyrus-imapd/cyrus-imapd-${MY_PV}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="BSD-with-attribution"
 SLOT="0"
 KEYWORDS="amd64 ~arm hppa ppc ppc64 sparc x86"
 IUSE="berkdb kerberos ssl"

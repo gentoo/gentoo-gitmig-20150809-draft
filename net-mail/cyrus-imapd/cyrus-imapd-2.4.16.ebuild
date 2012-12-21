@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.16.ebuild,v 1.8 2012/08/05 18:19:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.16.ebuild,v 1.9 2012/12/21 13:23:00 eras Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="The Cyrus IMAP Server."
 HOMEPAGE="http://www.cyrusimap.org/"
 SRC_URI="ftp://ftp.cyrusimap.org/cyrus-imapd/${MY_P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="BSD-with-attribution"
 SLOT="0"
 KEYWORDS="amd64 ~arm hppa ~ia64 ppc ppc64 sparc x86"
 IUSE="afs berkdb kerberos mysql nntp pam postgres replication sieve snmp sqlite ssl tcpd"
