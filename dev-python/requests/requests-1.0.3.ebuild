@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/requests-1.0.3.ebuild,v 1.1 2012/12/20 07:11:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/requests-1.0.3.ebuild,v 1.2 2012/12/21 21:26:01 radhermit Exp $
 
 EAPI=5
 # 3.3 dropped due to bugs 438090 and 447084
@@ -18,10 +18,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 RDEPEND="app-misc/ca-certificates
-	dev-python/charade
+	dev-python/charade[${PYTHON_USEDEP}]
 	dev-python/urllib3"
 DEPEND="${RDEPEND}
-	dev-python/setuptools
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
 # tests connect to various remote sites
