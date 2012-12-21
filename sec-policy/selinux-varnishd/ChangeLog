@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-varnishd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-varnishd/ChangeLog,v 1.19 2012/12/17 20:02:11 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-varnishd/ChangeLog,v 1.20 2012/12/21 20:47:05 swift Exp $
+
+*selinux-varnishd-2.20120725-r9 (21 Dec 2012)
+
+  21 Dec 2012; <swift@gentoo.org> +selinux-varnishd-2.20120725-r9.ebuild:
+  Bumping to revision 9
 
   17 Dec 2012; Sven Vermeulen -selinux-varnishd-2.20120215-r1.ebuild,
   -selinux-varnishd-2.20120215-r14.ebuild,
