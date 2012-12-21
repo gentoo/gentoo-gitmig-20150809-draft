@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mpack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.25 2012/12/21 13:32:22 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.26 2012/12/21 13:33:49 eras Exp $
+
+  21 Dec 2012; Eray Aslan <eras@gentoo.org> mpack-1.6-r3.ebuild:
+  Fix license - bug #446482
 
   21 Dec 2012; Eray Aslan <eras@gentoo.org> -mpack-1.5-r1.ebuild,
   -mpack-1.5.ebuild, -mpack-1.6-r1.ebuild, -mpack-1.6-r2.ebuild,
