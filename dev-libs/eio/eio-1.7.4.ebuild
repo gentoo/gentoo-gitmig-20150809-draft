@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eio/eio-1.7.3.ebuild,v 1.1 2012/12/08 14:04:29 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eio/eio-1.7.4.ebuild,v 1.1 2012/12/21 20:15:57 tommy Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="Enlightenment's integration to IO"
 HOMEPAGE="http://trac.enlightenment.org/e/wiki/EIO"
 
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
-LICENSE="BSD"
+LICENSE="LGPL-2"
 
 KEYWORDS="~amd64 ~x86"
 IUSE="examples static-libs"
