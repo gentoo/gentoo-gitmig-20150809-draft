@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/eet-1.7.2.ebuild,v 1.1 2012/11/23 14:49:03 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/eet-1.7.4.ebuild,v 1.1 2012/12/21 19:41:59 tommy Exp $
 
 EAPI=2
 
@@ -10,6 +10,7 @@ DESCRIPTION="E file chunk reading/writing library"
 HOMEPAGE="http://trac.enlightenment.org/e/wiki/Eet"
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
+LICENSE="BSD-2"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="debug examples gnutls ssl static-libs test"
 
@@ -52,16 +53,11 @@ src_configure() {
 	export MY_ECONF="
 		$(use_enable debug assert)
 		$(use_enable doc)
+		$(use_enable examples build-examples)
+		$(use_enable examples install-examples)
 		$(use_enable test tests)
 		${SSL_FLAGS}
 		${MY_ECONF}"
 
 	enlightenment_src_configure
-}
-
-src_install() {
-	enlightenment_src_install
-	rm -r src/examples/Makefile* || die
-	docinto examples
-	dodoc src/examples/* || die
 }
