@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/simplegeneric
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegeneric/ChangeLog,v 1.7 2012/06/06 05:15:43 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegeneric/ChangeLog,v 1.8 2012/12/21 10:34:15 mgorny Exp $
+
+*simplegeneric-0.8.1-r1 (21 Dec 2012)
+
+  21 Dec 2012; Michał Górny <mgorny@gentoo.org> +simplegeneric-0.8.1-r1.ebuild:
+  Migrate to distutils-r1.
 
   06 Jun 2012; Benda Xu <heroxbd@gentoo.org> simplegeneric-0.8.1.ebuild:
   keyword ~amd64-linux
@@ -24,4 +29,3 @@
   10 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org>
   +simplegeneric-0.8.ebuild, +metadata.xml:
   Initial import
-
