@@ -1,6 +1,17 @@
 # ChangeLog for media-gfx/pornview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.53 2012/12/21 00:49:22 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.54 2012/12/21 00:51:54 hasufell Exp $
+
+  21 Dec 2012; Julian Ospald <hasufell@gentoo.org>
+  -pornview-0.2.0_pre1-r2.ebuild, -files/pornview-0.2.0_pre1-4.diff,
+  -files/pornview-0.2.0_pre1-autoconf.patch,
+  -files/pornview-0.2.0_pre1-desktop-entry.patch,
+  -files/pornview-0.2.0_pre1-fix-array-boundaries.patch,
+  -files/pornview-0.2.0_pre1-fix-segfault-comment.patch,
+  -files/pornview-0.2.0_pre1-libpng15.patch,
+  -files/pornview-0.2.0_pre1-new-gtk-object-system.diff,
+  -files/pornview-0.2.0_pre1-underlinking.patch, -files/traypatch.diff:
+  remove old
 
   21 Dec 2012; Julian Ospald <hasufell@gentoo.org> pornview-0.2.2.ebuild:
   ppc stable wrt #445089
