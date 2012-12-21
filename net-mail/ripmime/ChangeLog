@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ripmime
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ChangeLog,v 1.39 2011/06/27 05:59:11 eras Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ChangeLog,v 1.40 2012/12/21 13:15:17 eras Exp $
+
+  21 Dec 2012; Eray Aslan <eras@gentoo.org> ripmime-1.4.0.10.ebuild:
+  Add libripmime.so.1 symlink - bug #447274
 
   27 Jun 2011; Eray Aslan <eras@gentoo.org> -ripmime-1.4.0.6.ebuild,
   -ripmime-1.4.0.9-r2.ebuild:

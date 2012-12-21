@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ripmime-1.4.0.10.ebuild,v 1.5 2011/06/25 18:26:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ripmime-1.4.0.10.ebuild,v 1.6 2012/12/21 13:15:17 eras Exp $
 
 EAPI="4"
 
@@ -37,6 +37,7 @@ src_install() {
 
 	dolib.so libripmime.so.1.4.0
 	dosym libripmime.so.1.4.0 /usr/$(get_libdir)/libripmime.so
+	dosym libripmime.so.1.4.0 /usr/$(get_libdir)/libripmime.so.1
 
 	if use static-libs ; then
 		dolib.a libripmime.a
