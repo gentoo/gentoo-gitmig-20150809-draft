@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/aufs-util-3.6.ebuild,v 1.3 2012/12/21 08:59:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/aufs-util-3.6.ebuild,v 1.4 2012/12/21 09:19:28 jlec Exp $
 
 EAPI=5
 
@@ -20,7 +20,8 @@ IUSE=""
 
 RDEPEND="
 	!sys-fs/aufs2
-	!sys-fs/aufs3"
+	!sys-fs/aufs3
+	sys-kernel/aufs-sources"
 DEPEND="${RDEPEND}"
 
 CONFIG_CHECK="~AUFS_FS"

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/aufs-util
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/ChangeLog,v 1.3 2012/12/21 08:59:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/ChangeLog,v 1.4 2012/12/21 09:19:28 jlec Exp $
+
+  21 Dec 2012; Justin Lecher <jlec@gentoo.org> aufs-util-3.6.ebuild:
+  Add it kernel back
 
   21 Dec 2012; Justin Lecher <jlec@gentoo.org> aufs-util-3.6.ebuild:
   Don't depend on the kernel
