@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0.ebuild,v 1.1 2012/12/12 04:50:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0.ebuild,v 1.2 2012/12/21 18:18:08 vostorga Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
 
-inherit confutils python waf-utils multilib linux-info
+inherit python waf-utils multilib linux-info
 
 MY_PV="${PV/_rc/rc}"
 MY_P="${PN}-${MY_PV}"
@@ -25,7 +25,7 @@ LICENSE="GPL-3"
 
 SLOT="0"
 
-IUSE="acl addns ads aio avahi client cluster cups debug fulltest gnutls iprint
+IUSE="acl addns ads aio avahi client cluster cups gnutls iprint
 ldap pam quota selinux swat syslog winbind"
 
 RDEPEND="dev-libs/iniparser
@@ -44,7 +44,7 @@ RDEPEND="dev-libs/iniparser
 	ads? ( client? ( net-fs/cifs-utils[ads] ) )
 	client? ( net-fs/cifs-utils )
 	cluster? ( >=dev-db/ctdb-1.0.114_p1 )
-	ldap? ( net-nds/openldap[kerberos] )
+	ldap? ( net-nds/openldap )
 	gnutls? ( >=net-libs/gnutls-1.4.0 )
 	selinux? ( sec-policy/selinux-samba )"
 DEPEND="${RDEPEND}
@@ -59,8 +59,6 @@ CONFDIR="${FILESDIR}/$(get_version_component_range 1-2)"
 WAF_BINARY="${S}/buildtools/bin/waf"
 
 pkg_setup() {
-	confutils_use_depend_all fulltest test
-
 	python_set_active_version 2
 	python_pkg_setup
 
@@ -80,12 +78,8 @@ pkg_setup() {
 
 src_configure() {
 	local myconf=''
-	if use "debug"; then
-		myconf="${myconf} --enable-developer"
-	fi
-	if use "cluster"; then
-		myconf="${myconf} --with-ctdb-dir=/usr"
-	fi
+	use "cluster" && myconf+=" --with-ctdb-dir=/usr"
+	use "test" && myconf+=" --enable-selftest"
 	myconf="${myconf} \
 		--enable-fhs \
 		--sysconfdir=/etc \
@@ -113,7 +107,8 @@ src_configure() {
 		$(use_with quota) \
 		$(use_with syslog) \
 		$(use_with swat) \
-		$(use_with winbind)"
+		$(use_with winbind)
+		"
 	CPPFLAGS="-I/usr/include/et ${CPPFLAGS}" \
 		waf-utils_src_configure ${myconf}
 }
@@ -129,25 +124,29 @@ src_install() {
 	mv "${D}"/usr/$(get_libdir)/ldb/*.so "${D}"/usr/$(get_libdir)/ldb/modules/ldb
 
 	# Install init script and conf.d file
-	newinitd "${CONFDIR}/samba4.initd-r1" samba || die "newinitd failed"
-	newconfd "${CONFDIR}/samba4.confd" samba || die "newconfd failed"
+	newinitd "${CONFDIR}/samba4.initd-r1" samba
+	newconfd "${CONFDIR}/samba4.confd" samba
 }
 
 src_test() {
-	local extra_opts=""
-	use fulltest || extra_opts+="--quick"
-	"${WAF_BINARY}" test ${extra_opts} || die "test failed"
+	"${WAF_BINARY}" test || die "test failed"
 }
 
 pkg_postinst() {
 	# Optimize the python modules so they get properly removed
 	python_mod_optimize "${PN}"
 
-	# Warn that it's a release candidate
-	ewarn "This is not necessarily compatible with samba-3. Read the wiki page."
+	elog "This is is the first stable release of Samba 4.0"
 
-	einfo "See http://wiki.samba.org/index.php/Samba4/HOWTO for more"
-	einfo "information about samba 4."
+	ewarn "Be aware the this release contains the best of all of Samba's"
+	ewarn "technology parts, both a file server (that you can reasonably expect"
+	ewarn "to upgrade existing Samba 3.x releases to) and the AD domain"
+	ewarn "controller work previously known as 'samba4'."
+
+	elog "For further information and migration steps make sure to read "
+	#elog "http://samba.org/samba/history/${P}.html and "
+	elog "http://samba.org/samba/history/${PN}-4.0.0.html and"
+	elog "http://wiki.samba.org/index.php/Samba4/HOWTO "
 }
 
 pkg_postrm() {
