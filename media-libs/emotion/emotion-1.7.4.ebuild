@@ -1,12 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/emotion/emotion-1.7.3.ebuild,v 1.1 2012/12/08 14:17:41 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/emotion/emotion-1.7.4.ebuild,v 1.1 2012/12/21 20:42:58 tommy Exp $
 
 inherit enlightenment
 
 DESCRIPTION="video libraries for e17"
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
+LICENSE="BSD-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="gstreamer static-libs xine"
 
@@ -32,6 +33,19 @@ src_compile() {
 			$(use_enable gstreamer) \
 		"
 	fi
+
+	MY_ECONF+="
+		$(use_enable doc doxygen-doc)
+		$(use_enable doc doxygen-dot)
+		$(use_enable doc doxygen-man)
+		$(use_enable doc doxygen-rtf)
+		$(use_enable doc doxygen-xml)
+		$(use_enable doc doxygen-chm)
+		$(use_enable doc doxygen-chi)
+		$(use_enable doc doxygen-html)
+		$(use_enable doc doxygen-ps)
+		$(use_enable doc doxygen-pdf)
+	"
 
 	if use gstreamer ; then
 		addpredict "/root/.gconfd"
