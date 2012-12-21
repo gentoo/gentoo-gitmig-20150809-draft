@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.78 2012/09/24 00:38:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.79 2012/12/21 09:59:20 mr_bones_ Exp $
+
+*nwn-1.68-r6 (21 Dec 2012)
+
+  21 Dec 2012; Michael Sterrett <mr_bones_@gentoo.org> +nwn-1.68-r6.ebuild:
+  Add a version of 1.68 without built_with_use
 
   24 Sep 2012; Mike Frysinger <vapier@gentoo.org> nwn-1.68-r5.ebuild,
   nwn-1.69-r1.ebuild:
