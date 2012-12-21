@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/c-client
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.102 2012/12/18 15:52:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.103 2012/12/21 09:05:28 ulm Exp $
+
+  21 Dec 2012; Ulrich Müller <ulm@gentoo.org> c-client-2007e-r2.ebuild,
+  c-client-2007f-r1.ebuild, c-client-2007f-r2.ebuild, c-client-2007f-r3.ebuild,
+  c-client-2007f-r4.ebuild:
+  Fix LICENSE, see README file, bug 446380.
 
   18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> c-client-2007f-r4.ebuild:
   Stable for ia64, wrt bug #445063

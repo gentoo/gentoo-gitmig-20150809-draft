@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2007f-r2.ebuild,v 1.1 2012/07/11 18:58:14 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2007f-r2.ebuild,v 1.2 2012/12/21 09:05:28 ulm Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ DESCRIPTION="UW IMAP c-client library"
 HOMEPAGE="http://www.washington.edu/imap/"
 SRC_URI="ftp://ftp.cac.washington.edu/imap/${MY_P}.tar.Z"
 
-LICENSE="as-is"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="doc kernel_linux kernel_FreeBSD pam ssl static-libs"
