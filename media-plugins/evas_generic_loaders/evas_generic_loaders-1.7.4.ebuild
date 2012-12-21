@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/evas_generic_loaders/evas_generic_loaders-1.7.1.ebuild,v 1.2 2012/12/02 17:07:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/evas_generic_loaders/evas_generic_loaders-1.7.4.ebuild,v 1.1 2012/12/21 21:04:15 tommy Exp $
 
 EAPI=2
 
@@ -10,6 +10,7 @@ DESCRIPTION="Provides external applications as generic loaders for Evas"
 HOMEPAGE="http://www.enlightenment.org/"
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
+LOCENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="gstreamer pdf postscript raw svg"
 
