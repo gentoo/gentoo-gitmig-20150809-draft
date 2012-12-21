@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/edje-1.7.3.ebuild,v 1.1 2012/12/08 13:59:02 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/edje-1.7.4.ebuild,v 1.1 2012/12/21 20:07:52 tommy Exp $
 
 EAPI=1
 
@@ -10,6 +10,7 @@ DESCRIPTION="graphical layout and animation library"
 HOMEPAGE="http://www.enlightenment.org/pages/edje.html"
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
+LICENSE="BSD-2 GPL-2"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="debug +cache static-libs vim-syntax"
 
