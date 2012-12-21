@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7273 2012/12/20 17:29:32 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7274 2012/12/21 00:53:31 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Dec 2012; Julian Ospald <hasufell@gentoo.org> package.mask:
+  remove pornview mask, version removed
 
   20 Dec 2012; Julian Ospald <hasufell@gentoo.org> package.mask:
   mask =games-roguelike/tomenet-100310

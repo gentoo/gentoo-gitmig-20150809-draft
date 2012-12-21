@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14312 2012/12/20 17:29:32 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14313 2012/12/21 00:53:31 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -421,11 +421,6 @@ dev-ml/ocamlduce
 # environment doesn't provide any, try x11-misc/arandr or lxde-base/lxrandr
 # Masked for removal in 30 days.
 x11-apps/grandr
-
-# Julian Ospald <hasufell@gentoo.org> (31 Oct 2012)
-# broken, removal in 30 days
-# use 0.2.1 instead
-=media-gfx/pornview-0.2.0_pre1-r2
 
 # Sébastien Fabbro <bicatali@gentoo.org> (31 Oct 2012)
 # live ebuild
