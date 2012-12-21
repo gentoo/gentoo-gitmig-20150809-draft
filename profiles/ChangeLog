@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7275 2012/12/21 09:19:58 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7276 2012/12/21 16:34:59 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
+  Mask >=dev-libs/icu-50.1.1 for testing to avoid drama like bug #439892.
 
   21 Dec 2012; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Remove llvm 3.2 rc mask
