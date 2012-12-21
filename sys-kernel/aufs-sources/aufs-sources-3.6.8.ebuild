@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.6.8.ebuild,v 1.4 2012/12/19 09:44:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.6.8.ebuild,v 1.5 2012/12/21 09:17:22 jlec Exp $
 
 EAPI=5
 ETYPE="sources"
@@ -28,8 +28,7 @@ UNIPATCH_LIST="
 	"${WORKDIR}"/aufs3-base.patch"
 #	${WORKDIR}/aufs3-proc_map.patch"
 
-RDEPEND="sys-fs/aufs-util"
-DEPEND=""
+PDEPEND="sys-fs/aufs-util"
 
 src_unpack() {
 	use module && UNIPATCH_LIST+=" "${WORKDIR}"/aufs3-standalone.patch"
