@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/eina
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/ChangeLog,v 1.15 2012/12/08 14:01:55 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/ChangeLog,v 1.16 2012/12/21 19:27:50 tommy Exp $
+
+*eina-1.7.4 (21 Dec 2012)
+
+  21 Dec 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> -eina-1.7.1.ebuild,
+  -eina-1.7.3.ebuild, +eina-1.7.4.ebuild, -files/city.h:
+  Version bump, drop old
 
 *eina-1.7.3 (08 Dec 2012)
 
