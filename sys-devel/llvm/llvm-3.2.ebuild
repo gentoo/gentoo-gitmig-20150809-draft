@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.2_rc3.ebuild,v 1.2 2012/12/14 10:33:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.2.ebuild,v 1.1 2012/12/21 09:18:12 voyageur Exp $
 
 EAPI=5
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic multilib toolchain-funcs python pax-utils
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
-SRC_URI="http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.2_}/${P/_}.src.tar.bz2"
+SRC_URI="http://llvm.org/releases/${PV}/${P}.src.tar.gz"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
@@ -32,7 +32,7 @@ RDEPEND="dev-lang/perl
 	libffi? ( virtual/libffi )
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
 
-S=${WORKDIR}/${PN}.src
+S=${WORKDIR}/${P}.src
 
 pkg_setup() {
 	# Required for test and build

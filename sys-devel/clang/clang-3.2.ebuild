@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.2_rc3.ebuild,v 1.1 2012/12/07 15:50:05 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.2.ebuild,v 1.1 2012/12/21 09:18:47 voyageur Exp $
 
 EAPI=5
 
@@ -12,9 +12,9 @@ inherit eutils multilib python
 DESCRIPTION="C language family frontend for LLVM"
 HOMEPAGE="http://clang.llvm.org/"
 # Fetching LLVM as well: see http://llvm.org/bugs/show_bug.cgi?id=4840
-SRC_URI="http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.2_}/llvm-${PV/_}.src.tar.bz2
-	http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.2_}/compiler-rt-${PV/_}.src.tar.bz2
-	http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.2_}/${P/_}.src.tar.bz2"
+SRC_URI="http://llvm.org/releases/${PV}/llvm-${PV}.src.tar.gz
+	http://llvm.org/releases/${PV}/compiler-rt-${PV}.src.tar.gz
+	http://llvm.org/releases/${PV}/${P}.src.tar.gz"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
@@ -24,14 +24,14 @@ IUSE="debug kernel_FreeBSD multitarget +static-analyzer test"
 DEPEND="static-analyzer? ( dev-lang/perl )"
 RDEPEND="~sys-devel/llvm-${PV}[multitarget=]"
 
-S=${WORKDIR}/llvm.src
+S=${WORKDIR}/llvm-${PV}.src
 
 src_prepare() {
 	rm -f "${S}"/tools/clang "${S}"/projects/compiler-rt \
 		|| die "symlinks removal failed"
-	mv "${WORKDIR}"/cfe.src "${S}"/tools/clang \
+	mv "${WORKDIR}"/${P}.src "${S}"/tools/clang \
 		|| die "clang source directory move failed"
-	mv "${WORKDIR}"/compiler-rt.src "${S}"/projects/compiler-rt \
+	mv "${WORKDIR}"/compiler-rt-${PV}.src "${S}"/projects/compiler-rt \
 		|| die "compiler-rt source directory move failed"
 
 	# Same as llvm doc patches

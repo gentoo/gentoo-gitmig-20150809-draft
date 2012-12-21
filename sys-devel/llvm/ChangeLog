@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.101 2012/12/17 19:53:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.102 2012/12/21 09:18:12 voyageur Exp $
+
+*llvm-3.2 (21 Dec 2012)
+
+  21 Dec 2012; Bernard Cafarelli <voyageur@gentoo.org> -llvm-3.2_rc3.ebuild,
+  +llvm-3.2.ebuild:
+  Bump to final version, remove release candidate
 
   17 Dec 2012; Markus Meier <maekke@gentoo.org> llvm-3.1-r2.ebuild:
   arm stable, bug #443508
