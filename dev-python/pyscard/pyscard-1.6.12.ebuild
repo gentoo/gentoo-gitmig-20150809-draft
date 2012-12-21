@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyscard/pyscard-1.6.12.ebuild,v 1.2 2012/02/21 03:22:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyscard/pyscard-1.6.12.ebuild,v 1.3 2012/12/21 23:06:33 alonbl Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -18,8 +18,9 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="sys-apps/pcsc-lite"
-RDEPEND="${DEPEND}"
+RDEPEND="sys-apps/pcsc-lite"
+DEPEND="${RDEPEND}
+	dev-lang/swig"
 
 DOCS="smartcard/ACKS smartcard/ChangeLog smartcard/TODO"
 PYTHON_MODNAME="smartcard"
