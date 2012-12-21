@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/echievements
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/echievements/ChangeLog,v 1.1 2012/12/21 14:45:29 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/echievements/ChangeLog,v 1.2 2012/12/21 14:54:06 tommy Exp $
+
+*echievements-2 (21 Dec 2012)
+
+  21 Dec 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -echievements-1.ebuild, +echievements-2.ebuild:
+  Version bump, drop old
 
 *echievements-1 (21 Dec 2012)
 
