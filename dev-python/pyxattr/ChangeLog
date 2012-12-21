@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyxattr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.33 2012/06/14 22:11:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.34 2012/12/21 13:52:35 mgorny Exp $
+
+*pyxattr-0.5.0-r1 (21 Dec 2012)
+
+  21 Dec 2012; Michał Górny <mgorny@gentoo.org> +pyxattr-0.5.0-r1.ebuild:
+  Migrate to distutils-r1. Partially address xattr-related test failures.
 
   14 Jun 2012; Anthony G. Basile <blueness@gentoo.org> pyxattr-0.5.0.ebuild:
   Keyword ~mips, bug #402215
@@ -113,4 +118,3 @@
   21 Sep 2005; Robin H. Johnson <robbat2@gentoo.org> +pyxattr-0.2.ebuild:
   Initial commit, ebuild submitted by Thomas Bettler
   <bettlertho@sis.unibe.ch>, dependancy for new rdiff-backup.
-
