@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.3.ebuild,v 1.1 2012/12/09 10:53:32 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.4.ebuild,v 1.1 2012/12/21 19:56:14 tommy Exp $
 
 EAPI=2
 
@@ -11,6 +11,7 @@ inherit enlightenment eutils
 DESCRIPTION="Enlightenment's core event abstraction layer and OS abstraction layer"
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
+LICENSE="BSD-2"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="ares curl directfb +evas examples fbcon glib gnutls +inotify ipv6 opengl sdl ssl static-libs +threads tslib +X xcb xinerama xprint xscreensaver"
 
@@ -46,12 +47,6 @@ DEPEND="${RDEPEND}"
 
 #tests depend on temp data from eina WORKDIR
 RESTRICT=test
-
-src_prepare() {
-	epatch "${FILESDIR}"/ecore-1.7_80526.patch
-
-	enlightenment_src_prepare
-}
 
 src_configure() {
 	local SSL_FLAGS="" EVAS_FLAGS="" X_FLAGS=""
