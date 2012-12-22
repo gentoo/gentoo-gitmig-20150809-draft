@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.30 2012/12/05 20:21:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.31 2012/12/22 14:06:43 blueness Exp $
+
+  22 Dec 2012; Anthony G. Basile <blueness@gentoo.org> tbb-4.1.20121003.ebuild:
+  Keyword ~ppc, bug #441946, thanks peratu
 
   05 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Switching maintainership to sci herd
