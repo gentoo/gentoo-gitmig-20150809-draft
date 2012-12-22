@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/arprec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/ChangeLog,v 1.16 2012/12/11 00:47:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/ChangeLog,v 1.17 2012/12/22 18:39:31 hwoarang Exp $
+
+  22 Dec 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add missing space. Bug #448182
 
 *arprec-2.2.16 (11 Dec 2012)
 
