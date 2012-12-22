@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.365 2012/12/19 15:41:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.366 2012/12/22 15:19:36 ago Exp $
+
+  22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> squid-3.1.22.ebuild:
+  Stable for ppc, wrt bug #447596
 
   19 Dec 2012; Jeroen Roovers <jer@gentoo.org> squid-3.1.22.ebuild:
   Stable for HPPA (bug #447596).
