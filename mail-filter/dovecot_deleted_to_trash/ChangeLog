@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/dovecot_deleted_to_trash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot_deleted_to_trash/ChangeLog,v 1.5 2012/11/27 07:32:05 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot_deleted_to_trash/ChangeLog,v 1.6 2012/12/22 17:48:02 ulm Exp $
+
+  22 Dec 2012; Ulrich Müller <ulm@gentoo.org>
+  dovecot_deleted_to_trash-0.3.ebuild:
+  Fix LICENSE, bug 445314.
 
   27 Nov 2012; Sergey Popov <pinkbyte@gentoo.org>
   dovecot_deleted_to_trash-0.3.ebuild:
