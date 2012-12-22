@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.7.0.ebuild,v 1.3 2012/12/15 16:14:58 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.7.0.ebuild,v 1.4 2012/12/22 21:15:39 chithanh Exp $
 
 EAPI=4
 inherit cmake-utils nsplugins multilib toolchain-funcs
@@ -55,6 +55,7 @@ S=${WORKDIR}/${P/_rc*/}
 
 PATCHES=(
 	"${FILESDIR}"/${P}-libxmlpp-gles.patch
+	"${FILESDIR}"/${P}-llvm-3.2.patch
 )
 
 pkg_pretend() {

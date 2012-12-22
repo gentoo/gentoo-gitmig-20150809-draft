@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/lightspark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.49 2012/12/15 16:14:58 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.50 2012/12/22 21:15:39 chithanh Exp $
+
+  22 Dec 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/lightspark-0.7.0-llvm-3.2.patch, lightspark-0.7.0.ebuild:
+  Fix building against llvm-3.2, bug #447962.
 
   15 Dec 2012; Julian Ospald <hasufell@gentoo.org> lightspark-0.7.0.ebuild:
   error out on unsupported gcc version wrt #441564
