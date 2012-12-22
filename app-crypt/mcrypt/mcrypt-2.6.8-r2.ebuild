@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/mcrypt-2.6.8-r2.ebuild,v 1.2 2012/12/22 20:31:00 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/mcrypt-2.6.8-r2.ebuild,v 1.3 2012/12/22 20:54:55 alonbl Exp $
 
 EAPI="2"
 
@@ -26,6 +26,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-segv.patch"
 	epatch "${FILESDIR}/${P}-sprintf.patch"
 	epatch "${FILESDIR}/${P}-format-string.patch"
+	epatch "${FILESDIR}/${P}-overflow.patch"
 }
 
 src_configure() {
