@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14319 2012/12/22 06:58:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14320 2012/12/22 07:39:26 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,10 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Robin H. Johnson <robbat2@gentoo.org> (22 Dec 2012)
-# Has issues with building swig extensions
-=sys-process/audit-2.2.2
 
 # Sven Wegener <swegener@gentoo.org> (21 Dec 2012)
 # temporary mask for socket location change
