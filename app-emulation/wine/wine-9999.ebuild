@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.124 2012/12/22 04:40:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.125 2012/12/22 06:22:23 tetromino Exp $
 
 EAPI="5"
 
@@ -191,7 +191,7 @@ do_configure() {
 		$(use_with oss) \
 		$(use_with png) \
 		$(use_with threads pthread) \
-		$(use_with pulseaudio pulse) \
+		$(usex vanilla "" $(use_with pulseaudio pulse)) \
 		$(use_with scanner sane) \
 		$(use_enable test tests) \
 		$(use_with truetype freetype) \
