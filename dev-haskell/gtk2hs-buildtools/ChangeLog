@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/gtk2hs-buildtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs-buildtools/ChangeLog,v 1.12 2012/11/25 06:35:17 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs-buildtools/ChangeLog,v 1.13 2012/12/22 21:38:55 slyfox Exp $
+
+*gtk2hs-buildtools-0.12.4-r1 (22 Dec 2012)
+
+  22 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/gtk2hs-buildtools-0.12.4-hashtables.patch,
+  +gtk2hs-buildtools-0.12.4-r1.ebuild:
+  Added ghc-7.6 compatibility
 
 *gtk2hs-buildtools-0.12.4 (25 Nov 2012)
 
