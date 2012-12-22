@@ -1,18 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.0_beta2.ebuild,v 1.1 2012/12/14 20:13:45 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.0.ebuild,v 1.1 2012/12/22 00:47:09 tommy Exp $
 
-EAPI="2"
+EAPI=5
 
-MY_P=${P/_beta2/-lucky}
+MY_P=${P/_beta3/-omega}
 
-inherit autotools enlightenment
+inherit enlightenment
 
 DESCRIPTION="Enlightenment DR17 window manager"
 SRC_URI="http://download.enlightenment.org/releases/${MY_P}.tar.bz2"
 
+LICENSE="BSD-2"
 KEYWORDS="~amd64 ~x86"
-SLOT="0.17"
+SLOT="0.17/${PV}"
 
 # The @ is just an anchor to expand from
 __EVRY_MODS=""
@@ -53,8 +54,6 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/quickstart.diff
-	sed -i 's:efl_version="1.7.3":efl_version="1.7.1":g' configure.ac
-	eautoreconf
 	enlightenment_src_prepare
 }
 
