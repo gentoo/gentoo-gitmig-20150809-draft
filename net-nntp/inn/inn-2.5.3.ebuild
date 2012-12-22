@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.5.3.ebuild,v 1.5 2012/11/20 20:54:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.5.3.ebuild,v 1.6 2012/12/22 17:28:47 ulm Exp $
 
 EAPI=4
 inherit autotools multilib ssl-cert
@@ -9,8 +9,9 @@ DESCRIPTION="The Internet News daemon, fully featured NNTP server"
 HOMEPAGE="https://www.isc.org/software/inn"
 SRC_URI="ftp://ftp.isc.org/isc/inn/${P}.tar.gz"
 
+# GPL-2 only for init script
+LICENSE="ISC GPL-2+ public-domain BSD-4 BSD-2 RSA BSD MIT GPL-2"
 SLOT="0"
-LICENSE="as-is BSD GPL-2"
 KEYWORDS="amd64 ppc x86"
 IUSE="berkdb innkeywords inntaggedhash ipv6 kerberos perl python sasl ssl"
 

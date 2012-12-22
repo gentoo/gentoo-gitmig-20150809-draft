@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/inn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.47 2012/11/21 02:09:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.48 2012/12/22 17:28:47 ulm Exp $
+
+  22 Dec 2012; Ulrich Müller <ulm@gentoo.org> inn-2.5.3.ebuild:
+  Fix LICENSE, see LICENSE file, bug 446550.
 
   21 Nov 2012; Jeroen Roovers <jer@gentoo.org> -inn-2.5.2.ebuild,
   -inn-2.5.2-r1.ebuild:
