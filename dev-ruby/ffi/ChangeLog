@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.41 2012/12/21 07:55:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.42 2012/12/22 09:26:50 ago Exp $
+
+  22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> ffi-1.1.5.ebuild:
+  Stable for amd64, wrt bug #448056
 
   21 Dec 2012; Hans de Graaff <graaff@gentoo.org> -ffi-1.0.11.ebuild,
   -ffi-1.1.4.ebuild:
@@ -174,4 +177,3 @@
   +files/ffi-0.5.4-rakefile.patch, +metadata.xml:
   Initial import of ffi gem for Ruby 1.8 and Ruby 1.9. This will be used by
   ffi-based extensions, supported by both MRI and JRuby.
-
