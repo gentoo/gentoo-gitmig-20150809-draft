@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/zsh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.199 2012/12/22 10:16:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.200 2012/12/22 10:18:18 radhermit Exp $
+
+  22 Dec 2012; Tim Harder <radhermit@gentoo.org> -zsh-4.3.15.ebuild:
+  Remove old.
 
 *zsh-5.0.2 (22 Dec 2012)
 
