@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-unit-rr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit-rr/ChangeLog,v 1.5 2012/12/22 17:05:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit-rr/ChangeLog,v 1.6 2012/12/22 17:09:01 ago Exp $
+
+  22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> test-unit-rr-1.0.2.ebuild:
+  Add ~ia64, wrt bug #448162
 
   22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> test-unit-rr-1.0.2.ebuild:
   Add ~x86, wrt bug #448162

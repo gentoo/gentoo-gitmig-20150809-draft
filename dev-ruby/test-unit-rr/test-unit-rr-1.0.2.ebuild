@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit-rr/test-unit-rr-1.0.2.ebuild,v 1.4 2012/12/22 17:05:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit-rr/test-unit-rr-1.0.2.ebuild,v 1.5 2012/12/22 17:09:01 ago Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://rubyforge.org/projects/test-unit/"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/rr-1.0.2 >=dev-ruby/test-unit-2.5.2"

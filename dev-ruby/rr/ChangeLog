@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/ChangeLog,v 1.23 2012/09/15 12:06:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/ChangeLog,v 1.24 2012/12/22 17:08:43 ago Exp $
+
+  22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> rr-1.0.4.ebuild:
+  Add ~ia64, wrt bug #448162
 
   15 Sep 2012; Hans de Graaff <graaff@gentoo.org> -rr-1.0.2.ebuild,
   -rr-1.0.3.ebuild:
@@ -95,4 +98,3 @@
   +metadata.xml:
   Initial import of rr as needed by the gemcutter testsuite. Warning:
   license unknown.
-
