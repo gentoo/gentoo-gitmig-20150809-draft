@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/harp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/harp/ChangeLog,v 1.11 2012/12/20 21:48:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/harp/ChangeLog,v 1.12 2012/12/22 21:41:03 slyfox Exp $
+
+*harp-0.4-r1 (22 Dec 2012)
+
+  22 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> +harp-0.4-r1.ebuild,
+  -harp-0.2.ebuild:
+  Switch to EAPI=5
 
   20 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer, bug #81411
