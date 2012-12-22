@@ -4,6 +4,10 @@
 directfb
 krb4
 
+# Agostino Sarubbo <ago@gentoo.org> (22 Dec 2012)
+# mask kde since is not anymore keyworded for ppc64
+kde
+
 # Kacper Kowalik <xarthisius@gentoo.org> (10 Aug 2011)
 # Masking frei0r wrt bug #365451
 frei0r

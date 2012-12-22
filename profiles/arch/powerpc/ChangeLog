@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.207 2012/12/22 16:39:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.208 2012/12/22 21:51:42 ago Exp $
+
+  22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> ppc64/64ul/use.mask:
+  mask kde since is not anymore keyworded for ppc64
 
   22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> use.mask:
   mask clang IUSE
