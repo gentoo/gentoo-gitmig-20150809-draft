@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/basenji
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/ChangeLog,v 1.11 2012/08/06 12:03:42 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/ChangeLog,v 1.12 2012/12/22 11:26:51 elvanor Exp $
+
+*basenji-1.0.0 (22 Dec 2012)
+
+  22 Dec 2012; <elvanor@gentoo.org> +basenji-1.0.0.ebuild:
+  Version bump to 1.0.0.
 
 *basenji-0.9.0 (06 Aug 2012)
 
