@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.2.2.ebuild,v 1.1 2012/12/22 07:02:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.2.2.ebuild,v 1.2 2012/12/22 07:36:33 robbat2 Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -75,7 +75,7 @@ src_prepare() {
 
 	# Python bindings are built/installed manually.
 	sed -e "/^SUBDIRS =/s/ python//" -i bindings/Makefile.am
-	sed -e "/^SUBDIRS =/s/ swig//" -i Makefile.am
+	sed -e "/^SUBDIRS .*=/s/ swig//" -i Makefile.am
 
 	# Regenerate autotooling
 	eautoreconf
@@ -141,6 +141,9 @@ src_install() {
 
 	# things like shadow use this so we need to be in /
 	gen_usr_ldscript -a audit auparse
+
+	[ -f "${D}"/sbin/audisp-remote ] && \
+	mv "${D}"/{sbin,usr/sbin}/audisp-remote || die
 
 	# remove RedHat garbage
 	rm -r "${D}"/etc/{rc.d,sysconfig} || die
