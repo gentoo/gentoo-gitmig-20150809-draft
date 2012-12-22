@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.6.2-r1.ebuild,v 1.1 2012/12/16 21:27:28 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.6.2-r1.ebuild,v 1.2 2012/12/22 23:56:01 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -22,7 +22,7 @@ COMMON_DEPEND="
 	>=x11-libs/libSM-1.0
 	>=dev-libs/libxml2-2.5.0:2
 	>=dev-libs/glib-2.28:2
-	>=x11-libs/gtk+-3.3.15:3[introspection?]
+	>=x11-libs/gtk+-3.6.0:3[introspection?]
 	>=x11-libs/gtksourceview-3.0.0:3.0[introspection?]
 	>=dev-libs/libpeas-1.1.0[gtk]
 
