@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyinotify
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.48 2012/11/29 06:31:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.49 2012/12/22 20:29:42 mgorny Exp $
+
+*pyinotify-0.9.4-r1 (22 Dec 2012)
+
+  22 Dec 2012; Michał Górny <mgorny@gentoo.org> +pyinotify-0.9.4-r1.ebuild:
+  Migrate to distutils-r1.
 
 *pyinotify-0.9.4 (29 Nov 2012)
 
