@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.2-r1.ebuild,v 1.3 2012/12/02 22:48:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.6.ebuild,v 1.1 2012/12/22 12:26:56 polynomial-c Exp $
 
 EAPI=4
 
@@ -21,9 +21,7 @@ fi
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
 HOMEPAGE="http://www.virtualbox.org/"
 SRC_URI="${SRC_URI}
-	http://dev.gentoo.org/~polynomial-c/virtualbox/patchsets/virtualbox-4.2.2-patches-01.tar.xz
-	http://dev.gentoo.org/~patrick/qt_fa_IR.ts
-	http://dev.gentoo.org/~patrick/VirtualBox_fa_IR.ts"
+	http://dev.gentoo.org/~polynomial-c/virtualbox/patchsets/virtualbox-4.2.6-patches-01.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -173,11 +171,6 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/patches"
-
-	# missing files in 4.2.2 tarball
-	cp "${DISTDIR}"/{qt_fa_IR.ts,VirtualBox_fa_IR.ts} \
-		"${S}"/src/VBox/Frontends/VirtualBox/nls/ \
-			|| die "Failed to add missing files"
 }
 
 src_configure() {
@@ -201,6 +194,7 @@ src_configure() {
 		--with-g++="$(tc-getCXX)" \
 		--disable-kmods \
 		--disable-dbus \
+		--disable-devmapper \
 		${myconf} \
 		|| die "configure failed"
 }

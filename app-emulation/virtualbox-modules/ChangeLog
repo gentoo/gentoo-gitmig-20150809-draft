@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/virtualbox-modules
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.118 2012/11/10 21:07:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.119 2012/12/22 12:24:43 polynomial-c Exp $
+
+*virtualbox-modules-4.2.6 (21 Dec 2012)
+*virtualbox-modules-4.1.24 (21 Dec 2012)
+
+  21 Dec 2012; Lars Wendler <polynomial-c@gentoo.org>
+  +virtualbox-modules-4.1.24.ebuild, -virtualbox-modules-4.2.2.ebuild,
+  +virtualbox-modules-4.2.6.ebuild, +files/create_vbox_modules_tarball.sh:
+  Version bump. Removed old. Added a script to create the modules tarball out
+  of a VirtualBox binary package.
 
 *virtualbox-modules-4.2.4 (10 Nov 2012)
 

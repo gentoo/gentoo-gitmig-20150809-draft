@@ -1,25 +1,23 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.2.2.ebuild,v 1.2 2012/12/04 09:40:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.1.24.ebuild,v 1.1 2012/12/22 12:25:14 polynomial-c Exp $
 
 EAPI=2
 
-inherit eutils unpacker fdo-mime gnome2 pax-utils udev
+inherit eutils unpacker fdo-mime gnome2 pax-utils
 
-MY_PV=${PV/beta/BETA}
-MY_PV=${MY_PV/rc/RC}
-VBOX_PV=${MY_PV}-81494
-SDK_PV=${VBOX_PV}
+MY_PV=${PV}-82872
+SDK_PV=${MY_PV}
 EXTP_PV=${SDK_PV}
-MY_P=VirtualBox-${VBOX_PV}-Linux
+MY_P=VirtualBox-${MY_PV}-Linux
 EXTP_PN=Oracle_VM_VirtualBox_Extension_Pack
 
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
 HOMEPAGE="http://www.virtualbox.org/"
-SRC_URI="amd64? ( http://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}_amd64.run )
-	x86? ( http://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}_x86.run )
-	sdk? ( http://download.virtualbox.org/virtualbox/${MY_PV}/VirtualBoxSDK-${SDK_PV}.zip )
-	http://download.virtualbox.org/virtualbox/${MY_PV}/${EXTP_PN}-${EXTP_PV}.vbox-extpack -> ${EXTP_PN}-${EXTP_PV}.tar.gz"
+SRC_URI="amd64? ( http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_amd64.run )
+	x86? ( http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_x86.run )
+	sdk? ( http://download.virtualbox.org/virtualbox/${PV}/VirtualBoxSDK-${SDK_PV}.zip )
+	http://download.virtualbox.org/virtualbox/${PV}/${EXTP_PN}-${EXTP_PV}.vbox-extpack -> ${EXTP_PN}-${EXTP_PV}.tar.gz"
 
 LICENSE="GPL-2 PUEL"
 SLOT="0"
@@ -307,14 +305,11 @@ src_install() {
 	echo -n "VBOX_APP_HOME=/opt/VirtualBox" > "${T}/90virtualbox"
 	doenvd "${T}/90virtualbox"
 
-	local udevdir="$(udev_get_udevdir)"
-	insinto ${udevdir}/rules.d
+	insinto /lib/udev/rules.d
 	doins "${FILESDIR}"/10-virtualbox.rules
-	sed "s@%UDEVDIR%@${udevdir}@" \
-		-i "${D}"${udevdir}/rules.d/10-virtualbox.rules || die
-	# move udev scripts into ${udevdir} (bug #372491)
-	mv "${D}"/opt/VirtualBox/VBoxCreateUSBNode.sh "${D}"${udevdir} || die
-	fperms 0750 ${udevdir}/VBoxCreateUSBNode.sh
+	# move udev scripts into /lib/udev (bug #372491)
+	mv "${D}"/opt/VirtualBox/VBoxCreateUSBNode.sh "${D}"/lib/udev
+	fperms 0750 /lib/udev/VBoxCreateUSBNode.sh
 }
 
 pkg_postinst() {
