@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/flexmock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/ChangeLog,v 1.22 2012/10/18 07:18:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/ChangeLog,v 1.23 2012/12/22 07:30:18 graaff Exp $
+
+*flexmock-1.2.0 (22 Dec 2012)
+
+  22 Dec 2012; Hans de Graaff <graaff@gentoo.org> +flexmock-1.2.0.ebuild:
+  Version bump.
 
 *flexmock-1.0.4 (18 Oct 2012)
 
