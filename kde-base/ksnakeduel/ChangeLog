@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksnakeduel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksnakeduel/ChangeLog,v 1.7 2012/12/05 16:58:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksnakeduel/ChangeLog,v 1.8 2012/12/22 16:41:58 maekke Exp $
+
+  22 Dec 2012; Markus Meier <maekke@gentoo.org> ksnakeduel-4.9.4.ebuild:
+  add ~arm
 
 *ksnakeduel-4.9.4 (05 Dec 2012)
 

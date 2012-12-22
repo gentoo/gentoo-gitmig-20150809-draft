@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/gwenview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.150 2012/12/08 11:53:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.151 2012/12/22 16:38:37 maekke Exp $
+
+  22 Dec 2012; Markus Meier <maekke@gentoo.org> gwenview-4.9.4.ebuild:
+  add ~arm
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -gwenview-4.8.5.ebuild:
