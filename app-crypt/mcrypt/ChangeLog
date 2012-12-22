@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/mcrypt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.36 2012/12/22 20:31:00 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.37 2012/12/22 20:51:04 alonbl Exp $
+
+  22 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org>
+  files/mcrypt-2.6.8-sprintf.patch, mcrypt-2.6.8-r2.ebuild:
+  Rework sprintf patch to remove RCS substitution in patch, as it invalidate it
 
   22 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org>
   +files/mcrypt-2.6.8-format-string.patch, +files/mcrypt-2.6.8-sprintf.patch,

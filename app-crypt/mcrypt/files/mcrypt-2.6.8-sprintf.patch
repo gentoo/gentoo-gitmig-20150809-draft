@@ -17,16 +17,10 @@ Index: mcrypt-2.6.8/src/mcrypt.c
 ===================================================================
 --- mcrypt-2.6.8.orig/src/mcrypt.c
 +++ mcrypt-2.6.8/src/mcrypt.c
-@@ -41,10 +41,13 @@
- # include <time.h>
- #endif
+@@ -41,4 +41,6 @@
  
 +/* Temporary error message can contain one file name and 1k of text */
 +#define ERRWIDTH ((PATH_MAX)+1024)
-+
- static char rcsid[] =
-     "$Id: mcrypt-2.6.8-sprintf.patch,v 1.1 2012/12/22 20:31:00 alonbl Exp $";
- 
 -char tmperr[128];
 +char tmperr[ERRWIDTH];
  unsigned int stream_flag = FALSE;
