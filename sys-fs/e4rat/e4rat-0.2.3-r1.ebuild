@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e4rat/e4rat-0.2.3-r1.ebuild,v 1.1 2012/11/06 20:55:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e4rat/e4rat-0.2.3-r1.ebuild,v 1.2 2012/12/22 09:13:02 pacho Exp $
 
 EAPI=4
 
@@ -18,7 +18,8 @@ IUSE=""
 DEPEND="dev-lang/perl
 	>=dev-libs/boost-1.42
 	sys-fs/e2fsprogs
-	sys-process/audit"
+	sys-process/audit
+	sys-process/lsof"
 RDEPEND="${DEPEND}"
 
 CONFIG_CHECK="~AUDITSYSCALL"
