@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.2.2.ebuild,v 1.2 2012/12/22 07:36:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.2.2.ebuild,v 1.3 2012/12/22 23:53:27 robbat2 Exp $
 
-EAPI="4"
+EAPI="5"
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
@@ -143,6 +143,7 @@ src_install() {
 	gen_usr_ldscript -a audit auparse
 
 	[ -f "${D}"/sbin/audisp-remote ] && \
+	dodir /usr/sbin && \
 	mv "${D}"/{sbin,usr/sbin}/audisp-remote || die
 
 	# remove RedHat garbage
@@ -164,7 +165,6 @@ src_install() {
 }
 
 pkg_preinst() {
-	default
 	# Preserve from the audit-1 series
 	preserve_old_lib /$(get_libdir)/libau{dit,parse}.so.0
 }
