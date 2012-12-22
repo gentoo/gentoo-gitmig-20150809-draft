@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/anki
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.47 2012/11/05 08:41:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.48 2012/12/22 05:09:55 radhermit Exp $
+
+*anki-2.0.3-r1 (22 Dec 2012)
+
+  22 Dec 2012; Tim Harder <radhermit@gentoo.org> +anki-2.0.3-r1.ebuild,
+  +files/anki-2.0.3-httplib2-0.7.7.patch:
+  Revision bump. Fix runtime issue with httplib2-0.7.7 (patch by Arfrever).
 
 *anki-2.0.3 (05 Nov 2012)
 
