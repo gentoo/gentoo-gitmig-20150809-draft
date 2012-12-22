@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gozer/gozer-0.7-r2.ebuild,v 1.4 2012/05/29 19:32:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gozer/gozer-0.7-r2.ebuild,v 1.5 2012/12/22 13:46:55 ulm Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="tool for rendering arbitrary text as graphics, using ttfs and style
 HOMEPAGE="http://www.linuxbrit.co.uk/gozer/"
 SRC_URI="http://www.linuxbrit.co.uk/downloads/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="feh GPL-2+"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
@@ -30,6 +30,6 @@ src_prepare() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die
-	rm -rf ${D}/usr/doc
+	rm -rf "${D}"/usr/doc
 	dodoc TODO README AUTHORS ChangeLog
 }
