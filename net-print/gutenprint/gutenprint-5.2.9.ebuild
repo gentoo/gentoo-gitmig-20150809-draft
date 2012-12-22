@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.9.ebuild,v 1.2 2012/12/22 09:26:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.9.ebuild,v 1.3 2012/12/22 14:03:32 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/gimp-print/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ~ppc64 ~sparc ~x86"
 IUSE="cups foomaticdb gimp gtk nls readline ppds static-libs"
 
 RDEPEND="app-text/ghostscript-gpl
