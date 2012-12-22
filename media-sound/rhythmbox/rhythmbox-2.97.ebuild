@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.97.ebuild,v 1.7 2012/12/20 15:58:46 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.97.ebuild,v 1.8 2012/12/22 19:19:07 calchan Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -56,6 +56,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
 	libnotify? ( >=x11-libs/libnotify-0.7.0 )
 	lirc? ( app-misc/lirc )
 	musicbrainz? (
+		media-libs/libdiscid
 		|| ( >=media-libs/musicbrainz-4.0.0:4
 		     >=media-libs/musicbrainz-3.0.2:3 )
 		gnome-base/gconf:2 )
