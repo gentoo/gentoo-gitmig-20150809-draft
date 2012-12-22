@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.6_beta2.ebuild,v 1.2 2012/12/08 22:15:02 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.6_beta3.ebuild,v 1.1 2012/12/22 19:41:32 ottxor Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ CMAKE_MIN_VERSION="2.8.5-r2"
 
 CMAKE_MAKEFILE_GENERATOR="ninja"
 
-inherit bash-completion-r1 cmake-utils eutils fortran-2 multilib toolchain-funcs
+inherit bash-completion-r1 cmake-utils eutils multilib toolchain-funcs
 
 SRC_URI="test? ( ftp://ftp.gromacs.org/pub/tests/gmxtest-${TEST_PV}.tgz )"
 
@@ -23,14 +23,14 @@ if [[ $PV = *9999* ]]; then
 		http://repo.or.cz/r/gromacs.git"
 	EGIT_BRANCH="release-4-6"
 	inherit git-2
-	PDEPEND="doc? ( ~app-doc/gromacs-manual-${PV} )"
+	PDEPEND="doc? ( ~app-doc/${PN}-manual-${PV} )"
 else
 	S="${WORKDIR}/${P//_/-}"
 	SRC_URI="${SRC_URI} ftp://ftp.gromacs.org/pub/${PN}/${P//_/-}.tar.gz
-		doc? (  ftp://ftp.gromacs.org/pub/manual/gromacs-manual-${MANUAL_PV}.pdf )"
+		doc? (  ftp://ftp.gromacs.org/pub/manual/${PN}-manual-${MANUAL_PV}.pdf )"
 fi
 
-ACCE_IUSE="fkernels power6 sse2 sse41 avx128fma avx256"
+ACCE_IUSE="sse2 sse41 avx128fma avx256"
 
 DESCRIPTION="The ultimate molecular dynamics simulation package"
 HOMEPAGE="http://www.gromacs.org/"
@@ -38,8 +38,7 @@ HOMEPAGE="http://www.gromacs.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
-IUSE="X blas cuda doc -double-precision +fftw gsl lapack
-mpi openmm openmp +single-precision test +threads zsh-completion ${ACCE_IUSE}"
+IUSE="X blas cuda doc -double-precision +fftw gsl lapack mpi +offensive openmm openmp +single-precision test +threads zsh-completion ${ACCE_IUSE}"
 
 CDEPEND="
 	X? (
@@ -50,7 +49,6 @@ CDEPEND="
 	blas? ( virtual/blas )
 	cuda? ( dev-util/nvidia-cuda-toolkit )
 	fftw? ( sci-libs/fftw:3.0 )
-	fkernels? ( !threads? ( !sse2? ( virtual/fortran ) ) )
 	gsl? ( sci-libs/gsl )
 	lapack? ( virtual/lapack )
 	mpi? ( virtual/mpi )
@@ -69,22 +67,11 @@ pkg_pretend() {
 		die "Please switch to an openmp compatible compiler"
 }
 
-pkg_setup() {
+src_prepare() {
 	#notes/todos
 	# -on apple: there is framework support
 	# -mkl support
-	# -there are power6 kernels
-	if use fkernels; then
-		if use threads; then
-			ewarn "Fortran kernels and threads do not work together, disabling"
-			ewarn "fortran kernels"
-		else
-			fortran-2_pkg_setup
-		fi
-	fi
-}
 
-src_prepare() {
 	#add user patches from /etc/portage/patches/sci-chemistry/gromacs
 	epatch_user
 
@@ -106,8 +93,6 @@ src_configure() {
 
 	#go from slowest to fastest acceleration
 	local acce="None"
-	use fkernels && use !threads && acce="Fortran"
-	use power6 && acce="Power6"
 	use sse2 && acce="SSE2"
 	use sse41 && acce="SSE4.1"
 	use avx128fma && acce="AVX_128_FMA"
@@ -124,6 +109,7 @@ src_configure() {
 		$(cmake-utils_use gsl GMX_GSL)
 		$(cmake-utils_use lapack GMX_EXTERNAL_LAPACK)
 		$(cmake-utils_use openmp GMX_OPENMP)
+		$(cmake-utils_use !offensive GMX_NO_QUOTES)
 		-DGMX_DEFAULT_SUFFIX=off
 		-DGMX_ACCELERATION="$acce"
 		-DGMXLIB="$(get_libdir)"
@@ -221,7 +207,7 @@ src_install() {
 			ls -1 "${ED}"/usr/bin | sed -e '/_d$/d' > "${T}"/programs.list
 			doins "${T}"/programs.list
 		else
-			dodoc "${DISTDIR}/gromacs-manual-${MANUAL_PV}.pdf"
+			dodoc "${DISTDIR}/${PN}-manual-${MANUAL_PV}.pdf"
 		fi
 	fi
 	rm -rf "${ED}usr/share/gromacs/html/"
@@ -232,9 +218,11 @@ pkg_postinst() {
 	einfo  "Please read and cite:"
 	einfo  "Gromacs 4, J. Chem. Theory Comput. 4, 435 (2008). "
 	einfo  "http://dx.doi.org/10.1021/ct700301q"
-	einfo
-	einfo  $(g_luck)
-	einfo  "For more Gromacs cool quotes (gcq) add g_luck to your .bashrc"
+	if use offensive; then
+		einfo
+		einfo  $(g_luck)
+		einfo  "For more Gromacs cool quotes (gcq) add g_luck to your .bashrc"
+	fi
 	einfo
 	elog  "Gromacs can use sci-chemistry/vmd to read additional file formats"
 }
