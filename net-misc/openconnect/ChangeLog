@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openconnect
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.4 2012/12/11 19:45:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.5 2012/12/22 11:21:37 hwoarang Exp $
+
+*openconnect-4.07-r2 (22 Dec 2012)
+
+  22 Dec 2012; Markos Chandras <hwoarang@gentoo.org>
+  +openconnect-4.07-r2.ebuild, files/openconnect.init.in:
+   Revbump to fix #447114 and #447106. Thanks to Matthew Schultz
+  <mattsch@gmail.com>
 
 *openconnect-4.07-r1 (11 Dec 2012)
 
