@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.0.ebuild,v 1.1 2012/12/22 00:47:09 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.0.ebuild,v 1.2 2012/12/22 20:25:55 tommy Exp $
 
 EAPI=5
 
@@ -35,18 +35,18 @@ IUSE="emotion pam spell static-libs +udev ukit ${IUSE_E_MODULES}"
 
 RDEPEND="
 	pam? ( sys-libs/pam )
-	>=dev-libs/efreet-1.7.3
-	>=dev-libs/eio-1.7.3
-	>=dev-libs/eina-1.7.3[mempool-chained]
-	|| ( >=dev-libs/ecore-1.7.3[X,evas,inotify] >=dev-libs/ecore-1.7.3[xcb,evas,inotify] )
-	>=media-libs/edje-1.7.3
-	>=dev-libs/e_dbus-1.7.1[libnotify,udev?]
-	ukit? ( >=dev-libs/e_dbus-1.7.1[udev] )
-	enlightenment_modules_connman? ( >=dev-libs/e_dbus-1.7.1[connman] )
-	enlightenment_modules_shot? ( >=dev-libs/ecore-1.7.3[curl] )
-	|| ( >=media-libs/evas-1.7.3[eet,X,jpeg,png] >=media-libs/evas-1.7.3[eet,xcb,jpeg,png] )
-	>=dev-libs/eeze-1.7.1
-	emotion? ( >=media-libs/emotion-1.7.3 )
+	>=dev-libs/efreet-1.7.4
+	>=dev-libs/eio-1.7.4
+	>=dev-libs/eina-1.7.4[mempool-chained]
+	|| ( >=dev-libs/ecore-1.7.4[X,evas,inotify] >=dev-libs/ecore-1.7.4[xcb,evas,inotify] )
+	>=media-libs/edje-1.7.4
+	>=dev-libs/e_dbus-1.7.4[libnotify,udev?]
+	ukit? ( >=dev-libs/e_dbus-1.7.4[udev] )
+	enlightenment_modules_connman? ( >=dev-libs/e_dbus-1.7.4[connman] )
+	enlightenment_modules_shot? ( >=dev-libs/ecore-1.7.4[curl] )
+	|| ( >=media-libs/evas-1.7.4[eet,X,jpeg,png] >=media-libs/evas-1.7.4[eet,xcb,jpeg,png] )
+	>=dev-libs/eeze-1.7.4
+	emotion? ( >=media-libs/emotion-1.7.4 )
 	x11-libs/xcb-util-keysyms"
 DEPEND="${RDEPEND}"
 
