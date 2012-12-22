@@ -6,4 +6,7 @@
 		<email>c1pher@gentoo.org</email>
 		<name>Dane Smith</name>
 	</maintainer>
+	<use>
+		<flag name='asm'>Enable assembly for optimization</flag>
+	</use>
 </pkgmetadata>

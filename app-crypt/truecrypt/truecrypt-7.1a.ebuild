@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.1a.ebuild,v 1.4 2012/12/14 22:26:47 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.1a.ebuild,v 1.5 2012/12/22 00:10:44 alonbl Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="${P}.tar.gz
 LICENSE="truecrypt-3.0"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~ppc ~x86"
-IUSE="X"
+IUSE="X +asm"
 RESTRICT="mirror fetch bindist"
 
 RDEPEND="|| ( >=sys-fs/lvm2-2.02.45 sys-fs/device-mapper )
@@ -66,6 +66,7 @@ src_compile() {
 	local EXTRA
 
 	use X || EXTRA+=" NOGUI=1"
+	use asm  || EXTRA+=" NOASM=1"
 	append-flags -DCKR_NEW_PIN_MODE=0x000001B0 -DCKR_NEXT_OTP=0x000001B1
 
 	emake \
