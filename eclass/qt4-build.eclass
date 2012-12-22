@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.139 2012/11/12 09:28:53 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.140 2012/12/22 03:57:14 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -274,7 +274,7 @@ qt4-build_src_prepare() {
 
 	# Respect CC, CXX, LINK and *FLAGS in config.tests
 	find config.tests/unix -name '*.test' -type f -print0 | xargs -0 \
-		sed -i -e "/bin\/qmake/ s: \"QT_BUILD_TREE=: \
+		sed -i -e "/bin\/qmake/ s: \"\$SRCDIR/: \
 			'QMAKE_CC=$(tc-getCC)'    'QMAKE_CXX=$(tc-getCXX)'      'QMAKE_LINK=$(tc-getCXX)' \
 			'QMAKE_CFLAGS+=${CFLAGS}' 'QMAKE_CXXFLAGS+=${CXXFLAGS}' 'QMAKE_LFLAGS+=${LDFLAGS}'&:" \
 		|| die "sed config.tests failed"
