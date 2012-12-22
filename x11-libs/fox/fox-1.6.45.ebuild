@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.45.ebuild,v 1.1 2012/07/04 19:05:03 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.45.ebuild,v 1.2 2012/12/22 21:27:58 mabi Exp $
 
 EAPI="4"
 
@@ -9,15 +9,14 @@ inherit eutils fox
 LICENSE="LGPL-2.1"
 SLOT="1.6"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="bzip2 jpeg opengl png tiff truetype zlib"
+IUSE="+bzip2 +jpeg +opengl +png tiff +truetype +zlib"
 
 RDEPEND="x11-libs/libXrandr
 	x11-libs/libXcursor
 	x11-libs/fox-wrapper
-	media-libs/mesa
 	bzip2? ( >=app-arch/bzip2-1.0.2 )
 	jpeg? ( virtual/jpeg )
-	opengl? ( virtual/opengl )
+	opengl? ( virtual/glu virtual/opengl )
 	png? ( >=media-libs/libpng-1.2.5 )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	truetype? ( =media-libs/freetype-2*

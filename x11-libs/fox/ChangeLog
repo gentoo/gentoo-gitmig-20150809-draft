@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.159 2012/09/29 14:03:04 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.160 2012/12/22 21:27:58 mabi Exp $
+
+*fox-1.7.37 (22 Dec 2012)
+
+  22 Dec 2012; Matti Bickel <mabi@gentoo.org> +fox-1.7.37.ebuild,
+  -fox-1.6.43.ebuild, fox-1.6.40.ebuild, fox-1.6.45.ebuild, fox-1.7.32.ebuild,
+  fox-1.7.33.ebuild:
+  version bump & remove old. also add default USE for the common stuff. also
+  fixed bug #438914 (fox requires BOTH opengl and glu to be installed when
+  opengl is to be used)
 
   29 Sep 2012; Fabian Groffen <grobian@gentoo.org> fox-1.7.33.ebuild:
   Fix for Prefix, partial fix for bug #433531
