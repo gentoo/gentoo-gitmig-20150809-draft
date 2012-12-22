@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cctree/cctree-1.60.ebuild,v 1.1 2011/07/15 18:48:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cctree/cctree-1.60.ebuild,v 1.2 2012/12/22 08:16:16 ulm Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ MY_PN="CCTree"
 DESCRIPTION="vim plugin: Cscope based source-code browser and code flow analysis tool"
 HOMEPAGE="http://sites.google.com/site/vimcctree/"
 SRC_URI="https://github.com/vim-scripts/${MY_PN}/tarball/${PV} -> ${P}.tar.gz"
-LICENSE="as-is"
+LICENSE="bufexplorer.vim"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
