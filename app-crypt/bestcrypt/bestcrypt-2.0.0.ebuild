@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-2.0.0.ebuild,v 1.1 2012/12/15 03:06:38 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-2.0.0.ebuild,v 1.2 2012/12/22 23:42:52 alonbl Exp $
 
 EAPI="4"
 
@@ -23,6 +23,7 @@ RDEPEND=""
 S="${WORKDIR}/${MY_PN}-${MY_PV}"
 
 pkg_setup() {
+	CONFIG_CHECK="MODULES"
 	linux-mod_pkg_setup
 
 	MODULE_NAMES="bestcrypt(block::kernel/kmod)
