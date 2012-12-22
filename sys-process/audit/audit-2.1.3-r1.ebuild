@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.1.3-r1.ebuild,v 1.10 2012/12/21 13:47:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.1.3-r1.ebuild,v 1.11 2012/12/22 03:36:53 robbat2 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -67,6 +67,11 @@ src_prepare() {
 
 	# Don't build static version of Python module.
 	epatch "${FILESDIR}"/${PN}-2.1.3-python.patch
+
+	# glibc/kernel upstreams suck with both defining ia64_fpreg
+	# This patch is a horribly workaround that is only valid as long as you
+	# don't need the OTHER definitions in fpu.h.
+	epatch "${FILESDIR}"/${PN}-2.1.3-ia64-compile-fix.patch
 
 	# Python bindings are built/installed manually.
 	sed -e "/^SUBDIRS =/s/ python//" -i bindings/Makefile.am
