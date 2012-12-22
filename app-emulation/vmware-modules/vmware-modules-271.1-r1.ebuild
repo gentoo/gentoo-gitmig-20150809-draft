@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-271.1-r1.ebuild,v 1.1 2012/12/16 14:19:07 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-271.1-r1.ebuild,v 1.2 2012/12/22 11:53:25 vadimk Exp $
 
 EAPI="4"
 
@@ -64,7 +64,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PV_MAJOR}-netdevice.patch"
 	use pax_kernel && epatch "${FILESDIR}/hardened.patch"
 	epatch "${FILESDIR}/${PV_MAJOR}-apic.patch"
-	kernel_is 3 7 0 && epatch "${FILESDIR}/${PV_MAJOR}-putname.patch"
+	kernel_is ge 3 7 0 && epatch "${FILESDIR}/${PV_MAJOR}-putname.patch"
 }
 
 src_install() {

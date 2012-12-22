@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.100 2012/12/16 14:19:07 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.101 2012/12/22 11:53:25 vadimk Exp $
+
+  22 Dec 2012; Vadim Kuznetsov vadimk@gentoo.org vmware-modules-271.1-r1.ebuild:
+  apply patch to kernel gte 3.7.0
 
 *vmware-modules-271.1-r1 (16 Dec 2012)
 
