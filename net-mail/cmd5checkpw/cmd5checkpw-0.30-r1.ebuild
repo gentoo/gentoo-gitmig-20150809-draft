@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.30-r1.ebuild,v 1.12 2011/07/11 15:17:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.30-r1.ebuild,v 1.13 2012/12/22 17:19:59 ulm Exp $
 
 inherit eutils fixheadtails
 
@@ -10,7 +10,7 @@ DESCRIPTION="A checkpassword compatible authentication program that used CRAM-MD
 SRC_URI="http://www.fehcom.de/qmail/auth/${PN}-${MY_VER}_tgz.bin"
 HOMEPAGE="http://www.fehcom.de/qmail/smtpauth.html"
 
-LICENSE="as-is"
+LICENSE="public-domain RSA"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
