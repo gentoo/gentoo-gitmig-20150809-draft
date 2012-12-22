@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/abook
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.58 2012/12/21 18:46:05 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.59 2012/12/22 10:58:29 eras Exp $
+
+  22 Dec 2012; Eray Aslan <eras@gentoo.org> abook-0.6.0_pre2.ebuild:
+  Add missing ncurses and readline RDEPENDs
 
   21 Dec 2012; Kenneth Prugh <ken69267@gentoo.org> abook-0.6.0_pre2.ebuild:
   amd64 stable, bug #444990
@@ -210,4 +213,3 @@
   Initial checkin. Abook is a curses based address book, primarily for use
   by mutt. Original ebuild submitted by Sascha Hüdepohl, bug 6004 in
   bugzilla.
-
