@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-pear/horde-pear-1.3-r3.ebuild,v 1.13 2006/04/10 22:49:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-pear/horde-pear-1.3-r3.ebuild,v 1.14 2012/12/22 17:32:26 ulm Exp $
 
 DESCRIPTION="Meta package for the PEAR packages required by Horde."
 HOMEPAGE="http://pear.php.net/"
 
-LICENSE="as-is"
+LICENSE="metapackage"
 SLOT="1"
 # when unmasking for an arch
 # double check none of the deps are still masked!
