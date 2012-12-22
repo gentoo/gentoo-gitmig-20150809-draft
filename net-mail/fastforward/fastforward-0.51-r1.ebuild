@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fastforward/fastforward-0.51-r1.ebuild,v 1.8 2011/08/22 08:39:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fastforward/fastforward-0.51-r1.ebuild,v 1.9 2012/12/22 16:51:13 ulm Exp $
 
 inherit eutils fixheadtails
 
@@ -8,8 +8,8 @@ DESCRIPTION="handle qmail forwarding according to a cdb database"
 HOMEPAGE="http://cr.yp.to/fastforward.html"
 SRC_URI="http://cr.yp.to/software/${P}.tar.gz"
 
+LICENSE="public-domain"
 SLOT="0"
-LICENSE="as-is"
 KEYWORDS="x86 sparc ~ppc"
 IUSE=""
 

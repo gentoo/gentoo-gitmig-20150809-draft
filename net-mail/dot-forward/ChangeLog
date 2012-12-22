@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dot-forward
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/ChangeLog,v 1.35 2011/07/11 15:19:54 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/ChangeLog,v 1.36 2012/12/22 16:48:53 ulm Exp $
+
+  22 Dec 2012; Ulrich Müller <ulm@gentoo.org> dot-forward-0.71-r2.ebuild,
+  dot-forward-0.71-r3.ebuild:
+  Fix LICENSE, public domain according to http://cr.yp.to/distributors.html,
+  bug 446476.
 
   11 Jul 2011; Alexis Ballier <aballier@gentoo.org> dot-forward-0.71-r3.ebuild:
   keyword ~x86-fbsd
