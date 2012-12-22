@@ -1,10 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.418 2012/12/19 10:59:01 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.419 2012/12/22 09:01:57 zmedico Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Zac Medico <zmedico@gentoo.org> (13 Jun 2012)
+# Mask USE=pypy2_0 for sys-apps/portage, since pypy has limited KEYWORDS.
+sys-apps/portage pypy2_0
 
 # Jory A. Pratt <anarchy@gentoo.org> (15 Dec 2012)
 # PGO is known to be busted with most configurations
@@ -113,10 +117,6 @@ sys-boot/grub libzfs
 =media-libs/mesa-8.0.3 wayland
 =media-libs/mesa-8.0.4-r1 wayland
 =media-libs/mesa-9.0 wayland
-
-# Zac Medico <zmedico@gentoo.org> (13 Jun 2012)
-# Mask USE=pypy1_9 for sys-apps/portage, since pypy has limited KEYWORDS.
-sys-apps/portage pypy1_9
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (03 Jun 2012)
 # needs libpqxx-3* which is not in the tree anymore
