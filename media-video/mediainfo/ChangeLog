@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mediainfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/ChangeLog,v 1.61 2012/12/16 13:50:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/ChangeLog,v 1.62 2012/12/22 10:19:30 radhermit Exp $
+
+  22 Dec 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> mediainfo-0.7.61.ebuild:
   Stable for x86, wrt bug #441380
