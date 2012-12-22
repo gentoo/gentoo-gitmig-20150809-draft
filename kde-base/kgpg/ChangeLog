@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgpg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.236 2012/12/08 11:53:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.237 2012/12/22 16:00:33 maekke Exp $
+
+  22 Dec 2012; Markus Meier <maekke@gentoo.org> kgpg-4.9.4.ebuild:
+  add ~arm
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org> -kgpg-4.8.5.ebuild:
   Drop KDE 4.8
