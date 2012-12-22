@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/iw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.58 2012/12/16 21:10:08 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.59 2012/12/22 04:34:16 zerochaos Exp $
+
+*iw-3.8 (22 Dec 2012)
+
+  22 Dec 2012; Rick Farina <zerochaos@gentoo.org> +iw-3.8.ebuild:
+  bump to 3.8, and eapi5 because it is trendy
 
   16 Dec 2012; Rick Farina <zerochaos@gentoo.org> -iw-0.9.17.ebuild,
   -iw-0.9.22.ebuild, -iw-3.2.ebuild, -iw-3.5.ebuild, iw-3.3.ebuild,
