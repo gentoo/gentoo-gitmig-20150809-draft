@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.191 2012/06/27 17:54:53 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.192 2012/12/22 18:32:52 ottxor Exp $
+
+*gkrellm-2.3.5-r2 (22 Dec 2012)
+
+  22 Dec 2012; Christoph Junghans <ottxor@gentoo.org>
+  +files/gkrellm-2.3.5-dso.patch, +gkrellm-2.3.5-r2.ebuild:
+  added prefix support (bug #447414) and fix for dso linking (bug #428532)
 
   27 Jun 2012; Jim Ramsay <jim_ramsay@gentoo.org> -gkrellm-2.3.2-r1.ebuild,
   -gkrellm-2.3.2.ebuild, -gkrellm-2.3.4.ebuild, gkrellm-2.3.5.ebuild:
