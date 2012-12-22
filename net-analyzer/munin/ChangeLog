@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.125 2012/12/12 09:45:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.126 2012/12/22 15:18:15 ago Exp $
+
+  22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> munin-2.0.8-r2.ebuild:
+  Stable for ppc, wrt bug #445250
 
 *munin-2.0.9 (12 Dec 2012)
 
