@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/threads-shared/threads-shared-1.420.0.ebuild,v 1.1 2012/10/03 18:05:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/threads-shared/threads-shared-1.420.0.ebuild,v 1.2 2012/12/22 18:27:31 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Extension for sharing data structures between threads"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl[ithreads]

@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Thread-Queue
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Thread-Queue/ChangeLog,v 1.4 2012/11/17 19:42:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Thread-Queue/ChangeLog,v 1.5 2012/12/22 18:26:02 ago Exp $
+
+  22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> Thread-Queue-3.10.0.ebuild:
+  Add ~ppc, wrt bug #429088
 
 *Thread-Queue-3.10.0 (17 Nov 2012)
 

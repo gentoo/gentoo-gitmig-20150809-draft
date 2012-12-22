@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/File-Path
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Path/ChangeLog,v 1.5 2012/09/01 12:06:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Path/ChangeLog,v 1.6 2012/12/22 18:26:19 ago Exp $
+
+  22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> File-Path-2.08.ebuild:
+  Add ~ppc, wrt bug #429088
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org> File-Path-2.08.ebuild:
   Marked ~ppc-aix, bug #432288
