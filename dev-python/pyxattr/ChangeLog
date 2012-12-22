@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxattr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.40 2012/12/22 01:47:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.41 2012/12/22 08:47:37 zmedico Exp $
+
+  22 Dec 2012; Zac Medico <zmedico@gentoo.org> pyxattr-0.5.1.ebuild:
+  Add pypy2_0 to PYTHON_COMPAT, since it appears to work.
 
   22 Dec 2012; Mike Gilbert <floppym@gentoo.org>
   +files/pyxattr-0.5.1-test-bytes.patch, pyxattr-0.5.1.ebuild:
