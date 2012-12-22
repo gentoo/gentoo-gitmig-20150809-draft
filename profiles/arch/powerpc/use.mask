@@ -2,6 +2,7 @@
 #
 # Masking out llvm
 llvm
+clang
 
 # These flags should only be used for ppc
 -ppcsha1
