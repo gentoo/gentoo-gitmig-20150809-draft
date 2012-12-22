@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/open-vcdiff/open-vcdiff-0.8.3.ebuild,v 1.1 2012/12/22 18:28:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/open-vcdiff/open-vcdiff-0.8.3.ebuild,v 1.2 2012/12/22 19:37:04 floppym Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0/0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 src_configure() {
