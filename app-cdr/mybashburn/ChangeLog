@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/mybashburn
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mybashburn/ChangeLog,v 1.5 2009/10/14 00:46:52 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mybashburn/ChangeLog,v 1.6 2012/12/22 21:38:29 radhermit Exp $
+
+  22 Dec 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   14 Oct 2009; Mark Loeser <halcy0n@gentoo.org> mybashburn-1.0.2.ebuild:
   QA fixes; unquoted variables
