@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.30.2-r1.ebuild,v 1.11 2012/09/05 11:28:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.30.2-r1.ebuild,v 1.12 2012/12/23 17:10:57 eva Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://live.gnome.org/GnomeScreensaver"
 SRC_URI="${SRC_URI}
 	branding? ( http://www.gentoo.org/images/gentoo-logo.svg )"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 KERNEL_IUSE="kernel_linux"

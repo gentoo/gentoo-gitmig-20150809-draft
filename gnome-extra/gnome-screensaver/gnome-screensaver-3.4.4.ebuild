@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-3.4.4.ebuild,v 1.1 2012/07/17 23:14:28 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-3.4.4.ebuild,v 1.2 2012/12/23 17:10:57 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -10,7 +10,7 @@ inherit eutils gnome2
 DESCRIPTION="Replaces xscreensaver, integrating with the desktop."
 HOMEPAGE="http://live.gnome.org/GnomeScreensaver"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 IUSE="debug doc pam systemd"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
@@ -59,8 +59,7 @@ pkg_setup() {
 		--with-mit-ext
 		--with-pam-prefix=/etc
 		--with-xf86gamma-ext
-		--with-kbd-layout-indicator
-		--disable-schemas-compile"
+		--with-kbd-layout-indicator"
 	# Do not use --without-console-kit, it would provide no benefit: there is
 	# no build-time or run-time check for consolekit, $PN merely listens to
 	# consolekit's messages over dbus.
