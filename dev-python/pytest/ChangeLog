@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.43 2012/12/17 20:02:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.44 2012/12/23 10:04:45 radhermit Exp $
+
+*pytest-2.3.4 (23 Dec 2012)
+
+  23 Dec 2012; Tim Harder <radhermit@gentoo.org> +pytest-2.3.4.ebuild:
+  Version bump.
 
   17 Dec 2012; Michał Górny <mgorny@gentoo.org> pytest-2.3.3-r1.ebuild:
   Bump to EAPI=5 to make Paludis happy, bug #447524.
