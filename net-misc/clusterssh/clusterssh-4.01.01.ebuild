@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/clusterssh-4.01.01.ebuild,v 1.3 2012/12/18 07:57:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/clusterssh-4.01.01.ebuild,v 1.4 2012/12/23 11:42:42 jlec Exp $
 
 EAPI=4
 
@@ -35,7 +35,8 @@ DEPEND="
 	${RDEPEND}
 	dev-perl/File-Which
 	virtual/perl-Module-Build
-	dev-perl/Test-Pod"
+	dev-perl/Test-Pod
+	test? ( dev-perl/Test-Differences )"
 
 S="${WORKDIR}"/${MY_P}
 
