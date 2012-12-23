@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krosspython
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krosspython/ChangeLog,v 1.124 2012/12/08 11:53:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krosspython/ChangeLog,v 1.125 2012/12/23 18:14:37 maekke Exp $
+
+  23 Dec 2012; Markus Meier <maekke@gentoo.org> krosspython-4.9.4.ebuild:
+  add ~arm
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -krosspython-4.8.5.ebuild:
