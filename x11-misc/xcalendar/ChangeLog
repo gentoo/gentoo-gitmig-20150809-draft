@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xcalendar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.30 2012/10/24 21:12:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.31 2012/12/23 20:21:39 ulm Exp $
+
+  23 Dec 2012; Ulrich Müller <ulm@gentoo.org> xcalendar-4.0.ebuild,
+  xcalendar-4.0-r1.ebuild:
+  Fix LICENSE, see notices in source files, bug 446768.
 
   24 Oct 2012; Ulrich Müller <ulm@gentoo.org> xcalendar-4.0.ebuild,
   xcalendar-4.0-r1.ebuild:
