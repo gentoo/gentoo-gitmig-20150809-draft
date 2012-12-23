@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcryptui/libcryptui-3.4.1.ebuild,v 1.1 2012/05/13 18:18:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcryptui/libcryptui-3.4.1.ebuild,v 1.2 2012/12/23 17:28:27 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -11,7 +11,7 @@ inherit gnome2
 DESCRIPTION="User interface components for OpenPGP"
 HOMEPAGE="http://www.gnome.org/projects/seahorse/index.html"
 
-LICENSE="GPL-2 LGPL-2"
+LICENSE="GPL-2+ LGPL-2.1+ FDL-1.1"
 SLOT="0"
 IUSE="debug doc +introspection libnotify test"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
