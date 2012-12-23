@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeartwork-sounds
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-sounds/ChangeLog,v 1.207 2012/12/08 11:53:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-sounds/ChangeLog,v 1.208 2012/12/23 12:11:51 maekke Exp $
+
+  23 Dec 2012; Markus Meier <maekke@gentoo.org> kdeartwork-sounds-4.9.4.ebuild:
+  add ~arm
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -kdeartwork-sounds-4.8.5.ebuild:
