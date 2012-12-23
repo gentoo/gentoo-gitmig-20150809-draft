@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgamma
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.230 2012/12/08 11:53:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.231 2012/12/23 11:51:19 maekke Exp $
+
+  23 Dec 2012; Markus Meier <maekke@gentoo.org> kgamma-4.9.4.ebuild:
+  add ~arm
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org> -kgamma-4.8.5.ebuild:
   Drop KDE 4.8

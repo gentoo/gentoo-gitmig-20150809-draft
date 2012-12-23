@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kaddressbook
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.245 2012/12/08 12:04:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.246 2012/12/23 11:42:09 maekke Exp $
+
+  23 Dec 2012; Markus Meier <maekke@gentoo.org> kaddressbook-4.9.4.ebuild:
+  add ~arm
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   kaddressbook-4.4.11.1.ebuild, kaddressbook-4.4.11.1-r1.ebuild:
