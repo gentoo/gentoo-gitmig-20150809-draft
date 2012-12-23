@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.174 2012/12/23 16:57:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.175 2012/12/23 18:15:08 jdhore Exp $
+
+  23 Dec 2012; Jeff Horelick <jdhore@gentoo.org> autoconf-2.69.ebuild:
+  marked x86 per bug 447756
 
   23 Dec 2012; Agostino Sarubbo <ago@gentoo.org> autoconf-2.69.ebuild:
   Stable for ppc64, wrt bug #447756
