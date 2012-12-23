@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/cantata
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantata/ChangeLog,v 1.9 2012/10/27 15:45:53 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantata/ChangeLog,v 1.10 2012/12/23 16:19:47 dastergon Exp $
+
+*cantata-0.9.1 (23 Dec 2012)
+
+  23 Dec 2012; Pavlos Ratis <dastergon@gentoo.org> +cantata-0.9.1.ebuild:
+  Version bump, wrt bug 448230
 
   27 Oct 2012; Ben de Groot <yngwin@gentoo.org> cantata-0.8.3.1.ebuild,
   metadata.xml:
