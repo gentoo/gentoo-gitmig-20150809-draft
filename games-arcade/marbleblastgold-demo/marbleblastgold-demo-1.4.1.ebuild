@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastgold-demo/marbleblastgold-demo-1.4.1.ebuild,v 1.8 2012/02/05 06:21:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastgold-demo/marbleblastgold-demo-1.4.1.ebuild,v 1.9 2012/12/23 19:44:22 tupone Exp $
 
 inherit unpacker games
 
@@ -16,10 +16,13 @@ RESTRICT="strip"
 
 RDEPEND="sys-libs/glibc"
 
+dir=${GAMES_PREFIX_OPT}/${PN}
+QA_PREBUILT="${dir:1}/marbleblastgolddemo.bin
+	${dir:1}/lib/*"
+
 S=${WORKDIR}
 
 src_install() {
-	local dir=${GAMES_PREFIX_OPT}/${PN}
 	dodir "${dir}" "${GAMES_BINDIR}"
 
 	tar -zxf MarbleBlast.tar.gz -C "${D}/${dir}" || die "extracting MarbleBlast.tar.gz"
