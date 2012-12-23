@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/abook
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.60 2012/12/22 13:51:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.61 2012/12/23 17:08:41 ago Exp $
+
+  23 Dec 2012; Agostino Sarubbo <ago@gentoo.org> abook-0.6.0_pre2.ebuild:
+  Stable for ppc64, wrt bug #444990
 
   22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> abook-0.6.0_pre2.ebuild:
   Stable for ppc, wrt bug #444990
