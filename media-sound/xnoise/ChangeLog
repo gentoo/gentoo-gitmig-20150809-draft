@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/xnoise
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/ChangeLog,v 1.25 2012/09/20 14:59:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/ChangeLog,v 1.26 2012/12/23 21:22:49 angelos Exp $
+
+*xnoise-0.2.13 (23 Dec 2012)
+
+  23 Dec 2012;  <christoph@gentoo.org> +xnoise-0.2.13.ebuild:
+  Version bump
 
 *xnoise-0.2.11 (20 Sep 2012)
 
