@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnome-devel-docs/gnome-devel-docs-3.6.2.ebuild,v 1.1 2012/12/17 11:31:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnome-devel-docs/gnome-devel-docs-3.6.2.ebuild,v 1.2 2012/12/23 23:55:27 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,12 +16,14 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=""
-DEPEND="app-text/gnome-doc-utils
+DEPEND="
+	app-text/gnome-doc-utils
 	app-text/docbook-xml-dtd:4.1.2
 	app-text/docbook-xml-dtd:4.2
 	dev-libs/libxslt
 	sys-devel/gettext
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 # This ebuild does not install any binaries
 RESTRICT="binchecks strip"
