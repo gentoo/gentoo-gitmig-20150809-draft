@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.1.5-r1.ebuild,v 1.3 2012/12/22 22:48:44 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.1.5-r1.ebuild,v 1.4 2012/12/23 09:40:46 alonbl Exp $
 
 EAPI=4
 
@@ -90,12 +90,6 @@ src_configure() {
 		--htmldir="${EPREFIX}/usr/share/doc/${PF}/html" \
 		--disable-silent-rules \
 		--disable-valgrind-tests \
-		--with-libnettle-prefix="${EROOT}"/usr \
-		--with-libiconv-prefix="${EROOT}"/usr \
-		--with-libintl-prefix="${EROOT}"/usr \
-		--with-libpth-prefix="${EROOT}"/usr \
-		--with-libpthread-prefix="${EROOT}"/usr \
-		--with-libz-prefix="${EROOT}"/usr \
 		$(use_enable cxx) \
 		$(use_enable dane libdane) \
 		$(use_enable doc gtk-doc) \
