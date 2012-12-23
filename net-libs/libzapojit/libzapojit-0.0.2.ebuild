@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libzapojit/libzapojit-0.0.2.ebuild,v 1.1 2012/12/23 17:32:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libzapojit/libzapojit-0.0.2.ebuild,v 1.2 2012/12/23 17:41:34 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -39,4 +39,10 @@ src_configure() {
 		--disable-static
 		$(use_enable introspection)"
 	gnome2_src_configure
+}
+
+src_install() {
+	gnome2_src_install
+	# Drop self-installed documentation
+	rm -r "${ED}"/usr/share/doc/libzapojit/ || die
 }
