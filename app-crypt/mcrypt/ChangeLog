@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mcrypt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.38 2012/12/22 20:54:55 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.39 2012/12/23 16:56:24 jdhore Exp $
+
+  23 Dec 2012; Jeff Horelick <jdhore@gentoo.org> mcrypt-2.6.8-r2.ebuild:
+  marked x86 per bug 440778
 
   22 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org>
   +files/mcrypt-2.6.8-overflow.patch, mcrypt-2.6.8-r2.ebuild:
