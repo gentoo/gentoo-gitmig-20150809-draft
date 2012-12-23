@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.40.ebuild,v 1.10 2012/12/22 21:27:58 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.40.ebuild,v 1.11 2012/12/23 13:18:20 mabi Exp $
 
 EAPI="2"
 
@@ -35,6 +35,7 @@ FOXCONF="$(use_enable bzip2 bz2lib) \
 	$(use_enable zlib)"
 
 src_prepare() {
+	sed -i -e 's/-lXft/-lXft -lfontconfig/' "${S}/configure.ac"
 	epatch "${FILESDIR}"/${P}-libpng15.patch
 	fox_src_prepare
 }

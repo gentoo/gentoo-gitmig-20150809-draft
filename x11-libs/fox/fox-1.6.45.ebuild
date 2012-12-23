@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.45.ebuild,v 1.2 2012/12/22 21:27:58 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.45.ebuild,v 1.3 2012/12/23 13:18:20 mabi Exp $
 
 EAPI="4"
 
@@ -25,6 +25,11 @@ RDEPEND="x11-libs/libXrandr
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-libs/libXt"
+
+src_prepare() {
+	sed -i -e 's/-lXft/-lXft -lfontconfig/' "${S}/configure.ac"
+	fox_src_prepare
+}
 
 src_configure() {
 	FOXCONF="$(use_enable bzip2 bz2lib) \

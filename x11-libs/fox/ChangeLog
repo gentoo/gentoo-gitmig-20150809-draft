@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.160 2012/12/22 21:27:58 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.161 2012/12/23 13:18:20 mabi Exp $
+
+  23 Dec 2012; Matti Bickel <mabi@gentoo.org> fox-1.6.40.ebuild,
+  fox-1.6.45.ebuild:
+  add explicit link to libfontconfig (covered by DEPEND libXft), already fixed
+  upstream in 1.7, fixes bug #368887
 
 *fox-1.7.37 (22 Dec 2012)
 
