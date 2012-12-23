@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PortageXS
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/ChangeLog,v 1.51 2012/12/23 17:06:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/ChangeLog,v 1.52 2012/12/23 19:07:33 maekke Exp $
+
+  23 Dec 2012; Markus Meier <maekke@gentoo.org> PortageXS-0.02.10-r2.ebuild:
+  arm stable, bug #437414
 
   23 Dec 2012; Agostino Sarubbo <ago@gentoo.org> PortageXS-0.02.10-r2.ebuild:
   Stable for ppc64, wrt bug #437414
