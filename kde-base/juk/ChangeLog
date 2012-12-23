@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.246 2012/12/08 11:53:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.247 2012/12/23 11:01:54 maekke Exp $
+
+  23 Dec 2012; Markus Meier <maekke@gentoo.org> juk-4.9.4.ebuild:
+  add ~arm
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org> -juk-4.8.5.ebuild:
   Drop KDE 4.8
