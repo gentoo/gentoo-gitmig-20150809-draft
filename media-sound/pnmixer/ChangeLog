@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pnmixer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pnmixer/ChangeLog,v 1.3 2012/12/22 17:12:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pnmixer/ChangeLog,v 1.4 2012/12/23 15:23:52 hasufell Exp $
+
+  23 Dec 2012; Julian Ospald <hasufell@gentoo.org>
+  pnmixer-0.6_pre20111213.ebuild, files/pnmixer-0.6_pre20111213-build.patch:
+  add debug useflag
 
   22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pnmixer-0.6_pre20111213.ebuild:
   Add ~ppc, wrt bug #448048
