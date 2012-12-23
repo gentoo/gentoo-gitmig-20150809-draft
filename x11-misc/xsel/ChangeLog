@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/ChangeLog,v 1.23 2012/05/07 11:47:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/ChangeLog,v 1.24 2012/12/23 20:24:54 ulm Exp $
+
+  23 Dec 2012; Ulrich Müller <ulm@gentoo.org> xsel-1.2.0.ebuild:
+  Fix LICENSE, see README and COPYING, bug 446768.
 
   07 May 2012; Jeroen Roovers <jer@gentoo.org> -xsel-1.1.0.ebuild:
   Old.
