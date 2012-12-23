@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/telepathy-farstream
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farstream/ChangeLog,v 1.9 2012/12/08 01:25:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farstream/ChangeLog,v 1.10 2012/12/23 18:07:27 maekke Exp $
+
+  23 Dec 2012; Markus Meier <maekke@gentoo.org>
+  telepathy-farstream-0.4.0.ebuild:
+  add ~arm
 
   08 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   telepathy-farstream-0.2.3.ebuild, telepathy-farstream-0.4.0.ebuild:
