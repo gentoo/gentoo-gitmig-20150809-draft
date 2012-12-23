@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.195 2012/12/23 18:31:36 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.196 2012/12/23 19:11:21 ago Exp $
+
+  23 Dec 2012; Agostino Sarubbo <ago@gentoo.org> debootstrap-1.0.44.ebuild:
+  Stable for ppc64, wrt bug #448102
 
   23 Dec 2012; Jeff Horelick <jdhore@gentoo.org> debootstrap-1.0.44.ebuild:
   marked x86 per bug 448102
