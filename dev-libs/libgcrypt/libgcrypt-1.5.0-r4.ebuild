@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.5.0-r4.ebuild,v 1.1 2012/12/04 04:16:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.5.0-r4.ebuild,v 1.2 2012/12/23 19:49:52 grobian Exp $
 
 EAPI="4"
 
@@ -35,13 +35,15 @@ src_prepare() {
 src_configure() {
 	# --disable-padlock-support for bug #201917
 	# --disable-asm: http://trac.videolan.org/vlc/ticket/620
+	# --disable-asm: causes bus-errors on sparc64-solaris
 	econf \
 		--disable-padlock-support \
 		--disable-dependency-tracking \
 		--enable-noexecstack \
 		--disable-O-flag-munging \
 		$(use_enable static-libs static) \
-		$([[ ${CHOST} == *86*-darwin* ]] && echo "--disable-asm")
+		$([[ ${CHOST} == *86*-darwin* ]] && echo "--disable-asm") \
+		$([[ ${CHOST} == sparcv9-*-solaris* ]] && echo "--disable-asm")
 }
 
 src_install() {
