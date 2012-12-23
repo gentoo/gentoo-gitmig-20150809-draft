@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/openbabel-python-2.3.2.ebuild,v 1.1 2012/12/06 17:09:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/openbabel-python-2.3.2.ebuild,v 1.2 2012/12/23 11:33:46 jlec Exp $
 
 EAPI=5
 
@@ -47,7 +47,6 @@ src_prepare() {
 
 src_configure() {
 	my_impl_src_configure() {
-		CMAKE_BUILD_DIR="${BUILD_DIR}"
 		local mycmakeargs="${mycmakeargs}
 			-DCMAKE_INSTALL_RPATH=
 			-DBINDINGS_ONLY=ON
@@ -67,29 +66,20 @@ src_configure() {
 }
 
 src_compile() {
-	my_impl_src_compile() {
-		CMAKE_BUILD_DIR="${BUILD_DIR}"
-
-		cmake-utils_src_make bindings_python
-	}
-
-	python_foreach_impl my_impl_src_compile
+	python_foreach_impl cmake-utils_src_make bindings_python
 }
 
 src_test() {
-	my_impl_src_test() {
-		CMAKE_BUILD_DIR="${BUILD_DIR}"
-		cmake-utils_src_test -R py
-	}
-
-	python_foreach_impl my_impl_src_test
+	python_foreach_impl cmake-utils_src_test -R py
 }
 
 src_install() {
 	my_impl_src_install() {
-		cd "${BUILD_DIR}"
+		cd "${BUILD_DIR}" || die
 
 		cmake -DCOMPONENT=bindings_python -P cmake_install.cmake
+
+		python_optimize
 	}
 
 	python_foreach_impl my_impl_src_install
