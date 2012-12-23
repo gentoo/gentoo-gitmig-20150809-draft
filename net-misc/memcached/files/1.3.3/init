@@ -1,17 +1,17 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/files/1.3.3/init,v 1.2 2011/12/31 20:36:20 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/files/1.3.3/init,v 1.3 2012/12/23 18:05:21 robbat2 Exp $
 
 CONF="${SVCNAME#*.}"
 CONFBASE="/etc/conf.d/memcached"
 
 [ -z "${PIDBASE}" ] && PIDBASE="/var/run/memcached/memcached"
-[ "${CONF}" == "memcached" ] && CONF=''
+[ "${CONF}" = "memcached" ] && CONF=''
 
 if [ -n "${CONF}" ]; then
         PIDFILE="${PIDBASE}-${PORT}.${CONF}.pid"
         CONFSRC="${CONFBASE}.${CONF}"
         if [ -f "${CONFSRC}" ]; then
-         source "${CONFSRC}"
+         . "${CONFSRC}"
         else
          eerror "The configuration file $CONFSRC was not found!"
         fi
