@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/evilwm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.54 2011/08/13 01:54:31 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.55 2012/12/23 20:38:42 ulm Exp $
+
+  23 Dec 2012; Ulrich Müller <ulm@gentoo.org> evilwm-1.0.1.ebuild,
+  evilwm-1.1.0_pre8.ebuild, evilwm-1.1.0.ebuild:
+  Fix LICENSE, see README file, bug 446798.
 
 *evilwm-1.1.0 (13 Aug 2011)
 

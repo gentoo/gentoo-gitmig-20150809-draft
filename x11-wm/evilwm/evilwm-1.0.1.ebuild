@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-1.0.1.ebuild,v 1.6 2010/08/16 19:15:27 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-1.0.1.ebuild,v 1.7 2012/12/23 20:38:42 ulm Exp $
 
 EAPI=3
 inherit toolchain-funcs multilib
@@ -9,10 +9,10 @@ DESCRIPTION="A minimalist, no frills window manager for X."
 SRC_URI="http://www.6809.org.uk/evilwm/${P}.tar.gz"
 HOMEPAGE="http://evilwm.sourceforge.net"
 
-IUSE=""
+LICENSE="MIT 9wm"
 SLOT="0"
-LICENSE="as-is"
 KEYWORDS="alpha amd64 ppc sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~sparc64-solaris"
+IUSE=""
 
 RDEPEND="x11-libs/libXext
 	x11-libs/libXrandr"
