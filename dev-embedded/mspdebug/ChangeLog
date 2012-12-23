@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/mspdebug
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/mspdebug/ChangeLog,v 1.12 2012/12/13 20:42:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/mspdebug/ChangeLog,v 1.13 2012/12/23 08:18:44 radhermit Exp $
+
+  23 Dec 2012; Tim Harder <radhermit@gentoo.org> mspdebug-0.20.ebuild,
+  mspdebug-0.21.ebuild:
+  Remove EPREFIX usage.
 
   13 Dec 2012; Tim Harder <radhermit@gentoo.org> -mspdebug-0.18.ebuild,
   -mspdebug-0.19.ebuild:

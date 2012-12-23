@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/mspdebug/mspdebug-0.21.ebuild,v 1.1 2012/11/26 09:57:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/mspdebug/mspdebug-0.21.ebuild,v 1.2 2012/12/23 08:18:44 radhermit Exp $
 
 EAPI=5
 
@@ -28,6 +28,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" PREFIX="${EPREFIX}"/usr install
+	emake DESTDIR="${ED}" PREFIX=/usr install
 	dodoc AUTHORS ChangeLog README
 }
