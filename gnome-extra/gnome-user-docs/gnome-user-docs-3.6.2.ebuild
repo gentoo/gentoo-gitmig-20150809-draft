@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/gnome-user-docs-3.4.1.ebuild,v 1.1 2012/05/14 06:05:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/gnome-user-docs-3.6.2.ebuild,v 1.1 2012/12/23 23:47:55 eva Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="no"
 
 inherit gnome2
@@ -34,11 +34,12 @@ RESTRICT="binchecks strip"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-pkg_setup() {
+src_configure() {
 	# itstool is only needed for rebuilding translations
 	G2CONF="${G2CONF} ITSTOOL=$(type -P true)"
 	# xmllint is only needed for tests
 	use test || G2CONF="${G2CONF} XMLLINT=$(type -P true)"
+	gnome2_src_configure
 }
 
 src_compile() {
