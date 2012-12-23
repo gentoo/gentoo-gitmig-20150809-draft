@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.31 2012/12/02 15:26:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.32 2012/12/23 14:40:40 hwoarang Exp $
 
 EAPI=5
 
@@ -50,6 +50,10 @@ src_prepare() {
 	sed -i -e "s:-O0::" -e "/-DG_ENABLE_DEBUG/s: -g::" "${S}"/configure.ac || die
 	#Remove -Werror for automake-1.12. Bug #421101
 	sed -i "s:-Werror::" configure.ac || die
+	# Drop the symlink. We will create it later on. 439580
+	sed -i "/@LN_S@ @PACKAGE@-@FMLIBVER@/d" src/Makefile.am \
+		|| die "failed to remove the includedir symlink"
+
 	eautoreconf
 	rm -r autom4te.cache || die
 	use vala && export VALAC="$(type -p valac-$(vala_best_api_version))"
@@ -71,10 +75,9 @@ src_configure() {
 src_install() {
 	default
 	find "${D}" -name '*.la' -exec rm -f '{}' +
-	# Remove symlink #439570
-	if [[ -h ${D}/usr/include/${PN} ]]; then
-		rm "${D}"/usr/include/${PN}
-	fi
+	# 439570
+	[[ -d ${D}/usr/include/${PN} ]] \
+		&& rm -r ${D}/usr/include/${PN}
 }
 
 pkg_preinst() {
