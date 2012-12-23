@@ -1,6 +1,19 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.127 2012/12/22 17:25:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.128 2012/12/23 11:40:58 flameeyes Exp $
+
+  23 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> -files/logrotate.d-munin,
+  -files/munin-1.3.3-crontab, -files/munin-1.4.4-Makefile.patch,
+  -files/munin-1.4.6-apc-multi.patch, -files/munin-1.4.6-apc-temp.patch,
+  -files/munin-1.4.6-fix-asterisk-plugins.patch,
+  -files/munin-1.4.6-if_-hardened-v2.patch,
+  -files/munin-1.4.6-if_-hardened.patch,
+  -files/munin-1.4.6-munin-version-identifier.patch, -files/munin-asyncd.init,
+  -files/munin-node_init.d_1.4.6-r2, -files/munin-node_init.d_2.0.2,
+  -files/munin-node_init.d_2.0.5, -munin-1.4.6-r4.ebuild, munin-2.0.8-r2.ebuild,
+  munin-2.0.9.ebuild:
+  Remove munin 1.4.6 (and related files); add missing dependency on List-
+  Moreutils for the spooled node on 2.0.x.
 
   22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> munin-2.0.9.ebuild:
   Add ~ppc, wrt bug #446958
