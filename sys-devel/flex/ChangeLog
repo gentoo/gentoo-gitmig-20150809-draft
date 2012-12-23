@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/flex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.102 2012/12/23 17:04:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.103 2012/12/23 19:13:54 jdhore Exp $
+
+  23 Dec 2012; Jeff Horelick <jdhore@gentoo.org> flex-2.5.37.ebuild:
+  marked x86 per bug 447964
 
   23 Dec 2012; Agostino Sarubbo <ago@gentoo.org> flex-2.5.37.ebuild:
   Stable for ppc64, wrt bug #447964
