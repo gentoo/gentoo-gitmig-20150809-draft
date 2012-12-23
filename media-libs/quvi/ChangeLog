@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/quvi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.46 2012/12/23 18:26:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.47 2012/12/23 19:10:24 ago Exp $
+
+  23 Dec 2012; Agostino Sarubbo <ago@gentoo.org> quvi-0.4.2.ebuild:
+  Stable for ppc64, wrt bug #447554
 
   23 Dec 2012; Jeff Horelick <jdhore@gentoo.org> quvi-0.4.2.ebuild:
   marked x86 per bug 447554
