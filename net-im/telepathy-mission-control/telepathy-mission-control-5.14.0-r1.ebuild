@@ -1,12 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.12.2.ebuild,v 1.1 2012/09/15 09:01:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.14.0-r1.ebuild,v 1.1 2012/12/23 16:22:09 eva Exp $
 
-EAPI="4"
+EAPI="5"
+GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_DEPEND="2:2.5"
+PYTHON_COMPAT=( python2_{5,6,7} )
 
-inherit python gnome2
+inherit gnome2 python-any-r1
 
 DESCRIPTION="An account manager and channel dispatcher for the Telepathy framework."
 HOMEPAGE="http://telepathy.freedesktop.org/wiki/Mission%20Control"
@@ -15,39 +16,34 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="connman gnome-keyring networkmanager +upower"
-# IUSE="test"
+IUSE="connman debug gnome-keyring networkmanager +upower" # test
+REQUIRED_USE="?? ( connman networkmanager )"
 
-RDEPEND=">=net-libs/telepathy-glib-0.17.5
+RDEPEND="
 	>=dev-libs/dbus-glib-0.82
 	>=dev-libs/glib-2.30:2
+	>=sys-apps/dbus-0.95
+	>=net-libs/telepathy-glib-0.19
 	connman? ( net-misc/connman )
 	gnome-keyring? ( gnome-base/libgnome-keyring )
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
-	upower? ( >=sys-power/upower-0.9.11 )"
+	upower? ( >=sys-power/upower-0.9.11 )
+"
 DEPEND="${RDEPEND}
+	dev-libs/libxslt
+	>=dev-util/gtk-doc-am-1.17
 	virtual/pkgconfig
-	dev-libs/libxslt"
+"
 #	test? ( dev-python/twisted-words )"
 
 # Tests are broken, see upstream bug #29334
 # upstream doesn't want it enabled everywhere
-RESTRICT="test"
-
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
-
-src_prepare() {
-	python_convert_shebangs -r 2 .
-}
+#RESTRICT="test"
 
 src_configure() {
-	# creds is not available and no support mcd-plugins for now
-	econf --disable-static\
-		--disable-mcd-plugins \
-		--disable-schemas-compile \
+	# creds is not available
+	econf --disable-static \
+		$(use_enable debug) \
 		$(use_enable gnome-keyring) \
 		$(use_with connman connectivity connman) \
 		$(use_with networkmanager connectivity nm) \
