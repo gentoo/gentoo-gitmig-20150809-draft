@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/tpm-tools-1.3.5-r1.ebuild,v 1.3 2012/09/11 00:55:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/tpm-tools-1.3.5-r1.ebuild,v 1.4 2012/12/23 18:20:22 vapier Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic
@@ -8,6 +8,7 @@ inherit autotools eutils flag-o-matic
 DESCRIPTION="TrouSerS' support tools for the Trusted Platform Modules"
 HOMEPAGE="http://trousers.sourceforge.net"
 SRC_URI="mirror://sourceforge/trousers/${P}.tar.gz"
+
 LICENSE="CPL-1.0"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
@@ -33,17 +34,13 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf="$(use_enable nls)"
-
+	local myconf
 	# don't use --enable-pkcs11-support, configure is a mess.
 	use pkcs11 || myconf+=" --disable-pkcs11-support"
 
-	use debug && append-flags -DDEBUG || append-flags -DNDEBUG
+	append-flags $(usex debug -DDEBUG -DNDEBUG)
 
-	econf ${myconf}
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README
+	econf \
+		$(use_enable nls) \
+		${myconf}
 }
