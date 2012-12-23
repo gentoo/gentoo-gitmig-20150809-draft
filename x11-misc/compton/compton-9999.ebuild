@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-9999.ebuild,v 1.3 2012/11/17 23:24:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-9999.ebuild,v 1.4 2012/12/23 15:56:31 hasufell Exp $
 
 EAPI=5
 
@@ -32,12 +32,18 @@ RDEPEND="${COMMON_DEPEND}
 	x11-apps/xprop
 	x11-apps/xwininfo"
 DEPEND="${COMMON_DEPEND}
+	app-text/asciidoc
 	virtual/pkgconfig
 	x11-libs/libdrm
 	x11-proto/xproto"
 
 pkg_setup() {
 	tc-export CC
+}
+
+src_compile() {
+	emake docs
+	emake compton
 }
 
 src_install() {
