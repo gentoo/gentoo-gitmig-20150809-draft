@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kontact
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.242 2012/12/08 12:04:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.243 2012/12/23 11:09:54 maekke Exp $
+
+  23 Dec 2012; Markus Meier <maekke@gentoo.org> kontact-4.9.4.ebuild:
+  add ~arm
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   kontact-4.4.11.1.ebuild, kontact-4.4.11.1-r1.ebuild:

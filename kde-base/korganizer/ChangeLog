@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.250 2012/12/08 12:04:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.251 2012/12/23 11:16:43 maekke Exp $
+
+  23 Dec 2012; Markus Meier <maekke@gentoo.org> korganizer-4.9.4.ebuild:
+  add ~arm
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   korganizer-4.4.11.1.ebuild:
