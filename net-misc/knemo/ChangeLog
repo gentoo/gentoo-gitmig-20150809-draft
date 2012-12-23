@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/knemo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.64 2012/11/13 08:07:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.65 2012/12/23 17:01:48 dastergon Exp $
+
+*knemo-0.7.6 (23 Dec 2012)
+
+  23 Dec 2012; Pavlos Ratis <dastergon@gentoo.org> +knemo-0.7.6.ebuild:
+  Version bump, 0.7.6
 
   13 Nov 2012; Lars Wendler <polynomial-c@gentoo.org> knemo-0.7.5.ebuild:
   non-maintainer commit: Fixed dependency on dev-libs/libnl.
