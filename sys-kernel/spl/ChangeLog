@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.34 2012/12/12 18:18:09 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.35 2012/12/23 05:37:46 ryao Exp $
+
+*spl-0.6.0_rc13 (23 Dec 2012)
+
+  23 Dec 2012; Richard Yao <ryao@gentoo.org> +spl-0.6.0_rc13.ebuild:
+  Bump sys-kernel/spl to 0.6.0_rc13
 
   12 Dec 2012; Richard Yao <ryao@gentoo.org> metadata.xml,
   spl-0.6.0_rc10.ebuild, spl-0.6.0_rc11-r2.ebuild, spl-0.6.0_rc11.ebuild,
