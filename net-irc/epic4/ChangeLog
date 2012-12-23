@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/epic4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.94 2012/02/06 17:26:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.95 2012/12/23 20:12:41 ulm Exp $
+
+  23 Dec 2012; Ulrich Müller <ulm@gentoo.org> epic4-2.10.ebuild,
+  epic4-2.10.1.ebuild:
+  Fix LICENSE, see COPYRIGHT file, bug 446708.
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> epic4-2.10.1.ebuild:
   Marking epic4-2.10.1 ppc for bug 397151

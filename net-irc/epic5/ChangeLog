@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/epic5
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/ChangeLog,v 1.18 2011/06/01 14:45:08 binki Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/ChangeLog,v 1.19 2012/12/23 20:14:47 ulm Exp $
+
+  23 Dec 2012; Ulrich Müller <ulm@gentoo.org> epic5-0.3.5.ebuild,
+  epic5-1.0.ebuild, epic5-1.1.2.ebuild:
+  Fix LICENSE, see COPYRIGHT file, bug 446708.
 
 *epic5-1.1.2 (01 Jun 2011)
 

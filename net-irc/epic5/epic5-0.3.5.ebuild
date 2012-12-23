@@ -1,14 +1,15 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-0.3.5.ebuild,v 1.3 2007/11/14 04:11:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-0.3.5.ebuild,v 1.4 2012/12/23 20:14:47 ulm Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Epic5 IRC Client"
 SRC_URI="ftp://ftp.epicsol.org/pub/epic/EPIC5-ALPHA/${P}.tar.bz2"
 HOMEPAGE="http://epicsol.org/"
+
+LICENSE="BSD"
 SLOT="0"
-LICENSE="as-is"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="ipv6 perl ssl tcl socks5"
 
