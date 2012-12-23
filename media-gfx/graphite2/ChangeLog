@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphite2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.36 2012/12/20 11:20:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.37 2012/12/23 20:55:41 ago Exp $
+
+  23 Dec 2012; Agostino Sarubbo <ago@gentoo.org> graphite2-1.2.0.ebuild:
+  Add ~ppc64, wrt bug #447854
 
   20 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/graphite2-fix_wrong_linker_opts.patch, -graphite2-1.1.3.ebuild:
