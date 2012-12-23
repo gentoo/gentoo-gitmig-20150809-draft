@@ -1,10 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.26 2012/11/24 19:17:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.27 2012/12/23 12:32:32 ssuominen Exp $
 
 # Samuli Suominen <ssuominen@gentoo.org> (15 May 2012)
-# Replaced by USE="udisks" in make.defaults. Remove this line after
-# >=gnome-base/gvfs-1.12.3-r1 has stabilized.
+# Replaced by USE="udisks" in make.defaults for -r1 and higher
 <gnome-base/gvfs-1.12.3-r1 gdu -udisks
 
 # Jeremy Olexa <darkside@gentoo.org> (07 Oct 2011)
@@ -17,13 +16,12 @@ media-libs/libpng apng
 
 # Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
 # Required by udev helpers like udisks and upower
-sys-fs/udev gudev hwdb keymap introspection
-virtual/udev gudev hwdb keymap introspection
-<sys-fs/udev-171 extras
-sys-apps/pciutils -compress-db
+sys-fs/eudev gudev hwdb introspection keymap
+>=sys-fs/udev-171 gudev hwdb introspection keymap
+>=virtual/udev-171 gudev hwdb introspection keymap
 
 # Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
-# Support for desktop icons
+# Support for desktop file icons
 xfce-base/xfdesktop thunar
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (26 Mar 2008)
