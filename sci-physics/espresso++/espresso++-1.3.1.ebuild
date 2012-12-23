@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso++/espresso++-1.3.1.ebuild,v 1.2 2012/10/09 18:10:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso++/espresso++-1.3.1.ebuild,v 1.3 2012/12/23 00:26:04 ottxor Exp $
 
 EAPI=4
 
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="2:2.6"
 
 inherit cmake-utils python
 
@@ -16,7 +16,8 @@ if [[ ${PV} = 9999 ]]; then
 	EHG_REVISION="default"
 	inherit mercurial
 else
-	SRC_URI="https://espressopp.mpip-mainz.mpg.de/Download/${PN%++}pp_${PV//./_}.tgz"
+	SRC_URI="https://www.espresso-pp.de/Download/${PN%++}pp_${PV//./_}.tgz"
+	S="${WORKDIR}/${PN%++}pp"
 fi
 
 LICENSE="GPL-3"
@@ -31,9 +32,11 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${PN%++}pp"
-
 DOCS=( AUTHORS NEWS README )
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_configure() {
 	mycmakeargs=(
