@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics-mobipocket
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-mobipocket/ChangeLog,v 1.33 2012/12/08 11:53:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-mobipocket/ChangeLog,v 1.34 2012/12/23 19:32:32 maekke Exp $
+
+  23 Dec 2012; Markus Meier <maekke@gentoo.org>
+  kdegraphics-mobipocket-4.9.4.ebuild:
+  add ~arm
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -kdegraphics-mobipocket-4.8.5.ebuild:
