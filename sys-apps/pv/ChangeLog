@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.53 2012/12/23 17:02:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.54 2012/12/23 18:18:39 maekke Exp $
+
+  23 Dec 2012; Markus Meier <maekke@gentoo.org> pv-1.3.9.ebuild:
+  arm stable, bug #446732
 
   23 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pv-1.3.9.ebuild:
   Stable for ppc64, wrt bug #446732
