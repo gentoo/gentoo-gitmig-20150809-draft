@@ -1,6 +1,9 @@
 # ChangeLog for media-video/guvcview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.36 2012/12/11 16:46:14 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.37 2012/12/23 11:27:37 ssuominen Exp $
+
+  23 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> guvcview-1.6.1.ebuild:
+  Pull in virtual/os-headers for #include <linux/foo.h> type of code
 
   11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> guvcview-1.6.1.ebuild:
   virtualize the udev dependency
