@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/icecast
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.93 2012/09/18 10:09:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.94 2012/12/23 19:24:09 hwoarang Exp $
+
+*icecast-2.3.3-r1 (23 Dec 2012)
+
+  23 Dec 2012; Markos Chandras <hwoarang@gentoo.org> +files/icecast.logrotate,
+  +icecast-2.3.3-r1.ebuild, metadata.xml:
+  Add logrotate file thanks to DEMAINE Benoît-Pierre <dhp_gentoo@doublehp.org>.
+  Bug #324727
 
   18 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> icecast-2.3.3.ebuild:
   ppc64 stable wrt #394847, add missing inherit of user.eclass and explicit
