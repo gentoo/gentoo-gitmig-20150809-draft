@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/hsqldb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.70 2012/10/17 08:19:33 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.71 2012/12/23 15:12:57 sera Exp $
+
+*hsqldb-1.8.1.3-r1 (23 Dec 2012)
+
+  23 Dec 2012; Ralph Sennhauser <sera@gentoo.org> +hsqldb-1.8.1.3-r1.ebuild,
+  +files/hsqldb-1.8.1.3-java7.patch:
+  Add support for JDBC 4.1/Java 7, thanks to hollow for finding and reporting
+  the patch. #384161
+  Bump servlet-api dep to 2.5 and make better use of generation-2 eclasses.
 
   17 Oct 2012; Christoph Junghans <ottxor@gentoo.org> hsqldb-1.8.1.3.ebuild:
   added prefix support (bug #435274)
