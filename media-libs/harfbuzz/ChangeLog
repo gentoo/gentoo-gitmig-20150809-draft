@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.14 2012/12/17 19:33:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.15 2012/12/23 20:54:42 ago Exp $
+
+  23 Dec 2012; Agostino Sarubbo <ago@gentoo.org> harfbuzz-0.9.9.ebuild:
+  Add ~ppc64, wrt bug #447854
 
   17 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
   Add to gnome herd, acked by Tomáš.
