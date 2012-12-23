@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/tpm-emulator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/ChangeLog,v 1.17 2012/12/11 15:44:01 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/ChangeLog,v 1.18 2012/12/23 01:25:26 alonbl Exp $
+
+*tpm-emulator-0.7.4 (23 Dec 2012)
+
+  23 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org> +files/tpm-emulator.confd-0.7.4,
+  +files/tpm-emulator.initd-0.7.4, +tpm-emulator-0.7.4.ebuild,
+  files/tpm-emulator.initd-0.5.1:
+  Version bump, per bug#371551
 
   11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> tpm-emulator-0.5.1-r1.ebuild:
   use udev.eclass to handle rules installation (a cleaner method than the
@@ -81,4 +88,3 @@
   +files/tpm-emulator-0.2a-inline.patch, +metadata.xml,
   +tpm-emulator-0.2a.ebuild:
   initial import
-
