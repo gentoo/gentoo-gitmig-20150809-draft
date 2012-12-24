@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/zlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zlib/ChangeLog,v 1.30 2012/12/22 22:02:02 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zlib/ChangeLog,v 1.31 2012/12/24 15:15:05 slyfox Exp $
+
+  24 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> zlib-0.5.3.3.ebuild:
+  Fix build failure against ghc-7.6 (found by LMolr).
 
   22 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> -zlib-0.5.2.0.ebuild,
   -zlib-0.5.3.1.ebuild, -zlib-0.5.3.2.ebuild:
