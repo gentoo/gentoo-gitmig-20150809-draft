@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/httptype
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/httptype/ChangeLog,v 1.7 2012/12/24 09:25:05 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/httptype/ChangeLog,v 1.8 2012/12/24 09:34:32 pinkbyte Exp $
+
+*httptype-1.3.9-r1 (24 Dec 2012)
+
+  24 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> +httptype-1.3.9-r1.ebuild:
+  Revision bump: EAPI 5, some cleanups
 
   24 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> httptype-1.3.9.ebuild:
   QA: fix description, do not install license file to docs
