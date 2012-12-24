@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.1.3.ebuild,v 1.1 2012/12/24 15:55:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.1.3.ebuild,v 1.2 2012/12/24 17:35:33 jer Exp $
 
 EAPI="4"
 
@@ -49,7 +49,6 @@ src_prepare() {
 		|| die "Number of LINGUAS does not match number of .po files"
 	unset count
 
-	einfo "Keeping these locales: ${LINGUAS}."
 	for lingua in ${SYSSTAT_LINGUAS}; do
 		if ! use linguas_${lingua}; then
 			rm -f "${NLSDIR}/${lingua}.po" || die
