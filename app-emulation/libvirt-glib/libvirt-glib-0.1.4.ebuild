@@ -1,13 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/libvirt-glib-0.1.2.ebuild,v 1.1 2012/09/29 13:39:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/libvirt-glib-0.1.4.ebuild,v 1.1 2012/12/24 20:28:46 pacho Exp $
 
-EAPI="4"
+EAPI=5
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 VALA_MIN_API_VERSION="0.14"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit gnome2 python vala
+inherit gnome2 python-single-r1 vala
 
 DESCRIPTION="GLib and GObject mappings for libvirt"
 HOMEPAGE="http://libvirt.org/git/?p=libvirt-glib.git"
@@ -16,34 +17,24 @@ SRC_URI="ftp://libvirt.org/libvirt/glib/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc +introspection python +vala"
+IUSE="+introspection python +vala"
 REQUIRED_USE="vala? ( introspection )"
 
-RDEPEND="
-	dev-libs/libxml2:2
-	>=app-emulation/libvirt-0.9.10
+RDEPEND="dev-libs/libxml2:2
+	>=app-emulation/libvirt-0.9.10:=
 	>=dev-libs/glib-2.10:2
-	introspection? ( >=dev-libs/gobject-introspection-0.10.8 )"
+	introspection? ( >=dev-libs/gobject-introspection-0.10.8:= )
+	python? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}
+	dev-util/gtk-doc-am
 	virtual/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1.10 )
 	vala? ( $(vala_depend) )"
 
-src_prepare() {
-	use vala && vala_src_prepare
-}
-
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog NEWS README"
-	G2CONF="--disable-test-coverage
+	G2CONF+="--disable-test-coverage
+		--disable-static
 		$(use_enable introspection)
 		$(use_enable vala)
 		$(use_with python)"
-
-	python_set_active_version 2
-	python_pkg_setup
-}
-
-src_compile() {
-	emake -j1
+	use python && python-single-r1_pkg_setup
 }
