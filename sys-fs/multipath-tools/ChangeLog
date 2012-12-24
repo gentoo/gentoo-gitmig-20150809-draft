@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/multipath-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.50 2012/12/23 19:12:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.51 2012/12/24 19:36:53 pinkbyte Exp $
+
+  24 Dec 2012; Sergey Popov <pinkbyte@gentoo.org>
+  multipath-tools-0.4.9-r5.ebuild:
+  Stable on amd64, wrt bug #448060
 
   23 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
   multipath-tools-0.4.9-r5.ebuild:
