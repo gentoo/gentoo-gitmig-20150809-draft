@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.688 2012/11/26 14:31:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.689 2012/12/24 07:49:17 pinkbyte Exp $
+
+  24 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> xine-lib-1.2.1-r1.ebuild,
+  xine-lib-1.2.2.ebuild, xine-lib-1.2.9999.ebuild:
+  Make build log verbose, wrt bug #448140. Thanks to Vicente Olivert Riera for
+  discovering this issue
 
   26 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Update to global useflag.
