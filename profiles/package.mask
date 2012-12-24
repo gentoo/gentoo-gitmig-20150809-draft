@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14323 2012/12/24 08:59:07 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14324 2012/12/24 12:57:19 grozin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -58,13 +58,6 @@ net-wireless/madwifi-ng
 # Masked for removal in 30 days. (17 Jan 2012)
 # This is provided by USE=xtended webalizer, bug #445226
 app-admin/webalizer-xtended
-
-# Andrey Grozin <grozin@gentoo.org> (14 Dec 2012)
-# Stuff from the lisp overlay, with some version bumps
-# Masked for testing
->=dev-lisp/gentoo-init-1.0
->=dev-lisp/asdf-2.26
->=dev-lisp/sbcl-1.1.2
 
 # Sebastien Fabbro <bicatali@gentoo.org> (13 Dec 2012)
 # Necessary removal to get rid of very unstable sci-libs/lapack-atlas
