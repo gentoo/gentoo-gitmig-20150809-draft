@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-4.00.ebuild,v 1.2 2011/12/04 16:48:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-4.00.ebuild,v 1.3 2012/12/24 02:29:19 vapier Exp $
 
 EAPI="2"
 
@@ -26,6 +26,10 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/quota-tools
+
+src_prepare() {
+	sed -i '1iCC = @CC@' Makefile.in || die #446277
+}
 
 src_configure() {
 	econf \
