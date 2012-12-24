@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.2.5.ebuild,v 1.6 2012/12/24 21:07:25 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.3.9.ebuild,v 1.1 2012/12/24 21:07:25 hollow Exp $
 
 EAPI="4"
 
@@ -16,6 +16,13 @@ EAPI="4"
 
 # prevent perl-module from adding automagic perl DEPENDs
 GENTOO_DEPEND_ON_PERL="no"
+
+# syslog
+SYSLOG_MODULE_PV="1.2.0"
+SYSLOG_MODULE_P="ngx_syslog-${SYSLOG_MODULE_PV}"
+SYSLOG_MODULE_SHA1="2686c1c"
+SYSLOG_MODULE_URI="https://github.com/yaoweibin/nginx_syslog_patch/tarball/${SYSLOG_MODULE_SHA1}"
+SYSLOG_MODULE_WD="${WORKDIR}/yaoweibin-nginx_syslog_patch-${SYSLOG_MODULE_SHA1}"
 
 # devel_kit (https://github.com/simpl/ngx_devel_kit, BSD license)
 DEVEL_KIT_MODULE_PV="0.2.17"
@@ -80,6 +87,7 @@ inherit eutils ssl-cert toolchain-funcs perl-module flag-o-matic user
 DESCRIPTION="Robust, small and high performance http and reverse proxy server"
 HOMEPAGE="http://nginx.org"
 SRC_URI="http://nginx.org/download/${P}.tar.gz
+	syslog? ( ${SYSLOG_MODULE_URI} -> ${SYSLOG_MODULE_P}.tar.gz )
 	${DEVEL_KIT_MODULE_URI} -> ${DEVEL_KIT_MODULE_P}.tar.gz
 	nginx_modules_http_upload_progress? ( ${HTTP_UPLOAD_PROGRESS_MODULE_URI} -> ${HTTP_UPLOAD_PROGRESS_MODULE_P}.tar.gz )
 	nginx_modules_http_headers_more? ( ${HTTP_HEADERS_MORE_MODULE_URI} -> ${HTTP_HEADERS_MORE_MODULE_P}.tar.gz )
@@ -90,9 +98,9 @@ SRC_URI="http://nginx.org/download/${P}.tar.gz
 	nginx_modules_http_fancyindex? ( ${HTTP_FANCYINDEX_MODULE_URI} -> ${HTTP_FANCYINDEX_MODULE_P}.tar.gz )
 	nginx_modules_http_lua? ( ${HTTP_LUA_MODULE_URI} -> ${HTTP_LUA_MODULE_P}.tar.gz )"
 
-LICENSE="BSD-2 BSD MIT GPL-2"
+LICENSE="BSD-2 BSD SSLeay MIT GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
 NGINX_MODULES_STD="access auth_basic autoindex browser charset empty_gif fastcgi
 geo gzip limit_req limit_conn map memcached proxy referer rewrite scgi ssi
@@ -111,7 +119,8 @@ NGINX_MODULES_3RD="
 	http_fancyindex
 	http_lua"
 
-IUSE="aio debug +http +http-cache ipv6 libatomic +pcre pcre-jit selinux ssl vim-syntax"
+IUSE="aio debug +http +http-cache ipv6 libatomic +pcre pcre-jit selinux ssl
+syslog vim-syntax"
 
 for mod in $NGINX_MODULES_STD; do
 	IUSE="${IUSE} +nginx_modules_http_${mod}"
@@ -195,6 +204,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	use syslog && epatch "${SYSLOG_MODULE_WD}"/syslog_${SYSLOG_MODULE_PV}.patch
+
 	find auto/ -type f -print0 | xargs -0 sed -i 's:\&\& make:\&\& \\$(MAKE):' || die
 	# We have config protection, don't rename etc files
 	sed -i 's:.default::' auto/install || die
@@ -211,6 +222,11 @@ src_configure() {
 	use libatomic && myconf+=" --with-libatomic"
 	use pcre      && myconf+=" --with-pcre"
 	use pcre-jit  && myconf+=" --with-pcre-jit"
+
+	# syslog support
+	if use syslog; then
+		myconf+=" --add-module=${SYSLOG_MODULE_WD}"
+	fi
 
 	# HTTP modules
 	for mod in $NGINX_MODULES_STD; do
@@ -356,6 +372,11 @@ src_install() {
 		cd "${S}"/objs/src/http/modules/perl/
 		einstall DESTDIR="${D}" INSTALLDIRS=vendor
 		fixlocalpod
+	fi
+
+	if use syslog; then
+		docinto ${SYSLOG_MODULE_P}
+		dodoc "${SYSLOG_MODULE_WD}"/README
 	fi
 
 	if use nginx_modules_http_push; then
