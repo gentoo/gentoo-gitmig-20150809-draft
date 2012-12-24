@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-sqlite/hdbc-sqlite-2.3.3.0.ebuild,v 1.3 2012/12/07 10:35:19 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-sqlite/hdbc-sqlite-2.3.3.0.ebuild,v 1.4 2012/12/24 15:37:59 slyfox Exp $
 
 EAPI=4
 
@@ -38,6 +38,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
+	epatch "${FILESDIR}/${MY_PN}-2.3.3.0-ghc-7.6.patch"
 	cp "${FILESDIR}/TestTime.hs" "${S}/testsrc"
 }
 
