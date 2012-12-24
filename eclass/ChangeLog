@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.574 2012/12/22 03:57:14 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.575 2012/12/24 02:51:25 zmedico Exp $
+
+  24 Dec 2012; Zac Medico <zmedico@gentoo.org> python-any-r1.eclass:
+  Fix python-any-r1_pkg_setup fallback logic.
 
   22 Dec 2012; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
   Tweak sed expression to match against Qt 4.8.4 too. Thanks to Tomasz
