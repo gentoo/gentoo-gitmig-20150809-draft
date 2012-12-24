@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/unetbootin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.92 2012/10/17 13:28:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.93 2012/12/24 15:33:39 jer Exp $
+
+*unetbootin-583 (24 Dec 2012)
+
+  24 Dec 2012; Jeroen Roovers <jer@gentoo.org> +unetbootin-583.ebuild:
+  Version bump.
 
   17 Oct 2012; Jeroen Roovers <jer@gentoo.org> -unetbootin-575.ebuild,
   -unetbootin-577.ebuild, -unetbootin-578.ebuild:
