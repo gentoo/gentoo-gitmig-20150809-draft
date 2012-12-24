@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mcrypt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.39 2012/12/23 16:56:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.40 2012/12/24 20:11:04 pinkbyte Exp $
+
+  24 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> mcrypt-2.6.8-r2.ebuild:
+  Stable on amd64, wrt bug #440778
 
   23 Dec 2012; Jeff Horelick <jdhore@gentoo.org> mcrypt-2.6.8-r2.ebuild:
   marked x86 per bug 440778
