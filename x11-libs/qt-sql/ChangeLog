@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-sql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.152 2012/12/05 03:29:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.153 2012/12/24 16:44:12 jer Exp $
+
+  24 Dec 2012; Jeroen Roovers <jer@gentoo.org> qt-sql-4.8.4.ebuild:
+  Stable for HPPA (bug #445956).
 
 *qt-sql-4.8.4 (05 Dec 2012)
 

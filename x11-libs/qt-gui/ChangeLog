@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.205 2012/12/05 03:20:44 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.206 2012/12/24 16:45:42 jer Exp $
+
+  24 Dec 2012; Jeroen Roovers <jer@gentoo.org> qt-gui-4.8.4.ebuild:
+  Stable for HPPA (bug #445956).
 
 *qt-gui-4.8.4 (05 Dec 2012)
 
