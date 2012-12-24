@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/genius
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/genius/ChangeLog,v 1.5 2011/03/07 10:41:50 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/genius/ChangeLog,v 1.6 2012/12/24 12:38:35 grozin Exp $
+
+*genius-1.0.16 (24 Dec 2012)
+
+  24 Dec 2012; Andrey Grozin <grozin@gentoo.org> +genius-1.0.16.ebuild:
+  Version bump
 
   07 Mar 2011; Justin Lecher <jlec@gentoo.org> genius-1.0.9.ebuild,
   genius-1.0.11.ebuild:
