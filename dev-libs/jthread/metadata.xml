@@ -4,6 +4,6 @@
 	<herd>voip</herd>
 	<maintainer>
 		<email>pinkbyte@gentoo.org</email>
-		<description>Sergey Popov</description>
+		<name>Sergey Popov</name>
 	</maintainer>
 </pkgmetadata>
