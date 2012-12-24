@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/evolution-groupwise
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-groupwise/ChangeLog,v 1.6 2012/12/19 06:56:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-groupwise/ChangeLog,v 1.7 2012/12/24 04:49:56 tetromino Exp $
+
+  24 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  evolution-groupwise-3.4.2.ebuild:
+  Depend on evolution-data-server with the same major/minor version (bug
+  #448350).
 
   19 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   -evolution-groupwise-3.2.3.ebuild, -evolution-groupwise-3.4.0.ebuild:

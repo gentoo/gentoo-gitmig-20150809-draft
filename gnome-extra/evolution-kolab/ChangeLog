@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/evolution-kolab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-kolab/ChangeLog,v 1.3 2012/12/19 07:01:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-kolab/ChangeLog,v 1.4 2012/12/24 04:51:47 tetromino Exp $
+
+  24 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  evolution-kolab-3.4.4.ebuild, evolution-kolab-3.6.2.ebuild:
+  Depend on evolution-data-server with the same major/minor version (bug
+  #448350).
 
 *evolution-kolab-3.6.2 (19 Dec 2012)
 

@@ -1,12 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-kolab/evolution-kolab-3.6.2.ebuild,v 1.1 2012/12/19 07:01:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-kolab/evolution-kolab-3.6.2.ebuild,v 1.2 2012/12/24 04:51:47 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit autotools eutils gnome2
+inherit autotools eutils gnome2 versionator
+
+MY_MAJORV=$(get_version_component_range 1-2)
 
 DESCRIPTION="Evolution module for connecting to Kolab groupware servers"
 HOMEPAGE="https://live.gnome.org/Evolution/Kolab"
@@ -18,6 +20,7 @@ IUSE="" # kerberos (does nothing useful for now)
 
 RDEPEND=">=mail-client/evolution-${PV}:2.0
 	>=gnome-extra/evolution-data-server-${PV}
+	=gnome-extra/evolution-data-server-${MY_MAJORV}*
 	>=dev-db/sqlite-3.7:3
 	>=dev-libs/glib-2.32:2
 	>=dev-libs/libical-0.44
