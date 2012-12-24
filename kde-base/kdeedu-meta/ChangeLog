@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.234 2012/12/08 11:53:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.235 2012/12/24 12:14:26 maekke Exp $
+
+  24 Dec 2012; Markus Meier <maekke@gentoo.org> kdeedu-meta-4.9.4.ebuild:
+  add ~arm
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -kdeedu-meta-4.8.5.ebuild:
