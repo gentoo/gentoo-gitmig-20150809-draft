@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.561 2012/12/24 04:20:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.562 2012/12/24 04:56:29 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1850,15 +1850,18 @@ should_we_gcc_config() {
 		# We don't want to switch from say gcc-3.3 to gcc-3.4 right in
 		# the middle of an emerge operation (like an 'emerge -e world'
 		# which could install multiple gcc versions).
-		einfo "The current gcc config appears valid, so it will not be"
-		einfo "automatically switched for you.	If you would like to"
-		einfo "switch to the newly installed gcc version, do the"
-		einfo "following:"
-		echo
-		einfo "gcc-config ${CTARGET}-${GCC_CONFIG_VER}"
-		einfo "source /etc/profile"
-		echo
-		ebeep
+		# Only warn if we're installing a pkg as we might be called from
+		# the pkg_{pre,post}rm steps.  #446830
+		if [[ ${EBUILD_PHASE} == *"inst" ]] ; then
+			einfo "The current gcc config appears valid, so it will not be"
+			einfo "automatically switched for you.  If you would like to"
+			einfo "switch to the newly installed gcc version, do the"
+			einfo "following:"
+			echo
+			einfo "gcc-config ${CTARGET}-${GCC_CONFIG_VER}"
+			einfo "source /etc/profile"
+			echo
+		fi
 		return 1
 	fi
 }
