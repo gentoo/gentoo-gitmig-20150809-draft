@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyopengl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.70 2012/10/30 07:56:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.71 2012/12/24 21:37:51 mgorny Exp $
+
+*pyopengl-3.0.2-r1 (24 Dec 2012)
+
+  24 Dec 2012; Michał Górny <mgorny@gentoo.org> +pyopengl-3.0.2-r1.ebuild:
+  Migrate to distutils-r1. Restrict python2.5 as reported by dol-sen.
 
 *pyopengl-3.0.2 (30 Oct 2012)
 
