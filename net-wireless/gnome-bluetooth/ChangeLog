@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.121 2012/12/11 21:59:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.122 2012/12/24 11:12:03 eva Exp $
+
+*gnome-bluetooth-3.6.1 (24 Dec 2012)
+
+  24 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/61-gnome-bluetooth.rules, -gnome-bluetooth-3.2.2.ebuild,
+  +gnome-bluetooth-3.6.1.ebuild, metadata.xml:
+  Version bump for Gnome 3.6. Switch to EAPI=5, ACL support for udev rules.
 
   11 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
   gnome-bluetooth-2.32.0-r1.ebuild, gnome-bluetooth-3.2.2.ebuild:

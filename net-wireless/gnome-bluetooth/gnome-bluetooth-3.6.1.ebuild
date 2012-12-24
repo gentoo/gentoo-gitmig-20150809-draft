@@ -1,26 +1,25 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.2.2.ebuild,v 1.7 2012/12/11 21:59:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.6.1.ebuild,v 1.1 2012/12/24 11:12:03 eva Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="yes"
-# libgnome-bluetooth-applet.la is needed by gnome-shell during compilation
-GNOME2_LA_PUNT="no"
+GNOME2_LA_PUNT="yes"
 
-inherit eutils gnome2 multilib user udev
+inherit eutils gnome2 multilib udev user
 
 DESCRIPTION="Fork of bluez-gnome focused on integration with GNOME"
 HOMEPAGE="http://live.gnome.org/GnomeBluetooth"
 
 LICENSE="GPL-2+ LGPL-2.1+ FDL-1.1+"
 SLOT="2"
-IUSE="doc +introspection sendto"
-KEYWORDS="~amd64 ~x86"
+IUSE="+introspection sendto"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-COMMON_DEPEND=">=dev-libs/glib-2.25.7:2
+COMMON_DEPEND=">=dev-libs/glib-2.29.90:2
 	>=x11-libs/gtk+-2.91.3:3[introspection?]
-	>=x11-libs/libnotify-0.7.0
-	>=dev-libs/dbus-glib-0.74
+	>=x11-libs/libnotify-0.7:=
+	virtual/udev
 
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 	sendto? ( >=gnome-extra/nautilus-sendto-2.91 )
@@ -28,54 +27,51 @@ COMMON_DEPEND=">=dev-libs/glib-2.25.7:2
 RDEPEND="${COMMON_DEPEND}
 	>=net-wireless/bluez-4.34
 	app-mobilephone/obexd
-	virtual/udev
 	x11-themes/gnome-icon-theme-symbolic"
-# To break circular dependencies
-PDEPEND=">=gnome-base/gnome-control-center-2.91"
 DEPEND="${COMMON_DEPEND}
-	!!net-wireless/bluez-gnome
+	!net-wireless/bluez-gnome
 	app-text/docbook-xml-dtd:4.1.2
-	app-text/gnome-doc-utils
-	app-text/scrollkeeper
 	dev-libs/libxml2:2
+	dev-util/gdbus-codegen
+	>=dev-util/gtk-doc-am-1.9
 	>=dev-util/intltool-0.40.0
-	virtual/pkgconfig
 	>=sys-devel/gettext-0.17
+	virtual/pkgconfig
 	x11-libs/libX11
 	x11-libs/libXi
 	x11-proto/xproto
-	doc? ( >=dev-util/gtk-doc-1.9 )"
+"
 # eautoreconf needs:
 #	gnome-base/gnome-common
 #	dev-util/gtk-doc-am
 
 pkg_setup() {
+	enewgroup plugdev
+}
+
+src_prepare() {
+	# Regenerate gdbus-codegen files to allow using any glib version; bug #436236
+	rm -v lib/bluetooth-client-glue.{c,h} || die
+	gnome2_src_prepare
+}
+
+src_configure() {
 	# FIXME: Add geoclue support
 	G2CONF="${G2CONF}
 		$(use_enable introspection)
 		$(use_enable sendto nautilus-sendto)
+		--enable-documentation
 		--disable-maintainer-mode
-		--disable-moblin
 		--disable-desktop-update
 		--disable-icon-update
-		--disable-schemas-compile
-		--disable-static"
-	DOCS="AUTHORS README NEWS ChangeLog"
-
-	enewgroup plugdev
+		--disable-static
+		ITSTOOL=$(type -P true)"
+	gnome2_src_configure
 }
 
 src_install() {
 	gnome2_src_install
-
-	local la
-	for la in gnome-bluetooth/plugins/libgbtgeoclue.la \
-			 control-center-1/panels/libbluetooth.la \
-			 libgnome-bluetooth.la; do
-		rm -v "${ED}/usr/$(get_libdir)/${la}" || die
-	done
-
-	udev_dorules "${FILESDIR}"/80-rfkill.rules
+	udev_dorules "${FILESDIR}"/61-${PN}.rules
 }
 
 pkg_postinst() {
@@ -83,6 +79,8 @@ pkg_postinst() {
 	# Notify about old libraries that might still be around
 	preserve_old_lib_notify /usr/$(get_libdir)/libgnome-bluetooth.so.7
 
-	elog "Don't forget to add yourself to the plugdev group "
-	elog "if you want to be able to control bluetooth transmitter."
+	if ! has_version sys-auth/consolekit[acl] ; then
+		elog "Don't forget to add yourself to the plugdev group "
+		elog "if you want to be able to control bluetooth transmitter."
+	fi
 }
