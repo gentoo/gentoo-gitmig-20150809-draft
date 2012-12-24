@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.1.0.ebuild,v 1.1 2012/12/20 03:08:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.1.0.ebuild,v 1.2 2012/12/24 18:49:45 vapier Exp $
 
 inherit flag-o-matic eutils libtool unpacker toolchain-funcs
 
@@ -33,7 +33,7 @@ src_unpack() {
 
 	# disable -fPIE -pie in the tests for x86  #236054
 	if use x86 && gcc-specs-pie ; then
-		epatch "${FILESDIR}"/${PN}-5.0.1-x86-nopie-tests.patch
+		epatch "${FILESDIR}"/${PN}-5.1.0-x86-nopie-tests.patch
 	fi
 
 	# note: we cannot run autotools here as gcc depends on this package
