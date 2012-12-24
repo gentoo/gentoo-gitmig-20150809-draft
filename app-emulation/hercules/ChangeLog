@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/hercules
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/ChangeLog,v 1.33 2010/10/24 15:54:21 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/ChangeLog,v 1.34 2012/12/24 07:35:36 vapier Exp $
+
+*hercules-3.08 (24 Dec 2012)
+
+  24 Dec 2012; Mike Frysinger <vapier@gentoo.org> +hercules-3.08.ebuild:
+  Version bump.
 
   24 Oct 2010; Brent Baude <ranger@gentoo.org> hercules-3.06.ebuild:
   stable ppc, bug 335186
