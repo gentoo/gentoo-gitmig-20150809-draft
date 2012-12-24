@@ -1,7 +1,7 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/majesty-demo/majesty-demo-1.0.0.ebuild,v 1.12 2012/02/08 21:33:05 vapier Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/majesty-demo/majesty-demo-1.0.0.ebuild,v 1.13 2012/12/24 15:36:37 tupone Exp $
+EAPI=4
 inherit eutils unpacker games
 
 DESCRIPTION="Control your own kingdom in this simulation."
@@ -33,20 +33,21 @@ S=${WORKDIR}
 
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
+QA_PREBUILT="${dir:1}/maj_demo"
 
 src_install() {
-	dodoc README* || die "dodoc"
+	dodoc README*
 	insinto "${dir}"
 	exeinto "${dir}"
-	doins -r data quests || die "doins data"
-	doins majesty.{bmp,xpm} majestysite.url || die "doins"
-	cp "${S}"/majesty.xpm "${S}"/majesty-demo.xpm || die "copy icon"
-	doicon majesty-demo.xpm || die "doicon"
+	doins -r data quests
+	doins majesty.{bmp,xpm} majestysite.url
+	cp "${S}"/majesty.xpm "${S}"/majesty-demo.xpm
+	doicon majesty-demo.xpm
 	# I am only installing the static version for now
 	if use x86 || use amd64; then
-		doexe bin/Linux/x86/glibc-2.1/maj_demo || die "doexe"
+		doexe bin/Linux/x86/glibc-2.1/maj_demo
 	elif use ppc; then
-		doexe bin/Linux/ppc/glibc-2.1/maj_demo || die "doexe"
+		doexe bin/Linux/ppc/glibc-2.1/maj_demo
 	fi
 	games_make_wrapper maj_demo ./maj_demo "${dir}" "${dir}"
 	prepgamesdirs
