@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.15 2012/12/23 20:54:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.16 2012/12/24 04:05:25 jer Exp $
+
+  24 Dec 2012; Jeroen Roovers <jer@gentoo.org> harfbuzz-0.9.9.ebuild:
+  Marked ~hppa (bug #447854).
 
   23 Dec 2012; Agostino Sarubbo <ago@gentoo.org> harfbuzz-0.9.9.ebuild:
   Add ~ppc64, wrt bug #447854
