@@ -1,6 +1,17 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.41 2012/12/10 21:53:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.42 2012/12/24 21:39:39 slyfox Exp $
+
+  24 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> -darcs-2.4.4-r1.ebuild,
+  -darcs-2.5.2-r1.ebuild, -darcs-2.5.2-r2.ebuild,
+  -files/darcs-1.0.9-bashcomp.patch,
+  -files/darcs-2.4.4-issue1770-curl_multi_perform-no-running-handles.patch,
+  -files/darcs-2.4.4-tests-emailformat.patch, -files/darcs-2.5.2-ghc-7.2.patch,
+  -files/darcs-2.5.2-ghc-7.4.patch, -files/darcs-2.5.2-mtl-2.1.patch,
+  -files/darcs-2.5.2-relax-http-libs-deps.patch,
+  -files/darcs-2.5.2-relax-regex-libs-deps.patch,
+  -files/darcs-2.5.2-tests-ghc-7.2.patch:
+  Removed old.
 
   10 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> darcs-2.8.0.ebuild:
   stable on alpha/ia64/sparc (bug #421351)
