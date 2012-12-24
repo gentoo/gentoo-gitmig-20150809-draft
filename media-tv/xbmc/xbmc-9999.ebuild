@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.123 2012/11/28 13:35:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.124 2012/12/24 02:10:04 vapier Exp $
 
 EAPI="4"
 
@@ -40,7 +40,7 @@ COMMON_DEPEND="virtual/glu
 	dev-libs/boost
 	dev-libs/fribidi
 	dev-libs/libcdio[-minimal]
-	cec? ( dev-libs/libcec )
+	cec? ( >=dev-libs/libcec-2 )
 	dev-libs/libpcre[cxx]
 	>=dev-libs/lzo-2.04
 	dev-libs/tinyxml
