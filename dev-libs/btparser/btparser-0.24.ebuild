@@ -1,34 +1,24 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/btparser/btparser-0.16.ebuild,v 1.3 2012/03/15 18:09:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/btparser/btparser-0.24.ebuild,v 1.1 2012/12/24 20:45:35 pacho Exp $
 
-EAPI="4"
+EAPI="5"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-PYTHON_DEPEND="2:2.6"
-
-inherit python
+inherit eutils python-single-r1
 
 DESCRIPTION="Parser and analyzer for backtraces produced by gdb"
 HOMEPAGE="https://fedorahosted.org/btparser/"
 SRC_URI="https://fedorahosted.org/released/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="amd64 x86"
+SLOT="0/2"
+KEYWORDS="~amd64 ~x86"
 IUSE="static-libs"
 
-RDEPEND=""
+RDEPEND=">=dev-libs/glib-2.21:2"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils"
-
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
-
-src_prepare() {
-	python_clean_py-compile_files
-}
 
 src_configure() {
 	# Configure checks for python.pc; our python-2.7 installs python-2.7.pc,
@@ -43,13 +33,5 @@ src_configure() {
 
 src_install() {
 	default
-	find "${D}" -name '*.la' -exec rm -f {} +
-}
-
-pkg_postinst() {
-	python_mod_optimize btparser
-}
-
-pkg_postrm() {
-	python_mod_cleanup btparser
+	prune_libtool_files --modules
 }
