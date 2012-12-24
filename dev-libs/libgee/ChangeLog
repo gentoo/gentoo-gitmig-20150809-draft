@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libgee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.55 2012/11/21 23:27:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.56 2012/12/24 12:40:46 pacho Exp $
+
+*libgee-0.6.7 (24 Dec 2012)
+
+  24 Dec 2012; Pacho Ramos <pacho@gentoo.org> +libgee-0.6.7.ebuild,
+  -libgee-0.6.5.ebuild, -libgee-0.6.6.ebuild, -libgee-0.8.0.ebuild,
+  -libgee-0.8.1.ebuild:
+  Version bump, drop old
 
 *libgee-0.8.2 (21 Nov 2012)
 
@@ -237,4 +244,3 @@
   New ebuild written by yours truly, libgee is a collection library
   providing GObject-based interfaces and classes for commonly used data
   structures. Closes #269775.
-
