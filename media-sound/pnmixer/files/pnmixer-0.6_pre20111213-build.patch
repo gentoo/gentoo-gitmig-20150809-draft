@@ -36,7 +36,7 @@ don't use AM_CFLAGS in configure.in
 -    AM_CFLAGS="$AM_CFLAGS -O2 -export-dynamic"
  fi
  
-+CFLAGS="$CFLAGS -Wall -Werror -Wno-uninitialized -Wformat -Wformat-security"
++CFLAGS="$CFLAGS -Wall -Wno-uninitialized -Wformat -Wformat-security"
 +LDFLAGS="-rdynamic $LDFLAGS"
 +
  ##########################################################################
