@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.17.ebuild,v 1.1 2012/12/19 00:31:18 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.17-r1.ebuild,v 1.1 2012/12/24 09:27:05 polynomial-c Exp $
 
 inherit autotools user
 
