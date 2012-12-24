@@ -1,18 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/moserial/moserial-3.0.6.ebuild,v 1.8 2012/06/16 10:22:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/moserial/moserial-3.0.8.ebuild,v 1.1 2012/12/24 12:48:18 pacho Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="no"
 
 inherit gnome2
 
-DESCRIPTION="moserial is a clean, friendly gtk-based serial terminal"
-HOMEPAGE="http://live.gnome.org/moserial"
+DESCRIPTION="A clean and friendly gtk-based serial terminal"
+HOMEPAGE="https://live.gnome.org/moserial"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.16:2
@@ -23,5 +23,3 @@ DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.3.2
 	>=dev-util/intltool-0.35
 	virtual/pkgconfig"
-
-DOCS="AUTHORS ChangeLog NEWS README"
