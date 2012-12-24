@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/tpm-emulator-0.7.4.ebuild,v 1.1 2012/12/23 01:25:26 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/tpm-emulator-0.7.4-r1.ebuild,v 1.1 2012/12/24 17:13:25 alonbl Exp $
 
 EAPI=2
 inherit user linux-mod cmake-utils udev
@@ -63,9 +63,6 @@ src_install() {
 
 	newinitd "${FILESDIR}"/${PN}.initd-0.7.4 ${PN}
 	newconfd "${FILESDIR}"/${PN}.confd-0.7.4 ${PN}
-
-	keepdir /var/run/tpm
-	fowners tss /var/run/tpm
 
 	keepdir /var/log/tpm
 	fowners tss:tss /var/log/tpm
