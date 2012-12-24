@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pangox-compat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pangox-compat/ChangeLog,v 1.2 2012/12/23 20:55:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pangox-compat/ChangeLog,v 1.3 2012/12/24 04:07:09 jer Exp $
+
+  24 Dec 2012; Jeroen Roovers <jer@gentoo.org> pangox-compat-0.0.2.ebuild:
+  Marked ~hppa (bug #447854).
 
   23 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pangox-compat-0.0.2.ebuild:
   Add ~ppc64, wrt bug #447854
