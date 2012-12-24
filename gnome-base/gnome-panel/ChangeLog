@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.356 2012/10/16 03:47:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.357 2012/12/24 14:47:19 eva Exp $
+
+*gnome-panel-3.6.2 (24 Dec 2012)
+
+  24 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-panel-3.2.1.ebuild, +gnome-panel-3.6.2.ebuild, metadata.xml:
+  Version bump for Gnome 3.6. Switch to EAPI=5. Drop deprecated postinst,
+  package is not using gconf anymore. USE=introspection is now global.
 
   16 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   -gnome-panel-2.32.1-r1.ebuild, -gnome-panel-2.32.1-r2.ebuild,
