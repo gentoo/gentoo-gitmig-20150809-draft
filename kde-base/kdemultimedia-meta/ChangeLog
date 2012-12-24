@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.235 2012/12/08 11:53:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.236 2012/12/24 13:19:01 maekke Exp $
+
+  24 Dec 2012; Markus Meier <maekke@gentoo.org>
+  kdemultimedia-meta-4.9.4.ebuild:
+  add ~arm
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -kdemultimedia-meta-4.8.5.ebuild:
