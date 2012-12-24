@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-3.6.0-r1.ebuild,v 1.1 2012/12/24 17:11:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-3.6.0-r1.ebuild,v 1.2 2012/12/24 17:17:33 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="no" # bug 340725, no other la files
-PYTHON_COMPAT=( python2_{5,6,7} )
+PYTHON_COMPAT=( python2_{6,7} )
 
 inherit eutils gnome2 python-single-r1
 
@@ -71,7 +71,7 @@ src_prepare() {
 	# Remove silly check for pygobject:2
 	# https://bugzilla.gnome.org/show_bug.cgi?id=660550
 	sed -e 's/pygobject-2.0/pygobject-3.0/' -i configure || die "sed failed"
-    gnome2_src_prepare
+	gnome2_src_prepare
 }
 
 src_configure() {
