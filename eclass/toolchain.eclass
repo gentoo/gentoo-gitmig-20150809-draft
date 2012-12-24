@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.560 2012/11/29 01:16:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.561 2012/12/24 04:20:08 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -921,6 +921,13 @@ gcc-compiler-configure() {
 		confgcc+=" --disable-libgcj"
 	elif use gtk ; then
 		confgcc+=" --enable-java-awt=gtk"
+	fi
+
+	# allow gcc to search for clock funcs in the main C lib.
+	# if it can't find them, then tough cookies -- we aren't
+	# going to link in -lrt to all C++ apps.  #411681
+	if tc_version_is_at_least 4.4 && is_cxx ; then
+		confgcc+=" --enable-libstdcxx-time"
 	fi
 
 	# newer gcc versions like to bootstrap themselves with C++,
