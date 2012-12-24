@@ -3,6 +3,6 @@
 <pkgmetadata>
 <herd>gnome</herd>
 <use>
-<flag name="cpufreq">Build cpu frequency scaling monitor applet</flag>
+	<flag name="cpufreq">Build cpu frequency scaling monitor applet</flag>
 </use>
 </pkgmetadata>
