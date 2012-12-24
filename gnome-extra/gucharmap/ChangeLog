@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gucharmap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.186 2012/11/16 07:34:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.187 2012/12/24 18:51:52 eva Exp $
+
+*gucharmap-3.6.1 (24 Dec 2012)
+
+  24 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> +gucharmap-3.6.1.ebuild,
+  metadata.xml:
+  Version bump for Gnome 3.6. Clean up old revisions.
 
   16 Nov 2012; Pacho Ramos <pacho@gentoo.org> -gucharmap-2.32.1.ebuild,
   -gucharmap-3.2.1.ebuild, -gucharmap-3.2.2.ebuild:
