@@ -1,5 +1,5 @@
 CHOST="armv6j-unknown-linux-gnueabi"
-CFLAGS="-O2 -pipe -march=armv6j -mfpu=vfp -mfloat-abi=softfp"
+CFLAGS="-O2 -pipe -march=armv6j"
 CXXFLAGS="${CFLAGS}"
 FFLAGS="${CFLAGS}"
 FCFLAGS="${CFLAGS}"

@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.187 2012/12/23 19:34:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.188 2012/12/24 01:37:26 vapier Exp $
+
+  24 Dec 2012; Mike Frysinger <vapier@gentoo.org> armv6j/make.defaults,
+  armv7a/make.defaults:
+  Drop -mfpu/-mfloat-abi flags as toolchain.eclass takes care of setting sane
+  defaults based on $CHOST #448126.
 
   23 Dec 2012; Markus Meier <maekke@gentoo.org> package.use.mask:
   package.use.mask kde-base/kstars[indi]
