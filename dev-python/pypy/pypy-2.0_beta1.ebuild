@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0_beta1.ebuild,v 1.1 2012/12/20 05:46:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0_beta1.ebuild,v 1.2 2012/12/24 04:37:05 zmedico Exp $
 
 EAPI=5
 
 # XXX: test other implementations
-PYTHON_COMPAT=( python2_7 pypy{1_8,1_9} )
+PYTHON_COMPAT=( python2_7 pypy{1_8,1_9,2_0} )
 inherit check-reqs eutils multilib multiprocessing python-any-r1 toolchain-funcs vcs-snapshot versionator
 
 DESCRIPTION="A fast, compliant alternative implementation of the Python language"
