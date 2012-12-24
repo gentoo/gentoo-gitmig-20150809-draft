@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mhddfs/mhddfs-0.1.39.ebuild,v 1.1 2012/11/19 11:47:02 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mhddfs/mhddfs-0.1.39.ebuild,v 1.2 2012/12/24 20:19:16 pinkbyte Exp $
 
 EAPI=4
 
@@ -15,13 +15,13 @@ SRC_URI="http://mhddfs.uvw.ru/downloads/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="suid"
+IUSE="linguas_ru suid"
 
 RDEPEND=">=sys-fs/fuse-2.7.0"
 DEPEND="${RDEPEND}
 	dev-libs/uthash"
 
-DOCS="ChangeLog README README.ru.UTF-8"
+DOCS="ChangeLog README"
 PATCHES=( "${FILESDIR}/${PN}-respect-compiler-vars.patch" )
 
 src_compile() {
@@ -32,6 +32,7 @@ src_install() {
 	dobin mhddfs
 	doman mhddfs.1
 	dodoc ${DOCS}
+	use linguas_ru && dodoc README.ru.UTF-8
 	use suid && fperms u+s /usr/bin/${PN}
 }
 
