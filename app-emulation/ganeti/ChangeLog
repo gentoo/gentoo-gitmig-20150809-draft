@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/ganeti
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.67 2012/12/24 07:34:07 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.68 2012/12/24 17:52:08 ramereth Exp $
+
+  24 Dec 2012; Lance Albertson <ramereth@gentoo.org> ganeti-2.6.2.ebuild:
+  Fix metadata invariance reported in bug #448432
 
 *ganeti-2.6.2 (24 Dec 2012)
 *ganeti-2.5.2-r2 (24 Dec 2012)

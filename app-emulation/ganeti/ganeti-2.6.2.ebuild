@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.6.2.ebuild,v 1.1 2012/12/24 07:34:07 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.6.2.ebuild,v 1.2 2012/12/24 17:52:08 ramereth Exp $
 
 EAPI="4"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="2:2.6"
 
 inherit eutils confutils bash-completion-r1 python
 
@@ -33,16 +33,10 @@ HOMEPAGE="http://code.google.com/p/ganeti/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="kvm xen lxc drbd +filestorage sharedstorage htools syslog ipv6
-	haskell-daemons rbd"
+	haskell-daemons rbd test"
 REQUIRED_USE="|| ( kvm xen lxc )"
 
 S="${WORKDIR}/${MY_P}"
-
-if use test ; then
-	PYTHON_DEPEND=">=dev-lang/python-2.6[ipv6]"
-else
-	PYTHON_DEPEND=">=dev-lang/python-2.6"
-fi
 
 DEPEND="xen? ( >=app-emulation/xen-3.0 )
 	kvm? ( app-emulation/qemu )
@@ -78,10 +72,10 @@ DEPEND="xen? ( >=app-emulation/xen-3.0 )
 	sys-apps/iproute2
 	sys-fs/lvm2
 	>=sys-apps/baselayout-2.0
-	${PYTHON_DEPEND}
 	${GIT_DEPEND}"
 RDEPEND="${DEPEND}
 	!app-emulation/ganeti-htools"
+DEPEND+=" test? ( || ( dev-lang/python:2.7[ipv6] dev-lang/python:2.6[ipv6] ) )"
 
 pkg_setup () {
 	confutils_use_depend_all haskell-daemons htools
