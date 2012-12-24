@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/rng-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.39 2012/12/17 12:19:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.40 2012/12/24 17:03:01 flameeyes Exp $
+
+  24 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> files/rngd-initd-4.1:
+  Fix typo. Thanks to Chris Mayo for reporting.
 
   17 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> files/rngd-confd-4.1,
   files/rngd-initd-4.1:

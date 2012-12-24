@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/files/rngd-initd-4.1,v 1.5 2012/12/17 12:19:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/files/rngd-initd-4.1,v 1.6 2012/12/24 17:03:01 flameeyes Exp $
 
 depend() {
 	need localmount
@@ -24,6 +24,6 @@ RNG_DEVICE="${DEVICE:-$(find_device)}"
 
 command=/usr/sbin/rngd
 pidfile="/var/run/${SVCNAME}.pid"
-command_args="--pid-file ${pidfile} --background --random-step ${STEP:-64} ${NO_TPM:+--no-tmp=1} ${NO_DRNG:+--no-drng=1} --fill-watermark ${WATERMARK} ${RNG_DEVICE:+--rng-device ${RNG_DEVICE}}"
+command_args="--pid-file ${pidfile} --background --random-step ${STEP:-64} ${NO_TPM:+--no-tpm=1} ${NO_DRNG:+--no-drng=1} --fill-watermark ${WATERMARK} ${RNG_DEVICE:+--rng-device ${RNG_DEVICE}}"
 start_stop_daemon_args="--wait 1000"
 retry="SIGKILL/5000"
