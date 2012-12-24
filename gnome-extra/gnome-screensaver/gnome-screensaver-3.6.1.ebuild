@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-3.6.1.ebuild,v 1.1 2012/12/23 17:10:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-3.6.1.ebuild,v 1.2 2012/12/24 10:51:05 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -72,4 +72,5 @@ src_configure() {
 	# consolekit's messages over dbus.
 	# xscreensaver and custom screensaver capability removed
 	# poke and inhibit commands were also removed, bug 579430
+	gnome2_src_configure
 }
