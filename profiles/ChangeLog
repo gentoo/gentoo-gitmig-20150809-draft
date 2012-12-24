@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7289 2012/12/24 15:45:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7290 2012/12/24 22:57:10 pchrist Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Dec 2012; Panagiotis Christopoulos <pchrist@gentoo.org> package.mask:
+  remask =dev-lisp/gentoo-init-1.0, =dev-lisp/asdf-2.26, =dev-lisp/sbcl-1.1.2,
+  need more testing
 
   24 Dec 2012; Anthony G. Basile <blueness@gentoo.org>
   hardened/linux/uclibc/mips/package.mask:
