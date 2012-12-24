@@ -1,12 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.6.2-r1.ebuild,v 1.1 2012/12/19 05:52:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.6.2-r1.ebuild,v 1.2 2012/12/24 04:37:08 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit autotools eutils flag-o-matic gnome2
+inherit autotools eutils flag-o-matic gnome2 versionator
+
+MY_MAJORV=$(get_version_component_range 1-2)
 
 DESCRIPTION="Integrated mail, addressbook and calendaring functionality"
 HOMEPAGE="http://projects.gnome.org/evolution/"
@@ -35,6 +37,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.32:2
 	>=media-libs/libcanberra-0.25[gtk3]
 	>=x11-libs/libnotify-0.7:=
 	>=gnome-extra/evolution-data-server-${PV}:=[gnome-online-accounts?,weather]
+	=gnome-extra/evolution-data-server-${MY_MAJORV}*
 	>=gnome-extra/gtkhtml-4.5.2:4.0
 	dev-libs/atk
 	>=dev-libs/dbus-glib-0.6

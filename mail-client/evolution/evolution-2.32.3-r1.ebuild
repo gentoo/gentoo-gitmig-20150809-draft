@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.3-r1.ebuild,v 1.17 2012/11/26 16:08:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.3-r1.ebuild,v 1.18 2012/12/24 04:37:08 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -31,6 +31,7 @@ PINENTRY_DEPEND="|| ( app-crypt/pinentry[gtk] app-crypt/pinentry-qt app-crypt/pi
 # glade-3 support is for maintainers only per configure.ac
 # mono plugin disabled as it's incompatible with 2.8 and lacks maintainance (see bgo#634571)
 # pst is not mature enough and changes API/ABI frequently
+
 RDEPEND=">=dev-libs/glib-2.25.12:2
 	>=x11-libs/gtk+-2.20.0:2
 	>=dev-libs/libunique-1.1.2:1
@@ -40,6 +41,7 @@ RDEPEND=">=dev-libs/glib-2.25.12:2
 	media-libs/libcanberra[gtk]
 	>=x11-libs/libnotify-0.3
 	>=gnome-extra/evolution-data-server-${PV}[weather]
+	=gnome-extra/evolution-data-server-${MY_MAJORV}*
 	>=gnome-extra/gtkhtml-3.31.90:3.14
 	>=gnome-base/gconf-2:2
 	dev-libs/atk
