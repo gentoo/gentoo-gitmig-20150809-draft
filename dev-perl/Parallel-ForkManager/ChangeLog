@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Parallel-ForkManager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parallel-ForkManager/ChangeLog,v 1.17 2012/12/25 12:35:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parallel-ForkManager/ChangeLog,v 1.18 2012/12/25 16:43:20 ago Exp $
+
+  25 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
+  Parallel-ForkManager-1.20.0.ebuild:
+  Stable for amd64, wrt bug #389839
 
 *Parallel-ForkManager-1.20.0 (25 Dec 2012)
 
