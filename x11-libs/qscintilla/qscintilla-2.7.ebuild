@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.7.ebuild,v 1.1 2012/12/10 12:27:22 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.7.ebuild,v 1.2 2012/12/25 02:32:53 pesa Exp $
 
-EAPI=4
+EAPI=5
 
 inherit qt4-r2
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.riverbankcomputing.co.uk/software/qscintilla/intro"
 SRC_URI="mirror://sourceforge/pyqt/${MY_P}.tar.gz"
 
 LICENSE="|| ( GPL-2 GPL-3 )"
-SLOT="0"
+SLOT="0/9"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc python"
 
@@ -29,6 +29,23 @@ S=${WORKDIR}/${MY_P}
 PATCHES=(
 	"${FILESDIR}/${PN}-2.6.2-designer.patch"
 )
+
+src_unpack() {
+	qt4-r2_src_unpack
+
+	# Sub-slot sanity check
+	local subslot=${SLOT#*/}
+	local version=$(sed -nre 's:.*VERSION\s*=\s*([0-9\.]+):\1:p' "${S}"/Qt4Qt5/qscintilla.pro)
+	local major=${version%%.*}
+	if [[ ${subslot} != ${major} ]]; then
+		eerror
+		eerror "Ebuild sub-slot (${subslot}) does not match QScintilla major version (${major})"
+		eerror "Please update SLOT variable as follows:"
+		eerror "    SLOT=\"${SLOT%%/*}/${major}\""
+		eerror
+		die "sub-slot sanity check failed"
+	fi
+}
 
 src_configure() {
 	pushd Qt4Qt5 > /dev/null
