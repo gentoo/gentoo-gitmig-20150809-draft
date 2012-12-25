@@ -1,6 +1,6 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.234 2012/11/20 20:39:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.235 2012/12/25 20:04:23 vostorga Exp $
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> liferea-1.8.8.ebuild:
   Stable for x86, wrt bug #441490
@@ -10,6 +10,11 @@
 
   05 Nov 2012; Anthony G. Basile <blueness@gentoo.org> liferea-1.8.8.ebuild:
   stable ppc ppc64, bug #441490
+
+*liferea-1.8.11 (25 Dec 2012)
+
+  25 Dec 2012; Victor Ostorga +liferea-1.8.11.ebuild:
+  Version bump 1.8 branch
 
 *liferea-1.9.6_p20121021 (21 Oct 2012)
 
