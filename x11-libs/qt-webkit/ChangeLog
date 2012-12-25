@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.174 2012/12/25 09:41:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.175 2012/12/25 09:49:15 ago Exp $
+
+  25 Dec 2012; Agostino Sarubbo <ago@gentoo.org> qt-webkit-4.8.4.ebuild:
+  Stable for ppc64, wrt bug #445956
 
   25 Dec 2012; Agostino Sarubbo <ago@gentoo.org> qt-webkit-4.8.4.ebuild:
   Stable for ppc, wrt bug #445956
