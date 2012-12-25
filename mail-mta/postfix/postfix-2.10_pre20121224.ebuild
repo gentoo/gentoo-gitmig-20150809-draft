@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20121210.ebuild,v 1.1 2012/12/11 11:04:28 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20121224.ebuild,v 1.1 2012/12/25 05:49:10 eras Exp $
 
 EAPI=4
 inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam user versionator
@@ -283,8 +283,8 @@ pkg_preinst() {
 	# Safety net for incompatible changes due to the introduction
 	# of the smtpd_relay_restrictions feature to separate the
 	# mail relay policy from the spam blocking policy.
-	[[ -d ${ROOT}/etc/postfix ]] && {
-	if [[ ! -n "$(${D}/usr/sbin/postconf -c ${ROOT}/etc/postfix -n smtpd_relay_restrictions)" ]];
+	[[ -d ${ROOT}/etc/postfix ]] && has_version '<=mail-mta/postfix-2.9.99' && {
+	if [[ -z "$(${D}/usr/sbin/postconf -c ${ROOT}/etc/postfix -n smtpd_relay_restrictions)" ]];
 	then
 		local myconf="smtpd_relay_restrictions=permit_mynetworks,permit_sasl_authenticated,defer_unauth_destination"
 		ewarn "\nCOMPATIBILITY: adding smtpd_relay_restrictions to main.cf"
