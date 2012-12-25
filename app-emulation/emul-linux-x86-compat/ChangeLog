@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-compat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/ChangeLog,v 1.61 2012/12/02 10:43:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/ChangeLog,v 1.62 2012/12/25 19:00:54 pacho Exp $
+
+  25 Dec 2012; Pacho Ramos <pacho@gentoo.org>
+  emul-linux-x86-compat-20121202.ebuild:
+  amd64 stable, bug #447506
 
 *emul-linux-x86-compat-20121202 (02 Dec 2012)
 
