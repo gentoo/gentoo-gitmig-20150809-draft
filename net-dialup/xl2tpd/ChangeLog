@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/xl2tpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/ChangeLog,v 1.31 2012/12/25 20:48:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/ChangeLog,v 1.32 2012/12/25 21:10:05 floppym Exp $
+
+  25 Dec 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/xl2tpd-1.3.1-CFLAGS.patch, xl2tpd-1.3.1-r1.ebuild:
+  Respect CFLAGS.
 
   25 Dec 2012; Mike Gilbert <floppym@gentoo.org> files/xl2tpd-init-r1:
   Further simplify init script.
