@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wavemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.48 2012/12/25 16:22:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.49 2012/12/25 18:34:51 blueness Exp $
+
+  25 Dec 2012; Anthony G. Basile <blueness@gentoo.org> wavemon-0.7.5.ebuild:
+  stable ppc, bug #448406, thanks peratu
 
   25 Dec 2012; Agostino Sarubbo <ago@gentoo.org> wavemon-0.7.5.ebuild:
   Stable for amd64, wrt bug #448406
