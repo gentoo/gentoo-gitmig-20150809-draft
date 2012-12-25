@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/pjsip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/ChangeLog,v 1.8 2012/04/29 19:04:33 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/ChangeLog,v 1.9 2012/12/25 16:21:15 ago Exp $
+
+  25 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pjsip-1.14.ebuild:
+  Stable for amd64, wrt bug #448278
 
 *pjsip-1.14 (29 Apr 2012)
 
@@ -36,4 +39,3 @@
   Initial import from bug #188056. Cleaned up a bit the ebuild from Atman
   Sense (atman.sense@zise.de).
   Thanks!
-
