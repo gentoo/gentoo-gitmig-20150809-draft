@@ -5,4 +5,8 @@
 <maintainer>
 <email>lu_zero@gentoo.org</email>
 </maintainer>
+<maintainer>
+<email>blueness@gentoo.org</email>
+<name>Anthony G. Basile</name>
+</maintainer>
 </pkgmetadata>

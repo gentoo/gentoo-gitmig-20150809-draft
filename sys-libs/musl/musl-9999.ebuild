@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-9999.ebuild,v 1.1 2012/12/25 18:30:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-9999.ebuild,v 1.2 2012/12/25 19:47:45 blueness Exp $
 
 EAPI=4
 
@@ -44,7 +44,7 @@ pkg_setup() {
 	if [ ${CTARGET} == ${CHOST} ] ; then
 		case ${CHOST} in
 		*-musl*) ;;
-		*) die "Use sys-devel/crossdev to build a uclibc toolchain" ;;
+		*) die "Use sys-devel/crossdev to build a musl toolchain" ;;
 		esac
 	fi
 }
