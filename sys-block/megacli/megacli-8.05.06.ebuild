@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-8.02.21.ebuild,v 1.2 2012/12/25 02:40:44 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-8.05.06.ebuild,v 1.1 2012/12/25 02:40:44 ramereth Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ LICENSE="LSI"
 SLOT="0"
 # This package can never enter stable, it can't be mirrored and upstream
 # can remove the distfiles from their mirror anytime.
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="app-arch/unzip
@@ -35,9 +35,8 @@ pkg_nofetch() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	unpack ./${PV}_Linux_MegaCLI/MegaCliLin.zip
-	rpm_unpack ./MegaCli-${PV}-1.noarch.rpm
-	rpm_unpack ./Lib_Utils-1.00-09.noarch.rpm
+	rpm_unpack ./MegaCli_Linux/MegaCli-${PV}-1.noarch.rpm
+	rpm_unpack ./MegaCliKL_Linux/Lib_Utils-1.00-09.noarch.rpm
 }
 
 src_install() {
