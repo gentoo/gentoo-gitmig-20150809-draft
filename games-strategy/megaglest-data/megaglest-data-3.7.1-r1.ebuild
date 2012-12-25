@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest-data/megaglest-data-3.7.1.ebuild,v 1.1 2012/11/23 17:13:01 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest-data/megaglest-data-3.7.1-r1.ebuild,v 1.1 2012/12/25 15:40:59 hasufell Exp $
 
 EAPI=4
-inherit cmake-utils games
+inherit cmake-utils eutils games
 
 MY_PN="megaglest"
 DESCRIPTION="Data files for the cross-platform 3D realtime strategy game MegaGlest"
@@ -20,6 +20,10 @@ RDEPEND="~games-strategy/megaglest-${PV}"
 DOCS=( docs/AUTHORS.data.txt docs/CHANGELOG.txt docs/README.txt )
 
 S=${WORKDIR}/${MY_PN}-${PV}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-dutch.patch
+}
 
 src_configure() {
 	local mycmakeargs=(
