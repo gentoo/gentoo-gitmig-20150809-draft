@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Manifest/Module-Manifest-1.80.0.ebuild,v 1.2 2012/06/25 06:33:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Manifest/Module-Manifest-1.80.0.ebuild,v 1.3 2012/12/25 16:27:57 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Parse and examine a Perl distribution MANIFEST file"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="
