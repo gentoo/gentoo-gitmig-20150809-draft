@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050718-r3.ebuild,v 1.14 2012/09/30 18:21:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050718-r3.ebuild,v 1.15 2012/12/25 14:15:30 pacho Exp $
 
 inherit eutils multilib linux-info
 
@@ -152,7 +152,6 @@ pkg_postinst() {
 	elog "the CAPI driver you need for your card(s):"
 	elog "  net-dialup/fritzcapi - AVM passive ISDN controllers"
 	elog "  net-dialup/fcdsl     - AVM ISDN/DSL controllers PCI/USB"
-	elog "  net-dialup/misdn     - some passive cards with HiSax chipset"
 	elog
 	ewarn "If you're upgrading from an older capi4k-utils, you must recompile"
 	ewarn "the other packages on your system that link with libcapi after the"
