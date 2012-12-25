@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smokegen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokegen/ChangeLog,v 1.49 2012/12/08 11:53:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokegen/ChangeLog,v 1.50 2012/12/25 10:49:58 maekke Exp $
+
+  25 Dec 2012; Markus Meier <maekke@gentoo.org> smokegen-4.9.4.ebuild:
+  add ~arm
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -smokegen-4.8.5.ebuild:
