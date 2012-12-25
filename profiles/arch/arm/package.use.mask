@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.100 2012/12/24 12:56:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.101 2012/12/25 10:58:54 maekke Exp $
 
 # Markus Meier <maekke@gentoo.org> (23 Dez 2012)
 # mask kde-base/* flags due to unkeyworded dependencies
@@ -12,6 +12,7 @@ kde-base/okular ebook chm
 kde-base/kstars indi
 kde-base/kdeutils-meta floppy
 kde-base/kdenetwork-meta ppp
+kde-base/kdesdk-misc extras
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (15 Dec 2012)
 # media-video/coherence not keyworded
