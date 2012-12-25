@@ -1,14 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.4.3.ebuild,v 1.1 2012/08/09 08:42:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.4.3.ebuild,v 1.2 2012/12/25 23:52:43 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
 
 inherit autotools eutils gnome2 pax-utils versionator virtualx
-if [[ ${PV} = 9999 ]]; then
-	inherit gnome2-live
-fi
 
 DESCRIPTION="GNOME webbrowser based on Webkit"
 HOMEPAGE="http://projects.gnome.org/epiphany/"
