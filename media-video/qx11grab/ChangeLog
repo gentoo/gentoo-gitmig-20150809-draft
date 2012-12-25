@@ -1,6 +1,11 @@
 # ChangeLog for media-video/qx11grab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.26 2012/05/16 09:37:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.27 2012/12/25 11:03:29 pesa Exp $
+
+*qx11grab-0.4.5 (25 Dec 2012)
+
+  25 Dec 2012; Davide Pesavento <pesa@gentoo.org> +qx11grab-0.4.5.ebuild:
+  Version bump.
 
   16 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/0.4.1-detect-avconv-presets-dir.patch,
@@ -128,4 +133,3 @@
   Moved from sunrise overlay. Bug #297309. Thanks to Ondrej Sukup
   <mimi.vx@gmail.com> for the initial commit and to Michał Górny
   (sedzimir) for the fixes
-
