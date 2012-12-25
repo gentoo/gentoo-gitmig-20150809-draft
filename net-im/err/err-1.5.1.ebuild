@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/err/err-1.5.1.ebuild,v 1.1 2012/09/16 11:05:25 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/err/err-1.5.1.ebuild,v 1.2 2012/12/25 11:31:14 pinkbyte Exp $
 
 EAPI=4
 
@@ -51,10 +51,8 @@ src_install() {
 	dodir /etc/${PN}
 	dodir /var/lib/${PN}
 	keepdir /var/log/${PN}
-	keepdir /var/run/${PN}
 	fowners -R err:err /var/lib/${PN}
 	fowners -R err:err /var/log/${PN}
-	fowners -R err:err /var/run/${PN}
 	insinto /etc/${PN}
 	newins errbot/config-template.py config.py
 	use qt4 && python_execute_function install_svgs
