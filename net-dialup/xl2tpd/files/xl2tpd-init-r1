@@ -1,33 +1,12 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/files/xl2tpd-init-r1,v 1.2 2012/12/25 17:58:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/files/xl2tpd-init-r1,v 1.3 2012/12/25 20:48:00 floppym Exp $
 
-depend() {
-	need net
-}
+command="/usr/sbin/xl2tpd"
+pidfile="/var/run/xl2tpd.pid"
+required_files="/etc/xl2tpd/xl2tpd.conf"
 
-checkconfig() {
-	if [ ! -f /etc/xl2tpd/xl2tpd.conf ] ; then
-		eerror "Missing /etc/xl2tpd/xl2tpd.conf configuration file!"
-		return 1
-	fi
-
-	checkpath -d -m 755 /var/run/xl2tpd
-
-	return 0
-}
-
-start() {
-	checkconfig || return 1
-
-	ebegin "Starting xl2tpd"
-	start-stop-daemon --start --quiet --exec /usr/sbin/xl2tpd
-	eend $?
-}
-
-stop() {
-	ebegin "Stopping xl2tpd"
-	start-stop-daemon --stop --quiet --pidfile /var/run/xl2tpd.pid
-	eend $?
+start_pre() {
+	checkpath -d /var/run/xl2tpd
 }
