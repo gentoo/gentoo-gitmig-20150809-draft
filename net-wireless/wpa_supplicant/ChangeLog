@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.190 2012/12/03 09:24:51 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.191 2012/12/25 16:08:08 zerochaos Exp $
+
+  25 Dec 2012; Rick Farina <zerochaos@gentoo.org> wpa_supplicant-1.1.ebuild:
+  einfo->elog, remove madwifi references from ~arch
 
 *wpa_supplicant-1.1 (03 Dec 2012)
 

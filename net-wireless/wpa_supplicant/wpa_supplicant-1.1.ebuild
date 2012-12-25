@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-1.1.ebuild,v 1.1 2012/12/03 09:24:51 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-1.1.ebuild,v 1.2 2012/12/25 16:08:08 zerochaos Exp $
 
 EAPI=4
 
@@ -13,13 +13,12 @@ LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="ap dbus gnutls eap-sim fasteap madwifi p2p ps3 qt4 readline selinux ssl wimax wps kernel_linux kernel_FreeBSD"
+IUSE="ap dbus gnutls eap-sim fasteap p2p ps3 qt4 readline selinux ssl wimax wps kernel_linux kernel_FreeBSD"
 REQUIRED_USE="fasteap? ( !gnutls !ssl )"
 
 RDEPEND="dbus? ( sys-apps/dbus )
 	kernel_linux? (
 		eap-sim? ( sys-apps/pcsc-lite )
-		madwifi? ( >net-wireless/madwifi-ng-tools-0.9.3 )
 		dev-libs/libnl:3
 		net-wireless/crda
 	)
@@ -43,7 +42,7 @@ S="${WORKDIR}/${P}/${PN}"
 
 pkg_setup() {
 	if use gnutls && use ssl ; then
-		einfo "You have both 'gnutls' and 'ssl' USE flags enabled: defaulting to USE=\"ssl\""
+		elog "You have both 'gnutls' and 'ssl' USE flags enabled: defaulting to USE=\"ssl\""
 	fi
 }
 
@@ -175,12 +174,6 @@ src_configure() {
 		echo "CONFIG_DRIVER_WEXT=y"        >> .config
 		echo "CONFIG_DRIVER_WIRED=y"       >> .config
 
-		if use madwifi ; then
-			# Add include path for madwifi-driver headers
-			echo "CFLAGS += -I/usr/include/madwifi" >> .config
-			echo "CONFIG_DRIVER_MADWIFI=y"          >> .config
-		fi
-
 		if use ps3 ; then
 			echo "CONFIG_DRIVER_PS3=y" >> .config
 		fi
@@ -299,24 +292,17 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "If this is a clean installation of wpa_supplicant, you"
-	einfo "have to create a configuration file named"
-	einfo "/etc/wpa_supplicant/wpa_supplicant.conf"
-	einfo
-	einfo "An example configuration file is available for reference in"
-	einfo "/usr/share/doc/${PF}/"
+	elog "If this is a clean installation of wpa_supplicant, you"
+	elog "have to create a configuration file named"
+	elog "/etc/wpa_supplicant/wpa_supplicant.conf"
+	elog
+	elog "An example configuration file is available for reference in"
+	elog "/usr/share/doc/${PF}/"
 
 	if [[ -e ${ROOT}etc/wpa_supplicant.conf ]] ; then
 		echo
 		ewarn "WARNING: your old configuration file ${ROOT}etc/wpa_supplicant.conf"
 		ewarn "needs to be moved to ${ROOT}etc/wpa_supplicant/wpa_supplicant.conf"
-	fi
-
-	if use madwifi ; then
-		echo
-		einfo "This package compiles against the headers installed by"
-		einfo "madwifi-old, madwifi-ng or madwifi-ng-tools."
-		einfo "You should re-emerge ${PN} after upgrading these packages."
 	fi
 
 	# Mea culpa, feel free to remove that after some time --mgorny.
