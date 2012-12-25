@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.158 2012/12/24 02:10:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.159 2012/12/25 04:08:18 vapier Exp $
+
+*xbmc-12.0_rc2 (25 Dec 2012)
+
+  25 Dec 2012; Mike Frysinger <vapier@gentoo.org> +xbmc-12.0_rc2.ebuild,
+  xbmc-9999.ebuild:
+  Add USE=java to contain upstream idiocy #434662 by BT.  Version bump #443572
+  by Tomasz Golinski.
 
   24 Dec 2012; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Require libcec-2+ #438376 by Ian Whyman.

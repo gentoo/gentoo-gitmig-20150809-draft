@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.125 2012/12/25 04:08:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-12.0_rc2.ebuild,v 1.1 2012/12/25 04:08:18 vapier Exp $
 
 EAPI="4"
 
@@ -127,7 +127,8 @@ pkg_setup() {
 }
 
 src_unpack() {
-	[[ ${PV} == "9999" ]] && git-2_src_unpack || default
+	[[ ${PV} == "9999" ]] && git-2_src_unpack
+	default
 }
 
 src_prepare() {
