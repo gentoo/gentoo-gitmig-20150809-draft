@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/itval/itval-1.2_p20121104.ebuild,v 1.2 2012/12/16 10:37:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/itval/itval-1.2_p20121104.ebuild,v 1.3 2012/12/25 04:14:53 jdhore Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ SRC_URI="http://dev.gentoo.org/~pinkbyte/distfiles/snapshots/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-libs/fddl"
