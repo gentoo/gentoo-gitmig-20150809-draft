@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/libarchive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.132 2012/12/25 15:03:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.133 2012/12/25 22:18:54 ago Exp $
+
+  25 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libarchive-3.0.4-r1.ebuild:
+  Stable for ia64, wrt bug #447654
 
   25 Dec 2012; Markus Meier <maekke@gentoo.org> libarchive-3.0.4-r1.ebuild:
   arm stable, bug #447654
