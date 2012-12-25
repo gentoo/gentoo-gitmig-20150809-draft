@@ -8,8 +8,6 @@
 	<flag name="clutter">Install games that use <pkg>media-libs/clutter</pkg></flag>
 	<flag name="glchess">Install Chess written in <pkg>dev-lang/vala</pkg> and
 		OpenGL</flag>
-	<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
-		for introspection</flag>
 	<flag name="sudoku">Install the game Sudoku which uses
 		<pkg>dev-python/pygobject</pkg> and introspection</flag>
 </use>
