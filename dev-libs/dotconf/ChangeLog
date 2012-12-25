@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dotconf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.29 2011/03/24 19:21:07 williamh Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.30 2012/12/25 11:09:16 maekke Exp $
+
+  25 Dec 2012; Markus Meier <maekke@gentoo.org> dotconf-1.3.ebuild:
+  add ~arm
 
   24 Mar 2011; William Hubbs <williamh@gentoo.org> -dotconf-1.1.0.ebuild,
   -dotconf-1.1.0-r1.ebuild, -files/dotconf-1.1.0-fix-dotconf-m4.patch:
