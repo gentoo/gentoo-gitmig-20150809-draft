@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/b2evolution
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/ChangeLog,v 1.30 2012/07/27 21:52:09 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/ChangeLog,v 1.31 2012/12/25 11:52:50 mabi Exp $
+
+*b2evolution-4.1.6 (25 Dec 2012)
+
+  25 Dec 2012; Matti Bickel <mabi@gentoo.org> +b2evolution-4.1.6.ebuild:
+  version bump, including unspecified security fix
 
 *b2evolution-4.1.4 (27 Jul 2012)
 
