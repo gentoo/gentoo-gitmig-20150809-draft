@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.11_beta8.ebuild,v 1.1 2012/11/28 00:39:21 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.11_beta11.ebuild,v 1.1 2012/12/25 16:41:58 chithanh Exp $
 
 EAPI=4
 
@@ -10,11 +10,11 @@ DESCRIPTION="Ati precompiled drivers for Radeon Evergreen (HD5000 Series) and ne
 HOMEPAGE="http://www.amd.com"
 MY_V=( $(get_version_components) )
 #RUN="${WORKDIR}/amd-driver-installer-9.00-x86.x86_64.run"
-SRC_URI="http://www2.ati.com/drivers/beta/amd-driver-installer-catalyst-12.11-beta8-x86.x86_64.zip"
+SRC_URI="http://www2.ati.com/drivers/beta/amd-driver-installer-catalyst-12.11-beta11-x86.x86_64.zip"
 FOLDER_PREFIX="common/"
 IUSE="debug +modules multilib qt4 static-libs disable-watermark"
 
-LICENSE="AMD GPL-2 QPL-1.0 as-is"
+LICENSE="AMD GPL-2 QPL-1.0"
 KEYWORDS="-* ~amd64 ~x86"
 SLOT="1"
 
@@ -42,7 +42,7 @@ RDEPEND="
 			x11-libs/libXfixes
 			x11-libs/libXxf86vm
 			x11-libs/qt-core:4
-			x11-libs/qt-gui:4
+			x11-libs/qt-gui:4[accessibility]
 	)
 "
 
@@ -54,6 +54,7 @@ DEPEND="${RDEPEND}
 	x11-libs/libXtst
 	sys-apps/findutils
 	app-misc/pax-utils
+	app-arch/unzip
 "
 
 EMULTILIB_PKG="true"
@@ -341,6 +342,10 @@ src_prepare() {
 	# compile fix for AGP-less kernel, bug #435322
 	epatch "${FILESDIR}"/ati-drivers-12.9-KCL_AGP_FindCapsRegisters-stub.patch
 
+	# Use ACPI_DEVICE_HANDLE wrapper to make driver build on linux-3.8
+	# see https://bugs.gentoo.org/show_bug.cgi?id=448216 
+	epatch "${FILESDIR}/ati-drivers-kernel-3.8-acpihandle.patch"
+
 	cd "${MODULE_DIR}"
 
 	# bugged fglrx build system, this file should be copied by hand
@@ -588,9 +593,10 @@ src_install-libs() {
 	for so in $(find "${D}"/usr/$(get_libdir) -maxdepth 1 -name *.so.[0-9].[0-9])
 	do
 		local soname=${so##*/}
-		## let's keep also this alternative way ;)
-		#dosym ${soname} /usr/$(get_libdir)/${soname%.[0-9]}
-		dosym ${soname} /usr/$(get_libdir)/$(scanelf -qF "#f%S" ${so})
+		local soname_one=${soname%.[0-9]}
+		local soname_zero=${soname_one%.[0-9]}
+		dosym ${soname} /usr/$(get_libdir)/${soname_one}
+		dosym ${soname_one} /usr/$(get_libdir)/${soname_zero}
 	done
 
 	# See https://bugs.gentoo.org/show_bug.cgi?id=443466
