@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/armadillo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/ChangeLog,v 1.23 2012/12/20 23:46:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/ChangeLog,v 1.24 2012/12/25 03:26:02 jdhore Exp $
+
+  25 Dec 2012; Jeff Horelick <jdhore@gentoo.org> armadillo-3.4.4.ebuild:
+  marked x86 per bug 447130
 
   20 Dec 2012; Anthony G. Basile <blueness@gentoo.org> armadillo-3.4.4.ebuild:
   stable ppc ppc64, bug #447130, thanks peratu
