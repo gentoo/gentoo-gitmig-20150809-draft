@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-3.2.0-r1.ebuild,v 1.2 2012/05/03 06:01:04 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-3.6.0.ebuild,v 1.1 2012/12/25 23:57:49 eva Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dbus examples pcre"
 
-RDEPEND=">=www-client/epiphany-3.2.0
+RDEPEND="
+	>=www-client/epiphany-3.6
 	app-text/opensp
 	>=dev-libs/glib-2.26.0:2
 	>=dev-libs/libxml2-2.6:2
@@ -26,17 +27,25 @@ RDEPEND=">=www-client/epiphany-3.2.0
 	dbus? (
 		>=dev-libs/dbus-glib-0.34
 		sys-apps/dbus )
-	pcre? ( >=dev-libs/libpcre-3.9-r2 )"
+	pcre? ( >=dev-libs/libpcre-3.9-r2 )
+"
 DEPEND="${RDEPEND}
+	>=app-text/gnome-doc-utils-0.3.2
 	>=dev-util/intltool-0.40
 	virtual/pkgconfig
-	>=app-text/gnome-doc-utils-0.3.2
-
-	gnome-base/gnome-common"
+	gnome-base/gnome-common
+"
 # eautoreconf dependencies:
 #	  gnome-base/gnome-common
 
-pkg_setup() {
+src_prepare() {
+	# https://bugzilla.gnome.org/show_bug.cgi?id=664369; needs eautoreconf
+	epatch "${FILESDIR}/${PN}-3.2.0-dbus-libs.patch"
+	eautoreconf
+	gnome2_src_prepare
+}
+
+src_configure() {
 	local extensions=""
 	# XXX: Only enable default/useful extensions?
 	extensions="actions adblock auto-reload certificates \
@@ -49,14 +58,7 @@ pkg_setup() {
 	use examples && extensions="${extensions} sample"
 
 	G2CONF="${G2CONF}
-		--disable-schemas-compile
 		--with-extensions=$(echo "${extensions}" | sed -e 's/[[:space:]]\+/,/g')"
 	DOCS="AUTHORS ChangeLog HACKING NEWS README"
-}
-
-src_prepare() {
-	# https://bugzilla.gnome.org/show_bug.cgi?id=664369; needs eautoreconf
-	epatch "${FILESDIR}/${PN}-3.2.0-dbus-libs.patch"
-	eautoreconf
-	gnome2_src_prepare
+	gnome2_src_configure
 }
