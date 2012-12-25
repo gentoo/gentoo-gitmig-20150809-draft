@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parallel-ForkManager/Parallel-ForkManager-1.20.0.ebuild,v 1.2 2012/12/25 16:43:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parallel-ForkManager/Parallel-ForkManager-1.20.0.ebuild,v 1.3 2012/12/25 16:43:41 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="A simple parallel processing fork manager"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc ~x86 ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86 ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 SRC_TEST=do
