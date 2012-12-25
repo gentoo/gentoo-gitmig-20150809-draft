@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sagan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.16 2012/11/20 20:41:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.17 2012/12/25 20:01:33 qnikst Exp $
+
+*sagan-0.2.2_p2-r2 (25 Dec 2012)
+
+  25 Dec 2012;  <qnikst@gentoo.org> +sagan-0.2.2_p2-r2.ebuild, files/sagan.init:
+  fix /var/run problem and init script #445694, thanks to flameeyes
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> sagan-0.2.1-r2.ebuild:
   Stable for x86, wrt bug #441048
@@ -74,4 +79,3 @@
   31 Aug 2011; Maxim Koltsov <maksbotan@gentoo.org> +sagan-0.2.0.ebuild,
   +files/sagan.confd, +files/sagan.init, +metadata.xml:
   Copy app-admin/sagan from rion-overlay, thanks to slepnoga. Bug 341461
-
