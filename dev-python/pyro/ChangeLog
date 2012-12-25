@@ -1,6 +1,55 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.73 2012/06/08 11:46:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.74 2012/12/25 13:37:20 aidecoe Exp $
+
+*pyro-4.17 (25 Dec 2012)
+
+  25 Dec 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +pyro-4.17.ebuild:
+  Version bump. All tests pass fine now (on amd64 at least).
+
+  Pyro 4.17
+
+  - Fixed possible IndentationError problem with sending modules in Flame
+  - Can now deal with exceptions that can’t be serialized: they’re raised as
+    generic PyroError instead, with appropriate message
+  - Added new config item FLAME_ENABLED, to enable/disable the use of Pyro
+    Flame on the server. Default is false (disabled).
+  - Moved futures from core to new futures module. Code using Pyro4.Future will
+    still work.
+  - Added python version info to configuration dump
+  - Made it more clear in the manual that you need to have the same major
+    Python version on both sides
+
+  Pyro 4.16
+
+  - New implementation for the threadpool server: job queue with self-adjusting
+    number of workers. The workaround that was in place (fixed pool size) has
+    been removed.
+  - Minor api doc fix: corrected reference of Pyro4 package members
+
+  Pyro 4.15
+
+  - Minimum threadpool size increased to 20 (from 4) to give a bit more
+    breathing room while the threadpool scaling still needs to be fixed
+  - Binding a proxy will no longer release an existing connection first,
+    instead it will just do nothing if the proxy has already been bound to its
+    uri
+  - Resolved a race condition related to releasing and binding a proxy,
+    improved unit test
+  - Documentation contains new homepage link
+  - No longer gives a warning about version incompatibility on Jython 2.5
+  - Optimize bytecode flag no longer added in setup script when using jython,
+    this used to crash the setup.py install process on jython
+  - Fixed a gc issue due to a circular dependency
+  - IronPython: improved suggesting a free port number in
+    socketutil.findProbablyUnusedPort
+  - IronPython: threadpoolserver no longer attempts to join the worker threads
+    because not all threads seemed to actually exit on IronPython, thereby
+    hanging the process when shutting down a daemon.
+  - Added a paragraph to tips&tricks about MSG_WAITALL
+  - socket.MSG_WAITALL is no longer deleted by importing Pyro on systems that
+    have a broken MSG_WAITALL (Windows). You’ll have to check for this yourself
+    now, but I wanted to get rid of this side effect of importing Pyro.
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pyro-4.11.ebuild:
   x86 stable wrt bug #419025
