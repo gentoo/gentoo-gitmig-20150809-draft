@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.28 2012/02/08 21:29:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.29 2012/12/25 19:07:03 tupone Exp $
 
 inherit eutils unpacker games
 
@@ -38,6 +38,8 @@ S=${WORKDIR}
 
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
+QA_PREBUILT="${dir:1}/q3ded.x86
+	${dir:1}/q3demo.x86"
 
 src_unpack() {
 	unpack_makeself
