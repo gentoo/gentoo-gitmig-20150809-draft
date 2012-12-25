@@ -1,6 +1,12 @@
 # ChangeLog for app-text/leechcraft-monocle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/leechcraft-monocle/ChangeLog,v 1.9 2012/12/21 13:33:09 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/leechcraft-monocle/ChangeLog,v 1.10 2012/12/25 16:37:54 maksbotan Exp $
+
+*leechcraft-monocle-0.5.90 (25 Dec 2012)
+
+  25 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-monocle-0.5.90.ebuild:
+  Bump LeechCraft to 0.5.90, thanks to 0xd34df00d
 
   21 Dec 2012; Sergey Popov <pinkbyte@gentoo.org>
   leechcraft-monocle-0.5.85.ebuild, leechcraft-monocle-9999.ebuild:
