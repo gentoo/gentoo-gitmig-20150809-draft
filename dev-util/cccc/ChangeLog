@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cccc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cccc/ChangeLog,v 1.17 2012/09/05 18:39:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cccc/ChangeLog,v 1.18 2012/12/25 13:54:24 pacho Exp $
+
+  25 Dec 2012; Pacho Ramos <pacho@gentoo.org> -cccc-3.1.4-r1.ebuild:
+  Remove version depending on now treecleaner pccts
 
   05 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> cccc-3.1.4.ebuild:
   Apply gcc-4.7 patch for -r0 because -r1 was masked wrt #255699
