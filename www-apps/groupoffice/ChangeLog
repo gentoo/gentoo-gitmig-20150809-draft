@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/groupoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/ChangeLog,v 1.30 2012/09/30 18:43:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/ChangeLog,v 1.31 2012/12/25 13:54:59 mabi Exp $
+
+*groupoffice-4.0.144 (25 Dec 2012)
+
+  25 Dec 2012; Matti Bickel <mabi@gentoo.org> +groupoffice-4.0.144.ebuild:
+  version bump
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> groupoffice-2.18.6.ebuild,
   groupoffice-3.7.52.ebuild, groupoffice-4.0.47.ebuild,
