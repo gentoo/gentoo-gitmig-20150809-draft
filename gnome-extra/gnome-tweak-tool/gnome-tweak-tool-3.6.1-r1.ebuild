@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/gnome-tweak-tool-3.6.1-r1.ebuild,v 1.1 2012/12/25 19:10:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/gnome-tweak-tool-3.6.1-r1.ebuild,v 1.2 2012/12/25 19:49:47 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -68,8 +68,7 @@ src_install() {
 }
 
 run_in_build_dir() {
-    pushd "${BUILD_DIR}" > /dev/null || die
-    "$@"
-    popd > /dev/null
+	pushd "${BUILD_DIR}" > /dev/null || die
+	"$@"
+	popd > /dev/null
 }
-
