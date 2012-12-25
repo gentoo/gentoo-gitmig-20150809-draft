@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/qshare
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/qshare/ChangeLog,v 1.16 2012/11/20 20:09:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/qshare/ChangeLog,v 1.17 2012/12/25 09:46:18 pesa Exp $
+
+*qshare-2.1.5 (25 Dec 2012)
+
+  25 Dec 2012; Davide Pesavento <pesa@gentoo.org> +qshare-2.1.5.ebuild,
+  -qshare-2.1.2.ebuild, -qshare-2.1.3.ebuild:
+  Version bump, remove old.
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> qshare-2.1.4.ebuild:
   Stable for x86, wrt bug #441442
