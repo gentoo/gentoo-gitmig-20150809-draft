@@ -31,7 +31,7 @@ index e1f877a..80f6af1 100644
  import System.Directory	( createDirectory )
 -import System.IO.Error		( try, isAlreadyExistsError )
 +import qualified Control.Exception as E
-+import qualified System.IO.Error as E
++import qualified System.IO.Error as E ( isAlreadyExistsError )
  
  import Utils
  import CF
