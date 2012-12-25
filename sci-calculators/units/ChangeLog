@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/units
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.47 2012/12/25 15:00:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.48 2012/12/25 18:25:31 blueness Exp $
+
+  25 Dec 2012; Anthony G. Basile <blueness@gentoo.org> units-2.01.ebuild:
+  stable ppc, bug #448448, thanks peratu
 
   25 Dec 2012; Jeroen Roovers <jer@gentoo.org> units-2.01.ebuild:
   Stable for HPPA (bug #448448).
