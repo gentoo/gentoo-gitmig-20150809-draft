@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-declarative
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.57 2012/12/05 03:19:00 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.58 2012/12/25 09:21:16 ago Exp $
+
+  25 Dec 2012; Agostino Sarubbo <ago@gentoo.org> qt-declarative-4.8.4.ebuild:
+  Stable for amd64, wrt bug #445956
 
 *qt-declarative-4.8.4 (05 Dec 2012)
 

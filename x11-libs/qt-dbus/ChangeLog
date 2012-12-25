@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-dbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.131 2012/12/24 16:42:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.132 2012/12/25 09:20:47 ago Exp $
+
+  25 Dec 2012; Agostino Sarubbo <ago@gentoo.org> qt-dbus-4.8.4.ebuild:
+  Stable for amd64, wrt bug #445956
 
   24 Dec 2012; Jeroen Roovers <jer@gentoo.org> qt-dbus-4.8.4.ebuild:
   Stable for HPPA (bug #445956).
