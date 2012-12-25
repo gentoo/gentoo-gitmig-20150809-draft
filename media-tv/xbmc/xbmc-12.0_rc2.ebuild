@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-12.0_rc2.ebuild,v 1.1 2012/12/25 04:08:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-12.0_rc2.ebuild,v 1.2 2012/12/25 19:25:34 vapier Exp $
 
 EAPI="4"
 
@@ -127,8 +127,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	[[ ${PV} == "9999" ]] && git-2_src_unpack
-	default
+	[[ ${PV} == "9999" ]] && git-2_src_unpack || default
 }
 
 src_prepare() {
@@ -140,9 +139,9 @@ src_prepare() {
 	# some dirs ship generated autotools, some dont
 	multijob_init
 	local d
-	for d in $(printf 'f:\n\techo $(BOOTSTRAP_TARGETS)\ninclude bootstrap.mk\n' | emake -f - f) ; do
+	for d in $(printf 'f:\n\t@echo $(BOOTSTRAP_TARGETS)\ninclude bootstrap.mk\n' | emake -f - f) ; do
 		[[ -e ${d} ]] && continue
-		pushd ${d/%\/configure/.} >/dev/null
+		pushd ${d/%configure/.} >/dev/null || die
 		AT_NOELIBTOOLIZE="yes" AT_TOPLEVEL_EAUTORECONF="yes" \
 		multijob_child_init eautoreconf
 		popd >/dev/null
