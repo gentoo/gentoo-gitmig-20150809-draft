@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.62 2012/12/25 16:20:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.63 2012/12/25 22:30:35 ago Exp $
+
+  25 Dec 2012; Agostino Sarubbo <ago@gentoo.org> fribidi-0.19.5.ebuild:
+  Stable for ia64, wrt bug #448522
 
   25 Dec 2012; Agostino Sarubbo <ago@gentoo.org> fribidi-0.19.5.ebuild:
   Stable for amd64, wrt bug #448522
