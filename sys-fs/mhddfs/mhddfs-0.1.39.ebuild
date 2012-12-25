@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mhddfs/mhddfs-0.1.39.ebuild,v 1.2 2012/12/24 20:19:16 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mhddfs/mhddfs-0.1.39.ebuild,v 1.3 2012/12/25 16:21:58 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://mhddfs.uvw.ru/downloads/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE="linguas_ru suid"
 
 RDEPEND=">=sys-fs/fuse-2.7.0"
