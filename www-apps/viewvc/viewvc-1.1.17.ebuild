@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.1.17.ebuild,v 1.3 2012/11/12 18:46:50 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.1.17.ebuild,v 1.4 2012/12/25 14:33:47 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -19,16 +19,15 @@ SRC_URI="http://viewvc.tigris.org/files/documents/3330/${DOWNLOAD_NUMBER}/${P}.t
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
-IUSE="cvs cvsgraph mod_python mod_wsgi mysql pygments +subversion"
+IUSE="cvs cvsgraph mod_wsgi mysql pygments +subversion"
 
 DEPEND=""
 RDEPEND="
 	cvs? ( dev-vcs/rcs )
 	subversion? ( >=dev-vcs/subversion-1.3.1[python] )
 
-	mod_python? ( www-apache/mod_python )
 	mod_wsgi? ( www-apache/mod_wsgi )
-	!mod_python? ( !mod_wsgi? ( virtual/httpd-cgi ) )
+	!mod_wsgi? ( virtual/httpd-cgi )
 
 	cvsgraph? ( >=dev-vcs/cvsgraph-1.5.0 )
 	mysql? ( >=dev-python/mysql-python-0.9.0 )
@@ -86,20 +85,10 @@ src_install() {
 	insinto "${MY_HOSTROOTDIR}/conf"
 	doins conf/{viewvc,cvsgraph}.conf
 
-	if use mod_python; then
-		insinto "${MY_HTDOCSDIR}"
-		doins bin/mod_python/viewvc.py || die "doins failed"
-		doins bin/mod_python/handler.py || die "doins failed"
-		doins bin/mod_python/.htaccess || die "doins failed"
-		if use mysql; then
-			doins bin/mod_python/query.py || die "doins failed"
-		fi
-	else
-		exeinto "${MY_CGIBINDIR}"
-		doexe bin/cgi/viewvc.cgi || die "doexe failed"
-		if use mysql; then
-			doexe bin/cgi/query.cgi || die "doexe failed"
-		fi
+	exeinto "${MY_CGIBINDIR}"
+	doexe bin/cgi/viewvc.cgi || die "doexe failed"
+	if use mysql; then
+		doexe bin/cgi/query.cgi || die "doexe failed"
 	fi
 
 	webapp_configfile "${MY_HOSTROOTDIR}/conf/"{viewvc,cvsgraph}.conf
