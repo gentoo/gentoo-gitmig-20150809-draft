@@ -3,8 +3,8 @@
 MINISSDPD="/usr/sbin/minissdpd"
 PIDFILE="/var/run/minissdpd.pid"
 
-ROUTE="/sbin/route"
-IFCONFIG="/sbin/ifconfig"
+ROUTE="/bin/route"
+IFCONFIG="/bin/ifconfig"
 
 depend() {
 	need net
