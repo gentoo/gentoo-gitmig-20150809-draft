@@ -1,0 +1,10 @@
+# ChangeLog for sys-libs/musl
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.1 2012/12/25 18:30:03 lu_zero Exp $
+
+*musl-9999 (25 Dec 2012)
+
+  25 Dec 2012; Luca Barbato <lu_zero@gentoo.org> +musl-9999.ebuild,
+  +metadata.xml:
+  Initial commit
+
