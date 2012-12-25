@@ -1,6 +1,17 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.185 2012/12/08 21:40:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.186 2012/12/25 23:45:45 eva Exp $
+
+*webkit-gtk-1.10.2-r300 (25 Dec 2012)
+
+  25 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -webkit-gtk-1.6.1-r201.ebuild, -webkit-gtk-1.6.1-r301.ebuild,
+  -webkit-gtk-1.8.2-r200.ebuild, -webkit-gtk-1.8.2-r300.ebuild,
+  +files/webkit-gtk-1.9.91-libdl.patch,
+  +files/webkit-gtk-1.10.1-disable-backtrace-uclibc.patch,
+  +webkit-gtk-1.10.2-r300.ebuild, +files/webkit-gtk-1.11.1-libdl.patch:
+  Version bump. Switch to EAPI=5 and python-single-r1.eclass. Uses
+  gstreamer:1.0, webkit2 is always on.
 
   08 Dec 2012; Agostino Sarubbo <ago@gentoo.org> webkit-gtk-1.8.3-r300.ebuild:
   Stable for ppc, wrt bug #427546
