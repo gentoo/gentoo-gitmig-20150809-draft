@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.295 2012/10/27 08:33:28 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.296 2012/12/26 21:50:23 eva Exp $
+
+*eog-3.6.2 (26 Dec 2012)
+
+  26 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> -eog-3.4.3.ebuild,
+  +eog-3.6.2.ebuild, metadata.xml:
+  Version bump for Gnome 3.6. Clean up old revision. USE=introspection is now
+  global.
 
   27 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org> eog-2.32.1.ebuild,
   +files/eog-2.32.1-gmodule.patch:

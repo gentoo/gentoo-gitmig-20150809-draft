@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-3.4.3.ebuild,v 1.3 2012/10/11 14:12:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-3.6.2.ebuild,v 1.1 2012/12/26 21:50:23 eva Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
@@ -16,11 +16,14 @@ SLOT="1"
 IUSE="+exif +introspection +jpeg lcms +svg tiff xmp"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 
-RDEPEND=">=x11-libs/gtk+-3.3.6:3[introspection,X]
-	>=dev-libs/glib-2.31.0:2
+REQUIRED_USE="exif? ( jpeg )"
+
+RDEPEND="
+	>=x11-libs/gtk+-3.3.6:3[introspection,X]
+	>=dev-libs/glib-2.31:2
 	>=dev-libs/libxml2-2:2
-	>=dev-libs/libpeas-0.7.4[gtk]
-	>=gnome-base/gnome-desktop-2.91.2:3
+	>=dev-libs/libpeas-0.7.4:=[gtk]
+	>=gnome-base/gnome-desktop-2.91.2:3=
 	>=gnome-base/gsettings-desktop-schemas-2.91.92
 	>=x11-themes/gnome-icon-theme-2.19.1
 	>=x11-misc/shared-mime-info-0.20
@@ -28,23 +31,21 @@ RDEPEND=">=x11-libs/gtk+-3.3.6:3[introspection,X]
 	x11-libs/gdk-pixbuf:2[jpeg?,tiff?]
 	x11-libs/libX11
 
-	exif? (
-		>=media-libs/libexif-0.6.14
-		virtual/jpeg:0 )
+	exif? ( >=media-libs/libexif-0.6.14 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.3 )
 	jpeg? ( virtual/jpeg:0 )
 	lcms? ( media-libs/lcms:2 )
-	svg? ( >=gnome-base/librsvg-2.26:2 )
-	xmp? ( media-libs/exempi:2 )"
-
+	svg? ( >=gnome-base/librsvg-2.36.2:2 )
+	xmp? ( media-libs/exempi:2 )
+"
 DEPEND="${RDEPEND}
-	dev-util/gtk-doc-am
-	app-text/gnome-doc-utils
-	sys-devel/gettext
+	>=dev-util/gtk-doc-am-1.10
 	>=dev-util/intltool-0.40
-	virtual/pkgconfig"
+	sys-devel/gettext
+	virtual/pkgconfig
+"
 
-pkg_setup() {
+src_configure() {
 	G2CONF="${G2CONF}
 		$(use_enable introspection)
 		$(use_with jpeg libjpeg)
@@ -52,7 +53,7 @@ pkg_setup() {
 		$(use_with lcms cms)
 		$(use_with xmp)
 		$(use_with svg librsvg)
-		--disable-scrollkeeper
-		--disable-schemas-compile"
+		ITSTOOL=$(type -P true)"
 	DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README THANKS TODO"
+	gnome2_src_configure
 }
