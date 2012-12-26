@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.105 2012/12/26 22:31:35 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.106 2012/12/26 22:51:34 ottxor Exp $
 
 # This file requires >=portage-2.1.1
 
 # Christoph Jungans <ottxor@gentoo.org> (26 Dec 2012)
-# cuda/openmm works on x86/amd64 (masked in base)
-sci-chemistry/gromacs -cuda -openmm
+# cuda/openmm/mkl works on x86/amd64 (masked in base)
+sci-chemistry/gromacs -cuda -mkl -openmm
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (3 Nov 2012)
 # Unmask here, as it's masked in base.
