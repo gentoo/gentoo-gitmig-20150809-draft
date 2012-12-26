@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.31 2012/12/07 20:13:21 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.32 2012/12/26 02:44:01 ford_prefect Exp $
 
 EAPI=4
 
@@ -119,9 +119,9 @@ src_configure() {
 		$(use_enable oss oss-output) \
 		$(use_enable alsa) \
 		$(use_enable lirc) \
+		$(use_enable neon neon-opt) \
 		$(use_enable tcpd tcpwrap) \
 		$(use_enable jack) \
-		$(use_enable lirc) \
 		$(use_enable avahi) \
 		$(use_enable dbus) \
 		$(use_enable gnome gconf) \
