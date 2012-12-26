@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.9-r1.ebuild,v 1.3 2012/10/24 19:00:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.9-r1.ebuild,v 1.4 2012/12/26 13:52:53 ulm Exp $
 
 EAPI=1
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.bitrot.de/plan.html"
 SRC_URI="ftp://ftp.fu-berlin.de/unix/X11/apps/plan/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="GPL-2+" #448646
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
