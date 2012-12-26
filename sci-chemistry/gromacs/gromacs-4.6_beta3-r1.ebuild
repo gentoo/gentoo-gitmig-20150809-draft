@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.6_beta3.ebuild,v 1.1 2012/12/22 19:41:32 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.6_beta3-r1.ebuild,v 1.1 2012/12/26 22:57:12 ottxor Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ HOMEPAGE="http://www.gromacs.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
-IUSE="X blas cuda doc -double-precision +fftw gsl lapack mpi +offensive openmm openmp +single-precision test +threads zsh-completion ${ACCE_IUSE}"
+IUSE="X blas cuda doc -double-precision +fftw gsl lapack mkl mpi +offensive openmm openmp +single-precision test +threads zsh-completion ${ACCE_IUSE}"
 
 CDEPEND="
 	X? (
@@ -51,15 +51,22 @@ CDEPEND="
 	fftw? ( sci-libs/fftw:3.0 )
 	gsl? ( sci-libs/gsl )
 	lapack? ( virtual/lapack )
+	mkl? ( sci-libs/mkl )
 	mpi? ( virtual/mpi )
-	openmm? ( sci-libs/openmm[cuda,opencl] )"
+	openmm? (
+		dev-util/nvidia-cuda-toolkit
+		sci-libs/openmm[cuda,opencl]
+	)"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}"
 
 RESTRICT="test"
 
-REQUIRED_USE="cuda? ( single-precision ) openmm? ( single-precision cuda )"
+REQUIRED_USE="
+	cuda? ( single-precision )
+	openmm? ( single-precision )
+	mkl? ( !blas !fftw !lapack )"
 
 pkg_pretend() {
 	[[ $(gcc-version) == "4.1" ]] && die "gcc 4.1 is not supported by gromacs"
@@ -70,7 +77,6 @@ pkg_pretend() {
 src_prepare() {
 	#notes/todos
 	# -on apple: there is framework support
-	# -mkl support
 
 	#add user patches from /etc/portage/patches/sci-chemistry/gromacs
 	epatch_user
@@ -89,7 +95,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local mycmakeargs_pre=( ) extra
+	local mycmakeargs_pre=( ) extra fft_opts=( )
 
 	#go from slowest to fastest acceleration
 	local acce="None"
@@ -102,8 +108,19 @@ src_configure() {
 	[[ ${CHOST} = *-darwin* ]] && \
 		extra+=" -DCMAKE_BUILD_WITH_INSTALL_RPATH=OFF"
 
+	if use fftw; then
+		fft_opts=( -DGMX_FFT_LIBRARY=fftw3 )
+	elif use mkl; then
+		fft_opts=( -DGMX_FFT_LIBRARY=mkl
+			-DMKL_INCLUDE_DIR="${MKLROOT}/include"
+			-DMKL_LIBRARIES="$(echo /opt/intel/mkl/10.0.5.025/lib/*/libmkl.so);$(echo /opt/intel/mkl/10.0.5.025/lib/*/libiomp*.so)"
+		)
+	else
+		fft_opts=( -DGMX_FFT_LIBRARY=fftpack )
+	fi
+
 	mycmakeargs_pre+=(
-		-DGMX_FFT_LIBRARY=$(usex fftw fftw3 fftwpack)
+		"${fft_opts[@]}"
 		$(cmake-utils_use X GMX_X11)
 		$(cmake-utils_use blas GMX_EXTERNAL_BLAS)
 		$(cmake-utils_use gsl GMX_GSL)
@@ -113,7 +130,7 @@ src_configure() {
 		-DGMX_DEFAULT_SUFFIX=off
 		-DGMX_ACCELERATION="$acce"
 		-DGMXLIB="$(get_libdir)"
-	    -DGMX_VMD_PLUGIN_PATH="${EPREFIX}/usr/$(get_libdir)/vmd/plugins/*/molfile/"
+		-DGMX_VMD_PLUGIN_PATH="${EPREFIX}/usr/$(get_libdir)/vmd/plugins/*/molfile/"
 		${extra}
 	)
 
@@ -135,7 +152,7 @@ src_configure() {
 			einfo "Configuring for openmm build"
 			mycmakeargs=( ${mycmakeargs_pre[@]} ${p} -DGMX_MPI=OFF
 				-DGMX_THREAD_MPI=OFF -DGMX_GPU=OFF -DGMX_OPENMM=ON
-				-DGMX_BINARY_SUFFIX="openmm" -DGMX_LIBS_SUFFIX="openmm" )
+				-DGMX_BINARY_SUFFIX="_openmm" -DGMX_LIBS_SUFFIX="_openmm" )
 			BUILD_DIR="${WORKDIR}/${P}_openmm" \
 				OPENMM_ROOT_DIR="${EPREFIX}/usr" cmake-utils_src_configure
 		fi
