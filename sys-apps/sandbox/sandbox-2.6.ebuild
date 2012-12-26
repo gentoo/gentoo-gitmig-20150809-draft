@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-2.6.ebuild,v 1.2 2012/07/06 19:53:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-2.6.ebuild,v 1.3 2012/12/26 22:08:11 vapier Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -47,6 +47,7 @@ src_unpack() {
 	unpacker
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-trace-hppa.patch #425062
+	epatch_user
 }
 
 sb_configure() {
