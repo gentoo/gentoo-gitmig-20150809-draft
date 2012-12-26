@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.9.3.ebuild,v 1.5 2012/12/03 00:51:29 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.9.3.ebuild,v 1.6 2012/12/26 04:55:20 pesa Exp $
 
 EAPI=4
 
@@ -25,8 +25,8 @@ RDEPEND="
 		$(add_kdebase_dep kdepimlibs 'semantic-desktop')
 		>=dev-libs/soprano-2.8.0
 	)
-	aqua? ( >=dev-python/PyQt4-4.9[dbus,declarative,sql,svg,webkit,aqua] )
-	!aqua? ( >=dev-python/PyQt4-4.9[dbus,declarative,sql,svg,webkit,X] )
+	aqua? ( >=dev-python/PyQt4-4.9[dbus,declarative,script(+),sql,svg,webkit,aqua] )
+	!aqua? ( >=dev-python/PyQt4-4.9[dbus,declarative,script(+),sql,svg,webkit,X] )
 "
 DEPEND="${RDEPEND}
 	sys-devel/libtool
