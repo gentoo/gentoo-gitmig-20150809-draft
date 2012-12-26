@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ferret/ferret-0.11.8.5-r1.ebuild,v 1.1 2012/12/26 14:38:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ferret/ferret-0.11.8.5-r1.ebuild,v 1.2 2012/12/26 14:42:27 graaff Exp $
 
 EAPI=4
 
@@ -27,6 +27,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND+="app-arch/bzip2"
+DEPEND+="app-arch/bzip2"
 
 all_ruby_prepare() {
 	# Remove bundled bzlib code and use system version instead.
