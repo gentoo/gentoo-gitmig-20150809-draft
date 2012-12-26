@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/openmm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openmm/ChangeLog,v 1.1 2012/11/30 20:45:20 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openmm/ChangeLog,v 1.2 2012/12/26 18:48:19 ottxor Exp $
+
+  26 Dec 2012; Christoph Junghans <ottxor@gentoo.org> openmm-4.1.1.ebuild:
+  fixed cmake options
 
 *openmm-4.1.1 (30 Nov 2012)
 
