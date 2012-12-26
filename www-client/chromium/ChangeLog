@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.780 2012/12/20 16:50:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.781 2012/12/26 19:08:15 floppym Exp $
+
+  26 Dec 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Describe the bindist flag in metadata.
 
 *chromium-25.0.1364.2 (20 Dec 2012)
 
