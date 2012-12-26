@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/json
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/json/ChangeLog,v 1.8 2012/11/18 14:05:07 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/json/ChangeLog,v 1.9 2012/12/26 07:50:42 slyfox Exp $
+
+  26 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> json-0.4.3.ebuild,
+  json-0.4.4.ebuild, json-0.5.ebuild, json-0.7.ebuild:
+  Workaround bug #427838 where ghc-6.12.3 hangs building Text.JSON.Parsec by
+  jinleileiking@gmail.com and others.
 
 *json-0.7 (18 Nov 2012)
 
