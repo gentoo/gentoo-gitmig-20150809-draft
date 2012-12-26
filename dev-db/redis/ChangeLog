@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.54 2012/12/26 11:05:46 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.55 2012/12/26 11:15:46 djc Exp $
+
+*redis-2.6.7 (26 Dec 2012)
+
+  26 Dec 2012; Dirkjan Ochtman <djc@gentoo.org> redis-2.4.18.ebuild,
+  +redis-2.6.7.ebuild, +files/redis-2.6.7-config.patch,
+  +files/redis-2.6.7-shared.patch:
+  Version bump to 2.6.7 (bug 439354), fix up 2.4.18 patch name.
 
 *redis-2.4.18 (26 Dec 2012)
 

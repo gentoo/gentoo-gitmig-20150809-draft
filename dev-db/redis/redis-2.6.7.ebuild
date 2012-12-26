@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.4.18.ebuild,v 1.2 2012/12/26 11:15:46 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.6.7.ebuild,v 1.1 2012/12/26 11:15:46 djc Exp $
 
-EAPI="4"
+EAPI=4
 
 inherit autotools eutils flag-o-matic user
 
@@ -25,21 +25,13 @@ REQUIRED_USE="tcmalloc? ( !jemalloc )
 
 S="${WORKDIR}/${PN}-${PV/_/-}"
 
-REDIS_PIDDIR=/var/run/redis/
-REDIS_PIDFILE=${REDIS_PIDDIR}/redis.pid
-REDIS_DATAPATH=/var/lib/redis
-REDIS_LOGPATH=/var/log/redis
-REDIS_LOGFILE=${REDIS_LOGPATH}/redis.log
-
 pkg_setup() {
 	enewgroup redis 75
-	enewuser redis 75 -1 ${REDIS_DATAPATH} redis
+	enewuser redis 75 -1 /var/lib/redis redis
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/redis-2.4.17-shared.patch"
-	epatch "${FILESDIR}/redis-2.4.4-tcmalloc.patch"
-
+	epatch "${FILESDIR}/${P}"-{shared,config}.patch
 	# now we will rewrite present Makefiles
 	local makefiles=""
 	for MKF in $(find -name 'Makefile' | cut -b 3-); do
@@ -69,44 +61,32 @@ src_compile() {
 	elif use jemalloc ; then
 		myconf="${myconf} JEMALLOC_SHARED=yes"
 	else
-		myconf="${myconf} FORCE_LIBC_MALLOC=yes"
+		myconf="${myconf} MALLOC=yes"
 	fi
 
 	emake ${myconf}
 }
 
 src_install() {
-	# configuration file rewrites
 	insinto /etc/
-	sed -r \
-		-e "/^pidfile\>/s,/var.*,${REDIS_PIDFILE}," \
-		-e '/^daemonize\>/s,no,yes,' \
-		-e '/^# bind/s,^# ,,' \
-		-e '/^# maxmemory\>/s,^# ,,' \
-		-e '/^maxmemory\>/s,<bytes>,67108864,' \
-		-e "/^dbfilename\>/s,dump.rdb,${REDIS_DATAPATH}/dump.rdb," \
-		-e "/^dir\>/s, .*, ${REDIS_DATAPATH}/," \
-		-e '/^loglevel\>/s:(verbose|debug):notice:' \
-		-e "/^logfile\>/s:stdout:${REDIS_LOGFILE}:" \
-		<redis.conf \
-		>redis.conf.gentoo
-	newins redis.conf.gentoo redis.conf
-	use prefix || fowners redis:redis /etc/redis.conf
-	fperms 0644 /etc/redis.conf
+	doins redis.conf sentinel.conf
+	use prefix || fowners redis:redis /etc/{redis,sentinel}.conf
+	fperms 0644 /etc/{redis,sentinel}.conf
 
 	newconfd "${FILESDIR}/redis.confd" redis
 	newinitd "${FILESDIR}/redis.initd" redis
 
-	nonfatal dodoc 00-RELEASENOTES BUGS CONTRIBUTING README
+	nonfatal dodoc 00-RELEASENOTES BUGS CONTRIBUTING MANIFESTO README
 
 	dobin src/redis-cli
 	dosbin src/redis-benchmark src/redis-server src/redis-check-aof src/redis-check-dump
 	fperms 0750 /usr/sbin/redis-benchmark
+	dosym /usr/sbin/redis-server /usr/sbin/redis-sentinel
 
 	if use prefix; then
 		diropts -m0750
 	else
 		diropts -m0750 -o redis -g redis
 	fi
-	keepdir ${REDIS_DATAPATH} ${REDIS_LOGPATH}
+	keepdir /var/{log,lib}/redis
 }
