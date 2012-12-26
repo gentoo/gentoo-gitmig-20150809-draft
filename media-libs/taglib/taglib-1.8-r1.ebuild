@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.8.ebuild,v 1.2 2012/12/01 14:33:31 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.8-r1.ebuild,v 1.1 2012/12/26 11:24:37 polynomial-c Exp $
 
 EAPI=4
 CMAKE_IN_SOURCE_BUILD=1
@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}
 PATCHES=(
 	"${FILESDIR}"/${P}-freebsd.patch
 	"${FILESDIR}"/${PN}-1.6.1-install-examples.patch
+	"${FILESDIR}"/${P}-headerfile_version_fix.patch
 )
 
 DOCS=( AUTHORS NEWS )
