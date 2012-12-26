@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20120828.ebuild,v 1.8 2012/12/23 19:31:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20120828.ebuild,v 1.9 2012/12/26 08:51:52 pinkbyte Exp $
 
 EAPI=4
 
@@ -476,7 +476,8 @@ src_configure() {
 }
 
 src_compile() {
-	base_src_compile
+	# enable verbose build, bug #448196
+	base_src_compile V=1
 	use doc && emake -j1 -C DOCS/xml html-chunked
 }
 
