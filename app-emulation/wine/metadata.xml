@@ -15,7 +15,7 @@ Think of Wine as a compatibility layer for running Windows programs. Wine does n
 	<flag name='opencl'>Enable OpenCL support</flag>
 	<flag name='osmesa'>Add support for OpenGL in bitmaps using libOSMesa</flag>
 	<flag name='perl'>Install helpers written in perl (winedump/winemaker)</flag>
-	<flag name='prelink'>Skip install of prelink -- do not set if you do not know what this means</flag>
+	<flag name='prelink'>Run prelink on DLLs during build -- do not disable if you do not know what this means as it can break things at runtime</flag>
 	<flag name='samba'>Add support for NTLM auth. see
 		http://wiki.winehq.org/NtlmAuthSetupGuide and
 		http://wiki.winehq.org/NtlmSigningAndSealing</flag>
