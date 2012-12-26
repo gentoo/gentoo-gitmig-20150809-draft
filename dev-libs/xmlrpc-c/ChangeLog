@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.122 2012/10/31 02:49:16 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.123 2012/12/26 12:04:28 maksbotan Exp $
+
+*xmlrpc-c-1.32.05 (26 Dec 2012)
+
+  26 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org> +xmlrpc-c-1.32.05.ebuild:
+  Bump to 1.32.05, bug #443872. Thanks to slepnoga.
 
   31 Oct 2012; Christoph Junghans <ottxor@gentoo.org> xmlrpc-c-1.29.02.ebuild:
   added prefix keywords
