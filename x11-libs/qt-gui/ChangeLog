@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.212 2012/12/25 14:54:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.213 2012/12/26 17:19:24 ago Exp $
+
+  26 Dec 2012; Agostino Sarubbo <ago@gentoo.org> qt-gui-4.8.4.ebuild:
+  Stable for sparc, wrt bug #445956
 
   25 Dec 2012; Agostino Sarubbo <ago@gentoo.org> qt-gui-4.8.4.ebuild:
   Stable for arm, wrt bug #445956
