@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/tagpy-0.94.8-r1.ebuild,v 1.9 2012/11/09 21:03:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/tagpy-0.94.8-r1.ebuild,v 1.10 2012/12/26 11:48:00 polynomial-c Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.5 3.* *-jython 2.7-pypy-*"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Python Bindings for TagLib"
 HOMEPAGE="http://mathema.tician.de//software/tagpy http://pypi.python.org/pypi/tagpy"
@@ -26,6 +26,9 @@ DEPEND="${RDEPEND}
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 
 src_prepare() {
+	# bug #440740
+	epatch "${FILESDIR}"/${P}-taglib-1.8_compat.patch
+
 	# Disable broken check for Distribute.
 	sed -e "s/if 'distribute' not in setuptools.__file__:/if False:/" -i aksetup_helper.py
 
