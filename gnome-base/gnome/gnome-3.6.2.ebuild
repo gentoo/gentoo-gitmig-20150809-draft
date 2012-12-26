@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-3.2.1.ebuild,v 1.4 2012/11/05 21:30:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-3.6.2.ebuild,v 1.1 2012/12/26 23:17:05 eva Exp $
 
 EAPI="4"
 
@@ -29,22 +29,22 @@ RDEPEND="
 	>=x11-wm/mutter-${PV}
 	>=gnome-base/gnome-shell-${PV}[bluetooth?]
 
-	>=x11-themes/gnome-backgrounds-3.2
-	>=x11-themes/gnome-icon-theme-extras-3.0.0
+	>=x11-themes/gnome-backgrounds-3.6.1
+	>=x11-themes/gnome-icon-theme-extras-3.6.2
 	x11-themes/sound-theme-freedesktop
 
 	accessibility? (
-		>=app-accessibility/at-spi2-atk-2.2.1
-		>=app-accessibility/at-spi2-core-2.2.1
-		>=app-accessibility/caribou-0.4.1
+		>=app-accessibility/at-spi2-atk-2.6.2
+		>=app-accessibility/at-spi2-core-2.6.2
+		>=app-accessibility/caribou-0.4.4.2
 		>=app-accessibility/orca-${PV}
-		>=gnome-extra/mousetweaks-${PV} )
+		>=gnome-extra/mousetweaks-3.6.0 )
 	extras? ( >=gnome-base/gnome-extra-apps-${PV} )
 	fallback? (
-		>=gnome-base/gnome-applets-${PV}
+		>=gnome-base/gnome-applets-3.6.0
 		>=gnome-base/gnome-fallback-${PV} )"
 DEPEND=""
-PDEPEND="|| ( >=gnome-base/gvfs-1.10.1[udisks] >=gnome-base/gvfs-1.10.1[gdu] )"
+PDEPEND="|| ( >=gnome-base/gvfs-1.12.1[udisks] >=gnome-base/gvfs-1.12.1[gdu] )"
 # Broken from assumptions of gnome-vfs headers being included in nautilus headers,
 # which isn't the case with nautilus-2.22, bug #216019
 #	>=app-admin/gnome-system-tools-2.32.0
@@ -87,19 +87,3 @@ PDEPEND="|| ( >=gnome-base/gvfs-1.10.1[udisks] >=gnome-base/gvfs-1.10.1[gdu] )"
 #   itstool
 #   yelp-tools
 
-#pkg_postinst() {
-# gnome-wm is gone, session files are now used by gnome-session to decide which
-# windowmanager etc to use. Need to document this
-#
-# FIXME: Is this still relevant?
-#
-#	elog "The main file alteration monitoring functionality is"
-#	elog "provided by >=glib-2.16. Note that on a modern Linux system"
-#	elog "you do not need the USE=fam flag on it if you have inotify"
-#	elog "support in your linux kernel ( >=2.6.13 ) enabled."
-#	elog "USE=fam on glib is however useful for other situations,"
-#	elog "such as Gentoo/FreeBSD systems. A global USE=fam can also"
-#	elog "be useful for other packages that do not use the new file"
-#	elog "monitoring API yet that the new glib provides."
-#	elog
-#}
