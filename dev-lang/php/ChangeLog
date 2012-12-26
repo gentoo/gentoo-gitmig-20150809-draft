@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.657 2012/12/26 10:55:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.658 2012/12/26 10:57:16 maekke Exp $
+
+  26 Dec 2012; Markus Meier <maekke@gentoo.org> php-5.4.8.ebuild:
+  arm stable, bug #447012
 
   26 Dec 2012; Markus Meier <maekke@gentoo.org> php-5.3.18.ebuild:
   arm stable, bug #447012
