@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso++/espresso++-1.3.1.ebuild,v 1.3 2012/12/23 00:26:04 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso++/espresso++-1.3.1.ebuild,v 1.4 2012/12/26 23:27:55 ottxor Exp $
 
 EAPI=4
 
@@ -13,7 +13,6 @@ HOMEPAGE="https://www.espresso-pp.de"
 
 if [[ ${PV} = 9999 ]]; then
 	EHG_REPO_URI="https://hg.berlios.de/repos/espressopp"
-	EHG_REVISION="default"
 	inherit mercurial
 else
 	SRC_URI="https://www.espresso-pp.de/Download/${PN%++}pp_${PV//./_}.tgz"
