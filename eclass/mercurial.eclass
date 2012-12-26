@@ -1,11 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.19 2012/04/03 19:16:29 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.20 2012/12/26 23:08:53 ottxor Exp $
 
 # @ECLASS: mercurial.eclass
 # @MAINTAINER:
-# Krzysztof Pawlik <nelchael@gentoo.org>
+# Christoph Junghans <ottxor@gentoo.org>
 # Dirkjan Ochtman <djc@gentoo.org>
+# @AUTHOR:
+# Next gen author: Krzysztof Pawlik <nelchael@gentoo.org>
+# Original author: Aron Griffis <agriffis@gentoo.org>
 # @BLURB: This eclass provides generic mercurial fetching functions
 # @DESCRIPTION:
 # This eclass provides generic mercurial fetching functions. To fetch sources
@@ -29,7 +32,7 @@ DEPEND="dev-vcs/mercurial"
 #
 # EHG_REVISION is passed as a value for --updaterev parameter, so it can be more
 # than just a revision, please consult `hg help revisions' for more details.
-[[ -z "${EHG_REVISION}" ]] && EHG_REVISION="tip"
+: ${EHG_REVISION:="default"}
 
 # @ECLASS-VARIABLE: EHG_STORE_DIR
 # @DESCRIPTION:
@@ -74,11 +77,17 @@ EHG_OFFLINE="${EHG_OFFLINE:-${EVCS_OFFLINE}}"
 #
 # If repository URI is not passed it defaults to EHG_REPO_URI, if module is
 # empty it defaults to basename of EHG_REPO_URI, sourcedir defaults to S.
-function mercurial_fetch {
-	debug-print-function ${FUNCNAME} ${*}
+mercurial_fetch() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
 
 	EHG_REPO_URI=${1-${EHG_REPO_URI}}
 	[[ -z "${EHG_REPO_URI}" ]] && die "EHG_REPO_URI is empty"
+
+	local cert_opt=
+	[[ -f ${EPREFIX}/etc/ssl/certs/ca-certificates.crt ]] && \
+		cert_opt=( --config "web.cacerts=${EPREFIX}/etc/ssl/certs/ca-certificates.crt" )
 
 	local module="${2-$(basename "${EHG_REPO_URI}")}"
 	local sourcedir="${3-${S}}"
@@ -105,7 +114,7 @@ function mercurial_fetch {
 	# Clone/update repository:
 	if [[ ! -d "${module}" ]]; then
 		einfo "Cloning ${EHG_REPO_URI} to ${EHG_STORE_DIR}/${EHG_PROJECT}/${module}"
-		${EHG_CLONE_CMD} "${EHG_REPO_URI}" "${module}" || {
+		${EHG_CLONE_CMD} "${cert_opt[@]}" "${EHG_REPO_URI}" "${module}" || {
 			rm -rf "${module}"
 			die "failed to clone ${EHG_REPO_URI}"
 		}
@@ -113,9 +122,7 @@ function mercurial_fetch {
 	elif [[ -z "${EHG_OFFLINE}" ]]; then
 		einfo "Updating ${EHG_STORE_DIR}/${EHG_PROJECT}/${module} from ${EHG_REPO_URI}"
 		cd "${module}" || die "failed to cd to ${module}"
-		${EHG_PULL_CMD}
-		# mercurial-2.1: hg pull returns 1 if there are no incoming changesets
-		[[ $? -eq 0 || $? -eq 1 ]] || die "update failed"
+		${EHG_PULL_CMD} "${cert_opt[@]}" "${EHG_REPO_URI}" || die "update failed"
 	fi
 
 	# Checkout working copy:
@@ -131,12 +138,55 @@ function mercurial_fetch {
 	local HG_REVDATA=($(hg identify -b -i "${sourcedir}"))
 	export HG_REV_ID=${HG_REVDATA[0]}
 	local HG_REV_BRANCH=${HG_REVDATA[1]}
-	einfo "Work directory: ${sourcedir} global id: ${HG_REV_ID} branch: ${HG_REV_BRANCH}"
+	einfo "Work directory: ${sourcedir} global id: ${HG_REV_ID} (was ${EHG_REVISION} branch: ${HG_REV_BRANCH}"
+}
+
+# @FUNCTION: mercurial_bootstrap
+# @INTERNAL
+# @DESCRIPTION:
+# Internal function that runs bootstrap command on unpacked source.
+mercurial_bootstrap() {
+	debug-print-function ${FUNCNAME} "$@"
+
+	# @ECLASS-VARIABLE: EHG_BOOTSTRAP
+	# @DESCRIPTION:
+	# Command to be executed after checkout and clone of the specified
+	# repository.
+	if [[ ${EHG_BOOTSTRAP} ]]; then
+		pushd "${S}" > /dev/null
+		einfo "Starting bootstrap"
+
+		if [[ -f ${EHG_BOOTSTRAP} ]]; then
+			# we have file in the repo which we should execute
+			debug-print "${FUNCNAME}: bootstraping with file \"${EHG_BOOTSTRAP}\""
+
+			if [[ -x ${EHG_BOOTSTRAP} ]]; then
+				eval "./${EHG_BOOTSTRAP}" \
+					|| die "${FUNCNAME}: bootstrap script failed"
+			else
+				eerror "\"${EHG_BOOTSTRAP}\" is not executable."
+				eerror "Report upstream, or bug ebuild maintainer to remove bootstrap command."
+				die "\"${EHG_BOOTSTRAP}\" is not executable"
+			fi
+		else
+			# we execute some system command
+			debug-print "${FUNCNAME}: bootstraping with commands \"${EHG_BOOTSTRAP}\""
+
+			eval "${EHG_BOOTSTRAP}" \
+				|| die "${FUNCNAME}: bootstrap commands failed"
+		fi
+
+		einfo "Bootstrap finished"
+		popd > /dev/null
+	fi
 }
 
 # @FUNCTION: mercurial_src_unpack
 # @DESCRIPTION:
 # The mercurial src_unpack function, which will be exported.
 function mercurial_src_unpack {
+	debug-print-function ${FUNCNAME} "$@"
+
 	mercurial_fetch
+	mercurial_bootstrap
 }
