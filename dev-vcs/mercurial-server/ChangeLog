@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/mercurial-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial-server/ChangeLog,v 1.4 2012/06/01 02:30:22 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial-server/ChangeLog,v 1.5 2012/12/26 23:17:35 ottxor Exp $
+
+  26 Dec 2012; Christoph Junghans <ottxor@gentoo.org>
+  mercurial-server-1.1.ebuild, mercurial-server-1.2.ebuild,
+  mercurial-server-9999.ebuild:
+  use new mercurial.eclass defaults
 
   01 Jun 2012; Zac Medico <zmedico@gentoo.org> mercurial-server-1.1.ebuild,
   mercurial-server-1.2.ebuild, mercurial-server-9999.ebuild:
@@ -22,4 +27,3 @@
   +files/mercurial-server-1.1_documentation.patch,
   +mercurial-server-9999.ebuild, +metadata.xml:
   Initial commit.
-
