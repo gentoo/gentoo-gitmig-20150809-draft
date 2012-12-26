@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.4.2.ebuild,v 1.3 2012/11/07 21:48:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.4.2.ebuild,v 1.4 2012/12/26 22:47:32 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -151,7 +151,7 @@ src_install() {
 		pax-mark mr "${ED}usr/bin/gnome-shell"
 	elif has_version '>=dev-lang/spidermonkey-1.8.7[jit]'; then
 		pax-mark m "${ED}usr/bin/gnome-shell"
-    fi
+	fi
 }
 
 pkg_postinst() {
