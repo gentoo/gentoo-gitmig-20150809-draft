@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.196 2012/12/19 10:17:57 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.197 2012/12/26 22:30:24 ottxor Exp $
+
+  26 Dec 2012; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
+  unmasked openmm for sci-chemistry/gromacs
 
   19 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> no-multilib/package.mask,
   no-multilib/package.use.mask, package.use.mask:
