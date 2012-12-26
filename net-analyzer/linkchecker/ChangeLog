@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.82 2012/11/12 18:34:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.83 2012/12/26 06:56:19 pesa Exp $
+
+  26 Dec 2012; Davide Pesavento <pesa@gentoo.org> linkchecker-7.9.ebuild,
+  linkchecker-8.0.ebuild, linkchecker-8.1.ebuild, linkchecker-8.2.ebuild:
+  Update PyQt4 deps.
 
 *linkchecker-8.2 (12 Nov 2012)
 

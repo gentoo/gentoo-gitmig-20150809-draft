@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-8.2.ebuild,v 1.1 2012/11/12 18:34:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-8.2.ebuild,v 1.2 2012/12/26 06:56:19 pesa Exp $
 
 EAPI=4
 
@@ -35,7 +35,8 @@ RDEPEND="
 		dev-python/utidylib
 		)
 	X? (
-		dev-python/PyQt4[X,assistant]
+		|| ( >=dev-python/PyQt4-4.9.6-r1[X,help]
+			<dev-python/PyQt4-4.9.6-r1[X,assistant] )
 		dev-python/qscintilla-python
 		)"
 DEPEND="
