@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pivy/pivy-0.5_alpha20110303.ebuild,v 1.6 2012/11/30 23:58:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pivy/pivy-0.5_alpha20110303.ebuild,v 1.7 2012/12/26 14:44:59 jlec Exp $
 
 EAPI="3"
 
@@ -20,8 +20,6 @@ IUSE=""
 
 RDEPEND="
 	media-libs/coin
-	>=media-libs/SoQt-1.4.2_alpha
-"
+	>=media-libs/SoQt-1.5.0"
 DEPEND="${RDEPEND}
-	|| ( =dev-lang/swig-1.3* >=dev-lang/swig-2.0.4-r1 )
-"
+	dev-lang/swig"
