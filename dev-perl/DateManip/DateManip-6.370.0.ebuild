@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/DateManip-6.360.0.ebuild,v 1.2 2012/12/26 10:40:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/DateManip-6.370.0.ebuild,v 1.1 2012/12/26 10:40:08 tove Exp $
 
 EAPI=4
 
 MY_PN=Date-Manip
 MODULE_AUTHOR=SBECK
-MODULE_VERSION=6.36
+MODULE_VERSION=6.37
 inherit perl-module
 
 DESCRIPTION="Perl date manipulation routines"
