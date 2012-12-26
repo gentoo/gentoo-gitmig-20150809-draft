@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-1.1.2.ebuild,v 1.4 2012/11/21 11:27:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-1.1.2.ebuild,v 1.5 2012/12/26 06:29:30 pesa Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ SRC_URI="http://www.pyside.org/files/${MY_P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ~arm x86 ~amd64-linux ~x86-linux"
-IUSE="X declarative help multimedia kde opengl phonon script scripttools sql svg test webkit xmlpatterns"
+IUSE="X declarative help kde multimedia opengl phonon script scripttools sql svg test webkit xmlpatterns"
 
 REQUIRED_USE="
 	declarative? ( X )
@@ -36,6 +36,7 @@ REQUIRED_USE="
 	webkit? ( X )
 "
 
+# Minimal supported version of Qt.
 QT_PV="4.7.0:4"
 
 RDEPEND="
@@ -51,10 +52,7 @@ RDEPEND="
 	opengl? ( >=x11-libs/qt-opengl-${QT_PV} )
 	phonon? (
 		kde? ( media-libs/phonon )
-		!kde? ( || (
-			>=x11-libs/qt-phonon-${QT_PV}
-			media-libs/phonon
-		) )
+		!kde? ( || ( >=x11-libs/qt-phonon-${QT_PV} media-libs/phonon ) )
 	)
 	script? ( >=x11-libs/qt-script-${QT_PV} )
 	sql? ( >=x11-libs/qt-sql-${QT_PV} )
