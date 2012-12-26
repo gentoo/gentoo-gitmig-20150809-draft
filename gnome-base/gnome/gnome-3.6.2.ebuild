@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-3.6.2.ebuild,v 1.1 2012/12/26 23:17:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-3.6.2.ebuild,v 1.2 2012/12/26 23:19:00 eva Exp $
 
 EAPI="4"
 
@@ -86,4 +86,3 @@ PDEPEND="|| ( >=gnome-base/gvfs-1.12.1[udisks] >=gnome-base/gvfs-1.12.1[gdu] )"
 #   gnome-doc-utils
 #   itstool
 #   yelp-tools
-
