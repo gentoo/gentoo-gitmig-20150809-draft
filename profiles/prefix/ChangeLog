@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.373 2012/12/02 16:13:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.374 2012/12/26 11:46:02 heroxbd Exp $
+
+  26 Dec 2012; Benda Xu <heroxbd@gentoo.org> use.mask:
+  mask USE suid which requires root. bug 447340
 
   02 Dec 2012; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
   Mask cmake-2.8.10.2 on Darwin for compilation failures

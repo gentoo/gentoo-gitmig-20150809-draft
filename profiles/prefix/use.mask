@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/use.mask,v 1.6 2012/12/01 20:23:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/use.mask,v 1.7 2012/12/26 11:46:02 heroxbd Exp $
 
 # multilib is never going to work as expected in Prefix
 multilib
@@ -40,3 +40,7 @@ ruby_targets_jruby
 # Python 3.3 is masked for testing.
 -python_targets_python3_3
 -python_single_target_python3_3
+
+# suid requires root privilege, which is not support by prefix in general
+# one example: bug 447340.
+suid
