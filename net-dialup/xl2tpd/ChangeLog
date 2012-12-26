@@ -1,6 +1,15 @@
 # ChangeLog for net-dialup/xl2tpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/ChangeLog,v 1.33 2012/12/26 00:53:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/ChangeLog,v 1.34 2012/12/26 04:14:30 floppym Exp $
+
+*xl2tpd-1.3.1-r2 (26 Dec 2012)
+
+  26 Dec 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/xl2tpd-1.3.1-kernelmode.patch,
+  +files/xl2tpd-1.3.1-no-type-punning-b119c0da.patch, +xl2tpd-1.3.1-r2.ebuild,
+  metadata.xml:
+  Add fix for kernel mode by Sergey Fionov, resolves bug 441828 by nE0sIghT.
+  Cherry-pick a patch from upstream to avoid type-punning.
 
   26 Dec 2012; Mike Gilbert <floppym@gentoo.org> -xl2tpd-1.3.1.ebuild,
   xl2tpd-1.3.1-r1.ebuild:
