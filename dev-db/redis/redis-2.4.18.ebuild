@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.4.17-r1.ebuild,v 1.1 2012/12/26 11:01:44 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.4.18.ebuild,v 1.1 2012/12/26 11:05:46 djc Exp $
 
 EAPI="4"
 
