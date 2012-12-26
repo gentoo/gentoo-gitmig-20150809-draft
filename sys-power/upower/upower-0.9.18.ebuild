@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.18.ebuild,v 1.9 2012/12/02 22:24:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.18.ebuild,v 1.10 2012/12/26 11:21:26 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
 # PYTHON_DEPEND="test? 3"
 # inherit python
@@ -60,7 +60,6 @@ src_configure() {
 		backend=dummy
 	fi
 
-	# note: systemd.eclass is missing support for --with-systemdutildir=
 	econf \
 		--localstatedir="${EPREFIX}"/var \
 		$(use_enable introspection) \
@@ -73,6 +72,7 @@ src_configure() {
 		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		--with-backend=${backend} \
 		$(use_with ios idevice) \
+		"$(systemd_with_utildir)" \
 		"$(systemd_with_unitdir)"
 }
 
