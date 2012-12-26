@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nload
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.44 2012/07/29 23:38:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.45 2012/12/26 09:12:27 pinkbyte Exp $
+
+  26 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> nload-0.7.4.ebuild:
+  Add ~arm keyword
 
   29 Jul 2012; Jeroen Roovers <jer@gentoo.org> -nload-0.7.3.ebuild:
   Old.
