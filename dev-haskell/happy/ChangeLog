@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.61 2012/11/18 14:00:29 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.62 2012/12/26 21:51:18 slyfox Exp $
+
+  26 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> -happy-1.18.2.ebuild,
+  -happy-1.18.4.ebuild, -happy-1.18.6.ebuild:
+  Removed old.
 
 *happy-1.18.10 (18 Nov 2012)
 
