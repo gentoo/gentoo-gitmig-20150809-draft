@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/neon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.47 2012/12/26 16:55:58 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.48 2012/12/26 17:19:35 ago Exp $
+
+  26 Dec 2012; Agostino Sarubbo <ago@gentoo.org> neon-0.29.6-r2.ebuild:
+  Stable for amd64, wrt bug #448638
 
   26 Dec 2012; Jeff Horelick <jdhore@gentoo.org> neon-0.29.6-r2.ebuild:
   marked x86 per bug 448638
