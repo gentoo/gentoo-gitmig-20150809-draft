@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.52 2012/10/08 05:15:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.53 2012/12/26 11:01:44 djc Exp $
+
+*redis-2.4.17-r1 (26 Dec 2012)
+
+  26 Dec 2012; Dirkjan Ochtman <djc@gentoo.org> +redis-2.4.17-r1.ebuild,
+  +files/redis-2.4.17-shared.patch:
+  Fix compilation against jemalloc-3.2.0 (bug 444796).
 
   08 Oct 2012; Robin H. Johnson <robbat2@gentoo.org> redis-2.4.17.ebuild:
   Fix verbosity issue per bus #428722 and EMAKE_EXTRA bug #437344.
