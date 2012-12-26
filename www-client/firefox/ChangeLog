@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.196 2012/12/10 20:19:42 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.197 2012/12/26 09:10:53 ago Exp $
+
+  26 Dec 2012; Agostino Sarubbo <ago@gentoo.org> firefox-10.0.11.ebuild:
+  Stable for ia64, wrt bug #444318
 
   10 Dec 2012; Ian Stakenvicius <axs@gentoo.org> firefox-17.0.1.ebuild:
   restored jit flag as is required for the embedded js, esp on hardened
