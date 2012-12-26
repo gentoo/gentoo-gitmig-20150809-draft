@@ -12,7 +12,7 @@ LOCALIP=0
 NEST=0
 
 # pid file location
-PIDFILE=/var/run/flows/flowcap.pid
+PIDFILE=/var/run/flowcapture.pid
 
 # port to listen on
 PORT=2055
