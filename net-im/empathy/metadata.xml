@@ -21,7 +21,7 @@
 		<flag name="sendto">Enable support for sending files to various devices
 			using <pkg>gnome-extra/nautilus-sendto</pkg></flag>
 		<flag name="webkit">Build support for Adium-style HTML-based conversation
-	  		window themes using <pkg>net-libs/webkit-gtk</pkg></flag>
+			window themes using <pkg>net-libs/webkit-gtk</pkg></flag>
 	</use>
 	<longdescription>
 		Empathy consists of a rich set of reusable instant messaging widgets,

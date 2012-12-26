@@ -1,6 +1,16 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.114 2012/12/11 16:55:55 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.115 2012/12/26 23:00:30 eva Exp $
+
+*empathy-3.6.2-r2 (26 Dec 2012)
+
+  26 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> -empathy-3.2.2-r1.ebuild,
+  -files/empathy-3.2.2-cancellable-not-NULL.patch,
+  -files/empathy-3.2.2-delivery-failed.patch,
+  -files/empathy-3.2.2-telepathy-logger-0.4.patch, +empathy-3.6.2-r2.ebuild,
+  metadata.xml:
+  Version bump for Gnome 3.6. Switch to EAPI=5 and python-any-r1.eclass. Clean
+  up old revisions.
 
   11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> empathy-3.2.2-r1.ebuild,
   empathy-3.4.2.3.ebuild:
