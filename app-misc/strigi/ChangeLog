@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.91 2012/07/04 12:07:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.92 2012/12/26 15:09:14 kensington Exp $
+
+*strigi-0.7.7-r2 (26 Dec 2012)
+
+  26 Dec 2012; Michael Palimaka <kensington@gentoo.org> +strigi-0.7.7-r2.ebuild:
+  Fix CLucene automagic wrt bug #448116.
 
   04 Jul 2012; Johannes Huber <johu@gentoo.org>
   +files/strigi-0.7.7-ffmpeg-0.11.patch, strigi-0.7.7-r1.ebuild:
