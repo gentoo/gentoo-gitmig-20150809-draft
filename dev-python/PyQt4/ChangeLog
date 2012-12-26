@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.204 2012/12/26 03:11:43 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.205 2012/12/26 03:14:58 pesa Exp $
+
+  26 Dec 2012; Davide Pesavento <pesa@gentoo.org> -PyQt4-4.9.5.ebuild:
+  old
 
 *PyQt4-4.9.6-r1 (26 Dec 2012)
 
