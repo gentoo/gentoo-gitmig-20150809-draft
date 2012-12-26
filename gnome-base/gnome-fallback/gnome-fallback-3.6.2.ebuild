@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-fallback/gnome-fallback-3.2.1.ebuild,v 1.2 2012/11/05 21:36:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-fallback/gnome-fallback-3.6.2.ebuild,v 1.1 2012/12/26 23:08:14 eva Exp $
 
-EAPI="4"
+EAPI="5"
 
 DESCRIPTION="Sub-meta package for GNOME 3 fallback mode"
 HOMEPAGE="http://www.gnome.org/"
@@ -19,10 +19,11 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 RDEPEND="
 	>=gnome-base/gnome-core-libs-${PV}[cups?]
 
-	>=x11-wm/metacity-2.34.1
-	>=x11-misc/notification-daemon-0.7
-	>=gnome-extra/polkit-gnome-0.100
+	>=x11-wm/metacity-2.34.13
+	>=x11-misc/notification-daemon-0.7.6
+	>=gnome-extra/polkit-gnome-0.105
 	>=gnome-base/gnome-panel-${PV}
 "
 DEPEND=""
-S=${WORKDIR}
+
+S="${WORKDIR}"

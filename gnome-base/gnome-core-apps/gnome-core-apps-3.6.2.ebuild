@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-apps/gnome-core-apps-3.2.1.ebuild,v 1.3 2012/11/05 21:32:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-apps/gnome-core-apps-3.6.2.ebuild,v 1.1 2012/12/26 23:03:26 eva Exp $
 
-EAPI="4"
+EAPI="5"
 
 DESCRIPTION="Sub-meta package for the core applications integrated with GNOME 3"
 HOMEPAGE="http://www.gnome.org/"
@@ -21,25 +21,26 @@ RDEPEND="
 	>=gnome-base/gnome-core-libs-${PV}[cups?]
 
 	>=gnome-base/gnome-session-${PV}
-	>=gnome-base/gnome-menus-3.2:3
-	>=gnome-base/gnome-settings-daemon-${PV}[cups?]
-	>=gnome-base/gnome-control-center-${PV}[cups?]
+	>=gnome-base/gnome-menus-3.6.1:3
+	>=gnome-base/gnome-settings-daemon-3.6.3[cups?]
+	>=gnome-base/gnome-control-center-3.6.3[cups?]
 
-	>=gnome-base/nautilus-${PV}
+	>=app-crypt/gcr-${PV}
+	>=gnome-base/nautilus-3.6.3
 	>=gnome-base/gnome-keyring-${PV}
-	>=gnome-base/libgnome-keyring-3.2
+	>=gnome-base/libgnome-keyring-3.6
 	>=gnome-extra/evolution-data-server-${PV}
-	>=gnome-extra/gnome-power-manager-${PV}
-	>=gnome-extra/gnome-screensaver-3.2
+	>=gnome-extra/gnome-power-manager-3.6
+	>=gnome-extra/gnome-screensaver-3.6.1
 
-	>=app-crypt/seahorse-${PV}
+	>=app-crypt/seahorse-3.6.3
 	>=app-editors/gedit-${PV}
-	>=app-text/evince-${PV}
+	>=app-text/evince-3.6.1
 	>=gnome-extra/gnome-contacts-${PV}
 	>=media-gfx/eog-${PV}
-	>=media-video/totem-${PV}
+	>=media-video/totem-3.6.3
 	>=net-im/empathy-${PV}
-	>=x11-terms/gnome-terminal-${PV}
+	>=x11-terms/gnome-terminal-3.6.1
 
 	>=gnome-extra/gnome-user-docs-${PV}
 	>=gnome-extra/yelp-${PV}
@@ -49,9 +50,10 @@ RDEPEND="
 	>=x11-themes/gnome-icon-theme-symbolic-${PV}
 	>=x11-themes/gnome-themes-standard-${PV}
 
-	bluetooth? ( >=net-wireless/gnome-bluetooth-${PV} )
-	cdr? ( >=app-cdr/brasero-3.2 )
-	networkmanager? ( >=gnome-extra/nm-applet-0.9.1.90[bluetooth?] )
+	bluetooth? ( >=net-wireless/gnome-bluetooth-3.6 )
+	cdr? ( >=app-cdr/brasero-3.6.1 )
+	networkmanager? ( >=gnome-extra/nm-applet-0.9.6.4[bluetooth?] )
 "
 DEPEND=""
-S=${WORKDIR}
+
+S="${WORKDIR}"
