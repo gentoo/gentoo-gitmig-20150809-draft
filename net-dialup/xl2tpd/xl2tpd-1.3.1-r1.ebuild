@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/xl2tpd-1.3.1-r1.ebuild,v 1.2 2012/12/25 21:10:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/xl2tpd-1.3.1-r1.ebuild,v 1.3 2012/12/26 00:53:01 floppym Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ S="${WORKDIR}/xelerance-${PN}-95445fc"
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.3.0-LDFLAGS.patch"
 	epatch "${FILESDIR}/${PN}-1.3.1-CFLAGS.patch"
-	sed -i Makefile -e 's| -O2 ||g' || die "sed Makefile"
+	sed -i Makefile -e 's| -O2||g' || die "sed Makefile"
 	# The below patch is questionable. Why wasn't it submitted upstream? If it
 	# ever breaks, it will just be removed. -darkside 20120914
 	use dnsretry && epatch "${FILESDIR}/${PN}-dnsretry.patch"
