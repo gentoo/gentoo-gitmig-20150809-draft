@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-9999.ebuild,v 1.2 2012/12/25 19:47:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-9999.ebuild,v 1.3 2012/12/26 19:16:47 blueness Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.musl-libc.org/"
 if [[ ${PV} != "9999" ]] ; then
 	PATCH_VER=""
 	SRC_URI="http://www.musl-libc.org/releases/${P}.tar.gz"
-	KEYWORDS="-* ~amd64 ~arm"
+	KEYWORDS="-* ~amd64 ~arm ~mips"
 fi
 
 LICENSE="MIT"
@@ -51,7 +51,6 @@ pkg_setup() {
 
 src_configure() {
 	tc-export CC
-	local myconf="--disable-gcc-wrapper"
 
 	./configure \
 		--target="${CTARGET}" \
