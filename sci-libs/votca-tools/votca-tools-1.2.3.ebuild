@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.3.ebuild,v 1.1 2012/08/17 03:13:10 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.3.ebuild,v 1.2 2012/12/26 23:22:22 ottxor Exp $
 
 EAPI="3"
 
@@ -14,8 +14,6 @@ else
 	SRC_URI=""
 	inherit mercurial
 	EHG_REPO_URI="https://tools.votca.googlecode.com/hg"
-	EHG_REVISION="default"
-	S="${WORKDIR}/${EHG_REPO_URI##*/}"
 fi
 
 DESCRIPTION="Votca tools library"
