@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions/gnome-shell-extensions-3.2.2.ebuild,v 1.3 2012/05/05 06:25:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions/gnome-shell-extensions-3.6.2.ebuild,v 1.1 2012/12/26 23:03:58 eva Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
@@ -11,8 +11,7 @@ inherit eutils gnome2
 DESCRIPTION="JavaScript extensions for GNOME Shell"
 HOMEPAGE="http://live.gnome.org/GnomeShell/Extensions"
 # Tarball not available from upstream website
-SRC_URI="http://dev.gentoo.org/~tetromino/distfiles/${PN}/${P}.tar.xz
-	http://dev.gentoo.org/~tetromino/distfiles/${PN}/${P}-patches-1.tar.xz"
+SRC_URI="http://dev.gentoo.org/~tetromino/distfiles/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -27,33 +26,33 @@ COMMON_DEPEND="
 RDEPEND="${COMMON_DEPEND}
 	>=dev-libs/gjs-1.29
 	dev-libs/gobject-introspection
-	>=gnome-base/gnome-shell-3.2
+	gnome-base/gnome-desktop[introspection]
+	gnome-base/gnome-menus:3[introspection]
+	>=gnome-base/gnome-shell-3.5.91
 	media-libs/clutter:1.0[introspection]
 	net-libs/telepathy-glib[introspection]
+	x11-libs/gdk-pixbuf:2[introspection]
 	x11-libs/gtk+:3[introspection]
-	x11-libs/pango[introspection]"
+	x11-libs/pango[introspection]
+	x11-themes/gnome-icon-theme-symbolic
+"
 DEPEND="${COMMON_DEPEND}
+	>=dev-util/intltool-0.50
 	sys-devel/gettext
 	virtual/pkgconfig
-	>=dev-util/intltool-0.26
-	gnome-base/gnome-common"
-
-pkg_setup() {
-	DOCS="NEWS README"
-	G2CONF="${G2CONF}
-		--enable-extensions=all
-		--disable-schemas-compile"
-}
+"
+# eautoreconf needs gnome-base/gnome-common
 
 src_prepare() {
-	# Useful/necessary patches from upstream, will be in the next release
-	epatch ../patch/*.patch
-
+	# Mark as compatible with gnome-shell-3.6; avoid eautoreconf
+	sed -e 's:SHELL_VERSION="$PACKAGE_VERSION":SHELL_VERSION="3.6":' \
+		-i configure || die
 	gnome2_src_prepare
+}
 
-	# Work around intltool-0.50.0's intltool.m4 backwards incompat; bug #394445
-	sed -e 's:\($(INTLTOOL_MERGE) -x -u \)--no-translations:\1/tmp:' \
-		-i configure || die "sed failed"
+src_configure() {
+	G2CONF="${G2CONF} --enable-extensions=all"
+	gnome2_src_configure
 }
 
 src_install() {
