@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/udevil-0.3.6.ebuild,v 1.2 2012/12/25 16:20:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/udevil-0.3.6.ebuild,v 1.3 2012/12/26 01:51:03 jdhore Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/IgnorantGuru/${PN}/archive/${PV}.tar.gz -> ${P}.tar.
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="systemd"
 
 RDEPEND=">=app-shells/bash-4.0
