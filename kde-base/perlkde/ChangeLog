@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/perlkde
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlkde/ChangeLog,v 1.51 2012/12/08 11:53:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlkde/ChangeLog,v 1.52 2012/12/26 10:53:53 maekke Exp $
+
+  26 Dec 2012; Markus Meier <maekke@gentoo.org> perlkde-4.9.4.ebuild:
+  add ~arm
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org> -perlkde-4.8.5.ebuild:
   Drop KDE 4.8
