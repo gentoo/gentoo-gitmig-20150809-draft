@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-0.11.1-r1.ebuild,v 1.1 2012/11/23 03:44:39 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-0.11.1-r1.ebuild,v 1.2 2012/12/26 23:32:33 ottxor Exp $
 
 EAPI="3"
 
@@ -13,7 +13,6 @@ HG_ECLASS=""
 if [[ ${PV} = *9999* ]]; then
 	HG_ECLASS="mercurial"
 	EHG_REPO_URI="http://hg.rafaelmartins.eng.br/blohg/"
-	EHG_REVISION="default"
 fi
 
 inherit distutils ${HG_ECLASS}

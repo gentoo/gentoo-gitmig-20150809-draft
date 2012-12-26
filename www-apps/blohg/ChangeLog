@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/blohg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/ChangeLog,v 1.24 2012/11/23 03:44:38 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/ChangeLog,v 1.25 2012/12/26 23:32:33 ottxor Exp $
+
+  26 Dec 2012; Christoph Junghans <ottxor@gentoo.org> blohg-0.11.1-r1.ebuild,
+  blohg-9999.ebuild:
+  use new mercurial.eclass defaults
 
 *blohg-0.11.1-r1 (23 Nov 2012)
 
@@ -130,4 +134,3 @@
   30 Apr 2011; Rafael G. Martins <rafaelmartins@gentoo.org> +blohg-0.3.ebuild,
   +metadata.xml:
   Initial commit.
-
