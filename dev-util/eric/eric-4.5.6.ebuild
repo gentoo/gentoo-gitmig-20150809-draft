@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.5.6.ebuild,v 1.3 2012/11/07 09:09:53 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.5.6.ebuild,v 1.4 2012/12/26 03:46:58 pesa Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -26,7 +26,8 @@ IUSE="kde spell"
 
 DEPEND="
 	>=dev-python/sip-4.12.4
-	>=dev-python/PyQt4-4.6[assistant,svg,webkit,X]
+	|| ( >=dev-python/PyQt4-4.9.6-r1[X,help,svg,webkit]
+		<dev-python/PyQt4-4.9.6-r1[X,assistant,svg,webkit] )
 	>=dev-python/qscintilla-python-2.3
 	kde? ( kde-base/pykde4 )
 "
