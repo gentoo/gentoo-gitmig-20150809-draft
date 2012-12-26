@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/ucommon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.14 2012/11/26 18:05:54 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.15 2012/12/26 16:32:14 maksbotan Exp $
+
+*ucommon-6.0.3 (26 Dec 2012)
+
+  26 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org> +ucommon-6.0.3.ebuild:
+  Bumped to 6.0.3, thanks to slepnoga
 
 *ucommon-5.5.0 (26 Nov 2012)
 *ucommon-6.0.0 (26 Nov 2012)
