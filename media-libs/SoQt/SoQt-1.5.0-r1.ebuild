@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/SoQt-1.5.0-r1.ebuild,v 1.4 2012/05/05 08:02:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/SoQt-1.5.0-r1.ebuild,v 1.5 2012/12/26 14:38:11 jlec Exp $
 
-EAPI="2"
+EAPI=5
 
-inherit base
+inherit autotools-utils
 
 DESCRIPTION="The glue between Coin3D and Qt"
 SRC_URI="http://ftp.coin3d.org/coin/src/all/${P}.tar.gz"
@@ -34,27 +34,25 @@ PATCHES=(
 DOCS=(AUTHORS ChangeLog FAQ HACKING NEWS README)
 
 src_configure() {
-	econf \
-		htmldir="/usr/share/doc/${PF}/html" \
-		--disable-compact \
-		--disable-html-help \
-		--disable-loadlibrary \
-		--disable-man \
-		--enable-pkgconfig \
-		--includedir="/usr/include/coin" \
-		--with-coin \
-		$(use_enable debug) \
-		$(use_enable debug symbols) \
-		$(use_enable doc html) \
-		$(use_enable static-libs static)
+	local myeconfargs=(
+		htmldir="/usr/share/doc/${PF}/html"
+		--disable-compact
+		--disable-html-help
+		--disable-loadlibrary
+		--disable-man
+		--enable-pkgconfig
+		--includedir="/usr/include/coin"
+		--with-coin
+		$(use_enable debug)
+		$(use_enable debug symbols)
+		$(use_enable doc html)
+		)
+	autotools-utils_src_configure
 }
 
 src_install() {
 	# Remove SoQt from Libs.private
-	sed -e '/Libs.private/s/ -lSoQt//' -i SoQt.pc || die
+	sed -e '/Libs.private/s/ -lSoQt//' -i "${BUILD_DIR}"/SoQt.pc || die
 
-	base_src_install
-
-	# Remove libtool files when not needed.
-	use static-libs || rm -f "${D}"/usr/lib*/*.la
+	autotools-utils_src_install
 }
