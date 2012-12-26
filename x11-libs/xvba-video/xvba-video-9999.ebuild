@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-9999.ebuild,v 1.2 2012/11/23 14:02:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-9999.ebuild,v 1.3 2012/12/26 11:33:31 ulm Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/vaapi"
 # No source release yet, the src_uri is theoretical at best right now
 [[ ${PV} = 9999 ]] || SRC_URI="http://www.freedesktop.org/software/vaapi/releases/${PN}/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+ MIT"
 SLOT="0"
 # newline is needed for broken ekeyword
 [[ ${PV} = 9999 ]] || \

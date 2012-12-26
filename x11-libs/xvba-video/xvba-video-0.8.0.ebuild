@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-0.8.0.ebuild,v 1.3 2011/12/27 21:11:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-0.8.0.ebuild,v 1.4 2012/12/26 11:33:31 ulm Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="
 	x86? ( http://www.splitted-desktop.com/~gbeauchesne/${PN}/${x86name}.tar.gz )
 "
 
-LICENSE="as-is"
+LICENSE="GPL-2+ MIT"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE=""
