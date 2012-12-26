@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/verynice
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/ChangeLog,v 1.17 2011/05/09 21:55:41 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/ChangeLog,v 1.18 2012/12/26 19:40:58 hasufell Exp $
+
+  26 Dec 2012; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  GRAB IT! GRAB IT!
 
   09 May 2011; Michael Weber <xmw@gentoo.org> verynice-1.1.ebuild:
   fixed HOMEPAGE, thanks to David for bug 366163
