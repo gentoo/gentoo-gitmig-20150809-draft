@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/votca-csg-1.2.2.ebuild,v 1.7 2012/05/04 07:02:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/votca-csg-1.2.2.ebuild,v 1.8 2012/12/26 23:23:45 ottxor Exp $
 
 EAPI=4
 
@@ -17,8 +17,6 @@ else
 	SRC_URI=""
 	inherit mercurial
 	EHG_REPO_URI="https://csg.votca.googlecode.com/hg"
-	EHG_REVISION="default"
-	S="${WORKDIR}/${EHG_REPO_URI##*/}"
 	PDEPEND="${PDEPEND} doc? ( =app-doc/${PN}-manual-${PV} )
 		examples? ( =sci-chemistry/${PN}-tutorials-${PV} )"
 fi

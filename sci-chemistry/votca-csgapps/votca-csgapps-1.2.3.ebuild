@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csgapps/votca-csgapps-1.2.3.ebuild,v 1.1 2012/08/17 03:19:56 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csgapps/votca-csgapps-1.2.3.ebuild,v 1.2 2012/12/26 23:25:25 ottxor Exp $
 
 EAPI=4
 
@@ -12,7 +12,6 @@ if [ "${PV}" != "9999" ]; then
 else
 	inherit mercurial
 	EHG_REPO_URI="https://csgapps.votca.googlecode.com/hg"
-	S="${WORKDIR}/${EHG_REPO_URI##*/}"
 fi
 
 DESCRIPTION="Extra applications for votca-csg"

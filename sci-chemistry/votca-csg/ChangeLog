@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/votca-csg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.21 2012/11/17 02:31:25 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.22 2012/12/26 23:23:45 ottxor Exp $
+
+  26 Dec 2012; Christoph Junghans <ottxor@gentoo.org> votca-csg-1.2.2.ebuild,
+  votca-csg-1.2.3.ebuild:
+  use new mercurial.eclass defaults
 
   17 Nov 2012; Christoph Junghans <ottxor@gentoo.org> metadata.xml:
   updated metadata.xml
