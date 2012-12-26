@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arpoison
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpoison/ChangeLog,v 1.14 2012/12/26 15:48:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpoison/ChangeLog,v 1.15 2012/12/26 15:50:13 ago Exp $
+
+  26 Dec 2012; Agostino Sarubbo <ago@gentoo.org> arpoison-0.6-r2.ebuild:
+  Stable for x86, wrt bug #375655
 
   26 Dec 2012; Agostino Sarubbo <ago@gentoo.org> arpoison-0.6-r2.ebuild:
   Stable for amd64, wrt bug #375655
