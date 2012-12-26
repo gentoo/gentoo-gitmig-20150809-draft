@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/marrie
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/marrie/ChangeLog,v 1.4 2012/11/23 06:28:52 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/marrie/ChangeLog,v 1.5 2012/12/26 23:20:34 ottxor Exp $
+
+  26 Dec 2012; Christoph Junghans <ottxor@gentoo.org> marrie-0.3-r2.ebuild,
+  marrie-9999.ebuild:
+  use new mercurial.eclass defaults
 
   23 Nov 2012; Rafael G. Martins <rafaelmartins@gentoo.org>
   marrie-0.3-r2.ebuild, marrie-9999.ebuild:
@@ -24,4 +28,3 @@
   22 Nov 2012; Rafael G. Martins <rafaelmartins@gentoo.org> +marrie-0.3.ebuild,
   +metadata.xml:
   Initial commit
-
