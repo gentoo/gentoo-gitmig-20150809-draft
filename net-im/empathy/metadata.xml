@@ -4,8 +4,6 @@
 	<herd>net-im</herd>
 	<herd>gnome</herd>
 	<use>
-		<flag name="call">Enable Call channel support using
-			<pkg>net-libs/telepathy-farstream</pkg> for audio/video calls</flag>
 		<flag name="geocode">Enable translation between addresses and geographic
 			coordinates using <pkg>sci-geosciences/geocode-glib</pkg> and Yahoo!
 			Place Finder</flag>
