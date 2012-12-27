@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.162 2012/12/27 05:31:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.163 2012/12/27 05:42:52 tetromino Exp $
+
+  27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Mask >=gvfs-1.14[gnome-keyring] until app-crypt/libsecret is keyworded.
 
   27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask >=folks-0.8[telepathy] until dev-libs/libzeitgeist is keyworded.

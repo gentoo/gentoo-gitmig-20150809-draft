@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.194 2012/12/26 10:47:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.195 2012/12/27 05:42:52 tetromino Exp $
+
+  27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Mask >=gvfs-1.14[gnome-keyring] until app-crypt/libsecret is keyworded.
 
   26 Dec 2012; Markus Meier <maekke@gentoo.org> package.use.mask:
   package.use.mask kde-base/smokeqt[qscintilla,qwt] and
