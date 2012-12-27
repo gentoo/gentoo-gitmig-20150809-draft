@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc10.ebuild,v 1.4 2012/12/12 18:18:09 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc10.ebuild,v 1.5 2012/12/27 11:47:22 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -21,7 +21,7 @@ fi
 DESCRIPTION="The Solaris Porting Layer is a Linux kernel module which provides many of the Solaris kernel APIs"
 HOMEPAGE="http://zfsonlinux.org/"
 
-LICENSE="|| ( GPL-2 GPL-3 )"
+LICENSE="GPL-2"
 SLOT="0"
 IUSE="custom-cflags debug debug-log"
 RESTRICT="test"

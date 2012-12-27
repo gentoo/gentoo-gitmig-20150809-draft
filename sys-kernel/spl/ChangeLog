@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.35 2012/12/23 05:37:46 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.36 2012/12/27 11:47:22 ryao Exp $
+
+  27 Dec 2012; Richard Yao <ryao@gentoo.org> spl-0.6.0_rc10.ebuild,
+  spl-0.6.0_rc11-r2.ebuild, spl-0.6.0_rc11.ebuild, spl-0.6.0_rc12-r1.ebuild,
+  spl-0.6.0_rc12.ebuild, spl-0.6.0_rc13.ebuild, spl-9999.ebuild:
+  The fact that the code is technically GPLv2+ does not mean that we need to
+  specify GPL-3 in LICENSE. Change LICENSE to GPL-2. Thanks init_6 for pointing
+  this out.
 
 *spl-0.6.0_rc13 (23 Dec 2012)
 
