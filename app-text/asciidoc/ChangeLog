@@ -1,6 +1,11 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.84 2012/09/15 04:31:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.85 2012/12/27 19:09:35 ottxor Exp $
+
+  27 Dec 2012; Christoph Junghans <ottxor@gentoo.org> asciidoc-8.2.6.ebuild,
+  asciidoc-8.6.5.ebuild, asciidoc-8.6.7.ebuild, asciidoc-8.6.8.ebuild,
+  asciidoc-9999.ebuild:
+  mercurial.eclass respects  now
 
   15 Sep 2012; Mike Gilbert <floppym@gentoo.org> +asciidoc-8.2.6.ebuild:
   Restore old version needed by dev-vcs/stgit-0.15-r1.
