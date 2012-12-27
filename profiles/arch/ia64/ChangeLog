@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.164 2012/12/27 06:14:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.165 2012/12/27 07:21:04 tetromino Exp $
+
+  27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Mask >=libgda-5.1[gnome-keyring,reports] until app-crypt/libsecret and
+  dev-java/fop are keywored.
 
   27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask devhelp[gedit] until gedit-3.6 is keyworded.
