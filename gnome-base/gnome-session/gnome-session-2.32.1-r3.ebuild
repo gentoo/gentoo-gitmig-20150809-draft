@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.32.1-r3.ebuild,v 1.9 2012/05/05 05:38:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.32.1-r3.ebuild,v 1.10 2012/12/27 18:07:36 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -23,7 +23,7 @@ IUSE="doc ipv6 elibc_FreeBSD"
 RDEPEND=">=dev-libs/glib-2.16:2
 	>=x11-libs/gtk+-2.22.0:2
 	>=dev-libs/dbus-glib-0.76
-	>=gnome-base/gconf-2:2
+	>=gnome-base/gconf-2:2[gtk(+)]
 	>=sys-power/upower-0.9.0
 	elibc_FreeBSD? ( dev-libs/libexecinfo )
 
