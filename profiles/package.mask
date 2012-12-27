@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14334 2012/12/26 22:52:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14335 2012/12/27 04:19:22 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -323,10 +323,6 @@ net-misc/libteam
 # Tim Harder <radhermit@gentoo.org> (15 Oct 2012)
 # Mask development releases
 =media-libs/libraw-0.15*
-
-# Naohiro Aota <naota@gentoo.org> (14 Oct 2012)
-# Mask unstable ibus which relies on masked version of dconf.
-=app-i18n/ibus-1.4.99.20121006
 
 # Robin H. Johnson <robbat2@gentoo.org> (08 Oct 2012)
 # Masked for testing
