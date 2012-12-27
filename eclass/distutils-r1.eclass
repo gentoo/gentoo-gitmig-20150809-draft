@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.33 2012/12/16 23:26:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.34 2012/12/27 22:57:28 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -188,6 +188,8 @@ esetup.py() {
 			--build-base "${BUILD_DIR}"
 			# using a single directory for them helps us export ${PYTHONPATH}
 			--build-lib "${BUILD_DIR}/lib"
+			# make the ebuild writer lives easier
+			--build-scripts "${BUILD_DIR}/scripts"
 		)
 	fi
 
