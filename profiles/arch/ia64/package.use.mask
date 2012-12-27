@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.103 2012/12/27 07:33:17 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.104 2012/12/27 12:17:38 pinkbyte Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
 # remove mask when app-text/yelp-tools is keyworded here
@@ -57,11 +57,6 @@ net-libs/libproxy spidermonkey
 net-libs/gupnp connman
 net-im/telepathy-mission-control connman
 
-# Davide Pesavento <pesa@gentoo.org> (27 Jun 2012)
-# qscintilla is stable but qscintilla-python, required by
-# USE=python, is not.
-=x11-libs/qscintilla-2.4.5 python
-
 # Raúl Porcel <armin76@gentoo.org> (28 May 2012)
 # Needs x11-misc/lightdm(which also requires some other deps)
 x11-misc/xscreensaver new-login
@@ -91,7 +86,6 @@ dev-vcs/subversion java
 gnome-extra/libgda java
 media-libs/libcaca java
 net-dns/libidn java
-net-misc/mDNSResponder java
 net-print/cups java
 sys-libs/db java
 www-client/firefox java
@@ -105,13 +99,9 @@ net-libs/glib-networking smartcard
 # Needs dev-java/fop which is not available for ia64 due to missing JVM #345433
 net-analyzer/wireshark doc-pdf
 
-# Raúl Porcel <armin76@gentoo.org> (26 Dec 2011)
-# Fails to build
-www-client/firefox crashreporter
-
 # Alexey Shvetsov <alexxy@gentoo.org> (17 Dec 2011)
 # Mask use numa for openmpi
-sys-cluster/openmpi numa psm knem open-mx openmpi_fabrics_psm openmpi_fabrics_knem openmpi_fabrics_open-mx openmpi_fabrics_ofed openmpi_fabrics_dapl openmpi_rm_slurm openmpi_fabrics_sctp openmpi_ofed_features_rdmacm
+sys-cluster/openmpi openmpi_fabrics_psm openmpi_fabrics_knem openmpi_fabrics_open-mx openmpi_fabrics_ofed openmpi_fabrics_dapl openmpi_rm_slurm openmpi_fabrics_sctp openmpi_ofed_features_rdmacm
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
 # Mask USE flags on gnome-3.2 packages due to missing keywords on deps;

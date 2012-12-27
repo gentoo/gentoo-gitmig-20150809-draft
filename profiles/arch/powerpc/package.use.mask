@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.151 2012/12/27 07:50:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.152 2012/12/27 12:15:32 pinkbyte Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
 # remove mask when gnome-extra/gnome-color-manager is keyworded here
@@ -56,10 +56,6 @@ net-libs/cyassl aes-ni cyassl-hardening
 # ppc/ppc64 team please validate.
 =x11-libs/qt-demo-4.8* openvg
 
-# Davide Pesavento <pesa@gentoo.org> (22 Jun 2012)
-# gtk-engines-qtcurve-1.6.4 is stable on ppc{,64} but firefox isn't
-=x11-themes/gtk-engines-qtcurve-1.6.4 mozilla firefox3
-
 # Michael Weber <xmw@gentoo.org> (3 Jun 2012)
 # pymol got stabled (bug 366229) but USE=apbs deps aren't keyworded
 sci-chemistry/pymol apbs
@@ -80,16 +76,9 @@ app-misc/lcdproc hid
 # masking wimax use flag
 net-misc/connman wimax ofono
 
-# Jory A. Pratt <anarchy@gentoo.org> (12 Feb 2012)
-# Samuli Suominen <ssuominen@gentoo.org> (25 Jan 2012)
-# Tested not working with ppc64/10.0/64bit-userland/desktop,
-# gcc-4.5.3, glibc-2.13-r4 and by users in bug #396565
-www-client/firefox crashreporter
-mail-client/thunderbird crashreporter
-
 # Alexey Shvetsov <alexxy@gentoo.org> (20 Jan 2012)
 # Mask some use flags for openmpi due to unkeyworded deps
-sys-cluster/openmpi psm knem open-mx openmpi_fabrics_psm openmpi_fabrics_knem openmpi_fabrics_open-mx openmpi_fabrics_ofed openmpi_fabrics_dapl openmpi_rm_slurm openmpi_ofed_features_rdmacm
+sys-cluster/openmpi openmpi_fabrics_psm openmpi_fabrics_knem openmpi_fabrics_open-mx openmpi_fabrics_ofed openmpi_fabrics_dapl openmpi_rm_slurm openmpi_ofed_features_rdmacm
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
 # Mask USE flags on gnome-3.2 packages due to missing keywords on deps;
@@ -137,19 +126,10 @@ app-cdr/brasero vcd
 # kde-base/krossjava fails to build on ppc
 kde-base/kdebindings-meta java
 
-# Brent Baude <ranger@gentoo.org> (1 June  2011)
-# dev-util/kdevplatform masking reviewboard USE
-=dev-util/kdevplatform-1.2.2 reviewboard
-
-# Brent Baude <ranger@gentoo.org> (1 June  2011)
-# dev-libs/libdbusmenu-qt masking test USE to complete bug 354033
-=dev-libs/libdbusmenu-qt-0.6.2 test
-
 # Doug Goldstein <cardoe@gentoo.org> (27 May 2011)
 # app-emulation/spice, app-emulation/xen, and sys-cluster/ceph
 # are not keyworded. bug #368959
 # sys-apps/usbredir
-app-emulation/qemu-kvm spice xen rbd usbredir
 app-emulation/qemu     spice xen rbd usbredir
 
 # Kacper Kowalik <xarthisius@gentoo.org> (16 Jan 2011)
@@ -158,10 +138,6 @@ mail-client/claws-mail pda
 
 # Alexey Shvetsov <alexxy@gentoo.org> (04 Mar 2011)
 # Mask unsatisfied kde-deps bug #357403
-=kde-base/kdelibs-4.6* policykit
-=kde-base/kdelibs-4.7* policykit
-=kde-base/solid-4.7* bluetooth
-=kde-base/solid-4.8* bluetooth
 =kde-base/solid-4.9* bluetooth
 
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
@@ -172,7 +148,6 @@ app-text/asciidoc test
 # bug 303931
 # dev-lang/icc is not available for ppc
 # sci-chemistry/arp-warp-bin is not available for ppc
-sci-biology/fasta icc
 sci-chemistry/ccp4 arpwarp
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (10 Dec 2010)
@@ -210,7 +185,7 @@ sci-chemistry/vmd tachyon
 
 # Pacho Ramos <pacho@gentoo.org>
 # Not keyworded
-media-plugins/gst-plugins-meta dts mythtv vcd vpx
+media-plugins/gst-plugins-meta dts vcd vpx
 
 # QA: This entry is moved from INVALID location from default/linux/powerpc.
 # VDPAU is currently not keyworded on PPC since its a nvidia-drivers feature
@@ -230,12 +205,6 @@ x11-base/xorg-server input_devices_spaceorb input_devices_mutouch input_devices_
 # masking zephyr USE on pidgin
 net-im/pidgin zephyr
 
-# Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
-# media-plugins/gst-plugins-{mythtv,dvb,fluendo-mpegdemux} not keyworded
-# Joseph Jezak <josejx@gentoo.org> (27 Feb 2009)
-# Marked ~ppc, but masking current versions because of stable keyword
-<=media-plugins/gst-plugins-meta-0.10-r2 dvb mythtv
-
 =dev-java/ibm-jdk-bin-1.5* -nsplugin
 =dev-java/ibm-jre-bin-1.5* -nsplugin
 =dev-java/ibm-jdk-bin-1.6* -nsplugin
@@ -245,10 +214,6 @@ net-im/pidgin zephyr
 # Masked Parallel LCD devices for bug #180683
 # app-misc/lcd4linux
 app-misc/lcd4linux lcd_devices_hd44780
-
-# nixnut <nixnut@gentoo.org> (5 feb 2008)
-# Masking hb and hb2 USE flags as no suitable solution for evms exists
-sys-fs/evms hb hb2
 
 # Tobias Scherbaum <dertobi123@gentoo.org> (1 Feb 2008)
 # Mask mono flag for gnome as tomboy is segfaulting.
