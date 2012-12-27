@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-3.6.3.ebuild,v 1.2 2012/12/27 06:24:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-3.6.3.ebuild,v 1.3 2012/12/27 17:12:58 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -70,6 +70,9 @@ src_prepare() {
 	# bug #393663
 	epatch "${FILESDIR}/${PN}-3.5.91-delete.patch"
 
+	# Remove -D*DEPRECATED flags. Don't leave this for eclass! (bug #448822)
+	sed -e 's/DISABLE_DEPRECATED_CFLAGS=.*/DISABLE_DEPRECATED_CFLAGS=/' \
+		-i configure || die "sed failed"
 	gnome2_src_prepare
 }
 
