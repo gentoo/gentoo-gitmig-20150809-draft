@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.182 2012/12/01 19:11:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.183 2012/12/27 05:31:23 tetromino Exp $
+
+  27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Mask >=folks-0.8[telepathy] until dev-libs/libzeitgeist is keyworded.
 
   01 Dec 2012; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask fdk, bug #442806

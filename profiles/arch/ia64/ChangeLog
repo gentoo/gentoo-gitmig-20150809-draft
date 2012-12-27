@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.161 2012/12/27 04:29:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.162 2012/12/27 05:31:22 tetromino Exp $
+
+  27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Mask >=folks-0.8[telepathy] until dev-libs/libzeitgeist is keyworded.
 
   27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Re-add 'net-libs/webkit-gtk webkit2' to fix repoman failure. Please remove
