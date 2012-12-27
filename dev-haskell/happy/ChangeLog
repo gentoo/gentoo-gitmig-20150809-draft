@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.64 2012/12/27 05:11:09 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.65 2012/12/27 20:57:45 slyfox Exp $
+
+  27 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  files/happy-1.18.6-man.patch, files/happy-1.18.9-missing-tests.patch,
+  happy-1.18.10.ebuild:
+  Tuned tests depends by explicitely requiring set of needed packages.
 
   27 Dec 2012; Rick Farina <zerochaos@gentoo.org> +files/happy-1.18.6-man.patch:
   re-add missing file that was removed but still in use, reported by iamben
