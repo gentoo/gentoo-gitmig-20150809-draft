@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libechonest/libechonest-1.2.1.ebuild,v 1.4 2012/05/05 08:02:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libechonest/libechonest-1.2.1.ebuild,v 1.5 2012/12/27 23:14:16 hasufell Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -23,3 +23,4 @@ DEPEND="${RDEPEND}
 RESTRICT="test" # network access required
 
 DOCS=( AUTHORS README TODO )
+PATCHES=( "${FILESDIR}"/${P}-Werror.patch )
