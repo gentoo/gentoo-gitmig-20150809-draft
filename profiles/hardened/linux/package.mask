@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/package.mask,v 1.38 2012/02/11 10:42:34 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/package.mask,v 1.39 2012/12/27 11:19:04 pinkbyte Exp $
 
 # Hardened versions of gcc-4.0* through gcc-4.2* are not available.
 =sys-devel/gcc-4.0*
@@ -20,7 +20,6 @@
 media-sound/skype-call-recorder
 net-im/skype
 net-im/skypetab-ng
-net-im/skysentials
 dev-python/skype4py
 
 # >=sci-libs/acml-3.6 requires gcc-4.2.

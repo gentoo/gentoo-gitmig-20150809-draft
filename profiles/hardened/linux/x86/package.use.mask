@@ -1,12 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/package.use.mask,v 1.18 2012/11/29 21:20:47 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/package.use.mask,v 1.19 2012/12/27 11:17:38 pinkbyte Exp $
 
 # cyrus-sasl doesn't work w/ USE=berkdb (#192753)
 dev-libs/cyrus-sasl berkdb
-
-# missing the necessary linux-headers dep
->=net-fs/netatalk-2.0.3-r3 xfs
 
 # Rick Farina <zerochaos@gentoo.org> (26 Nov 2012)
 # mask X and tools for we still miss the docs for revdep-pax
