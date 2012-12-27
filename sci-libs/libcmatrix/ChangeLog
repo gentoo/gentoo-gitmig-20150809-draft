@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libcmatrix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcmatrix/ChangeLog,v 1.13 2012/12/27 18:31:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcmatrix/ChangeLog,v 1.14 2012/12/27 18:55:33 jlec Exp $
+
+  27 Dec 2012; Justin Lecher <jlec@gentoo.org> libcmatrix-3.11.0.ebuild:
+  Moved to EAPI=5 and autotools-utils.eclass
 
   27 Dec 2012; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop local USE
