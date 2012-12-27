@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/xforms
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.50 2012/05/21 18:12:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.51 2012/12/27 15:12:59 kensington Exp $
+
+*xforms-1.0.93_p1-r1 (27 Dec 2012)
+
+  27 Dec 2012; Michael Palimaka <kensington@gentoo.org>
+  +xforms-1.0.93_p1-r1.ebuild:
+  Migrate to EAPI 5. Make static libs optional and prune .la files.
 
   21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> xforms-1.0.90-r1.ebuild:
   Add missing inheritance of eutils.eclass
