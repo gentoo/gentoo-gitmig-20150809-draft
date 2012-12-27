@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcmatrix/libcmatrix-3.11.0.ebuild,v 1.3 2012/12/20 19:28:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcmatrix/libcmatrix-3.11.0.ebuild,v 1.4 2012/12/27 18:28:48 jlec Exp $
 
 EAPI="3"
 
@@ -37,6 +37,8 @@ src_prepare() {
 src_configure() {
 	econf \
 		--with-minuit \
+		--without-atlas \
+		--with-sysroot="${EROOT}" \
 		$(use_with sse) \
 		$(use_with threads)
 }
