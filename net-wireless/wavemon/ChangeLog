@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wavemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.49 2012/12/25 18:34:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.50 2012/12/27 14:15:33 pinkbyte Exp $
+
+  27 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> wavemon-0.7.5.ebuild:
+  Add ~arm keyword
 
   25 Dec 2012; Anthony G. Basile <blueness@gentoo.org> wavemon-0.7.5.ebuild:
   stable ppc, bug #448406, thanks peratu
