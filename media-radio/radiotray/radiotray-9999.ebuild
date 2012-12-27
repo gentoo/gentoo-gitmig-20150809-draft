@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-9999.ebuild,v 1.7 2012/12/02 16:57:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-9999.ebuild,v 1.8 2012/12/27 19:01:32 ottxor Exp $
 
 EAPI=4
 PYTHON_COMPAT='python2_6 python2_7'
@@ -43,8 +43,6 @@ RDEPEND="dev-python/gst-python:0.10
 DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS CONTRIBUTORS NEWS README"
-
-S="${WORKDIR}"/${PN}
 
 src_prepare() {
 	python_convert_shebangs -r 2 .
