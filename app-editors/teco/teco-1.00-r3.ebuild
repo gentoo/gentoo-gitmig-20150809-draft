@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r3.ebuild,v 1.12 2012/05/31 22:30:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r3.ebuild,v 1.13 2012/12/27 17:30:11 ulm Exp $
 
 EAPI=3
 
@@ -24,6 +24,15 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}
 
+src_unpack() {
+	unpack teco.tar.gz
+	if use doc; then
+		mkdir doc
+		cd doc || die
+		unpack tecolore.txt.gz tech.txt.gz teco.doc.gz tecoprog.doc.gz
+	fi
+}
+
 src_prepare() {
 	sed -e 's:\$(CC):& $(LDFLAGS):;s:-ltermcap:-lncurses:' -i Makefile || die
 	# bug 103257
@@ -38,9 +47,12 @@ src_compile() {
 
 src_install() {
 	dobin te || die
-	doman te.1
-	dodoc sample.tecorc sample.tecorc2 READ.ME MANIFEST
-	use doc && dodoc tecolore.txt tech.txt teco.doc tecoprog.doc
+	doman te.1 || die
+	dodoc sample.tecorc sample.tecorc2 READ.ME MANIFEST || die
+	if use doc; then
+		cd doc
+		dodoc tecolore.txt tech.txt teco.doc tecoprog.doc || die
+	fi
 }
 
 pkg_postinst() {

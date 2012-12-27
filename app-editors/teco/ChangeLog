@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/teco
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/ChangeLog,v 1.24 2012/05/31 22:30:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/ChangeLog,v 1.25 2012/12/27 17:30:11 ulm Exp $
+
+  27 Dec 2012; Ulrich Müller <ulm@gentoo.org> teco-1.00-r3.ebuild:
+  Fix unpack, bug 448840.
 
   31 May 2012; Zac Medico <zmedico@gentoo.org> teco-1.00-r3.ebuild:
   inherit eutils for epatch
