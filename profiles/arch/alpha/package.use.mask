@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.112 2012/12/27 07:33:17 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.113 2012/12/27 11:30:14 pinkbyte Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
 # remove mask when app-text/yelp-tools is keyworded here
@@ -64,13 +64,9 @@ sys-auth/consolekit acl
 # UDisks2 untested wrt http://bugs.gentoo.org/412801
 gnome-base/gvfs udisks
 
-# Raúl Porcel <armin76@gentoo.org> (26 Dec 2011)
-# Fails to build
-www-client/firefox crashreporter
-
 # Alexey Shvetsov <alexxy@gentoo.org> (17 Dec 2011)
 # mask use numa for openmpi
-sys-cluster/openmpi numa open-mx psm knem openmpi_fabrics_psm openmpi_fabrics_knem openmpi_fabrics_open-mx openmpi_fabrics_ofed openmpi_fabrics_dapl openmpi_rm_slurm openmpi_ofed_features_rdmacm
+sys-cluster/openmpi openmpi_fabrics_psm openmpi_fabrics_knem openmpi_fabrics_open-mx openmpi_fabrics_ofed openmpi_fabrics_dapl openmpi_rm_slurm openmpi_ofed_features_rdmacm
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
 # Mask USE flags on gnome-3.2 packages due to missing keywords on deps;
