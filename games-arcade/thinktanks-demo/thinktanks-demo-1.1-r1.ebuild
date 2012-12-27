@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/thinktanks-demo-1.1-r1.ebuild,v 1.6 2012/02/05 06:21:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/thinktanks-demo-1.1-r1.ebuild,v 1.7 2012/12/27 21:34:19 tupone Exp $
 
 inherit unpacker games
 
@@ -19,9 +19,11 @@ RDEPEND="media-libs/libsdl
 	media-libs/libvorbis"
 
 S=${WORKDIR}
+dir=${GAMES_PREFIX_OPT}/${PN}
+
+QA_PREBUILT="${dir:1}/ThinkTanks.bin"
 
 src_install() {
-	local dir=${GAMES_PREFIX_OPT}/${PN}
 	dodir "${dir}" "${GAMES_BINDIR}"
 
 	tar -zxf ThinkTanks.tar.gz -C "${D}/${dir}" || die "extracting ThinkTanks.tar.gz"
