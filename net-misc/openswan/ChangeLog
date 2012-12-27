@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/openswan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.85 2012/09/14 22:29:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.86 2012/12/27 15:24:03 floppym Exp $
+
+  27 Dec 2012; Mike Gilbert <floppym@gentoo.org> -files/ipsec,
+  -files/openswan-2.4-allow-ms-bad-proposal.patch,
+  -files/openswan-2.4.15-deprecated-ldap.patch,
+  -files/openswan-2.4.15-gentoo.patch, -files/openswan-2.6.31-gentoo.patch,
+  -files/openswan-2.6.37-gentoo.patch, -openswan-2.4.15-r2.ebuild,
+  -openswan-2.6.31.ebuild, -openswan-2.6.37-r1.ebuild, -openswan-2.6.37.ebuild,
+  openswan-2.6.38.ebuild:
+  pluto creates /var/run/pluto on startup, so don't call keepdir. Bug 448834 by
+  flameeyes. Remove old.
 
   14 Sep 2012; Agostino Sarubbo <ago@gentoo.org> openswan-2.6.38.ebuild:
   Stable for amd64, wrt bug #434606
