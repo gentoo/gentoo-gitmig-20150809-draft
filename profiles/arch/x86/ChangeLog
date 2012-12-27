@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.122 2012/12/26 22:51:34 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.123 2012/12/27 08:16:31 tetromino Exp $
+
+  27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Add epiphany[jit] to webkit-gtk[jit] unmask.
 
   26 Dec 2012; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
   unmasked openmm/mkl for sci-chemistry/gromacs
