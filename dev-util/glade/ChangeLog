@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.177 2012/12/17 06:03:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.178 2012/12/27 06:17:11 tetromino Exp $
+
+  27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> glade-3.14.2.ebuild:
+  Drop sparc and amd64-fbsd keywords, needs gtk+-3.6 to be keyworded.
 
 *glade-3.14.2 (17 Dec 2012)
 *glade-3.8.3 (17 Dec 2012)
