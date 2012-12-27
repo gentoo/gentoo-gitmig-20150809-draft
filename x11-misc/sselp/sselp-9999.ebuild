@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sselp/sselp-9999.ebuild,v 1.2 2012/02/16 02:03:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sselp/sselp-9999.ebuild,v 1.3 2012/12/27 19:04:18 ottxor Exp $
 
 inherit mercurial toolchain-funcs
 
@@ -16,8 +16,6 @@ IUSE=""
 
 DEPEND="x11-libs/libX11"
 RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	mercurial_src_unpack
