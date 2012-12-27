@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.576 2012/12/26 23:08:53 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.577 2012/12/27 22:56:21 mgorny Exp $
+
+  27 Dec 2012; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Introduce python_gen_usedep() and python_gen_flags() to make writing complex
+  dependencies easier.
 
   26 Dec 2012; Christoph Junghans <ottxor@gentoo.org> mercurial.eclass:
   added EHG_BOOTSTRAP (bug #340153), EHG_REVISION defaults to 'defaults (bug

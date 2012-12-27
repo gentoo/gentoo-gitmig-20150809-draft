@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.31 2012/12/20 23:35:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.32 2012/12/27 22:56:21 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -161,6 +161,84 @@ _python_set_globals() {
 	done
 }
 _python_set_globals
+
+# @FUNCTION: python_gen_usedep
+# @USAGE: pattern [...]
+# @DESCRIPTION:
+# Output a USE dependency string for Python implementations which
+# are both in PYTHON_COMPAT and match any of the patterns passed
+# as parameters to the function.
+#
+# When all implementations are requested, please use ${PYTHON_USEDEP}
+# instead. Please also remember to set an appropriate REQUIRED_USE
+# to avoid ineffective USE flags.
+#
+# Example:
+# @CODE
+# PYTHON_COMPAT=( python{2_7,3_2} )
+# DEPEND="doc? ( dev-python/epydoc[$(python_gen_usedep python2*)] )"
+# @CODE
+#
+# It will cause the dependency to look like:
+# @CODE
+# DEPEND="doc? ( dev-python/epydoc[python_targets_python2_7?] )"
+# @CODE
+python_gen_usedep() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local impl pattern
+	local matches=()
+
+	for impl in "${PYTHON_COMPAT[@]}"; do
+		for pattern; do
+			if [[ ${impl} == ${pattern} ]]; then
+				matches+=(
+					"python_targets_${impl}?"
+					"-python_single_target_${impl}(-)"
+				)
+				break
+			fi
+		done
+	done
+
+	local out=${matches[@]}
+	echo ${out// /,}
+}
+
+# @FUNCTION: python_gen_useflags
+# @USAGE: pattern [...]
+# @DESCRIPTION:
+# Output a list of USE flags for Python implementations which
+# are both in PYTHON_COMPAT and match any of the patterns passed
+# as parameters to the function.
+#
+# Example:
+# @CODE
+# PYTHON_COMPAT=( python{2_7,3_2} )
+# REQUIRED_USE="doc? ( || ( $(python_gen_useflags python2*) ) )"
+# @CODE
+#
+# It will cause the variable to look like:
+# @CODE
+# REQUIRED_USE="doc? ( || ( python_targets_python2_7 ) )"
+# @CODE
+python_gen_useflags() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local impl pattern
+	local matches=()
+
+	for impl in "${PYTHON_COMPAT[@]}"; do
+		for pattern; do
+			if [[ ${impl} == ${pattern} ]]; then
+				matches+=( "python_targets_${impl}" )
+				break
+			fi
+		done
+	done
+
+	echo ${matches[@]}
+}
 
 # @ECLASS-VARIABLE: BUILD_DIR
 # @DESCRIPTION:
