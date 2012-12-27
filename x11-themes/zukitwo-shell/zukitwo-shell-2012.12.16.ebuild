@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo-shell/zukitwo-shell-2011.12.29.ebuild,v 1.1 2012/05/05 01:33:02 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo-shell/zukitwo-shell-2012.12.16.ebuild,v 1.1 2012/12/27 19:14:41 tetromino Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=gnome-base/gnome-shell-3.2
+RDEPEND=">=gnome-base/gnome-shell-3.4
 	media-fonts/ubuntu-font-family
 	!<=x11-themes/zukitwo-2011.12.29"
 # ${PN} was part of zukitwo before 2011.12.29-r1
