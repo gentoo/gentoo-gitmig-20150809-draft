@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/sl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.31 2012/12/09 17:27:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.32 2012/12/27 08:38:56 armin76 Exp $
+
+  27 Dec 2012; Raúl Porcel <armin76@gentoo.org> sl-3.03-r3.ebuild:
+  alpha/sparc stable wrt #443784
 
   09 Dec 2012; Agostino Sarubbo <ago@gentoo.org> sl-3.03-r3.ebuild:
   Stable for ppc64, wrt bug #443874
