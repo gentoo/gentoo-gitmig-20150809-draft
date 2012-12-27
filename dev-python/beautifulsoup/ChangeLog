@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/beautifulsoup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.78 2012/12/13 22:16:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.79 2012/12/27 10:57:06 armin76 Exp $
+
+  27 Dec 2012; Raúl Porcel <armin76@gentoo.org> beautifulsoup-4.1.3.ebuild:
+  alpha/s390/sh/sparc stable wrt #441272
 
   13 Dec 2012; Agostino Sarubbo <ago@gentoo.org> beautifulsoup-4.1.3.ebuild:
   Stable for ia64, wrt bug #441272
