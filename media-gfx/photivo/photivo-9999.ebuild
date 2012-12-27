@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/photivo-9999.ebuild,v 1.1 2012/12/09 12:16:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/photivo-9999.ebuild,v 1.2 2012/12/27 18:54:06 ottxor Exp $
 
 EAPI=4
 
@@ -28,8 +28,6 @@ RDEPEND="x11-libs/qt-core:4
 	media-gfx/graphicsmagick[q16,-lcms]
 	gimp? ( media-gfx/gimp )"
 DEPEND="${RDEPEND}"
-
-S=${WORKDIR}/hg
 
 src_prepare() {
 	# remove ccache dependency
