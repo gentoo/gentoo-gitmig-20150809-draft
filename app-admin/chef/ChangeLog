@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/chef
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/ChangeLog,v 1.17 2012/12/27 07:05:54 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/ChangeLog,v 1.18 2012/12/27 07:13:11 hollow Exp $
+
+  27 Dec 2012; Benedikt Böhm <hollow@gentoo.org> chef-10.16.4.ebuild:
+  restrict to moneta < 0.7 due to API incompatibilities
 
 *chef-10.16.4 (27 Dec 2012)
 
