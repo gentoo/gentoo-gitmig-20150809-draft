@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-4.5.2-r1.ebuild,v 1.1 2012/11/22 16:03:52 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-4.0.10.ebuild,v 1.1 2012/12/27 12:11:57 voyageur Exp $
 
 EAPI=4
 
@@ -12,12 +12,13 @@ SRC_URI="http://owncloud.org/releases/${P}.tar.bz2"
 LICENSE="AGPL-3"
 
 KEYWORDS="~amd64 ~x86"
-IUSE="+curl mysql postgres +sqlite3"
-REQUIRED_USE="|| ( mysql postgres sqlite3 )"
+IUSE="+curl mysql postgres +sqlite"
+REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 DEPEND=""
-RDEPEND="dev-lang/php[curl?,gd,json,mysql?,pdo,postgres?,sqlite3?,xmlwriter,zip]"
-
+RDEPEND="|| ( >=dev-lang/php-5.4.9[curl?,gd,json,mysql?,pdo,postgres?,sqlite?,xmlwriter,zip]
+	sqlite? ( <dev-lang/php-5.4.9[curl?,gd,json,mysql?,pdo,postgres?,sqlite3,xmlwriter,zip] )
+	!sqlite? ( <dev-lang/php-5.4.9[curl?,gd,json,mysql?,pdo,postgres?,xmlwriter,zip] ) )"
 need_httpd_cgi
 need_php_httpd
 
@@ -25,11 +26,6 @@ S=${WORKDIR}/${PN}
 
 pkg_setup() {
 	webapp_pkg_setup
-}
-
-src_prepare() {
-	# Fix DoS with postgres backend
-	epatch "${FILESDIR}"/${P}-fix_sabre_connector.patch
 }
 
 src_install() {

@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/owncloud
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.22 2012/12/04 22:01:57 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.23 2012/12/27 12:11:57 voyageur Exp $
+
+*owncloud-4.5.5 (27 Dec 2012)
+*owncloud-4.0.10 (27 Dec 2012)
+
+  27 Dec 2012; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-4.0.9.ebuild,
+  +owncloud-4.0.10.ebuild, -owncloud-4.5.2-r1.ebuild, -owncloud-4.5.3.ebuild,
+  -owncloud-4.5.4.ebuild, +owncloud-4.5.5.ebuild:
+  Version bump, security bug #448270. Remove vulnerable versions, rename
+  USE=sqlite3 to sqlite to follow php
 
 *owncloud-4.5.4 (04 Dec 2012)
 
