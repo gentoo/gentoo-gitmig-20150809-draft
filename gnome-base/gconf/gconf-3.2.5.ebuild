@@ -1,44 +1,43 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-3.2.5.ebuild,v 1.4 2012/05/22 08:20:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-3.2.5.ebuild,v 1.5 2012/12/27 18:05:52 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="yes"
 GNOME_ORG_MODULE="GConf"
 GNOME2_LA_PUNT="yes"
 
 inherit eutils gnome2
 
-DESCRIPTION="Gnome Configuration System and Daemon"
+DESCRIPTION="GNOME configuration system and daemon"
 HOMEPAGE="http://projects.gnome.org/gconf/"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-2+"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="debug doc +introspection ldap orbit policykit"
+IUSE="debug gtk +introspection ldap orbit policykit"
 
 RDEPEND=">=dev-libs/glib-2.31:2
-	>=x11-libs/gtk+-2.90:3
 	>=dev-libs/dbus-glib-0.74
 	>=sys-apps/dbus-1
 	>=dev-libs/libxml2-2:2
+	gtk? ( >=x11-libs/gtk+-2.90:3 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
-	ldap? ( net-nds/openldap )
+	ldap? ( net-nds/openldap:= )
 	orbit? ( >=gnome-base/orbit-2.4:2 )
 	policykit? ( sys-auth/polkit )"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
+	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.35
-	virtual/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1 )"
+	virtual/pkgconfig"
 
-pkg_setup() {
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
+src_prepare() {
 	G2CONF="${G2CONF}
-		--enable-gtk
 		--disable-static
 		--enable-gsettings-backend
-		--with-gtk=3.0
+		$(use_enable gtk)
+		"$(usex gtk --with-gtk=3.0 "")"
 		$(use_enable introspection)
 		$(use_with ldap openldap)
 		$(use_enable orbit)
@@ -46,9 +45,7 @@ pkg_setup() {
 		ORBIT_IDL=$(type -P orbit-idl-2)"
 		# Need host's IDL compiler for cross or native build, bug #262747
 	kill_gconf
-}
 
-src_prepare() {
 	gnome2_src_prepare
 
 	# Do not start gconfd when installing schemas, fix bug #238276, upstream #631983
