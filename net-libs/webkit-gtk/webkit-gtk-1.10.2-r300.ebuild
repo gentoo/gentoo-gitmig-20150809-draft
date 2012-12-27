@@ -1,11 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.10.2-r300.ebuild,v 1.1 2012/12/25 23:45:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.10.2-r300.ebuild,v 1.2 2012/12/27 04:40:11 tetromino Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python2_{5,6,7} )
 
-inherit autotools check-reqs eutils flag-o-matic gnome2-utils pax-utils python-single-r1 virtualx
+inherit autotools check-reqs eutils flag-o-matic gnome2-utils pax-utils virtualx
 
 MY_P="webkitgtk-${PV}"
 DESCRIPTION="Open source web browser engine"
@@ -14,7 +13,7 @@ SRC_URI="http://www.webkitgtk.org/releases/${MY_P}.tar.xz"
 
 LICENSE="LGPL-2+ BSD"
 SLOT="3"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
 IUSE="aqua coverage debug +geoloc +gstreamer +introspection +jit spell +webgl"
 # bugs 372493, 416331
 REQUIRED_USE="introspection? ( geoloc gstreamer )"
@@ -26,14 +25,14 @@ REQUIRED_USE="introspection? ( geoloc gstreamer )"
 RDEPEND="
 	dev-libs/libxml2:2
 	dev-libs/libxslt
-	virtual/jpeg
+	virtual/jpeg:=
 	>=media-libs/libpng-1.4:0=
-	>=x11-libs/cairo-1.10
+	>=x11-libs/cairo-1.10:=
 	>=dev-libs/glib-2.32:2
 	>=x11-libs/gtk+-3.4:3[aqua=,introspection?]
 	>=dev-libs/icu-3.8.1-r1:=
 	>=net-libs/libsoup-2.39.2:2.4[introspection?]
-	dev-db/sqlite:3
+	dev-db/sqlite:3=
 	>=x11-libs/pango-1.21
 	x11-libs/libXrender
 	>=x11-libs/gtk+-2.13:2
@@ -43,7 +42,7 @@ RDEPEND="
 		media-libs/gstreamer:1.0
 		media-libs/gst-plugins-base:1.0 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
-	spell? ( >=app-text/enchant-0.22 )
+	spell? ( >=app-text/enchant-0.22:= )
 	webgl? (
 		virtual/opengl
 		x11-libs/libXcomposite
@@ -52,7 +51,7 @@ RDEPEND="
 # paxctl needed for bug #407085
 DEPEND="${RDEPEND}
 	dev-lang/perl
-	${PYTHON_DEPS}
+	=dev-lang/python-2*
 	|| ( virtual/rubygems[ruby_targets_ruby19]
 	     virtual/rubygems[ruby_targets_ruby18] )
 	app-accessibility/at-spi2-core
@@ -89,8 +88,6 @@ pkg_setup() {
 		einfo "it may still not be enough, as the total space requirements "
 		einfo "depends on the debugging flags (-ggdb vs -g1) and enabled features."
 	fi
-	# Needed for CodeGeneratorInspector.py
-	python-single-r1_pkg_setup
 }
 
 src_prepare() {
@@ -183,10 +180,11 @@ src_configure() {
 		$(use_enable webgl)
 		--with-gtk=3.0
 		--with-gstreamer=1.0
-		--with-accelerated-compositing
+		--enable-accelerated-compositing
 		--enable-dependency-tracking
 		--disable-gtk-doc
-		$(use aqua && echo "--with-font-backend=pango --with-target=quartz")"
+		PYTHON=$(type -P python2)
+		"$(usex aqua "--with-font-backend=pango --with-target=quartz" "")
 		# Aqua support in gtk3 is untested
 
 	if has_version "virtual/rubygems[ruby_targets_ruby19]"; then
