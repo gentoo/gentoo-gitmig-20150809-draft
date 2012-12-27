@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dbacl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dbacl/ChangeLog,v 1.21 2012/02/19 10:01:37 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dbacl/ChangeLog,v 1.22 2012/12/27 11:21:50 pacho Exp $
+
+  27 Dec 2012; Pacho Ramos <pacho@gentoo.org> -dbacl-1.11.ebuild,
+  -dbacl-1.12.ebuild, -dbacl-1.3.ebuild, -files/dbacl-1.3.patch, metadata.xml:
+  Drop maintainer as talked with him, remove old
 
   19 Feb 2012; Steev Klimaszewsk <steev@gentoo.org> dbacl-1.13.ebuild,
   metadata.xml:

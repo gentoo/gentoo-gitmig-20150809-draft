@@ -1,11 +1,0 @@
---- dbacl-1.3/mailinspect.c.orig	2003-01-09 20:20:22.000000000 -0500
-+++ dbacl-1.3/mailinspect.c	2003-01-09 20:20:29.000000000 -0500
-@@ -1003,7 +1003,7 @@
-       disp.highlighted = disp.first_visible = 0;
-       break;
- 
--    case '':
-+    case '\r':
-     case 'v':
-       if( emails.num_limited > 0 ) {
- 	view_current_email();
