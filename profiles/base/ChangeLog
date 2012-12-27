@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.481 2012/12/27 08:17:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.482 2012/12/27 11:13:39 pinkbyte Exp $
+
+  27 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
+  Remove obsolete masks, wrt bug #444181
 
   27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Add epiphany[jit] to webkit-gtk[jit] mask.

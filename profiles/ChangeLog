@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7300 2012/12/27 04:19:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7301 2012/12/27 11:12:37 pinkbyte Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> releases/10.0/package.mask:
+  Remove obsolete masks, wrt bug #444181
 
   27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
   Unmask ibus-1.4.99, should have been unmasked with gnome-shell-3.6

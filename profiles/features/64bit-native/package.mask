@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.90 2012/12/17 21:42:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.91 2012/12/27 11:09:51 pinkbyte Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -17,8 +17,6 @@ app-emulation/virtualbox
 app-emulation/virtualbox-extpack-oracle
 app-emulation/virtualbox-guest-additions
 app-emulation/vmware-player
-app-emulation/vmware-server
-app-emulation/vmware-server-console
 >=app-i18n/atokx3-3.0.0
 app-office/ooextras
 app-emulation/emul-linux-x86-baselibs
@@ -54,7 +52,6 @@ dev-util/android-ndk
 dev-util/biew
 dev-util/dialogblocks
 dev-util/helpblocks
-dev-util/nvidia-cuda-profiler
 games-action/cs2d
 games-action/descent3
 games-action/descent3-demo
@@ -72,7 +69,6 @@ games-arcade/jardinains
 games-arcade/gish-demo
 games-emulation/caps
 games-emulation/nestra
-games-emulation/snes9express
 games-emulation/zinc
 games-emulation/zsnes
 games-fps/avp
@@ -96,7 +92,6 @@ games-fps/enemy-territory
 games-fps/etqw-bin
 games-fps/etqw-data
 games-fps/etqw-demo
-games-fps/fuhquake-bin
 games-fps/glxquake-bin
 games-fps/legends
 games-fps/postal2
@@ -153,12 +148,10 @@ games-strategy/smac
 games-strategy/spaz
 games-strategy/x2
 games-strategy/x2-demo
-<mail-client/thunderbird-bin-5.0
 media-fonts/acroread-asianfonts
 media-gfx/picasa
 media-libs/realcodecs
 media-libs/win32codecs
-media-plugins/mythnetvision
 media-sound/shoutcast-server-bin
 media-sound/shoutcast-trans-bin
 media-sound/ventrilo-server-bin
@@ -168,10 +161,8 @@ media-video/binkplayer
 media-video/tsmuxer
 net-im/skype
 net-im/skypetab-ng
-net-im/skysentials
 net-misc/icaclient
 net-misc/ps3mediaserver
-net-p2p/sancho-bin
 sci-biology/foldingathome
 sci-electronics/eagle
 sci-chemistry/cara-bin
@@ -184,15 +175,9 @@ sci-libs/ipp
 sys-apps/memtest86
 sys-apps/memtest86+
 sys-libs/lib-compat-loki
-<www-client/firefox-bin-5.0
-<www-client/seamonkey-bin-2.5
 <www-plugins/adobe-flash-11.0.1.60_beta201107131
 www-plugins/nspluginwrapper
 
 # AMD64 Team; <amd64@gentoo.org>
 # grub-1 is not available on no-multilib-profiles;
 <sys-boot/grub-1.99
-
-# Diego Elio Pettenò <flameeyes@gentoo.org>
-# older hpacucli shipped only with 32-bit binaries
-<sys-block/hpacucli-9.30.15.0
