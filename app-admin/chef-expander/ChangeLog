@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/chef-expander
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-expander/ChangeLog,v 1.9 2012/12/20 09:57:36 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-expander/ChangeLog,v 1.10 2012/12/27 07:07:17 hollow Exp $
+
+*chef-expander-10.16.4 (27 Dec 2012)
+
+  27 Dec 2012; Benedikt Böhm <hollow@gentoo.org>
+  -chef-expander-10.16.2.ebuild, +chef-expander-10.16.4.ebuild:
+  version bump
 
   20 Dec 2012; Benedikt Böhm <hollow@gentoo.org> files/initd/chef-expander:
   improve init script

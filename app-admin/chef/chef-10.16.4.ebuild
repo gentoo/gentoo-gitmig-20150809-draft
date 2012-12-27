@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/chef-10.16.2.ebuild,v 1.2 2012/12/18 14:43:22 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/chef-10.16.4.ebuild,v 1.1 2012/12/27 07:05:54 hollow Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19"
