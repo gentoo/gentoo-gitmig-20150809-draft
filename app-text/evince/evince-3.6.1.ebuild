@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.6.1.ebuild,v 1.2 2012/12/16 18:23:25 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.6.1.ebuild,v 1.3 2012/12/27 16:48:38 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org/projects/evince/"
 LICENSE="GPL-2+ CCPL-Attribution-ShareAlike-3.0"
 # subslot = evd3.(suffix of libevdocument3)-evv3.(suffix of libevview3)
 SLOT="0/evd3.4-evv3.3"
-IUSE="dbus debug djvu dvi gnome-keyring +introspection nautilus +postscript t1lib tiff xps"
+IUSE="debug djvu dvi gnome-keyring +introspection nautilus +postscript t1lib tiff xps"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris"
 
 # Since 2.26.2, can handle poppler without cairo support. Make it optional ?
@@ -52,6 +52,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.3
+	dev-util/gdbus-codegen
 	sys-devel/gettext
 	>=dev-util/gtk-doc-am-1.13
 	>=dev-util/intltool-0.35
@@ -72,7 +73,7 @@ src_prepare() {
 		--enable-thumbnailer
 		--with-smclient=xsmp
 		--with-platform=gnome
-		$(use_enable dbus)
+		--enable-dbus
 		$(use_enable djvu)
 		$(use_enable dvi)
 		$(use_with gnome-keyring keyring)
@@ -83,7 +84,6 @@ src_prepare() {
 		$(use_enable tiff)
 		$(use_enable xps)
 		ITSTOOL=$(type -P true)"
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 	# Fix .desktop file so menu item shows up
 	epatch "${FILESDIR}"/${PN}-0.7.1-display-menu.patch

@@ -1,6 +1,11 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.254 2012/12/16 18:23:25 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.255 2012/12/27 16:48:38 tetromino Exp $
+
+  27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> evince-3.6.1.ebuild:
+  Add missing gdbus-codegen dependency; remove dbus USE flag, which is now
+  pointless since >=gtk+-3.6[X] always requires dbus (bug #448804, thanks to
+  Florian Faber).
 
   16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> evince-3.6.1.ebuild:
   Update to EAPI5, modernize ebuild.
