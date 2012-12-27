@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.95 2012/12/23 19:29:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.96 2012/12/27 14:53:29 jer Exp $
+
+  27 Dec 2012; Jeroen Roovers <jer@gentoo.org> ruby-gettext-2.3.3.ebuild:
+  Marked ~hppa (bug #448162).
 
   23 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
   ruby-gettext-2.1.0_p20100728-r3.ebuild:
