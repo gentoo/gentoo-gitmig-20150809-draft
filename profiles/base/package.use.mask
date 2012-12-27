@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.424 2012/12/27 08:17:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.425 2012/12/27 11:13:39 pinkbyte Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -312,11 +312,9 @@ dev-libs/glib systemtap
 # Mask introspection on ebuilds that went stable before it was unmasked.
 # As these ebuilds are cleaned from the tree, the masks can be removed.
 <dev-libs/glib-2.30.0 introspection
-<app-cdr/brasero-2.32.1-r1 introspection
 <app-crypt/seahorse-2.32.0-r1 introspection
 <dev-libs/libunique-1.1.6-r1 introspection
 <gnome-base/gnome-menus-2.30.5-r1 introspection
-<gnome-base/nautilus-2.32.2.1-r2 introspection
 <media-libs/babl-0.1.4-r1 introspection
 <media-libs/clutter-gtk-1 introspection
 <media-libs/libchamplain-0.9 introspection
