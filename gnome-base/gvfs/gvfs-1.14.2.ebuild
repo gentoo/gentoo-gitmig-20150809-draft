@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.14.2.ebuild,v 1.3 2012/12/10 11:26:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.14.2.ebuild,v 1.4 2012/12/27 22:54:52 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -67,6 +67,7 @@ DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	>=dev-util/intltool-0.40
 	virtual/pkgconfig
+	dev-util/gdbus-codegen
 	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1 )"
 
@@ -109,6 +110,7 @@ src_configure() {
 		$(use_enable bluetooth obexftp)
 		$(use_enable bluray)
 		$(use_enable cdda)
+		$(use_enable doc gtk-doc)
 		$(use_enable fuse)
 		$(use_enable gdu)
 		$(use_enable gphoto2)
