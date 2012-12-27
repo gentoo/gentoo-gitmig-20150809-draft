@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.145 2012/12/17 19:58:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.146 2012/12/27 10:48:42 armin76 Exp $
+
+  27 Dec 2012; Raúl Porcel <armin76@gentoo.org> lxml-2.3.4.ebuild:
+  alpha/s390/sh/sparc stable wrt #441256
 
   17 Dec 2012; Michał Górny <mgorny@gentoo.org> lxml-3.0.1.ebuild:
   Bump to EAPI=5 to make Paludis happy, bug #447524.
