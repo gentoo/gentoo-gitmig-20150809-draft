@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.4.ebuild,v 1.10 2012/03/15 18:11:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.4.ebuild,v 1.11 2012/12/27 06:46:36 pinkbyte Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -30,6 +30,7 @@ src_unpack () {
 	cd "${S}"
 	epatch "${FILESDIR}"/gcc-4.3-compile.fix
 	epatch "${FILESDIR}"/${P}-gcc44.patch
+	epatch "${FILESDIR}"/${P}-gcc47.patch
 	epatch "${FILESDIR}"/${P}-CFLAGS.patch
 	epatch "${FILESDIR}"/${P}-asneeded.patch
 	epatch "${FILESDIR}"/${P}-zlib-1.2.5.2.patch
