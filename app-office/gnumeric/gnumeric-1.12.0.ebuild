@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.12.0.ebuild,v 1.1 2012/12/27 22:15:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.12.0.ebuild,v 1.2 2012/12/27 23:35:24 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -38,7 +38,7 @@ RDEPEND="sys-libs/zlib
 	introspection? ( >=dev-libs/gobject-introspection-1.0.0:= )
 	perl? ( dev-lang/perl )
 	python? ( ${PYTHON_DEPS}
-		>=dev-python/pygobject-3.0.0:3 )
+		>=dev-python/pygobject-3.0.0:3[${PYTHON_USEDEP}] )
 "
 #	libgda? (
 #		>=gnome-extra/libgda-4.1.1:4.0
