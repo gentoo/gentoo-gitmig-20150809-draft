@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/baobab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baobab/ChangeLog,v 1.3 2012/12/23 23:19:06 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baobab/ChangeLog,v 1.4 2012/12/27 08:02:40 tetromino Exp $
+
+  27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> baobab-3.6.3.ebuild:
+  Drop sparc keyword, need to have gtk+-3.6 keyworded.
 
 *baobab-3.6.3 (23 Dec 2012)
 
