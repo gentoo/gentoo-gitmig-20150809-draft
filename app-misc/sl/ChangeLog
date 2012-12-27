@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/sl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.32 2012/12/27 08:38:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.33 2012/12/27 11:45:26 kensington Exp $
+
+  27 Dec 2012; Michael Palimaka <kensington@gentoo.org> -files/Makefile.patch,
+  -sl-3.03-r1.ebuild, -sl-3.03-r2.ebuild:
+  Remove old.
 
   27 Dec 2012; Raúl Porcel <armin76@gentoo.org> sl-3.03-r3.ebuild:
   alpha/sparc stable wrt #443784
