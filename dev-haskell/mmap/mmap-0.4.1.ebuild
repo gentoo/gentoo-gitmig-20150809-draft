@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mmap/mmap-0.4.1.ebuild,v 1.13 2012/09/12 14:58:13 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mmap/mmap-0.4.1.ebuild,v 1.14 2012/12/27 21:00:14 slyfox Exp $
 
-CABAL_FEATURES="lib profile haddock"
+CABAL_FEATURES="lib profile haddock hscolour"
 inherit haskell-cabal
 
 DESCRIPTION="Memory mapped files for POSIX and Windows"
@@ -14,6 +14,5 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd ~ppc-macos ~x86-macos"
 IUSE=""
 
-RDEPEND=">=dev-lang/ghc-6.6.1"
-DEPEND="${RDEPEND}
+DEPEND=">=dev-lang/ghc-6.6.1
 		>=dev-haskell/cabal-1.2"
