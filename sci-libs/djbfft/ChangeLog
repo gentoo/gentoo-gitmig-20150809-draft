@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/djbfft
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/ChangeLog,v 1.18 2012/12/04 15:40:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/ChangeLog,v 1.19 2012/12/27 08:15:03 armin76 Exp $
+
+  27 Dec 2012; Raúl Porcel <armin76@gentoo.org> djbfft-0.76-r1.ebuild:
+  alpha/sh/sparc stable wrt #442748
 
   04 Dec 2012; <ago@gentoo.org> djbfft-0.76-r1.ebuild:
   Stable for x86, wrt bug #442748
