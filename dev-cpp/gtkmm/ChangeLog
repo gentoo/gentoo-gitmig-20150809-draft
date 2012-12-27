@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.242 2012/12/24 15:40:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.243 2012/12/27 05:05:55 tetromino Exp $
+
+  27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gtkmm-3.6.0.ebuild:
+  Drop sparc keyword, needs gtk+-3.6 keyworded.
 
   24 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> -gtkmm-3.2.0.ebuild,
   gtkmm-3.6.0.ebuild:
