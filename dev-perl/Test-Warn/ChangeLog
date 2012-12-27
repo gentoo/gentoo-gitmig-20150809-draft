@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Warn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warn/ChangeLog,v 1.53 2012/12/13 22:06:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warn/ChangeLog,v 1.54 2012/12/27 09:09:42 armin76 Exp $
+
+  27 Dec 2012; Raúl Porcel <armin76@gentoo.org> Test-Warn-0.240.0.ebuild:
+  alpha/s390/sh/sparc stable wrt #441256
 
   13 Dec 2012; Agostino Sarubbo <ago@gentoo.org> Test-Warn-0.240.0.ebuild:
   Stable for ia64, wrt bug #441256
