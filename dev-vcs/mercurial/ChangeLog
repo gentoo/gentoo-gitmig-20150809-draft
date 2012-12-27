@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.91 2012/12/16 14:15:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.92 2012/12/27 18:47:52 ottxor Exp $
+
+  27 Dec 2012; Christoph Junghans <ottxor@gentoo.org> mercurial-9999.ebuild:
+  mercurial.eclass respects  now
 
   16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due retirement, #95685

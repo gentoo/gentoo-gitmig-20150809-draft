@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-9999.ebuild,v 1.12 2012/02/21 03:31:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-9999.ebuild,v 1.13 2012/12/27 18:47:52 ottxor Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -27,8 +27,6 @@ DEPEND="emacs? ( virtual/emacs )
 	test? ( app-arch/unzip
 		dev-python/pygments )
 	app-text/asciidoc"
-
-S="${WORKDIR}/hg"
 
 PYTHON_CFLAGS=(
 	"2.* + -fno-strict-aliasing"
