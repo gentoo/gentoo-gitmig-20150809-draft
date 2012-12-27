@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.6-r1.ebuild,v 1.1 2012/12/26 03:11:43 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.6-r1.ebuild,v 1.2 2012/12/27 04:20:42 pesa Exp $
 
 EAPI=5
 
@@ -27,7 +27,6 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 
 IUSE="X dbus debug declarative doc examples help kde multimedia opengl phonon script scripttools sql svg webkit xmlpatterns"
-
 REQUIRED_USE="
 	declarative? ( X )
 	help? ( X )
@@ -103,7 +102,7 @@ src_prepare() {
 }
 
 pyqt4_use_enable() {
-	use $1 && echo --enable=${2:-Qt$(echo ${1:0:1} | tr '[:lower:]' '[:upper:]')${1:1}}
+	use $1 && echo --enable=${2:-Qt$(tr 'a-z' 'A-Z' <<< ${1:0:1})${1:1}}
 }
 
 src_configure() {
