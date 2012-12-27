@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kbdd/kbdd-0.7.ebuild,v 1.1 2012/12/21 10:19:36 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kbdd/kbdd-0.7.ebuild,v 1.2 2012/12/27 06:10:52 qnikst Exp $
 
 EAPI=4
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="Very simple layout switcher"
 HOMEPAGE="http://github.com/qnikst/kbdd"
@@ -27,6 +27,7 @@ S="${WORKDIR}"
 
 src_prepare() {
 	cd "${WORKDIR}"/qnikst-kbdd-*
+	epatch "${FILESDIR}"/kbdd-0.7-fix-non-dbus-build.patch
 	S=$(pwd)
 	eautoreconf
 }
