@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1359.3.ebuild,v 1.1 2012/12/15 23:37:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1364.5.ebuild,v 1.1 2012/12/27 17:44:56 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2:2.6"
@@ -14,14 +14,15 @@ inherit chromium eutils flag-o-matic multilib \
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-SRC_URI="http://commondatastorage.googleapis.com/chromium-browser-official/${P}.tar.bz2"
+SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}-lite.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="bindist cups gnome gnome-keyring kerberos pulseaudio selinux system-ffmpeg tcmalloc"
 
-RDEPEND="app-arch/bzip2
+RDEPEND="app-accessibility/speech-dispatcher
+	app-arch/bzip2
 	cups? (
 		dev-libs/libgcrypt
 		>=net-print/cups-1.3.11
@@ -134,6 +135,9 @@ src_prepare() {
 
 	# Fix build without NaCl pnacl toolchain.
 	epatch "${FILESDIR}/${PN}-no-pnacl-r0.patch"
+
+	# Backport a fix for libpng shim headers.
+	epatch "${FILESDIR}/${PN}-system-libpng-r0.patch"
 
 	# Missing gyp files in tarball.
 	# https://code.google.com/p/chromium/issues/detail?id=144823
@@ -289,7 +293,8 @@ src_configure() {
 	# This makes breakages easier to detect by revdep-rebuild.
 	myconf+="
 		-Dlinux_link_gsettings=1
-		-Dlinux_link_libpci=1"
+		-Dlinux_link_libpci=1
+		-Dlinux_link_libspeechd=1"
 
 	# TODO: use the file at run time instead of effectively compiling it in.
 	myconf+="
