@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.263 2012/12/06 04:25:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.264 2012/12/27 08:29:04 armin76 Exp $
+
+  27 Dec 2012; Raúl Porcel <armin76@gentoo.org>
+  openbox-3.5.0_p20111019.ebuild:
+  alpha/sparc stable wrt #444882
 
   06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   openbox-3.5.0_p20121006.ebuild:
