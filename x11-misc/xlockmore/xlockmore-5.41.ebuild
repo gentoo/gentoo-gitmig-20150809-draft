@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.41.ebuild,v 1.5 2012/11/11 16:36:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.41.ebuild,v 1.6 2012/12/27 16:52:26 pinkbyte Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic pam
@@ -23,7 +23,8 @@ RDEPEND="
 	motif? ( >=x11-libs/motif-2.3:0 )
 	nas? ( media-libs/nas )
 	opengl? (
-		media-libs/mesa
+		virtual/opengl
+		virtual/glu
 		truetype? ( >=media-libs/ftgl-2.1.3_rc5 )
 	)
 	pam? ( virtual/pam )
