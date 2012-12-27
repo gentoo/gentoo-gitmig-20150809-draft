@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Address
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address/ChangeLog,v 1.70 2012/12/25 20:36:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address/ChangeLog,v 1.71 2012/12/27 09:03:13 armin76 Exp $
+
+  27 Dec 2012; Raúl Porcel <armin76@gentoo.org> Email-Address-1.896.0.ebuild:
+  alpha/sparc stable wrt #441222
 
 *Email-Address-1.897.0 (25 Dec 2012)
 
