@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/colorcvs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/colorcvs/ChangeLog,v 1.6 2011/01/06 21:23:09 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/colorcvs/ChangeLog,v 1.7 2012/12/27 19:46:05 jlec Exp $
+
+  27 Dec 2012; Justin Lecher <jlec@gentoo.org> colorcvs-1.4-r1.ebuild,
+  metadata.xml:
+  Fix HOMEPAGE to point to p.g.o and mirror sources on d.g.o/~jlec/
 
   06 Jan 2011; Justin Lecher <jlec@gentoo.org> colorcvs-1.4-r1.ebuild:
   Some Clean up
