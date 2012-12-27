@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.17.ebuild,v 1.8 2012/12/22 13:59:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.17.ebuild,v 1.9 2012/12/27 01:41:00 jdhore Exp $
 
 EAPI=3
 inherit eutils versionator toolchain-funcs flag-o-matic cmake-utils games
@@ -13,7 +13,7 @@ SRC_URI="http://launchpad.net/widelands/${MY_PV}/build-$(get_version_component_r
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="dev-lang/lua

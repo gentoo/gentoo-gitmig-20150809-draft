@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/widelands
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.48 2012/12/22 13:59:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.49 2012/12/27 01:41:00 jdhore Exp $
+
+  27 Dec 2012; Jeff Horelick <jdhore@gentoo.org> widelands-0.17.ebuild:
+  marked x86 per bug 447166
 
   22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> widelands-0.17.ebuild:
   Stable for ppc, wrt bug #447166
