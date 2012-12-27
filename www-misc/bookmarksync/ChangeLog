@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/bookmarksync
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/bookmarksync/ChangeLog,v 1.13 2011/11/28 11:36:05 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/bookmarksync/ChangeLog,v 1.14 2012/12/27 17:13:55 pinkbyte Exp $
+
+  27 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> bookmarksync-0.3.4-r2.ebuild:
+  Add ~amd64 keyword, wrt bug #391601
 
   28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   bookmarksync-0.3.4-r2.ebuild:
