@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.32.4.ebuild,v 1.10 2012/12/27 18:05:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.32.4.ebuild,v 1.11 2012/12/27 23:33:58 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -31,6 +31,10 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	virtual/pkgconfig"
 
+pkg_setup() {
+	kill_gconf
+}
+
 src_prepare() {
 	G2CONF="${G2CONF}
 		--disable-static
@@ -41,7 +45,6 @@ src_prepare() {
 		$(use_with ldap openldap)
 		$(use_enable policykit defaults-service)
 		ORBIT_IDL=$(type -P orbit-idl-2)"
-	kill_gconf
 
 	gnome2_src_prepare
 
