@@ -1,6 +1,7 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2-demo/heretic2-demo-1.06a.ebuild,v 1.11 2012/02/08 21:27:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2-demo/heretic2-demo-1.06a.ebuild,v 1.12 2012/12/27 08:51:42 tupone Exp $
+EAPI=4
 
 inherit eutils unpacker multilib games
 
@@ -30,6 +31,7 @@ S=${WORKDIR}
 
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
+QA_PREBUILT="${dir:1}/*"
 
 src_install() {
 	local demo="data/demos/heretic2_demo"
@@ -48,11 +50,11 @@ src_install() {
 
 	insinto "${dir}"
 	exeinto "${dir}"
-	doins -r "${demo}"/* || die "doins failed"
-	doexe "${demo}/${exe}" || die "doexe failed"
+	doins -r "${demo}"/*
+	doexe "${demo}/${exe}"
 
 	games_make_wrapper ${PN} "./${exe}" "${dir}" "${dir}"
-	newicon "${demo}"/icon.xpm ${PN}.xpm || die "newicon failed"
+	newicon "${demo}"/icon.xpm ${PN}.xpm
 	make_desktop_entry ${PN} "Heretic 2 (Demo)" ${PN}
 
 	prepgamesdirs
