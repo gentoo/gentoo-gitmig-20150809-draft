@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-dummy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-dummy/ChangeLog,v 1.92 2012/12/17 20:14:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-dummy/ChangeLog,v 1.93 2012/12/28 11:12:36 ago Exp $
+
+  28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xf86-video-dummy-0.3.6.ebuild:
+  Stable for ia64, wrt bug #440872
 
   17 Dec 2012; Markus Meier <maekke@gentoo.org> xf86-video-dummy-0.3.6.ebuild:
   arm stable, bug #440872
