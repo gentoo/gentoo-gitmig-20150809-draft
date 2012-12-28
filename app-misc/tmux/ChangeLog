@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tmux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.86 2012/12/28 09:29:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.87 2012/12/28 17:58:30 jer Exp $
+
+  28 Dec 2012; Jeroen Roovers <jer@gentoo.org> tmux-1.7.ebuild:
+  Stable for HPPA (bug #449000).
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> tmux-1.7.ebuild:
   ADD: ~alpha ~ia64 ~sparc, wrt bug #449000
