@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.267 2012/09/15 07:33:26 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.268 2012/12/28 18:55:01 slyfox Exp $
+
+*mc-4.8.7 (28 Dec 2012)
+
+  28 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> +mc-4.8.7.ebuild:
+  Version bump.
 
 *mc-4.8.6 (15 Sep 2012)
 
