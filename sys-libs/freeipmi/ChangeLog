@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/freeipmi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.62 2012/12/06 04:16:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.63 2012/12/28 12:51:04 flameeyes Exp $
+
+  28 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/bmc-watchdog.initd.4:
+  Fix dependencies to 'need localmount' and stop 'use logger'.
 
   06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> freeipmi-1.2.2.ebuild:
   x86 stable wrt bug #441536
