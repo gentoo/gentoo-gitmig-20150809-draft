@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.32.5.ebuild,v 1.3 2012/12/24 04:07:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.32.5.ebuild,v 1.4 2012/12/28 13:47:01 grobian Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -52,7 +52,7 @@ src_prepare() {
 src_install() {
 	gnome2_src_install
 
-	local PANGO_CONFDIR="${EROOT}/etc/pango/${CHOST}"
+	local PANGO_CONFDIR="/etc/pango/${CHOST}"
 	dodir "${PANGO_CONFDIR}"
 	keepdir "${PANGO_CONFDIR}"
 }

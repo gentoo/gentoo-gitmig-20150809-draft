@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.363 2012/12/24 04:07:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.364 2012/12/28 13:47:01 grobian Exp $
+
+  28 Dec 2012; Fabian Groffen <grobian@gentoo.org> pango-1.32.5.ebuild:
+  Fix double prefix
 
   24 Dec 2012; Jeroen Roovers <jer@gentoo.org> pango-1.32.5.ebuild:
   Marked ~hppa (bug #447854).
