@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.83 2012/12/26 01:46:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.84 2012/12/28 11:09:50 ago Exp $
+
+  28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xfe-1.33.ebuild:
+  Stable for ppc64, wrt bug #448544
 
   26 Dec 2012; Jeff Horelick <jdhore@gentoo.org> xfe-1.33.ebuild:
   marked x86 per bug 448544
