@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/ChangeLog,v 1.8 2012/12/17 19:57:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/ChangeLog,v 1.9 2012/12/28 10:56:42 ago Exp $
+
+  28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> glu-9.0.0.ebuild:
+  Stable for ia64, wrt bug #440872
 
   17 Dec 2012; Markus Meier <maekke@gentoo.org> glu-9.0.0.ebuild:
   arm stable, bug #440872

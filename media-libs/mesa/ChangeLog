@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.439 2012/12/17 20:02:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.440 2012/12/28 10:57:55 ago Exp $
+
+  28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> mesa-9.0.1.ebuild:
+  Stable for ia64, wrt bug #440872
 
   17 Dec 2012; Markus Meier <maekke@gentoo.org> mesa-9.0.ebuild:
   arm stable, bug #440872
