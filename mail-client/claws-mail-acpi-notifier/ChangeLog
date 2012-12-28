@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-acpi-notifier
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-acpi-notifier/ChangeLog,v 1.64 2012/11/20 20:18:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-acpi-notifier/ChangeLog,v 1.65 2012/12/28 16:27:24 ago Exp $
+
+  28 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
+  claws-mail-acpi-notifier-1.0.28.ebuild:
+  Stable for amd64, wrt bug #448968
 
 *claws-mail-acpi-notifier-1.0.28 (20 Nov 2012)
 
@@ -299,4 +303,3 @@
   19 Dec 2006; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
   +claws-mail-acpi-notifier-1.0.5.ebuild:
   This is the new name of mail-client/sylpheed-claws-acpi-notifier.
-
