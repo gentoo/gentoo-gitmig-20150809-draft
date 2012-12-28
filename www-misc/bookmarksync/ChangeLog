@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/bookmarksync
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/bookmarksync/ChangeLog,v 1.15 2012/12/28 11:22:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/bookmarksync/ChangeLog,v 1.16 2012/12/28 12:36:36 kensington Exp $
+
+  28 Dec 2012; Michael Palimaka <kensington@gentoo.org>
+  -bookmarksync-0.3.4-r1.ebuild:
+  Remove old.
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> bookmarksync-0.3.4-r2.ebuild:
   Stable for ppc, wrt bug #391601
