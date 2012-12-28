@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.69.ebuild,v 1.3 2011/10/24 19:55:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.69.ebuild,v 1.4 2012/12/28 17:55:51 tupone Exp $
 
 inherit games
 
@@ -23,6 +23,9 @@ RDEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs
 		app-emulation/emul-linux-x86-compat )"
 
 S=${WORKDIR}
+
+dir=${GAMES_PREFIX_OPT}/${PN}
+QA_PREBUILT="${dir:1}/common/nwserver"
 
 src_unpack() {
 	mkdir common || die "Failed creating directory"
@@ -52,7 +55,6 @@ src_unpack() {
 }
 
 src_install() {
-	local dir=${GAMES_PREFIX_OPT}/${PN}
 	dodir ${dir}
 
 	local currentlocale
