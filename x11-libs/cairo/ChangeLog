@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.317 2012/12/17 20:24:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.318 2012/12/28 11:32:27 ago Exp $
+
+  28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> cairo-1.10.2-r3.ebuild:
+  Stable for ia64, wrt bug #440872
 
   17 Dec 2012; Markus Meier <maekke@gentoo.org> cairo-1.10.2-r3.ebuild:
   arm stable, bug #440872
