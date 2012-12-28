@@ -1,7 +1,7 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune-demo/soldieroffortune-demo-0.57.ebuild,v 1.9 2012/02/08 21:24:53 vapier Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune-demo/soldieroffortune-demo-0.57.ebuild,v 1.10 2012/12/28 20:28:30 tupone Exp $
+EAPI=5
 inherit eutils unpacker games
 
 MY_PN=${PN/soldieroffortune/sof}
@@ -36,6 +36,7 @@ S=${WORKDIR}
 
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
+QA_PREBUILT="${dir:1}/* ${dir:1}/base/*so"
 
 src_install() {
 	local demo="data/demos/sof_demo"
@@ -45,14 +46,14 @@ src_install() {
 
 	insinto "${dir}"
 	exeinto "${dir}"
-	doins -r "${demo}"/* || die "doins failed"
-	doexe "${demo}/${exe}" || die "doexe failed"
+	doins -r "${demo}"/*
+	doexe "${demo}/${exe}"
 
 	# Replace bad library
 	dosym /usr/$(use amd64 && echo lib32 || echo lib)/libSDL.so "${dir}"/libSDL-1.1.so.0
 
 	games_make_wrapper ${PN} "./${exe}" "${dir}" "${dir}"
-	newicon "${demo}"/launch/box.png ${PN}.png || die
+	newicon "${demo}"/launch/box.png ${PN}.png
 	make_desktop_entry ${PN} "Soldier of Fortune (Demo)"
 
 	prepgamesdirs
