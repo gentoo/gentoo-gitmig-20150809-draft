@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.548 2012/12/21 18:18:08 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.549 2012/12/28 07:22:11 polynomial-c Exp $
+
+  28 Dec 2012; Lars Wendler <polynomial-c@gentoo.org> samba-4.0.0.ebuild:
+  Small dependency cleanup.
 
   21 Dec 2012; Víctor Ostorga <vostorga@gentoo.org> samba-4.0.0.ebuild:
   Samba 4 First Release, including fixes from everyone in bug #195703

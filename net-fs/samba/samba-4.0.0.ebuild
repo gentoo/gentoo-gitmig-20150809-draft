@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0.ebuild,v 1.2 2012/12/21 18:18:08 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0.ebuild,v 1.3 2012/12/28 07:22:11 polynomial-c Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -41,8 +41,7 @@ RDEPEND="dev-libs/iniparser
 	>=sys-libs/tevent-0.9.17
 	sys-libs/zlib
 	>=app-crypt/heimdal-1.5[-ssl]
-	ads? ( client? ( net-fs/cifs-utils[ads] ) )
-	client? ( net-fs/cifs-utils )
+	client? ( net-fs/cifs-utils[ads?] )
 	cluster? ( >=dev-db/ctdb-1.0.114_p1 )
 	ldap? ( net-nds/openldap )
 	gnutls? ( >=net-libs/gnutls-1.4.0 )
