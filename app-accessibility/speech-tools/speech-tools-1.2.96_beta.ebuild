@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta.ebuild,v 1.16 2012/05/31 02:18:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta.ebuild,v 1.17 2012/12/28 18:24:29 ulm Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -10,7 +10,8 @@ MY_P=${MY_P/_beta/-beta}
 DESCRIPTION="Speech tools for Festival Text to Speech engine"
 HOMEPAGE="http://www.cstr.ed.ac.uk/projects/speech_tools/"
 SRC_URI="http://www.festvox.org/packed/festival/latest/${MY_P}.tar.gz"
-LICENSE="FESTIVAL BSD as-is"
+
+LICENSE="FESTIVAL HPND BSD rc regexp-UofT"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="nas X"
