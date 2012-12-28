@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/terminal-0.9.8.ebuild,v 1.4 2012/10/11 16:12:44 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/terminal-0.9.8.ebuild,v 1.5 2012/12/28 03:32:30 ssuominen Exp $
 
 EAPI=4
 
@@ -17,5 +17,5 @@ KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 SLOT="0"
 IUSE=""
 
-RDEPEND="!x11-terms/terminal" #376257
+RDEPEND="!<x11-terms/terminal-0.6.0" #376257
 DEPEND="${RDEPEND}"

@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-apps/terminal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.31 2012/10/11 16:12:44 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.32 2012/12/28 03:32:30 ssuominen Exp $
+
+  28 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> terminal-0.9.7.ebuild,
+  terminal-0.9.8.ebuild:
+  Only block old release of xfce4-terminal because the binary "Terminal" was
+  renamed to "xfce4-terminal"
 
   11 Oct 2012; Andreas Schuerch <nativemad@gentoo.org> terminal-0.9.8.ebuild:
   x86 stable, see bug 429080
