@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.0.ebuild,v 1.5 2012/12/24 04:04:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.0.ebuild,v 1.6 2012/12/28 11:37:40 grobian Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/silgraphite/${PN}/${P}.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~hppa ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~x64-solaris"
 IUSE="perl test"
 
 RDEPEND="
@@ -33,6 +33,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.1.0-includes-libs-perl.patch"
 	"${FILESDIR}/${PN}-1.0.2-no_harfbuzz_tests.patch"
 	"${FILESDIR}/${PN}-1.0.3-no-test-binaries.patch"
+	"${FILESDIR}/${PN}-1.2.0-solaris.patch"
 )
 
 pkg_setup() {
