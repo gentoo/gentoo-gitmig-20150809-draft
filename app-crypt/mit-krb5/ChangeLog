@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.347 2012/12/24 17:43:24 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.348 2012/12/28 07:29:59 eras Exp $
+
+*mit-krb5-1.11-r1 (28 Dec 2012)
+
+  28 Dec 2012; Eray Aslan <eras@gentoo.org>
+  +files/mit-krb5_krb5-config_LDFLAGS.patch, +mit-krb5-1.11-r1.ebuild:
+  Do not output LDFLAGS in krb5-config --libs output - bug #448778
 
   24 Dec 2012; Eray Aslan <eras@gentoo.org> -files/2011-006-patch-r18.patch,
   -files/CVE-2010-1322.patch, -files/CVE-2010-1323.1324.4020.patch,
