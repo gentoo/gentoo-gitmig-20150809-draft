@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-2.1-r1.ebuild,v 1.1 2012/12/04 04:50:43 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-2.1-r1.ebuild,v 1.2 2012/12/28 18:19:42 ulm Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs user
@@ -22,7 +22,7 @@ SRC_URI="${SITE}/${MY_P}.tar.gz
 	${SITE}/festvox_kallpc16k.tar.gz
 	${SITE}/speech_tools-${MY_PV}.tar.gz"
 
-LICENSE="FESTIVAL BSD as-is"
+LICENSE="FESTIVAL HPND BSD rc regexp-UofT free-noncomm"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""

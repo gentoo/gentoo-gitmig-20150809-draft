@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.108 2012/12/04 05:00:55 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.109 2012/12/28 18:19:42 ulm Exp $
+
+  28 Dec 2012; Ulrich Müller <ulm@gentoo.org> festival-2.1.ebuild,
+  festival-2.1-r1.ebuild:
+  Fix LICENSE, see COPYING and README files, bug 447290.
 
   03 Dec 2012; Jesus Rivero <neurogeek@gentoo.org> -festival-1.96_beta.ebuild,
   -files/festival-1.96_beta-gcc43.patch,
