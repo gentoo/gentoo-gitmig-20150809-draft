@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/c-icap-0.1.7-r1.ebuild,v 1.5 2012/03/20 14:48:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/c-icap-0.2.3-r1.ebuild,v 1.1 2012/12/28 12:42:46 flameeyes Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils multilib flag-o-matic autotools
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="berkdb ipv6 ldap"
 
 RDEPEND="berkdb? ( sys-libs/db )
@@ -28,8 +28,7 @@ RDEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.1.3-asneeded.patch"
-	epatch "${FILESDIR}/${PN}-0.1.3-implicit.patch"
+	epatch "${FILESDIR}/${PN}-0.2.3-asneeded.patch"
 	epatch "${FILESDIR}/${PN}-0.1.3+db-5.0.patch"
 	epatch "${FILESDIR}/${PN}-0.1.4-crosscompile.patch"
 	epatch "${FILESDIR}/${PN}-0.1.6-implicit.patch"
@@ -53,13 +52,13 @@ src_configure() {
 }
 
 src_compile() {
-	emake LOGDIR="/var/log" || die
+	emake LOGDIR="/var/log"
 }
 
 src_install() {
 	emake \
 		LOGDIR="/var/log" \
-		DESTDIR="${D}" install || die
+		DESTDIR="${D}" install
 
 	find "${D}" -name '*.la' -delete || die
 
@@ -82,14 +81,19 @@ src_install() {
 		"${D}"/etc/${PN}/c-icap.conf \
 		|| die
 
-	dodoc AUTHORS README TODO ChangeLog || die
+	dodoc AUTHORS README TODO ChangeLog
 
-	newinitd "${FILESDIR}/${PN}.init.2" ${PN} || die
-	keepdir /var/log/c-icap || die
+	newinitd "${FILESDIR}/${PN}.init.3" ${PN}
+	newconfd "${FILESDIR}/${PN}.conf" ${PN}
+	keepdir /var/log/c-icap
 
 	insopts -m0644
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}"/${PN}.logrotate ${PN}
+
+	# avoid triggering portage's symlink protection; this is handled by
+	# the init script anyway.
+	rm -rf "${D}"/var/run
 }
 
 pkg_postinst() {

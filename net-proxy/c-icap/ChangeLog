@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/c-icap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/ChangeLog,v 1.21 2012/12/04 11:24:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/ChangeLog,v 1.22 2012/12/28 12:42:46 flameeyes Exp $
+
+*c-icap-0.2.3-r1 (28 Dec 2012)
+
+  28 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> +c-icap-0.2.3-r1.ebuild,
+  +files/c-icap.conf, +files/c-icap.init.3, -c-icap-0.1.7-r1.ebuild,
+  -c-icap-0.2.3.ebuild:
+  Remove old; bump to use new init script (and conf file) that will properly
+  'use logger' if needed.
 
   04 Dec 2012; <ago@gentoo.org> c-icap-0.2.2.ebuild:
   Stable for x86, wrt bug #441494
