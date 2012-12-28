@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.131 2012/11/29 14:35:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.132 2012/12/28 00:00:03 flameeyes Exp $
+
+*lm_sensors-3.3.3-r1 (28 Dec 2012)
+
+  28 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/fancontrol-init.d-2, +files/sensord-4-init.d,
+  +lm_sensors-3.3.3-r1.ebuild:
+  Update init scripts to use the new short form.
 
 *lm_sensors-3.3.3 (29 Nov 2012)
 
