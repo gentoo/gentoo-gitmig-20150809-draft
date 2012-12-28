@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/getopt/getopt-1.1.5.ebuild,v 1.1 2012/12/28 09:10:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/getopt/getopt-1.1.5.ebuild,v 1.2 2012/12/28 10:47:53 grobian Exp $
 
 EAPI=3
 
@@ -20,6 +20,7 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libintl.patch
 	epatch "${FILESDIR}"/${P}-setlocale.patch
 	epatch "${FILESDIR}"/${P}-longrename.patch
 
@@ -29,15 +30,20 @@ src_prepare() {
 
 src_compile() {
 	local nogettext="1"
+	local libintl=""
 	local libcgetopt=1
 
-	use nls && nogettext=0
+	if use nls; then
+		nogettext=0
+		has_version sys-libs/glibc || libintl="-lintl"
+	fi
+
 	[[ ${CHOST} == *-irix* ]] && libcgetopt=0
 	[[ ${CHOST} == *-interix* ]] && libcgetopt=0
 
 	emake CC="$(tc-getCC)" prefix="${EPREFIX}/usr" \
 		LIBCGETOPT=${libcgetopt} \
-		WITHOUT_GETTEXT=${nogettext} \
+		WITHOUT_GETTEXT=${nogettext} LIBINTL=${libintl} \
 		CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 

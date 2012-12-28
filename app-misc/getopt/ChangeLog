@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/getopt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/getopt/ChangeLog,v 1.8 2012/12/28 09:10:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/getopt/ChangeLog,v 1.9 2012/12/28 10:47:53 grobian Exp $
+
+  28 Dec 2012; Fabian Groffen <grobian@gentoo.org>
+  +files/getopt-1.1.5-libintl.patch, getopt-1.1.5.ebuild:
+  Add back libintl bits for e.g. Solaris 10
 
 *getopt-1.1.5 (28 Dec 2012)
 
