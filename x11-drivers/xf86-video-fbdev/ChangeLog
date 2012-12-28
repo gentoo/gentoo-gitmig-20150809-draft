@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-fbdev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-fbdev/ChangeLog,v 1.81 2012/12/28 11:13:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-fbdev/ChangeLog,v 1.82 2012/12/28 17:38:17 ago Exp $
+
+  28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xf86-video-fbdev-0.4.3.ebuild:
+  Stable for sparc, wrt bug #440872
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xf86-video-fbdev-0.4.3.ebuild:
   Stable for ia64, wrt bug #440872

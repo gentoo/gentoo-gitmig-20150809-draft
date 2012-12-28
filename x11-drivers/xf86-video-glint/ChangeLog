@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-glint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-glint/ChangeLog,v 1.67 2012/12/28 11:14:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-glint/ChangeLog,v 1.68 2012/12/28 17:38:37 ago Exp $
+
+  28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xf86-video-glint-1.2.8.ebuild:
+  Stable for sparc, wrt bug #440872
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xf86-video-glint-1.2.8.ebuild:
   Stable for ia64, wrt bug #440872
