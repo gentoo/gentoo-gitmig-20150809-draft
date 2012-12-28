@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.13.2-r2.ebuild,v 1.1 2012/12/19 04:08:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.13.2-r2.ebuild,v 1.2 2012/12/28 20:08:06 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -33,6 +33,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.14
 	>=dev-util/intltool-0.40
+	>=gnome-base/gnome-common-3.6
 	virtual/pkgconfig
 "
 
