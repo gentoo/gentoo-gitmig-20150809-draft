@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.142 2012/12/26 07:47:51 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.143 2012/12/28 11:24:51 ago Exp $
+
+  28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> msmtp-1.4.30.ebuild:
+  Stable for ppc, wrt bug #448088
 
   26 Dec 2012; Eray Aslan <eras@gentoo.org> msmtp-1.4.30.ebuild:
   Build with verbose log - bug #448548
