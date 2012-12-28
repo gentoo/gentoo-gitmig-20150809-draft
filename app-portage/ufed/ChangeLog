@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/ufed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.91 2012/12/16 19:53:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.92 2012/12/28 14:10:43 fuzzyray Exp $
+
+  28 Dec 2012; Paul Varner <fuzzyray@gentoo.org> metadata.xml:
+  Removing tools-portage herd and adding a proxy maintainer.
 
   16 Dec 2012; Raúl Porcel <armin76@gentoo.org> ufed-0.40.2-r1.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #444792
