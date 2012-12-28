@@ -1,5 +1,9 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.911 2012/12/28 19:00:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.912 2012/12/28 19:20:37 vapier Exp $
+
+  28 Dec 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.16.0.ebuild:
+  Fix building w/sed-4.2.2+ #448224 by Viacheslav Gagara.  Fix use of gcc-4.2
+  and byteswap.h #448888 by Alphat-PC.
 
   28 Dec 2012; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit,
   files/eblits/src_compile.eblit, files/eblits/src_unpack.eblit:
