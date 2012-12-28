@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.164 2012/12/20 13:59:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.165 2012/12/28 16:03:18 jer Exp $
+
+  28 Dec 2012; Jeroen Roovers <jer@gentoo.org> opera-next-12.12_pre1707.ebuild:
+  Set QA_PREBUILT in global scope (bug #442090).
 
 *opera-next-12.12_pre1707 (20 Dec 2012)
 

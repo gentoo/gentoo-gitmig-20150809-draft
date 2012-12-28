@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.12_p1707.ebuild,v 1.3 2012/12/19 14:29:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.12_p1707.ebuild,v 1.4 2012/12/28 16:03:33 jer Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
@@ -97,16 +97,16 @@ RDEPEND="
 	kde? ( ${KDERDEPEND} )
 	gstreamer? ( ${GSTRDEPEND} )
 "
+
+OPREFIX="/usr/$(get_libdir)"
+QA_PREBUILT="*"
+
 src_unpack() {
 	unpack ${A}
 	mv -v ${PN}* "${S}" || die
 }
 
 src_prepare() {
-	export OPREFIX="/usr/$(get_libdir)"
-	export QA_PREBUILT="${OPREFIX}/${PN}/.*"
-	export QA_PRESTRIPPED="${OPREFIX}/${PN}/.*"
-
 	local LNGDIR="share/${PN}/locale"
 
 	# Count linguas
