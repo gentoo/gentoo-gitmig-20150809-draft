@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.4-r1.ebuild,v 1.5 2012/09/22 11:34:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.4-r1.ebuild,v 1.6 2012/12/28 18:44:22 ulm Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -9,7 +9,7 @@ DESCRIPTION="Flite text to speech engine"
 HOMEPAGE="http://www.speech.cs.cmu.edu/flite/index.html"
 SRC_URI=" http://www.speech.cs.cmu.edu/${PN}/packed/${P}/${P}-release.tar.bz2"
 
-LICENSE="BSD as-is"
+LICENSE="BSD freetts public-domain regexp-UofT BSD-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 -hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="alsa oss static-libs"
