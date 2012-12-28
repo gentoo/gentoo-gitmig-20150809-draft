@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/haveged
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/ChangeLog,v 1.22 2012/11/21 10:10:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/ChangeLog,v 1.23 2012/12/28 12:54:40 flameeyes Exp $
+
+  28 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> -haveged-1.4.ebuild,
+  files/haveged-init.d.2:
+  Remove old. Fix dependencies on init script.
 
   21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> haveged-1.5.ebuild:
   Stable for x86, wrt bug #441506
