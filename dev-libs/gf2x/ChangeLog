@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gf2x
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gf2x/ChangeLog,v 1.17 2012/03/01 12:58:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gf2x/ChangeLog,v 1.18 2012/12/28 01:23:16 tomka Exp $
+
+*gf2x-1.1 (28 Dec 2012)
+
+  28 Dec 2012; Thomas Kahle <tomka@gentoo.org> +gf2x-1.1.ebuild, metadata.xml:
+  Bump to 1.1 and fix metadata per bug 448920
 
   01 Mar 2012; Justin Lecher <jlec@gentoo.org> -gf2x-0.9.5.ebuild,
   -gf2x-1.0.ebuild:
@@ -62,4 +67,3 @@
   10 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org> +gf2x-0.3.1.ebuild,
   +files/gf2x-0.3.1-shared.patch, +metadata.xml:
   Initial import
-
