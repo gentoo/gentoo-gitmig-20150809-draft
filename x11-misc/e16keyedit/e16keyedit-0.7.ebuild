@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16keyedit/e16keyedit-0.7.ebuild,v 1.2 2012/05/05 04:53:48 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16keyedit/e16keyedit-0.7.ebuild,v 1.3 2012/12/28 18:05:50 ulm Exp $
 
 DESCRIPTION="Key binding editor for enlightenment 16"
 HOMEPAGE="http://www.enlightenment.org/"
 SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="MIT-with-advertising"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
