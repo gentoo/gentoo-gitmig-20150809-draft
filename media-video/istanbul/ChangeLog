@@ -1,6 +1,10 @@
 # ChangeLog for media-video/istanbul
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/ChangeLog,v 1.21 2012/11/29 09:38:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/ChangeLog,v 1.22 2012/12/28 00:20:35 eva Exp $
+
+  28 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> istanbul-0.2.2.ebuild,
+  istanbul-0.2.2.1_pre20120909.ebuild:
+  Add missing vorbis and libpng gstreamer dependencies, bug #403533.
 
 *istanbul-0.2.2.1_pre20120909 (29 Nov 2012)
 
