@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/ChangeLog,v 1.23 2012/11/18 13:58:00 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/ChangeLog,v 1.24 2012/12/28 22:24:15 slyfox Exp $
+
+  28 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> cgi-3001.1.8.2.ebuild:
+  Rekeyworded alpha/ppc/sparc.
 
 *cgi-3001.1.8.3 (18 Nov 2012)
 
