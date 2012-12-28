@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jardinains/jardinains-2.0.ebuild,v 1.9 2010/02/27 17:59:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jardinains/jardinains-2.0.ebuild,v 1.10 2012/12/28 16:43:28 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -22,6 +22,9 @@ RDEPEND="virtual/opengl
 	virtual/libstdc++
 	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0-r1 )"
 
+dir=${GAMES_PREFIX_OPT}/${PN}
+QA_PREBUILT="${dir:1}/${PN}"
+
 PATCHES=( "${FILESDIR}"/strings-pt.patch )
 
 src_unpack() {
@@ -36,8 +39,6 @@ src_prepare() {
 }
 
 src_install() {
-	local dir=${GAMES_PREFIX_OPT}/${PN}
-
 	exeinto "${dir}"
 	doexe jardinains || die
 	insinto "${dir}"
