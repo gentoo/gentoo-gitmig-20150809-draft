@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.151 2012/12/06 03:57:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.152 2012/12/28 11:53:28 flameeyes Exp $
+
+  28 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> -files/pcscd-init.3,
+  -pcsc-lite-1.6.6-r2.ebuild, files/pcscd-init.5:
+  Cleanup old; add an 'use logger' to the init script.
 
   06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pcsc-lite-1.8.6.ebuild:
   x86 stable wrt bug #442432
