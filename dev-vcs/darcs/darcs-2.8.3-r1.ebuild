@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.8.3-r1.ebuild,v 1.2 2012/12/10 07:55:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.8.3-r1.ebuild,v 1.3 2012/12/28 08:03:56 gienah Exp $
 
 EAPI=5
 
@@ -71,6 +71,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${PN}-2.8.1-tar-0.4.patch"
 	epatch "${FILESDIR}"/${P}-hack-for-haskeline-0.7-breaks-non-utf8.patch
+	epatch "${FILESDIR}"/${P}-tf-0.8.patch
 
 	# ghc-7.6
 	cabal_chdeps \
