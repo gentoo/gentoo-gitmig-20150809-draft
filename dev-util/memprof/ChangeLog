@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/memprof
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/ChangeLog,v 1.21 2012/11/18 18:13:41 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/ChangeLog,v 1.22 2012/12/28 11:27:39 ago Exp $
+
+  28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> memprof-0.6.2-r1.ebuild:
+  Stable for amd64, wrt bug #448852
 
 *memprof-0.6.2-r1 (18 Nov 2012)
 

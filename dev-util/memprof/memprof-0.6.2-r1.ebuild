@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/memprof-0.6.2-r1.ebuild,v 1.1 2012/11/18 18:13:41 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/memprof-0.6.2-r1.ebuild,v 1.2 2012/12/28 11:27:39 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.secretlabs.de/projects/memprof/releases/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="nls"
 
 RDEPEND="dev-libs/glib:2
