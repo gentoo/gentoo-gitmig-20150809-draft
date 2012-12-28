@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/ccid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.91 2012/12/15 18:57:44 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.92 2012/12/28 11:54:57 flameeyes Exp $
+
+  28 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> -ccid-1.4.2.ebuild,
+  -ccid-1.4.5.ebuild:
+  Cleanup old.
 
   14 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org> ccid-1.4.8.ebuild:
   Enable verbose build, bug#443130 by Agostino Sarubbo
