@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-archive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-archive/ChangeLog,v 1.50 2012/12/28 16:27:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-archive/ChangeLog,v 1.51 2012/12/28 16:39:37 ago Exp $
+
+  28 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
+  claws-mail-archive-0.6.13.ebuild:
+  Stable for x86, wrt bug #448968
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
   claws-mail-archive-0.6.13.ebuild:

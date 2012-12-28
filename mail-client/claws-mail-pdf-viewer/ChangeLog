@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-pdf-viewer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/ChangeLog,v 1.36 2012/11/20 21:19:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/ChangeLog,v 1.37 2012/12/28 16:40:43 ago Exp $
+
+  28 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
+  claws-mail-pdf-viewer-0.9.3.ebuild:
+  Stable for x86, wrt bug #448968
 
   20 Nov 2012; Christian Faulhammer <fauli@gentoo.org>
   claws-mail-pdf-viewer-0.9.3.ebuild:
@@ -11,4 +15,3 @@
   20 Nov 2012; Christian Faulhammer <fauli@gentoo.org>
   +claws-mail-pdf-viewer-0.9.3.ebuild, +metadata.xml:
   initial commit, but a return anyway
-
