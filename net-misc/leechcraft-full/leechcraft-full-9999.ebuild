@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/leechcraft-full-9999.ebuild,v 1.20 2012/12/20 14:12:34 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/leechcraft-full-9999.ebuild,v 1.21 2012/12/28 17:22:58 maksbotan Exp $
 
 EAPI="4"
 
@@ -44,7 +44,6 @@ RDEPEND="
 		~net-misc/leechcraft-pintab-${PV}
 		~net-misc/leechcraft-secman-${PV}
 		~net-misc/leechcraft-summary-${PV}
-		~net-misc/leechcraft-tabpp-${PV}
 		~net-misc/leechcraft-tabslist-${PV}
 		~net-misc/leechcraft-tabsessmanager-${PV}
 		~net-news/leechcraft-aggregator-${PV}
