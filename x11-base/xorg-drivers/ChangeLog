@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.88 2012/12/28 11:01:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.89 2012/12/28 17:34:47 ago Exp $
+
+  28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xorg-drivers-1.13.ebuild:
+  Stable for sparc, wrt bug #440872
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xorg-drivers-1.13.ebuild:
   Stable for ia64, wrt bug #440872
