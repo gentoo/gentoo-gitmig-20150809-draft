@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-fetchinfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-fetchinfo/ChangeLog,v 1.38 2012/11/26 22:53:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-fetchinfo/ChangeLog,v 1.39 2012/12/28 18:17:35 fauli Exp $
+
+  28 Dec 2012; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-fetchinfo-0.4.25.ebuild:
+  raise dependency to mail-client/claws-mail-3.9.0, see bug 448020
 
   26 Nov 2012; Christian Faulhammer <fauli@gentoo.org> Manifest:
   Update Manifest for upstream changed tarball without notice, fixes bug 444392
