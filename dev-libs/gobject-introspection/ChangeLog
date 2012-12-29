@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.84 2012/12/09 18:33:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.85 2012/12/29 10:35:10 tetromino Exp $
+
+*gobject-introspection-1.34.2-r1 (29 Dec 2012)
+
+  29 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gobject-introspection-1.34.2-r1.ebuild,
+  +files/gobject-introspection-1.34.2-better-traceback.patch:
+  Print the filename and line being parsed if g-ir-scanner crashes while
+  parsing a gtk-doc annotation. Update to EAPI5 and python-single-r1.
 
   09 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gobject-introspection-1.30.0-r2.ebuild, gobject-introspection-1.32.1.ebuild,
