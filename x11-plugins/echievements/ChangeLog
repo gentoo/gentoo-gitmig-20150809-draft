@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/echievements
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/echievements/ChangeLog,v 1.3 2012/12/21 20:59:23 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/echievements/ChangeLog,v 1.4 2012/12/29 10:15:22 tommy Exp $
+
+  29 Dec 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  echievements-2.ebuild:
+  Add missing eet dependency
 
   21 Dec 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   echievements-2.ebuild:
@@ -17,4 +21,3 @@
   21 Dec 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   +echievements-1.ebuild, +metadata.xml:
   Initial commit
-
