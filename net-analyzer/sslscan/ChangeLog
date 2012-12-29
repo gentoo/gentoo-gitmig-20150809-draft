@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/sslscan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslscan/ChangeLog,v 1.6 2012/09/07 10:57:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslscan/ChangeLog,v 1.7 2012/12/29 11:31:58 graaff Exp $
+
+  29 Dec 2012; Hans de Graaff <graaff@gentoo.org>
+  files/sslscan-1.8.2-makefile.patch:
+  Add missing -lcrypto line to Makefile to fix underlinking, fixing bug
+  #449006.
 
   07 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Drop empy herd tag
