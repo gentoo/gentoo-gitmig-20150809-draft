@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.197 2012/12/26 09:10:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.198 2012/12/29 08:54:13 ago Exp $
+
+  29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> firefox-10.0.11.ebuild:
+  Stable for alpha, wrt bug #389839
 
   26 Dec 2012; Agostino Sarubbo <ago@gentoo.org> firefox-10.0.11.ebuild:
   Stable for ia64, wrt bug #444318
