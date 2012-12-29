@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/align
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.59 2012/12/17 17:49:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.60 2012/12/29 14:26:36 ago Exp $
+
+  29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> align-42.ebuild:
+  Stable for sparc, wrt bug #441122
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> align-42.ebuild:
   Stable for ia64, wrt bug #441122
