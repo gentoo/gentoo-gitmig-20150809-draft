@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/abook
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.62 2012/12/25 03:34:04 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.63 2012/12/29 14:26:12 ago Exp $
+
+  29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> abook-0.6.0_pre2.ebuild:
+  Stable for sparc, wrt bug #444990
 
   25 Dec 2012; Jeff Horelick <jdhore@gentoo.org> abook-0.6.0_pre2.ebuild:
   marked x86 per bug 444990
