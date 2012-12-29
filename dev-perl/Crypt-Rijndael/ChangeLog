@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-Rijndael
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Rijndael/ChangeLog,v 1.42 2012/12/13 21:41:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Rijndael/ChangeLog,v 1.43 2012/12/29 14:19:45 ago Exp $
+
+  29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> Crypt-Rijndael-1.110.0.ebuild:
+  Stable for sparc, wrt bug #441216
 
   13 Dec 2012; Agostino Sarubbo <ago@gentoo.org> Crypt-Rijndael-1.110.0.ebuild:
   Stable for ia64, wrt bug #441216
