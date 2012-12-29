@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.562 2012/12/24 04:56:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.563 2012/12/29 06:08:51 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -484,17 +484,22 @@ create_gcc_env_entry() {
 	# searches that directory first.  This is a temporary
 	# workaround for libtool being stupid and using .la's from
 	# conflicting ABIs by using the first one in the search path
-	local mdir mosdir mosdirs abi
-	local ldpath ldpaths
-	for abi in $(get_all_abis TARGET) ; do
-		mdir=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
-		ldpath=${LIBPATH}
-		[[ ${mdir} != "." ]] && ldpath+="/${mdir}"
-		ldpaths="${ldpath}${ldpaths:+:${ldpaths}}"
+	local ldpaths mosdirs
+	if tc_version_is_at_least 3.2 ; then
+		local mdir mosdir abi ldpath
+		for abi in $(get_all_abis TARGET) ; do
+			mdir=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
+			ldpath=${LIBPATH}
+			[[ ${mdir} != "." ]] && ldpath+="/${mdir}"
+			ldpaths="${ldpath}${ldpaths:+:${ldpaths}}"
 
-		mosdir=$($(XGCC) $(get_abi_CFLAGS ${abi}) -print-multi-os-directory)
-		mosdirs="${mosdir}${mosdirs:+:${mosdirs}}"
-	done
+			mosdir=$($(XGCC) $(get_abi_CFLAGS ${abi}) -print-multi-os-directory)
+			mosdirs="${mosdir}${mosdirs:+:${mosdirs}}"
+		done
+	else
+		# Older gcc's didn't do multilib, so logic is simple.
+		ldpaths=${LIBPATH}
+	fi
 
 	cat <<-EOF > ${gcc_envd_file}
 	PATH="${BINPATH}"
@@ -1547,11 +1552,13 @@ toolchain_src_install() {
 		rm -rf "${D}"/usr/share/{man,info}
 		rm -rf "${D}"${DATAPATH}/{man,info}
 	else
-		local cxx_mandir=$(find "${WORKDIR}/build/${CTARGET}/libstdc++-v3" -name man)
-		if [[ -d ${cxx_mandir} ]] ; then
-			# clean bogus manpages #113902
-			find "${cxx_mandir}" -name '*_build_*' -exec rm {} \;
-			cp -r "${cxx_mandir}"/man? "${D}/${DATAPATH}"/man/
+		if tc_version_is_at_least 3.0 ; then
+			local cxx_mandir=$(find "${WORKDIR}/build/${CTARGET}/libstdc++-v3" -name man)
+			if [[ -d ${cxx_mandir} ]] ; then
+				# clean bogus manpages #113902
+				find "${cxx_mandir}" -name '*_build_*' -exec rm {} \;
+				cp -r "${cxx_mandir}"/man? "${D}/${DATAPATH}"/man/
+			fi
 		fi
 		has noinfo ${FEATURES} \
 			&& rm -r "${D}/${DATAPATH}"/info \
@@ -1652,7 +1659,7 @@ gcc_slot_java() {
 # instead of the private gcc lib path
 gcc_movelibs() {
 	# older versions of gcc did not support --print-multi-os-directory
-	tc_version_is_at_least 3.0 || return 0
+	tc_version_is_at_least 3.2 || return 0
 
 	local x multiarg removedirs=""
 	for multiarg in $($(XGCC) -print-multi-lib) ; do
