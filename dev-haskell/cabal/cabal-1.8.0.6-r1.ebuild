@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/cabal-1.8.0.6-r1.ebuild,v 1.9 2012/09/12 15:13:07 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/cabal-1.8.0.6-r1.ebuild,v 1.10 2012/12/29 11:27:56 gienah Exp $
 
 CABAL_FEATURES="bootstrap lib profile"
 inherit haskell-cabal eutils
@@ -20,7 +20,7 @@ IUSE="doc"
 # Cabal.cabal only depends on base>=1&&<5 and filepath>=1&&<1.2
 # filepath has been a ghc core library since ghc 6.6.1, so let's use that as the
 # lowest possible ghc version
-DEPEND=">=dev-lang/ghc-6.6.1"
+DEPEND=">=dev-lang/ghc-6.6.1 <dev-lang/ghc-7"
 RDEPEND="${DEPEND}
 		virtual/pkgconfig"
 # cabal uses dev-util/pkgconfig using runtime to resolve C dependencies, so
