@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.4-r1.ebuild,v 1.3 2012/11/04 01:02:57 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.4-r2.ebuild,v 1.1 2012/12/29 19:01:30 xarthisius Exp $
 
 EAPI=4
 
 CMAKE_MIN_VERSION="2.8.8"
-inherit cmake-utils pam eutils versionator
+inherit cmake-utils pam eutils systemd versionator
 
 DESCRIPTION="Simple Login Manager"
 HOMEPAGE="http://slim.berlios.de"
@@ -72,6 +72,7 @@ src_install() {
 	newins "${FILESDIR}/slim.logrotate" slim
 
 	dodoc xinitrc.sample ChangeLog README TODO THEMES
+	systemd_dounit "${FILESDIR}"/${PN}.service || die
 }
 
 pkg_postinst() {
