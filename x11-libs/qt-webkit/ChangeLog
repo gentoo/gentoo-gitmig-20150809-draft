@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.177 2012/12/25 14:58:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.178 2012/12/29 13:51:17 kensington Exp $
+
+  29 Dec 2012; Michael Palimaka <kensington@gentoo.org>
+  -files/4.8.2-qatomic-x32.patch, -files/qt-webkit-4.8.0-c++0x-fix.patch,
+  -files/qt-webkit-4.8.1+glib-2.31.patch,
+  -files/qt-webkit-4.8.3+glib-2.31.patch, -qt-webkit-4.7.4.ebuild,
+  -qt-webkit-4.8.1.ebuild, -qt-webkit-4.8.2.ebuild, -qt-webkit-4.8.3.ebuild:
+  Remove old.
 
   25 Dec 2012; Agostino Sarubbo <ago@gentoo.org> qt-webkit-4.8.4.ebuild:
   Stable for arm, wrt bug #445956

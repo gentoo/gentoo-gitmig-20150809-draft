@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-opengl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.138 2012/12/29 08:47:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.139 2012/12/29 13:43:19 kensington Exp $
+
+  29 Dec 2012; Michael Palimaka <kensington@gentoo.org>
+  -files/4.8.2-qatomic-x32.patch, -qt-opengl-4.7.4.ebuild,
+  -qt-opengl-4.8.1.ebuild, -qt-opengl-4.8.2.ebuild, -qt-opengl-4.8.3.ebuild:
+  Remove old.
 
   29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> qt-opengl-4.8.4.ebuild:
   Stable for alpha, wrt bug #445956

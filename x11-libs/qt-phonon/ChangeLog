@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-phonon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.134 2012/12/25 14:55:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.135 2012/12/29 13:45:09 kensington Exp $
+
+  29 Dec 2012; Michael Palimaka <kensington@gentoo.org>
+  -files/4.8.2-qatomic-x32.patch, -qt-phonon-4.7.4.ebuild,
+  -qt-phonon-4.8.1.ebuild, -qt-phonon-4.8.2.ebuild, -qt-phonon-4.8.3.ebuild:
+  Remove old.
 
   25 Dec 2012; Agostino Sarubbo <ago@gentoo.org> qt-phonon-4.8.4.ebuild:
   Stable for arm, wrt bug #445956

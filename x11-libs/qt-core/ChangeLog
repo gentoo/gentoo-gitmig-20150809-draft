@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.200 2012/12/29 08:45:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.201 2012/12/29 13:36:37 kensington Exp $
+
+  29 Dec 2012; Michael Palimaka <kensington@gentoo.org>
+  -files/4.8.2-qatomic-x32.patch, -files/blacklist-diginotar-certs.diff,
+  -files/qt-core-4.7.4-fix-libreoffice-crash.patch,
+  -files/qt-core-4.8.1-localized-time.patch, -qt-core-4.7.4-r1.ebuild,
+  -qt-core-4.8.1-r3.ebuild, -qt-core-4.8.2.ebuild, -qt-core-4.8.3-r1.ebuild:
+  Remove old.
 
   29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> qt-core-4.8.4.ebuild:
   Stable for alpha, wrt bug #445956
