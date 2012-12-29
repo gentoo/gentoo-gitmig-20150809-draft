@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/locale
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.41 2012/12/23 19:30:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.42 2012/12/29 17:09:09 jer Exp $
+
+  29 Dec 2012; Jeroen Roovers <jer@gentoo.org> locale-2.0.5-r3.ebuild:
+  Stable for HPPA (bug #448310).
 
   23 Dec 2012; Agostino Sarubbo <ago@gentoo.org> locale-2.0.5-r3.ebuild:
   Stable for ppc64, wrt bug #448310
