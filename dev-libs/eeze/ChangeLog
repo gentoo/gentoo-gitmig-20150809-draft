@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eeze
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eeze/ChangeLog,v 1.11 2012/12/21 20:19:07 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eeze/ChangeLog,v 1.12 2012/12/29 10:10:00 tommy Exp $
+
+  29 Dec 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> eeze-1.7.4.ebuild:
+  Add missing eet dependency
 
 *eeze-1.7.4 (21 Dec 2012)
 

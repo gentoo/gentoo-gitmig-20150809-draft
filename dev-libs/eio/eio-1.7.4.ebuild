@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eio/eio-1.7.4.ebuild,v 1.1 2012/12/21 20:15:57 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eio/eio-1.7.4.ebuild,v 1.2 2012/12/29 10:08:50 tommy Exp $
 
 EAPI=2
 
@@ -15,7 +15,8 @@ LICENSE="LGPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples static-libs"
 
-RDEPEND=">=dev-libs/ecore-1.7.0"
+RDEPEND=">=dev-libs/ecore-1.7.0
+	>=dev-libs/eet-1.7.0"
 DEPEND="${RDEPEND}"
 
 src_configure() {
