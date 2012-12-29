@@ -1,4 +1,7 @@
 
+  29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pypax-0.7.0.ebuild:
+  Stable for sparc, wrt bug #445334
+
   18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pypax-0.7.0.ebuild:
   Stable for ia64, wrt bug #445334
 
