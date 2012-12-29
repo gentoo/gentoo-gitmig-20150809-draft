@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_acct/libnetfilter_acct-1.0.1.ebuild,v 1.5 2012/12/29 17:56:37 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_acct/libnetfilter_acct-1.0.1.ebuild,v 1.6 2012/12/29 18:23:13 pinkbyte Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils linux-info multilib
 
