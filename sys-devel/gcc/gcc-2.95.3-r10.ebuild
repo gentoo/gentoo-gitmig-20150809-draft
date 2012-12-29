@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r10.ebuild,v 1.9 2012/09/28 03:13:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r10.ebuild,v 1.10 2012/12/29 06:58:20 vapier Exp $
 
-PATCH_VER="1.3"
+PATCH_VER="1.4"
 
 inherit toolchain eutils flag-o-matic
 
@@ -25,6 +25,11 @@ gcc2-flags() {
 	replace-cpu-flags pentium{2,3,4} i686
 
 	replace-cpu-flags ev6{7,8} ev6
+}
+
+src_unpack() {
+	toolchain_src_unpack
+	rm -rf texinfo
 }
 
 src_compile() {

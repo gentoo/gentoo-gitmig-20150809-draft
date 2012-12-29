@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.918 2012/12/21 05:20:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.919 2012/12/29 06:58:20 vapier Exp $
+
+  29 Dec 2012; Mike Frysinger <vapier@gentoo.org> -gcc-2.95.3-r9.ebuild,
+  gcc-2.95.3-r10.ebuild:
+  Get gcc-2 building again on modern systems.
 
   21 Dec 2012; Mike Frysinger <vapier@gentoo.org> gcc-4.5.4.ebuild,
   gcc-4.6.3.ebuild:
