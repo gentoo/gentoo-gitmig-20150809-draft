@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bluecloth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.64 2012/12/28 11:23:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.65 2012/12/29 17:03:55 jer Exp $
+
+  29 Dec 2012; Jeroen Roovers <jer@gentoo.org> bluecloth-2.2.0.ebuild:
+  Stable for HPPA (bug #448310).
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> bluecloth-2.2.0.ebuild:
   Stable for ppc, wrt bug #448310

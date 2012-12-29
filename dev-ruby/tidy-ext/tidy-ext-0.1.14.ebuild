@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/tidy-ext-0.1.14.ebuild,v 1.5 2012/12/28 11:23:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/tidy-ext-0.1.14.ebuild,v 1.6 2012/12/29 17:00:25 jer Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -16,7 +16,7 @@ HOMEPAGE="http://github.com/carld/tidy"
 
 LICENSE="HTML-Tidy"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
 IUSE=""
 
 all_ruby_prepare() {
