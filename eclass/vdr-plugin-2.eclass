@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.13 2012/09/29 19:38:56 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.14 2012/12/29 17:47:53 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:
@@ -241,26 +241,36 @@ gettext_missing() {
 	fi
 }
 
-linguas_support() {
-#	Patching Makefile for linguas support.
-#	Only locales, enabled through the LINGUAS (make.conf) variable will be
-#	"compiled" and installed.
-#
+detect_po_dir() {
 #	Some plugins have po/ in a subdir
 #	set PO_SUBDIR in .ebuild
 #	i.e media-plugins/vdr-streamdev
 #	PO_SUBDIR="client server"
 
-	einfo "Patching for Linguas support"
-	einfo "available Languages for ${P} are:"
-
 	[[ -f po ]] && local po_dir="${S}"
 	local po_subdir=( ${S}/${PO_SUBDIR} )
 	local f
 
-	makefile_dir=( ${po_dir} ${po_subdir[*]} )
+	pofile_dir=( ${po_dir} ${po_subdir[*]} )
 
-	for f in ${makefile_dir[*]}; do
+	# maintainer check
+	if [[ ! -d ${pofile_dir[*]} ]]; then
+		dev_check "po dir not found? May be in subdir? \n"
+	fi
+}
+
+linguas_support() {
+#	Patching Makefile for linguas support.
+#	Only locales, enabled through the LINGUAS (make.conf) variable will be
+#	"compiled" and installed.
+#
+
+	einfo "Patching for Linguas support"
+	einfo "available Languages for ${P} are:"
+
+	detect_po_dir
+
+	for f in ${pofile_dir[*]}; do
 
 		PLUGIN_LINGUAS=$( ls ${f}/po --ignore="*.pot" | sed -e "s:.po::g" | cut -d_ -f1 | tr \\\012 ' ' )
 		einfo "LINGUAS=\"${PLUGIN_LINGUAS}\""
@@ -271,11 +281,6 @@ linguas_support() {
 	done
 
 	strip-linguas ${PLUGIN_LINGUAS} en
-
-	# maintainer check
-	if [[ ! -d po ]]; then
-		dev_check "po dir not found? May be in subdir? \n"
-	fi
 }
 
 vdr_i18n() {
@@ -331,28 +336,30 @@ remove_i18n_include() {
 }
 # end new vdr-plugin-2.eclass content
 
-vdr-plugin-2_copy_source_tree() {
-	pushd . >/dev/null
-	cp -r "${S}" "${T}"/source-tree
-	cd "${T}"/source-tree
-	cp "${WORKDIR}"/Makefile.before Makefile
-	# TODO: Fix this, maybe no longer needed
-	sed -i Makefile \
-		-e "s:^DVBDIR.*$:DVBDIR = ${DVB_INCLUDE_DIR}:" \
-		-e 's:^CXXFLAGS:#CXXFLAGS:' \
-		-e 's:-I$(DVBDIR)/include:-I$(DVBDIR):' \
-		-e 's:-I$(VDRDIR) -I$(DVBDIR):-I$(DVBDIR) -I$(VDRDIR):'
-	popd >/dev/null
-}
+# we don't support included plugins from vdr source for install in this way !!!
+# obsolet, remove it, later...
+#vdr-plugin-2_copy_source_tree() {
+#	pushd . >/dev/null
+#	cp -r "${S}" "${T}"/source-tree
+#	cd "${T}"/source-tree
+#	cp "${WORKDIR}"/Makefile.before Makefile
+#	# TODO: Fix this, maybe no longer needed
+#	sed -i Makefile \
+#		-e "s:^DVBDIR.*$:DVBDIR = ${DVB_INCLUDE_DIR}:" \
+#		-e 's:^CXXFLAGS:#CXXFLAGS:' \
+#		-e 's:-I$(DVBDIR)/include:-I$(DVBDIR):' \
+#		-e 's:-I$(VDRDIR) -I$(DVBDIR):-I$(DVBDIR) -I$(VDRDIR):'
+#	popd >/dev/null
+#}
 
-vdr-plugin-2_install_source_tree() {
-	einfo "Installing sources"
-	destdir="${VDRSOURCE_DIR}/vdr-${VDRVERSION}/PLUGINS/src/${VDRPLUGIN}"
-	insinto "${destdir}-${PV}"
-	doins -r "${T}"/source-tree/*
-
-	dosym "${VDRPLUGIN}-${PV}" "${destdir}"
-}
+#vdr-plugin-2_install_source_tree() {
+#	einfo "Installing sources"
+#	destdir="${VDRSOURCE_DIR}/vdr-${VDRVERSION}/PLUGINS/src/${VDRPLUGIN}"
+#	insinto "${destdir}-${PV}"
+#	doins -r "${T}"/source-tree/*
+#
+#	dosym "${VDRPLUGIN}-${PV}" "${destdir}"
+#}
 
 vdr-plugin-2_print_enable_command() {
 	local p_name c=0 l=""
@@ -391,7 +398,12 @@ vdr-plugin-2_pkg_setup() {
 	tc-export CC CXX
 
 	# Where should the plugins live in the filesystem
-	VDR_PLUGIN_DIR="/usr/$(get_libdir)/vdr/plugins"
+	if has_version ">=media-video/vdr-1.7.34"; then
+		VDR_PLUGIN_DIR=$(pkg-config --variable=libdir vdr)
+	else
+		VDR_PLUGIN_DIR="/usr/$(get_libdir)/vdr/plugins"
+	fi
+
 	VDR_CHECKSUM_DIR="${VDR_PLUGIN_DIR%/plugins}/checksums"
 
 	# was /usr/lib/... some time ago
@@ -403,7 +415,12 @@ vdr-plugin-2_pkg_setup() {
 	DVB_INCLUDE_DIR="/usr/include"
 
 	TMP_LOCALE_DIR="${WORKDIR}/tmp-locale"
-	LOCDIR="/usr/share/locale"
+
+	if has_version ">=media-video/vdr-1.7.34"; then
+		LOCDIR=$(pkg-config --variable=locdir vdr)
+	else
+		LOCDIR="/usr/share/locale"
+	fi
 
 	if ! has_vdr; then
 		# set to invalid values to detect abuses
@@ -419,9 +436,13 @@ vdr-plugin-2_pkg_setup() {
 		return
 	fi
 
-	VDRVERSION=$(awk -F'"' '/define VDRVERSION/ {print $2}' "${VDR_INCLUDE_DIR}"/config.h)
-	APIVERSION=$(awk -F'"' '/define APIVERSION/ {print $2}' "${VDR_INCLUDE_DIR}"/config.h)
+	if has_version ">=media-video/vdr-1.7.34"; then
+		APIVERSION=$(pkg-config --variable=apiversion vdr)
+	else
+		VDRVERSION=$(awk -F'"' '/define VDRVERSION/ {print $2}' "${VDR_INCLUDE_DIR}"/config.h)
+		APIVERSION=$(awk -F'"' '/define APIVERSION/ {print $2}' "${VDR_INCLUDE_DIR}"/config.h)
 	[[ -z ${APIVERSION} ]] && APIVERSION="${VDRVERSION}"
+	fi
 
 	einfo "Compiling against"
 	einfo "\tvdr-${VDRVERSION} [API version ${APIVERSION}]"
@@ -502,7 +523,8 @@ vdr-plugin-2_src_compile() {
 	while [ "$1" ]; do
 		case "$1" in
 		copy_source)
-			[[ -n "${VDRSOURCE_DIR}" ]] && vdr-plugin-2_copy_source_tree
+#			[[ -n "${VDRSOURCE_DIR}" ]] && vdr-plugin-2_copy_source_tree
+			eerror "obsoleted handling, vdr-plugin-2_copy_source_tree"
 			;;
 		compile)
 			if [[ ! -f ${WORKDIR}/.vdr-plugin_makefile_patched ]]; then
@@ -515,14 +537,24 @@ vdr-plugin-2_src_compile() {
 			fi
 			cd "${S}"
 
-			BUILD_TARGETS=${BUILD_TARGETS:-${VDRPLUGIN_MAKE_TARGET:-all}}
 
-			emake ${BUILD_PARAMS} \
-				${BUILD_TARGETS} \
-				LOCALEDIR="${TMP_LOCALE_DIR}" \
-				LIBDIR="${S}" \
-				TMPDIR="${T}" \
-			|| die "emake failed"
+			if has_version ">=media-video/vdr-1.7.34"; then
+			BUILD_TARGETS=${BUILD_TARGETS:-${VDRPLUGIN_MAKE_TARGET:-install }}
+				emake ${BUILD_PARAMS} \
+					${BUILD_TARGETS} \
+					LOCDIR="${TMP_LOCALE_DIR}" \
+					LIBDIR="${S}" \
+					TMPDIR="${T}" \
+					|| die "emake failed"
+			else
+			BUILD_TARGETS=${BUILD_TARGETS:-${VDRPLUGIN_MAKE_TARGET:-all }}
+				emake ${BUILD_PARAMS} \
+					${BUILD_TARGETS} \
+					LOCALEDIR="${TMP_LOCALE_DIR}" \
+					LIBDIR="${S}" \
+					TMPDIR="${T}" \
+					|| die "emake failed"
+			fi
 			;;
 		esac
 
@@ -539,7 +571,8 @@ vdr-plugin-2_src_install() {
 		die "vdr-plugin-2_src_install not called!"
 	fi
 
-	[[ -n "${VDRSOURCE_DIR}" ]] && vdr-plugin-2_install_source_tree
+#	obsolet, remove it, later...
+#	[[ -n "${VDRSOURCE_DIR}" ]] && vdr-plugin-2_install_source_tree
 	cd "${WORKDIR}"
 
 	if [[ -n ${VDR_MAINTAINER_MODE} ]]; then
@@ -561,6 +594,7 @@ vdr-plugin-2_src_install() {
 	fi
 
 	cd "${S}"
+
 	insinto "${VDR_PLUGIN_DIR}"
 	doins libvdr-*.so.*
 

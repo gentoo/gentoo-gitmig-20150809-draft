@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.579 2012/12/27 22:57:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.580 2012/12/29 17:47:53 hd_brummy Exp $
+
+  29 Dec 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
+  some adaption for new makefile handling, >=vdr-1.7.34
 
   27 Dec 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Pass --build-scripts path to setup.py (when out-of-source builds are used).
