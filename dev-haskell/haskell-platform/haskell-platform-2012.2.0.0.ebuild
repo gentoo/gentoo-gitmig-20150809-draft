@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-platform/haskell-platform-2012.2.0.0.ebuild,v 1.1 2012/06/03 04:40:19 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-platform/haskell-platform-2012.2.0.0.ebuild,v 1.2 2012/12/29 13:49:31 gienah Exp $
 
 EAPI=4
 
@@ -16,14 +16,12 @@ IUSE="profile X"
 RDEPEND=">=dev-haskell/cgi-3001.1.7.4[profile?]
 		>=dev-haskell/deepseq-1.3.0.0[profile?]
 		>=dev-haskell/fgl-5.4.2.4[profile?]
-		>=dev-haskell/glut-2.1.2.1[profile?]
 		>=dev-haskell/haskell-src-1.0.1.5[profile?]
 		>=dev-haskell/html-1.0.1.2[profile?]
 		>=dev-haskell/http-4000.2.3[profile?]
 		>=dev-haskell/hunit-1.2.4.2[profile?]
 		>=dev-haskell/mtl-2.1.1[profile?]
 		>=dev-haskell/network-2.3.0.13[profile?]
-		>=dev-haskell/opengl-2.2.3.1[profile?]
 		>=dev-haskell/parallel-3.2.0.2[profile?]
 		>=dev-haskell/parsec-3.1.2[profile?]
 		>=dev-haskell/quickcheck-2.4.2[profile?]
