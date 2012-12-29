@@ -1,14 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.6_beta3-r1.ebuild,v 1.1 2012/12/26 22:57:12 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.6_beta3-r1.ebuild,v 1.2 2012/12/29 23:00:35 ottxor Exp $
 
 EAPI=5
 
 TEST_PV="4.0.4"
 MANUAL_PV="4.6-beta1"
-
-#to find external blas/lapack
-CMAKE_MIN_VERSION="2.8.5-r2"
 
 CMAKE_MAKEFILE_GENERATOR="ninja"
 
@@ -64,6 +61,7 @@ RDEPEND="${CDEPEND}"
 RESTRICT="test"
 
 REQUIRED_USE="
+	|| ( single-precision double-precision )
 	cuda? ( single-precision )
 	openmm? ( single-precision )
 	mkl? ( !blas !fftw !lapack )"
@@ -84,9 +82,6 @@ src_prepare() {
 	GMX_DIRS=""
 	use single-precision && GMX_DIRS+=" float"
 	use double-precision && GMX_DIRS+=" double"
-	#if neither single-precision nor double-precision is enabled
-	#build at least default (single)
-	[[ -z $GMX_DIRS ]] && GMX_DIRS+=" float"
 
 	for x in ${GMX_DIRS}; do
 		mkdir -p "${WORKDIR}/${P}_${x}" || die
@@ -110,10 +105,16 @@ src_configure() {
 
 	if use fftw; then
 		fft_opts=( -DGMX_FFT_LIBRARY=fftw3 )
-	elif use mkl; then
+	elif use mkl && has_version "=sci-libs/mkl-10*"; then
 		fft_opts=( -DGMX_FFT_LIBRARY=mkl
 			-DMKL_INCLUDE_DIR="${MKLROOT}/include"
 			-DMKL_LIBRARIES="$(echo /opt/intel/mkl/10.0.5.025/lib/*/libmkl.so);$(echo /opt/intel/mkl/10.0.5.025/lib/*/libiomp*.so)"
+		)
+	elif use mkl; then
+		local bits=$(get_libdir)
+		fft_opts=( -DGMX_FFT_LIBRARY=mkl
+			-DMKL_INCLUDE_DIR="$(echo /opt/intel/*/mkl/include)"
+			-DMKL_LIBRARIES="$(echo /opt/intel/*/mkl/lib/*${bits/lib}/libmkl_rt.so)"
 		)
 	else
 		fft_opts=( -DGMX_FFT_LIBRARY=fftpack )
