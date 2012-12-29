@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.161 2012/12/26 17:17:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.162 2012/12/29 08:44:59 ago Exp $
+
+  29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> qt-assistant-4.8.4.ebuild:
+  Stable for alpha, wrt bug #445956
 
   26 Dec 2012; Agostino Sarubbo <ago@gentoo.org> qt-assistant-4.8.4.ebuild:
   Stable for sparc, wrt bug #445956
