@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/nml/nml-0.2.4.ebuild,v 1.1 2012/11/01 19:53:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/nml/nml-0.2.4.ebuild,v 1.2 2012/12/29 16:31:14 pinkbyte Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.5"
@@ -17,7 +17,8 @@ IUSE=""
 
 RDEPEND="dev-python/imaging
 	dev-python/ply"
-DEPEND=${RDEPEND}
+DEPEND="${RDEPEND}
+	dev-python/setuptools"
 
 DOCS="docs/changelog.txt docs/readme.txt"
 
