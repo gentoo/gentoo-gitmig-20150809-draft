@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.33 2012/12/29 15:27:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.34 2012/12/29 22:27:30 blueness Exp $
+
+  29 Dec 2012; Anthony G. Basile <blueness@gentoo.org> -pypax-0.5.2.ebuild:
+  Remove older version, bug #440018
 
   29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pypax-0.7.0.ebuild:
   Stable for sparc, wrt bug #445334
