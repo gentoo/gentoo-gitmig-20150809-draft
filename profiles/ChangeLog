@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7308 2012/12/28 18:02:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7309 2012/12/29 17:37:33 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  targets/desktop/gnome/package.use:
+  Have dev-vcs/giggle USE=-eds by default to avoid blocking gnome-3.6 updates
+  (bug #449138).
 
   28 Dec 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add MIT-with-advertising to MISC-FREE license group, bugs 448650 and 448652.
