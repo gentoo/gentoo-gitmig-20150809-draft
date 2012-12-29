@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.186 2012/11/28 04:40:54 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.187 2012/12/29 16:22:06 pinkbyte Exp $
+
+  29 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> apr-1.4.6-r1.ebuild:
+  Apply user patches, wrt bug #449048
 
 *apr-1.4.6-r1 (28 Nov 2012)
 

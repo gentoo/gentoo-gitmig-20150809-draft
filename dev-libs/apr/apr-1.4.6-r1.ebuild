@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.4.6-r1.ebuild,v 1.1 2012/11/28 04:40:54 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.4.6-r1.ebuild,v 1.2 2012/12/29 16:22:06 pinkbyte Exp $
 
 EAPI="4"
 
@@ -32,6 +32,9 @@ src_prepare() {
 	[[ ${CHOST} == *-darwin* ]] && g=g
 	sed -e 's:${installbuilddir}/libtool:'"${EPREFIX}/usr/bin/${g}libtool"':' -i apr-config.in || die "sed failed"
 	sed -e 's:@LIBTOOL@:$(SHELL) '"${EPREFIX}/usr/bin/${g}libtool"':' -i build/apr_rules.mk.in || die "sed failed"
+
+	# Apply user patches, bug #449048
+	epatch_user
 
 	AT_M4DIR="build" eautoreconf
 	elibtoolize
