@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_log/libnetfilter_log-1.0.1.ebuild,v 1.3 2012/05/05 02:54:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_log/libnetfilter_log-1.0.1.ebuild,v 1.4 2012/12/29 18:36:42 jer Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit linux-info autotools-utils
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnetfilter_log
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_log/ChangeLog,v 1.16 2012/10/07 09:59:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_log/ChangeLog,v 1.17 2012/12/29 18:36:42 jer Exp $
+
+  29 Dec 2012; Jeroen Roovers <jer@gentoo.org> libnetfilter_log-1.0.1.ebuild:
+  Verbose build.
 
   07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, #72682
