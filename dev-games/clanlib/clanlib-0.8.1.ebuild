@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.8.1.ebuild,v 1.10 2012/03/07 15:58:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.8.1.ebuild,v 1.11 2012/12/29 21:58:59 pinkbyte Exp $
 
 EAPI=2
 inherit flag-o-matic eutils
@@ -18,6 +18,7 @@ IUSE="doc ipv6 mikmod opengl sdl static-libs vorbis"
 # Autoconf files need to be fixed
 RDEPEND="media-libs/libpng
 	virtual/jpeg
+	virtual/glu
 	virtual/opengl
 	sdl? (
 		media-libs/libsdl
