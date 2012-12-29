@@ -1,9 +1,9 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.58 2012/12/29 17:26:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.59 2012/12/29 17:31:55 armin76 Exp $
 
   29 Dec 2012; Raúl Porcel <armin76@gentoo.org> hwids-20121119.ebuild:
-  alpha/m68k/s390/sh/sparc stable wrt #441308
+  alpha/m68k/s390/sh/sparc stable wrt #436186
 
 *hwids-20121225 (25 Dec 2012)
 
