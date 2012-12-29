@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/split/split-0.1.4.3.ebuild,v 1.7 2012/12/10 21:53:12 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/split/split-0.1.4.3.ebuild,v 1.8 2012/12/29 14:20:06 gienah Exp $
 
 EAPI=4
 
@@ -21,3 +21,8 @@ IUSE=""
 RDEPEND=">=dev-lang/ghc-6.8.2"
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.6"
+
+src_prepare() {
+	sed -e 's@base <4.6@base <5.0@' \
+		-i "${S}/${PN}.cabal" || die "Could not loosen depdencies"
+}
