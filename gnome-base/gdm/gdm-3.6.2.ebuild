@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.6.2.ebuild,v 1.1 2012/12/26 21:45:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.6.2.ebuild,v 1.2 2012/12/29 00:00:34 tetromino Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -135,6 +135,10 @@ src_prepare() {
 
 	# automagic selinux :/
 	epatch "${FILESDIR}/${PN}-3.6.0-selinux-automagic.patch"
+
+	# spurious unicode characters causing build failure, bug #449062
+	# https://bugzilla.gnome.org/show_bug.cgi?id=690842
+	LC_ALL=C epatch "${FILESDIR}/${PN}-3.6.2-gdm-slave.xml-unicode.patch"
 
 	# don't load accessibility support at runtime when USE=-accessibility
 	use accessibility || epatch "${FILESDIR}/${PN}-3.3.92.1-disable-accessibility.patch"
