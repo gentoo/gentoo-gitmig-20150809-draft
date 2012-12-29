@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/arrows
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/ChangeLog,v 1.34 2012/12/22 21:09:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/ChangeLog,v 1.35 2012/12/29 14:30:08 ago Exp $
+
+  29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> arrows-0.4.4.1.ebuild:
+  Stable for sparc, wrt bug #441150
 
   22 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> -arrows-0.2.1.ebuild,
   -arrows-0.4.2.0.ebuild:
