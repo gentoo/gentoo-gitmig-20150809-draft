@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.5_beta16.ebuild,v 1.1 2012/12/26 00:57:51 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.5_beta17.ebuild,v 1.1 2012/12/29 03:01:47 idl0r Exp $
 
 EAPI="4"
 
@@ -24,13 +24,9 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-#pkg_setup() {
-#	enewgroup haproxy
-#	enewuser haproxy -1 -1 -1 haproxy
-##}
-
-src_prepare() {
-	epatch "${FILESDIR}/${P}-stats.patch"
+pkg_setup() {
+	enewgroup haproxy
+	enewuser haproxy -1 -1 -1 haproxy
 }
 
 src_compile() {
