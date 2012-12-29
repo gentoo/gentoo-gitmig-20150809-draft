@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf-archive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.59 2012/12/18 17:15:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.60 2012/12/29 14:27:48 ago Exp $
+
+  29 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
+  autoconf-archive-2012.09.08.ebuild:
+  Stable for sparc, wrt bug #441526
 
   18 Dec 2012; Jeroen Roovers <jer@gentoo.org>
   autoconf-archive-2012.09.08.ebuild:
