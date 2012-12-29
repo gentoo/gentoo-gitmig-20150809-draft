@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-locale-maketext
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-locale-maketext/ChangeLog,v 1.39 2012/12/26 13:58:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-locale-maketext/ChangeLog,v 1.40 2012/12/29 08:50:54 ago Exp $
+
+  29 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
+  perl-locale-maketext-1.230.0.ebuild:
+  Stable for alpha, wrt bug #446376
 
   26 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
   perl-locale-maketext-1.230.0.ebuild:
