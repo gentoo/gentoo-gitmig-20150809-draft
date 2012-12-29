@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/argyllcms-1.4.0-r2.ebuild,v 1.1 2012/12/14 08:54:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/argyllcms-1.4.0-r2.ebuild,v 1.2 2012/12/29 16:15:03 floppym Exp $
 
 EAPI=5
 
-inherit base flag-o-matic toolchain-funcs udev
+inherit base flag-o-matic multiprocessing toolchain-funcs udev
 
 MY_P="Argyll_V${PV}"
 
@@ -49,9 +49,6 @@ src_compile() {
 	# the shared libraries by default on the command line _before_ the object to be built...
 	echo "STDLIBS += -ldl -lrt -lX11 -lXext -lXxf86vm -lXinerama -lXrandr -lXau -lXdmcp -lXss -ltiff -ljpeg ;" >> Jamtop
 
-	local jobnumber=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[[:space:]]*[0-9]\+\).*/\1/; p }")
-	[ ${jobnumber} ] || jobnumber=-j1
-
 	append-cflags -DUNIX -D_THREAD_SAFE
 
 	sed \
@@ -61,7 +58,7 @@ src_compile() {
 
 	tc-export CC RANLIB
 
-	jam -dx -fJambase ${jobnumber} || die
+	jam -dx -fJambase "-j$(makeopts_jobs)" || die
 }
 
 src_install() {
