@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.362 2012/12/19 19:17:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.363 2012/12/29 14:23:07 ago Exp $
+
+  29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> coreutils-8.20.ebuild:
+  Stable for sparc, wrt bug #443536
 
 *coreutils-8.20-r1 (19 Dec 2012)
 
