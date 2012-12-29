@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/haskell-updater-1.2.0.8.ebuild,v 1.1 2012/10/18 18:36:28 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/haskell-updater-1.2.0.8.ebuild,v 1.2 2012/12/29 07:30:27 slyfox Exp $
 
 EAPI=4
 
@@ -31,6 +31,10 @@ src_prepare() {
 		sed -i -e 's,"/","'"${EPREFIX}"'/",g' \
 			"${S}/Distribution/Gentoo/GHC.hs" || die
 	fi
+
+	# for ghc snapshots (usually come with unstable Cabal API)
+	cabal_chdeps \
+		'Cabal >= 1.8 && < 1.17' 'Cabal >= 1.8 && < 1.18'
 }
 
 src_configure() {
