@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/clanlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.61 2012/12/29 21:58:59 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.62 2012/12/29 22:01:44 pinkbyte Exp $
+
+  29 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> clanlib-0.8.1.ebuild,
+  +files/clanlib-0.8.1-gcc47.patch:
+  Fix building with gcc 4.7, wrt bug #448428. Thanks to Diego Elio Pettenò for
+  discovering this issue
 
   29 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> clanlib-0.8.1.ebuild:
   Add missing dependency on virtual/glu
