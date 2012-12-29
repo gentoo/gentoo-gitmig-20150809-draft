@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.256 2012/12/21 13:27:37 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.257 2012/12/29 14:25:25 ago Exp $
+
+  29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> cyrus-sasl-2.1.25-r3.ebuild:
+  Stable for sparc, wrt bug #445208
 
   21 Dec 2012; Eray Aslan <eras@gentoo.org> cyrus-sasl-2.1.23-r6.ebuild,
   cyrus-sasl-2.1.25-r1.ebuild, cyrus-sasl-2.1.25-r2.ebuild,
