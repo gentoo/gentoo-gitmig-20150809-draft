@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.147 2012/12/26 22:15:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.148 2012/12/29 14:29:41 ago Exp $
+
+  29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> rb_libtorrent-0.16.5.ebuild:
+  Stable for sparc, wrt bug #442314
 
   26 Dec 2012; Jeff Horelick <jdhore@gentoo.org> rb_libtorrent-0.16.5.ebuild:
   marked x86 per bug 442314
