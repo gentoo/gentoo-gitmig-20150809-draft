@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.4.ebuild,v 1.1 2012/12/21 19:56:14 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.4.ebuild,v 1.2 2012/12/29 11:33:59 tommy Exp $
 
 EAPI=2
 
@@ -169,6 +169,7 @@ src_configure() {
 	--disable-ecore-evas-opengl-glew
 	--disable-ecore-evas-software-16-ddraw
 	--disable-ecore-evas-software-16-wince
+	--disable-ecore_imf_scim
 	$(use_enable ares cares)
 	$(use_enable curl)
 	$(use_enable directfb ecore-directfb)

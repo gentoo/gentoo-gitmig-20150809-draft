@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ecore
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ChangeLog,v 1.13 2012/12/21 19:56:14 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ChangeLog,v 1.14 2012/12/29 11:33:59 tommy Exp $
+
+  29 Dec 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> ecore-1.7.4.ebuild:
+  Disable automagic scim support in ecore_imf, missing arm support for scim
 
 *ecore-1.7.4 (21 Dec 2012)
 
