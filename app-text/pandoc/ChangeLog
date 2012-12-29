@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pandoc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.13 2012/12/16 14:07:14 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.14 2012/12/29 07:32:40 slyfox Exp $
+
+  29 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> pandoc-1.9.4.5.ebuild:
+  Tie diff depend to 0.1 (fails tests with 0.2 for now).
 
   16 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/pandoc-1.9.4.5-disable-writes-other-man.patch,

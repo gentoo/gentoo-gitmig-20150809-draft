@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/pandoc-1.9.4.5.ebuild,v 1.3 2012/12/16 14:07:14 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/pandoc-1.9.4.5.ebuild,v 1.4 2012/12/29 07:32:40 slyfox Exp $
 
 EAPI=5
 
@@ -55,7 +55,7 @@ RDEPEND=">=dev-haskell/base64-bytestring-0.1:=[profile?]
 		>=dev-lang/ghc-7.4.2:="
 DEPEND="${RDEPEND}
 		test? ( =dev-haskell/ansi-terminal-0.5*
-			dev-haskell/diff
+			=dev-haskell/diff-0.1*
 			=dev-haskell/hunit-1.2*
 			>=dev-haskell/quickcheck-2.4
 			<dev-haskell/quickcheck-2.6
