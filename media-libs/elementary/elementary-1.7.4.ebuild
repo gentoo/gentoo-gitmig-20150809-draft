@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/elementary-1.7.4.ebuild,v 1.1 2012/12/21 20:56:22 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/elementary-1.7.4.ebuild,v 1.2 2012/12/29 10:14:12 tommy Exp $
 
 EAPI=2
 
@@ -16,6 +16,7 @@ IUSE="dbus debug emotion ethumb examples fbcon opengl quicklaunch sdl X xcb xdg 
 
 DEPEND="
 	>=dev-libs/ecore-1.7.0[evas,fbcon?,opengl?,sdl?,X?,xcb?]
+	>=dev-libs/eet-1.7.0
 	>=media-libs/evas-1.7.0[fbcon?,opengl?,X?,xcb?]
 	>=media-libs/edje-1.7.0
 	dbus? ( >=dev-libs/e_dbus-1.7.0 )

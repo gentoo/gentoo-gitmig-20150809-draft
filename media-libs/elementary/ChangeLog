@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/elementary
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/ChangeLog,v 1.4 2012/12/21 20:56:22 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/ChangeLog,v 1.5 2012/12/29 10:14:12 tommy Exp $
+
+  29 Dec 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  elementary-1.7.4.ebuild:
+  Add missing eet dependency
 
 *elementary-1.7.4 (21 Dec 2012)
 
@@ -23,4 +27,3 @@
   16 Nov 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   +elementary-1.7.1.ebuild, +metadata.xml:
   Initial commit
-
