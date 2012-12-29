@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.6_beta_pre897.ebuild,v 1.9 2012/12/25 16:41:58 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.6_beta_pre897.ebuild,v 1.10 2012/12/29 00:07:31 chithanh Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ fi
 IUSE="debug +modules multilib qt4 static-libs"
 
 LICENSE="AMD GPL-2 QPL-1.0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="1"
 
 RESTRICT="bindist"
@@ -47,8 +47,8 @@ RDEPEND="
 			x11-libs/libXcursor
 			x11-libs/libXfixes
 			x11-libs/libXxf86vm
-			x11-libs/qt-core
-			x11-libs/qt-gui
+			x11-libs/qt-core:4
+			x11-libs/qt-gui:4
 	)
 "
 
@@ -327,6 +327,10 @@ src_prepare() {
 	#fixes bug #420751
 	epatch "${FILESDIR}"/ati-drivers-do_mmap.patch
 
+	# compile fix for linux-3.7
+	# https://bugs.gentoo.org/show_bug.cgi?id=438516
+	epatch "${FILESDIR}/ati-drivers-vm-reserverd.patch"
+
 	# Use ACPI_DEVICE_HANDLE wrapper to make driver build on linux-3.8
 	# see https://bugs.gentoo.org/show_bug.cgi?id=448216 
 	epatch "${FILESDIR}/ati-drivers-kernel-3.8-acpihandle.patch"
@@ -581,11 +585,20 @@ src_install-libs() {
 		dosym ${soname} /usr/$(get_libdir)/$(scanelf -qF "#f%S" ${so})
 	done
 
+	# See https://bugs.gentoo.org/show_bug.cgi?id=443466
+	dodir /etc/revdep-rebuild/
+	echo "SEARCH_DIRS_MASK=\"/opt/bin/clinfo\"" > "${ED}/etc/revdep-rebuild/62-ati-drivers"
+
 	#remove static libs if not wanted
 	use static-libs || rm -rf "${D}"/usr/$(get_libdir)/libfglrx_dm.a
 }
 
 pkg_postinst() {
+	if has_version ">=x11-base/xorg-server-1.11.99"; then
+		ewarn "Problems have been reported with this driver and xorg-server-1.12."
+		ewarn "Stay with xorg-server-1.11 if you experience hangs (bug #436252)."
+	fi
+
 	elog "To switch to AMD OpenGL, run \"eselect opengl set ati\""
 	elog "To change your xorg.conf you can use the bundled \"aticonfig\""
 	elog
