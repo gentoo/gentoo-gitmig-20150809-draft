@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-4.1.6.ebuild,v 1.2 2012/12/29 18:05:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-4.1.6.ebuild,v 1.3 2012/12/29 18:05:33 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.b2evolution.net"
 SRC_URI="mirror://sourceforge/evocms/${PN}-${MY_PV}-${MY_EXT}.zip"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~ppc ~x86"
+KEYWORDS="~alpha amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="virtual/httpd-php
