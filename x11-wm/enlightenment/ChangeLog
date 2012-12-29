@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.172 2012/12/22 20:25:55 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.173 2012/12/29 10:12:58 tommy Exp $
+
+  29 Dec 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  enlightenment-0.17.0.ebuild:
+  Add missing eet dependency
 
   22 Dec 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   enlightenment-0.17.0.ebuild:

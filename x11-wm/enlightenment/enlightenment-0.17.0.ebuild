@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.0.ebuild,v 1.2 2012/12/22 20:25:55 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.0.ebuild,v 1.3 2012/12/29 10:12:58 tommy Exp $
 
 EAPI=5
 
@@ -35,6 +35,7 @@ IUSE="emotion pam spell static-libs +udev ukit ${IUSE_E_MODULES}"
 
 RDEPEND="
 	pam? ( sys-libs/pam )
+	>=dev-libs/eet-1.7.4
 	>=dev-libs/efreet-1.7.4
 	>=dev-libs/eio-1.7.4
 	>=dev-libs/eina-1.7.4[mempool-chained]
