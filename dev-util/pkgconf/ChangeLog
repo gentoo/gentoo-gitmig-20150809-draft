@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.60 2012/12/17 17:37:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.61 2012/12/29 14:32:44 ago Exp $
+
+  29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pkgconf-0.8.9.ebuild:
+  Stable for sparc, wrt bug #443788
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pkgconf-0.8.9.ebuild:
   Stable for ia64, wrt bug #443788
