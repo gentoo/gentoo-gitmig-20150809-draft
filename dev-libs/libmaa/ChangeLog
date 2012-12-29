@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmaa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmaa/ChangeLog,v 1.41 2012/12/17 17:57:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmaa/ChangeLog,v 1.42 2012/12/29 14:37:08 ago Exp $
+
+  29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libmaa-1.3.2.ebuild:
+  Stable for sparc, wrt bug #441192
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libmaa-1.3.2.ebuild:
   Stable for ia64, wrt bug #441192
