@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ncdc-1.14.ebuild,v 1.1 2012/11/04 13:24:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ncdc-1.14.ebuild,v 1.2 2012/12/29 12:59:10 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.yorhel.nl/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="app-arch/bzip2
