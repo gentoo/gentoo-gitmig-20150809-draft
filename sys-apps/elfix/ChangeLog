@@ -1,4 +1,7 @@
 
+  29 Dec 2012; Anthony G. Basile <blueness@gentoo.org> -elfix-0.5.2.ebuild:
+  Remove older version, bug #440018
+
 *elfix-0.8.0 (29 Dec 2012)
 
   29 Dec 2012; Anthony G. Basile <blueness@gentoo.org> +elfix-0.8.0.ebuild:
