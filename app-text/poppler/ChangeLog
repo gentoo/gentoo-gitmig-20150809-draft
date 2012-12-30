@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.341 2012/12/29 09:10:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.342 2012/12/30 14:27:43 ago Exp $
+
+  30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> poppler-0.20.4.ebuild:
+  Stable for sparc, wrt bug #437610
 
   29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> poppler-0.20.4.ebuild:
   Stable for alpha, wrt bug #437610
