@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-unit-rr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit-rr/ChangeLog,v 1.7 2012/12/27 14:52:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit-rr/ChangeLog,v 1.8 2012/12/30 16:56:35 armin76 Exp $
+
+  30 Dec 2012; Raúl Porcel <armin76@gentoo.org> test-unit-rr-1.0.2.ebuild:
+  Add ~alpha/~sparc wrt #448162
 
   27 Dec 2012; Jeroen Roovers <jer@gentoo.org> test-unit-rr-1.0.2.ebuild:
   Marked ~hppa (bug #448162).
