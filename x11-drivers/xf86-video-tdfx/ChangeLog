@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-tdfx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tdfx/ChangeLog,v 1.68 2012/12/28 17:41:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tdfx/ChangeLog,v 1.69 2012/12/30 14:51:16 ago Exp $
+
+  30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xf86-video-tdfx-1.4.5.ebuild:
+  Stable for alpha, wrt bug #440872
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xf86-video-tdfx-1.4.5.ebuild:
   Stable for sparc, wrt bug #440872
