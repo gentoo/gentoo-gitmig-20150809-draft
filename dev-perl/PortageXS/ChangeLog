@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PortageXS
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/ChangeLog,v 1.53 2012/12/29 08:49:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/ChangeLog,v 1.54 2012/12/30 14:04:46 ago Exp $
+
+  30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> PortageXS-0.02.10-r2.ebuild:
+  Stable for sparc, wrt bug #437414
 
   29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> PortageXS-0.02.10-r2.ebuild:
   Stable for alpha, wrt bug #437414
