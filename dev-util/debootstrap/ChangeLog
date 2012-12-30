@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.201 2012/12/30 14:26:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.202 2012/12/30 20:45:40 ago Exp $
+
+  30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> debootstrap-1.0.44.ebuild:
+  Stable for alpha, wrt bug #448102
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> debootstrap-1.0.44.ebuild:
   Stable for sparc, wrt bug #448102
