@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/daq-0.6.2-r1.ebuild,v 1.2 2012/11/09 01:01:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/daq-0.6.2-r1.ebuild,v 1.3 2012/12/30 21:06:48 ago Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.snort.org/"
 SRC_URI="http://www.snort.org/downloads/1339 -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ipv6 +afpacket +dump +pcap nfq ipq static-libs"
 
 DEPEND="pcap? ( >=net-libs/libpcap-1.0.0 )
