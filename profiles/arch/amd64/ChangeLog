@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.200 2012/12/30 21:50:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.201 2012/12/30 22:13:48 tetromino Exp $
+
+  30 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Unmask sys-kernel/dracut[dracut_modules_biosdevname] (masked in base).
 
   30 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Unmask zeitgeist-datasources[chromium,tomboy] (masked in base).
