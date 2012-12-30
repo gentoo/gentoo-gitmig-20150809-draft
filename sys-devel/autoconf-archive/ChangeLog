@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf-archive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.60 2012/12/29 14:27:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.61 2012/12/30 14:59:14 ago Exp $
+
+  30 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
+  autoconf-archive-2012.09.08.ebuild:
+  Stable for alpha, wrt bug #441526
 
   29 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
   autoconf-archive-2012.09.08.ebuild:
