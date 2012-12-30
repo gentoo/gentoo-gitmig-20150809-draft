@@ -13,5 +13,9 @@
       Build libgnutls-dane, implementing DNS-based Authentication of
       Named Entities. Requires <pkg>net-dns/unbound</pkg>.
     </flag>
+    <flag name="bindist">
+      Disallow building LZO support, because of a license
+      incompatibility with <pkg>dev-libs/lzo</pkg>.
+    </flag>
   </use>
 </pkgmetadata>
