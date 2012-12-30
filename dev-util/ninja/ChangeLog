@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ninja
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ChangeLog,v 1.4 2012/10/23 15:50:41 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ChangeLog,v 1.5 2012/12/30 23:53:50 ottxor Exp $
+
+  30 Dec 2012; Christoph Junghans <ottxor@gentoo.org> ninja-1.0.0.ebuild:
+  fix collision with net-irc/ninja (bug #436804)
 
 *ninja-1.0.0 (23 Oct 2012)
 

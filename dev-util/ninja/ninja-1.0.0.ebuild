@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-1.0.0.ebuild,v 1.1 2012/10/23 15:50:41 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-1.0.0.ebuild,v 1.2 2012/12/30 23:53:50 ottxor Exp $
 
 EAPI=4
 
@@ -39,7 +39,7 @@ RDEPEND="
 		)
 	)
 	zsh-completion? ( app-shells/zsh )
-	"
+	!<net-irc/ninja-1.5.9_pre14-r1" #436804
 
 pkg_setup() {
 	python_set_active_version 2
