@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-1.0.44.ebuild,v 1.7 2012/12/25 22:25:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-1.0.44.ebuild,v 1.8 2012/12/30 14:26:39 ago Exp $
 
 EAPI=4
 inherit eutils
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/d/${PN}/${PN}_${PV}.tar.gz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ia64 ppc ppc64 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ia64 ppc ppc64 ~sh sparc x86"
 IUSE=""
 
 RDEPEND="
