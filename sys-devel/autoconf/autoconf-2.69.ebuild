@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.69.ebuild,v 1.11 2012/12/30 14:20:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.69.ebuild,v 1.12 2012/12/30 20:22:48 ago Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	SRC_URI="mirror://gnu/${PN}/${P}.tar.xz
 		ftp://alpha.gnu.org/pub/gnu/${PN}/${P}.tar.xz"
-	KEYWORDS="~alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+	KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 fi
 
 DESCRIPTION="Used to create autoconfiguration files"
