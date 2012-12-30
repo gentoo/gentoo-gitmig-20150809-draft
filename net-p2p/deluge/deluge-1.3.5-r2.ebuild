@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.5-r2.ebuild,v 1.2 2012/12/21 20:27:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.5-r2.ebuild,v 1.3 2012/12/30 17:05:09 mr_bones_ Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -48,7 +48,7 @@ src_prepare() {
 	python_convert_shebangs -r 2 .
 	epatch "${FILESDIR}/${P}-rb_libtorrent-disable-python-bindings"
 	epatch "${FILESDIR}/${P}-disable_libtorrent_internal_copy.patch"
-	
+
 }
 
 src_install() {
