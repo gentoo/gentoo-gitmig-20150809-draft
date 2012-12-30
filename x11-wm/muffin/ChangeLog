@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/muffin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/ChangeLog,v 1.9 2012/09/28 08:13:06 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/ChangeLog,v 1.10 2012/12/30 02:38:45 tetromino Exp $
+
+*muffin-1.1.2 (30 Dec 2012)
+
+  30 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -muffin-1.0.2.ebuild, -muffin-1.0.2-r1.ebuild,
+  -files/muffin-1.0.2-frame-initialize-style-contexts.patch,
+  -muffin-1.0.3_p2.ebuild, +muffin-1.1.2.ebuild:
+  Version bump for bug #440612; thanks to Anton Bolshakov et al. Drop old.
 
 *muffin-1.1.1 (28 Sep 2012)
 
