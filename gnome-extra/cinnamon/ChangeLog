@@ -1,6 +1,18 @@
 # ChangeLog for gnome-extra/cinnamon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.19 2012/11/07 21:53:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.20 2012/12/30 02:39:06 tetromino Exp $
+
+*cinnamon-1.6.7 (30 Dec 2012)
+
+  30 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/cinnamon-1.1.3-automagic-gnome-bluetooth.patch,
+  -files/cinnamon-1.3.1-optional-networkmanager.patch,
+  -cinnamon-1.4_p1-r1.ebuild,
+  -files/cinnamon-1.4-UP1-gnome-bluetooth-3.4-1.patch,
+  -files/cinnamon-1.4-UP1-gnome-bluetooth-3.4-2.patch,
+  -files/cinnamon-1.4-UP1-spin-buttons.patch,
+  -files/cinnamon-1.4-UP1-timedated.patch, +cinnamon-1.6.7.ebuild:
+  Version bump for bug #440612; thanks to Anton Bolshakov et al. Drop old.
 
   07 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   -cinnamon-1.4.ebuild, -cinnamon-1.4_p1.ebuild, cinnamon-1.4_p1-r1.ebuild,
