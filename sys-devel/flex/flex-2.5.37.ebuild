@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.37.ebuild,v 1.8 2012/12/29 15:05:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.37.ebuild,v 1.9 2012/12/30 14:24:17 ago Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/flex/${MY_P}.tar.bz2
 
 LICENSE="FLEX"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="nls static test"
 
 # We want bison explicitly and not yacc in general #381273
