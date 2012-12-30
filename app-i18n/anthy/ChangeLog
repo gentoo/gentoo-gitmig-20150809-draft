@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.140 2012/12/29 14:40:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.141 2012/12/30 15:09:37 ago Exp $
+
+  30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> anthy-9100h-r1.ebuild:
+  Stable for alpha, wrt bug #441080
 
   29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> anthy-9100h-r1.ebuild:
   Stable for sparc, wrt bug #441080
