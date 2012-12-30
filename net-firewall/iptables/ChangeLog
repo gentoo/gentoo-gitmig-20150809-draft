@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.284 2012/12/29 05:16:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.285 2012/12/30 23:11:07 vapier Exp $
+
+  30 Dec 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/iptables-1.4.17-libip6tc.patch, iptables-1.4.17.ebuild:
+  Link against local libip6tc #449262 by Mike Gilbert.
 
 *iptables-1.4.17 (29 Dec 2012)
 

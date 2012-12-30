@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.17.ebuild,v 1.1 2012/12/29 05:16:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.17.ebuild,v 1.2 2012/12/30 23:11:07 vapier Exp $
 
 EAPI="4"
 
@@ -29,6 +29,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# use the saner headers from the kernel
 	rm -f include/linux/{kernel,types}.h
+	epatch "${FILESDIR}"/${P}-libip6tc.patch #449262
 
 	# Only run autotools if user patched something
 	epatch_user && eautoreconf || elibtoolize
