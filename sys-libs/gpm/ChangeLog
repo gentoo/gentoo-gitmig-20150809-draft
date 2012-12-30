@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.91 2012/10/28 11:35:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.92 2012/12/30 23:53:45 floppym Exp $
+
+*gpm-1.20.7-r1 (30 Dec 2012)
+
+  30 Dec 2012; Mike Gilbert <floppym@gentoo.org> +files/gpm.service,
+  +gpm-1.20.7-r1.ebuild:
+  Install systemd unit taken from Fedora, bug 449350.
 
 *gpm-1.20.7 (28 Oct 2012)
 
