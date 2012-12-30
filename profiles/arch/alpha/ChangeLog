@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.156 2012/12/27 11:30:14 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.157 2012/12/30 16:24:51 armin76 Exp $
+
+  30 Dec 2012; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  P.use.mask media-libs/phonon gstreamer vlc, needs testing
 
   27 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
   Remove obsolete masks, wrt bug #444181
