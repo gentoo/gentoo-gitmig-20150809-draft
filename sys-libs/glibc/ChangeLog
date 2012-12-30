@@ -1,5 +1,13 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.913 2012/12/28 19:25:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.914 2012/12/30 17:16:50 ulm Exp $
+
+  30 Dec 2012; Ulrich Müller <ulm@gentoo.org> glibc-2.9_p20081201-r3.ebuild,
+  glibc-2.10.1-r1.ebuild, glibc-2.11.3.ebuild, glibc-2.12.1-r3.ebuild,
+  glibc-2.12.2.ebuild, glibc-2.13-r2.ebuild, glibc-2.13-r4.ebuild,
+  glibc-2.14.ebuild, glibc-2.14.1-r2.ebuild, glibc-2.14.1-r3.ebuild,
+  glibc-2.15-r1.ebuild, glibc-2.15-r2.ebuild, glibc-2.15-r3.ebuild,
+  glibc-2.16.0.ebuild, glibc-2.17.ebuild, glibc-9999.ebuild:
+  Specify LICENSE more precisely, bug 448132.
 
   28 Dec 2012; Mike Frysinger <vapier@gentoo.org>
   +files/2.17/glibc-2.17-hardened-pie.patch, glibc-2.17.ebuild:
