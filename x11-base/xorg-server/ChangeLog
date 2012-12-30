@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.706 2012/12/30 15:12:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.707 2012/12/30 15:14:00 ago Exp $
+
+  30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xorg-server-1.12.4.ebuild:
+  Stable for ppc, wrt bug #440872
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xorg-server-1.12.4.ebuild:
   Stable for sparc, wrt bug #440872
