@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.101 2012/12/11 17:31:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.102 2012/12/30 14:29:42 ago Exp $
+
+  30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> hdf5-1.8.9-r2.ebuild:
+  Stable for sparc, wrt bug #440682
 
   11 Dec 2012; Kacper Kowalik <xarthisius@gentoo.org> hdf5-1.8.10.ebuild:
   Add explicit dependency on >=sys-devel/autoconf-2.69 wrt #446848 by Andrew
