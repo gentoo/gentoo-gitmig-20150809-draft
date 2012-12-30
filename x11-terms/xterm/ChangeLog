@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.373 2012/12/28 17:46:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.374 2012/12/30 14:56:59 ago Exp $
+
+  30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xterm-285.ebuild:
+  Stable for alpha, wrt bug #440872
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xterm-285.ebuild:
   Stable for sparc, wrt bug #440872
