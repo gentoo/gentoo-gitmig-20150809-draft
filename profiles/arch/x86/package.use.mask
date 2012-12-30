@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.109 2012/12/30 22:13:48 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.110 2012/12/30 22:38:38 tetromino Exp $
 
 # This file requires >=portage-2.1.1
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (30 Dec 2012)
-# sys-apps/biosdevname works on this arch (masked in base)
-sys-kernel/dracut -dracut_modules_biosdevname
+# sys-apps/biosdevname, systemd work on this arch (masked in base)
+sys-kernel/dracut -dracut_modules_biosdevname -dracut_modules_systemd
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (30 Dec 2012)
 # chromium, mono work on this arch (masked in base)

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.125 2012/12/30 22:13:48 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.126 2012/12/30 22:38:38 tetromino Exp $
+
+  30 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Unmask sys-kernel/dracut[dracut_modules_systemd] (masked in base).
 
   30 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Unmask sys-kernel/dracut[dracut_modules_biosdevname] (masked in base).
