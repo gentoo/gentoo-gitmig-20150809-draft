@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.1.13-r5.ebuild,v 1.2 2012/12/30 15:12:00 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.1.13-r6.ebuild,v 1.1 2012/12/30 15:12:00 swift Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.7"
@@ -10,12 +10,12 @@ RESTRICT_PYTHON_ABIS="*-jython *-pypy-* 3.*"
 
 inherit multilib python toolchain-funcs eutils
 
-EXTRAS_VER="1.22"
+EXTRAS_VER="1.23"
 SEMNG_VER="2.1.9"
 SELNX_VER="2.1.12"
 SEPOL_VER="2.1.8"
 
-IUSE="audit pam dbus"
+IUSE="audit pam dbus sesandbox"
 
 DESCRIPTION="SELinux core utilities"
 HOMEPAGE="http://userspace.selinuxproject.org"
@@ -25,7 +25,7 @@ http://dev.gentoo.org/~swift/patches/policycoreutils/patchbundle-${P}-gentoo-r4.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPS=">=sys-libs/libselinux-${SELNX_VER}[python]
 	>=sys-libs/glibc-2.4
@@ -35,6 +35,7 @@ COMMON_DEPS=">=sys-libs/libselinux-${SELNX_VER}[python]
 	>=sys-libs/libsepol-${SEPOL_VER}
 	sys-devel/gettext
 	dev-python/ipy
+	sesandbox? ( dev-libs/libcgroup )
 	dbus? (
 		sys-apps/dbus
 		dev-libs/dbus-glib
@@ -84,6 +85,7 @@ src_compile() {
 	use audit && use_audit="y";
 	use pam && use_pam="y";
 	use dbus && use_dbus="y";
+	use sesandbox && use_sesandbox="y";
 
 	python_copy_sources semanage sandbox
 	building() {
@@ -104,6 +106,7 @@ src_install() {
 	use audit && use_audit="y";
 	use pam && use_pam="y";
 	use dbus && use_dbus="y";
+	use sesandbox && use_sesandbox="y";
 
 	# Python scripts are present in many places. There are no extension modules.
 	installation() {
