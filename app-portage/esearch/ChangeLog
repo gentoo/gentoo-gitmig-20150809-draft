@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/esearch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.109 2012/12/23 19:09:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.110 2012/12/30 14:58:20 ago Exp $
+
+  30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> esearch-1.3.ebuild:
+  Stable for alpha, wrt bug #446834
 
   23 Dec 2012; Markus Meier <maekke@gentoo.org> esearch-1.3.ebuild:
   arm stable, bug #446834
