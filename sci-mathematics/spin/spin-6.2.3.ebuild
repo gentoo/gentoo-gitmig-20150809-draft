@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spin/spin-6.1.0.ebuild,v 1.1 2011/05/05 11:16:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spin/spin-6.2.3.ebuild,v 1.1 2012/12/30 18:30:00 phajdan.jr Exp $
 
-EAPI="2"
+EAPI="5"
 
-inherit eutils versionator
+inherit eutils toolchain-funcs versionator
 
 MY_PV=$(replace_all_version_separators '')
 MY_P="${PN}${MY_PV}"
@@ -29,19 +29,20 @@ RDEPEND="sys-devel/gcc
 S="${WORKDIR}/Spin/Src${PV}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-6.0.1-makefile.patch"
+	epatch "${FILESDIR}/${PN}-6.2.1-makefile.patch"
 }
 
 src_compile() {
-	emake -j1 || die
+	tc-export CC
+	default
 }
 
 src_install() {
-	dobin spin || die
-	doman ../Man/spin.1 || die
-	dodoc ../Doc/* || die
+	dobin spin
+	doman ../Man/spin.1
+	dodoc ../Doc/*
 	if use tk; then
-		newbin "${WORKDIR}/Spin/iSpin/ispin.tcl" ispin || die
+		newbin "${WORKDIR}/Spin/iSpin/ispin.tcl" ispin
 		make_desktop_entry ispin
 	fi
 }
