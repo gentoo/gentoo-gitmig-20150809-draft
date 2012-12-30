@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.91.5-r2.ebuild,v 1.1 2012/12/17 08:20:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.91.6.ebuild,v 1.1 2012/12/30 00:07:33 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit eutils gnome2 python-single-r1
+inherit gnome2 python-single-r1
 
 DESCRIPTION="An enhanced gettext po file editor for GNOME"
 HOMEPAGE="http://gtranslator.sourceforge.net/"
@@ -42,15 +42,12 @@ RDEPEND="${COMMON_DEPEND}
 		dev-python/pygobject:3[${PYTHON_USEDEP}]
 		gnome-extra/gucharmap:2.90[introspection] )"
 DEPEND="${COMMON_DEPEND}
-	app-text/docbook-xml-dtd:4.1.2
-	app-text/gnome-doc-utils
-	>=app-text/scrollkeeper-0.1.4
 	>=dev-util/gtk-doc-am-1
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
 "
-# eautoreconf requires gnome-base/gnome-common
+# eautoreconf requires gnome-base/gnome-common, app-text/yelp-tools
 
 pkg_setup() {
 	use gnome && python-single-r1_pkg_setup
@@ -62,10 +59,8 @@ src_prepare() {
 		--disable-static
 		$(use_with gnome dictionary)
 		$(use_enable gnome introspection)
-		$(use_with spell gtkspell3)"
-
-	# in 2.91.6
-	epatch "${FILESDIR}/${P}-gdl-3.6-"{1,2,3}.patch
+		$(use_with spell gtkspell3)
+		ITSTOOL=$(type -P true)"
 
 	gnome2_src_prepare
 
