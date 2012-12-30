@@ -1,10 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.426 2012/12/29 20:26:28 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.427 2012/12/30 21:53:02 tetromino Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (30 Dec 2012)
+# chromium and mono are keyworded only on a few arches
+gnome-extra/zeitgeist-datasources chromium tomboy
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
 # Incompatible with evolution-data-server-3.6, blocks upgrade to gnome-3.6
