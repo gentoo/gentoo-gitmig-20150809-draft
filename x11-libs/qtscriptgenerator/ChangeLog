@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qtscriptgenerator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/ChangeLog,v 1.26 2012/06/07 21:24:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/ChangeLog,v 1.27 2012/12/30 14:04:37 kensington Exp $
+
+  30 Dec 2012; Michael Palimaka <kensington@gentoo.org>
+  +files/qtscriptgenerator-0.2.0-arm.patch, qtscriptgenerator-0.2.0.ebuild:
+  Add patch to from OpenMamba to fix build on arm, wrt bug #448136.
 
   07 Jun 2012; Johannes Huber <johu@gentoo.org>
   -files/qtscriptgenerator-0.1.0-qt48.patch,
@@ -118,4 +122,3 @@
   +metadata.xml, +qtscriptgenerator-0.1.0.ebuild:
   Initial import to the tree of qtscriptgenerator from the kde-testing
   overlay. Thanks to hwoarang and reavertm for their work on the ebuild.
-

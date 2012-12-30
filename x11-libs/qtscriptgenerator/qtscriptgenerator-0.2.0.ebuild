@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.2.0.ebuild,v 1.4 2012/06/07 21:19:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.2.0.ebuild,v 1.5 2012/12/30 14:04:37 kensington Exp $
 
 EAPI=4
 
 MY_PN="${PN}-src"
 MY_P="${MY_PN}-${PV}"
 
-inherit multilib qt4-r2
+inherit eutils multilib qt4-r2
 
 DESCRIPTION="Tool for generating Qt bindings for Qt Script"
 HOMEPAGE="http://code.google.com/p/qtscriptgenerator/"
@@ -43,6 +43,8 @@ src_prepare() {
 	# remove phonon
 	sed -i "/typesystem_phonon.xml/d" generator/generator.qrc || die "sed failed"
 	sed -i "/qtscript_phonon/d" qtbindings/qtbindings.pro || die "sed failed"
+
+	use arm && epatch "${FILESDIR}"/${P}-arm.patch
 
 	qt4-r2_src_prepare
 }
