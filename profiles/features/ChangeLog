@@ -1,59 +1,62 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.57 2012/12/30 16:14:57 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.58 2012/12/30 19:43:11 swift Exp $
 
-  30 Dec 2012; <swift@gentoo.org> selinux/package.mask:
+  30 Dec 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
+  Adding entry for selinux-googletalk
+
+  30 Dec 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Adding selinux-openrc
 
   27 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> 64bit-native/package.mask,
   64bit-native/package.use.mask:
   Remove obsolete masks, wrt bug #444181
 
-  13 Dec 2012; <swift@gentoo.org> selinux/package.mask:
+  13 Dec 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Unmasking selinux-at package for SELinux
 
-  04 Dec 2012; <swift@gentoo.org> selinux/package.mask:
+  04 Dec 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Prepare for selinux-dirsrv package
 
-  18 Nov 2012; <swift@gentoo.org> selinux/package.mask:
+  18 Nov 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Remove mask towards very old kernel sources
 
-  18 Nov 2012; <swift@gentoo.org> selinux/package.mask:
+  18 Nov 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Preparing for selinux-makewhatis package
 
-  18 Nov 2012; <swift@gentoo.org> selinux/package.mask:
+  18 Nov 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Preparing for new selinux-logsentry package
 
-  01 Nov 2012; <swift@gentoo.org> selinux/package.mask:
+  01 Nov 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Adding unmask for selinux-dbadm package
 
-  29 Sep 2012; <swift@gentoo.org> selinux/package.mask:
+  29 Sep 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Adding SELinux rtorrent policy package
 
-  22 Aug 2012; <swift@gentoo.org> selinux/package.mask:
+  22 Aug 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Adding SELinux vdagent policy package
 
-  22 Aug 2012; <swift@gentoo.org> selinux/package.mask:
+  22 Aug 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Unmasking SELinux device kit policy
 
-  08 Aug 2012; <swift@gentoo.org> selinux/package.use.force,
+  08 Aug 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.use.force,
   selinux/package.use.mask:
   Add back python2 force on portage for SELinux, see bug #430488
 
-  01 Aug 2012; <swift@gentoo.org> selinux/package.use.force,
+  01 Aug 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.use.force,
   selinux/package.use.mask:
   Remove python USE flag mask/force for SELinux as we now support Python 3
 
-  28 Jul 2012; <swift@gentoo.org> selinux/package.mask:
+  28 Jul 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Unmasking SELinux flash module
 
-  22 Jul 2012; <swift@gentoo.org> selinux/package.mask:
+  22 Jul 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Unmasking SELinux chromium policy package
 
-  21 Jul 2012; <swift@gentoo.org> selinux/package.mask:
+  21 Jul 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Adding unmask for new nslcd selinux policy package
 
-  12 Jul 2012; <swift@gentoo.org> selinux/package.mask:
+  12 Jul 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Unmask selinux-phpfpm (new selinux policy module)
 
   06 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
@@ -65,23 +68,23 @@
   +64bit-native/package.use.force:
   Allow win64-only wine on amd64 with features/64bit-native (bug #351436).
 
-  20 Jun 2012; <swift@gentoo.org> selinux/packages:
+  20 Jun 2012; Sven Vermeulen <swift@gentoo.org> selinux/packages:
   Remove duplicate system dependencies, cleaning to only contain
   SELinux-specific ones. See #414785
 
-  18 May 2012; <swift@gentoo.org> selinux/profile.bashrc:
+  18 May 2012; Sven Vermeulen <swift@gentoo.org> selinux/profile.bashrc:
   Adding /sys/fs/selinux to SANDBOX_WRITE for SELinux profiles
 
-  16 May 2012; <swift@gentoo.org> selinux/package.mask:
+  16 May 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Removing unmask for packages slated to be removed (cfr #415729)
 
   28 Apr 2012; Justin Lecher <jlec@gentoo.org> 64bit-native/package.mask:
   Remove mask on app-text/bibus, noreason for that, #408247
 
-  26 Mar 2012; <swift@gentoo.org> selinux/package.mask:
+  26 Mar 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Unmasking selinux-sssd package for SELinux systems
 
-  26 Feb 2012; <swift@gentoo.org> selinux/package.mask:
+  26 Feb 2012; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Unmask masked new selinux policy packages
 
   11 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org>

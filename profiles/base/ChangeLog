@@ -1,8 +1,11 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.484 2012/12/30 16:14:57 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.485 2012/12/30 19:43:11 swift Exp $
 
-  30 Dec 2012; <swift@gentoo.org> package.mask:
+  30 Dec 2012; Sven Vermeulen <swift@gentoo.org> package.mask:
+  Adding entry for selinux-googletalk
+
+  30 Dec 2012; Sven Vermeulen <swift@gentoo.org> package.mask:
   Adding mask for selinux-openrc
 
   29 Dec 2012; Davide Pesavento <pesa@gentoo.org> package.use.mask:
@@ -20,7 +23,7 @@
   26 Dec 2012; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
   masked mkl for sci-chemistry/gromacs
 
-  25 Dec 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  25 Dec 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   Update mesa wayland mask for new stabilization target.
 
@@ -68,7 +71,7 @@
   24 Nov 2012; Mike Gilbert <floppym@gentoo.org> use.mask:
   Add masks for python_single_target values.
 
-  24 Nov 2012; Michał Górny <mgorny@gentoo.org> make.defaults:
+  24 Nov 2012; MichaÅ GÃ³rny <mgorny@gentoo.org> make.defaults:
   Introduce PYTHON_SINGLE_TARGET for Python packages not supporting multiple
   Python implementations.
 
@@ -90,11 +93,11 @@
   11 Nov 2012; Mike Gilbert <floppym@gentoo.org> package.use.mask:
   Mask test use flag for net-misc/freerdp.
 
-  06 Nov 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  06 Nov 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   Mask glamor for xf86-video-ati too.
 
-  04 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.use.mask:
+  04 Nov 2012; Diego E. PettenÃ² <flameeyes@gentoo.org> package.use.mask:
   Mask dane USE flag for net-libs/gnutls.
 
   01 Nov 2012; Alexis Ballier <aballier@gentoo.org> package.use.mask:
@@ -107,11 +110,11 @@
   30 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Mask USE="systemd" for sys-power/upower because of stabilization.
 
-  29 Oct 2012; Michał Górny <mgorny@gentoo.org> package.use.force:
+  29 Oct 2012; MichaÅ GÃ³rny <mgorny@gentoo.org> package.use.force:
   Remove traces of pypy1.7, no longer in the tree and not supported by the
   eclasses.
 
-  29 Oct 2012; Michał Górny <mgorny@gentoo.org> package.use.force:
+  29 Oct 2012; MichaÅ GÃ³rny <mgorny@gentoo.org> package.use.force:
   Enable python3.3 for python-exec.
 
   22 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
@@ -183,7 +186,7 @@
   09 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   GNOME 3.4 is unmasked
 
-  02 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  02 Sep 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   Mask wayland for one more version of mesa so it can go stable, bug #432400.
 
@@ -202,11 +205,11 @@
   28 Jul 2012; <swift@gentoo.org> package.mask:
   Adding mask for SELinux flash policy
 
-  27 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  27 Jul 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use:
   Add xorg to default flags for x11-base/xorg-server, sort newest first.
 
-  26 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  26 Jul 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   Mask osmesa flag for mesa-8.1_rc1_pre20120724
 
@@ -231,7 +234,7 @@
   18 Jul 2012; Michael Weber <xmw@gentoo.org> package.use.mask:
   www-client/netsurf: mask problematic use flags for now
 
-  16 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  16 Jul 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   Update glamor mask to only apply to stable xf86-video-intel.
 
@@ -249,7 +252,7 @@
   Add VOICEMAIL_STORAGE to USE_EXPAND for net-misc/asterisk; approved by Ian
   "axs" Stakenvicius on gentoo-dev.
 
-  19 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  19 Jun 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   mask wayland flag for stable mesa, #419473
 
@@ -316,11 +319,11 @@
   07 May 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Mask deprecated xulrunner support for =media-video/vlc-1.1* wrt #407567
 
-  02 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  02 May 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   Mask qt4 flag for <cairo-1.12
 
-  01 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  01 May 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   Mask xf86-video-intel glamor flag.
 
@@ -351,7 +354,7 @@
   11 Apr 2012; Sebastian Pipping <sping@gentoo.org> package.use.mask:
   Mask >=media-libs/babl-0.1.8[introspection] and >=media-libs/gegl-0.2[introspection]
 
-  11 Apr 2012; Michał Górny <mgorny@gentoo.org> package.use.mask:
+  11 Apr 2012; MichaÅ GÃ³rny <mgorny@gentoo.org> package.use.mask:
   Mask USE=jit on libzpaq for non-x86/amd64.
 
   08 Apr 2012; Alexis Ballier <aballier@gentoo.org> package.use.mask:
@@ -363,7 +366,7 @@
   31 Mar 2012; Davide Pesavento <pesa@gentoo.org> package.use.mask:
   Update mask of c++0x and qpa USE flags to include Qt 4.8.1.
 
-  29 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
+  29 Mar 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org> use.mask:
   Mask video_cards_omap as it is not useful on most arches.
 
   28 Mar 2012; Arun Raghavan <ford_prefect@gentoo.org> package.use.mask:
@@ -383,11 +386,11 @@
   25 Mar 2012; Krzysztof Pawlik <nelchael@gentoo.org> make.defaults:
   Add PYTHON_TARGETS to USE_EXPAND.
 
-  25 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  25 Mar 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   Fix cairo mask.
 
-  24 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  24 Mar 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   Allow USE="openvg" for latest cairo release.
 
@@ -425,11 +428,11 @@
   26 Feb 2012; <swift@gentoo.org> package.mask:
   Mask out new selinux policy packages
 
-  25 Feb 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  25 Feb 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   Mask directfb for gnash.
 
-  24 Feb 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  24 Feb 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   Unmask lirc on most recent gnash
 
@@ -693,7 +696,7 @@
   Drop unmask of USE="hal" for kde-base/solid because KDE 4.6 is now stable and
   has udev support.
 
-  09 May 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  09 May 2011; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask, use.mask:
   Unmask video_cards_nouveau, bug #364027.
 
@@ -735,7 +738,7 @@
   20 Apr 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
   Remove cron and libc old-style virtuals, bugs 360109 and 359001.
 
-  18 Apr 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  18 Apr 2011; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   Explicitly allow video_cards_nouveau for libdrm until bug #364027 is
   fixed.
@@ -755,7 +758,7 @@
   12 Apr 2011; Mart Raudsepp <leio@gentoo.org> package.use.mask:
   Mask orc USE flag on gst-plugins-bad (unmasked only on supported arches).
 
-  10 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> package.use:
+  10 Apr 2011; Diego E. PettenÃ² <flameeyes@gentoo.org> package.use:
   Don't let sudo ldap support enabled by default.
 
   09 Apr 2011; Ulrich Mueller <ulm@gentoo.org> packages, virtuals:
@@ -779,14 +782,14 @@
   02 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> virtuals:
   Remove virtual/libpcap wrt #358835.
 
-  30 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  30 Mar 2011; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   use.mask:
   Mask video_cards_qxl
 
   30 Mar 2011; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   bda useflag on vlc is gone, no need to mask it
 
-  29 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.use.mask:
+  29 Mar 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> package.use.mask:
   Drop mesa gallium mask that is obsolete.
 
   29 Mar 2011; Andrey Grozin <grozin@gentoo.org> package.use.mask:
@@ -892,7 +895,7 @@
   16 Feb 2011; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   useflag pda for vlc has been dropped, remove unneeded mask entry
 
-  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  13 Feb 2011; RaÃºl Porcel <armin76@gentoo.org> package.use.mask:
   P.use.mask media-video/mplayer bluray again until devs know how to use
   repoman...
 
@@ -921,21 +924,21 @@
   17 Dec 2010; Ulrich Mueller <ulm@gentoo.org> virtuals:
   Remove old-style virtual/commonlisp.
 
-  08 Dec 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
+  08 Dec 2010; RaÃºl Porcel <armin76@gentoo.org> use.mask:
   Use.mask omapfb
 
-  06 Dec 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  06 Dec 2010; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   Mask x11-base/xorg-server doc until #323647 is resolved
 
-  02 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.use.mask:
+  02 Dec 2010; Diego E. PettenÃ² <flameeyes@gentoo.org> package.use.mask:
   Mask jack USE flag for audacious-plugins so that we can drop from stable the
   broken bio2jack ebuilds.
 
   28 Nov 2010; Robin H. Johnson <robbat2@gentoo.org> package.use.mask:
   Bug #344885: Upstream has broken USE=debug for 5.1 series >=5.1.51
 
-  28 Nov 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  28 Nov 2010; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   Mask mesa's llvm flag, bug #320221
 
@@ -958,10 +961,10 @@
   10 Nov 2010; Andrey Grozin <grozin@gentoo.org> package.use.mask:
   Unmask qt4 USE flag for app-office/texmacs
 
-  07 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> package.use.mask:
+  07 Nov 2010; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> package.use.mask:
   Mask openvg use on cairo
 
-  07 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> package.use.mask:
+  07 Nov 2010; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> package.use.mask:
   Mask bluray useflag on mplayer snapshots
 
   07 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
@@ -983,7 +986,7 @@
   make.defaults:
   Added COLLECTD_PLUGINS to USE_EXPAND, defined a default list of plugins
 
-  27 Sep 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  27 Sep 2010; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   Enable gallium for mesa-7.9_rc users
 
@@ -1019,7 +1022,7 @@
   23 Jul 2010; Peter Volkov <pva@gentoo.org> package.use.mask:
   Unmasked mod_srl USE flag for net-im/ejabberd: it workd now, thank NN
 
-  14 Jul 2010; Benedikt Böhm <hollow@gentoo.org> make.defaults:
+  14 Jul 2010; Benedikt BÃ¶hm <hollow@gentoo.org> make.defaults:
   fix #328215
 
   13 Jul 2010; Markus Duft <mduft@gentoo.org> use.mask:
@@ -1082,11 +1085,11 @@
   05 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Unmask USE bluetooth for app-pda/pilot-link wrt #249889 by Jesse Adelman.
 
-  12 May 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  12 May 2010; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   unmask dev-libs/udis86 test after adding patch to make yasm optional
 
-  10 May 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  10 May 2010; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   package.use.mask dev-libs/udis86 test
 
@@ -1106,7 +1109,7 @@
   Add XTABLES_ADDONS as discussed in -dev on 18.01.2010 (but dropped
   _MODULES part to make it shorter).
 
-  13 Apr 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  13 Apr 2010; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
   package.use.mask:
   mask video_cards_nouveau
 
@@ -1120,24 +1123,24 @@
   07 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> use.mask:
   Mask x86_* flags sse3, sse4, sse4a, and sse5.
 
-  07 Mar 2010; Benedikt Böhm <hollow@gentoo.org> make.defaults:
+  07 Mar 2010; Benedikt BÃ¶hm <hollow@gentoo.org> make.defaults:
   add NGINX_MODULES_HTTP and NGINX_MODULES_MAIL to USE_EXPAND
 
   20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> use.mask:
   Mask sane_backends_qcam here for ioperm/portaccess and unmask only on
   amd64/x86 for now.
 
-  19 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.use.force:
+  19 Feb 2010; Diego E. PettenÃ² <flameeyes@gentoo.org> package.use.force:
   Force jruby for duby as well.
 
-  16 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.use.force:
+  16 Feb 2010; Diego E. PettenÃ² <flameeyes@gentoo.org> package.use.force:
   Add bitescript to the list of forced packages.
 
   14 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> use.mask:
   Mask SANE_BACKENDS="canon_pp hpsj5s mustek_pp" here because they are
   amd64/x86 only.
 
-  28 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.use.force:
+  28 Jan 2010; Diego E. PettenÃ² <flameeyes@gentoo.org> package.use.force:
   Add jruby-debug-base to the list of forced gems.
 
   24 Jan 2010; Zac Medico <zmedico@gentoo.org> package.use.mask:
@@ -1242,7 +1245,7 @@
   04 Oct 2009; Christian Faulhammer <fauli@gentoo.org> package.use.mask:
   unmask lirc_devices_iguanaIR
 
-  23 Sep 2009; Jean-Noël Rivasseau <elvanor@gentoo.org> package.use.mask:
+  23 Sep 2009; Jean-NoÃ«l Rivasseau <elvanor@gentoo.org> package.use.mask:
   X use flag only for amd64/x86, bug 285951.
 
   21 Sep 2009; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
@@ -1253,7 +1256,7 @@
   wrobel is currently away, package needs a bump for security bug 285052 and
   I can't generate the patch.
 
-  16 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org> package.use.mask:
+  16 Sep 2009; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> package.use.mask:
   Unmask policykit useflag on pulseaudio. Per irc request. Since the reason
   for the mask is long gone.
 
@@ -1380,13 +1383,13 @@
   02 Dec 2008; Steve Dibb <beandog@gentoo.org> package.use.mask:
   Mask dvdnav use flag on mplayer
 
-  09 Nov 2008; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  09 Nov 2008; RaÃºl Porcel <armin76@gentoo.org> package.use.mask:
   Fix masking of mplayer
 
   27 Oct 2008; Mike Frysinger <vapier@gentoo.org> use.mask:
   Mask lilo by default since it is x86/am64 only.
 
-  05 Oct 2008; Harald van Dĳk <truedfx@gentoo.org> package.use.mask:
+  05 Oct 2008; Harald van DÄ³k <truedfx@gentoo.org> package.use.mask:
   Mask tcl flag on nvi-1.81.6-r*, not only 1.81.6
 
   30 Sep 2008; Mart Raudsepp <leio@gentoo.org> package.use.mask:
@@ -1405,7 +1408,7 @@
   10 Sep 2008; Bernard Cafarelli <voyageur@gentoo.org> virtuals:
   Remove entry for old-style gnustep-back virtual
 
-  31 Aug 2008; Alin Năstac <mrness@gentoo.org> package.use:
+  31 Aug 2008; Alin NÄstac <mrness@gentoo.org> package.use:
   Add udpfromto flag for net-dialup/freeradius (#235688).
 
   24 Aug 2008; Peter Alfredsen <loki_val@gentoo.org> package.use.mask:
@@ -1421,7 +1424,7 @@
   16 Aug 2008; Robert Buchholz <rbu@gentoo.org> package.use.mask:
   use-masking tls for kaa-base
 
-  02 Aug 2008; Petteri Räty <betelgeuse@gentoo.org> make.defaults:
+  02 Aug 2008; Petteri RÃ¤ty <betelgeuse@gentoo.org> make.defaults:
   Add mmap_emul introduced in 1.0.17 to ALSA_PCM_PLUGINS.
 
   30 Jul 2008; Markus Ullmann <jokey@gentoo.org> package.use.mask:
@@ -1452,10 +1455,10 @@
   Added x11-misc/google-gadgets qt4 to package.use.mask. qt-4.4 required is
   package.masked.
 
-  06 Jun 2008; Rémi Cardona <remi@gentoo.org> package.mask:
+  06 Jun 2008; RÃ©mi Cardona <remi@gentoo.org> package.mask:
   pkgmove to gnome-base/gnome-control-center
 
-  30 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org> use.mask:
+  30 Apr 2008; SÃ©bastien Fabbro <bicatali@gentoo.org> use.mask:
   Removed masking of icc and ifc flags (now only local flags). Removed
   inexistent icc-pgo flags
 
@@ -1478,10 +1481,10 @@
   02 Mar 2008; Christian Faulhammer <opfer@gentoo.org> package.use.mask:
   USE=libpaludis is very experimental
 
-  14 Feb 2008; Raúl Porcel <armin76@gentoo.org> virtuals:
+  14 Feb 2008; RaÃºl Porcel <armin76@gentoo.org> virtuals:
   Remove useless virtual/bittorrent
 
-  29 Jan 2008; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  29 Jan 2008; RaÃºl Porcel <armin76@gentoo.org> package.use.mask:
   Move bluetooth package.use.mask for app-pda/pilot-link from the amd64
   profile, since it affects all the arches
 
@@ -1489,7 +1492,7 @@
   mask bluetooth for a stable pulseaudio version, so stable users are not
   bothered
 
-  10 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org> use.mask:
+  10 Jan 2008; SÃ©bastien Fabbro <bicatali@gentoo.org> use.mask:
   Removed cern from use.mask (has been mark stable sparc,x86 and amd64)
 
   27 Dec 2007; Christian Hoffmann <hoffie@gentoo.org> package.use.mask:
@@ -1501,10 +1504,10 @@
   13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> virtuals:
   Remove old-style virtual/ghc as it is no longer used.
 
-  28 Nov 2007; Benedikt Böhm <hollow@gentoo.org> make.defaults:
+  28 Nov 2007; Benedikt BÃ¶hm <hollow@gentoo.org> make.defaults:
   Add APACHE2_MODULES and APACHE2_MPMS to USE_EXPAND
 
-  21 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org> virtuals:
+  21 Nov 2007; SÃ©bastien Fabbro <bicatali@gentoo.org> virtuals:
   Removed virtual/lapack, now new style
 
   05 Nov 2007; Duncan Coutts <dcoutts@gentoo.org> virtuals:
@@ -1513,7 +1516,7 @@
   10 Oct 2007; Christian Faulhammer <opfer@gentoo.org> virtuals:
   remove virtual/editor, we have a new-style virtual now
 
-  09 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> virtuals:
+  09 Oct 2007; SÃ©bastien Fabbro <bicatali@gentoo.org> virtuals:
   removed virtual/blas (now new style), virtual/cblas (which never existed and
   now is new style) and replaced default lapack for lapack-reference
 
@@ -1527,7 +1530,7 @@
   29 Aug 2007; Robert Buchholz <rbu@gentoo.org> package.use.mask:
   Masking pptp plugin for knetworkmanager
 
-  24 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org> use.mask:
+  24 Aug 2007; SÃ©bastien Fabbro <bicatali@gentoo.org> use.mask:
   Mask cern in use.mask
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; use.defaults:
@@ -1547,7 +1550,7 @@
   We don't need ip28 and ip32r10k enabled anywhere, so mask it in base/ and
   unmask it in default-linux/mips.
 
-  27 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> package.use.mask:
+  27 Apr 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> package.use.mask:
   package.use.mask nsplugin for blackdown-jdk and blackdown-jre for security
   bug #161835.
 
@@ -1564,7 +1567,7 @@
   Removed udev remnants using a patch from Arfrever Frehtes Taifersar Arahesis
   <FFTA@WP.PL> and closing bug #166917.
 
-  29 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> make.defaults:
+  29 Jan 2007; Diego PettenÃ² <flameeyes@gentoo.org> make.defaults:
   Add midi useflag by default to cope with newer alsa versions.
 
   27 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org> make.defaults:
