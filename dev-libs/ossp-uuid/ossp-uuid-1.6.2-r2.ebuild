@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ossp-uuid-1.6.2-r2.ebuild,v 1.2 2012/08/21 04:09:52 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ossp-uuid-1.6.2-r2.ebuild,v 1.3 2012/12/30 16:57:46 ulm Exp $
 
 EAPI="4"
 
@@ -18,7 +18,8 @@ inherit eutils multilib php-ext-source-r2
 DESCRIPTION="An ISO-C:1999 API and corresponding CLI for the generation of DCE 1.1, ISO/IEC 11578:1996 and RFC 4122 compliant UUID."
 HOMEPAGE="http://www.ossp.org/pkg/lib/uuid/"
 SRC_URI="ftp://ftp.ossp.org/pkg/lib/uuid/${MY_P}.tar.gz"
-LICENSE="as-is"
+
+LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
 IUSE="+cxx perl php static-libs"
@@ -37,7 +38,7 @@ src_prepare() {
 	if use php; then
 		local slot
 		for slot in $(php_get_slots); do
-	        php_init_slot_env ${slot}
+			php_init_slot_env ${slot}
 			epatch \
 				"${FILESDIR}/${P}-gentoo-php.patch" \
 				"${FILESDIR}/${P}-php.patch"
