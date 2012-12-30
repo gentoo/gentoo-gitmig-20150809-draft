@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-9999.ebuild,v 1.13 2012/12/27 18:47:52 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-9999.ebuild,v 1.14 2012/12/30 15:46:31 djc Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -22,7 +22,8 @@ IUSE="bugzilla emacs gpg test tk zsh-completion"
 RDEPEND="bugzilla? ( dev-python/mysql-python )
 	gpg? ( app-crypt/gnupg )
 	tk? ( dev-lang/tk )
-	zsh-completion? ( app-shells/zsh )"
+	zsh-completion? ( app-shells/zsh )
+	app-misc/ca-certificates"
 DEPEND="emacs? ( virtual/emacs )
 	test? ( app-arch/unzip
 		dev-python/pygments )
@@ -36,6 +37,14 @@ PYTHON_CFLAGS=(
 PYTHON_MODNAME="${PN} hgext"
 SITEFILE="70${PN}-gentoo.el"
 
+src_prepare() {
+	distutils_src_prepare
+
+	# fix up logic that won't work in Gentoo Prefix (also won't outside in
+	# certain cases), bug #362891
+	sed -i -e 's:xcodebuild:nocodebuild:' setup.py || die
+}
+
 src_compile() {
 	distutils_src_compile
 
@@ -44,12 +53,13 @@ src_compile() {
 		elisp-compile mercurial.el || die "elisp-compile failed!"
 	fi
 
-	rm -rf contrib/{win32,macosx}
+	rm -rf contrib/{win32,macosx} || die
 	make doc || die
 }
 
 src_install() {
 	distutils_src_install
+	python_convert_shebangs 2 contrib/hg-ssh
 
 	newbashcomp contrib/bash_completion ${PN} || die
 
@@ -58,17 +68,17 @@ src_install() {
 		newins contrib/zsh_completion _hg || die
 	fi
 
-	rm -f doc/*.?.txt
-	dodoc CONTRIBUTORS README doc/*.txt || die
+	rm -f doc/*.?.txt || die
+	dodoc CONTRIBUTORS PKG-INFO README doc/*.txt || die
 	cp hgweb*.cgi "${ED}"/usr/share/doc/${PF}/ || die
 
 	dobin hgeditor || die
 	dobin contrib/hgk || die
 	dobin contrib/hg-ssh || die
 
-	rm -f contrib/hgk contrib/hg-ssh
+	rm -f contrib/hgk contrib/hg-ssh || die
 
-	rm -f contrib/bash_completion
+	rm -f contrib/bash_completion || die
 	cp -r contrib "${ED}"/usr/share/doc/${PF}/ || die
 	doman doc/*.? || die
 
@@ -81,34 +91,37 @@ EOF
 		elisp-install ${PN} contrib/mercurial.el* || die "elisp-install failed!"
 		elisp-site-file-install "${FILESDIR}"/${SITEFILE}
 	fi
+
+	insinto /etc/mercurial/hgrc.d
+	doins "${FILESDIR}/cacerts.rc"
 }
 
 src_test() {
 	cd "${S}/tests/" || die
-	rm -rf *svn*				# Subversion tests fail with 1.5
-	rm -f test-archive			# Fails due to verbose tar output changes
-	rm -f test-convert-baz*		# GNU Arch baz
-	rm -f test-convert-cvs*		# CVS
-	rm -f test-convert-darcs*	# Darcs
-	rm -f test-convert-git*		# git
-	rm -f test-convert-mtn*		# monotone
-	rm -f test-convert-tla*		# GNU Arch tla
-	rm -f test-doctest*			# doctest always fails with python 2.5.x
+	rm -rf *svn* || die					# Subversion tests fail with 1.5
+	rm -f test-archive || die			# Fails due to verbose tar output changes
+	rm -f test-convert-baz* || die		# GNU Arch baz
+	rm -f test-convert-cvs* || die		# CVS
+	rm -f test-convert-darcs* || die	# Darcs
+	rm -f test-convert-git* || die		# git
+	rm -f test-convert-mtn* || die		# monotone
+	rm -f test-convert-tla* || die		# GNU Arch tla
+	rm -f test-doctest* || die			# doctest always fails with python 2.5.x
 	if [[ ${EUID} -eq 0 ]]; then
 		einfo "Removing tests which require user privileges to succeed"
-		rm -f test-command-template	# Test is broken when run as root
-		rm -f test-convert			# Test is broken when run as root
-		rm -f test-lock-badness		# Test is broken when run as root
-		rm -f test-permissions		# Test is broken when run as root
-		rm -f test-pull-permission	# Test is broken when run as root
-		rm -f test-clone-failure
-		rm -f test-journal-exists
-		rm -f test-repair-strip
+		rm -f test-command-template || die	# Test is broken when run as root
+		rm -f test-convert || die			# Test is broken when run as root
+		rm -f test-lock-badness || die		# Test is broken when run as root
+		rm -f test-permissions || die		# Test is broken when run as root
+		rm -f test-pull-permission || die	# Test is broken when run as root
+		rm -f test-clone-failure || die
+		rm -f test-journal-exists || die
+		rm -f test-repair-strip || die
 	fi
 
 	testing() {
 		local testdir="${T}/tests-${PYTHON_ABI}"
-		rm -rf "${testdir}"
+		rm -rf "${testdir}" || die
 		"$(PYTHON)" run-tests.py --tmpdir="${testdir}"
 	}
 	python_execute_function testing

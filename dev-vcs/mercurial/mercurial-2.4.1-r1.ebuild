@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.4.1-r1.ebuild,v 1.1 2012/12/30 15:21:57 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.4.1-r1.ebuild,v 1.2 2012/12/30 15:46:31 djc Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -26,7 +26,8 @@ RDEPEND="bugzilla? ( dev-python/mysql-python )
 	app-misc/ca-certificates"
 DEPEND="emacs? ( virtual/emacs )
 	test? ( app-arch/unzip
-		dev-python/pygments )"
+		dev-python/pygments )
+	app-text/asciidoc"
 
 PYTHON_CFLAGS=(
 	"2.* + -fno-strict-aliasing"
@@ -53,6 +54,7 @@ src_compile() {
 	fi
 
 	rm -rf contrib/{win32,macosx} || die
+	make doc || die
 }
 
 src_install() {
@@ -96,19 +98,19 @@ EOF
 
 src_test() {
 	cd "${S}/tests/" || die
-	rm -rf *svn* || die			# Subversion tests fail with 1.5
-	rm -f test-archive || die		# Fails due to verbose tar output changes
+	rm -rf *svn* || die					# Subversion tests fail with 1.5
+	rm -f test-archive || die			# Fails due to verbose tar output changes
 	rm -f test-convert-baz* || die		# GNU Arch baz
 	rm -f test-convert-cvs*	|| die		# CVS
 	rm -f test-convert-darcs* || die	# Darcs
 	rm -f test-convert-git* || die		# git
 	rm -f test-convert-mtn*	|| die		# monotone
 	rm -f test-convert-tla*	|| die		# GNU Arch tla
-	rm -f test-doctest* || die		# doctest always fails with python 2.5.x
+	rm -f test-doctest* || die			# doctest always fails with python 2.5.x
 	if [[ ${EUID} -eq 0 ]]; then
 		einfo "Removing tests which require user privileges to succeed"
 		rm -f test-command-template || die	# Test is broken when run as root
-		rm -f test-convert || die		# Test is broken when run as root
+		rm -f test-convert || die			# Test is broken when run as root
 		rm -f test-lock-badness	|| die		# Test is broken when run as root
 		rm -f test-permissions	|| die		# Test is broken when run as root
 		rm -f test-pull-permission || die	# Test is broken when run as root
