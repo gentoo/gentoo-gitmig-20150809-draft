@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/skinlf-6.7.ebuild,v 1.3 2011/09/25 19:45:12 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/skinlf-6.7.ebuild,v 1.4 2012/12/30 16:53:57 ulm Exp $
 
 EAPI="1"
 
@@ -13,10 +13,12 @@ MY_P="${P}-20060722"
 DESCRIPTION="Skin Look and Feel - Skinning Engine for the Swing toolkit"
 HOMEPAGE="http://${PN}.l2fprod.com/"
 SRC_URI="https://${PN}.dev.java.net/files/documents/66/37801/${MY_P}.zip"
-LICENSE="as-is"
+
+LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
 CDEPEND="dev-java/laf-plugin:0
 	dev-java/xalan"
 RDEPEND=">=virtual/jre-1.4
@@ -52,5 +54,5 @@ src_install() {
 	use examples && java-pkg_doexamples src/examples
 	use source && java-pkg_dosrc src/com src/*.java
 
-	dodoc CHANGES README LICENSE LICENSE_nanoxml || die
+	dodoc CHANGES README || die
 }
