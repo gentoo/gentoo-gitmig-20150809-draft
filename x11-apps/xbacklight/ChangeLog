@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xbacklight
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xbacklight/ChangeLog,v 1.46 2012/12/28 17:33:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xbacklight/ChangeLog,v 1.47 2012/12/30 14:42:46 ago Exp $
+
+  30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xbacklight-1.2.0.ebuild:
+  Stable for alpha, wrt bug #440872
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xbacklight-1.2.0.ebuild:
   Stable for sparc, wrt bug #440872
