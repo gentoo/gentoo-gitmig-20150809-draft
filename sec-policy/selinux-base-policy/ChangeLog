@@ -1,13 +1,13 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.119 2012/12/21 20:47:01 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.120 2012/12/30 19:25:38 swift Exp $
 
 *selinux-base-policy-2.20120725-r9 (21 Dec 2012)
 
-  21 Dec 2012; <swift@gentoo.org> +selinux-base-policy-2.20120725-r9.ebuild:
+  21 Dec 2012; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20120725-r9.ebuild:
   Bumping to revision 9
 
-  17 Dec 2012; Sven Vermeulen -selinux-base-policy-2.20120215-r13.ebuild,
+  17 Dec 2012; Sven Vermeulen <swift@gentoo.org> -selinux-base-policy-2.20120215-r13.ebuild,
   -selinux-base-policy-2.20120215-r14.ebuild,
   -selinux-base-policy-2.20120215-r15.ebuild,
   -selinux-base-policy-2.20120215-r6.ebuild,
@@ -16,60 +16,60 @@
   -selinux-base-policy-2.20120215-r9.ebuild:
   Removing older ebuilds
 
-  13 Dec 2012; Sven Vermeulen selinux-base-policy-2.20120725-r8.ebuild:
+  13 Dec 2012; Sven Vermeulen <swift@gentoo.org> selinux-base-policy-2.20120725-r8.ebuild:
   Stabilization
 
-  04 Dec 2012; <swift@gentoo.org> selinux-base-policy-9999.ebuild,
+  04 Dec 2012; Sven Vermeulen <swift@gentoo.org> selinux-base-policy-9999.ebuild,
   metadata.xml:
   Add in support for unconfined USE flag
 
 *selinux-base-policy-2.20120725-r8 (03 Dec 2012)
 
-  03 Dec 2012; Sven Vermeulen +selinux-base-policy-2.20120725-r8.ebuild:
+  03 Dec 2012; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20120725-r8.ebuild:
   Bumping to revision 8
 
 *selinux-base-policy-2.20120725-r7 (18 Nov 2012)
 
-  18 Nov 2012; <swift@gentoo.org> +selinux-base-policy-2.20120725-r7.ebuild:
+  18 Nov 2012; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20120725-r7.ebuild:
   Pushing out rev 7
 
 *selinux-base-policy-9999 (13 Oct 2012)
 
-  13 Oct 2012; <swift@gentoo.org> +selinux-base-policy-9999.ebuild:
+  13 Oct 2012; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-9999.ebuild:
   Adding live ebuild
 
-  04 Oct 2012; <swift@gentoo.org> selinux-base-policy-2.20120725-r5.ebuild:
+  04 Oct 2012; Sven Vermeulen <swift@gentoo.org> selinux-base-policy-2.20120725-r5.ebuild:
   Stabilization
 
 *selinux-base-policy-2.20120725-r5 (21 Sep 2012)
 
-  21 Sep 2012; <swift@gentoo.org> +selinux-base-policy-2.20120725-r5.ebuild:
+  21 Sep 2012; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20120725-r5.ebuild:
   Introducing policy for 2.20120725, rev5
 
-  30 Jul 2012; <swift@gentoo.org> selinux-base-policy-2.20120215-r14.ebuild:
+  30 Jul 2012; Sven Vermeulen <swift@gentoo.org> selinux-base-policy-2.20120215-r14.ebuild:
   Stabilization of revision 14 of the SELinux policy modules
 
 *selinux-base-policy-2.20120215-r15 (26 Jul 2012)
 
-  26 Jul 2012; Sven Vermeulen +selinux-base-policy-2.20120215-r15.ebuild:
+  26 Jul 2012; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20120215-r15.ebuild:
   Bump to rev15
 
 *selinux-base-policy-2.20120215-r14 (16 Jul 2012)
 
-  16 Jul 2012; <swift@gentoo.org> +selinux-base-policy-2.20120215-r14.ebuild:
+  16 Jul 2012; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20120215-r14.ebuild:
   Bumping to rev14
 
 *selinux-base-policy-2.20120215-r13 (27 Jun 2012)
 
-  27 Jun 2012; <swift@gentoo.org> +selinux-base-policy-2.20120215-r13.ebuild:
+  27 Jun 2012; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20120215-r13.ebuild:
   Bump to revision 13
 
 *selinux-base-policy-2.20120215-r9 (20 May 2012)
 
-  20 May 2012; <swift@gentoo.org> +selinux-base-policy-2.20120215-r9.ebuild:
+  20 May 2012; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20120215-r9.ebuild:
   Bumping to rev 9
 
-  13 May 2012; <swift@gentoo.org> -selinux-base-policy-2.20110726-r5.ebuild,
+  13 May 2012; Sven Vermeulen <swift@gentoo.org> -selinux-base-policy-2.20110726-r5.ebuild,
   -selinux-base-policy-2.20110726-r6.ebuild,
   -selinux-base-policy-2.20110726-r7.ebuild,
   -selinux-base-policy-2.20110726-r8.ebuild,
@@ -77,7 +77,7 @@
   -selinux-base-policy-2.20110726-r13.ebuild, metadata.xml:
   Drop unused local USE flag definitions
 
-  13 May 2012; <swift@gentoo.org> -selinux-base-policy-2.20110726-r5.ebuild,
+  13 May 2012; Sven Vermeulen <swift@gentoo.org> -selinux-base-policy-2.20110726-r5.ebuild,
   -selinux-base-policy-2.20110726-r6.ebuild,
   -selinux-base-policy-2.20110726-r7.ebuild,
   -selinux-base-policy-2.20110726-r8.ebuild,
@@ -85,12 +85,12 @@
   -selinux-base-policy-2.20110726-r13.ebuild:
   Removing deprecated ebuilds (cleanup)
 
-  29 Apr 2012; <swift@gentoo.org> selinux-base-policy-2.20120215-r7.ebuild:
+  29 Apr 2012; Sven Vermeulen <swift@gentoo.org> selinux-base-policy-2.20120215-r7.ebuild:
   Stabilize rev7
 
 *selinux-base-policy-2.20120215-r8 (26 Apr 2012)
 
-  26 Apr 2012; <swift@gentoo.org> +selinux-base-policy-2.20120215-r8.ebuild:
+  26 Apr 2012; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20120215-r8.ebuild:
   Bump to rev8, fix #411719, #411149 and #411943
 
   22 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org>
@@ -99,70 +99,70 @@
 
 *selinux-base-policy-2.20120215-r7 (22 Apr 2012)
 
-  22 Apr 2012; <swift@gentoo.org> +selinux-base-policy-2.20120215-r7.ebuild:
+  22 Apr 2012; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20120215-r7.ebuild:
   Bumping to rev 7, fixing bugs #401595, #411193 and #403293
 
   01 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org>
   selinux-base-policy-2.20120215-r6.ebuild:
   inherit goes near the top
 
-  31 Mar 2012; <swift@gentoo.org> selinux-base-policy-2.20110726-r13.ebuild:
+  31 Mar 2012; Sven Vermeulen <swift@gentoo.org> selinux-base-policy-2.20110726-r13.ebuild:
   Stabilizing
 
 *selinux-base-policy-2.20120215-r6 (31 Mar 2012)
 
-  31 Mar 2012; <swift@gentoo.org> +selinux-base-policy-2.20120215-r6.ebuild:
+  31 Mar 2012; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20120215-r6.ebuild:
   Bumping to 2.20120215 policies
 
-  23 Feb 2012; <swift@gentoo.org> selinux-base-policy-2.20110726-r11.ebuild:
+  23 Feb 2012; Sven Vermeulen <swift@gentoo.org> selinux-base-policy-2.20110726-r11.ebuild:
   Stabilizing
 
 *selinux-base-policy-2.20110726-r13 (23 Feb 2012)
 
-  23 Feb 2012; <swift@gentoo.org> +selinux-base-policy-2.20110726-r13.ebuild:
+  23 Feb 2012; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20110726-r13.ebuild:
   Adding revision 13
 
   29 Jan 2012;  <swift@gentoo.org> Manifest:
   Updating manifest
 
-  29 Jan 2012; <swift@gentoo.org> selinux-base-policy-2.20110726-r8.ebuild:
+  29 Jan 2012; Sven Vermeulen <swift@gentoo.org> selinux-base-policy-2.20110726-r8.ebuild:
   Stabilize r8 series
 
 *selinux-base-policy-2.20110726-r11 (14 Jan 2012)
 
-  14 Jan 2012; <swift@gentoo.org> +selinux-base-policy-2.20110726-r11.ebuild:
+  14 Jan 2012; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20110726-r11.ebuild:
   Bumping to rev 11
 
-  19 Dec 2011; <swift@gentoo.org> selinux-base-policy-2.20110726-r6.ebuild:
+  19 Dec 2011; Sven Vermeulen <swift@gentoo.org> selinux-base-policy-2.20110726-r6.ebuild:
   Stabilize rev6
 
 *selinux-base-policy-2.20110726-r8 (17 Dec 2011)
 
-  17 Dec 2011; <swift@gentoo.org> +selinux-base-policy-2.20110726-r8.ebuild:
+  17 Dec 2011; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20110726-r8.ebuild:
   Bumping to rev8, list of changes available at
   http://archives.gentoo.org/gentoo-hardened/msg_b11ef32142076034abd0616e373361
   da.xml
 
 *selinux-base-policy-2.20110726-r7 (04 Dec 2011)
 
-  04 Dec 2011; <swift@gentoo.org> +selinux-base-policy-2.20110726-r7.ebuild:
+  04 Dec 2011; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20110726-r7.ebuild:
   Bumping to rev 7
 
-  27 Nov 2011; <swift@gentoo.org> selinux-base-policy-2.20110726-r4.ebuild,
+  27 Nov 2011; Sven Vermeulen <swift@gentoo.org> selinux-base-policy-2.20110726-r4.ebuild,
   selinux-base-policy-2.20110726-r5.ebuild,
   selinux-base-policy-2.20110726-r6.ebuild, files/modules.conf:
   Put XDG selection (for base) in modules.conf instead of ebuild hocus-pocus
 
-  27 Nov 2011; <swift@gentoo.org> selinux-base-policy-2.20110726-r5.ebuild:
+  27 Nov 2011; Sven Vermeulen <swift@gentoo.org> selinux-base-policy-2.20110726-r5.ebuild:
   Stable on x86/amd64
 
 *selinux-base-policy-2.20110726-r6 (15 Nov 2011)
 
-  15 Nov 2011; <swift@gentoo.org> +selinux-base-policy-2.20110726-r6.ebuild:
+  15 Nov 2011; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20110726-r6.ebuild:
   Fixing #389579, #389917, #388875 and #389569. Also improves support for
   gcc-config and updates VDE patch with upstream feedback
 
-  12 Nov 2011; <swift@gentoo.org> -selinux-base-policy-2.20090730.ebuild,
+  12 Nov 2011; Sven Vermeulen <swift@gentoo.org> -selinux-base-policy-2.20090730.ebuild,
   -selinux-base-policy-2.20090814.ebuild,
   -selinux-base-policy-2.20091215.ebuild,
   -selinux-base-policy-2.20101213-r16.ebuild,
@@ -175,24 +175,24 @@
   -files/modules.conf.strict.20090730, -files/modules.conf.targeted.20090730:
   Removing old policies
 
-  23 Oct 2011; <swift@gentoo.org> selinux-base-policy-2.20110726-r4.ebuild:
+  23 Oct 2011; Sven Vermeulen <swift@gentoo.org> selinux-base-policy-2.20110726-r4.ebuild:
   Stabilization (tracker #384231)
 
 *selinux-base-policy-2.20110726-r5 (23 Oct 2011)
 
-  23 Oct 2011; <swift@gentoo.org> +selinux-base-policy-2.20110726-r5.ebuild:
+  23 Oct 2011; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20110726-r5.ebuild:
   Update patches with XDG support, clean up patches with upstream feedback,
   include asterisk fix
 
 *selinux-base-policy-2.20110726-r4 (17 Sep 2011)
 
-  17 Sep 2011; <swift@gentoo.org> +selinux-base-policy-2.20110726-r4.ebuild:
+  17 Sep 2011; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20110726-r4.ebuild:
   Update on portage and portage_fetch domains, fix puppet issues, normalize
   patches with refpolicy
 
 *selinux-base-policy-2.20110726-r3 (28 Aug 2011)
 
-  28 Aug 2011; <swift@gentoo.org> +selinux-base-policy-2.20110726-r3.ebuild:
+  28 Aug 2011; Sven Vermeulen <swift@gentoo.org> +selinux-base-policy-2.20110726-r3.ebuild:
   Introduce policy based on refpolicy 20110726
 
 *selinux-base-policy-2.20101213-r22 (07 Aug 2011)
