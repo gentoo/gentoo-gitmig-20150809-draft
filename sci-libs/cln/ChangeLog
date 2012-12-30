@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cln
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.60 2012/12/30 13:59:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.61 2012/12/30 15:10:03 ago Exp $
+
+  30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> cln-1.3.2-r1.ebuild:
+  Stable for alpha, wrt bug #446100
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> cln-1.3.2-r1.ebuild:
   Stable for sparc, wrt bug #446100
