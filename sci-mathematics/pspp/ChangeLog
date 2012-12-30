@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/pspp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.21 2012/12/10 22:29:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.22 2012/12/30 17:47:06 tomka Exp $
+
+  30 Dec 2012; Thomas Kahle <tomka@gentoo.org> pspp-0.6.2-r1.ebuild:
+  Fix doc install per bug 449312
 
   10 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> -pspp-0.6.2.ebuild,
   pspp-0.6.2-r1.ebuild:

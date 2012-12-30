@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.6.2-r1.ebuild,v 1.6 2012/12/10 22:29:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.6.2-r1.ebuild,v 1.7 2012/12/30 17:47:06 tomka Exp $
 
 EAPI=4
 inherit eutils elisp-common autotools multilib
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="doc emacs gtk ncurses nls plotutils postgres static-libs"
+IUSE="doc emacs examples gtk ncurses nls plotutils postgres static-libs"
 
 RDEPEND="
 	dev-libs/libxml2:2
@@ -68,8 +68,10 @@ src_install() {
 		insinto /usr/share/doc/${PF}
 		doins -r examples
 	fi
-	use doc && dohtml doc/pspp.html doc/pspp-dev.html && \
+	if use doc; then
+		dohtml -r doc/pspp{,dev}.html
 		dodoc doc/pspp{,-dev}.pdf
+	fi
 	if use emacs; then
 		elisp-install ${PN} *.el *.elc
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
