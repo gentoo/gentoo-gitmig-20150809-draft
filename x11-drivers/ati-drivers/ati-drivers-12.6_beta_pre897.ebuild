@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.6_beta_pre897.ebuild,v 1.10 2012/12/29 00:07:31 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.6_beta_pre897.ebuild,v 1.11 2012/12/30 17:05:35 mr_bones_ Exp $
 
 EAPI=4
 
@@ -332,7 +332,7 @@ src_prepare() {
 	epatch "${FILESDIR}/ati-drivers-vm-reserverd.patch"
 
 	# Use ACPI_DEVICE_HANDLE wrapper to make driver build on linux-3.8
-	# see https://bugs.gentoo.org/show_bug.cgi?id=448216 
+	# see https://bugs.gentoo.org/show_bug.cgi?id=448216
 	epatch "${FILESDIR}/ati-drivers-kernel-3.8-acpihandle.patch"
 
 	cd "${MODULE_DIR}"
