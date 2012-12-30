@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.442 2012/12/29 17:05:24 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.443 2012/12/30 14:41:46 ago Exp $
+
+  30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> mesa-9.0.1.ebuild:
+  Stable for alpha, wrt bug #440872
 
   29 Dec 2012; Matt Turner <mattst88@gentoo.org> metadata.xml:
   Add bindist description (bug 448932) and sync metadata.xml from x11-overlay.
