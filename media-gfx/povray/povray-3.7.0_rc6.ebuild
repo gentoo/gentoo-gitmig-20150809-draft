@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc6.ebuild,v 1.3 2012/12/22 20:34:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc6.ebuild,v 1.4 2012/12/30 16:34:56 armin76 Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ SRC_URI="http://www.povray.org/redirect/www.povray.org/beta/source/${PN}-${MY_PV
 
 LICENSE="povlegal-3.6"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~mips ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="debug mkl openexr tiff X"
 
 DEPEND="
