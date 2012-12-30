@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.212 2012/12/28 17:43:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.213 2012/12/30 14:54:22 ago Exp $
+
+  30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libdrm-2.4.40.ebuild:
+  Stable for alpha, wrt bug #440872
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libdrm-2.4.40.ebuild:
   Stable for sparc, wrt bug #440872

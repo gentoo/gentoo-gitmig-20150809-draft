@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/glamor-0.5.ebuild,v 1.8 2012/12/28 17:42:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/glamor-0.5.ebuild,v 1.9 2012/12/30 14:52:52 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit xorg-2
 DESCRIPTION="OpenGL based 2D rendering acceleration library"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
-KEYWORDS="amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="gles"
 
 RDEPEND=">=x11-base/xorg-server-1.10

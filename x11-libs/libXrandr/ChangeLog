@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXrandr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrandr/ChangeLog,v 1.96 2012/12/28 17:43:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrandr/ChangeLog,v 1.97 2012/12/30 14:53:57 ago Exp $
+
+  30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libXrandr-1.4.0.ebuild:
+  Stable for alpha, wrt bug #440872
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libXrandr-1.4.0.ebuild:
   Stable for sparc, wrt bug #440872
