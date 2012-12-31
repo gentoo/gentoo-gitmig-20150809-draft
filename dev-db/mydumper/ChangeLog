@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mydumper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mydumper/ChangeLog,v 1.3 2012/05/26 14:14:11 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mydumper/ChangeLog,v 1.4 2012/12/31 02:07:39 flameeyes Exp $
+
+*mydumper-0.5.2 (31 Dec 2012)
+
+  31 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> +mydumper-0.5.2.ebuild:
+  Version bump.
 
   26 May 2012; Christian Ruppert <idl0r@gentoo.org> mydumper-0.5.1.ebuild:
   Add ~x86 keyword
@@ -14,4 +19,3 @@
   +mydumper-0.5.1.ebuild:
   Initial import of mydumper ebuild by Pavel Stratil (who will proxy maintain
   it).
-
