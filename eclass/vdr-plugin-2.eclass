@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.15 2012/12/31 09:27:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.16 2012/12/31 18:53:47 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:
@@ -394,7 +394,7 @@ vdr-plugin-2_pkg_setup() {
 	# Plugins need to be compiled with position independent code, otherwise linking
 	# VDR against it will fail
 	if has_version ">=media-video/vdr-1.7.13"; then
-		append-cxxlags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
+		append-cxxflags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
 	fi
 
 	# Where should the plugins live in the filesystem
