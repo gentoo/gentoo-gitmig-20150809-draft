@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/nemo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nemo/ChangeLog,v 1.2 2012/12/30 02:38:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nemo/ChangeLog,v 1.3 2012/12/31 13:31:01 tetromino Exp $
+
+  31 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> nemo-1.1.2.ebuild:
+  Add missing gtk-doc build dependency (bug #449420, thanks to Tolga Dalman).
 
 *nemo-1.1.2 (30 Dec 2012)
 

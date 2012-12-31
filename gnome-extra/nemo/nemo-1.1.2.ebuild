@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nemo/nemo-1.1.2.ebuild,v 1.1 2012/12/30 02:38:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nemo/nemo-1.1.2.ebuild,v 1.2 2012/12/31 13:31:01 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -46,9 +46,10 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	x11-proto/xproto
 
+	dev-util/gtk-doc
 	gnome-base/gnome-common"
 # For eautoreconf
-#	gnome-base/gnome-common
+#	gnome-base/gnome-common, dev-util/gtk-doc (not only -am!)
 PDEPEND=">=gnome-base/gvfs-0.1.2"
 
 S="${WORKDIR}/linuxmint-nemo-7bee834"
