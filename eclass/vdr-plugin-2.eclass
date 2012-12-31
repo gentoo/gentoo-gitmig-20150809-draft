@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.14 2012/12/29 17:47:53 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.15 2012/12/31 09:27:00 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:
@@ -226,7 +226,7 @@ vdr_patchmakefile() {
 # Begin new vdr-plugin-2.eclass content
 dev_check() {
 	# A lot useful debug infos
-	# set VDR_MAINTAINER_MODE="1" in /etc/make.conf
+	# set VDR_MAINTAINER_MODE="1" in make.conf
 	if [[ -n ${VDR_MAINTAINER_MODE} ]]; then
 		eerror "\t Maintainer Info: $@"
 	fi
@@ -336,7 +336,7 @@ remove_i18n_include() {
 }
 # end new vdr-plugin-2.eclass content
 
-# we don't support included plugins from vdr source for install in this way !!!
+# ToDo: we don't support included plugins from vdr source for install in this way !!!
 # obsolet, remove it, later...
 #vdr-plugin-2_copy_source_tree() {
 #	pushd . >/dev/null
@@ -385,17 +385,17 @@ has_vdr() {
 ## exported functions
 
 vdr-plugin-2_pkg_setup() {
+	# missing ${chost}- tag
+	tc-export CC CXX
+
 	# -fPIC is needed for shared objects on some platforms (amd64 and others)
 	append-flags -fPIC
 
 	# Plugins need to be compiled with position independent code, otherwise linking
 	# VDR against it will fail
 	if has_version ">=media-video/vdr-1.7.13"; then
-		append-lfs-flags
+		append-cxxlags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
 	fi
-
-	# missing ${chost}- tag
-	tc-export CC CXX
 
 	# Where should the plugins live in the filesystem
 	if has_version ">=media-video/vdr-1.7.34"; then
@@ -445,7 +445,7 @@ vdr-plugin-2_pkg_setup() {
 	fi
 
 	einfo "Compiling against"
-	einfo "\tvdr-${VDRVERSION} [API version ${APIVERSION}]"
+	einfo "\tvdr-${VDRVERSION}} [API version ${APIVERSION}]"
 
 	if [[ -n "${VDR_LOCAL_PATCHES_DIR}" ]]; then
 		eerror "Using VDR_LOCAL_PATCHES_DIR is deprecated!"
@@ -523,8 +523,8 @@ vdr-plugin-2_src_compile() {
 	while [ "$1" ]; do
 		case "$1" in
 		copy_source)
-#			[[ -n "${VDRSOURCE_DIR}" ]] && vdr-plugin-2_copy_source_tree
-			eerror "obsoleted handling, vdr-plugin-2_copy_source_tree"
+			[[ -n "${VDRSOURCE_DIR}" ]] && vdr-plugin-2_copy_source_tree
+			dev_check "ToDo: obsoleted handling, vdr-plugin-2_copy_source_tree"
 			;;
 		compile)
 			if [[ ! -f ${WORKDIR}/.vdr-plugin_makefile_patched ]]; then
@@ -537,8 +537,9 @@ vdr-plugin-2_src_compile() {
 			fi
 			cd "${S}"
 
-
-			if has_version ">=media-video/vdr-1.7.34"; then
+			local SOFILE_STRING=$(grep SOFILE Makefile)
+			if [[ -n ${SOFILE_STRING} ]]; then
+			dev_check "compiling with new Makefile handling"
 			BUILD_TARGETS=${BUILD_TARGETS:-${VDRPLUGIN_MAKE_TARGET:-install }}
 				emake ${BUILD_PARAMS} \
 					${BUILD_TARGETS} \
@@ -547,6 +548,7 @@ vdr-plugin-2_src_compile() {
 					TMPDIR="${T}" \
 					|| die "emake failed"
 			else
+			dev_check "compiling with old Makefile handling"
 			BUILD_TARGETS=${BUILD_TARGETS:-${VDRPLUGIN_MAKE_TARGET:-all }}
 				emake ${BUILD_PARAMS} \
 					${BUILD_TARGETS} \
@@ -571,7 +573,7 @@ vdr-plugin-2_src_install() {
 		die "vdr-plugin-2_src_install not called!"
 	fi
 
-#	obsolet, remove it, later...
+#	ToDo: obsolet, remove it, later...
 #	[[ -n "${VDRSOURCE_DIR}" ]] && vdr-plugin-2_install_source_tree
 	cd "${WORKDIR}"
 
