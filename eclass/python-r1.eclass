@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.32 2012/12/27 22:56:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.33 2012/12/31 13:10:42 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -163,7 +163,7 @@ _python_set_globals() {
 _python_set_globals
 
 # @FUNCTION: python_gen_usedep
-# @USAGE: pattern [...]
+# @USAGE: <pattern> [...]
 # @DESCRIPTION:
 # Output a USE dependency string for Python implementations which
 # are both in PYTHON_COMPAT and match any of the patterns passed
@@ -206,7 +206,7 @@ python_gen_usedep() {
 }
 
 # @FUNCTION: python_gen_useflags
-# @USAGE: pattern [...]
+# @USAGE: <pattern> [...]
 # @DESCRIPTION:
 # Output a list of USE flags for Python implementations which
 # are both in PYTHON_COMPAT and match any of the patterns passed
@@ -232,6 +232,49 @@ python_gen_useflags() {
 		for pattern; do
 			if [[ ${impl} == ${pattern} ]]; then
 				matches+=( "python_targets_${impl}" )
+				break
+			fi
+		done
+	done
+
+	echo ${matches[@]}
+}
+
+# @FUNCTION: python_gen_cond_dep
+# @USAGE: <dependency> <pattern> [...]
+# @DESCRIPTION:
+# Output a list of <dependency>-ies made conditional to USE flags
+# of Python implementations which are both in PYTHON_COMPAT and match
+# any of the patterns passed as the remaining parameters.
+#
+# Please note that USE constraints on the package need to be enforced
+# separately. Therefore, the dependency usually needs to use
+# python_gen_usedep as well.
+#
+# Example:
+# @CODE
+# PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+# RDEPEND="$(python_gen_cond_dep dev-python/unittest2 python{2_5,2_6})"
+# @CODE
+#
+# It will cause the variable to look like:
+# @CODE
+# RDEPEND="python_targets_python2_5? ( dev-python/unittest2 )
+#	python_targets_python2_6? ( dev-python/unittest2 )"
+# @CODE
+python_gen_cond_dep() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local impl pattern
+	local matches=()
+
+	local dep=${1}
+	shift
+
+	for impl in "${PYTHON_COMPAT[@]}"; do
+		for pattern; do
+			if [[ ${impl} == ${pattern} ]]; then
+				matches+=( "python_targets_${impl}? ( ${dep} )" )
 				break
 			fi
 		done
