@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.6.3-r1.ebuild,v 1.3 2012/12/31 14:40:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.6.3-r1.ebuild,v 1.4 2012/12/31 15:50:51 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -16,7 +16,7 @@ HOMEPAGE="http://projects.gnome.org/totem/"
 LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
 IUSE="flash grilo +introspection lirc nautilus nsplugin +python test zeitgeist"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 
 # see bug #359379
 REQUIRED_USE="flash? ( nsplugin )
