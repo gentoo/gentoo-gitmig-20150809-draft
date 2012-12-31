@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.220 2012/12/31 14:04:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.221 2012/12/31 14:36:50 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> sound-juicer-3.4.0.ebuild:
+  Add ~ppc, wrt bug #449220
 
 *sound-juicer-3.5.1_pre20121231 (31 Dec 2012)
 
