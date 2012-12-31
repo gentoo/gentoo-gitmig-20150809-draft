@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.35 2012/12/30 14:35:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.36 2012/12/31 15:23:07 jer Exp $
+
+  31 Dec 2012; Jeroen Roovers <jer@gentoo.org> pypax-0.7.0.ebuild:
+  Stable for HPPA (bug #445334).
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pypax-0.7.0.ebuild:
   Stable for alpha, wrt bug #445334
