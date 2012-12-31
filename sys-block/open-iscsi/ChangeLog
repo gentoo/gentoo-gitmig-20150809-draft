@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/open-iscsi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.45 2012/09/18 04:52:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.46 2012/12/31 15:56:27 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> open-iscsi-2.0.872-r1.ebuild:
+  Add ~ppc64, wrt bug #449220
 
   18 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
@@ -255,4 +258,3 @@
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>. A special
   thanks to The Gallery Group (www.thegallerygroup.com) for helping to support
   iSCSI on Gentoo.
-
