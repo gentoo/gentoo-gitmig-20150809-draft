@@ -17,10 +17,6 @@ start_pre() {
 }
 
 reload() {
-	if [ ! -f "${pidfile}" ]; then
-		eerror "Murmur is not running"
-	return 1
-	fi
 	ebegin "Reloading Murmur"
 	start-stop-daemon --signal HUP --pidfile "${pidfile}" \
 		--exec ${command}
