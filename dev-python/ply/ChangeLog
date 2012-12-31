@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ply
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.20 2012/12/06 17:36:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.21 2012/12/31 16:33:04 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> ply-3.4.ebuild:
+  Add ~ppc64, wrt bug #412329
 
   06 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> ply-3.4.ebuild:
   Keyword amd64-linux and x86-linux
