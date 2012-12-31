@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.152 2012/12/27 12:15:32 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.153 2012/12/31 05:08:14 tetromino Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
 # remove mask when gnome-extra/gnome-color-manager is keyworded here
@@ -149,10 +149,6 @@ app-text/asciidoc test
 # dev-lang/icc is not available for ppc
 # sci-chemistry/arp-warp-bin is not available for ppc
 sci-chemistry/ccp4 arpwarp
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (10 Dec 2010)
-# net-misc/connman is not keyworded, bug 348308
-mail-client/evolution connman
 
 # Justin Lecher <jlec@gentoo.org> (01 Nov 2010)
 # Deps not Keyworded
