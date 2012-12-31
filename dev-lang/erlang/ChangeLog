@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.224 2012/12/26 11:25:35 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.225 2012/12/31 09:24:49 djc Exp $
+
+  31 Dec 2012; Dirkjan Ochtman <djc@gentoo.org> files/epmd.init:
+  Changed license on the Gentoo-owned init script to ErlPL-1.1 (bug 425928).
 
 *erlang-15.2.3.1 (26 Dec 2012)
 
