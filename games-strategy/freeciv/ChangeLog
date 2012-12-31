@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.140 2012/12/29 17:44:05 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.141 2012/12/31 20:05:09 phajdan.jr Exp $
+
+  31 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> freeciv-2.3.3.ebuild:
+  x86 stable wrt security bug #447490
 
   29 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> freeciv-2.3.3.ebuild:
   Stable on amd64, wrt bug #447490
