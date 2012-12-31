@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mime-types
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.79 2012/10/15 08:51:54 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.80 2012/12/31 19:10:31 jer Exp $
+
+  31 Dec 2012; Jeroen Roovers <jer@gentoo.org> mime-types-9.ebuild:
+  Stable for HPPA (bug #449406).
 
   15 Oct 2012; Dirkjan Ochtman <djc@gentoo.org> -mime-types-3.ebuild,
   -mime-types-5.ebuild, -mime-types-7.ebuild:
