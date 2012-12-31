@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.133 2012/12/31 14:56:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.134 2012/12/31 15:18:38 jer Exp $
+
+  31 Dec 2012; Jeroen Roovers <jer@gentoo.org> puppet-3.0.1.ebuild:
+  Marked ~hppa (bug #449184).
 
   31 Dec 2012; Jeroen Roovers <jer@gentoo.org> puppet-3.0.1.ebuild:
   Drop keywords for broken arches (bug #449184).
