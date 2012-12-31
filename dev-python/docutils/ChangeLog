@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.163 2012/12/17 19:56:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.164 2012/12/31 12:16:18 mgorny Exp $
+
+*docutils-0.10 (31 Dec 2012)
+
+  31 Dec 2012; Michał Górny <mgorny@gentoo.org> +docutils-0.10.ebuild,
+  +files/docutils-0.10-optparser.patch:
+  Version bump with a patch for buildhtml.py. Move GLEP support to dev-python
+  /docutils-glep.
 
   17 Dec 2012; Michał Górny <mgorny@gentoo.org> docutils-0.9.1-r1.ebuild:
   Bump to EAPI=5 to make Paludis happy, bug #447524.
