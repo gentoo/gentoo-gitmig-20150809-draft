@@ -235,3 +235,7 @@ python_targets_jython2_5
 python_single_target_pypy1_8
 python_single_target_pypy1_9
 python_single_target_jython2_5
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (31 Dec 2012)
+# net-misc/connman is not keyworded, bug 348308
+connman

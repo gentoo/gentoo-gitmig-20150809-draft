@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.127 2012/12/31 01:57:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.128 2012/12/31 05:08:43 tetromino Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Dec 2012)
 # requires firefox, which is not keyworded on sparc
@@ -46,11 +46,6 @@ dev-util/devhelp gedit
 dev-python/PyQt4 webkit
 x11-libs/qt-assistant webkit
 x11-libs/qt-declarative webkit
-
-# Pacho Ramos <pacho@gentoo.org> (30 Jun 2012)
-# Missing keywords for connman
-net-libs/gupnp connman
-net-im/telepathy-mission-control connman
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (24 Jun 2012)
 # Requires libpcre with jit
@@ -159,10 +154,6 @@ media-plugins/gst-plugins-meta dts dv libvisual vcd wavpack
 # Michael Weber <xmw@gentoo.org> (03 Jan 2011)
 # dev-libs/libev is not keyworded
 www-servers/lighttpd libev
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (10 Dec 2010)
-# net-misc/connman is not keyworded, bug 348308
-mail-client/evolution connman
 
 # Raúl Porcel <armin76@gentoo.org> (5 Dec 2010)
 # Mask doc-pdf because of Java dependencies (bug #347259)
