@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/fprintd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/fprintd/ChangeLog,v 1.7 2012/05/15 07:15:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/fprintd/ChangeLog,v 1.8 2012/12/31 14:43:01 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> fprintd-0.4.1.ebuild:
+  Add ~ppc, wrt bug #449220
 
 *fprintd-0.4.1 (15 May 2012)
 
@@ -26,4 +29,3 @@
   27 Oct 2010; Michael Weber <xmw@gentoo.org> +fprintd-0.2.0.ebuild,
   +metadata.xml:
   Initial import, fixes bug #341747 reported by Jan Buecken <jb.faq@gmx.de>.
-
