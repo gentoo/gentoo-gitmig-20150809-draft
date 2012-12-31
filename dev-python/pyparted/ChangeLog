@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.73 2012/02/22 07:54:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.74 2012/12/31 18:00:19 jer Exp $
+
+*pyparted-3.9 (31 Dec 2012)
+
+  31 Dec 2012; Jeroen Roovers <jer@gentoo.org> +pyparted-3.9.ebuild:
+  Version bump.
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyparted-3.8-r1.ebuild:
   Restricting python stuff properly
