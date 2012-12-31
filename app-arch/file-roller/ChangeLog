@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.308 2012/12/16 08:31:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.309 2012/12/31 14:14:57 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> file-roller-3.6.2.ebuild:
+  Add ~ppc, wrt bug #449220
 
 *file-roller-3.6.2 (16 Dec 2012)
 
