@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-3.12.ebuild,v 1.3 2012/11/10 02:58:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-3.12.ebuild,v 1.4 2012/12/31 06:53:38 vapier Exp $
 
 EAPI=4
 
@@ -24,7 +24,12 @@ DEPEND="${RDEPEND}
 	dev-libs/boost
 	virtual/pkgconfig"
 
-pkg_setup() {
+src_prepare() {
+	sed -i -e "/LSB_DOC_DIR/s:doc/${PN}:doc/${PF}:" \
+		src/core/datadir.cpp || die
+}
+
+src_compile() {
 	myhlopts=(
 		"CXX=$(tc-getCXX)"
 		"AR=$(tc-getAR)"
@@ -38,14 +43,6 @@ pkg_setup() {
 		"doc_dir=${EPREFIX}/usr/share/doc/${PF}/"
 		"conf_dir=${EPREFIX}/etc/highlight/"
 	)
-}
-
-src_prepare() {
-	sed -i -e "/LSB_DOC_DIR/s:doc/${PN}:doc/${PF}:" \
-		src/core/datadir.cpp || die
-}
-
-src_compile() {
 	emake -f makefile "${myhlopts[@]}"
 	if use qt4 ; then
 		cd src/gui-qt
