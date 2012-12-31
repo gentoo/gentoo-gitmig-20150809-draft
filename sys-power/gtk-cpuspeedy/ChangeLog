@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/gtk-cpuspeedy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/gtk-cpuspeedy/ChangeLog,v 1.9 2012/05/04 07:37:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/gtk-cpuspeedy/ChangeLog,v 1.10 2012/12/31 14:26:07 pacho Exp $
+
+  31 Dec 2012; Pacho Ramos <pacho@gentoo.org> gtk-cpuspeedy-0.3.0-r1.ebuild:
+  Change DESCRIPTION as suggested by Alexander Berntsen in bug #448960
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gtk-cpuspeedy-0.3.0-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -85,4 +88,3 @@
   29 Mar 2004; Daniel Black <dragonheart@gentoo.org> gtk-cpuspeedy-0.1.ebuild,
   metadata.xml:
   Inital import - thanks to Lukasz Strzygowski <lucass@gentoo.pl> in bug #46036
-
