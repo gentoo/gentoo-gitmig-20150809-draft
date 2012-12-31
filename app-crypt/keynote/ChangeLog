@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/keynote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/ChangeLog,v 1.20 2012/12/27 18:33:23 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/ChangeLog,v 1.21 2012/12/31 23:22:22 jdhore Exp $
+
+  31 Dec 2012; Jeff Horelick <jdhore@gentoo.org> keynote-2.3-r3.ebuild:
+  marked x86 per bug 448850
 
   27 Dec 2012; Chema Alonso <nimiux@gentoo.org> keynote-2.3-r3.ebuild:
   Mark stable for amd64 wrt bug #448850
