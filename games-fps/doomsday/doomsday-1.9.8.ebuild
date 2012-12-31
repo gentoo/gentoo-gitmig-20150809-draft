@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.8.ebuild,v 1.6 2012/07/16 10:32:00 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.8.ebuild,v 1.7 2012/12/31 09:46:38 pinkbyte Exp $
 
 EAPI=4
 
@@ -37,7 +37,10 @@ PDEPEND="
 S=${S}/${PN}
 
 REQUIRED_USE="demo? ( doom ) freedoom? ( doom ) resources? ( doom )"
-PATCHES=( "${FILESDIR}"/${P}-2to3.patch )
+PATCHES=(
+	"${FILESDIR}"/${P}-2to3.patch
+	"${FILESDIR}"/${P}-openal-64bit-fix.patch
+)
 
 pkg_setup(){
 	python_pkg_setup

@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/doomsday
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.48 2012/07/16 10:32:00 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.49 2012/12/31 09:46:38 pinkbyte Exp $
+
+  31 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> doomsday-1.9.8.ebuild,
+  +files/doomsday-1.9.8-openal-64bit-fix.patch:
+  Fix openal-related code, wrt bug #436016. Thanks to <ghost99 AT mail.ru> for
+  discovering this issue
 
   16 Jul 2012; Michael Palimaka <kensington@gentoo.org> doomsday-1.9.8.ebuild:
   Add missing slot dependencies on Qt.
