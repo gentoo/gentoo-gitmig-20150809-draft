@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-icon-theme-extras
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-extras/ChangeLog,v 1.13 2012/12/16 19:30:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-extras/ChangeLog,v 1.14 2012/12/31 14:44:40 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
+  gnome-icon-theme-extras-3.6.2.ebuild:
+  Add ~ppc, wrt bug #449220
 
 *gnome-icon-theme-extras-3.6.2 (16 Dec 2012)
 
@@ -66,4 +70,3 @@
   22 Jan 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   +gnome-icon-theme-extras-2.30.1.ebuild, +metadata.xml:
   Add new package with icon theme extras
-
