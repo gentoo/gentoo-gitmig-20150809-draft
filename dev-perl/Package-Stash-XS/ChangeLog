@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Package-Stash-XS
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash-XS/ChangeLog,v 1.28 2012/09/09 16:22:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash-XS/ChangeLog,v 1.29 2012/12/31 16:56:23 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
+  Package-Stash-XS-0.250.0.ebuild:
+  Add ~ppc64, wrt bug #403413
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org>
   Package-Stash-XS-0.250.0.ebuild:
