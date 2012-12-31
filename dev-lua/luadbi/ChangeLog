@@ -1,6 +1,10 @@
 # ChangeLog for dev-lua/luadbi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.7 2012/10/21 09:10:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.8 2012/12/31 09:49:27 djc Exp $
+
+  31 Dec 2012; Dirkjan Ochtman <djc@gentoo.org> luadbi-0.5-r1.ebuild:
+  Use correct compiler, obey LDFLAGS (bug 436650, bug 436654, thanks to
+  gentoo@rueg.eu).
 
   21 Oct 2012; Markus Meier <maekke@gentoo.org> luadbi-0.5-r1.ebuild:
   x86 stable, bug #388797

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/luadbi-0.5-r1.ebuild,v 1.5 2012/10/21 09:10:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/luadbi-0.5-r1.ebuild,v 1.6 2012/12/31 09:49:27 djc Exp $
 
 EAPI=4
 
@@ -43,7 +43,7 @@ src_compile() {
 
 	append-flags -fPIC -c
 	for driver in "${drivers}" ; do
-		emake ${driver}
+		emake CC="$(tc-getCC)" COMMON_LDFLAGS="${LDFLAGS}" ${driver}
 	done
 }
 
