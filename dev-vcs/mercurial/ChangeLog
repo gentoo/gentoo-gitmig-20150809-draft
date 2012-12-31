@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.96 2012/12/31 08:11:55 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.97 2012/12/31 08:16:12 djc Exp $
+
+  31 Dec 2012; Dirkjan Ochtman <djc@gentoo.org> mercurial-2.4.1-r2.ebuild,
+  mercurial-9999.ebuild:
+  Improve test restrictions.
 
   31 Dec 2012; Dirkjan Ochtman <djc@gentoo.org> mercurial-2.4.1-r2.ebuild,
   mercurial-9999.ebuild:

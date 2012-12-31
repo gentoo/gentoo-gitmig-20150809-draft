@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.4.1-r2.ebuild,v 1.2 2012/12/31 08:11:55 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.4.1-r2.ebuild,v 1.3 2012/12/31 08:16:12 djc Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -102,7 +102,7 @@ EOF
 src_test() {
 	cd "${S}/tests/" || die
 	rm -rf *svn* || die					# Subversion tests fail with 1.5
-	rm -f test-archive || die			# Fails due to verbose tar output changes
+	rm -f test-archive* || die			# Fails due to verbose tar output changes
 	rm -f test-convert-baz* || die		# GNU Arch baz
 	rm -f test-convert-cvs* || die		# CVS
 	rm -f test-convert-darcs* || die	# Darcs
@@ -110,16 +110,17 @@ src_test() {
 	rm -f test-convert-mtn* || die		# monotone
 	rm -f test-convert-tla* || die		# GNU Arch tla
 	rm -f test-doctest* || die			# doctest always fails with python 2.5.x
+	rm -f test-largefiles* || die		# tends to time out
 	if [[ ${EUID} -eq 0 ]]; then
 		einfo "Removing tests which require user privileges to succeed"
-		rm -f test-command-template || die	# Test is broken when run as root
-		rm -f test-convert || die			# Test is broken when run as root
-		rm -f test-lock-badness || die		# Test is broken when run as root
-		rm -f test-permissions || die		# Test is broken when run as root
-		rm -f test-pull-permission || die	# Test is broken when run as root
-		rm -f test-clone-failure || die
-		rm -f test-journal-exists || die
-		rm -f test-repair-strip || die
+		rm -f test-command-template* || die	# Test is broken when run as root
+		rm -f test-convert* || die			# Test is broken when run as root
+		rm -f test-lock-badness* || die		# Test is broken when run as root
+		rm -f test-permissions* || die		# Test is broken when run as root
+		rm -f test-pull-permission* || die	# Test is broken when run as root
+		rm -f test-clone-failure* || die
+		rm -f test-journal-exists* || die
+		rm -f test-repair-strip* || die
 	fi
 
 	testing() {
