@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.8_pre20120824.ebuild,v 1.2 2012/09/15 20:59:30 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.8_pre20121005.ebuild,v 1.1 2012/12/31 11:04:21 gurligebis Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
 
-MY_PV=1.7.20120824
+MY_PV=1.7.20121005
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 DESCRIPTION="MiniUPnP IGD Daemon"
