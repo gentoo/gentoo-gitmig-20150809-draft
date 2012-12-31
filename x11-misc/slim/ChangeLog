@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/slim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.92 2012/12/29 19:01:30 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.93 2012/12/31 18:09:51 axs Exp $
+
+*slim-1.3.5 (31 Dec 2012)
+
+  31 Dec 2012; Ian Stakenvicius <axs@gentoo.org> +slim-1.3.5.ebuild,
+  +files/slim-1.3.5-arm.patch:
+  version bump; better utf8 support, various fixes plus upstream systemd
+  support
 
 *slim-1.3.4-r2 (29 Dec 2012)
 
