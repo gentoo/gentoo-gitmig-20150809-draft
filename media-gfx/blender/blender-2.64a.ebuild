@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.64a.ebuild,v 1.1 2012/11/18 01:06:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.64a.ebuild,v 1.2 2012/12/31 16:02:50 flameeyes Exp $
 
 EAPI=4
 PYTHON_DEPEND="3:3.2"
@@ -12,7 +12,7 @@ inherit multilib scons-utils eutils python versionator flag-o-matic toolchain-fu
 IUSE="cycles +game-engine player +elbeem +openexr ffmpeg jpeg2k openal
 	openmp +dds fftw jack doc sndfile tweak-mode sdl sse redcode
 	iconv collada 3dmouse debug nls"
-REQUIRED_USE="player? ( game-engine )"
+REQUIRED_USE="player? ( game-engine ) redcode? ( jpeg2k )"
 
 LANGS="en ar bg ca cs de el es es_ES fa fi fr he hr hu id it ja ky ne nl pl pt pt_BR ru sr sr@latin sv tr uk zh_CN zh_TW"
 for X in ${LANGS} ; do
