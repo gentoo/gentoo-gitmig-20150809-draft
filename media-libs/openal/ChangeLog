@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.156 2012/12/12 10:33:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.157 2012/12/31 23:25:34 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> openal-1.15.1.ebuild:
+  Stable for ppc, wrt bug #440002
 
 *openal-1.15.1 (12 Dec 2012)
 
@@ -612,5 +615,3 @@
   13 Apr 2002; Bruce A. Locke <blocke@shivan.org> openal-20020127.ebuild :
 
   OpenAL added to Gentoo
-
-
