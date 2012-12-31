@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gdm-themes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.41 2012/12/31 09:21:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.42 2012/12/31 10:36:03 kensington Exp $
+
+  31 Dec 2012; Michael Palimaka <kensington@gentoo.org>
+  -gdm-themes-20070811.ebuild:
+  Remove old.
 
   31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gdm-themes-20070811-r1.ebuild:
   Stable for sparc, wrt bug #394007
