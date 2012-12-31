@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.5.10.ebuild,v 1.9 2012/07/29 17:01:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.5.10.ebuild,v 1.10 2012/12/31 17:30:59 jer Exp $
 
 EAPI="4"
 
 inherit bash-completion-r1 eutils
 
 DESCRIPTION="An ncurses mpd client, ncmpc clone with some new features, written in C++"
-HOMEPAGE="http://unkart.ovh.org/ncmpcpp"
-SRC_URI="http://unkart.ovh.org/${PN}/${P}.tar.bz2"
+HOMEPAGE="http://ncmpcpp.rybczak.net/"
+SRC_URI="http://ncmpcpp.rybczak.net/stable/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 IUSE="bash-completion clock curl fftw iconv outputs taglib unicode visualizer"
