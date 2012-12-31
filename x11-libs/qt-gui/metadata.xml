@@ -11,13 +11,8 @@
 		<flag name="glib">Enable <pkg>dev-libs/glib</pkg> eventloop support</flag>
 		<flag name="gtkstyle">Build a Qt style called GTK+ that mimics the active
 			GTK+ theme</flag>
-		<flag name="private-headers">Install the private header files required
-			by some QtCreator plugins</flag>
-		<flag name="qpa">Build a window system agnostic implementation of Qt</flag>
 		<flag name="qt3support">Enable the Qt3Support libraries for Qt4. Note that
 			this does not mean you can compile pure Qt3 programs with Qt4.</flag>
-		<flag name="raster">Use the alternative 'raster' graphicssystem as default
-			rendering engine</flag>
 		<flag name="trace">
 			Build the 'trace' graphicssystem engine which allows to record
 			all drawing operations into a trace buffer. Later it can be replayed

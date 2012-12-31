@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-svg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/ChangeLog,v 1.135 2012/12/29 13:49:19 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/ChangeLog,v 1.136 2012/12/31 05:48:00 pesa Exp $
+
+  31 Dec 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Cleanup metadata.
 
   29 Dec 2012; Michael Palimaka <kensington@gentoo.org>
   -files/4.8.2-qatomic-x32.patch, -qt-svg-4.7.4.ebuild, -qt-svg-4.8.1.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-opengl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.139 2012/12/29 13:43:19 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.140 2012/12/31 05:51:41 pesa Exp $
+
+  31 Dec 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Cleanup metadata.
 
   29 Dec 2012; Michael Palimaka <kensington@gentoo.org>
   -files/4.8.2-qatomic-x32.patch, -qt-opengl-4.7.4.ebuild,

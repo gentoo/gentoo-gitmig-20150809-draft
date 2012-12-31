@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-multimedia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.74 2012/12/29 13:42:19 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.75 2012/12/31 05:54:05 pesa Exp $
+
+  31 Dec 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Cleanup metadata.
 
   29 Dec 2012; Michael Palimaka <kensington@gentoo.org>
   -files/4.8.2-qatomic-x32.patch, -qt-multimedia-4.7.4.ebuild,
