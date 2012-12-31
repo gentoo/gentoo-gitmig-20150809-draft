@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/mutter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.14 2012/12/16 19:18:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.15 2012/12/31 14:44:55 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> mutter-3.6.2.ebuild:
+  Add ~ppc, wrt bug #449220
 
   16 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> mutter-3.6.2.ebuild:
   Add subslot notation for cogl, thanks to Alexandre Rostovtsev for noticing.
@@ -78,4 +81,3 @@
   30 Sep 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +mutter-3.0.2.1.ebuild,
   +metadata.xml:
   Move from GNOME overlay for GNOME 3
-
