@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-tracker-tags/nautilus-tracker-tags-0.14.4.ebuild,v 1.1 2012/11/21 23:09:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-tracker-tags/nautilus-tracker-tags-0.14.4.ebuild,v 1.2 2012/12/31 14:32:05 ago Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="tracker"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.tracker-project.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 COMMON_DEPEND=">=app-misc/tracker-${PV}

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-extensions/zeitgeist-extensions-0.0.13-r1.ebuild,v 1.3 2012/04/23 20:12:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-extensions/zeitgeist-extensions-0.0.13-r1.ebuild,v 1.4 2012/12/31 14:33:37 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ HOMEPAGE="https://launchpad.net/zeitgeist-extensions/"
 SRC_URI="http://launchpad.net/${PN}/trunk/fts-${PV}/+download/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-3"
 IUSE="fts geolocation memprofile sqldebug tracker"
 

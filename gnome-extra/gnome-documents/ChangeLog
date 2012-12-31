@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-documents
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-documents/ChangeLog,v 1.5 2012/12/25 18:25:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-documents/ChangeLog,v 1.6 2012/12/31 14:31:14 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gnome-documents-3.6.2.ebuild:
+  Add ~ppc, wrt bug #449220
 
 *gnome-documents-3.6.2 (25 Dec 2012)
 
@@ -26,4 +29,3 @@
   07 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   +gnome-documents-0.2.1.ebuild, +metadata.xml:
   Add new gnome-3.2 document browser and manager from the gnome overlay.
-

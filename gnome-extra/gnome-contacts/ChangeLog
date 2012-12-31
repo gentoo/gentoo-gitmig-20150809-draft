@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-contacts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/ChangeLog,v 1.6 2012/12/19 00:46:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/ChangeLog,v 1.7 2012/12/31 14:31:00 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gnome-contacts-3.6.2.ebuild:
+  Add ~ppc, wrt bug #449220
 
   19 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-contacts-3.6.2.ebuild:
@@ -31,4 +34,3 @@
   04 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   +gnome-contacts-3.2.2.ebuild, +metadata.xml:
   Add the new gnome-3.2 contact management application from the gnome overlay.
-
