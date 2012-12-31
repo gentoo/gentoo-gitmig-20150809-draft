@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpeas
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.10 2012/12/16 21:23:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.11 2012/12/31 15:31:32 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libpeas-1.6.2-r1.ebuild:
+  Add ~ppc64, wrt bug #449220
 
 *libpeas-1.6.2-r1 (16 Dec 2012)
 

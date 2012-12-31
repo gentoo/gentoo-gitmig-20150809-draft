@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.8.0.ebuild,v 1.3 2012/12/27 05:32:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.8.0.ebuild,v 1.4 2012/12/31 15:30:44 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -15,7 +15,7 @@ HOMEPAGE="http://telepathy.freedesktop.org/wiki/Folks"
 
 LICENSE="LGPL-2.1+"
 SLOT="0/25" # subslot = libfolks soname version
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"
 # TODO: --enable-profiling
 IUSE="eds socialweb +telepathy test tracker utils vala"
 
