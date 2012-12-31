@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.444 2012/12/26 22:25:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.445 2012/12/31 07:38:44 tetromino Exp $
+
+  31 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.5.20.ebuild,
+  wine-9999.ebuild:
+  Completely disable pulseaudio patches for the live 9999 ebuild since it
+  breaks too often (e.g. bug #448970). Remove the vanilla USE flag since it is
+  now superfluous.
 
   26 Dec 2012; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   better wording to warn people off
