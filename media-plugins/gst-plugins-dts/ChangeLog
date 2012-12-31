@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-dts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dts/ChangeLog,v 1.24 2012/12/31 15:45:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dts/ChangeLog,v 1.25 2012/12/31 15:49:49 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gst-plugins-dts-1.0.3.ebuild:
+  Add ~ppc64, wrt bug #449220
 
   31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gst-plugins-dts-0.10.23.ebuild:
   Add ~ppc64, wrt bug #449220
