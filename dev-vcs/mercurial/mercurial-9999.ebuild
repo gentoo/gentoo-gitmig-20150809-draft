@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-9999.ebuild,v 1.14 2012/12/30 15:46:31 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-9999.ebuild,v 1.15 2012/12/31 08:11:55 djc Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ EHG_REPO_URI="http://selenic.com/repo/hg"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="bugzilla emacs gpg test tk zsh-completion"
+IUSE="bugzilla doc emacs gpg test tk zsh-completion"
 
 RDEPEND="bugzilla? ( dev-python/mysql-python )
 	gpg? ( app-crypt/gnupg )
@@ -27,7 +27,8 @@ RDEPEND="bugzilla? ( dev-python/mysql-python )
 DEPEND="emacs? ( virtual/emacs )
 	test? ( app-arch/unzip
 		dev-python/pygments )
-	app-text/asciidoc"
+	doc? ( app-text/asciidoc
+		dev-python/docutils )"
 
 PYTHON_CFLAGS=(
 	"2.* + -fno-strict-aliasing"
@@ -39,7 +40,6 @@ SITEFILE="70${PN}-gentoo.el"
 
 src_prepare() {
 	distutils_src_prepare
-
 	# fix up logic that won't work in Gentoo Prefix (also won't outside in
 	# certain cases), bug #362891
 	sed -i -e 's:xcodebuild:nocodebuild:' setup.py || die
@@ -48,13 +48,16 @@ src_prepare() {
 src_compile() {
 	distutils_src_compile
 
+	if use doc; then
+		make doc || die
+	fi
+
 	if use emacs; then
 		cd "${S}"/contrib || die
 		elisp-compile mercurial.el || die "elisp-compile failed!"
 	fi
 
 	rm -rf contrib/{win32,macosx} || die
-	make doc || die
 }
 
 src_install() {
