@@ -1,9 +1,6 @@
 # where to look for the config file
 MURMUR_CONF=/etc/murmur/murmur.ini
 
-# where to look for the pid file
-MURMUR_PID=/var/run/murmur/murmur.pid
-
 # run as this user
 MURMUR_USER=murmur
 

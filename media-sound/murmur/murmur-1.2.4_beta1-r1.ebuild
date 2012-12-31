@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.3-r3.ebuild,v 1.6 2012/06/09 23:13:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.4_beta1-r1.ebuild,v 1.1 2012/12/31 09:52:43 polynomial-c Exp $
 
 EAPI="4"
+
+QT_MINIMAL="4.6"
 
 inherit eutils qt4-r2 user
 
@@ -10,11 +12,11 @@ MY_P="${PN/murmur/mumble}-${PV/_/~}"
 
 DESCRIPTION="Mumble is an open source, low-latency, high quality voice chat software"
 HOMEPAGE="http://mumble.sourceforge.net/"
-SRC_URI="mirror://sourceforge/mumble/${MY_P}.tar.gz"
+SRC_URI="http://mumble.info/snapshot/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 x86"
+KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE="+dbus debug +ice pch zeroconf"
 
 RDEPEND=">=dev-libs/openssl-1.0.0b
@@ -33,12 +35,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-1.2.3-ice-3.4.2-compat.patch
-	"${FILESDIR}"/mumble-1.2.3-remove-certs.patch
-	"${FILESDIR}"/mumble-1.2.3-fix-cert-validation.patch
-)
 
 pkg_setup() {
 	enewgroup murmur

@@ -1,5 +1,9 @@
 #!/sbin/runscript
 
+pidfile="/var/run/murmur/murmur.pid"
+command="/usr/bin/murmurd"
+command_args="-ini \"${MURMUR_CONF}\""
+start_stop_daemon_args="-u \"${MURMUR_USER}\" --env HOME=\"${MURMUR_HOME}\" --wait 20"
 extra_started_commands="reload"
 
 depend() {
@@ -8,29 +12,18 @@ depend() {
 	after bootmisc mysql
 }
 
-start() {
-	ebegin "Starting Murmur"
-	start-stop-daemon --start --pidfile "${MURMUR_PID}" \
-		--user "${MURMUR_USER}" --env HOME="${MURMUR_HOME}" \
-		--exec /usr/bin/murmurd -- -ini "${MURMUR_CONF}"
-	eend $?
-}
-
-stop() {
-	ebegin "Stopping Murmur"
-	start-stop-daemon --stop --pidfile "${MURMUR_PID}" \
-		--exec /usr/bin/murmurd
-	eend $?
+start_pre() {
+	checkpath -d -o ${MURMUR_USER} ${pidfile%/*}
 }
 
 reload() {
-	if [ ! -f "${MURMUR_PID}" ]; then
+	if [ ! -f "${pidfile}" ]; then
 		eerror "Murmur is not running"
 	return 1
 	fi
 	ebegin "Reloading Murmur"
-	start-stop-daemon --signal HUP --pidfile "${MURMUR_PID}" \
-		--exec /usr/bin/murmurd
+	start-stop-daemon --signal HUP --pidfile "${pidfile}" \
+		--exec ${command}
 	eend $?
 }
 
