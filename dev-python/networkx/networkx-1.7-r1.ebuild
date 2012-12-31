@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/networkx-1.7-r1.ebuild,v 1.1 2012/11/03 15:35:36 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/networkx-1.7-r1.ebuild,v 1.2 2012/12/31 13:02:58 mgorny Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ DEPEND="dev-python/setuptools
 RDEPEND="examples? (
 		dev-python/matplotlib
 		dev-python/pygraphviz
-		dev-python/pyparsing
+		virtual/pyparsing
 		dev-python/pyyaml
 		sci-libs/scipy
 	 )"

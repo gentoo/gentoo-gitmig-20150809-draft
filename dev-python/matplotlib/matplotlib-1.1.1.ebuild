@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.1.1.ebuild,v 1.5 2012/11/26 06:21:01 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.1.1.ebuild,v 1.6 2012/12/31 13:01:50 mgorny Exp $
 
 EAPI="3"
 
@@ -58,7 +58,7 @@ DEPEND="${CDEPEND}
 	test? ( dev-python/nose )"
 
 RDEPEND="${CDEPEND}
-	dev-python/pyparsing
+	virtual/pyparsing
 	cairo? ( dev-python/pycairo )
 	excel? ( dev-python/xlwt )
 	fltk? ( dev-python/pyfltk )

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mwlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.18 2012/10/30 07:44:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.19 2012/12/31 13:02:18 mgorny Exp $
+
+  31 Dec 2012; Michał Górny <mgorny@gentoo.org> mwlib-0.13.5.ebuild,
+  mwlib-0.13.6.ebuild, mwlib-0.13.7.ebuild, mwlib-0.13.8.ebuild,
+  mwlib-0.14.0.ebuild, mwlib-0.14.1.ebuild:
+  Use virtual/pyparsing.
 
 *mwlib-0.14.1 (30 Oct 2012)
 

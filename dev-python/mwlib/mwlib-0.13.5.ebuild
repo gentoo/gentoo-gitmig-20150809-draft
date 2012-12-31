@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/mwlib-0.13.5.ebuild,v 1.1 2012/03/06 10:31:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/mwlib-0.13.5.ebuild,v 1.2 2012/12/31 13:02:18 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -25,7 +25,7 @@ RDEPEND="dev-lang/perl
 	dev-python/lxml
 	=dev-python/odfpy-0.9*
 	>=dev-python/pyPdf-1.12
-	>=dev-python/pyparsing-1.4.11
+	virtual/pyparsing
 	>=dev-python/timelib-0.2
 	>=dev-python/twisted-9.0.0-r1
 	>=dev-python/twisted-web-9.0.0
