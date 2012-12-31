@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/gnome-extra-apps-3.6.2.ebuild,v 1.1 2012/12/26 23:15:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/gnome-extra-apps-3.6.2.ebuild,v 1.2 2012/12/31 14:18:00 eva Exp $
 
 EAPI="5"
 
@@ -35,7 +35,7 @@ RDEPEND="
 	>=mail-client/evolution-${PV}
 	>=media-gfx/gnome-font-viewer-3.6.1
 	>=media-gfx/gnome-screenshot-3.6.1
-	>=media-sound/sound-juicer-3.4
+	>=media-sound/sound-juicer-3.5.0
 	>=media-video/cheese-${PV}
 	>=net-analyzer/gnome-nettool-3.2
 	>=net-misc/vinagre-${PV}
