@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/sofia-sip-1.12.11.ebuild,v 1.7 2012/05/05 02:54:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/sofia-sip-1.12.11.ebuild,v 1.8 2012/12/31 15:52:56 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="as-is BSD LGPL-2.1 ISC" # See COPYRIGHT
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~x86-linux"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86 ~x86-linux"
 IUSE="ssl static-libs"
 
 RDEPEND="dev-libs/glib:2

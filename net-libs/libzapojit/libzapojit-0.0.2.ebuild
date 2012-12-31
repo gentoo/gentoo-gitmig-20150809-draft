@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libzapojit/libzapojit-0.0.2.ebuild,v 1.3 2012/12/31 14:41:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libzapojit/libzapojit-0.0.2.ebuild,v 1.4 2012/12/31 15:52:37 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://git.gnome.org/browse/libzapojit"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="+introspection"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 RDEPEND="
 	>=dev-libs/glib-2.28:2

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/sofia-sip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/ChangeLog,v 1.23 2012/05/05 02:54:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/ChangeLog,v 1.24 2012/12/31 15:52:56 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> sofia-sip-1.12.11.ebuild:
+  Add ~ppc64, wrt bug #449220
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> sofia-sip-1.12.11.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -101,4 +104,3 @@
   +sofia-sip-1.11.8.ebuild:
   New ebuild inspired by the voip and zugaina overlay, first step for tapioca,
   bug 127383
-
