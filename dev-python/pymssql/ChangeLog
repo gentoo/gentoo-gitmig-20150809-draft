@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymssql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/ChangeLog,v 1.26 2012/09/30 16:51:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/ChangeLog,v 1.27 2012/12/31 19:18:54 jer Exp $
+
+  31 Dec 2012; Jeroen Roovers <jer@gentoo.org> pymssql-1.0.2.ebuild:
+  Stable for HPPA (bug #449426).
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> pymssql-1.0.2.ebuild:
   Add ~s390/~sh
