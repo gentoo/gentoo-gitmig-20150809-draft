@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/memphis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.14 2012/07/09 14:06:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.15 2012/12/31 15:45:04 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> memphis-0.2.3.ebuild:
+  Add ~ppc64, wrt bug #449220
 
   09 Jul 2012; Brent Baude <ranger@gentoo.org> memphis-0.2.3.ebuild:
   Marking memphis-0.2.3 ~ppc for bug 388367
@@ -56,4 +59,3 @@
   17 Jun 2010; Justin Lecher <jlec@gentoo.org> +memphis-0.2.2.ebuild,
   +metadata.xml:
   New addition
-
