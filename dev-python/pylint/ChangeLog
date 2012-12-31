@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.89 2012/10/30 07:49:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.90 2012/12/31 15:33:24 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pylint-0.26.0.ebuild:
+  Add ~ppc64, wrt bug #449220
 
 *pylint-0.26.0 (30 Oct 2012)
 
