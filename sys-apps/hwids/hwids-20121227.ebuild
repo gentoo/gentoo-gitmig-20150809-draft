@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20121225.ebuild,v 1.1 2012/12/25 09:41:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20121227.ebuild,v 1.1 2012/12/31 13:12:38 flameeyes Exp $
 
 EAPI=5
 inherit udev
@@ -20,15 +20,25 @@ RDEPEND="!<sys-apps/pciutils-3.1.9-r2
 
 S=${WORKDIR}/hwids-${P}
 
-src_configure() {
-	MAKEOPTS+=" UDEV=$(usex udev)"
-	MAKEOPTS+=" DOCDIR=${EPREFIX}/usr/share/doc/${PF}"
-	MAKEOPTS+=" MISCDIR=${EPREFIX}/usr/share/misc"
-	MAKEOPTS+=" HWDBDIR=${EPREFIX}$(udev_get_udevdir)/hwdb.d"
-	MAKEOPTS+=" DESTDIR=${D}"
+src_compile() {
+	emake UDEV=$(usex udev)
+}
+
+src_install() {
+	emake UDEV=$(usex udev) install \
+		DOCDIR="${EPREFIX}/usr/share/doc/${PF}" \
+		MISCDIR="${EPREFIX}/usr/share/misc" \
+		HWDBDIR="${EPREFIX}$(udev_get_udevdir)/hwdb.d" \
+		DESTDIR="${D}"
 }
 
 pkg_postinst() {
+	# until udev introduces a way to compile the database at a given
+	# location, rather than just /, we can't do much on offset root.
+	if [[ ${ROOT} != "" ]] && [[ ${ROOT} != "/" ]]; then
+		return 0
+	fi
+
 	if use udev && [[ $(udevadm --help 2>&1) == *hwdb* ]]; then
 		udevadm hwdb --update
 	fi
