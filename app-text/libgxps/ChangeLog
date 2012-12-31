@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libgxps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libgxps/ChangeLog,v 1.5 2012/05/04 03:33:14 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libgxps/ChangeLog,v 1.6 2012/12/31 14:17:28 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libgxps-0.2.2.ebuild:
+  Add ~ppc, wrt bug #449220
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> libgxps-0.1.0.ebuild,
   libgxps-0.2.1.ebuild, libgxps-0.2.2.ebuild:
@@ -31,4 +34,3 @@
   +libgxps-0.1.0.ebuild, +metadata.xml:
   New ebuild, moved from the gnome overlay. Used by evince to render XPS
   documents.
-
