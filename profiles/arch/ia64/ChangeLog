@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.171 2012/12/31 05:34:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.172 2012/12/31 07:04:43 tetromino Exp $
+
+  31 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Mask tracker[thunderbird] since thunderbird is not keyworded.
 
   31 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> use.mask:
   Mask USE=xine since xine-lib is not keyworded here.
