@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.168 2012/12/31 00:08:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.169 2012/12/31 01:45:30 tetromino Exp $
+
+  31 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Mask totem[flash]: like totem[youtube], it needs quvi.
 
   31 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask sushi[office], needs virtual/ooo.
