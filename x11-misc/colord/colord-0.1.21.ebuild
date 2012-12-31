@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.21.ebuild,v 1.10 2012/12/20 05:29:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.21.ebuild,v 1.11 2012/12/31 18:12:03 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.freedesktop.org/software/colord/releases/${P}.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~mips ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~ia64 ~mips ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="doc examples gtk +gusb +introspection scanner +udev vala"
 
 COMMON_DEPEND="
