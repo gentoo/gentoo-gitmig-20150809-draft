@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farstream/telepathy-farstream-0.6.0.ebuild,v 1.1 2012/12/26 22:53:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farstream/telepathy-farstream-0.6.0.ebuild,v 1.2 2012/12/31 14:41:32 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0/3"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="examples +introspection"
 
 RDEPEND="
