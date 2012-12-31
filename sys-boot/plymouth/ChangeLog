@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/plymouth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.25 2012/05/03 04:50:13 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.26 2012/12/31 14:43:42 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> plymouth-0.8.4.ebuild:
+  Add ~ppc, wrt bug #449220
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> plymouth-0.8.3-r5.ebuild,
   plymouth-0.8.4.ebuild:
