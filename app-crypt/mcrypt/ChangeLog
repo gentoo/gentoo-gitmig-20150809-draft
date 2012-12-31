@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mcrypt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.41 2012/12/28 15:07:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.42 2012/12/31 23:29:13 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> mcrypt-2.6.8-r2.ebuild:
+  Stable for ppc, wrt bug #440778
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> mcrypt-2.6.8-r2.ebuild:
   Stable for sparc, wrt bug #440778
