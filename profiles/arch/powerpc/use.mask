@@ -210,3 +210,6 @@ python_single_target_jython2_5
 
 # fdk-aac is already keyworded here
 -fdk
+
+# for gnome 3.6 keywording
+-zeitgeist
