@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.6.1.ebuild,v 1.1 2012/10/15 18:03:34 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.6.1.ebuild,v 1.2 2012/12/31 12:57:03 mgorny Exp $
 
 EAPI="4"
 
@@ -57,7 +57,7 @@ DEPEND="xen? ( >=app-emulation/xen-3.0 )
 	dev-python/elementtree
 	dev-python/paramiko
 	dev-python/pyopenssl
-	>=dev-python/pyparsing-1.4.6
+	virtual/pyparsing
 	dev-python/pycurl
 	dev-python/pyinotify
 	dev-python/simplejson

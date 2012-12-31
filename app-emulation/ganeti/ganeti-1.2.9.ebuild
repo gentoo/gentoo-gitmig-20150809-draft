@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-1.2.9.ebuild,v 1.2 2010/07/06 16:59:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-1.2.9.ebuild,v 1.3 2012/12/31 12:57:03 mgorny Exp $
 
 PYTHON_DEPEND="2"
 
@@ -21,7 +21,7 @@ IUSE=""
 RDEPEND=">=app-emulation/xen-3.0
 	dev-libs/openssl
 	dev-python/pyopenssl
-	dev-python/pyparsing
+	virtual/pyparsing
 	dev-python/simplejson
 	dev-python/twisted
 	net-analyzer/arping
