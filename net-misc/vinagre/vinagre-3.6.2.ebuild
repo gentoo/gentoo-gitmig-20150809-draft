@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-3.6.2.ebuild,v 1.1 2012/12/18 22:54:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-3.6.2.ebuild,v 1.2 2012/12/31 14:42:06 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://live.gnome.org/Vinagre"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="avahi rdp +ssh spice +telepathy"
 
 # cairo used in vinagre-tab
