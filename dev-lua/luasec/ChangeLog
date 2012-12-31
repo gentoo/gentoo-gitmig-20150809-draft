@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/luasec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/ChangeLog,v 1.6 2012/09/28 17:36:07 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/ChangeLog,v 1.7 2012/12/31 09:54:30 djc Exp $
+
+  31 Dec 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove myself as a maintainer.
 
   28 Sep 2012; Johannes Huber <johu@gentoo.org> luasec-0.4.1.ebuild:
   Stable for x86, wrt bug #429596
