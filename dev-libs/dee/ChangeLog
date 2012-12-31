@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/ChangeLog,v 1.7 2012/12/03 11:49:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/ChangeLog,v 1.8 2012/12/31 14:20:51 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> dee-1.0.14.ebuild:
+  Add ~ppc, wrt bug #449220
 
 *dee-1.0.14 (03 Dec 2012)
 
@@ -29,4 +32,3 @@
   23 Apr 2012; Justin Lecher <jlec@gentoo.org> +dee-1.0.10.ebuild,
   +files/dee-1.0.10-vapigen.patch, +metadata.xml:
   New ebuild written by me
-

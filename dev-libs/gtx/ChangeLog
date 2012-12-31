@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gtx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gtx/ChangeLog,v 1.1 2012/12/03 11:33:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gtx/ChangeLog,v 1.2 2012/12/31 14:21:05 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gtx-0.2.2.ebuild:
+  Add ~ppc, wrt bug #449220
 
 *gtx-0.2.2 (03 Dec 2012)
 
@@ -8,4 +11,3 @@
   +files/gtx-0.2.2-debug.patch, +files/gtx-0.2.2-docdir.patch,
   +files/gtx-0.2.2-glib.h.patch, +metadata.xml:
   new addition
-

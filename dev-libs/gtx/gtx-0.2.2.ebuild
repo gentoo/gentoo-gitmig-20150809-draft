@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gtx/gtx-0.2.2.ebuild,v 1.1 2012/12/03 11:33:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gtx/gtx-0.2.2.ebuild,v 1.2 2012/12/31 14:21:05 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://launchpad.net/gtx/trunk/${PV}/+download/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug doc static-libs"
 
 RDEPEND="dev-libs/glib:2"
