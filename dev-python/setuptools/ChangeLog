@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.176 2012/12/30 14:37:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.177 2012/12/31 14:04:22 djc Exp $
+
+  31 Dec 2012; Dirkjan Ochtman <djc@gentoo.org> -setuptools-0.6.27.ebuild,
+  -setuptools-0.6.28.ebuild, -setuptools-0.6.30.ebuild,
+  -setuptools-0.6.30-r2.ebuild:
+  Remove old versions.
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> setuptools-0.6.30-r1.ebuild:
   Stable for alpha, wrt bug #446496
