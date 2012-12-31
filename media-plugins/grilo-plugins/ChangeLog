@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/grilo-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/ChangeLog,v 1.17 2012/12/15 18:41:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/ChangeLog,v 1.18 2012/12/31 14:35:37 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> grilo-plugins-0.1.20.ebuild:
+  Add ~ppc, wrt bug #449220
 
 *grilo-plugins-0.2.5 (15 Dec 2012)
 
