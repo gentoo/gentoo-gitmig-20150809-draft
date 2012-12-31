@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.164 2012/12/31 12:16:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.165 2012/12/31 19:14:25 jer Exp $
+
+  31 Dec 2012; Jeroen Roovers <jer@gentoo.org> docutils-0.9.1.ebuild:
+  Stable for HPPA (bug #449412).
 
 *docutils-0.10 (31 Dec 2012)
 
