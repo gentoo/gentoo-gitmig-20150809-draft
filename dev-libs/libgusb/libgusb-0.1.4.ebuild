@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/libgusb-0.1.4.ebuild,v 1.2 2012/11/28 17:54:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/libgusb-0.1.4.ebuild,v 1.3 2012/12/31 18:24:32 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://people.freedesktop.org/~hughsient/releases/${P}.tar.xz"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~x86"
 IUSE="+introspection static-libs vala"
 REQUIRED_USE="vala? ( introspection )"
 
