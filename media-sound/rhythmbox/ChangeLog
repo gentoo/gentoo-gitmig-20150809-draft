@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.230 2012/12/31 14:40:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.231 2012/12/31 15:46:13 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> rhythmbox-2.97.ebuild:
+  Add ~ppc64, wrt bug #449220
 
   31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> rhythmbox-2.98.ebuild:
   Add ~ppc, wrt bug #449220
