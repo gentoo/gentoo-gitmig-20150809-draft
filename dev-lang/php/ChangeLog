@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.661 2012/12/30 20:23:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.662 2012/12/31 09:18:20 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> php-5.3.18.ebuild:
+  Stable for sparc, wrt bug #447012
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> php-5.4.6.ebuild:
   Stable for alpha, wrt bug #427024
