@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dot2tex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/ChangeLog,v 1.29 2012/04/22 18:29:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/ChangeLog,v 1.30 2012/12/31 13:05:31 mgorny Exp $
+
+  31 Dec 2012; Michał Górny <mgorny@gentoo.org> dot2tex-2.8.7.ebuild:
+  Use virtual/pyparsing.
 
   22 Apr 2012; Fabian Groffen <grobian@gentoo.org> dot2tex-2.8.7.ebuild:
   Marked ~amd64-linux, bug #411651
@@ -108,4 +111,3 @@
   14 Jan 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
   +dot2tex-2.7.0.ebuild:
   initial import, thanks to people in bug #153027
-
