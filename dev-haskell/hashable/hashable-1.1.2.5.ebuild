@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashable/hashable-1.1.2.5.ebuild,v 1.2 2012/12/31 14:19:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashable/hashable-1.1.2.5.ebuild,v 1.3 2012/12/31 15:28:53 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-haskell/text-0.11.0.5:=[profile?]

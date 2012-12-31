@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/gtk2hs-buildtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs-buildtools/ChangeLog,v 1.14 2012/12/31 14:19:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs-buildtools/ChangeLog,v 1.15 2012/12/31 15:28:37 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
+  gtk2hs-buildtools-0.12.4-r1.ebuild:
+  Add ~ppc64, wrt bug #449220
 
   31 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
   gtk2hs-buildtools-0.12.4-r1.ebuild:
