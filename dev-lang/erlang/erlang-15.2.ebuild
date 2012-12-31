@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-15.2.ebuild,v 1.6 2012/06/17 17:49:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-15.2.ebuild,v 1.7 2012/12/31 09:34:54 djc Exp $
 
 EAPI=3
 WX_GTK_VER="2.8"
@@ -38,7 +38,7 @@ RDEPEND=">=dev-lang/perl-5.6.1
 	java? ( >=virtual/jdk-1.2 )
 	odbc? ( dev-db/unixODBC )"
 DEPEND="${RDEPEND}
-	wxwidgets? ( x11-libs/wxGTK:2.8[opengl] )
+	wxwidgets? ( x11-libs/wxGTK:2.8[opengl] virtual/glu )
 	sctp? ( net-misc/lksctp-tools )
 	tk? ( dev-lang/tk )"
 
