@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbgrab/fbgrab-1.0.ebuild,v 1.13 2011/03/31 20:20:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbgrab/fbgrab-1.0.ebuild,v 1.14 2012/12/31 15:42:28 ago Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://hem.bredband.net/gmogmo/fbgrab/${PN}-1.0.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~hppa ppc ~sparc x86"
+KEYWORDS="amd64 arm ~hppa ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND="media-libs/libpng
