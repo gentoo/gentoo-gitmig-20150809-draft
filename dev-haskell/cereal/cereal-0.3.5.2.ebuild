@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cereal/cereal-0.3.5.2.ebuild,v 1.1 2012/11/14 22:02:35 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cereal/cereal-0.3.5.2.ebuild,v 1.2 2012/12/31 14:18:10 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/ghc-6.10.4:="

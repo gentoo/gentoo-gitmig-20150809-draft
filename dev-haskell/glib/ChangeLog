@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glib/ChangeLog,v 1.10 2012/11/25 06:42:18 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glib/ChangeLog,v 1.11 2012/12/31 14:18:50 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> glib-0.12.4.ebuild:
+  Add ~ppc, wrt bug #449220
 
 *glib-0.12.4 (25 Nov 2012)
 

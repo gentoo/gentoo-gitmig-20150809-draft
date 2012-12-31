@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hashtables
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashtables/ChangeLog,v 1.5 2012/11/18 06:28:32 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashtables/ChangeLog,v 1.6 2012/12/31 14:19:45 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> hashtables-1.0.1.8.ebuild:
+  Add ~ppc, wrt bug #449220
 
 *hashtables-1.0.1.8 (18 Nov 2012)
 

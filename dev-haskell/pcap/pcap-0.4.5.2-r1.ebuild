@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pcap/pcap-0.4.5.2-r1.ebuild,v 1.1 2012/12/23 20:02:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pcap/pcap-0.4.5.2-r1.ebuild,v 1.2 2012/12/31 14:20:25 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="dev-haskell/network:=[profile?]
