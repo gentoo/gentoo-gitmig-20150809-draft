@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.86 2012/12/11 21:38:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.87 2012/12/31 15:39:46 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> nm-applet-0.9.6.4.ebuild:
+  Add ~ppc64, wrt bug #449220
 
   11 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   -nm-applet-0.8.4.ebuild, -files/nm-applet-0.8.4-utils-libm.patch:

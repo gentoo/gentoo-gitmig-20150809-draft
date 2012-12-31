@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datahub/zeitgeist-datahub-0.9.5.ebuild,v 1.2 2012/12/31 14:33:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datahub/zeitgeist-datahub-0.9.5.ebuild,v 1.3 2012/12/31 15:40:54 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://launchpad.net/zeitgeist-datahub/${MY_PV}/${PV}/+download/${P}.ta
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="download telepathy"
 
 VALA_VER="0.16"
