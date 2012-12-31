@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.2.5.ebuild,v 1.1 2012/12/15 18:41:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.2.5.ebuild,v 1.2 2012/12/31 14:39:15 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -13,7 +13,7 @@ HOMEPAGE="https://live.gnome.org/Grilo"
 
 LICENSE="LGPL-2.1+"
 SLOT="0.2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="daap +dvd tracker upnp-av +vimeo +youtube"
 
 RDEPEND="
