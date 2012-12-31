@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/aisleriot/aisleriot-3.2.3.2-r1.ebuild,v 1.2 2012/08/28 18:56:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/aisleriot/aisleriot-3.2.3.2-r1.ebuild,v 1.3 2012/12/31 14:22:54 ago Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ HOMEPAGE="http://live.gnome.org/Aisleriot"
 
 LICENSE="GPL-3 LGPL-3 FDL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~x86"
+KEYWORDS="~amd64 ~mips ~ppc ~x86"
 IUSE="gnome"
 
 # FIXME: quartz support?
