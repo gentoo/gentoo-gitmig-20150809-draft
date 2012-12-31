@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/c-icap-0.2.3-r1.ebuild,v 1.1 2012/12/28 12:42:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/c-icap-0.2.4.ebuild,v 1.1 2012/12/31 00:30:01 flameeyes Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils multilib flag-o-matic autotools
 
@@ -32,6 +32,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.1.3+db-5.0.patch"
 	epatch "${FILESDIR}/${PN}-0.1.4-crosscompile.patch"
 	epatch "${FILESDIR}/${PN}-0.1.6-implicit.patch"
+	epatch "${FILESDIR}/${PN}-0.2.4-implicit.patch"
 	eautoreconf
 }
 
