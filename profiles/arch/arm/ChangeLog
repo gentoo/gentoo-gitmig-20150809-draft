@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.202 2012/12/31 01:45:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.203 2012/12/31 05:34:13 tetromino Exp $
+
+  31 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> use.mask:
+  Mask USE=xine since xine-lib is not keyworded here.
 
   31 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask totem[flash]: like totem[youtube], it needs quvi.
