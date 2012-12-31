@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.9-r1.ebuild,v 1.1 2012/12/30 12:47:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.9-r1.ebuild,v 1.2 2012/12/31 12:53:46 flameeyes Exp $
 
 EAPI=5
 
@@ -374,5 +374,13 @@ pkg_postinst() {
 			elog "Effective CGI support has just been added in 2.0.7-r6."
 			elog "Documentation on how to use it is still sparse."
 		fi
+	fi
+
+	# we create this here as we don't want Portage to check /var/run
+	# symlinks but we still need this to be present before the reboot.
+	if ! use minimal && ! [[ -d "${ROOT}"/var/run/munin ]]; then
+		mkdir "${ROOT}"/var/run/munin
+		chown munin:munin "${ROOT}"/var/run/munin
+		chmod 0750 "${ROOT}"/var/run/munin
 	fi
 }
