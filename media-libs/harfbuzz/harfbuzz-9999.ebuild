@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-9999.ebuild,v 1.6 2012/12/28 12:28:27 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-9999.ebuild,v 1.7 2012/12/31 21:12:01 grobian Exp $
 
 EAPI=5
 
@@ -33,6 +33,17 @@ DEPEND="${RDEPEND}
 [[ ${PV} == 9999 ]] && DEPEND+=" dev-util/gtk-doc-am"
 
 src_prepare() {
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		# on Darwin we need to link with g++, like automake defaults to,
+		# but overridden by upstream because on Linux this is not
+		# necessary, bug #449126
+		sed -i \
+			-e 's/\<LINK\>/CXXLINK/' \
+			src/Makefile.am || die
+		sed -i \
+			-e '/libharfbuzz_la_LINK = /s/\<LINK\>/CXXLINK/' \
+			src/Makefile.in || die
+	fi
 	[[ ${PV} == 9999 ]] && eautoreconf
 	elibtoolize  # for building a shared library on x64-solaris
 }
