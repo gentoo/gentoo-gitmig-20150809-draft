@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mime-types
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.81 2012/12/31 23:28:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.82 2012/12/31 23:52:19 jdhore Exp $
+
+  31 Dec 2012; Jeff Horelick <jdhore@gentoo.org> mime-types-9.ebuild:
+  marked x86 per bug 449406
 
   31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> mime-types-9.ebuild:
   Stable for ppc, wrt bug #449406
