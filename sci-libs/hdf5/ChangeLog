@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.106 2012/12/31 09:38:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.107 2012/12/31 21:49:22 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> hdf5-1.8.10.ebuild:
+  Stable for amd64, wrt bug #449332
 
   31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> hdf5-1.8.10.ebuild:
   Stable for alpha, wrt bug #449332
