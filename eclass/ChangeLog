@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.581 2012/12/30 14:17:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.582 2012/12/31 06:29:42 pesa Exp $
+
+  31 Dec 2012; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
+  Remove dead code.
 
   30 Dec 2012; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
   Fix installing scripts & modules for Prefix, bug #448786.
