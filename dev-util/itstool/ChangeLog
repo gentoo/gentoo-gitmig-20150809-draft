@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/itstool
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/itstool/ChangeLog,v 1.18 2012/12/19 15:53:05 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/itstool/ChangeLog,v 1.19 2013/01/01 11:50:36 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> itstool-1.2.0.ebuild:
+  Add ~ia64, wrt bug #449220
 
   19 Dec 2012; Jeroen Roovers <jer@gentoo.org> itstool-1.2.0.ebuild:
   Marked ~hppa (bug #447432).
