@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-etpro/enemy-territory-etpro-3.2.6-r1.ebuild,v 1.4 2009/10/08 01:50:13 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-etpro/enemy-territory-etpro-3.2.6-r1.ebuild,v 1.5 2013/01/01 17:11:21 tupone Exp $
 
 EAPI=2
 
@@ -17,3 +17,5 @@ SRC_URI="http://etpro.anime.net/etpro-${PV//./_}.zip"
 LICENSE="as-is"
 KEYWORDS="amd64 x86"
 IUSE="dedicated opengl"
+
+QA_PREBUILT="${INS_DIR:1}/${MOD_DIR}/*so"
