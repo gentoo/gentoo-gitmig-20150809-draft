@@ -1,14 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2012.2.ebuild,v 1.1 2012/11/28 21:59:34 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2012.2.ebuild,v 1.2 2013/01/01 08:10:17 prometheanfire Exp $
 
-EAPI=4
+EAPI=5
+#test restricted becaues of bad requirements given (old webob for instance)
+RESTRICT="test"
+PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
 
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
-
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="Keystone is the Openstack authentication, authorization, and
 service catalog written in Python."
@@ -19,9 +18,10 @@ LICENSE="Apache-2.0"
 SLOT="folsom"
 KEYWORDS="~amd64 ~x86"
 IUSE="+sqlite mysql postgres ldap"
+#IUSE="+sqlite mysql postgres ldap test"
 
 #todo, seperate out rdepend via use flags
-DEPEND=""
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}
 	dev-python/eventlet
 	dev-python/greenlet
@@ -47,9 +47,36 @@ RDEPEND="${DEPEND}
 		sys-auth/keystone[ldap]
 		) )
 	"
+#	test? ( dev-python/Babel
+#			dev-python/decorator
+#			dev-python/eventlet
+#			dev-python/greenlet
+#			dev-python/httplib2
+#			dev-python/iso8601
+#			dev-python/lxml
+#			dev-python/netifaces
+#			dev-python/nose
+#			dev-python/nosexcover
+#			dev-python/passlib
+#			dev-python/paste
+#			dev-python/pastedeploy
+#			dev-python/python-pam
+#			dev-python/repoze-lru
+#			dev-python/routes
+#			dev-python/sphinx
+#			>=dev-python/sqlalchemy-migrate-0.7
+#			dev-python/tempita
+#			>=dev-python/webob-1.0.8
+#			dev-python/webtest
+#			)
+#PATCHES=( "${FILESDIR}"/keystone_test-requires.patch )
+#
+#python_test() {
+#	"${PYTHON}" setup.py nosetests || die
+#}
 
-src_install() {
-	distutils_src_install
+python_install() {
+	distutils-r1_python_install
 	newconfd "${FILESDIR}/keystone.confd" keystone
 	newinitd "${FILESDIR}/keystone.initd" keystone
 

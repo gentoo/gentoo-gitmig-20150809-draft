@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/keystone
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.3 2012/12/31 13:50:34 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.4 2013/01/01 08:10:17 prometheanfire Exp $
+
+  01 Jan 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +files/keystone_test-requires.patch, keystone-2012.2.ebuild,
+  keystone-9999.ebuild:
+  update to eapi5 and distutils-r1
 
   31 Dec 2012; Kacper Kowalik <xarthisius@gentoo.org> keystone-9999.ebuild:
   Use EGIT_REPO_URI to point to git sources, rather than invalid in this case
