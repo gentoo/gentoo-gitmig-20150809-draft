@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/nss-myhostname
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-myhostname/ChangeLog,v 1.8 2012/11/28 20:22:43 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-myhostname/ChangeLog,v 1.9 2013/01/01 12:49:58 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> nss-myhostname-0.3.ebuild:
+  Add ~ia64, wrt bug #449220
 
   28 Nov 2012; Brent Baude <ranger@gentoo.org> nss-myhostname-0.3.ebuild:
   Marking nss-myhostname-0.3 ppc for bug 439088
