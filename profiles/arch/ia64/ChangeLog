@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.173 2012/12/31 17:28:28 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.174 2013/01/01 11:59:40 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> package.use.mask, use.mask:
+  Add -zeitgeist. Remove eds/telepathy from folks and sendto from nautilus
 
   31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> use.mask:
   Remove packagekit and colord
