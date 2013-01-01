@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.10 2012/10/19 18:50:32 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.11 2013/01/01 14:05:38 mgorny Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
@@ -22,7 +22,7 @@ RDEPEND=">=dev-lang/python-2.5
 	|| ( >=dev-lang/python-2.5 dev-python/pycrypto )"
 DEPEND="${RDEPEND}
 	dev-python/sphinx
-	dev-python/pyparsing"
+	virtual/pyparsing"
 
 DOCS="AUTHORS NEWS"
 
