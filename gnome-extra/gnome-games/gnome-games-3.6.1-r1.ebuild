@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-3.6.1-r1.ebuild,v 1.4 2013/01/01 12:06:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-3.6.1-r1.ebuild,v 1.5 2013/01/01 14:32:21 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -18,7 +18,7 @@ HOMEPAGE="http://live.gnome.org/GnomeGames/"
 LICENSE="GPL-2 GPL-3 FDL-1.1"
 SLOT="0"
 # TODO: file KEYWORDREQ bug once it's determined that seed is usable
-KEYWORDS="~amd64 ~ia64 ~mips ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~x86"
 
 # FIXME: we should decide whether to have USE flag for games or features
 # IUSE="artworkextra clutter opengl python test"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/gnome-contacts-3.6.2.ebuild,v 1.5 2013/01/01 12:05:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/gnome-contacts-3.6.2.ebuild,v 1.6 2013/01/01 14:31:37 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="https://live.gnome.org/Design/Apps/Contacts"
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE="v4l"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 
 VALA_DEPEND="$(vala_depend)
 	dev-libs/folks[vala]
