@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/Alpha profile directory
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.160 2012/12/31 05:34:12 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.161 2013/01/01 14:26:45 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> package.use.mask, use.mask:
+  Remove dev-libs/folks eds telepathy and gnome-base/nautilus sendto from
+  package.use.mask. Remove gnome-online-accounts and add -zeitgeist from
+  use.mask
 
   31 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> use.mask:
   Mask USE=xine since xine-lib is not keyworded here.

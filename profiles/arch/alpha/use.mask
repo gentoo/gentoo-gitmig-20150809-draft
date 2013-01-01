@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation.
+# Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.76 2012/12/31 05:34:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.77 2013/01/01 14:26:45 ago Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -202,10 +202,6 @@ wayland
 connman
 
 # Matt Turner <mattst88@gentoo.org (27 May 2012)
-# net-libs/gnome-online-accounts is not keyworded
-gnome-online-accounts
-
-# Matt Turner <mattst88@gentoo.org (27 May 2012)
 # sys-apps/entropy is not keyworded
 entropy
 
@@ -225,3 +221,5 @@ python_single_target_jython2_5
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Dec 2012)
 # media-libs/xine-lib is not keyworded
 xine
+
+-zeitgeist

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.116 2012/12/31 01:45:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.117 2013/01/01 14:26:45 ago Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Dec 2012)
 # requires app-office/unoconv, which requires virtual/ooo, which is not
@@ -27,10 +27,6 @@ dev-util/devhelp gedit
 # remove mask when app-crypt/libsecret is keyworded here
 >=gnome-base/gvfs-1.14 gnome-keyring
 >=gnome-extra/libgda-5.1 gnome-keyring
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
-# remove mask when  is keyworded here
->=dev-libs/folks-0.8 telepathy
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (15 Dec 2012)
 # media-video/coherence not keyworded
@@ -82,10 +78,10 @@ sys-cluster/openmpi openmpi_fabrics_psm openmpi_fabrics_knem openmpi_fabrics_ope
 # bug #390345
 >=app-cdr/brasero-3 tracker
 app-text/evince xps
->=dev-libs/folks-0.6 eds socialweb tracker
+>=dev-libs/folks-0.6 socialweb tracker
 >=gnome-base/gnome-menus-3.2 test
 >=gnome-base/gnome-panel-3 eds
->=gnome-base/nautilus-3 previewer sendto tracker
+>=gnome-base/nautilus-3 previewer tracker
 
 # Patrick McLean <chutzpah@gentoo.org> (08 Nov 2011)
 # mask conntrack USE flag for dnsmasq as dep is not keyworded
