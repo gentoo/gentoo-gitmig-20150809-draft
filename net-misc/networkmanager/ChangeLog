@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/networkmanager
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.154 2012/12/11 21:43:28 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.155 2013/01/01 12:45:21 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> networkmanager-0.9.6.4.ebuild:
+  Add ~ia64, wrt bug #449220
 
   11 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   -networkmanager-0.8.4.0-r2.ebuild,
