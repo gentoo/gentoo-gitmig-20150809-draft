@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dcc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.74 2012/12/30 14:27:13 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.75 2013/01/01 18:03:36 polynomial-c Exp $
+
+  01 Jan 2013; Lars Wendler <polynomial-c@gentoo.org> files/dcc.initd-1.3.140:
+  Non-maintainer commit: Removed bashism in init script (bug #388723).
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> dcc-1.3.140-r1.ebuild:
   Stable for sparc, wrt bug #423527
