@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/spice
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.38 2012/11/21 21:59:10 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.39 2013/01/01 14:06:01 mgorny Exp $
+
+  01 Jan 2013; Michał Górny <mgorny@gentoo.org> spice-0.11.0.ebuild,
+  spice-0.11.3.ebuild, spice-0.12.0.ebuild:
+  Use virtual/pyparsing.
 
   21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> spice-0.11.3.ebuild:
   Stable for x86, wrt bug #444222
@@ -172,4 +176,3 @@
   11 Aug 2010; Tiziano Müller <dev-zero@gentoo.org> +spice-0.5.3.ebuild,
   +metadata.xml:
   Initial commit, ebuild written by me.
-

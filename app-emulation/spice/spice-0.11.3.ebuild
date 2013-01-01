@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.11.3.ebuild,v 1.6 2012/11/21 21:59:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.11.3.ebuild,v 1.7 2013/01/01 14:06:01 mgorny Exp $
 
 EAPI=4
 
@@ -51,7 +51,7 @@ RDEPEND=">=x11-libs/pixman-0.17.7
 #		)
 #	)"
 DEPEND="virtual/pkgconfig
-	dev-python/pyparsing
+	virtual/pyparsing
 	${RDEPEND}"
 
 pkg_setup() {
