@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.379 2012/12/31 15:41:49 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.380 2013/01/01 12:17:40 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> evolution-3.6.2-r1.ebuild:
+  Add ~ia64, wrt bug #449220
 
   31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> evolution-3.6.2-r1.ebuild:
   Add ~ppc64, wrt bug #449220
