@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-1.0_beta3181.ebuild,v 1.4 2012/12/17 19:53:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-1.0_beta3181.ebuild,v 1.5 2013/01/01 18:45:01 floppym Exp $
 
 EAPI=5
 
@@ -53,7 +53,7 @@ else
 	S="${WORKDIR}/${MY_P}"
 fi
 
-python_prepare_all() {
+src_prepare() {
 	# Prevent setup from grabbing nose from pypi
 	sed -e /setup_requires/d \
 		-e '/SQLAlchemy/s/, <0.8//' \
@@ -66,7 +66,7 @@ python_prepare_all() {
 		paver generate_setup || die
 	fi
 
-	distutils-r1_python_prepare_all
+	distutils-r1_src_prepare
 }
 
 python_test() {
