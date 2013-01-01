@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r3.ebuild,v 1.9 2013/01/01 21:17:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r3.ebuild,v 1.10 2013/01/01 22:27:39 hasufell Exp $
 
 EAPI=4
 
@@ -24,6 +24,9 @@ RDEPEND="virtual/daemontools
 	!net-ftp/netkit-ftpd"
 
 src_prepare() {
+	# verbose build log
+	epatch "${FILESDIR}"/${P}-build.patch
+
 	# filetypes in env using daemontools
 	use vanilla || epatch "${DISTDIR}"/${P}-filetype-diff
 
@@ -41,6 +44,7 @@ src_prepare() {
 }
 
 src_configure() {
+	tc-export AR RANLIB
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	echo "/usr" > conf-home
