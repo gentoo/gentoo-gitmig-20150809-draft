@@ -1,6 +1,9 @@
 # ChangeLog for app-text/qpdf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.17 2012/12/19 18:31:43 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.18 2013/01/01 14:04:58 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> qpdf-3.0.2.ebuild:
+  Add ~alpha, wrt bug #449220
 
   19 Dec 2012; Agostino Sarubbo <ago@gentoo.org> qpdf-3.0.2.ebuild:
   Add ~ia64, wrt bug #428356
