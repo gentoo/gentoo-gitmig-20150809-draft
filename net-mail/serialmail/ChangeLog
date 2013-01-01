@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/serialmail
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/ChangeLog,v 1.26 2011/06/27 06:01:42 eras Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/ChangeLog,v 1.27 2013/01/01 20:45:04 ulm Exp $
+
+  01 Jan 2013; Ulrich Müller <ulm@gentoo.org> serialmail-0.75-r4.ebuild:
+  Fix LICENSE, add mirror and bindist restrictions, bug 444424.
 
   27 Jun 2011; Eray Aslan <eras@gentoo.org> -serialmail-0.75-r2.ebuild,
   -serialmail-0.75-r3.ebuild:

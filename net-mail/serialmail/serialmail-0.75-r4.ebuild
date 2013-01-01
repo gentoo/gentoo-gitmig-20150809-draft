@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/serialmail-0.75-r4.ebuild,v 1.5 2011/06/25 18:27:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/serialmail-0.75-r4.ebuild,v 1.6 2013/01/01 20:45:04 ulm Exp $
 
 EAPI=4
 
@@ -11,17 +11,18 @@ HOMEPAGE="http://cr.yp.to/serialmail.html"
 SRC_URI="http://cr.yp.to/software/${P}.tar.gz
 	mirror://gentoo/${P}-patch.tar.bz2"
 
+LICENSE="all-rights-reserved"
+SLOT="0"
+KEYWORDS="~amd64 ppc x86"
+IUSE="static"
+RESTRICT="mirror bindist"
+
 DEPEND="sys-apps/groff
 	>=sys-apps/ucspi-tcp-0.88"
 
 RDEPEND="sys-apps/groff
 	>=sys-apps/ucspi-tcp-0.88
 	virtual/daemontools"
-
-SLOT="0"
-LICENSE="as-is"
-KEYWORDS="~amd64 ppc x86"
-IUSE="static"
 
 src_prepare() {
 	epatch "${WORKDIR}"/${P}-gentoo.patch
