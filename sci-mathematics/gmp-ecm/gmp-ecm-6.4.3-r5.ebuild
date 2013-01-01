@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmp-ecm/gmp-ecm-6.4.3-r4.ebuild,v 1.1 2013/01/01 14:28:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmp-ecm/gmp-ecm-6.4.3-r5.ebuild,v 1.1 2013/01/01 17:08:45 patrick Exp $
 
 EAPI=4
 DESCRIPTION="Elliptic Curve Method for Integer Factorization"
@@ -12,10 +12,11 @@ inherit eutils
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+custom-tune gwnum -openmp test"
+IUSE="+blas +custom-tune gwnum -openmp test"
 
 # gmp 5.1 breaks a few things with this version
 DEPEND="<dev-libs/gmp-5.1.0
+	blas? ( sci-libs/gsl )
 	gwnum? ( sci-mathematics/gwnum )
 	openmp? ( sys-devel/gcc[openmp] )"
 RDEPEND="${DEPEND}"

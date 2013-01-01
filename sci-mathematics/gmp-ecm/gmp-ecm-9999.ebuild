@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmp-ecm/gmp-ecm-9999.ebuild,v 1.1 2013/01/01 14:28:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmp-ecm/gmp-ecm-9999.ebuild,v 1.2 2013/01/01 17:08:45 patrick Exp $
 
 EAPI=4
 DESCRIPTION="Elliptic Curve Method for Integer Factorization"
@@ -13,9 +13,10 @@ inherit eutils subversion autotools
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="+custom-tune gwnum -openmp test"
+IUSE="blas +custom-tune gwnum -openmp test"
 
 DEPEND="dev-libs/gmp
+	blas? ( sci-libs/gsl )
 	gwnum? ( sci-mathematics/gwnum )
 	openmp? ( sys-devel/gcc[openmp] )"
 RDEPEND="${DEPEND}"
