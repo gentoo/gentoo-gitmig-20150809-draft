@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/eventmachine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.18 2013/01/01 09:01:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.19 2013/01/01 09:03:52 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> eventmachine-0.12.10-r2.ebuild:
+  Stable for x86, wrt bug #448672
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> eventmachine-0.12.10-r2.ebuild:
   Stable for amd64, wrt bug #448672

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/patron
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/ChangeLog,v 1.24 2013/01/01 09:02:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/ChangeLog,v 1.25 2013/01/01 09:04:20 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> patron-0.4.18.ebuild:
+  Stable for x86, wrt bug #448672
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> patron-0.4.18.ebuild:
   Stable for amd64, wrt bug #448672
