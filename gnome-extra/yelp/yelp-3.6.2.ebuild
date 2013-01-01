@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-3.6.2.ebuild,v 1.3 2012/12/31 15:40:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-3.6.2.ebuild,v 1.4 2013/01/01 12:15:52 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~amd64 ~ia64 ~mips ~ppc ~ppc64 ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE=""
 
 RDEPEND="

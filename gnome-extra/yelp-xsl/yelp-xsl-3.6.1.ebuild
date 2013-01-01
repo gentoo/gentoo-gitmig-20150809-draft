@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp-xsl/yelp-xsl-3.6.1.ebuild,v 1.4 2012/12/19 15:54:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp-xsl/yelp-xsl-3.6.1.ebuild,v 1.5 2013/01/01 12:16:09 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2+ LGPL-2.1+ MIT FDL-1.1+"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~hppa ~mips ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND=">=dev-libs/libxml2-2.6.12
 	>=dev-libs/libxslt-1.1.8"
