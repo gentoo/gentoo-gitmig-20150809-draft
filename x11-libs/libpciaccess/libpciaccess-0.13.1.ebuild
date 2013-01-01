@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/libpciaccess-0.13.1.ebuild,v 1.9 2012/08/26 18:59:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/libpciaccess-0.13.1.ebuild,v 1.10 2013/01/01 18:57:50 mattst88 Exp $
 
 EAPI=4
 inherit xorg-2
@@ -11,7 +11,8 @@ IUSE="minimal zlib"
 
 DEPEND="!<x11-base/xorg-server-1.5
 	zlib? ( sys-libs/zlib )"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	sys-apps/hwids"
 
 pkg_setup() {
 	xorg-2_pkg_setup

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libpciaccess
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.83 2012/08/26 18:59:49 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.84 2013/01/01 18:57:50 mattst88 Exp $
+
+  01 Jan 2013; Matt Turner <mattst88@gentoo.org> libpciaccess-0.13.1.ebuild:
+  Add sys-apps/hwids dependency, bug 445572.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> libpciaccess-0.13.1.ebuild:
   alpha/ia64/sh/sparc stable wrt #419473
@@ -315,4 +318,3 @@
   +libpciaccess-0.10.2.ebuild:
   New package, used by xorg-server-1.5: Library providing generic access to
   the PCI bus and devices.
-
