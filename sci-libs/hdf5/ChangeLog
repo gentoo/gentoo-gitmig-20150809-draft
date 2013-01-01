@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/hdf5
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.108 2012/12/31 23:31:39 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.109 2013/01/01 19:41:53 xarthisius Exp $
+
+  01 Jan 2013; Kacper Kowalik <xarthisius@gentoo.org> hdf5-1.8.10.ebuild,
+  hdf5-1.8.8-r1.ebuild, hdf5-1.8.9-r2.ebuild:
+  Respect AR wrt #449514 by Agostino Sarubbo <ago@gentoo.org>
 
   31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> hdf5-1.8.10.ebuild:
   Stable for ppc, wrt bug #449332

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.8-r1.ebuild,v 1.8 2012/10/18 21:30:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.8-r1.ebuild,v 1.9 2013/01/01 19:41:53 xarthisius Exp $
 
 EAPI=4
 
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool:2"
 
 pkg_setup() {
-	tc-export CXX CC # workaround for bug 285148
+	tc-export CXX CC AR # workaround for bug 285148
 	if use fortran; then
 		use fortran2003 && FORTRAN_STANDARD=2003
 		fortran-2_pkg_setup
