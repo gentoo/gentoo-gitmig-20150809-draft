@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/wireless-regdb-20110428-r1.ebuild,v 1.8 2013/01/01 08:27:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/wireless-regdb-20110428-r1.ebuild,v 1.9 2013/01/01 12:47:44 ago Exp $
 
 inherit multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://wireless.kernel.org/download/wireless-regdb/${MY_P}.tar.bz2"
 LICENSE="ISC"
 SLOT="0"
 
-KEYWORDS="amd64 arm ~mips ppc ppc64 x86"
+KEYWORDS="amd64 arm ~ia64 ~mips ppc ppc64 x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
