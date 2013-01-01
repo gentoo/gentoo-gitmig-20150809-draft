@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/cvsps-3.3.ebuild,v 1.1 2012/12/31 20:36:09 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/cvsps-3.3-r1.ebuild,v 1.1 2013/01/01 12:42:13 slyfox Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ src_prepare() {
 	sed -i 's/ -lz/& $(LDFLAGS)/' Makefile || die
 
 	tc-export CC
-	export prefix=${D}
+	export prefix=${D}/usr
 }
 
 src_install() {
