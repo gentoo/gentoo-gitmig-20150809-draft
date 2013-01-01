@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libdmapsharing
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libdmapsharing/ChangeLog,v 1.12 2013/01/01 12:42:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdmapsharing/ChangeLog,v 1.13 2013/01/01 14:46:47 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libdmapsharing-2.9.15.ebuild:
+  Add ~alpha, wrt bug #449220
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libdmapsharing-2.9.15.ebuild:
   Add ~ia64, wrt bug #449220
