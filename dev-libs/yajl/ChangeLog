@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/yajl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.28 2012/05/29 15:42:54 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.29 2013/01/01 11:47:17 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> yajl-2.0.4.ebuild:
+  Add ~ia64, wrt bug #449220
 
   29 May 2012; Brent Baude <ranger@gentoo.org> yajl-2.0.3.ebuild:
   Marking yajl-2.0.3 ppc64 for bug 402287
@@ -117,4 +120,3 @@
   18 Mar 2010; Ondrej Sukup (mimi_vx) <mimi.vx@gmail.com>
   +yajl-1.0.9.ebuild, +metadata.xml:
   initial commit of yajl , thanks to scarabeus and Tommy[D]
-

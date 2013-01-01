@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xapian-bindings
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.45 2012/11/03 12:29:16 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.46 2013/01/01 11:46:59 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  xapian-bindings-1.2.12-r1.ebuild:
+  Add ~ia64, wrt bug #449220
 
 *xapian-bindings-1.2.12-r1 (03 Nov 2012)
 

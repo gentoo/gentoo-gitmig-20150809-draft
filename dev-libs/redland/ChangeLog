@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/redland
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.105 2012/05/31 19:17:21 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.106 2013/01/01 11:45:52 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> redland-1.0.15.ebuild:
+  Add ~ia64, wrt bug #449220
 
   31 May 2012; Samuli Suominen <ssuominen@gentoo.org> redland-1.0.15.ebuild:
   Force latest stable available raptor (and rasqal) in order to remove obsolete
