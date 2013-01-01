@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/mcomix
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/ChangeLog,v 1.13 2012/07/21 05:24:19 dirtyepic Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/ChangeLog,v 1.14 2013/01/01 03:04:56 dirtyepic Exp $
+
+*mcomix-0.99-r1 (01 Jan 2013)
+
+  01 Jan 2013; Ryan Hill <dirtyepic@gentoo.org> +mcomix-0.99-r1.ebuild,
+  +files/mcomix-0.99-auto-rotate.patch:
+  Add missing gdk-pixbuf dependency, reported by abc def. Backport auto-rotate
+  patch from upstream.
 
 *mcomix-0.99 (21 Jul 2012)
 
