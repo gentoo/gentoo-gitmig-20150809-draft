@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/rest
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.11 2012/12/24 12:58:05 eva Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.12 2013/01/01 12:43:45 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> rest-0.7.90.ebuild:
+  Add ~ia64, wrt bug #449220
 
 *rest-0.7.90 (24 Dec 2012)
 

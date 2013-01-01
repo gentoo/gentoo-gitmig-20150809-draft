@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.6.2.ebuild,v 1.1 2012/12/25 21:50:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.6.2.ebuild,v 1.2 2013/01/01 12:42:05 ago Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="https://live.gnome.org/GnomeOnlineAccounts"
 LICENSE="LGPL-2"
 SLOT="0"
 IUSE="gnome +introspection kerberos"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 
 # pango used in goaeditablelabel
 # libsoup used in goaoauthprovider
