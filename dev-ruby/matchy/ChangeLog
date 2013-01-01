@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/matchy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/matchy/ChangeLog,v 1.8 2011/04/09 12:04:28 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/matchy/ChangeLog,v 1.9 2013/01/01 09:02:27 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> matchy-0.5.2.ebuild:
+  Stable for amd64, wrt bug #448672
 
   09 Apr 2011; Hans de Graaff <graaff@gentoo.org> matchy-0.5.2.ebuild:
   Add ree18 support.
@@ -37,4 +40,3 @@
   28 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   +matchy-0.4.2.ebuild, +files/matchy-0.4.2-order.patch, +metadata.xml:
   Initial import of (mcmire-)matchy, needed for crack's testsuite.
-
