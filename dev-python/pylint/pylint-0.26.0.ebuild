@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.26.0.ebuild,v 1.2 2012/12/31 15:33:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.26.0.ebuild,v 1.3 2013/01/01 14:15:38 ago Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.5"
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.logilab.org/pub/${PN}/${P}.tar.gz mirror://pypi/${PN:0:1}/${P
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="examples"
 
 # Versions specified in __pkginfo__.py.
