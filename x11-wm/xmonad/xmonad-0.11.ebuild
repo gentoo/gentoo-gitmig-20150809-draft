@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/xmonad-0.11.ebuild,v 1.1 2013/01/01 08:05:16 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/xmonad-0.11.ebuild,v 1.2 2013/01/01 23:59:42 slyfox Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~x86 ~ppc64 ~sparc"
+KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="dev-haskell/extensible-exceptions:=[profile?]
