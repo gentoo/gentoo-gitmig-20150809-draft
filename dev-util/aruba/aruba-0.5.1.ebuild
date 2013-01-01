@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/aruba-0.5.1.ebuild,v 1.1 2012/12/11 18:35:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/aruba-0.5.1.ebuild,v 1.2 2013/01/01 10:40:23 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -27,8 +27,10 @@ RDEPEND="${RDEPEND}"
 ruby_add_rdepend "
 	>=dev-ruby/bcat-0.6.1
 	>=dev-ruby/childprocess-0.3.6 =dev-ruby/childprocess-0.3*
-	>=dev-ruby/rspec-2.7
+	>=dev-ruby/rspec-expectations-2.7:2
 	>=dev-util/cucumber-1.1.1"
+
+ruby_add_bdepend "test? ( >=dev-ruby/rspec-2.7:2 )"
 
 all_ruby_prepare() {
 	# Remove bundler-related code.
