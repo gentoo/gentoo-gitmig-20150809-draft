@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/cabal
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.82 2012/12/29 11:27:56 gienah Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.83 2013/01/01 19:01:24 slyfox Exp $
+
+  01 Jan 2013; Sergei Trofimovich <slyfox@gentoo.org> -cabal-1.10.2.0.ebuild,
+  -cabal-1.8.0.6-r1.ebuild:
+  Removed old.
 
   29 Dec 2012; Mark Wright <gienah@gentoo.org> cabal-1.10.2.0.ebuild,
   cabal-1.8.0.6-r1.ebuild:
