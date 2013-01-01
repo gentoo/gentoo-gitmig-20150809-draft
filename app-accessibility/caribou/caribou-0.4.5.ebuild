@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.5.ebuild,v 1.3 2012/12/31 15:24:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.5.ebuild,v 1.4 2013/01/01 11:32:46 ago Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ HOMEPAGE="https://live.gnome.org/Caribou"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 COMMON_DEPEND=">=dev-python/pygobject-2.90.3:3
