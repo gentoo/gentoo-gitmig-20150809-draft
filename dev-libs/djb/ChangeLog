@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/djb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/djb/ChangeLog,v 1.8 2009/09/23 17:18:13 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/djb/ChangeLog,v 1.9 2013/01/01 20:38:31 ulm Exp $
+
+  01 Jan 2013; Ulrich Müller <ulm@gentoo.org> djb-0.5.2.ebuild:
+  Fix LICENSE, add mirror and bindist restrictions, bug 444424.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> djb-0.5.2.ebuild:
   Remove virtual/libc
