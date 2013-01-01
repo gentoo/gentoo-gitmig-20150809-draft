@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/TimeDate
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/ChangeLog,v 1.45 2012/09/02 07:55:08 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/ChangeLog,v 1.46 2013/01/01 15:18:05 grobian Exp $
+
+  01 Jan 2013; Fabian Groffen <grobian@gentoo.org> TimeDate-1.200.0.ebuild:
+  Marked ~x86-freebsd, bug #448594
 
   02 Sep 2012; Torsten Veller <tove@gentoo.org> -TimeDate-1.16.ebuild:
   Cleanup
