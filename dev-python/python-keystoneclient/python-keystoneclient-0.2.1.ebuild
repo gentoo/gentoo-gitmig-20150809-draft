@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-2012.2.ebuild,v 1.1 2013/01/01 08:39:20 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-0.2.1.ebuild,v 1.1 2013/01/01 09:01:23 prometheanfire Exp $
 
 EAPI=5
 #restricted due to packages missing and bad depends in the test ==webob-1.0.8
@@ -11,8 +11,7 @@ inherit distutils-r1
 
 DESCRIPTION="A client for the OpenStack Keystone API."
 HOMEPAGE="https://github.com/openstack/python-keystoneclient"
-#SRC_URI="http://launchpad.net/keystone/folsom/${PV}/+download/${P}.tar.gz"
-SRC_URI="http://launchpad.net/keystone/folsom/folsom-1/+download/${P}~f1.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
