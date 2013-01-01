@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/modemmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.40 2013/01/01 12:44:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.41 2013/01/01 14:48:32 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> modemmanager-0.6.0.0.ebuild:
+  Add ~alpha, wrt bug #449220
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> modemmanager-0.6.0.0.ebuild:
   Add ~ia64, wrt bug #449220
