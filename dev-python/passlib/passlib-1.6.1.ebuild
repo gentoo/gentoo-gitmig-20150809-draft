@@ -1,10 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/passlib/passlib-1.6.1.ebuild,v 1.1 2012/11/28 21:48:39 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/passlib/passlib-1.6.1.ebuild,v 1.2 2013/01/01 06:22:20 prometheanfire Exp $
 
-EAPI=4
+EAPI=5
+PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="comprehensive password hashing framework supporting over 20
 schemes"
@@ -14,17 +15,19 @@ LICENSE="BSD-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="test doc"
-DEPEND="dev-python/setuptools
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/nose )"
 RDEPEND=""
 
-src_install() {
-	distutils_src_install
-	if use doc; then
-		dodoc "${S}"/docs/*
-	fi
+python_test() {
+	"${PYTHON}" setup.py nosetests || die
 }
 
-src_test() {
-	PYTHONPATH=. "${python}" setup.py nosetests || die "tests failed"
+python_install() {
+	distutils-r1_python_install
+	if use doc; then
+		dodoc "${S}"/docs/*.rst
+		dodoc "${S}"/docs/requirements.txt
+		dodoc "${S}"/docs/lib/*.rst
+	fi
 }
