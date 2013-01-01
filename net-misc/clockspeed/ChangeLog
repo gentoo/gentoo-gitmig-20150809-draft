@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/clockspeed
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.29 2012/03/04 10:21:29 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.30 2013/01/01 20:48:21 ulm Exp $
+
+  01 Jan 2013; Ulrich Müller <ulm@gentoo.org> clockspeed-0.62-r6.ebuild:
+  Fix LICENSE, add mirror and bindist restrictions, bug 444424.
 
   04 Mar 2012; Pacho Ramos <pacho@gentoo.org> -files/leapsecs.dat.20081114,
   clockspeed-0.62-r6.ebuild:

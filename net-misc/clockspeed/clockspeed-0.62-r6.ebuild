@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r6.ebuild,v 1.4 2012/03/04 10:21:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r6.ebuild,v 1.5 2013/01/01 20:48:21 ulm Exp $
 
 EAPI=4
 inherit eutils flag-o-matic
@@ -14,11 +14,11 @@ LEAPSECONDS_DATE="20081114"
 SRC_URI="http://cr.yp.to/clockspeed/${P}.tar.gz
 	http://dev.gentoo.org/~pacho/maintainer-needed/leapsecs.dat."$LEAPSECONDS_DATE""
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="amd64 ~mips x86"
 IUSE="static selinux"
-RESTRICT="test"
+RESTRICT="mirror bindist test"
 
 DEPEND="sys-apps/groff"
 RDEPEND="selinux? ( sec-policy/selinux-clockspeed )
