@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/libsecret
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/ChangeLog,v 1.8 2012/12/17 16:54:10 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/ChangeLog,v 1.9 2013/01/01 11:35:08 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libsecret-0.12.ebuild:
+  Add ~ia64, wrt bug #449220
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libsecret-0.12.ebuild:
   Add ~ppc, wrt bug #447426
