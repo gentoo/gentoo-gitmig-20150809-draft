@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jaxen
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.56 2012/10/15 18:18:16 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.57 2013/01/01 19:14:29 ulm Exp $
+
+  01 Jan 2013; Ulrich Müller <ulm@gentoo.org> jaxen-1.1.1.ebuild,
+  jaxen-1.1.4.ebuild:
+  Update LICENSE, jaxen is replaced by the JDOM license template.
 
   15 Oct 2012; Ralph Sennhauser <sera@gentoo.org>
   files/jaxen-1.1.4_maven1-build.xml:
