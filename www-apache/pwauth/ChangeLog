@@ -1,6 +1,13 @@
 # ChangeLog for www-apache/pwauth
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/pwauth/ChangeLog,v 1.7 2012/11/27 19:39:32 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/pwauth/ChangeLog,v 1.8 2013/01/01 16:26:42 pinkbyte Exp $
+
+*pwauth-2.3.10 (01 Jan 2013)
+
+  01 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> +pwauth-2.3.10.ebuild,
+  +files/pwauth-2.3.10-config.patch, +files/pwauth-2.3.10-makefile.patch,
+  +files/pwauth-strchr.patch:
+  Version bump, HOMEPAGE and SRC_URI change, wrt bug #349411
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> -pwauth-2.3.2.ebuild,
   metadata.xml:
