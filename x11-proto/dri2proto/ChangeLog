@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/dri2proto
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/dri2proto/ChangeLog,v 1.54 2012/12/30 14:55:53 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/dri2proto/ChangeLog,v 1.55 2013/01/01 19:06:48 armin76 Exp $
+
+  01 Jan 2013; Raúl Porcel <armin76@gentoo.org> dri2proto-2.8.ebuild:
+  s390/sh stable wrt #440872
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> dri2proto-2.8.ebuild:
   Stable for alpha, wrt bug #440872
