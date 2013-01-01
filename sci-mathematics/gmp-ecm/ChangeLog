@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/gmp-ecm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmp-ecm/ChangeLog,v 1.5 2012/11/28 09:47:26 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmp-ecm/ChangeLog,v 1.6 2013/01/01 14:28:37 patrick Exp $
+
+*gmp-ecm-6.4.3-r4 (01 Jan 2013)
+*gmp-ecm-9999 (01 Jan 2013)
+
+  01 Jan 2013; Patrick Lauer <patrick@gentoo.org> +gmp-ecm-6.4.3-r4.ebuild,
+  +gmp-ecm-9999.ebuild, -gmp-ecm-6.4.3-r2.ebuild, -gmp-ecm-6.4.3-r3.ebuild:
+  Fix gmp dep, add test phase, add live ebuild
 
   28 Nov 2012; Patrick Lauer <patrick@gentoo.org> gmp-ecm-6.4.3-r3.ebuild:
   Avoid parallel make failure
