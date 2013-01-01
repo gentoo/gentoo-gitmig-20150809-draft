@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r3.ebuild,v 1.8 2012/09/09 15:57:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r3.ebuild,v 1.9 2013/01/01 21:17:56 ulm Exp $
 
 EAPI=4
 
@@ -12,17 +12,16 @@ SRC_URI="http://cr.yp.to/publicfile/${P}.tar.gz
 	http://www.ohse.de/uwe/patches/${P}-filetype-diff
 	http://www.publicfile.org/ftp-ls-patch"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="amd64 hppa ppc x86"
 IUSE="selinux vanilla"
+RESTRICT="mirror bindist test"
 
 RDEPEND="virtual/daemontools
 	>=sys-apps/ucspi-tcp-0.83
 	selinux? ( sec-policy/selinux-publicfile )
 	!net-ftp/netkit-ftpd"
-
-RESTRICT="test"
 
 src_prepare() {
 	# filetypes in env using daemontools
