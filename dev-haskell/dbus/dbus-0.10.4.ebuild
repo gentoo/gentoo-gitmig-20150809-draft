@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dbus/dbus-0.10.4.ebuild,v 1.4 2013/01/01 11:38:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dbus/dbus-0.10.4.ebuild,v 1.5 2013/01/01 14:06:08 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-haskell/cereal-0.3.4:=[profile?]
