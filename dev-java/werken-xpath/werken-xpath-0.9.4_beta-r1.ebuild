@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/werken-xpath-0.9.4_beta-r1.ebuild,v 1.10 2012/02/18 22:02:28 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/werken-xpath-0.9.4_beta-r1.ebuild,v 1.11 2013/01/01 19:18:56 ulm Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -17,10 +17,9 @@ SRC_URI="mirror://gentoo/${MY_P}-src.tar.gz"
 # This tarball was acquired from jpackage's src rpm of the package by the same
 # name
 
-LICENSE="werken.xpath"
+LICENSE="JDOM"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
-
 IUSE=""
 
 # need the versioned atom to get keep ensure dep happy
