@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.10.2.ebuild,v 1.1 2012/11/27 22:07:55 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.10.2-r1.ebuild,v 1.1 2013/01/01 19:25:58 creffett Exp $
 
 EAPI=4
 
@@ -56,6 +56,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.8.10-FindPythonLibs.patch
 	"${FILESDIR}"/${PN}-2.8.10-libform.patch
 	"${FILESDIR}"/${PN}-2.8.10-more-no_host_paths.patch
+	"${FILESDIR}"/${PN}-2.8.10.2-implicit-include.patch
 )
 
 cmake_src_bootstrap() {
@@ -63,7 +64,7 @@ cmake_src_bootstrap() {
 	# Because bootstrap does not know anything else.
 	echo ${MAKEOPTS} | egrep -o '(\-j|\-\-jobs)(=?|[[:space:]]*)[[:digit:]]+' > /dev/null
 	if [ $? -eq 0 ]; then
-		par_arg=$(echo ${MAKEOPTS} | egrep -o '(\-j|\-\-jobs)(=?|[[:space:]]*)[[:digit:]]+' | egrep -o '[[:digit:]]+')
+		par_arg=$(echo ${MAKEOPTS} | egrep -o '(\-j|\-\-jobs)(=?|[[:space:]]*)[[:digit:]]+' | tail -n1 | egrep -o '[[:digit:]]+')
 		par_arg="--parallel=${par_arg}"
 	else
 		par_arg="--parallel=1"

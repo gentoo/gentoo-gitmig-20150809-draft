@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/cmake
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.228 2012/11/27 22:07:55 creffett Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.229 2013/01/01 19:25:58 creffett Exp $
+
+*cmake-2.8.10.2-r1 (01 Jan 2013)
+
+  01 Jan 2013; Chris Reffett <creffett@gentoo.org> +cmake-2.8.10.2-r1.ebuild,
+  +files/cmake-2.8.10.2-implicit-include.patch, -cmake-2.8.10.2.ebuild:
+  Revision bump. Add patch to fix stripping implicit include dirs, bug 444340.
+  Add shell-script magic in ebuild to strip extra jobs values in MAKEOPTS (which
+  causes build failures), bug 447040.
 
 *cmake-2.8.10.2 (27 Nov 2012)
 
