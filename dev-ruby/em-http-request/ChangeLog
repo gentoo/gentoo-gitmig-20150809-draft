@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/em-http-request
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/ChangeLog,v 1.8 2011/11/01 06:35:02 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/ChangeLog,v 1.9 2013/01/01 08:49:37 graaff Exp $
+
+  01 Jan 2013; Hans de Graaff <graaff@gentoo.org>
+  em-http-request-0.2.14.ebuild:
+  Comment out the test dependencies so they don't need to be included in the
+  stable list.
 
   01 Nov 2011; Hans de Graaff <graaff@gentoo.org>
   em-http-request-0.2.14.ebuild:
