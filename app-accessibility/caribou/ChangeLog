@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/caribou
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/ChangeLog,v 1.15 2013/01/01 11:32:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/ChangeLog,v 1.16 2013/01/01 14:00:10 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> caribou-0.4.5.ebuild:
+  Add ~alpha, wrt bug #449220
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> caribou-0.4.5.ebuild:
   Add ~ia64, wrt bug #449220
