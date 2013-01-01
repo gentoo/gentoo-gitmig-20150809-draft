@@ -1,16 +1,16 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.145 2012/12/18 21:52:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.146 2013/01/01 10:56:53 scarabeus Exp $
 
-EAPI=4
+EAPI=5
 
 KDE_REQUIRED="optional"
 QT_MINIMAL="4.7.4"
 KDE_SCM="git"
 CMAKE_REQUIRED="never"
 
-PYTHON_DEPEND="3:3.3"
-PYTHON_USE_WITH="threads,xml"
+PYTHON_COMPAT=( python3_3 )
+PYTHON_REQ_USE="threads,xml"
 
 # experimental ; release ; old
 # Usually the tarballs are moved a lot so this should make
@@ -27,7 +27,7 @@ BRANDING="${PN}-branding-gentoo-0.7.tar.xz"
 # PATCHSET="${P}-patchset-01.tar.xz"
 
 [[ ${PV} == *9999* ]] && SCM_ECLASS="git-2"
-inherit base autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils python multilib toolchain-funcs flag-o-matic ${SCM_ECLASS}
+inherit base autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils python-single-r1 multilib toolchain-funcs flag-o-matic ${SCM_ECLASS}
 unset SCM_ECLASS
 
 DESCRIPTION="LibreOffice, a full office productivity suite."
@@ -89,6 +89,7 @@ SLOT="0"
 [[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 
 COMMON_DEPEND="
+	${PYTHON_DEPS}
 	app-arch/zip
 	app-arch/unzip
 	>=app-text/hunspell-1.3.2-r3
@@ -266,9 +267,7 @@ pkg_pretend() {
 pkg_setup() {
 	java-pkg-opt-2_pkg_setup
 	kde4-base_pkg_setup
-
-	python_set_active_version 3
-	python_pkg_setup
+	python-single-r1_pkg_setup
 
 	[[ ${MERGE_TYPE} != binary ]] && check-reqs_pkg_setup
 }
