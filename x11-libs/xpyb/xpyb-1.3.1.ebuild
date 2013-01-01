@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/xpyb-1.3.1.ebuild,v 1.8 2012/11/22 08:34:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/xpyb-1.3.1.ebuild,v 1.9 2013/01/01 09:06:26 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://xcb.freedesktop.org/dist/${P}.tar.bz2"
 DESCRIPTION="XCB-based Python bindings for the X Window System"
 HOMEPAGE="http://xcb.freedesktop.org/"
 
-KEYWORDS="amd64 ~arm ~hppa ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="selinux"
 
 RDEPEND=">=x11-libs/libxcb-1.7
