@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.6.3-r1.ebuild,v 1.3 2012/12/31 15:36:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.6.3-r1.ebuild,v 1.4 2013/01/01 11:52:03 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -17,7 +17,7 @@ IUSE="+bluetooth +colord +cups +gnome-online-accounts +i18n kerberos +networkman
 if [[ ${PV} = 9999 ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+	KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 fi
 
 # XXX: NetworkManager-0.9 support is automagic, make hard-dep once it's released
