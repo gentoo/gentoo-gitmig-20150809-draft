@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailanalog/qmailanalog-0.70-r1.ebuild,v 1.7 2011/08/26 14:44:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailanalog/qmailanalog-0.70-r1.ebuild,v 1.8 2013/01/01 20:31:36 ulm Exp $
 
 inherit eutils fixheadtails toolchain-funcs
 
@@ -8,8 +8,8 @@ DESCRIPTION="collection of tools to help you analyze qmail's activity record"
 SRC_URI="http://cr.yp.to/software/${P}.tar.gz"
 HOMEPAGE="http://cr.yp.to/qmailanalog.html"
 
+LICENSE="freedist public-domain" # public-domain for files/tai64nfrac.c
 SLOT="0"
-LICENSE="as-is"
 KEYWORDS="x86 sparc ~amd64"
 IUSE=""
 
@@ -17,8 +17,8 @@ DEPEND="sys-apps/groff"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-errno.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-errno.patch
 	ht_fix_file auto_home.c.do default.do Makefile
 }
 
@@ -28,7 +28,7 @@ src_compile() {
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 
 	emake || die
-	$(tc-getCC) ${CFLAGS} ${FILESDIR}/tai64nfrac.c -o tai64nfrac || die
+	$(tc-getCC) ${CFLAGS} "${FILESDIR}"/tai64nfrac.c -o tai64nfrac || die
 }
 
 src_test() { :; }
