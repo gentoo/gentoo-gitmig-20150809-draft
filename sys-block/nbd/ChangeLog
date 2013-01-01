@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/nbd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.77 2012/10/17 03:33:03 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.78 2013/01/01 12:50:30 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> nbd-3.2.ebuild:
+  Add ~ia64, wrt bug #449220
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> nbd-3.2.ebuild:
   x86 stable wrt bug #433357

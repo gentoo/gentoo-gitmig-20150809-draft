@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/open-iscsi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.46 2012/12/31 15:56:27 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.47 2013/01/01 12:50:47 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> open-iscsi-2.0.872-r1.ebuild:
+  Add ~ia64, wrt bug #449220
 
   31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> open-iscsi-2.0.872-r1.ebuild:
   Add ~ppc64, wrt bug #449220
