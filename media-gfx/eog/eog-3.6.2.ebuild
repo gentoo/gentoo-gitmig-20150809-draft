@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-3.6.2.ebuild,v 1.4 2013/01/01 12:18:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-3.6.2.ebuild,v 1.5 2013/01/01 14:36:52 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org/projects/eog/"
 LICENSE="GPL-2+"
 SLOT="1"
 IUSE="+exif +introspection +jpeg lcms +svg tiff xmp"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 
 REQUIRED_USE="exif? ( jpeg )"
 
