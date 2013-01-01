@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/clutter
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.60 2012/12/16 22:04:03 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.61 2013/01/01 12:19:50 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> clutter-1.12.2.ebuild:
+  Add ~ia64, wrt bug #449220
 
 *clutter-1.12.2 (16 Dec 2012)
 
@@ -297,4 +300,3 @@
   +files/clutter-1.0.0-disable-tests.patch, +clutter-1.0.10.ebuild,
   +metadata.xml:
   Initial ebuild for clutter, an opengl-based toolkit for user interfaces
-

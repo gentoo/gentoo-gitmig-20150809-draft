@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/clutter-gtk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/ChangeLog,v 1.38 2012/12/17 19:50:36 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/ChangeLog,v 1.39 2013/01/01 12:20:28 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> clutter-gtk-1.4.2.ebuild:
+  Add ~ia64, wrt bug #449220
 
 *clutter-gtk-1.4.2 (17 Dec 2012)
 
@@ -179,4 +182,3 @@
   26 Feb 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
   +clutter-gtk-0.10.2.ebuild, +metadata.xml:
   Add initial ebuild for clutter-gtk, gtk+ integration library for clutter
-

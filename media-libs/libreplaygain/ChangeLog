@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libreplaygain
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/ChangeLog,v 1.35 2012/09/30 18:10:26 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/ChangeLog,v 1.36 2013/01/01 12:24:35 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libreplaygain-477.ebuild:
+  Add ~ia64, wrt bug #449220
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> libreplaygain-477.ebuild:
   alpha stable wrt #419095
@@ -124,4 +127,3 @@
   25 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
   +libreplaygain-444.ebuild, +files/libreplaygain-444-multilib.patch:
   Initial commit.
-

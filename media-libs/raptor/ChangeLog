@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/raptor
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.137 2012/09/27 08:43:56 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.138 2013/01/01 12:25:41 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> raptor-2.0.8.ebuild:
+  Add ~ia64, wrt bug #449220
 
   27 Sep 2012; Anthony G. Basile <blueness@gentoo.org> raptor-2.0.8.ebuild:
   stable ppc ppc64, bug #429130
