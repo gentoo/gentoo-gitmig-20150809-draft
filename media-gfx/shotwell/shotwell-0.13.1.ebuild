@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.13.1.ebuild,v 1.5 2012/12/31 15:42:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.13.1.ebuild,v 1.6 2013/01/01 12:18:53 ago Exp $
 
 EAPI=4
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ SRC_URI="http://www.yorba.org/download/${PN}/stable/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 LANGS="ar ast bg bn ca cs da de el en_GB es et eu fi fr gl he hi hr hu ia id it ja kk
