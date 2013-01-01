@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/grilo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.21 2013/01/01 12:36:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.22 2013/01/01 14:38:43 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> grilo-0.1.20.ebuild,
+  grilo-0.2.4.ebuild:
+  Add ~alpha, wrt bug #449220
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> grilo-0.2.4.ebuild:
   Add ~ia64, wrt bug #449220
