@@ -1,11 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/linux-identd-1.3-r1.ebuild,v 1.6 2010/10/28 12:34:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/linux-identd-1.3-r1.ebuild,v 1.7 2013/01/01 19:57:33 pacho Exp $
 
-IUSE="xinetd"
-DESCRIPTION="A real IDENT daemon for linux."
+EAPI=5
+inherit toolchain-funcs
+
+DESCRIPTION="A real IDENT daemon for linux"
 HOMEPAGE="http://www.fukt.bth.se/~per/identd"
 SRC_URI="http://www.fukt.bth.se/~per/identd/${P}.tar.gz"
+IUSE="xinetd"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -15,13 +18,13 @@ DEPEND=""
 RDEPEND="xinetd? ( sys-apps/xinetd )"
 
 src_compile() {
-	emake CEXTRAS="${CFLAGS}" || die
+	emake CC="$(tc-getCC)" CEXTRAS="${CFLAGS}"
 }
 
 src_install() {
 	dodir /etc/init.d /usr/sbin /usr/share/man/man8
 	dodoc README ChangeLog
-	make install DESTDIR="${D}" MANDIR=/usr/share/man || die
+	emake install DESTDIR="${D}" MANDIR=/usr/share/man
 
 	if use xinetd; then
 		insinto /etc/xinetd.d
