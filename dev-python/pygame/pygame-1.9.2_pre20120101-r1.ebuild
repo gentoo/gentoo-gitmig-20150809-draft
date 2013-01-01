@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.2_pre20120101-r1.ebuild,v 1.6 2012/08/22 15:21:56 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.2_pre20120101-r1.ebuild,v 1.7 2013/01/01 19:29:29 hasufell Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -24,11 +24,12 @@ KEYWORDS="alpha amd64 ~arm hppa ia64 ppc sparc x86 ~x86-fbsd"
 IUSE="doc examples X"
 
 DEPEND="dev-python/numpy
-	>=media-libs/libsdl-1.2.5[X?]
 	>=media-libs/sdl-image-1.2.2[png,jpeg]
 	>=media-libs/sdl-mixer-1.2.4
 	>=media-libs/sdl-ttf-2.0.6
-	>=media-libs/smpeg-0.4.4-r1"
+	>=media-libs/smpeg-0.4.4-r1
+	X? ( >=media-libs/libsdl-1.2.5[X,video] )
+	!X? ( >=media-libs/libsdl-1.2.5 )"
 RDEPEND="${DEPEND}"
 
 if [[ "${PV}" != *_pre* ]]; then
