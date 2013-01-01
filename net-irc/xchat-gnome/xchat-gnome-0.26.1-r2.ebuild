@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1-r2.ebuild,v 1.8 2012/05/03 06:27:13 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1-r2.ebuild,v 1.9 2013/01/01 12:41:49 ago Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -15,7 +15,7 @@ HOMEPAGE="http://live.gnome.org/Xchat-Gnome"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="dbus libnotify mmx nls perl python spell ssl tcl"
 
 RDEPEND=">=dev-libs/glib-2.18:2
