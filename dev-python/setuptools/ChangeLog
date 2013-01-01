@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setuptools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.178 2012/12/31 14:06:51 djc Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.179 2013/01/01 18:59:21 armin76 Exp $
+
+  01 Jan 2013; Raúl Porcel <armin76@gentoo.org> setuptools-0.6.30-r1.ebuild:
+  s390/sh/x86 stable wrt #446496
 
 *setuptools-0.6.33 (31 Dec 2012)
 
