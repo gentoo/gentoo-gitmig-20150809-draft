@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/crda
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.48 2012/12/16 09:02:06 gurligebis Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.49 2013/01/01 08:27:28 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> crda-1.1.2-r3.ebuild:
+  Stable for arm, wrt bug #419909
 
   16 Dec 2012; <gurligebis@gentoo.org> crda-1.1.2-r4.ebuild:
   Changing to depend on libnl:3, to ensure the right version is installed

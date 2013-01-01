@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wireless-regdb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.29 2012/11/20 19:45:52 zerochaos Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.30 2013/01/01 08:27:42 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  wireless-regdb-20110428-r1.ebuild:
+  Stable for arm, wrt bug #419909
 
   20 Nov 2012; Rick Farina <zerochaos@gentoo.org> metadata.xml:
   adding myself as co-maintainer to help with bugs and enhance functionality
