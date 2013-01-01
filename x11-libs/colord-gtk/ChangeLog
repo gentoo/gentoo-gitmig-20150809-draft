@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/colord-gtk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/colord-gtk/ChangeLog,v 1.6 2012/12/20 05:29:57 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/colord-gtk/ChangeLog,v 1.7 2013/01/01 12:53:41 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> colord-gtk-0.1.24.ebuild:
+  Add ~ia64, wrt bug #449220
 
 *colord-gtk-0.1.24 (20 Dec 2012)
 
