@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/genius/genius-1.0.16.ebuild,v 1.1 2012/12/24 12:38:35 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/genius/genius-1.0.16.ebuild,v 1.2 2013/01/02 08:35:45 grozin Exp $
 
 EAPI=4
 inherit eutils gnome2
@@ -34,6 +34,7 @@ DEPEND="${RDEPEND}
 		dev-util/yacc )
 	sys-devel/flex
 	app-text/scrollkeeper
+	app-text/gnome-doc-utils
 	nls? ( sys-devel/gettext )"
 
 G2CONF="${G2CONF} $(use_enable gnome) $(use_enable nls) \
