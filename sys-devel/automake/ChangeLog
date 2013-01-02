@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/automake
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.176 2012/12/16 22:19:37 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.177 2013/01/02 04:58:07 vapier Exp $
+
+  02 Jan 2013; Mike Frysinger <vapier@gentoo.org> automake-1.12.2.ebuild,
+  automake-1.12.3.ebuild, automake-1.12.4.ebuild, automake-1.12.5.ebuild,
+  automake-1.12.6.ebuild:
+  Drop unslotted (and generally useless) /usr/share/aclocal/README file.
 
 *automake-1.12.6 (16 Dec 2012)
 

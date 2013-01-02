@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.12.6.ebuild,v 1.1 2012/12/16 22:19:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.12.6.ebuild,v 1.2 2013/01/02 04:58:07 vapier Exp $
 
 inherit eutils versionator unpacker
 
@@ -60,6 +60,8 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install \
 		APIVERSION="${SLOT}" pkgvdatadir="/usr/share/${PN}-${SLOT}" || die
+	rm "${D}"/usr/share/aclocal/README || die
+	rmdir "${D}"/usr/share/aclocal || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS
 
 	rm \
