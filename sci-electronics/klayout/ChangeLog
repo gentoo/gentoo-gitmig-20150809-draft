@@ -1,6 +1,13 @@
 # ChangeLog for sci-electronics/klayout
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/ChangeLog,v 1.11 2012/09/22 22:22:57 dilfridge Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/ChangeLog,v 1.12 2013/01/02 20:26:48 dilfridge Exp $
+
+*klayout-0.22.4 (02 Jan 2013)
+
+  02 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -files/klayout-0.21.10-gcc46.patch, -klayout-0.21.19.ebuild,
+  -klayout-0.22.ebuild, +klayout-0.22.4.ebuild:
+  Version bump; does not build without ruby anymore
 
 *klayout-0.22 (22 Sep 2012)
 
