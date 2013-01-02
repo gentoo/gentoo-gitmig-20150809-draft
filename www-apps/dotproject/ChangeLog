@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/dotproject
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dotproject/ChangeLog,v 1.10 2010/02/10 22:35:23 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dotproject/ChangeLog,v 1.11 2013/01/02 22:00:52 elvanor Exp $
+
+*dotproject-2.1.7 (02 Jan 2013)
+
+  02 Jan 2013; <elvanor@gentoo.org> +dotproject-2.1.7.ebuild:
+  Bump to version 2.1.7. Previous version is not compatible with PHP 5.4.
 
   10 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
   dotproject-2.1.2-r1.ebuild:
