@@ -1,6 +1,11 @@
 # ChangeLog for net-print/foomatic-filters
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.89 2013/01/02 04:21:39 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.90 2013/01/02 10:36:20 dilfridge Exp $
+
+  02 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  foomatic-filters-4.0.17.ebuild, -foomatic-filters-4.0.17-r1.ebuild:
+  Not worth another painful stabilization round for this revbump; fix dep. for
+  1.5.999
 
 *foomatic-filters-4.0.17-r1 (02 Jan 2013)
 

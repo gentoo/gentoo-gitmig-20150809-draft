@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-4.0.17.ebuild,v 1.2 2012/11/16 14:27:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-4.0.17.ebuild,v 1.3 2013/01/02 10:36:20 dilfridge Exp $
 
 EAPI=4
 
@@ -18,7 +18,12 @@ IUSE="cups dbus"
 RDEPEND="
 	dev-lang/perl
 	app-text/ghostscript-gpl
-	cups? ( >=net-print/cups-1.1.19 )
+	cups? (
+		|| (
+			( >=net-print/cups-1.6.0 net-print/cups-filters )
+			<net-print/cups-1.6.0
+		)
+	)
 	!cups? (
 		|| (
 			app-text/enscript
