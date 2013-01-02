@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20110918.ebuild,v 1.5 2013/01/02 13:23:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20110918.ebuild,v 1.6 2013/01/02 13:24:19 ago Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/pcb/pcb/${P}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~x86-macos"
+KEYWORDS="amd64 ~ppc x86 ~x86-macos"
 IUSE="dbus debug doc gcode gif gtk jpeg m4lib-png motif nelma opengl png
 test tk toporouter xrender"
 # toporouter-output USE flag removed, there seems to be no result
