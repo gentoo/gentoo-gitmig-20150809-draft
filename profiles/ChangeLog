@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7314 2013/01/02 20:06:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7315 2013/01/02 23:22:40 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Jan 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Add Openwall to MISC-FREE license group, bug 449832.
 
   02 Jan 2013; Mike Gilbert <floppym@gentoo.org> package.mask:
   Mention USE_PYTHON and PYTHON_TARGETS in the pypy-1.8 mask.
