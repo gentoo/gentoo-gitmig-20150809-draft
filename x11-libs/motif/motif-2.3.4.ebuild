@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4.ebuild,v 1.9 2012/12/16 19:52:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4.ebuild,v 1.10 2013/01/02 00:05:11 ulm Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://sourceforge.net/projects/motif/
 	http://motif.ics.com/"
 SRC_URI="mirror://sourceforge/project/motif/Motif%20${PV}%20Source%20Code/${P}-src.tgz"
 
-LICENSE="LGPL-2+ MIT"
+LICENSE="LGPL-2.1+ MIT"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="examples jpeg png static-libs unicode xft"

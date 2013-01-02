@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/motif
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.9 2012/12/16 19:52:27 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.10 2013/01/02 00:05:11 ulm Exp $
+
+  02 Jan 2013; Ulrich Müller <ulm@gentoo.org> -files/motif-2.3.2-darwin.patch,
+  -files/motif-2.3.2-libpng14.patch, -motif-2.3.3-r1.ebuild,
+  motif-2.3.4.ebuild:
+  LICENSE of version 2.3.4 is LGPL-2.1+. Remove old.
 
   16 Dec 2012; Raúl Porcel <armin76@gentoo.org> motif-2.3.4.ebuild:
   alpha/ia64/sh/sparc stable wrt #443610
