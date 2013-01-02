@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/replicatorg/replicatorg-37.ebuild,v 1.1 2012/08/02 12:55:44 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/replicatorg/replicatorg-40.ebuild,v 1.1 2013/01/02 04:47:51 mattm Exp $
 
 EAPI="3"
 
@@ -32,8 +32,11 @@ pkg_postinst() {
 	elog "Replicatorg requires Sun/Oracle JRE and will not work with OpenJDK."
 	elog
 	elog "Ensure that your user account has permissions to access serial port,"
-	elog "if you plan to connect directly to a 3d printer.  Saving gcode"
-	elog "to a flash card is currently the preferred printing method."
+	elog "if you plan to connect directly to a 3d printer rather than using"
+	elog "a flash card. Printing directly from replicatorg is preferred."
+	elog
+	elog "The replicator printer will likely show up in /dev as ttyACM0."
+	elog "You may want to autoload the cdc_acm kernel module."
 	elog
 	elog "Note that replicatorg includes its own version of skeinforge."
 	elog "There doesn't seem to be a simple way to depend on an external"
@@ -43,8 +46,9 @@ pkg_postinst() {
 	elog "to avoid upstream warnings about not being able to modify shared"
 	elog "skeinforge scripts."
 	elog
-	chmod 0775 "${ROOT}"/opt/replicatorg
-	chown root:replicator "${ROOT}"/opt/replicatorg
+	chmod -R g+w "${ROOT}"/opt/replicatorg
+	chown -R root:replicator "${ROOT}"/opt/replicatorg
+	chmod 0755 /opt/replicatorg
 }
 
 src_install() {
@@ -53,7 +57,7 @@ src_install() {
 		/usr/share/replicatorg
 
 	keepdir \
-		/opt/relicatorg \
+		/opt/replicatorg \
 		/usr/share/replicatorg
 
 	dobin "${FILESDIR}"/replicatorg
@@ -70,8 +74,6 @@ src_install() {
 		skein_engines \
 		tools \
 		"${D}"/opt/replicatorg/
-
-	fowners -R root:replicator /opt/replicatorg
 
 	insinto /usr/share/replicatorg
 	doins -r \
