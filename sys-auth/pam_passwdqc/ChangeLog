@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_passwdqc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/ChangeLog,v 1.29 2012/04/26 15:08:03 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/ChangeLog,v 1.30 2013/01/02 23:29:08 ulm Exp $
+
+  02 Jan 2013; Ulrich Müller <ulm@gentoo.org> pam_passwdqc-1.0.4.ebuild,
+  pam_passwdqc-1.0.5.ebuild:
+  Fix LICENSE, see LICENSE file, bug 449832. Assign RDEPEND.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> pam_passwdqc-1.0.5.ebuild:
   keyword ~amd64-fbsd
