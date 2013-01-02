@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/bitchx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.70 2011/12/21 19:52:31 binki Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.71 2013/01/02 00:26:39 jdhore Exp $
+
+*bitchx-1.2 (02 Jan 2013)
+
+  02 Jan 2013; Jeff Horelick <jdhore@gentoo.org> +bitchx-1.2.ebuild,
+  +files/bitchx-1.2-build.patch:
+  Version bump
 
   21 Dec 2011; Nathan Phillip Brink <binki@gentoo.org> bitchx-1.1-r4.ebuild:
   Update SRC_URI to point to tarball's new home.
