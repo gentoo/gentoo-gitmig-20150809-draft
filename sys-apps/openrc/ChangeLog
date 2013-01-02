@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.260 2013/01/02 19:20:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.261 2013/01/02 20:21:14 williamh Exp $
+
+  02 Jan 2013; William Hubbs <williamh@gentoo.org> -openrc-0.11.6.ebuild:
+  remove old version
 
   02 Jan 2013; Raúl Porcel <armin76@gentoo.org> openrc-0.11.8.ebuild:
   alpha/m68k/s390/sh stable wrt #435756
