@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/logmein-hamachi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/ChangeLog,v 1.9 2012/11/22 19:29:20 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/ChangeLog,v 1.10 2013/01/02 09:23:53 pinkbyte Exp $
+
+*logmein-hamachi-2.1.0.86 (02 Jan 2013)
+
+  02 Jan 2013; Sergey Popov <pinkbyte@gentoo.org>
+  -logmein-hamachi-2.1.0.76.ebuild, -logmein-hamachi-2.1.0.76-r1.ebuild,
+  +logmein-hamachi-2.1.0.86.ebuild:
+  Version bump, wrt bug #449712. Drop old versions, cause they are not
+  available anymore, thanks to Matthias Blümel for discovering this issue
 
 *logmein-hamachi-2.1.0.81 (22 Nov 2012)
 

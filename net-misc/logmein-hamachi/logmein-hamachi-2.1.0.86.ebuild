@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/logmein-hamachi-2.1.0.76.ebuild,v 1.1 2012/10/03 21:11:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/logmein-hamachi-2.1.0.86.ebuild,v 1.1 2013/01/02 09:23:53 pinkbyte Exp $
 
 inherit eutils linux-info
 
@@ -52,7 +52,7 @@ pkg_postinst() {
 	elog "LogMeIn Hamachi2 is installed."
 	elog "Consult the README file on how to configure your client."
 	elog "You can run the client 'hamachi' as root,"
-	elog "or as a user if you add a line:"
+	elog "or as a user if you add a newline terminated line:"
 	elog "Ipc.User      <login name>"
 	elog "to the file '/var/lib/${PN}/h2-engine-override.cfg'"
 	elog "and restart the daemon with"
