@@ -1,6 +1,13 @@
 # ChangeLog for net-print/foomatic-filters
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.88 2012/11/16 14:27:35 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.89 2013/01/02 04:21:39 jmbsvicetto Exp $
+
+*foomatic-filters-4.0.17-r1 (02 Jan 2013)
+
+  02 Jan 2013; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +foomatic-filters-4.0.17-r1.ebuild:
+  Fix cups dependencies - bug 429590. Thanks to Vladimir for checking the
+  correct version deps.
 
   16 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -foomatic-filters-4.0.16.ebuild, foomatic-filters-4.0.17.ebuild:
