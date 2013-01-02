@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-3.6.11.ebuild,v 1.3 2012/12/29 17:26:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-3.6.11.ebuild,v 1.4 2013/01/02 19:38:33 mpagano Exp $
 
 EAPI="3"
 ETYPE="sources"
