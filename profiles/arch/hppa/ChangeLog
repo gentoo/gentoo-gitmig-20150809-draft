@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.177 2013/01/02 11:32:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.178 2013/01/02 11:41:02 jer Exp $
+
+  02 Jan 2013; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask non-keyworded media-libs/qhull for sci-mathematics/octave.
 
   02 Jan 2013; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Mask non-keyworded sci-libs/hdf5 for sci-mathematics/octave.
