@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.44 2013/01/01 12:54:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.45 2013/01/02 13:49:19 ago Exp $
+
+  02 Jan 2013; Agostino Sarubbo <ago@gentoo.org> colord-0.1.26.ebuild:
+  Stable for amd64/x86, wrt bug #449744
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> colord-0.1.26.ebuild:
   Add ~ia64, wrt bug #449220
