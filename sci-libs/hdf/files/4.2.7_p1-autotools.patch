@@ -114,16 +114,3 @@ diff -Nur hdf-4.2.7-patch1.orig/mfhdf/libsrc/Makefile.am hdf-4.2.7-patch1/mfhdf/
  endif
  
  if HDF_BUILD_NETCDF
-@@ -50,11 +51,7 @@
- # fortran has been disabled in configure. The Fortran linker gets confused 
- # when shared libraries are enabled, so when Fortran is not enabled,
- # this replaces the Fortran link macro with the C link macro.
--if HDF_BUILD_FORTRAN
--    # do nothing
--else
--    F77LINK = $(LINK)
--endif
-+
- 
- #############################################################################
- ##                          And the cleanup                                ##

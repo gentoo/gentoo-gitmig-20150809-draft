@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/hdf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.30 2012/12/30 15:00:11 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.31 2013/01/02 17:24:54 xarthisius Exp $
+
+  02 Jan 2013; Kacper Kowalik <xarthisius@gentoo.org>
+  files/4.2.7_p1-autotools.patch:
+  Reintroduce autotools workaround for IUSE="-ifortran" wrt #448726 c#2 by
+  Vicente Olivert Riera <peratu@carrosses.com>
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> hdf-4.2.8.ebuild:
   Stable for amd64, wrt bug #449226
