@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20110918.ebuild,v 1.6 2013/01/02 13:24:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20110918.ebuild,v 1.7 2013/01/02 19:24:56 tomjbe Exp $
 
 EAPI="3"
 
-inherit autotools eutils fdo-mime gnome2-utils
+inherit autotools eutils fdo-mime gnome2-utils toolchain-funcs
 
 DESCRIPTION="GPL Electronic Design Automation: Printed Circuit Board editor"
 HOMEPAGE="http://www.gpleda.org/"
@@ -124,6 +124,10 @@ src_configure() {
 }
 # toporouter-output USE flag removed, there seems to be no result
 #		$(use_enable toporouter-output) \
+
+src_compile() {
+	emake AR="$(tc-getAR)"
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
