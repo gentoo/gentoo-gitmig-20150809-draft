@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.269 2013/01/01 23:45:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.270 2013/01/02 11:23:35 jer Exp $
+
+  02 Jan 2013; Jeroen Roovers <jer@gentoo.org> mc-4.8.7.ebuild:
+  Stable for HPPA (bug #436518).
 
   01 Jan 2013; Jeff Horelick <jdhore@gentoo.org> mc-4.8.7.ebuild:
   marked x86 per bug 436518
