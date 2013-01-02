@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.158 2013/01/02 01:02:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.159 2013/01/02 11:26:46 jer Exp $
+
+  02 Jan 2013; Jeroen Roovers <jer@gentoo.org> openal-1.14.ebuild,
+  openal-1.15.1.ebuild:
+  Stable for HPPA (bug #440002).
 
   02 Jan 2013; Jeff Horelick <jdhore@gentoo.org> openal-1.15.1.ebuild:
   marked x86 per bug 440002
