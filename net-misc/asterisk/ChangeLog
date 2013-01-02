@@ -1,6 +1,22 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.430 2013/01/01 13:35:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.431 2013/01/02 22:36:18 chainsaw Exp $
+
+*asterisk-11.1.1 (02 Jan 2013)
+*asterisk-10.11.1 (02 Jan 2013)
+*asterisk-1.8.19.1 (02 Jan 2013)
+
+  02 Jan 2013; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.15.1.ebuild,
+  -asterisk-1.8.18.1.ebuild, -asterisk-1.8.19.0.ebuild,
+  +asterisk-1.8.19.1.ebuild, -asterisk-10.10.1.ebuild,
+  -asterisk-10.11.0.ebuild, +asterisk-10.11.1.ebuild, -asterisk-11.0.2.ebuild,
+  -asterisk-11.1.0.ebuild, +asterisk-11.1.1.ebuild:
+  Security releases on all three branches; stop using stack allocations in TCP
+  receive paths, as multiple packets may be concatenated together and overflow
+  the stack as a result (CVE-2012-5976 / AST-2012-015). Never cache devices
+  that are not associated with a physical entity, as to do so allows a denial
+  of service through cache exhaustion (CVE-2012-5977 / AST-2012-014). Remove
+  all non-stable vulnerable ebuilds. As requested by Sean Amoss in bug #449828.
 
   01 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2012:
   Split ChangeLog.

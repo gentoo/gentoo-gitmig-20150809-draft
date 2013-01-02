@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-10.10.1.ebuild,v 1.1 2012/12/10 17:41:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.19.1.ebuild,v 1.1 2013/01/02 22:36:18 chainsaw Exp $
 
 EAPI=4
 inherit autotools base eutils linux-info multilib
@@ -10,7 +10,7 @@ MY_P="${PN}-${PV/_/-}"
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
 SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/releases/${MY_P}.tar.gz
-	 mirror://gentoo/gentoo-asterisk-patchset-2.8.tar.bz2"
+	 mirror://gentoo/gentoo-asterisk-patchset-1.16.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -20,9 +20,12 @@ IUSE_VOICEMAIL_STORAGE="
 	voicemail_storage_odbc
 	voicemail_storage_imap
 "
-IUSE="${IUSE_VOICEMAIL_STORAGE} ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius selinux snmp span speex srtp static syslog vorbis"
+IUSE="${IUSE_VOICEMAIL_STORAGE} ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius selinux snmp span speex sqlite sqlite3 srtp static syslog vorbis"
+
 IUSE_EXPAND="VOICEMAIL_STORAGE"
-REQUIRED_USE="gtalk? ( jabber )
+
+REQUIRED_USE="
+	gtalk? ( jabber )
 	^^ ( ${IUSE_VOICEMAIL_STORAGE/+/} )
 	voicemail_storage_odbc? ( odbc )
 "
@@ -30,8 +33,7 @@ REQUIRED_USE="gtalk? ( jabber )
 EPATCH_SUFFIX="patch"
 PATCHES=( "${WORKDIR}/asterisk-patchset" )
 
-RDEPEND="dev-db/sqlite:3
-	dev-libs/popt
+RDEPEND="dev-libs/popt
 	dev-libs/libxml2
 	dev-libs/openssl
 	sys-libs/ncurses
@@ -65,13 +67,14 @@ RDEPEND="dev-db/sqlite:3
 	snmp? ( net-analyzer/net-snmp )
 	span? ( media-libs/spandsp )
 	speex? ( media-libs/speex )
+	sqlite? ( dev-db/sqlite:0 )
+	sqlite3? ( dev-db/sqlite:3 )
 	srtp? ( net-libs/libsrtp )
 	vorbis? ( media-libs/libvorbis )"
 
 DEPEND="${RDEPEND}
-	!net-libs/openh323
 	voicemail_storage_imap? ( virtual/imap-c-client )
-"
+	!net-libs/openh323"
 
 RDEPEND="${RDEPEND}
 	syslog? ( virtual/logger )"
@@ -144,10 +147,6 @@ src_configure() {
 	menuselect/menuselect --enable func_aes menuselect.makeopts
 	menuselect/menuselect --enable chan_iax2 menuselect.makeopts
 
-	# SQlite3 is now the main database backend, enable related features
-	menuselect/menuselect --enable cdr_sqlite3_custom menuselect.makeopts
-	menuselect/menuselect --enable cel_sqlite3_custom menuselect.makeopts
-
 	# The others are based on USE-flag settings
 	use_select() {
 		local state=$(use "$1" && echo enable || echo disable)
@@ -182,6 +181,8 @@ src_configure() {
 	use_select snmp			res_snmp
 	use_select span			res_fax_spandsp
 	use_select speex		{codec,func}_speex
+	use_select sqlite		cdr_sqlite
+	use_select sqlite3		{cdr,cel}_sqlite3_custom
 	use_select srtp			res_srtp
 	use_select syslog		cdr_syslog
 	use_select vorbis		format_ogg_vorbis
@@ -249,7 +250,7 @@ src_install() {
 		dodoc doc/*.pdf
 	fi
 
-	# install SIP scripts; bug #300832
+	# install SIP scripts; bugs #300832 & #414585
 	#
 	dodoc "${FILESDIR}/1.6.2/sip_calc_auth"
 	dodoc "${FILESDIR}/1.8.0/find_call_sip_trace.sh"
