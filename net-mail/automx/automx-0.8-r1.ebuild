@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/automx-0.8.ebuild,v 1.1 2012/03/28 19:15:04 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/automx-0.8-r1.ebuild,v 1.1 2013/01/02 14:11:31 mschiff Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6:2.7"
@@ -25,7 +25,7 @@ RDEPEND="
 	tools? ( net-misc/wget )
 	"
 
-RESTRICT_PYTHON_ABIS="2.[45]"
+RESTRICT_PYTHON_ABIS="2.[45] 3.*"
 
 #src_prepare() {
 #	python_copy_sources
@@ -49,6 +49,12 @@ src_install() {
 		doexe src/automx-test
 		doman doc/man/man1/automx-test.1
 	fi
+
+	exeinto /usr/lib/${PN}
+	doexe src/automx.wsgi
+
+	insinto /etc
+	doins src/automx.conf
 
 	installation() {
 		insinto $(python_get_sitedir)/${PN}
