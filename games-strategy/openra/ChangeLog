@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/openra
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/ChangeLog,v 1.9 2012/10/21 00:09:36 hasufell Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/ChangeLog,v 1.10 2013/01/02 11:41:59 ago Exp $
+
+  02 Jan 2013; Agostino Sarubbo <ago@gentoo.org> openra-20120630.ebuild:
+  Stable for amd64, wrt bug #445093
 
 *openra-20121019 (21 Oct 2012)
 
@@ -38,4 +41,3 @@
   04 May 2012; Julian Ospald <hasufell@gentoo.org> +openra-20120504.ebuild,
   +metadata.xml:
   initial commit wrt #372029 with help from diamond
-
