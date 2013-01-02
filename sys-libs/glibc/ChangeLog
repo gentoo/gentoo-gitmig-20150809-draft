@@ -1,5 +1,10 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.914 2012/12/30 17:16:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.915 2013/01/02 00:51:16 vapier Exp $
+
+  02 Jan 2013; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_compile.eblit, glibc-2.17.ebuild, glibc-9999.ebuild,
+  metadata.xml:
+  Add IUSE=nscd to control support for it.
 
   30 Dec 2012; Ulrich Müller <ulm@gentoo.org> glibc-2.9_p20081201-r3.ebuild,
   glibc-2.10.1-r1.ebuild, glibc-2.11.3.ebuild, glibc-2.12.1-r3.ebuild,

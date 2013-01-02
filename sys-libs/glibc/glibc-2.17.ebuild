@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.17.ebuild,v 1.3 2012/12/30 17:16:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.17.ebuild,v 1.4 2013/01/02 00:51:16 vapier Exp $
 
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib unpacker multiprocessing
 
@@ -27,7 +27,7 @@ esac
 PATCH_VER="1"                                  # Gentoo patchset
 NPTL_KERN_VER=${NPTL_KERN_VER:-"2.6.16"}       # min kernel version nptl requires
 
-IUSE="debug gd hardened multilib selinux systemtap profile vanilla crosscompile_opts_headers-only"
+IUSE="debug gd hardened multilib nscd selinux systemtap profile vanilla crosscompile_opts_headers-only"
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
