@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r3.ebuild,v 1.11 2012/11/04 17:32:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r3.ebuild,v 1.12 2013/01/02 21:38:35 floppym Exp $
 
 EAPI=2
 
@@ -38,7 +38,7 @@ src_prepare() {
 	# on hppa. Using -O1 works fine. So I force it here.
 	use hppa && replace-flags -O2 -O1
 
-	ln -s config/configure.in configure.in
+	ln -s config/configure.in configure.ac
 	#eautoreconf
 	elibtoolize
 
