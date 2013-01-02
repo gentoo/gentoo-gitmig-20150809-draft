@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.176 2012/12/31 17:56:31 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.177 2013/01/02 11:32:34 jer Exp $
+
+  02 Jan 2013; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask non-keyworded sci-libs/hdf5 for sci-mathematics/octave.
 
   31 Dec 2012; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Remove p.u.mask for non-keyworded app-admin/packagekit-base.
