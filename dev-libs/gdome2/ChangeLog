@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/gdome2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.41 2012/05/10 15:49:36 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.42 2013/01/02 02:59:39 jmbsvicetto Exp $
+
+*gdome2-0.8.1-r4 (02 Jan 2013)
+
+  02 Jan 2013; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +files/gdome2-0.8.1-libxml2.patch, +gdome2-0.8.1-r4.ebuild:
+  Fix building with libxml2-2.9.0 caused by an API change as announced on
+  https://mail.gnome.org/archives/xml/2012-August/msg00005.html Fixes bug
+  448236. Thanks to Harris Landgarten for investigating the issue and for
+  submitting the patch.
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -gdome2-0.8.1-r2.ebuild:
   Remove old
