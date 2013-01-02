@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.4.ebuild,v 1.10 2012/12/29 08:46:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.4.ebuild,v 1.11 2013/01/02 01:10:32 pesa Exp $
 
 EAPI=4
 
@@ -234,6 +234,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	qt4-build_pkg_postinst
+
 	# raster is the default graphicssystems, set it on first install
 	eselect qtgraphicssystem set raster --use-old
 
