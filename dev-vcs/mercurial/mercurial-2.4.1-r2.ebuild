@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.4.1-r2.ebuild,v 1.3 2012/12/31 08:16:12 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.4.1-r2.ebuild,v 1.4 2013/01/02 08:32:19 djc Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ SRC_URI="http://mercurial.selenic.com/release/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="bugzilla doc emacs gpg test tk zsh-completion"
+IUSE="bugzilla emacs gpg test tk zsh-completion"
 
 RDEPEND="bugzilla? ( dev-python/mysql-python )
 	gpg? ( app-crypt/gnupg )
@@ -26,9 +26,7 @@ RDEPEND="bugzilla? ( dev-python/mysql-python )
 	app-misc/ca-certificates"
 DEPEND="emacs? ( virtual/emacs )
 	test? ( app-arch/unzip
-		dev-python/pygments )
-	doc? ( app-text/asciidoc
-		dev-python/docutils )"
+		dev-python/pygments )"
 
 PYTHON_CFLAGS=(
 	"2.* + -fno-strict-aliasing"
@@ -47,16 +45,10 @@ src_prepare() {
 
 src_compile() {
 	distutils_src_compile
-
-	if use doc; then
-		make doc || die
-	fi
-
 	if use emacs; then
 		cd "${S}"/contrib || die
 		elisp-compile mercurial.el || die "elisp-compile failed!"
 	fi
-
 	rm -rf contrib/{win32,macosx} || die
 }
 

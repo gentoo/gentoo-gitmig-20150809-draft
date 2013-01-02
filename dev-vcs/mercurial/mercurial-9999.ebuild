@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-9999.ebuild,v 1.16 2012/12/31 08:16:12 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-9999.ebuild,v 1.17 2013/01/02 08:32:19 djc Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ EHG_REPO_URI="http://selenic.com/repo/hg"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="bugzilla doc emacs gpg test tk zsh-completion"
+IUSE="bugzilla emacs gpg test tk zsh-completion"
 
 RDEPEND="bugzilla? ( dev-python/mysql-python )
 	gpg? ( app-crypt/gnupg )
@@ -27,8 +27,8 @@ RDEPEND="bugzilla? ( dev-python/mysql-python )
 DEPEND="emacs? ( virtual/emacs )
 	test? ( app-arch/unzip
 		dev-python/pygments )
-	doc? ( app-text/asciidoc
-		dev-python/docutils )"
+	app-text/asciidoc
+	dev-python/docutils"
 
 PYTHON_CFLAGS=(
 	"2.* + -fno-strict-aliasing"
@@ -47,16 +47,11 @@ src_prepare() {
 
 src_compile() {
 	distutils_src_compile
-
-	if use doc; then
-		make doc || die
-	fi
-
+	make doc || die
 	if use emacs; then
 		cd "${S}"/contrib || die
 		elisp-compile mercurial.el || die "elisp-compile failed!"
 	fi
-
 	rm -rf contrib/{win32,macosx} || die
 }
 
@@ -72,7 +67,7 @@ src_install() {
 	fi
 
 	rm -f doc/*.?.txt || die
-	dodoc CONTRIBUTORS PKG-INFO README doc/*.txt || die
+	dodoc CONTRIBUTORS README doc/*.txt || die
 	cp hgweb*.cgi "${ED}"/usr/share/doc/${PF}/ || die
 
 	dobin hgeditor || die
