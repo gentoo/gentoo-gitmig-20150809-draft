@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/pidgin-sipe-1.13.2-r1.ebuild,v 1.1 2012/06/30 22:00:30 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/pidgin-sipe-1.14.1.ebuild,v 1.1 2013/01/02 20:18:23 thev00d00 Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools eutils
 
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug kerberos ocs2005-message-hack voice"
 
-RDEPEND="net-im/pidgin[gnutls]
-	>=dev-libs/gmime-2.4.16
+RDEPEND=">=dev-libs/gmime-2.4.16
 	dev-libs/libxml2
+	dev-libs/nss
 	kerberos? ( virtual/krb5 )
 	voice? (
 		>=dev-libs/glib-2.28.0
@@ -37,7 +37,7 @@ DEPEND="dev-util/intltool
 "
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-fix-sandbox-r1.patch"
+	epatch "${FILESDIR}/${PN}-1.13.2-fix-sandbox-r1.patch"
 	eautoreconf
 }
 
