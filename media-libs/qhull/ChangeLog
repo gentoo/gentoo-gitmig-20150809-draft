@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/qhull
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.53 2012/09/30 21:20:37 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.54 2013/01/02 11:44:32 jer Exp $
+
+  02 Jan 2013; Jeroen Roovers <jer@gentoo.org> qhull-3.1-r1.ebuild,
+  qhull-2010.1-r2.ebuild, qhull-2012.1-r1.ebuild:
+  Drop HPPA keywording (bug #429128).
 
   30 Sep 2012; Anthony G. Basile <blueness@gentoo.org> qhull-2012.1-r1.ebuild:
   stable ppc ppc64, bug #429128
