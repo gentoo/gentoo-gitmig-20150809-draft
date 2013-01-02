@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.588 2012/12/31 19:49:40 hd_brummy Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.589 2013/01/02 21:12:44 mgorny Exp $
+
+  02 Jan 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass,
+  python-any-r1.eclass, python-r1.eclass, python-single-r1.eclass,
+  python-utils-r1.eclass:
+  Remove myself from explicit maintainers, it is enough to assign the bugs to
+  Python team.
 
   31 Dec 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
   Do not use {C,CXX}FLAGS from pkg-config vdr.pc >=media-video/vdr-1.7.34;we do
