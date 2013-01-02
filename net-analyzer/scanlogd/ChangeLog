@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/scanlogd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/ChangeLog,v 1.31 2012/11/21 04:26:42 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/ChangeLog,v 1.32 2013/01/02 23:33:30 ulm Exp $
+
+  02 Jan 2013; Ulrich Müller <ulm@gentoo.org> scanlogd-2.2.6-r2.ebuild:
+  Fix LICENSE, see scanlogd.c, bug 449834.
 
   21 Nov 2012; Jeroen Roovers <jer@gentoo.org> scanlogd-2.2.6-r2.ebuild:
   Add GPL-2 to LICENSE (bug #425994).

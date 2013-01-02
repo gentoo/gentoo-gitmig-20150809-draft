@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/scanlogd-2.2.6-r2.ebuild,v 1.8 2012/11/21 04:26:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/scanlogd-2.2.6-r2.ebuild,v 1.9 2013/01/02 23:33:30 ulm Exp $
 
 inherit eutils toolchain-funcs user
 
@@ -8,8 +8,8 @@ DESCRIPTION="Scanlogd - detects and logs TCP port scans"
 SRC_URI="http://www.openwall.com/scanlogd/${P}.tar.gz"
 HOMEPAGE="http://www.openwall.com/scanlogd/"
 
+LICENSE="Openwall GPL-2" # GPL-2 for initscript
 SLOT="0"
-LICENSE="as-is GPL-2"
 KEYWORDS="~amd64 ppc x86"
 IUSE="nids pcap"
 
