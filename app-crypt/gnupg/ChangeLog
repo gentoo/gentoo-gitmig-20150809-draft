@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.441 2013/01/02 09:58:50 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.442 2013/01/02 11:21:30 jer Exp $
+
+  02 Jan 2013; Jeroen Roovers <jer@gentoo.org> gnupg-1.4.13.ebuild:
+  Stable for HPPA (bug #449546).
 
   02 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> gnupg-1.4.13.ebuild:
   Stable on amd64, wrt bug #449546
