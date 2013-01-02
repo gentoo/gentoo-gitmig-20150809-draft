@@ -164,6 +164,10 @@ video_cards_newport
 video_cards_siliconmotion
 video_cards_sis
 
+# Matt Turner <mattst88@gentoo.org> (02 Jan 2013)
+# Not available on ia64. See bugs 449816, 448606.
+video_cards_intel
+
 # Matt Turner <mattst88@gentoo.org>
 # Mask more VIDEO_CARDs added with mesa-8.0
 video_cards_i915
