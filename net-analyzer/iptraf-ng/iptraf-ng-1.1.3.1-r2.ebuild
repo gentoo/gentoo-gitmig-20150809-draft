@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/iptraf-ng-1.1.3.1-r2.ebuild,v 1.1 2013/01/02 13:32:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/iptraf-ng-1.1.3.1-r2.ebuild,v 1.2 2013/01/02 14:53:19 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="A console-based network monitoring utility"
@@ -39,11 +39,12 @@ src_prepare() {
 		src/*.8 || die
 }
 
+# configure does not do very much we do not already control
 src_configure() { :; }
 
 src_compile() {
 	tc-export CC
-	emake
+	default
 }
 
 src_install() {
@@ -53,5 +54,5 @@ src_install() {
 	dodoc AUTHORS CHANGES FAQ README* RELEASE-NOTES
 	use doc && dohtml -a gif,html,png -r Documentation/*
 
-	keepdir /var/{lib,log,lock}/iptraf-ng #376157
+	keepdir /var/{lib,log}/iptraf-ng #376157
 }
