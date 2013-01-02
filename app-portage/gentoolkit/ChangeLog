@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.289 2012/12/29 17:47:01 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.290 2013/01/02 22:56:29 fuzzyray Exp $
+
+  02 Jan 2013; Paul Varner <fuzzyray@gentoo.org> gentoolkit-9999.ebuild:
+  Migrate gentoolkit-9999 to distutils-r1 eclass.
+  Change einfo to elog, but only call elog if it is a new install.
 
   29 Dec 2012; Raúl Porcel <armin76@gentoo.org> gentoolkit-0.3.0.7.ebuild:
   alpha/m68k/s390/sh/sparc stable wrt #446832

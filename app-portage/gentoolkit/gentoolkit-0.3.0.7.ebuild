@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0.7.ebuild,v 1.8 2012/12/29 17:47:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0.7.ebuild,v 1.9 2013/01/02 22:56:29 fuzzyray Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"

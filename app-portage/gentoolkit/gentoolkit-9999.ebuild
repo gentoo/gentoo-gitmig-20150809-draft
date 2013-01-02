@@ -1,17 +1,16 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.25 2012/11/13 21:59:47 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.26 2013/01/02 22:56:29 fuzzyray Exp $
 
-EAPI="3"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.[45]"
-PYTHON_USE_WITH="xml"
-PYTHON_NONVERSIONED_EXECUTABLES=(".*")
+EAPI="5"
+
+PYTHON_COMPAT=(python{2_6,2_7,3_1,3_2,3_3} pypy1_9 )
+PYTHON_REQ_USE="xml"
 
 EGIT_MASTER="gentoolkit"
 EGIT_BRANCH="gentoolkit"
 
-inherit distutils python git-2
+inherit distutils-r1 git-2
 
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/gentoolkit.git"
 
@@ -25,34 +24,24 @@ IUSE=""
 
 KEYWORDS=""
 
-# Note: dev-lang/python dependencies are so emerge will print a blocker if any
-# installed slot of python is not built with +xml.  This is used since
-# PYTHON_USE_WITH just dies in the middle of the emerge. See bug 399331.
 DEPEND="sys-apps/portage"
 RDEPEND="${DEPEND}
-	>=dev-lang/python-2.6[xml]
-	!>=dev-lang/python-2.6[-xml]
 	!<=app-portage/gentoolkit-dev-0.2.7
 	|| ( >=sys-apps/coreutils-8.15 app-misc/realpath sys-freebsd/freebsd-bin )
 	sys-apps/gawk
 	sys-apps/grep
-	virtual/python-argparse"
+	virtual/python-argparse[${PYTHON_USEDEP}]"
 
-distutils_src_compile_pre_hook() {
-	echo VERSION="9999-${EGIT_VERSION}" "$(PYTHON)" setup.py set_version
-	VERSION="9999-${EGIT_VERSION}" "$(PYTHON)" setup.py set_version
+python_prepare_all() {
+	python_export_best
+	echo VERSION="9999-${EGIT_VERSION}" "${PYTHON}" setup.py set_version
+	VERSION="9999-${EGIT_VERSION}" "${PYTHON}" setup.py set_version
 }
 
-src_compile() {
-	distutils_src_compile
-}
-
-src_install() {
-	python_convert_shebangs -r "" build-*/scripts-*
-	distutils_src_install
+python_install_all() {
+	distutils-r1_python_install_all
 
 	# Create cache directory for revdep-rebuild
-	dodir /var/cache/revdep-rebuild
 	keepdir /var/cache/revdep-rebuild
 	use prefix || fowners root:root /var/cache/revdep-rebuild
 	fperms 0700 /var/cache/revdep-rebuild
@@ -72,20 +61,21 @@ src_install() {
 }
 
 pkg_postinst() {
-	distutils_pkg_postinst
-
-	einfo
-	einfo "For further information on gentoolkit, please read the gentoolkit"
-	einfo "guide: http://www.gentoo.org/doc/en/gentoolkit.xml"
-	einfo
-	einfo "Another alternative to equery is app-portage/portage-utils"
-	einfo
-	einfo "Additional tools that may be of interest:"
-	einfo
-	einfo "    app-admin/eclean-kernel"
-	einfo "    app-portage/diffmask"
-	einfo "    app-portage/flaggie"
-	einfo "    app-portage/install-mask"
-	einfo "    app-portage/portpeek"
-	einfo "    app-portage/smart-live-rebuild"
+	# Only show the elog information on a new install
+	if [[ ! ${REPLACING_VERSIONS} ]]; then
+		elog
+		elog "For further information on gentoolkit, please read the gentoolkit"
+		elog "guide: http://www.gentoo.org/doc/en/gentoolkit.xml"
+		elog
+		elog "Another alternative to equery is app-portage/portage-utils"
+		elog
+		elog "Additional tools that may be of interest:"
+		elog
+		elog "    app-admin/eclean-kernel"
+		elog "    app-portage/diffmask"
+		elog "    app-portage/flaggie"
+		elog "    app-portage/install-mask"
+		elog "    app-portage/portpeek"
+		elog "    app-portage/smart-live-rebuild"
+	fi
 }
