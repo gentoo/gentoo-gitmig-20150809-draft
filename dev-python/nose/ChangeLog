@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/nose
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.88 2012/12/22 01:51:49 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.89 2013/01/02 12:28:50 mgorny Exp $
+
+*nose-1.2.1 (02 Jan 2013)
+*nose-9999 (02 Jan 2013)
+
+  02 Jan 2013; Michał Górny <mgorny@gentoo.org> +nose-1.2.1.ebuild,
+  +nose-9999.ebuild, nose-1.1.2-r1.ebuild:
+  Version bump. Enable coverage unconditionally since it is now required by the
+  tests. Disable parallel build in src_test() because of tests concurrency.
 
   22 Dec 2012; Mike Gilbert <floppym@gentoo.org> nose-1.1.2-r1.ebuild:
   Add pypy2_0.
