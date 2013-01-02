@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14340 2013/01/02 15:40:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14341 2013/01/02 20:06:13 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,6 +34,7 @@
 # Mike Gilbert <floppym@gentoo.org> (03 Jan 2013)
 # No longer maintained upstream.
 # Please upgrade to PyPy 1.9 or 2.0.
+# Make sure to update USE_PYTHON and PYTHON_TARGETS as well.
 # Removal in 30 days.
 dev-python/pypy:1.8
 
