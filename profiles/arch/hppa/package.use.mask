@@ -1,8 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.118 2013/01/02 11:40:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.119 2013/01/02 12:32:33 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (2 Jan 2013)
+# Mask sci-libs/proj for dev-perl/PDL (bug #417453)
+dev-perl/PDL proj
 
 # Jeroen Roovers <jer@gentoo.org> (2 Jan 2013)
 # Mask non-keyworded sci-libs/hdf5 for sci-mathematics/octave
