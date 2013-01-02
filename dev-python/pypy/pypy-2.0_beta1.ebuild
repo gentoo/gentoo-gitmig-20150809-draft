@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0_beta1.ebuild,v 1.2 2012/12/24 04:37:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0_beta1.ebuild,v 1.3 2013/01/02 04:41:23 floppym Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://bitbucket.org/pypy/pypy/get/release-${PV/_beta/-beta-}.tar.bz2 
 
 LICENSE="MIT"
 SLOT=$(get_version_component_range 1-2 ${PV})
-KEYWORDS=""
+KEYWORDS="~amd64 ~amd64-linux ~x86 ~x86-linux"
 IUSE="bzip2 doc examples +jit ncurses sandbox shadowstack sqlite ssl +xml"
 
 RDEPEND=">=sys-libs/zlib-1.1.3
