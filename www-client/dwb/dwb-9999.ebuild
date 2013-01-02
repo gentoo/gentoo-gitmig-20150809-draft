@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/dwb-9999.ebuild,v 1.3 2012/12/14 23:21:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/dwb-9999.ebuild,v 1.4 2013/01/02 21:16:50 radhermit Exp $
 
-EAPI=4
+EAPI=5
 
 inherit mercurial toolchain-funcs
 
@@ -19,20 +19,18 @@ IUSE="examples gtk3"
 
 RDEPEND=">=net-libs/libsoup-2.32:2.4
 	!gtk3? (
-		>=net-libs/webkit-gtk-1.4.0:2
+		>=net-libs/webkit-gtk-1.8.0:2
 		x11-libs/gtk+:2
 	)
 	gtk3? (
-		>=net-libs/webkit-gtk-1.4.0:3
+		>=net-libs/webkit-gtk-1.8.0:3
 		x11-libs/gtk+:3
 	)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	sed -e '/^CFLAGS += -\(pipe\|g\|O2\)/d' \
-		-e 's:^PREFIX.*:PREFIX=/usr:' \
-		-i config.mk || die
+	sed -i "/^CFLAGS += -\(pipe\|g\|O2\)/d" config.mk || die
 }
 
 src_compile() {
