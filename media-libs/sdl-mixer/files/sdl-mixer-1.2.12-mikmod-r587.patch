@@ -8,9 +8,8 @@ https://bugs.gentoo.org/445980
 # Parent  c92001a2c18f628698c58aa4e05a7335d10d0e9e
 Paul P Komkoff Jr fixed malloc/free mismatch in the MikMod driver
 
-diff -r c92001a2c18f -r 56cad6484b04 dynamic_mod.c
---- a/dynamic_mod.c	Sun Mar 04 21:32:47 2012 +0000
-+++ b/dynamic_mod.c	Sun Jul 22 16:13:27 2012 -0700
+--- a/dynamic_mod.c
++++ b/dynamic_mod.c
 @@ -93,6 +93,13 @@
  			SDL_UnloadObject(mikmod.handle);
  			return -1;
@@ -25,9 +24,8 @@ diff -r c92001a2c18f -r 56cad6484b04 dynamic_mod.c
  		mikmod.Player_Active =
  			(BOOL (*)(void))
  			SDL_LoadFunction(mikmod.handle, "Player_Active");
-diff -r c92001a2c18f -r 56cad6484b04 dynamic_mod.h
---- a/dynamic_mod.h	Sun Mar 04 21:32:47 2012 +0000
-+++ b/dynamic_mod.h	Sun Jul 22 16:13:27 2012 -0700
+--- a/dynamic_mod.h
++++ b/dynamic_mod.h
 @@ -35,6 +35,7 @@
  	void (*MikMod_RegisterDriver)(struct MDRIVER*);
  	int* MikMod_errno;
@@ -36,9 +34,8 @@ diff -r c92001a2c18f -r 56cad6484b04 dynamic_mod.h
  	BOOL (*Player_Active)(void);
  	void (*Player_Free)(MODULE*);
  	MODULE* (*Player_LoadGeneric)(MREADER*,int,BOOL);
-diff -r c92001a2c18f -r 56cad6484b04 music_mod.c
---- a/music_mod.c	Sun Mar 04 21:32:47 2012 +0000
-+++ b/music_mod.c	Sun Jul 22 16:13:27 2012 -0700
+--- a/music_mod.c
++++ b/music_mod.c
 @@ -109,13 +109,13 @@
  
  	list = mikmod.MikMod_InfoDriver();
