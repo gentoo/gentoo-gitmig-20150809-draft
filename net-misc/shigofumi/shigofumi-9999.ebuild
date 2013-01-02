@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shigofumi/shigofumi-9999.ebuild,v 1.8 2012/10/30 12:00:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shigofumi/shigofumi-9999.ebuild,v 1.9 2013/01/02 17:44:19 scarabeus Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ IUSE="debug doc nls xattr"
 RDEPEND="dev-libs/confuse
 	dev-libs/libxml2
 	sys-libs/readline
-	>=net-libs/libisds-0.6"
+	>=net-libs/libisds-0.7"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? (

@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/shigofumi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shigofumi/ChangeLog,v 1.9 2012/10/30 12:00:05 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shigofumi/ChangeLog,v 1.10 2013/01/02 17:44:19 scarabeus Exp $
+
+*shigofumi-0.3 (02 Jan 2013)
+
+  02 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> +shigofumi-0.3.ebuild,
+  -shigofumi-0.2.ebuild, shigofumi-9999.ebuild:
+  Version bump to latest. Drop older.
 
   30 Oct 2012; Anthony G. Basile <blueness@gentoo.org> shigofumi-0.2.ebuild,
   shigofumi-9999.ebuild:
