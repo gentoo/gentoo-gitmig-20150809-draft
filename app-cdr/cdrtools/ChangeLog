@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdrtools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.296 2012/12/18 17:46:49 billie Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.297 2013/01/02 17:01:44 billie Exp $
+
+  02 Jan 2013; Daniel Pielmeier <billie@gentoo.org>
+  cdrtools-3.01_alpha10.ebuild:
+  Split gettext and libintl dependency according to bug #410501. Thanks to
+  Maxim Kammerer for the report.
 
   18 Dec 2012; Daniel Pielmeier <billie@gentoo.org>
   -cdrtools-3.01_alpha08.ebuild, -cdrtools-3.01_alpha09.ebuild:
