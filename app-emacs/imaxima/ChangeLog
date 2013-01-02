@@ -1,6 +1,15 @@
 # ChangeLog for app-emacs/imaxima
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.39 2011/06/19 16:31:49 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.40 2013/01/02 21:03:31 ulm Exp $
+
+*imaxima-1.0-r3 (02 Jan 2013)
+
+  02 Jan 2013; Ulrich Müller <ulm@gentoo.org> imaxima-1.0-r2.ebuild,
+  +imaxima-1.0-r3.ebuild, +files/imaxima-1.0-1.03.patch,
+  +files/imaxima-1.0-mlabel.patch:
+  Fix problem with LaTeX output caused by renamed mlabel symbol in maxima-5.29,
+  bug 448242. Apply some minor updates from imaxima-imath-1.03, see the
+  ChangeLog of the package for details.
 
   19 Jun 2011; Raúl Porcel <armin76@gentoo.org> imaxima-1.0-r2.ebuild:
   Drop sparc keywords
