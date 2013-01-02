@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/linux-identd-1.3-r1.ebuild,v 1.7 2013/01/01 19:57:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/linux-identd-1.3-r1.ebuild,v 1.8 2013/01/02 12:37:51 ago Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -12,7 +12,7 @@ IUSE="xinetd"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ~ppc sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc sparc x86"
 
 DEPEND=""
 RDEPEND="xinetd? ( sys-apps/xinetd )"
