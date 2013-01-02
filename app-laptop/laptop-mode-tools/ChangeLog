@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/laptop-mode-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.65 2013/01/02 21:18:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.66 2013/01/02 21:19:06 pacho Exp $
+
+  02 Jan 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/laptop-mode-tools-1.62-remove-hal.patch:
+  Commit patch also
 
 *laptop-mode-tools-1.62 (02 Jan 2013)
 
