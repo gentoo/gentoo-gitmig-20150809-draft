@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libdmapsharing/libdmapsharing-2.9.15.ebuild,v 1.7 2013/01/01 14:46:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdmapsharing/libdmapsharing-2.9.15.ebuild,v 1.8 2013/01/03 13:11:38 pacho Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.flyn.org/projects/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="3.0"
 KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 x86"
-IUSE="doc"
+IUSE=""
 
 # Vala/libgee/gtk+:2 is only used when maintainer-mode is enabled
 # Doesn't seem to be used for anything...
@@ -28,8 +28,8 @@ RDEPEND="
 	sys-libs/zlib
 "
 DEPEND="${RDEPEND}
+	dev-util/gtk-doc-am
 	virtual/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1 )
 "
 
 src_prepare() {
@@ -42,8 +42,7 @@ src_prepare() {
 
 src_configure() {
 	econf --disable-maintainer-mode \
-		--with-mdns=avahi \
-		$(use_enable doc gtk-doc)
+		--with-mdns=avahi
 }
 
 src_install() {
