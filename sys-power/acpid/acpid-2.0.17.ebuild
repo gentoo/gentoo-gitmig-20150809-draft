@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-2.0.17.ebuild,v 1.6 2012/11/25 18:59:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-2.0.17.ebuild,v 1.7 2013/01/03 12:59:15 miska Exp $
 
 EAPI=4
 inherit systemd
@@ -40,7 +40,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if ! has_version 'sys-power/acpid'; then
+	if [[ -z "$REPLACING_VERSIONS" ]]; then
 		elog
 		elog "You may wish to read the Gentoo Linux Power Management Guide,"
 		elog "which can be found online at:"
