@@ -2,8 +2,14 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>vserver</herd>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>pva@gentoo.org</email>
+		<description>Primary maintainer</description>
+	</maintainer>
+	<maintainer>
+		<email>andreis.vinogradovs@gmail.com</email>
+		<description>Proxy maintainer, CC him on bugs</description>
 	</maintainer>
 	<longdescription>
 		OpenVZ is an Operating System-level server virtualization solution, 
