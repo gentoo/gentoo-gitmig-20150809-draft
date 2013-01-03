@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/freeze-2.5.0-r1.ebuild,v 1.3 2013/01/03 10:55:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/freeze-2.5.0-r1.ebuild,v 1.4 2013/01/03 12:23:40 jer Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/utils/compress/${P}.tar.gz"
 
 LICENSE="GPL-1+"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="
