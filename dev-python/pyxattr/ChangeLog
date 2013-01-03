@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyxattr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.43 2013/01/03 21:29:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.44 2013/01/03 23:09:50 mgorny Exp $
+
+*pyxattr-0.5.2 (03 Jan 2013)
+
+  03 Jan 2013; Michał Górny <mgorny@gentoo.org> +pyxattr-0.5.2.ebuild:
+  Version bump.
 
 *pyxattr-9999 (03 Jan 2013)
 
