@@ -16,10 +16,11 @@
     <remote-id type="cpan-module">DBD::ExampleP::dr</remote-id>
     <remote-id type="cpan-module">DBD::ExampleP::st</remote-id>
     <remote-id type="cpan-module">DBD::File</remote-id>
+    <remote-id type="cpan-module">DBD::File::DataSource::File</remote-id>
+    <remote-id type="cpan-module">DBD::File::DataSource::Stream</remote-id>
     <remote-id type="cpan-module">DBD::File::Statement</remote-id>
     <remote-id type="cpan-module">DBD::File::Table</remote-id>
-    <remote-id type="cpan-module">DBD::File::TieMeta</remote-id>
-    <remote-id type="cpan-module">DBD::File::TieTables</remote-id>
+    <remote-id type="cpan-module">DBD::File::TableSource::FileSystem</remote-id>
     <remote-id type="cpan-module">DBD::File::db</remote-id>
     <remote-id type="cpan-module">DBD::File::dr</remote-id>
     <remote-id type="cpan-module">DBD::File::st</remote-id>
@@ -58,8 +59,12 @@
     <remote-id type="cpan-module">DBI::DBD</remote-id>
     <remote-id type="cpan-module">DBI::DBD::Metadata</remote-id>
     <remote-id type="cpan-module">DBI::DBD::SqlEngine</remote-id>
+    <remote-id type="cpan-module">DBI::DBD::SqlEngine::DataSource</remote-id>
     <remote-id type="cpan-module">DBI::DBD::SqlEngine::Statement</remote-id>
     <remote-id type="cpan-module">DBI::DBD::SqlEngine::Table</remote-id>
+    <remote-id type="cpan-module">DBI::DBD::SqlEngine::TableSource</remote-id>
+    <remote-id type="cpan-module">DBI::DBD::SqlEngine::TieMeta</remote-id>
+    <remote-id type="cpan-module">DBI::DBD::SqlEngine::TieTables</remote-id>
     <remote-id type="cpan-module">DBI::DBD::SqlEngine::db</remote-id>
     <remote-id type="cpan-module">DBI::DBD::SqlEngine::dr</remote-id>
     <remote-id type="cpan-module">DBI::DBD::SqlEngine::st</remote-id>

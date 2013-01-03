@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/DBI
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.164 2012/09/02 17:29:10 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.165 2013/01/03 19:41:30 tove Exp $
+
+*DBI-1.623.0 (03 Jan 2013)
+
+  03 Jan 2013; Torsten Veller <tove@gentoo.org> +DBI-1.623.0.ebuild,
+  metadata.xml:
+  Version bump
 
   02 Sep 2012; Torsten Veller <tove@gentoo.org> -DBI-1.615.ebuild,
   -DBI-1.616.0.ebuild, -DBI-1.617.0.ebuild, -DBI-1.619.0.ebuild,
