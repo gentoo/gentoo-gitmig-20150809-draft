@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r4.ebuild,v 1.8 2012/07/29 17:13:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r4.ebuild,v 1.9 2013/01/03 09:23:48 jer Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -9,7 +9,7 @@ DESCRIPTION="library to provide an API for commonly used low-level network funct
 HOMEPAGE="http://www.packetfactory.net/libnet/"
 SRC_URI="http://www.packetfactory.net/libnet/dist/deprecated/${P}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="BSD BSD-2 HPND"
 SLOT="1.0"
 KEYWORDS="alpha amd64 arm hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
