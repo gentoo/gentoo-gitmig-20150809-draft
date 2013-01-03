@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.6.2.ebuild,v 1.4 2012/09/23 08:55:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.6.2.ebuild,v 1.5 2013/01/03 00:48:01 jer Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -9,7 +9,7 @@ DESCRIPTION="Clients for net-analyzer/argus"
 HOMEPAGE="http://www.qosient.com/argus/"
 SRC_URI="http://qosient.com/argus/dev/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="debug ft geoip mysql sasl tcpd"
