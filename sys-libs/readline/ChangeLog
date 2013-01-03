@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/readline
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.181 2012/04/30 01:36:43 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.182 2013/01/03 03:02:13 vapier Exp $
+
+*readline-6.2_p4 (03 Jan 2013)
+
+  03 Jan 2013; Mike Frysinger <vapier@gentoo.org> +readline-6.2_p4.ebuild:
+  Version bump #449810 by Lars Wendler.
 
   30 Apr 2012; Mike Frysinger <vapier@gentoo.org> readline-6.2_p1-r1.ebuild:
   Create a config.cache with first configure and re-use it with the rlfe subdir
