@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/solfege
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.88 2012/09/25 03:22:17 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.89 2013/01/03 08:04:49 radhermit Exp $
+
+*solfege-3.20.7 (03 Jan 2013)
+
+  03 Jan 2013; Tim Harder <radhermit@gentoo.org> +solfege-3.20.7.ebuild:
+  Version bump. Update to use python-single-r1 eclass.
 
   25 Sep 2012; Tim Harder <radhermit@gentoo.org> -solfege-3.20.4.ebuild:
   Remove old.
