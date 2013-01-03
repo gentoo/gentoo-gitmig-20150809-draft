@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/smatch
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/smatch/ChangeLog,v 1.3 2012/12/20 02:46:28 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/smatch/ChangeLog,v 1.4 2013/01/03 20:50:43 vapier Exp $
+
+*smatch-1.57-r1 (03 Jan 2013)
+
+  03 Jan 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/smatch-1.57-restrict.patch, +smatch-1.57-r1.ebuild:
+  Ignore __restrict__ field w/patch from ChromiumOS.
 
 *smatch-1.57 (20 Dec 2012)
 
