@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.32 2012/12/03 21:31:35 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.33 2013/01/03 23:36:58 voyageur Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ KEYWORDS=""
 IUSE="debug multitarget +static-analyzer test"
 
 DEPEND="static-analyzer? ( dev-lang/perl )"
-RDEPEND="~sys-devel/llvm-${PV}[multitarget=]"
+RDEPEND="~sys-devel/llvm-${PV}[debug=,multitarget=]"
 
 S="${WORKDIR}/llvm"
 

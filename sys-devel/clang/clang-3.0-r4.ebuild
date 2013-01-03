@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0-r4.ebuild,v 1.1 2012/05/24 13:00:09 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0-r4.ebuild,v 1.2 2013/01/03 23:36:58 voyageur Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="debug kernel_FreeBSD multitarget +static-analyzer system-cxx-headers test"
 
 DEPEND="static-analyzer? ( dev-lang/perl )"
-RDEPEND="~sys-devel/llvm-${PV}[multitarget=]"
+RDEPEND="~sys-devel/llvm-${PV}[debug=,multitarget=]"
 
 S=${WORKDIR}/llvm-${PV}.src
 
