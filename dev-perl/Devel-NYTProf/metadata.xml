@@ -14,6 +14,7 @@
     <remote-id type="cpan-module">Devel::NYTProf::ReadStream</remote-id>
     <remote-id type="cpan-module">Devel::NYTProf::Reader</remote-id>
     <remote-id type="cpan-module">Devel::NYTProf::Run</remote-id>
+    <remote-id type="cpan-module">Devel::NYTProf::SubCallInfo</remote-id>
     <remote-id type="cpan-module">Devel::NYTProf::SubInfo</remote-id>
     <remote-id type="cpan-module">Devel::NYTProf::Util</remote-id>
   </upstream>
