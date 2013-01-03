@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libcgroup
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/ChangeLog,v 1.6 2012/11/27 07:46:25 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/ChangeLog,v 1.7 2013/01/03 20:34:20 pinkbyte Exp $
+
+*libcgroup-0.39_rc1-r1 (03 Jan 2013)
+*libcgroup-0.38-r1 (03 Jan 2013)
+
+  03 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> -libcgroup-0.38.ebuild,
+  +libcgroup-0.38-r1.ebuild, -libcgroup-0.39_rc1.ebuild,
+  +libcgroup-0.39_rc1-r1.ebuild, files/cgconfig.initd, files/cgred.initd:
+  Remove dependency on 'local' initscript, wrt bug #424405, revbump
 
   27 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> -libcgroup-0.37-r2.ebuild,
   -files/libcgroup-0.37-wildcard-substitutions.patch:

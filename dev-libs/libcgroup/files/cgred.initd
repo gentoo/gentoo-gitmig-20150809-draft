@@ -11,7 +11,7 @@ CGRULESENGD="/usr/sbin/cgrulesengd"
 PID_FILE=${PID_FILE:-"/var/run/cgred.pid"}
 
 depend() {
-	need cgconfig local
+	need cgconfig
 	use logger
 }
 
