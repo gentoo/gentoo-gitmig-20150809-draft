@@ -1,6 +1,10 @@
 # ChangeLog for games-action/heroes
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/ChangeLog,v 1.17 2011/08/03 17:53:11 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/ChangeLog,v 1.18 2013/01/03 21:18:38 hasufell Exp $
+
+  03 Jan 2013; Julian Ospald <hasufell@gentoo.org> heroes-0.21-r1.ebuild,
+  +files/heroes-0.21-automake-1.12.patch:
+  fix build with automake-1.12 wrt #449864
 
   03 Aug 2011; Michael Sterrett <mr_bones_@gentoo.org> heroes-0.21-r1.ebuild:
   test is for testing installed package so turn it off for build (bug #377579)

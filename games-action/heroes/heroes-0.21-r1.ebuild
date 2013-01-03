@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21-r1.ebuild,v 1.10 2011/08/03 17:53:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21-r1.ebuild,v 1.11 2013/01/03 21:18:38 hasufell Exp $
 EAPI=2
 
 inherit eutils autotools games
@@ -33,7 +33,8 @@ src_prepare() {
 	#56118
 	epatch "${FILESDIR}"/${PV}-cvs-segfault-fix.patch \
 		"${FILESDIR}/${P}"-gcc4.patch \
-		"${FILESDIR}/${P}"-underlink.patch
+		"${FILESDIR}/${P}"-underlink.patch \
+		"${FILESDIR}"/${P}-automake-1.12.patch
 	sed -i 's:$(localedir):/usr/share/locale:' \
 		$(find . -name 'Makefile.in*') \
 		|| die "sed failed"
