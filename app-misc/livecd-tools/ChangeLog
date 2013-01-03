@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/livecd-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.124 2012/10/11 00:56:20 williamh Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.125 2013/01/03 17:40:47 williamh Exp $
+
+  03 Jan 2013; William Hubbs <williamh@gentoo.org> livecd-tools-9999.ebuild:
+  sync live ebuild
 
 *livecd-tools-2.0.3 (11 Oct 2012)
 
@@ -663,4 +666,3 @@
   24 Jan 2004; Brad House <brad_mssw@gentoo.org>
   livecd-tools-1.0.0_beta1.ebuild:
   initial commit
-
