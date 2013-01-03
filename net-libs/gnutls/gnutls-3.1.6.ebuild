@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.1.6.ebuild,v 1.1 2013/01/02 23:34:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.1.6.ebuild,v 1.2 2013/01/03 03:13:30 radhermit Exp $
 
 EAPI=4
 
@@ -8,12 +8,7 @@ inherit autotools libtool eutils
 
 DESCRIPTION="A TLS 1.2 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
-
-if [[ "${PV}" == *pre* ]]; then
-	SRC_URI="http://daily.josefsson.org/${P%.*}/${P%.*}-${PV#*pre}.tar.gz"
-else
-	SRC_URI="mirror://gnu/${PN}/${P}.tar.xz"
-fi
+SRC_URI="ftp://ftp.gnutls.org/gcrypt/gnutls/v${PV:0:3}/${P}.tar.xz"
 
 # LGPL-3 for libgnutls library and GPL-3 for libgnutls-extra library.
 LICENSE="GPL-3 LGPL-3"
@@ -36,8 +31,6 @@ DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )
 	nls? ( sys-devel/gettext )
 	test? ( app-misc/datefudge )"
-
-S=${WORKDIR}/${P%_pre*}
 
 DOCS=( AUTHORS ChangeLog NEWS README THANKS doc/TODO )
 
@@ -66,8 +59,6 @@ src_prepare() {
 	for file in $(grep -l AutoGen-ed src/*.c) ; do
 		rm src/$(basename ${file} .c).{c,h} || die
 	done
-
-	epatch "${FILESDIR}"/${PN}-3.1.3-guile-parallelmake.patch
 
 	# support user patches
 	epatch_user
