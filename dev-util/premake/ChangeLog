@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/premake
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/premake/ChangeLog,v 1.9 2012/05/01 18:12:34 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/premake/ChangeLog,v 1.10 2013/01/03 09:21:30 ago Exp $
+
+  03 Jan 2013; Agostino Sarubbo <ago@gentoo.org> premake-4.3.ebuild:
+  Add ~ppc, wrt bug #449956
 
   01 May 2012; Agostino Sarubbo <ago@gentoo.org> premake-3.5.ebuild:
   amd64/x86 stable
@@ -40,4 +43,3 @@
   +metadata.xml:
   Moved from sunrise overlay. Initial ebuild from Patrick Zimmermann (moHiJ)
   <patrick@zakweb.de>. Bug #60960
-
