@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/stella
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.73 2012/11/08 21:06:47 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.74 2013/01/03 03:28:59 mr_bones_ Exp $
+
+*stella-3.7.5 (03 Jan 2013)
+
+  03 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> +stella-3.7.5.ebuild:
+  version bump
 
 *stella-3.7.4 (08 Nov 2012)
 
