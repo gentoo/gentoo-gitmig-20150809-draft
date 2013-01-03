@@ -1,6 +1,12 @@
 # ChangeLog for app-text/sgml-common
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.58 2012/04/26 17:13:10 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.59 2013/01/03 06:11:51 floppym Exp $
+
+  03 Jan 2013; Mike Gilbert <floppym@gentoo.org>
+  -files/sgml-common-0.6.3-configure.in.patch,
+  -files/sgml-common-0.6.3-htmldir.patch,
+  -files/sgml-common-0.6.3-man_MANS.patch, sgml-common-0.6.3-r5.ebuild:
+  Repackage build system and eliminate eautoreconf to work around bug 443074.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   sgml-common-0.6.3-r5.ebuild:

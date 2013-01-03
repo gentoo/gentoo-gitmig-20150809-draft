@@ -1,5 +1,0 @@
---- a/doc/HTML/Makefile.am
-+++ b/doc/HTML/Makefile.am
-@@ -1,2 +1 @@
--htmldir	  = $(docdir)/sgml-common-@VERSION@/html
- html_DATA = *.html
