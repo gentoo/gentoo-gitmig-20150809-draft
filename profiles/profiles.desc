@@ -123,6 +123,7 @@ ppc64           default/linux/powerpc/ppc64/10.0/64bit-userland/server          
 
 # S390 Profiles
 s390            default/linux/s390/10.0                         dev
+s390            default/linux/s390/10.0/s390x                   dev
 s390            default/linux/s390/10.0/server                  dev
 s390            default/linux/s390/10.0/server/s390x            dev
 
