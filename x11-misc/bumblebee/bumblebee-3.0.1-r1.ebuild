@@ -1,10 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/bumblebee-3.0-r2.ebuild,v 1.3 2012/06/20 12:49:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/bumblebee-3.0.1-r1.ebuild,v 1.1 2013/01/03 20:37:21 pacho Exp $
 
-EAPI="4"
-
-inherit multilib systemd user
+EAPI=5
+inherit eutils multilib systemd user
 
 DESCRIPTION="Service providing elegant and stable means of managing Optimus graphics chipsets"
 HOMEPAGE="https://github.com/Bumblebee-Project/Bumblebee"
@@ -16,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="+bbswitch video_cards_nouveau video_cards_nvidia"
 
-RDEPEND="x11-misc/virtualgl
+RDEPEND="x11-misc/virtualgl:=
 	bbswitch? ( sys-power/bbswitch )
 	virtual/opengl
 	x11-base/xorg-drivers[video_cards_nvidia?,video_cards_nouveau?]"
@@ -30,6 +29,12 @@ DEPEND=">=sys-devel/autoconf-2.68
 	sys-apps/help2man"
 
 REQUIRED_USE="|| ( video_cards_nouveau video_cards_nvidia )"
+
+src_prepare() {
+	# --wait option for rmmod is deprecated:
+	# https://github.com/Bumblebee-Project/Bumblebee/issues/283
+	epatch "${FILESDIR}/${P}-remove-wait.patch"
+}
 
 src_configure() {
 	if use video_cards_nvidia ; then
@@ -54,6 +59,12 @@ src_install() {
 	newinitd "${FILESDIR}"/bumblebee.initd bumblebee
 	newenvd  "${FILESDIR}"/bumblebee.envd 99bumblebee
 	systemd_dounit scripts/systemd/bumblebeed.service
+
+	# Install udev rule to handle nvidia card switching,
+	# https://github.com/Bumblebee-Project/Bumblebee/issues/283
+	insinto /usr/lib/udev/rules.d
+	doins "${FILESDIR}"/99-remove-nvidia-dev.rules
+
 	default
 }
 

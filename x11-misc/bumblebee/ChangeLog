@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/bumblebee
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/ChangeLog,v 1.9 2012/09/14 20:24:21 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/ChangeLog,v 1.10 2013/01/03 20:37:21 pacho Exp $
+
+*bumblebee-3.0.1-r1 (03 Jan 2013)
+
+  03 Jan 2013; Pacho Ramos <pacho@gentoo.org> +bumblebee-3.0.1-r1.ebuild,
+  +files/99-remove-nvidia-dev.rules, +files/bumblebee-3.0.1-remove-wait.patch,
+  -bumblebee-3.0-r2.ebuild:
+  kmod-11 deprecates --wait rmmod option, causing issues (#447014 by Philipp
+  Leonhardt). See https://github.com/Bumblebee-Project/Bumblebee/issues/283 for
+  reference. Remove old.
 
 *bumblebee-3.0.1 (14 Sep 2012)
 
