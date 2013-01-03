@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-pdf-viewer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/ChangeLog,v 1.37 2012/12/28 16:40:43 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/ChangeLog,v 1.38 2013/01/03 01:14:29 fauli Exp $
+
+  03 Jan 2013; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-pdf-viewer-0.9.3.ebuild:
+  introduce deletion of .a and .la files for bug 449180
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
   claws-mail-pdf-viewer-0.9.3.ebuild:
