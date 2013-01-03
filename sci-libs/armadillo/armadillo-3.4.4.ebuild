@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/armadillo-3.4.4.ebuild,v 1.5 2012/12/25 03:26:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/armadillo-3.4.4.ebuild,v 1.6 2013/01/03 05:33:16 bicatali Exp $
 
 EAPI=4
 
 CMAKE_IN_SOURCE_BUILD=1
 
-inherit cmake-utils
+inherit cmake-utils toolchain-funcs
 
 DESCRIPTION="Streamlined C++ linear algebra library"
 HOMEPAGE="http://arma.sourceforge.net/"
@@ -35,13 +35,13 @@ src_configure() {
 	if use blas; then
 		mycmakeargs+=(
 			-DBLAS_FOUND=ON
-			-DBLAS_LIBRARIES="$(pkg-config --libs blas)"
+			-DBLAS_LIBRARIES="$($(tc-getPKGCONFIG) --libs blas)"
 		)
 	fi
 	if use lapack; then
 		mycmakeargs+=(
 			-DLAPACK_FOUND=ON
-			-DLAPACK_LIBRARIES="$(pkg-config --libs lapack)"
+			-DLAPACK_LIBRARIES="$($(tc-getPKGCONFIG) --libs lapack)"
 		)
 	fi
 	cmake-utils_src_configure
