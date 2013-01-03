@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dialog
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.170 2012/12/31 17:44:01 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.171 2013/01/03 09:16:35 jer Exp $
+
+  03 Jan 2013; Jeroen Roovers <jer@gentoo.org> dialog-1.2.20121230.ebuild:
+  Use versionator.eclass instead of hard-wired MY_PV.
 
 *dialog-1.2.20121230 (31 Dec 2012)
 

@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.2.20121230.ebuild,v 1.1 2012/12/31 17:44:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.2.20121230.ebuild,v 1.2 2013/01/03 09:16:35 jer Exp $
 
 EAPI="4"
 
-inherit multilib eutils
+inherit eutils multilib versionator
 
-MY_PV="${PV/1.2./1.2-}"
+MY_PV="$(get_version_component_range 1-2)-$(get_version_component_range 3)"
 S=${WORKDIR}/${PN}-${MY_PV}
 DESCRIPTION="tool to display dialog boxes from a shell"
 HOMEPAGE="http://invisible-island.net/dialog/dialog.html"
