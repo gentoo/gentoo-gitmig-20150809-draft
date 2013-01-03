@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/sabnzbd-0.7.7.ebuild,v 1.1 2013/01/03 20:02:32 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/sabnzbd-0.7.7.ebuild,v 1.2 2013/01/03 23:05:32 jsbronder Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/sabnzbdplus/${MY_P}-src.tar.gz"
 LICENSE="GPL-2 BSD LGPL-2 MIT BSD-1"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+rar +ssl unzip"
+IUSE="+rar +ssl unzip yenc"
 
 # We actually depend on dev-python/cherrypy as well but upstream has decided
 # to bundle a custom cut of the 3.2.0 branch.  Also, sabnzbd is installed to
@@ -41,6 +41,7 @@ RDEPEND="
 	rar? ( app-arch/rar )
 	ssl? ( dev-python/pyopenssl )
 	unzip? ( >=app-arch/unzip-5.5.2 )
+	yenc? ( dev-python/yenc )
 "
 
 S="${WORKDIR}/${MY_P}"
