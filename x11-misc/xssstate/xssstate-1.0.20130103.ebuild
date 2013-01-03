@@ -1,6 +1,6 @@
-#Copyright1999-2013GentooFoundation
-#DistributedunderthetermsoftheGNUGeneralPublicLicensev2
-#$Header: /var/cvsroot/gentoo-x86/x11-misc/xssstate/xssstate-1.0.20130103.ebuild,v 1.1 2013/01/03 13:33:35 jer Exp $
+# Copyright 1999-2013 GentooFoundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xssstate/xssstate-1.0.20130103.ebuild,v 1.2 2013/01/03 13:34:56 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
