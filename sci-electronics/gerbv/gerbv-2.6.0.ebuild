@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-2.6.0.ebuild,v 1.5 2013/01/02 13:24:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-2.6.0.ebuild,v 1.6 2013/01/03 10:56:40 tomjbe Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="A RS-274X (Gerber) and NC drill (Excellon) file viewer"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://gerbv.geda-project.org/"
 
-IUSE="unit-mm doc examples"
+IUSE="doc examples static-libs unit-mm"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc x86"
@@ -26,7 +26,8 @@ DEPEND="${RDEPEND}
 src_configure() {
 	econf \
 		$(use_enable unit-mm) \
-		--disable-update-desktop-database
+		--disable-update-desktop-database \
+		$(use_enable static-libs static)
 }
 
 src_install () {

@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gerbv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.46 2013/01/02 13:24:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.47 2013/01/03 10:56:40 tomjbe Exp $
+
+  03 Jan 2013; Thomas Beierlein <tomjbe@gentoo.org> gerbv-2.6.0.ebuild:
+  Add USE=static-libs support (bug 449768). Thanks ago
 
   02 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gerbv-2.6.0.ebuild:
   Stable for x86, wrt bug #449734
