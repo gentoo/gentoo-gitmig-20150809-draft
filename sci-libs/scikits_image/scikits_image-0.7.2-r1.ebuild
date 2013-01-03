@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/scikits_image-0.7.2-r1.ebuild,v 1.1 2012/12/10 22:04:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/scikits_image-0.7.2-r1.ebuild,v 1.2 2013/01/03 20:40:40 bicatali Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.3 2.7-pypy-* *-jython"
+RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* *-jython"
 PYTHON_MODNAME="skimage"
 DISTUTILS_SRC_TEST="nosetests"
 
