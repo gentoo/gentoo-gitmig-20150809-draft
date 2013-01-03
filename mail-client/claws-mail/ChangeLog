@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/claws-mail
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.225 2012/12/31 09:18:49 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.226 2013/01/03 07:47:47 fauli Exp $
+
+  03 Jan 2013; Christian Faulhammer <fauli@gentoo.org>
+  -claws-mail-3.8.1-r2.ebuild, -claws-mail-3.8.1-r3.ebuild,
+  -files/claws-mail-3.8.1_fix-gnutls-3.1.3.patch,
+  -files/claws-mail-3.8.1_fix-signature.patch,
+  -files/claws-mail-3.8.1_procmime-vuln.patch:
+  clean up
 
   31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> claws-mail-3.9.0.ebuild:
   Stable for sparc, wrt bug #448968
