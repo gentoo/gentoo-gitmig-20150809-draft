@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.3.ebuild,v 1.2 2013/01/03 05:06:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.3.ebuild,v 1.3 2013/01/03 20:32:40 bicatali Exp $
 
 EAPI=4
 
@@ -60,7 +60,7 @@ src_prepare() {
 	use hdf5 && has_version sci-libs/hdf5[mpi] && export CXX=mpicxx
 
 	epatch "${FILESDIR}"/0.9.2-{antlr,proj4,include,tests,semaphore}.patch
-	epatch "${FILESDIR}"/0.9.3-sstream.patch
+	epatch "${FILESDIR}"/0.9.3-{sstream,netcdf-cxx}.patch
 	# make sure antlr includes are from system and rebuild the sources with it
 	# https://sourceforge.net/tracker/?func=detail&atid=618685&aid=3465878&group_id=97659
 
