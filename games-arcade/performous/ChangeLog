@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/performous
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/ChangeLog,v 1.11 2012/11/15 18:28:23 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/ChangeLog,v 1.12 2013/01/03 10:57:37 ago Exp $
+
+  03 Jan 2013; Agostino Sarubbo <ago@gentoo.org> performous-0.7.0.ebuild:
+  Stable for amd64, wrt bug #449932
 
 *performous-0.7.0 (15 Nov 2012)
 
