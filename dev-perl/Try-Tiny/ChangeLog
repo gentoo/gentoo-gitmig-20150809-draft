@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Try-Tiny
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.39 2012/09/09 16:18:49 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.40 2013/01/03 19:18:30 tove Exp $
+
+*Try-Tiny-0.120.0 (03 Jan 2013)
+
+  03 Jan 2013; Torsten Veller <tove@gentoo.org> +Try-Tiny-0.120.0.ebuild:
+  Version bump
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> Try-Tiny-0.110.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #418803
