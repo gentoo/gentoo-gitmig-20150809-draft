@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/mtd-utils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.59 2012/08/24 13:38:51 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.60 2013/01/03 22:09:46 vapier Exp $
+
+  03 Jan 2013; Mike Frysinger <vapier@gentoo.org> mtd-utils-1.5.0.ebuild,
+  mtd-utils-99999999.ebuild:
+  Respect env AR/CC/RANLIB #446202 by Ambroz Bizjak.
 
   24 Aug 2012; Michael Weber <xmw@gentoo.org> mtd-utils-1.5.0.ebuild:
   ppc stable (bug 422217).
