@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.3-r1.ebuild,v 1.18 2012/10/19 10:42:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.3-r1.ebuild,v 1.19 2013/01/03 08:30:22 jer Exp $
 
 inherit perl-module eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/C/CS/CSOE/${P}.tar.gz"
 
 LICENSE="Artistic as-is"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ppc x86"
+KEYWORDS="amd64 arm ppc x86"
 IUSE="opengl badval gsl"
 
 DEPEND=">=sys-libs/ncurses-5.2
