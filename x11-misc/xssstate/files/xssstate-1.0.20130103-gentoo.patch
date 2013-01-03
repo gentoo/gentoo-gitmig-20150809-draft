@@ -55,7 +55,7 @@
 +	mkdir -p ${DESTDIR}${PREFIX}/bin
 +	cp -f xssstate ${DESTDIR}${PREFIX}/bin
 +	chmod 755 ${DESTDIR}${PREFIX}/bin/xssstate
-+	mkdir -p ${DESTDIR}${MANPREFIX}/man1
++#	mkdir -p ${DESTDIR}${MANPREFIX}/man1
 +#	@sed "s/VERSION/${VERSION}/g" < xssstate.1 > ${DESTDIR}${MANPREFIX}/man1/xssstate.1
 +#	@chmod 644 ${DESTDIR}${MANPREFIX}/man1/xssstate.1
  

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 GentooFoundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xssstate/xssstate-1.0.20130103.ebuild,v 1.3 2013/01/03 13:43:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xssstate/xssstate-1.0.20130103.ebuild,v 1.4 2013/01/03 13:59:19 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -32,4 +32,5 @@ src_prepare() {
 
 src_install() {
 	emake DESTDIR="${D}" PREFIX='/usr' install
+	dodoc README xsidle.sh
 }
