@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dotproject/dotproject-2.1.7.ebuild,v 1.1 2013/01/02 22:00:52 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dotproject/dotproject-2.1.7-r1.ebuild,v 1.1 2013/01/03 12:41:25 elvanor Exp $
 
-EAPI=2
+EAPI="5"
 inherit eutils webapp depend.php
 
 DESCRIPTION="dotProject is a PHP web-based project management framework"
@@ -14,18 +14,23 @@ LICENSE="GPL-2"
 IUSE=""
 
 DEPEND=""
-RDEPEND="app-text/poppler[utils]"
+RDEPEND="app-text/poppler[utils]
+	dev-php/PEAR-Date"
 
 need_httpd_cgi
 need_php_httpd
 
 S=${WORKDIR}/${PN}
 
+src_prepare() {
+	epatch "${FILESDIR}/${P}-pear-date.patch"
+}
+
 src_install () {
 	webapp_src_preinst
 
 	dodoc ChangeLog README
-	rm -f ChangeLog README
+	rm -rf ChangeLog README lib/PEAR/Date.php lib/PEAR/Date
 
 	mv includes/config{-dist,}.php
 
