@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.116 2012/11/25 06:01:12 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.117 2013/01/03 21:11:37 williamh Exp $
 
 EAPI=4
 
@@ -19,14 +19,15 @@ fi
 
 LICENSE="BSD-2"
 SLOT="0"
-IUSE="debug elibc_glibc ncurses pam newnet prefix selinux static-libs unicode
-	kernel_linux kernel_FreeBSD"
+IUSE="debug elibc_glibc ncurses pam newnet prefix selinux static-libs tools
+	unicode kernel_linux kernel_FreeBSD"
 
 RDEPEND="virtual/init
 	kernel_FreeBSD? ( || ( >=sys-freebsd/freebsd-ubin-9.0_rc sys-process/fuser-bsd ) )
 	elibc_glibc? ( >=sys-libs/glibc-2.5 )
 	ncurses? ( sys-libs/ncurses )
 	pam? ( sys-auth/pambase )
+	tools? ( dev-lang/perl )
 	>=sys-apps/baselayout-2.1-r1
 	kernel_linux? (
 		sys-process/psmisc
@@ -73,6 +74,7 @@ src_compile() {
 	fi
 	use newnet || MAKE_ARGS="${MAKE_ARGS} MKNET=oldnet"
 	use prefix && MAKE_ARGS="${MAKE_ARGS} MKPREFIX=yes PREFIX=${EPREFIX}"
+	use tools && MAKE_ARGS="${MAKE_ARGS} MKTOOLS=yes"
 	export DEBUG=$(usev debug)
 	export MKPAM=$(usev pam)
 	export MKTERMCAP=$(usev ncurses)
