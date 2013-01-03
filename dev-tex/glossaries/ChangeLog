@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/glossaries
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.54 2012/11/24 02:16:09 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.55 2013/01/03 10:56:42 ago Exp $
+
+  03 Jan 2013; Agostino Sarubbo <ago@gentoo.org> glossaries-3.04.ebuild:
+  Stable for amd64, wrt bug #449926
 
   24 Nov 2012; Tim Harder <radhermit@gentoo.org> glossaries-3.04.ebuild:
   Use gentoo mirror.
@@ -200,4 +203,3 @@
   22 Jul 2007; Lars Weiler <pylon@gentoo.org> +metadata.xml,
   +glossaries-1.02.ebuild:
   New package for glossaries (or list of acronyms).
-
