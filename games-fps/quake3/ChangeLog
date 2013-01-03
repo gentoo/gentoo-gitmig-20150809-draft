@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.64 2013/01/03 22:23:10 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.65 2013/01/03 23:01:09 pinkbyte Exp $
+
+  03 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> quake3-9999.ebuild:
+  Add workarounds for zlib and renderers loading, wrt bug #449510. Thanks to
+  robo9k <robo+gentoo AT 9k.lv> for discovering these issues
 
   03 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> quake3-9999.ebuild:
   Set new repo address for live ebuild, wrt bug #449510

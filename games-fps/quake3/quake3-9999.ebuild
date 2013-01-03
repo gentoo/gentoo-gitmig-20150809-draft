@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.23 2013/01/03 22:23:10 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.24 2013/01/03 23:01:09 pinkbyte Exp $
 
 # quake3-9999          -> latest git
 # quake3-9999.REV      -> use git REV
@@ -74,6 +74,9 @@ src_compile() {
 	# are otherwise ignored.
 	append-flags ${CPPFLAGS}
 
+	# Workaround for used zlib macro, wrt bug #449510
+	append-flags -DOF=_Z_OF
+
 	# OPTIMIZE is disabled in favor of CFLAGS.
 	#
 	# TODO: BUILD_CLIENT_SMP=$(buildit smp)
@@ -122,6 +125,12 @@ src_install() {
 			dosym ${exe} "${GAMES_BINDIR}/${exe/io}" || die "dosym ${exe}"
 		fi
 	done
+
+	# Install renderer libraries, wrt bug #449510
+	# this should be done through 'dogameslib', but
+	# for this some files need to be patched
+	exeinto "${GAMES_DATADIR}/${PN}"
+	doexe renderer*.so
 
 	prepgamesdirs
 }
