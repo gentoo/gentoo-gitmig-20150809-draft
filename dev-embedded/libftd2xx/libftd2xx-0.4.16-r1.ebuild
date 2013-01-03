@@ -1,7 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/libftd2xx-0.4.16-r1.ebuild,v 1.1 2011/02/22 17:02:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/libftd2xx-0.4.16-r1.ebuild,v 1.2 2013/01/03 19:37:51 pacho Exp $
 
+EAPI=5
 inherit multilib
 
 MY_P="${PN}${PV}"
@@ -16,6 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
+QA_PREBUILT="*"
+
 S=${WORKDIR}
 
 src_install() {
@@ -23,20 +26,20 @@ src_install() {
 	use amd64 && cd ${MY_P}_x86_64
 
 	into /opt
-	dolib.so ${PN}.so.${PV} || die
-	dosym ${PN}.so.${PV} /opt/$(get_libdir)/${PN}.so.${PV:0:1} || die
-	dosym ${PN}.so.${PV:0:1} /opt/$(get_libdir)/${PN}.so || die
+	dolib.so ${PN}.so.${PV}
+	dosym ${PN}.so.${PV} /opt/$(get_libdir)/${PN}.so.${PV:0:1}
+	dosym ${PN}.so.${PV:0:1} /opt/$(get_libdir)/${PN}.so
 	insinto /usr/include
-	doins ftd2xx.h WinTypes.h || die
+	doins ftd2xx.h WinTypes.h
 
 	dodir /etc/env.d
 	echo "LDPATH=\"/opt/$(get_libdir)\"" > ${D}/etc/env.d/50libftd2xx || die
 	if use examples ; then
 		find sample lib_table '(' -name '*.so' -o -name '*.[oa]' ')' -exec rm -f {} +
 		insinto /usr/share/doc/${PF}
-		doins -r sample || die "doins failed"
+		doins -r sample
 		insinto /usr/share/doc/${PF}/sample
-		doins -r lib_table || die "doins failed"
+		doins -r lib_table
 	fi
 
 	dodoc Config.txt FAQ.txt README.dat
