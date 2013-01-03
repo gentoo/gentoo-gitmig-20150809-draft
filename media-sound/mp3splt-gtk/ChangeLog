@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3splt-gtk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/ChangeLog,v 1.27 2012/09/08 12:11:18 sping Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/ChangeLog,v 1.28 2013/01/03 01:00:24 sping Exp $
+
+  03 Jan 2013; Sebastian Pipping <sping@gentoo.org> mp3splt-gtk-0.5.9.ebuild:
+  Fix dependency on libmp3splt (bug #449014)
 
 *mp3splt-gtk-0.7.3 (08 Sep 2012)
 
