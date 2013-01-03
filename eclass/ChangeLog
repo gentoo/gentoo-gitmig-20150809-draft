@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.592 2013/01/03 19:22:05 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.593 2013/01/03 20:30:47 hd_brummy Exp $
+
+  03 Jan 2013; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
+  fixed mistake for emake:-all emake:-install between old and new plugin
+  makefile structur, vdr-plugin-2.eclass
 
   03 Jan 2013; Alon Bar-Lev <alonbl@gentoo.org> ssl-cert.eclass:
   Support mandatory enrollment and custom USE flag, bug#319529.
