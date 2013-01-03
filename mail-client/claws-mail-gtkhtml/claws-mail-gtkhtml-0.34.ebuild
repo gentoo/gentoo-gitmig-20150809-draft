@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/claws-mail-gtkhtml-0.34.ebuild,v 1.1 2012/11/20 20:41:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/claws-mail-gtkhtml-0.34.ebuild,v 1.2 2013/01/03 01:20:42 fauli Exp $
 
 inherit eutils
 
@@ -28,4 +28,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README
+
+	# kill useless files
+	rm -f "${D}"/usr/lib*/claws-mail/plugins/*.{a,la}
 }

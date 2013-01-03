@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-vcalendar/claws-mail-vcalendar-2.0.14.ebuild,v 1.5 2012/12/28 16:41:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-vcalendar/claws-mail-vcalendar-2.0.14.ebuild,v 1.6 2013/01/03 01:34:20 fauli Exp $
 
 EAPI=4
 
@@ -32,4 +32,6 @@ src_install() {
 
 	# going to conflict with libical
 	rm -f "${D}"/usr/include/ical.h
+	# kill useless files
+	rm -f "${D}"/usr/lib*/claws-mail/plugins/*.{a,la}
 }

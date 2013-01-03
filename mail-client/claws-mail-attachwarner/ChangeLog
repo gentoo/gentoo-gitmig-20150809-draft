@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-attachwarner
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-attachwarner/ChangeLog,v 1.74 2012/12/28 16:39:54 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-attachwarner/ChangeLog,v 1.75 2013/01/03 01:10:12 fauli Exp $
+
+  03 Jan 2013; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-attachwarner-1.0.ebuild:
+  reintroduce deletion of .a and .la files
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
   claws-mail-attachwarner-1.0.ebuild:
