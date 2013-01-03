@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt-core
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.202 2012/12/31 05:50:06 pesa Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.203 2013/01/03 15:30:58 kensington Exp $
+
+*qt-core-4.8.4-r1 (03 Jan 2013)
+
+  03 Jan 2013; Michael Palimaka <kensington@gentoo.org>
+  +qt-core-4.8.4-r1.ebuild:
+  Revision bump making use of subslots for dev-libs/icu, to solve linkage issues
+  like in bug #449250.
 
   31 Dec 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Cleanup metadata.
