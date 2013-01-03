@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.34.2-r1.ebuild,v 1.1 2012/12/29 10:35:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.34.2-r1.ebuild,v 1.2 2013/01/03 00:31:07 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -24,6 +24,7 @@ RDEPEND="
 	>=dev-libs/glib-2.34.1:2
 	doctool? ( dev-python/mako )
 	virtual/libffi:=
+	${PYTHON_DEPS}
 "
 # Wants real bison, not virtual/yacc
 DEPEND="${RDEPEND}
