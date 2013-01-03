@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha10.ebuild,v 1.2 2013/01/02 17:01:44 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha10.ebuild,v 1.3 2013/01/03 16:04:19 billie Exp $
 
 EAPI=5
 
@@ -17,11 +17,11 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="acl nls unicode"
 
-DEPEND="acl? ( virtual/acl )
-	nls? ( >=sys-devel/gettext-0.18.1.1 )
+RDEPEND="acl? ( virtual/acl )
+	nls? ( virtual/libintl )
 	!app-cdr/cdrkit"
-RDEPEND="${DEPEND}
-	nls? ( virtual/libintl )"
+DEPEND="${RDEPEND}
+	nls? ( >=sys-devel/gettext-0.18.1.1 )"
 
 S=${WORKDIR}/${P/_alpha[0-9][0-9]}
 
