@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/policyd-weight
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd-weight/ChangeLog,v 1.22 2012/06/05 00:02:12 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd-weight/ChangeLog,v 1.23 2013/01/03 08:45:10 eras Exp $
+
+*policyd-weight-0.1.15.2-r1 (03 Jan 2013)
+
+  03 Jan 2013; Eray Aslan <eras@gentoo.org> +files/policyd-weight.init.d-r1,
+  +policyd-weight-0.1.15.2-r1.ebuild, metadata.xml:
+  Assign package to net-mail herd.  Do not keepdir /var/run directory - bug
+  #449858.  Fix init script
 
   05 Jun 2012; Zac Medico <zmedico@gentoo.org> policyd-weight-0.1.15.1.ebuild,
   policyd-weight-0.1.15.2.ebuild:
@@ -106,4 +113,3 @@
   +policyd-weight-0.1.14.3.ebuild:
   Initial import. Ebuild written by Brian E <grknight at scent-team.com> in
   bug #169646.
-
