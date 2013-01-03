@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-1.0.2.ebuild,v 1.7 2007/09/23 16:50:47 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-1.0.2.ebuild,v 1.8 2013/01/03 09:13:48 eras Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs user
 
 #
 # Mailbox format is determined by the 'mbox' and 'maildir'
@@ -58,13 +58,14 @@ SRC_URI="http://www.openwall.com/popa3d/${P}.tar.gz
 	mirror://gentoo/popa3d-0.6.3-vname-2.diff.gz
 	maildir? ( mirror://gentoo/popa3d-0.5.9-maildir-2.diff.gz )"
 
-LICENSE="as-is"
+LICENSE="Openwall"
 SLOT="0"
 KEYWORDS="~amd64 ppc sparc x86"
 
 DEPEND=">=sys-apps/sed-4
 	pam? ( >=sys-libs/pam-0.72
 	       >=net-mail/mailbase-0.00-r8 )"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 
@@ -109,8 +110,6 @@ src_unpack() {
 }
 
 src_compile() {
-	cd "${S}"
-
 	sed -i \
 		-e "s:^\(#define MAX_SESSIONS\) .*$:\1 ${MAX_SESSIONS}:" \
 		-e "s:^\(#define MAX_SESSIONS_PER_SOURCE\).*$:\1 ${MAX_SESSIONS_PER_SOURCE}:" \
