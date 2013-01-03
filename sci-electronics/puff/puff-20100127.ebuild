@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/puff/puff-20100127.ebuild,v 1.2 2012/11/12 16:37:26 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/puff/puff-20100127.ebuild,v 1.3 2013/01/03 11:19:36 tomjbe Exp $
 
 EAPI="2"
 
 inherit flag-o-matic multilib
 
 DESCRIPTION="microwave CAD software"
-HOMEPAGE="http://www.vf.utwente.nl/~ptdeboer/ham/puff/"
-SRC_URI="http://www.vf.utwente.nl/~ptdeboer/ham/${PN}/${P}.tgz"
+HOMEPAGE="http://wwwhome.cs.utwente.nl/~ptdeboer/ham/puff/"
+SRC_URI="http://wwwhome.cs.utwente.nl/~ptdeboer/ham/${PN}/${P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
