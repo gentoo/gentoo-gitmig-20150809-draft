@@ -1,11 +1,11 @@
 # Copyright 1999-2013 GentooFoundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xssstate/xssstate-1.0.20130103.ebuild,v 1.2 2013/01/03 13:34:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xssstate/xssstate-1.0.20130103.ebuild,v 1.3 2013/01/03 13:43:40 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
 
-DESCRIPTION="AsimpletooltoretrievetheXscreensaverstate"
+DESCRIPTION="A simple tool to retrieve the X screensaver state"
 HOMEPAGE="http://tools.suckless.org/xssstate"
 SRC_URI="http://dev.gentoo.org/~jer/${P}.tar.xz"
 
