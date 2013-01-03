@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.2.0.ebuild,v 1.13 2013/01/01 19:15:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.2.0.ebuild,v 1.14 2013/01/03 07:45:00 armin76 Exp $
 
 EAPI="4"
 
-inherit eutils cmake-utils autotools java-pkg-opt-2
+inherit eutils cmake-utils autotools java-pkg-opt-2 flag-o-matic
 
 PATCHVER="0.1"
 XSERVER_VERSION="1.13.0"
@@ -117,6 +117,9 @@ src_prepare() {
 }
 
 src_configure() {
+
+	use arm || use hppa && append-flags "-fPIC"
+
 	mycmakeargs=(
 		-G "Unix Makefiles"
 		$(cmake-utils_use_use internal-fltk INCLUDED_FLTK)
