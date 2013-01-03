@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.119 2013/01/01 19:18:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.120 2013/01/03 09:39:05 idella4 Exp $
+
+  04 Jan 2013; Ian Delaney <idella4@gentoo.org> sphinx-1.1.3-r3.ebuild:
+  py3.3 excluded from PYTHON_DEPEND, fixes Bug 447676 reported by jlec
 
   01 Jan 2013; Raúl Porcel <armin76@gentoo.org> sphinx-1.1.3-r3.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #449424
