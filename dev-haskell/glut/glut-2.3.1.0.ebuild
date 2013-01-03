@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/glut-2.3.1.0.ebuild,v 1.1 2012/11/18 12:52:17 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/glut-2.3.1.0.ebuild,v 1.2 2013/01/03 21:08:02 slyfox Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="=dev-haskell/opengl-2.6*:=[profile?]
