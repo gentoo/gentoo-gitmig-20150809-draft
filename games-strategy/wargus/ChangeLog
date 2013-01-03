@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/wargus
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.25 2012/10/19 08:32:15 hasufell Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.26 2013/01/03 00:29:05 mr_bones_ Exp $
+
+  03 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/wargus-2.2.6-build.patch, -files/wargus-2.2.6-underlinking.patch,
+  -wargus-2.2.6-r2.ebuild:
+  old
 
 *wargus-2.2.7 (19 Oct 2012)
 
@@ -114,4 +119,3 @@
   <flanders@simnet.is>, Chris Gianelloni <wolf31o2@gentoo.org>, Wescott
   <wescott2003@hotmail.com> and Florian Manschwetus
   <FlorianManschwetus@gmx.de>
-
