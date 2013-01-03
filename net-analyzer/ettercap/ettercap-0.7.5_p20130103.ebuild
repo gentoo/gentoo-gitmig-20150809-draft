@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.5_p20121216.ebuild,v 1.1 2012/12/16 13:44:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.5_p20130103.ebuild,v 1.1 2013/01/03 13:18:23 ago Exp $
 
 EAPI=4
 
