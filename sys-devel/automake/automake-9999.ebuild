@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-9999.ebuild,v 1.6 2012/01/19 20:55:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-9999.ebuild,v 1.7 2013/01/03 18:45:44 vapier Exp $
 
 EAPI="2"
 EGIT_REPO_URI="git://git.savannah.gnu.org/${PN}.git
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	sed -i \
 		-e "s|: (automake)| v${SLOT}: (automake${SLOT})|" \
-		doc/automake.texi || die
+		doc/automake.texi doc/automake-history.texi || die
 	export WANT_AUTOCONF=2.5
 	# Don't try wrapping the autotools this thing runs as it tends
 	# to be a bit esoteric, and the script does `set -e` itself.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.12.4.ebuild,v 1.2 2013/01/02 04:58:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.12.4.ebuild,v 1.3 2013/01/03 18:45:44 vapier Exp $
 
 inherit eutils versionator unpacker
 
@@ -40,14 +40,14 @@ src_unpack() {
 	cd "${S}"
 	sed -i \
 		-e "s|: (automake)| v${SLOT}: (automake${SLOT})|" \
-		doc/automake.texi || die
+		doc/automake.texi doc/automake-history.texi || die
 	local f
-	for f in doc/automake.{texi,info*} ; do
+	for f in doc/automake{,-history}.{texi,info*} ; do
 		mv ${f} ${f%.*}${SLOT}.${f#*.} || die
 	done
 	touch -r configure doc/*.{texi,info}*
 	sed -i -r \
-		-e "s:(automake)(.info|.texi):\1${SLOT}\2:g" \
+		-e "s:(automake|automake-history)(.info|.texi):\1${SLOT}\2:g" \
 		Makefile.in || die
 	export WANT_AUTOCONF=2.5
 }
