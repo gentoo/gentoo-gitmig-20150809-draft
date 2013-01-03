@@ -1,6 +1,6 @@
 diff -ur PortageXS-0.02.10.orig/lib/PortageXS/Core.pm PortageXS-0.02.10/lib/PortageXS/Core.pm
---- PortageXS-0.02.10.orig/lib/PortageXS/Core.pm	2012-12-15 19:01:20.267451741 +0100
-+++ PortageXS-0.02.10/lib/PortageXS/Core.pm	2012-12-15 19:06:37.363938909 +0100
+--- PortageXS-0.02.10.orig/lib/PortageXS/Core.pm	2013-01-03 09:32:10.477597366 +0100
++++ PortageXS-0.02.10/lib/PortageXS/Core.pm	2013-01-03 09:32:12.707534858 +0100
 @@ -94,7 +94,7 @@
  	my $self		= shift;
  	my $param		= shift;
@@ -29,8 +29,8 @@ diff -ur PortageXS-0.02.10.orig/lib/PortageXS/Core.pm PortageXS-0.02.10/lib/Port
  
  # Description:
 diff -ur PortageXS-0.02.10.orig/lib/PortageXS/examples/getParamFromFile.pl PortageXS-0.02.10/lib/PortageXS/examples/getParamFromFile.pl
---- PortageXS-0.02.10.orig/lib/PortageXS/examples/getParamFromFile.pl	2012-12-15 19:01:20.267451741 +0100
-+++ PortageXS-0.02.10/lib/PortageXS/examples/getParamFromFile.pl	2012-12-15 19:07:19.041822742 +0100
+--- PortageXS-0.02.10.orig/lib/PortageXS/examples/getParamFromFile.pl	2013-01-03 09:32:10.477597366 +0100
++++ PortageXS-0.02.10/lib/PortageXS/examples/getParamFromFile.pl	2013-01-03 09:32:12.707534858 +0100
 @@ -8,4 +8,5 @@
  
  my $pxs=PortageXS->new();
@@ -39,8 +39,17 @@ diff -ur PortageXS-0.02.10.orig/lib/PortageXS/examples/getParamFromFile.pl Porta
 +print join(' 
 +',$pxs->getParamFromFile($pxs->getFileContents('/usr/share/portage/config/make.globals').$pxs->getFileContents('/etc/portage/make.conf'),'CFLAGS','lastseen'))."\n";
 diff -ur PortageXS-0.02.10.orig/lib/PortageXS.pm PortageXS-0.02.10/lib/PortageXS.pm
---- PortageXS-0.02.10.orig/lib/PortageXS.pm	2012-12-15 19:01:20.283451308 +0100
-+++ PortageXS-0.02.10/lib/PortageXS.pm	2012-12-15 19:14:38.882079616 +0100
+--- PortageXS-0.02.10.orig/lib/PortageXS.pm	2013-01-03 09:32:10.478597338 +0100
++++ PortageXS-0.02.10/lib/PortageXS.pm	2013-01-03 09:32:29.710057966 +0100
+@@ -77,7 +77,7 @@
+ 	
+ 	$self->{'PORTAGEXS_ETC_DIR'}		= '/etc/pxs/';
+ 	$self->{'ETC_DIR'}			= '/etc/';
+-	$self->{'MAKE_PROFILE_PATH'}		= '/etc/make.profile';
++	$self->{'MAKE_PROFILE_PATH'}		= '/etc/portage/make.profile';
+ 	
+ 	# - init colors >
+ 	$self->{'COLORS'}{'YELLOW'}		= color('bold yellow');
 @@ -89,7 +89,7 @@
  	$self->{'COLORS'}{'BLUE'}		= color('bold blue');
  	$self->{'COLORS'}{'RESET'}		= color('reset');
@@ -51,8 +60,8 @@ diff -ur PortageXS-0.02.10.orig/lib/PortageXS.pm PortageXS-0.02.10/lib/PortageXS
  		$self->{'COLORS'}{'GREEN'}		= '';
  		$self->{'COLORS'}{'LIGHTGREEN'}		= '';
 diff -ur PortageXS-0.02.10.orig/t/01_Core.t PortageXS-0.02.10/t/01_Core.t
---- PortageXS-0.02.10.orig/t/01_Core.t	2012-12-15 19:01:20.266451768 +0100
-+++ PortageXS-0.02.10/t/01_Core.t	2012-12-15 19:15:33.036638139 +0100
+--- PortageXS-0.02.10.orig/t/01_Core.t	2013-01-03 09:32:10.476597394 +0100
++++ PortageXS-0.02.10/t/01_Core.t	2013-01-03 09:32:12.707534858 +0100
 @@ -14,8 +14,8 @@
  
  # - getFileContents >

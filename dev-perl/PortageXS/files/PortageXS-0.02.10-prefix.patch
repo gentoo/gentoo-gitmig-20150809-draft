@@ -57,10 +57,10 @@ diff -ur PortageXS-0.02.09.orig/lib/PortageXS.pm PortageXS-0.02.09/lib/PortageXS
  	
 -	$self->{'PORTAGEXS_ETC_DIR'}		= '/etc/pxs/';
 -	$self->{'ETC_DIR'}			= '/etc/';
--	$self->{'MAKE_PROFILE_PATH'}		= '/etc/make.profile';
+-	$self->{'MAKE_PROFILE_PATH'}		= '/etc/portage/make.profile';
 +	$self->{'PORTAGEXS_ETC_DIR'}		= '@GENTOO_PORTAGE_EPREFIX@/etc/pxs/';
 +	$self->{'ETC_DIR'}			= '@GENTOO_PORTAGE_EPREFIX@/etc/';
-+	$self->{'MAKE_PROFILE_PATH'}		= '@GENTOO_PORTAGE_EPREFIX@/etc/make.profile';
++	$self->{'MAKE_PROFILE_PATH'}		= '@GENTOO_PORTAGE_EPREFIX@/etc/portage/make.profile';
  	
  	# - init colors >
  	$self->{'COLORS'}{'YELLOW'}		= color('bold yellow');

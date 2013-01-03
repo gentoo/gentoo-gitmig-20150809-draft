@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/PortageXS
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/ChangeLog,v 1.55 2012/12/30 15:32:08 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/ChangeLog,v 1.56 2013/01/03 08:46:32 armin76 Exp $
+
+*PortageXS-0.02.10-r3 (03 Jan 2013)
+
+  03 Jan 2013; Raúl Porcel <armin76@gentoo.org> -PortageXS-0.02.09.ebuild,
+  -PortageXS-0.02.10-r1.ebuild, -PortageXS-0.02.10-r2.ebuild,
+  +PortageXS-0.02.10-r3.ebuild, files/PortageXS-0.02.10-portage_path_fix.patch,
+  files/PortageXS-0.02.10-prefix.patch:
+  Fix make.profile location, straight to stable
 
   30 Dec 2012; Raúl Porcel <armin76@gentoo.org> PortageXS-0.02.10-r2.ebuild:
   sh stable wrt #437414
