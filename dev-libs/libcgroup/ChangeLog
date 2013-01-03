@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcgroup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/ChangeLog,v 1.7 2013/01/03 20:34:20 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/ChangeLog,v 1.8 2013/01/03 20:37:34 pinkbyte Exp $
+
+  03 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Add description to maintainer field
 
 *libcgroup-0.39_rc1-r1 (03 Jan 2013)
 *libcgroup-0.38-r1 (03 Jan 2013)
