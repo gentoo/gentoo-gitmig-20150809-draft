@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-4.1.2.ebuild,v 1.1 2013/01/02 16:52:51 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-4.1.2-r1.ebuild,v 1.1 2013/01/03 21:02:59 pinkbyte Exp $
 
 EAPI="5"
 
@@ -32,6 +32,9 @@ src_prepare() {
 	sed -i -e 's:=redhat-:=gentoo-:' etc/dists/default || die 'sed on etc/dists/default failed'
 
 	sed -i -e "s:/lib/udev:$(udev_get_udevdir):" src/lib/dev.c || die 'sed on src/lib/dev.c failed'
+
+	# Fix paths in initscript, wrt bug #444201
+	epatch "${FILESDIR}/${PN}-initscript-paths.patch"
 }
 
 src_configure() {
