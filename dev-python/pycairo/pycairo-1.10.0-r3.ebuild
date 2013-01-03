@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.10.0-r3.ebuild,v 1.11 2013/01/01 14:15:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.10.0-r3.ebuild,v 1.12 2013/01/03 15:37:26 idella4 Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6 3:3.1"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.5 3.0 *-jython"
+RESTRICT_PYTHON_ABIS="2.5 3.0 *-jython 2.7-pypy-*"
 
 inherit eutils python waf-utils
 
