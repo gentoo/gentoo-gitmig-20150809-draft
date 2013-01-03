@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.1.6.ebuild,v 1.2 2013/01/03 03:13:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.1.6.ebuild,v 1.3 2013/01/03 19:02:21 alonbl Exp $
 
 EAPI=4
 
@@ -19,7 +19,6 @@ IUSE="+cxx dane doc examples guile nls pkcs11 static-libs test zlib ${IUSE_LINGU
 
 RDEPEND=">=dev-libs/libtasn1-2.14
 	>=dev-libs/nettle-2.5[gmp]
-	sys-devel/autogen
 	dane? ( net-dns/unbound )
 	guile? ( >=dev-scheme/guile-1.8[networking] )
 	nls? ( virtual/libintl )
@@ -27,7 +26,7 @@ RDEPEND=">=dev-libs/libtasn1-2.14
 	zlib? ( >=sys-libs/zlib-1.2.3.1 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	sys-devel/libtool
+	sys-devel/autogen
 	doc? ( dev-util/gtk-doc )
 	nls? ( sys-devel/gettext )
 	test? ( app-misc/datefudge )"
