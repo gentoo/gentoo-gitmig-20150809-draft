@@ -1,15 +1,15 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.22 2011/05/16 15:09:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.23 2013/01/03 22:23:10 pinkbyte Exp $
 
-# quake3-9999          -> latest svn
-# quake3-9999.REV      -> use svn REV
-# quake3-VER_alphaREV  -> svn snapshot REV for version VER
+# quake3-9999          -> latest git
+# quake3-9999.REV      -> use git REV
+# quake3-VER_alphaREV  -> git snapshot REV for version VER
 # quake3-VER           -> normal quake release
 
 EAPI=2
 inherit eutils flag-o-matic games toolchain-funcs
-[[ "${PV}" == 9999* ]] && inherit subversion
+[[ "${PV}" == 9999* ]] && inherit git-2
 
 MY_PN="ioquake3"
 MY_PV="${PV}"
@@ -18,7 +18,7 @@ MY_P="${MY_PN}-${MY_PV}"
 DESCRIPTION="Quake III Arena - 3rd installment of the classic id 3D first-person shooter"
 HOMEPAGE="http://ioquake3.org/"
 [[ "${PV}" != 9999* ]] && SRC_URI="http://ioquake3.org/files/${MY_PV}/${MY_P}.tar.bz2"
-ESVN_REPO_URI="svn://svn.icculus.org/quake3/trunk"
+EGIT_REPO_URI="git://github.com/ioquake/ioq3.git"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -64,14 +64,6 @@ my_platform() {
 		alpha|amd64|ppc|x86)  echo "linux" ;;
 		x86-fbsd)             echo "freebsd" ;;
 	esac
-}
-
-src_prepare() {
-	if [[ "${PV}" == 9999* ]] ; then
-		# Workaround for the version string
-		subversion_wc_info
-		ln -s "${ESVN_WC_PATH}/.svn" .svn || die "ln ${ESVN_WC_PATH}/.svn"
-	fi
 }
 
 src_compile() {
