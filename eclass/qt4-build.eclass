@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.141 2012/12/31 06:29:42 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.142 2013/01/03 08:39:49 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -423,15 +423,6 @@ qt4-build_src_configure() {
 		# avoid the -pthread argument
 		conf+=" ${glibflags//-pthread}"
 		unset glibflags
-	fi
-
-	if use_if_iuse qpa; then
-		echo
-		ewarn "The qpa useflag enables the Qt Platform Abstraction, formely"
-		ewarn "known as Qt Lighthouse. If you are not sure what that is, then"
-		ewarn "disable it before reporting any bugs related to this useflag."
-		echo
-		conf+=" -qpa"
 	fi
 
 	if use aqua; then
