@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netwox
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/ChangeLog,v 1.37 2012/07/09 00:24:15 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/ChangeLog,v 1.38 2013/01/03 15:00:45 nativemad Exp $
+
+  03 Jan 2013; Andreas Schuerch <nativemad@gentoo.org> netwox-5.39.0.ebuild:
+  x86 stable, see bug 440202
 
   09 Jul 2012; Jeroen Roovers <jer@gentoo.org> netwox-5.39.0.ebuild:
   Clean up.
