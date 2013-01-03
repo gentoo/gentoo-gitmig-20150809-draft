@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.0.1.ebuild,v 1.9 2013/01/01 18:46:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.0.1.ebuild,v 1.10 2013/01/03 14:58:15 chithanh Exp $
 
 EAPI=4
 
@@ -117,8 +117,8 @@ done
 DEPEND="${RDEPEND}
 	llvm? (
 		>=sys-devel/llvm-2.9
-		r600-llvm-compiler? ( >=sys-devel/llvm-3.1 )
-		video_cards_radeonsi? ( >=sys-devel/llvm-3.1 )
+		r600-llvm-compiler? ( =sys-devel/llvm-3.1* )
+		video_cards_radeonsi? ( =sys-devel/llvm-3.1* )
 	)
 	=dev-lang/python-2*
 	dev-libs/libxml2[python]
