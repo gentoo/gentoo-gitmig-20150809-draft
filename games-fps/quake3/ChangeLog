@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.65 2013/01/03 23:01:09 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.66 2013/01/03 23:12:10 pinkbyte Exp $
+
+  03 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> quake3-9999.ebuild:
+  Add missing 'die' statement to renderers installation, add new docs
 
   03 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> quake3-9999.ebuild:
   Add workarounds for zlib and renderers loading, wrt bug #449510. Thanks to

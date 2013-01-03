@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.24 2013/01/03 23:01:09 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.25 2013/01/03 23:12:10 pinkbyte Exp $
 
 # quake3-9999          -> latest git
 # quake3-9999.REV      -> use git REV
@@ -106,7 +106,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc BUGS ChangeLog id-readme.txt md4-readme.txt NOTTODO README TODO || die
+	dodoc BUGS ChangeLog id-readme.txt md4-readme.txt NOTTODO README rend2-readme.txt TODO voip-readme.txt || die
 	if use voice ; then
 		dodoc voip-readme.txt || die
 	fi
@@ -130,7 +130,7 @@ src_install() {
 	# this should be done through 'dogameslib', but
 	# for this some files need to be patched
 	exeinto "${GAMES_DATADIR}/${PN}"
-	doexe renderer*.so
+	doexe renderer*.so || die 'install renderers failed'
 
 	prepgamesdirs
 }
