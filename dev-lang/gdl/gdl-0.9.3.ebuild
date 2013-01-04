@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.3.ebuild,v 1.4 2013/01/04 21:50:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.3.ebuild,v 1.5 2013/01/04 23:17:35 bicatali Exp $
 
 EAPI=4
 
 WX_GTK_VER="2.8"
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.3 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-*"
 
 inherit cmake-utils eutils wxwidgets python toolchain-funcs virtualx
 
