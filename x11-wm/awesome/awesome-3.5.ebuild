@@ -1,16 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.5_rc1-r1.ebuild,v 1.2 2012/11/29 16:30:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.5.ebuild,v 1.1 2013/01/04 03:52:55 idl0r Exp $
 
-EAPI="3"
+EAPI="5"
 CMAKE_MIN_VERSION="2.8"
 inherit cmake-utils eutils
 
 DESCRIPTION="A dynamic floating and tiling window manager"
 HOMEPAGE="http://awesome.naquadah.org/"
-MY_PV="${PV/_/-}"
-MY_P="${PN}-${MY_PV}"
-SRC_URI="http://awesome.naquadah.org/download/${MY_P}.tar.xz"
+SRC_URI="http://awesome.naquadah.org/download/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,15 +16,15 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="dbus doc elibc_FreeBSD gnome"
 
 COMMON_DEPEND=">=dev-lang/lua-5.1
-	dev-libs/libev
 	>=dev-libs/libxdg-basedir-1
-	media-libs/imlib2[png]
 	x11-libs/cairo[xcb]
 	|| ( <x11-libs/libX11-1.3.99.901[xcb] >=x11-libs/libX11-1.3.99.901 )
 	>=x11-libs/libxcb-1.6
-	>=x11-libs/pango-1.19.3
 	>=x11-libs/startup-notification-0.10_p20110426
 	>=x11-libs/xcb-util-0.3.8
+	x11-libs/libXcursor
+	x11-libs/gdk-pixbuf:2
+	dev-libs/glib:2
 	dbus? ( >=sys-apps/dbus-1 )
 	elibc_FreeBSD? ( dev-libs/libexecinfo )
 	>=dev-lua/lgi-0.6.1"
@@ -73,8 +71,6 @@ RDEPEND="${RDEPEND}
 
 DOCS="AUTHORS BUGS PATCHES README STYLE"
 
-S="${WORKDIR}/${MY_P}"
-
 src_prepare() {
 	# Upstreamed
 	#epatch \
@@ -93,7 +89,7 @@ src_configure() {
 
 	# The lua docs now officially require ldoc.lua and NOT luadoc
 	# As the modules documentation has been updated to the Lua 5.2 style
-	has_version >=dev-lang/lua-5.2 && mycmakeargs+="$(cmake-utils_use doc GENERATE_LUADOC)"
+	has_version >=dev-lang/lua-5.2 && mycmakeargs+="$(cmake-utils_use doc GENERATE_DOC)"
 
 	cmake-utils_src_configure
 }

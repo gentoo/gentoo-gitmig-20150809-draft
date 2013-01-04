@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/awesome
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.140 2012/11/28 00:20:30 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.141 2013/01/04 03:52:55 idl0r Exp $
+
+*awesome-3.5 (04 Jan 2013)
+
+  04 Jan 2013; Christian Ruppert <idl0r@gentoo.org> -awesome-3.5_rc1-r1.ebuild,
+  +awesome-3.5.ebuild:
+  Non maintainer bump, bug 447576
 
 *awesome-3.5_rc1-r1 (28 Nov 2012)
 
