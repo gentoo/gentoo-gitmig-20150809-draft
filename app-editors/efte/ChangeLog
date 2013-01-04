@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/efte
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/efte/ChangeLog,v 1.11 2012/05/10 14:53:07 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/efte/ChangeLog,v 1.12 2013/01/04 20:43:19 hasufell Exp $
+
+*efte-1.1-r1 (04 Jan 2013)
+
+  04 Jan 2013; Julian Ospald <hasufell@gentoo.org> +efte-1.1-r1.ebuild,
+  +files/efte-1.1-desktopfile.patch, +files/efte-1.1-flags.patch:
+  various cleanups, also fixes bug 450294
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -efte-1.0.ebuild:
   Remove old
