@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-clamd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-clamd/ChangeLog,v 1.27 2013/01/03 01:12:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-clamd/ChangeLog,v 1.28 2013/01/04 11:04:26 fauli Exp $
+
+  04 Jan 2013; Christian Faulhammer <fauli@gentoo.org>
+  -claws-mail-clamd-3.5.4.ebuild:
+  clean up
 
   03 Jan 2013; Christian Faulhammer <fauli@gentoo.org>
   claws-mail-clamd-3.5.5.ebuild:
