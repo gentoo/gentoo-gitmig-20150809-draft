@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/hdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.32 2013/01/04 17:16:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.33 2013/01/04 17:54:07 xarthisius Exp $
+
+  04 Jan 2013; Kacper Kowalik <xarthisius@gentoo.org> +files/hdf-ppc.patch,
+  hdf-4.2.8.ebuild:
+  Fix building on PPC wrt #450188 by Agostino Sarubbo <ago@gentoo.org> and
+  Vicente Olivert Riera <peratu@carrosses.com>
 
   04 Jan 2013; Kacper Kowalik <xarthisius@gentoo.org> hdf-4.2.8.ebuild:
   Add missing FORTRAN_DEPEND. Thanks to Vicente Olivert Riera

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2.8.ebuild,v 1.4 2013/01/04 17:16:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2.8.ebuild,v 1.5 2013/01/04 17:54:07 xarthisius Exp $
 
 EAPI=4
 
@@ -28,7 +28,8 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/${MYP}
 
 src_prepare() {
-	epatch "${FILESDIR}"/4.2.7_p1-autotools.patch
+	epatch "${FILESDIR}"/4.2.7_p1-autotools.patch \
+		"${FILESDIR}"/${PN}-ppc.patch
 	sed -i -e 's/-R/-L/g' config/commence.am || die #rpath
 	eautoreconf
 	[[ $(tc-getFC) = *gfortran ]] && append-fflags -fno-range-check
