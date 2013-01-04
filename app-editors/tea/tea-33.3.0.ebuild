@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-33.3.0.ebuild,v 1.1 2012/09/18 08:31:17 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-33.3.0.ebuild,v 1.2 2013/01/04 10:35:22 pesa Exp $
 
-EAPI=4
-LANGS="de fr ru"
+EAPI=5
+PLOCALES="de fr ru"
 
-inherit eutils qt4-r2
+inherit eutils l10n qt4-r2
 
 DESCRIPTION="Small, lightweight Qt text editor"
 HOMEPAGE="http://tea-editor.sourceforge.net/"
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	hunspell? ( virtual/pkgconfig )
 "
 
-DOCS="AUTHORS ChangeLog NEWS TODO"
+DOCS=(AUTHORS ChangeLog NEWS TODO)
 
 src_configure() {
 	eqmake4 src.pro \
@@ -40,15 +40,13 @@ src_install() {
 	qt4-r2_src_install
 
 	newicon icons/tea_icon_v2.png ${PN}.png
-	make_desktop_entry ${PN} Tea ${PN}
+	make_desktop_entry ${PN} 'Tea Editor'
 
 	# translations
 	insinto /usr/share/qt4/translations
 	local lang
-	for lang in ${LANGS}; do
-		if use linguas_${lang}; then
-			doins translations/${PN}_${lang}.qm
-		fi
+	for lang in $(l10n_get_locales); do
+		doins translations/${PN}_${lang}.qm
 	done
 
 	# docs
