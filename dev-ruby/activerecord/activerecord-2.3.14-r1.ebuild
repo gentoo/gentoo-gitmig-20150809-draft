@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-2.3.14-r1.ebuild,v 1.3 2013/01/04 13:11:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-2.3.14-r1.ebuild,v 1.4 2013/01/04 21:53:44 ago Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 jruby"
@@ -18,7 +18,7 @@ HOMEPAGE="http://rubyforge.org/projects/activerecord/"
 
 LICENSE="MIT"
 SLOT="2.3"
-KEYWORDS="~amd64 ~hppa ppc ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~hppa ppc ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="mysql postgres sqlite3" #sqlite
 
 RUBY_PATCHES=( ${PN}-2.3.10-rails3.patch ${P}-dynamic-finder-injection.patch )
