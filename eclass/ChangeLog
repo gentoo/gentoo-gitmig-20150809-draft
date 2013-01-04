@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.593 2013/01/03 20:30:47 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.594 2013/01/04 01:26:22 floppym Exp $
+
+  04 Jan 2013; Mike Gilbert <floppym@gentoo.org> python-r1.eclass:
+  Don't tell the user to set USE_PYTHON when a package does not support
+  python2.7 or python3.2.
 
   03 Jan 2013; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
   fixed mistake for emake:-all emake:-install between old and new plugin

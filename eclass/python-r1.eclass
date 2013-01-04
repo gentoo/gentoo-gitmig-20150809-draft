@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.34 2013/01/02 21:12:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.35 2013/01/04 01:26:22 floppym Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -382,6 +382,10 @@ _python_check_USE_PYTHON() {
 			# is installed.
 			if [[ ! ${py2+1} && ${dis_py2} ]]; then
 				debug-print "${FUNCNAME}: -> all py2 versions disabled"
+				if ! has python2_7 "${PYTHON_COMPAT[@]}"; then
+					debug-print "${FUNCNAME}: ---> package does not support 2.7"
+					return 0
+				fi
 				if has_version '=dev-lang/python-2*'; then
 					debug-print "${FUNCNAME}: ---> but =python-2* installed!"
 					return 1
@@ -389,6 +393,10 @@ _python_check_USE_PYTHON() {
 			fi
 			if [[ ! ${py3+1} && ${dis_py3} ]]; then
 				debug-print "${FUNCNAME}: -> all py3 versions disabled"
+				if ! has python3_2 "${PYTHON_COMPAT[@]}"; then
+					debug-print "${FUNCNAME}: ---> package does not support 3.2"
+					return 0
+				fi
 				if has_version '=dev-lang/python-3*'; then
 					debug-print "${FUNCNAME}: ---> but =python-3* installed!"
 					return 1
