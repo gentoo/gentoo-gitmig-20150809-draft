@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.154 2013/01/03 18:26:23 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.155 2013/01/04 16:15:52 tove Exp $
 
   03 Jan 2013; Sven Vermeulen <swift@gentoo.org> qemu-1.1.2-r2.ebuild,
   qemu-1.1.2-r3.ebuild, qemu-1.2.0.ebuild, qemu-1.2.1.ebuild:
@@ -79,10 +79,10 @@
   qemu-9999.ebuild:
   Updates from the 1.1.x to ready for the 1.2.x series unmask.
 
-  29 Oct 2012; Tiziano MÃ¼ller <dev-zero@gentoo.org> qemu-9999.ebuild:
+  29 Oct 2012; Tiziano Müller <dev-zero@gentoo.org> qemu-9999.ebuild:
   Fix collision with vscclient in the live ebuild like in the 1.2.0 ebuild.
 
-  28 Oct 2012; Tiziano MÃ¼ller <dev-zero@gentoo.org> qemu-1.2.0.ebuild:
+  28 Oct 2012; Tiziano Müller <dev-zero@gentoo.org> qemu-1.2.0.ebuild:
   Fix some build issues (missing patch and wrong S), avoid collision with
   libcacard (bug #439990).
 
@@ -300,7 +300,7 @@
   qemu-9999.ebuild:
   Added LatticeMico32 (lm32) softmmu target. Added USE="nss rbd spice threads
   +vhost-net xattr xen" to get control of some automagic depends (bug #326491 by
-  Diego Elio PettenÃ²); mostly picked from qemu-kvm-9999.ebuild. Updated USE=curl
+  Diego Elio Pettenò); mostly picked from qemu-kvm-9999.ebuild. Updated USE=curl
   description (bug #354565 by klondike).
 
   22 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org> qemu-0.11.1.ebuild,
@@ -313,7 +313,7 @@
   --enable-pic). Added all missing linux targets except lm32 (needs proper deps
   and a fix against --as-needed). Made ./configure params to be shown.
 
-  20 Sep 2011; MichaÅ GÃ³rny <mgorny@gentoo.org> qemu-9999.ebuild:
+  20 Sep 2011; Michał Górny <mgorny@gentoo.org> qemu-9999.ebuild:
   Migrate to git-2.
 
 *qemu-9999 (27 Jun 2011)
@@ -342,7 +342,7 @@
   metadata.xml:
   New version, ebuild mostly in line with qemu-kvm
 
-  15 Oct 2010; Diego E. PettenÃ² <flameeyes@gentoo.org> -qemu-0.9.0.ebuild,
+  15 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org> -qemu-0.9.0.ebuild,
   qemu-0.9.1.ebuild, -qemu-0.10.0.ebuild, -qemu-0.10.1.ebuild,
   -qemu-0.10.3.ebuild, -files/qemu-0.10.3-nopl-fix.patch,
   -qemu-0.10.4.ebuild, -qemu-0.10.5.ebuild, -qemu-0.10.6.ebuild,
@@ -350,12 +350,12 @@
   Belated spring cleaning of ebuilds and files; this also re-sync the ppc
   keyword with the qemu-softmmu package which this is just an alias of.
 
-  30 Jun 2010; Harald van DÄ³k <truedfx@gentoo.org> qemu-0.10.3.ebuild,
+  30 Jun 2010; Harald van Dĳk <truedfx@gentoo.org> qemu-0.10.3.ebuild,
   qemu-0.10.4.ebuild, qemu-0.10.5.ebuild, qemu-0.10.6.ebuild,
   qemu-0.11.0.ebuild, qemu-0.11.1.ebuild:
   Fix quoting
 
-  05 Jan 2010; Diego E. PettenÃ² <flameeyes@gentoo.org> qemu-0.10.3.ebuild,
+  05 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> qemu-0.10.3.ebuild,
   qemu-0.10.4.ebuild, qemu-0.10.5.ebuild, qemu-0.10.6.ebuild,
   qemu-0.11.0.ebuild, qemu-0.11.1.ebuild:
   Fix trivial mistake. Closes bug #280121 by Kerin Millar.
@@ -398,7 +398,7 @@
   07 Jun 2009; Luca Barbato <lu_zero@gentoo.org> +qemu-0.10.5.ebuild:
   New version
 
-  19 May 2009; Diego E. PettenÃ² <flameeyes@gentoo.org> qemu-0.10.4.ebuild:
+  19 May 2009; Diego E. Pettenò <flameeyes@gentoo.org> qemu-0.10.4.ebuild:
   Fix doc installation: install html in the html/ subdir, install more qemu
   doc, rename the README file (it's not qemu's proper), die on error.
 
@@ -411,7 +411,7 @@
   19 May 2009; Luca Barbato <lu_zero@gentoo.org> +qemu-0.10.4.ebuild:
   New version
 
-  17 May 2009; Diego E. PettenÃ² <flameeyes@gentoo.org> qemu-0.10.3.ebuild,
+  17 May 2009; Diego E. Pettenò <flameeyes@gentoo.org> qemu-0.10.3.ebuild,
   +files/qemu-ifdown, +files/qemu-ifup:
   Add missing ifup/ifdown scripts, change install logic, make sure they are
   not added executable to CVS.
