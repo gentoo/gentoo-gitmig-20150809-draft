@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.35 2013/01/02 21:12:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.36 2013/01/04 03:12:44 floppym Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -326,6 +326,7 @@ distutils-r1_python_install() {
 	# python likes to compile any module it sees, which triggers sandbox
 	# failures if some packages haven't compiled their modules yet.
 	addpredict "$(python_get_sitedir)"
+	addpredict /usr/lib/portage/pym
 
 	local root=${D}/_${EPYTHON}
 
