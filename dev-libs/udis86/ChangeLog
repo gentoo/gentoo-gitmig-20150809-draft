@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/udis86
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/ChangeLog,v 1.13 2012/05/24 03:19:12 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/ChangeLog,v 1.14 2013/01/04 07:12:10 alonbl Exp $
+
+*udis86-1.7-r1 (04 Jan 2013)
+
+  04 Jan 2013; Alon Bar-Lev <alonbl@gentoo.org> +udis86-1.7-r1.ebuild:
+  Build as shared library, bug#449812
 
   24 May 2012; Alexis Ballier <aballier@gentoo.org> udis86-1.7.ebuild:
   keyword ~amd64-fbsd
@@ -47,4 +52,3 @@
   25 Apr 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +udis86-1.7.ebuild, +metadata.xml:
   Initial import from sunrise, bug #235361. Original ebuild from Olof Frahm.
-
