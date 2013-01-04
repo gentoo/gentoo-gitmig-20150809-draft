@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.27.1.ebuild,v 1.8 2012/10/30 16:24:45 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.27.1.ebuild,v 1.9 2013/01/04 13:43:18 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
 inherit flag-o-matic libtool multilib
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://pkgconfig.freedesktop.org/wiki/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="elibc_FreeBSD hardened internal-glib"
+IUSE="build elibc_FreeBSD hardened internal-glib"
 
 RDEPEND="!internal-glib? ( >=dev-libs/glib-2.30 )
 	!dev-util/pkgconf[pkg-config]
@@ -34,8 +34,8 @@ S=${WORKDIR}/${MY_P}
 DOCS=( AUTHORS NEWS README )
 
 src_prepare() {
-	# Fix for bug #434320
-	sed -i -e "s|^prefix=/usr\$|prefix=${EPREFIX}/usr|" check/simple.pc || die 'sed on prefix failed'
+	sed -i -e "s|^prefix=/usr\$|prefix=${EPREFIX}/usr|" check/simple.pc || die #434320
+
 	if [[ ${PV} == *9999* ]]; then
 		eautoreconf
 	else
@@ -47,6 +47,8 @@ src_configure() {
 	local myconf
 
 	if use internal-glib; then
+		myconf+=' --with-internal-glib'
+	elif use build; then
 		myconf+=' --with-internal-glib'
 	else
 		if ! has_version dev-util/pkgconfig; then
@@ -65,7 +67,6 @@ src_configure() {
 
 	econf \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}/html \
-		--disable-silent-rules \
 		--with-system-include-path="${EPREFIX}"/usr/include \
 		--with-system-library-path="${EPREFIX}"/usr/$(get_libdir) \
 		${myconf}
