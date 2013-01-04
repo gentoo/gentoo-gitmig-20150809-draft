@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-2.6.0.ebuild,v 1.6 2013/01/03 10:56:40 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-2.6.0.ebuild,v 1.7 2013/01/04 12:56:09 ago Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://gerbv.geda-project.org/"
 IUSE="doc examples static-libs unit-mm"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 RESTRICT="test"
 
 RDEPEND="
