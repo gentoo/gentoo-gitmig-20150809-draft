@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openmm/openmm-4.1.1.ebuild,v 1.2 2012/12/26 18:48:19 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openmm/openmm-4.1.1.ebuild,v 1.3 2013/01/04 14:55:16 ottxor Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ DESCRIPTION="provides tools for modern molecular modeling simulation"
 HOMEPAGE="https://simtk.org/home/openmm"
 SRC_URI="${MY_P}.zip"
 
-LICENSE="GPL-3"
+LICENSE="MIT LGPL-2.1+ BSD RU-BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="cuda opencl"
