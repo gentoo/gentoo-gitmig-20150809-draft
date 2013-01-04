@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14341 2013/01/02 20:06:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14342 2013/01/04 03:02:14 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (04 Jan 2012)
+# Mask some prerelease x11 packages
+=x11-base/xorg-server-1.13.99*
+=x11-libx/libXi-1.6.99*
+=x11-proto/inputproto-2.2.99*
 
 # Mike Gilbert <floppym@gentoo.org> (03 Jan 2013)
 # No longer maintained upstream.
