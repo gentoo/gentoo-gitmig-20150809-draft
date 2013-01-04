@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.170 2013/01/04 13:52:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.171 2013/01/04 21:56:30 ago Exp $
+
+  04 Jan 2013; Agostino Sarubbo <ago@gentoo.org> docutils-0.9.1.ebuild:
+  Stable for amd64, wrt bug #449412
 
   04 Jan 2013; Agostino Sarubbo <ago@gentoo.org> docutils-0.9.1.ebuild:
   Stable for ppc, wrt bug #449412
