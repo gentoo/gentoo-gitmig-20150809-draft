@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/c-client
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.106 2012/12/30 16:37:05 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.107 2013/01/04 08:33:23 eras Exp $
+
+  04 Jan 2013; Eray Aslan <eras@gentoo.org> -c-client-2007e-r2.ebuild,
+  -c-client-2007f-r1.ebuild, -c-client-2007f-r2.ebuild,
+  -c-client-2007f-r3.ebuild, -files/2002d-Makefile.patch,
+  -files/c-client-2007e-ldflags.patch:
+  Remove old
 
   30 Dec 2012; Raúl Porcel <armin76@gentoo.org> c-client-2007f-r4.ebuild:
   s390/sh/sparc stable wrt #445063
