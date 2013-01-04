@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/9base/9base-6-r1.ebuild,v 1.3 2011/10/04 22:10:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/9base/9base-6-r1.ebuild,v 1.4 2013/01/04 14:06:40 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit toolchain-funcs
 
 DESCRIPTION="A port of various original Plan 9 tools for Unix, based on plan9port"
@@ -22,11 +22,11 @@ pkg_setup() {
 	[[ $(tc-arch) == "ppc" ]] && _objtype=ppc
 
 	my9baseopts=(
-		"PREFIX=/usr/plan9"
-		"OBJTYPE=${_objtype}"
-		"AR=$(tc-getAR) rc"
-		"CC=$(tc-getCC)"
-		"DESTDIR=${D}"
+		PREFIX=/usr/plan9
+		OBJTYPE=${_objtype}
+		AR="$(tc-getAR) rc"
+		CC="$(tc-getCC)"
+		DESTDIR="${D}"
 		)
 }
 
@@ -38,11 +38,11 @@ src_prepare() {
 }
 
 src_compile() {
-	emake "${my9baseopts[@]}" || die
+	emake "${my9baseopts[@]}"
 }
 
 src_install() {
-	emake "${my9baseopts[@]}" install || die
+	emake "${my9baseopts[@]}" install
 	dodoc README
 
 	# We don't compress to keep support for plan9's man
