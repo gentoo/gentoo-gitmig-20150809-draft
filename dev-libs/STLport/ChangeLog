@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/STLport
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.79 2011/04/25 14:38:07 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.80 2013/01/04 15:15:25 ulm Exp $
+
+  04 Jan 2013; Ulrich Müller <ulm@gentoo.org> STLport-5.2.1.ebuild:
+  Fix LICENSE, bug 448166.
 
   25 Apr 2011; Raúl Porcel <armin76@gentoo.org> STLport-5.2.1.ebuild:
   sparc stable wrt #358493
