@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/yenc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/yenc/ChangeLog,v 1.1 2013/01/03 20:33:33 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yenc/ChangeLog,v 1.2 2013/01/04 00:33:39 radhermit Exp $
+
+*yenc-0.4.0-r1 (04 Jan 2013)
+
+  04 Jan 2013; Tim Harder <radhermit@gentoo.org> +yenc-0.4.0-r1.ebuild:
+  Revbump to migrate to distutils-r1.
 
 *yenc-0.4.0 (03 Jan 2013)
 
