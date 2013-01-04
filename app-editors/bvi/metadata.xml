@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-		<description>This package lacks a primary herd or maintainer.</description>
+		<email>ryao@gentoo.org</email>
+		<name>Richard Yao</name>
 	</maintainer>
 </pkgmetadata>
