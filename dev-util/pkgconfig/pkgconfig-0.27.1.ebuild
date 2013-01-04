@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.27.1.ebuild,v 1.9 2013/01/04 13:43:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.27.1.ebuild,v 1.10 2013/01/04 13:50:16 ssuominen Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://pkgconfig.freedesktop.org/wiki/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="build elibc_FreeBSD hardened internal-glib"
+IUSE="elibc_FreeBSD hardened internal-glib"
 
 RDEPEND="!internal-glib? ( >=dev-libs/glib-2.30 )
 	!dev-util/pkgconf[pkg-config]
@@ -47,8 +47,6 @@ src_configure() {
 	local myconf
 
 	if use internal-glib; then
-		myconf+=' --with-internal-glib'
-	elif use build; then
 		myconf+=' --with-internal-glib'
 	else
 		if ! has_version dev-util/pkgconfig; then

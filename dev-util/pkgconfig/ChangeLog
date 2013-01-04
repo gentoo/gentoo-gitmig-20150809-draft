@@ -1,11 +1,6 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.125 2013/01/04 13:43:18 ssuominen Exp $
-
-  04 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> pkgconfig-0.27.1.ebuild,
-  pkgconfig-9999.ebuild:
-  Introduce USE="build" to avoid external >=dev-libs/glib-2 dependencies to cut
-  the stage building time.
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.126 2013/01/04 13:50:16 ssuominen Exp $
 
   30 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> pkgconfig-0.27.1.ebuild,
   pkgconfig-9999.ebuild:
