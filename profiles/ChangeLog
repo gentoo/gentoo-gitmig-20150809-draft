@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7321 2013/01/04 08:14:09 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7322 2013/01/04 08:57:45 eras Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Jan 2013; Eray Aslan <eras@gentoo.org> package.mask:
+  Remove mask for mail-client/pine as it is no longer in the tree
 
   04 Jan 2013; Ole Markus With <olemarkus@gentoo.org> package.mask:
   Masking ezc-* for removal
