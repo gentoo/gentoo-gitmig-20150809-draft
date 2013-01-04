@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.247 2012/12/06 03:58:27 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.248 2013/01/04 12:57:50 ago Exp $
+
+  04 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libevent-2.0.21.ebuild:
+  Stable for ppc, wrt bug #449746
 
   06 Dec 2012; Jeroen Roovers <jer@gentoo.org> libevent-2.0.21.ebuild:
   Marked ~arm ~ppc ~ppc64 (bug #446118).
