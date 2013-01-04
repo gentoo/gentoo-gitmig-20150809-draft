@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/jq
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jq/ChangeLog,v 1.1 2012/10/23 20:33:52 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jq/ChangeLog,v 1.2 2013/01/04 18:34:32 radhermit Exp $
+
+*jq-1.2 (04 Jan 2013)
+
+  04 Jan 2013; Tim Harder <radhermit@gentoo.org> +jq-1.2.ebuild,
+  +files/jq-1.2-makefile.patch:
+  Version bump.
 
 *jq-1.1 (23 Oct 2012)
 
