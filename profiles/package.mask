@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14346 2013/01/04 08:57:45 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14347 2013/01/04 09:21:25 djc Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -147,11 +147,6 @@ net-dialup/ltmodem
 # Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
 # Fails to build (#326799), upstream dead. Removal in a month.
 www-apache/mod_spin
-
-# Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# Tests freeze (#343663), upstream dead, could be broken with
-# some python versions. Removal in a month.
-www-apache/mod_python
 
 # Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
 # Dead stuff that shouldn't be used and that is required by
