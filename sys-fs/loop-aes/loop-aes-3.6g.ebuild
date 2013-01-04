@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.6g.ebuild,v 1.2 2012/12/15 19:24:25 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.6g.ebuild,v 1.3 2013/01/04 22:43:19 alonbl Exp $
 
 EAPI="3"
 
@@ -17,8 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
 IUSE="aes-ni extra-ciphers keyscrub padlock"
 
-DEPEND=">=sys-apps/util-linux-2.12r[crypt,loop-aes]"
-RDEPEND="${DEPEND}"
+DEPEND="|| ( >=sys-apps/util-linux-2.12r[crypt,loop-aes] app-crypt/loop-aes-losetup )"
+RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
 
