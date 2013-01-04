@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.108 2012/12/05 09:57:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.109 2013/01/04 21:46:28 radhermit Exp $
 
 *ardour-2.8.16 (05 Dec 2012)
 
@@ -18,7 +18,7 @@
   24 Nov 2012; Andreas Schuerch <nativemad@gentoo.org> ardour-2.8.14.ebuild,
   +ardour-2.8.14-r1.ebuild:
   added boost to rdeps and made a revbump for dropping ppc and add lilv and
-  suil to the rdeps for lv2. Thanks Tim Harden and Martin Erdtmann for pointing
+  suil to the rdeps for lv2. Thanks Tim Harder and Martin Erdtmann for pointing
   out the issues! See bug 444434. 
 
   22 Nov 2012; Andreas Schuerch <nativemad@gentoo.org> ardour-2.8.14.ebuild,
