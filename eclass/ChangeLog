@@ -1,6 +1,15 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.596 2013/01/04 13:23:43 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.597 2013/01/04 21:22:43 ulm Exp $
+
+  04 Jan 2013; Ulrich Müller <ulm@gentoo.org> elisp.eclass,
+  elisp-common.eclass:
+  Sync eclasses from Emacs overlay.
+  elisp-common.eclass: Remove last remnants of backwards compatibility code
+  from elisp-site-regen which was introduced at 2007-12-01. Distinguish between
+  "version too low" and "could not determine version" in elisp_pkg_setup.
+  elisp.eclass: Return 2 as exit status of elisp-need-emacs if the comparison
+  could not be done, e.g., if emacs could not be executed.
 
   04 Jan 2013; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
   fixed typo, thx to Martin Dummer on irc #vdr-gentoo
