@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.595 2013/01/04 03:12:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.596 2013/01/04 13:23:43 hd_brummy Exp $
+
+  04 Jan 2013; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
+  fixed typo, thx to Martin Dummer on irc #vdr-gentoo
 
   04 Jan 2013; Mike Gilbert <floppym@gentoo.org> distutils-r1.eclass:
   addpredict /usr/lib/portage/pym in distutils-r1_src_install.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.18 2013/01/03 20:30:47 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.19 2013/01/04 13:23:43 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:
@@ -618,6 +618,8 @@ vdr-plugin-2_src_install() {
 		done
 	fi
 
+	cd "${S}"
+
 	# create list of all created plugin libs
 	vdr_plugin_list=""
 	local p_name
@@ -630,8 +632,6 @@ vdr-plugin-2_src_install() {
 	create_header_checksum_file ${vdr_plugin_list}
 	create_plugindb_file ${vdr_plugin_list}
 
-
-	cd "${S}"
 	local docfile
 	for docfile in README* HISTORY CHANGELOG; do
 		[[ -f ${docfile} ]] && dodoc ${docfile}
