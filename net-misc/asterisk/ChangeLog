@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.435 2013/01/04 12:27:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.436 2013/01/04 14:34:49 chainsaw Exp $
+
+  04 Jan 2013; Tony Vroon <chainsaw@gentoo.org> asterisk-1.8.19.1.ebuild,
+  asterisk-11.1.1.ebuild:
+  Remove /var/run keepdir statements as per Diego Elio Pettenò in bug #450222.
 
   04 Jan 2013; Tony Vroon <chainsaw@gentoo.org> -asterisk-10.11.1.ebuild:
   As previously announced the 10 branch of Asterisk is now being removed. For

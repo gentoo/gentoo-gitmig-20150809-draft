@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-11.1.1.ebuild,v 1.1 2013/01/02 22:36:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-11.1.1.ebuild,v 1.2 2013/01/04 14:34:50 chainsaw Exp $
 
 EAPI=4
 inherit autotools base eutils linux-info multilib
@@ -229,7 +229,6 @@ src_install() {
 	diropts -m 0770 -o asterisk -g asterisk
 	keepdir	/etc/asterisk
 	keepdir /var/lib/asterisk
-	keepdir /var/run/asterisk
 	keepdir /var/spool/asterisk
 	keepdir /var/spool/asterisk/{system,tmp,meetme,monitor,dictate,voicemail}
 	diropts -m 0750 -o asterisk -g asterisk
