@@ -6,5 +6,6 @@
   "Start an interactive Python interpreter in another window." t)
 
 (add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
+(add-to-list 'auto-mode-alist '("\\.pyx$" . python-mode))
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 (add-to-list 'interpreter-mode-alist '("jython" . jython-mode))

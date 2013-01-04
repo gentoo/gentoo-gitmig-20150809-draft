@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/python-mode
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.65 2012/11/03 10:57:51 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.66 2013/01/04 10:50:37 fauli Exp $
+
+*python-mode-6.1.0 (04 Jan 2013)
+
+  04 Jan 2013; Christian Faulhammer <fauli@gentoo.org>
+  files/50python-mode-gentoo.el, +python-mode-6.1.0.ebuild:
+  version bump and also associate with .pyx files as lined out in bug 445366 by
+  Michael Orlitzky
 
 *python-mode-6.0.12 (03 Nov 2012)
 
