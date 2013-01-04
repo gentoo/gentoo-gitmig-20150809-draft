@@ -1,6 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.109 2013/01/01 11:59:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.110 2013/01/04 02:57:17 tetromino Exp $
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (04 Jan 2013)
+# remove when x11-misc/colord is marked stable on ia64 (bug #449744)
+=x11-libs/gtk+-3.2.4-r1 colord
+=x11-libs/gtk+-3.4.4 colord
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Dec 2012)
 # remove mask if/when mail-client/thunderbird is keyworded here

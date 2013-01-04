@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.175 2013/01/02 20:52:59 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.176 2013/01/04 02:57:17 tetromino Exp $
+
+  04 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Mask USE=colord for stable versions of gtk+ since x11-misc/colord is not
+  stable on ia64 (bug #449744).
 
   02 Jan 2013; Matt Turner <mattst88@gentoo.org> use.mask:
   use.mask video_cards, see bugs 449816, 448606.
