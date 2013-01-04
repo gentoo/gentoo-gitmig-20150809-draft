@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_python
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.22 2012/11/27 19:28:36 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.23 2013/01/04 09:18:52 djc Exp $
+
+  04 Jan 2013; Dirkjan Ochtman <djc@gentoo.org> mod_python-3.3.1-r1.ebuild:
+  Restrict tests (bug 343663).
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop apache herd as discussed in http://www.gossamer-

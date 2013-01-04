@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/mod_python-3.3.1-r1.ebuild,v 1.7 2012/10/16 03:34:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/mod_python-3.3.1-r1.ebuild,v 1.8 2013/01/04 09:18:53 djc Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,6 +15,7 @@ LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ~mips ppc sparc x86"
 IUSE=""
+RESTRICT="test" # bug 343663
 
 DEPEND=""
 RDEPEND=""
