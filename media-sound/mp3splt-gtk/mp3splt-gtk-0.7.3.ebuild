@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/mp3splt-gtk-0.7.3.ebuild,v 1.1 2012/09/08 12:11:18 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/mp3splt-gtk-0.7.3.ebuild,v 1.2 2013/01/04 14:10:21 pinkbyte Exp $
 
 EAPI=2
 inherit versionator autotools multilib
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/mp3splt/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="audacious doc gtk3 gnome gstreamer nls"
 
 RDEPEND=">=media-libs/libmp3splt-0.7.3
