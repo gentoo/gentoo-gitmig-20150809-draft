@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/giblib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.23 2012/08/10 15:50:59 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.24 2013/01/04 15:26:42 ulm Exp $
+
+  04 Jan 2013; Ulrich Müller <ulm@gentoo.org> giblib-1.2.4.ebuild,
+  giblib-1.2.4-r1.ebuild:
+  Fix LICENSE, see COPYING and headers in source files, bug 448186.
 
 *giblib-1.2.4-r1 (10 Aug 2012)
 
