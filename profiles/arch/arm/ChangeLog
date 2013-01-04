@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.204 2013/01/04 19:24:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.205 2013/01/04 19:30:05 armin76 Exp $
+
+  04 Jan 2013; Raúl Porcel <armin76@gentoo.org> armv6j/make.defaults,
+  armv7a/make.defaults:
+  Update armv6j/armv7a make.defaults to note that the default is hardfloat
 
   04 Jan 2013; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Move contents from default/linux/arm/10.0/package.use.mask to here, its
