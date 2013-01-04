@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta1-r1.ebuild,v 1.4 2012/12/20 00:09:40 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta1-r2.ebuild,v 1.1 2013/01/04 21:48:47 axs Exp $
 
 EAPI=4
 
@@ -27,6 +27,7 @@ IUSE="doc gudev hwdb kmod introspection keymap +modutils +openrc selinux static-
 RESTRICT="test"
 
 COMMON_DEPEND="gudev? ( dev-libs/glib:2 )
+	hwdb? ( sys-apps/hwids[udev(+)] )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
 	selinux? ( sys-libs/libselinux )
 	>=sys-apps/util-linux-2.20
@@ -43,7 +44,6 @@ DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt"
 
 RDEPEND="${COMMON_DEPEND}
-	hwdb? ( sys-apps/hwids )
 	openrc? ( >=sys-fs/udev-init-scripts-18 )
 	!sys-fs/udev
 	!!<=sys-fs/udev-180
@@ -111,6 +111,7 @@ pkg_setup()
 src_prepare()
 {
 	epatch "${FILESDIR}"/${P}-include-all-search-paths.patch
+	epatch "${FILESDIR}"/${P}-fix-modprobe-call.patch
 
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
@@ -143,11 +144,11 @@ src_configure()
 		DBUS_CFLAGS=' '
 		DBUS_LIBS=' '
 		--with-rootprefix="${EROOT}"
-		--docdir="${EROOT}/usr/share/doc/${PF}"
-		--libdir="${EROOT}/usr/$(get_libdir)"
-		--with-firmware-path="${EROOT}/usr/lib/firmware/updates:${EROOT}/usr/lib/firmware:${EROOT}/lib/firmware/updates:${EROOT}/lib/firmware"
-		--with-html-dir="${EROOT}/usr/share/doc/${PF}/html"
-		--with-rootlibdir="${EROOT}/$(get_libdir)"
+		--docdir="${EROOT}usr/share/doc/${PF}"
+		--libdir="${EROOT}usr/$(get_libdir)"
+		--with-firmware-path="${EROOT}usr/lib/firmware/updates:${EROOT}usr/lib/firmware:${EROOT}lib/firmware/updates:${EROOT}lib/firmware"
+		--with-html-dir="${EROOT}usr/share/doc/${PF}/html"
+		--with-rootlibdir="${EROOT}$(get_libdir)"
 		--exec-prefix="${EROOT}"
 		--enable-split-usr
 		$(use_enable doc gtk-doc)
@@ -169,6 +170,11 @@ src_install()
 	prune_libtool_files --all
 	rm -rf "${ED}"/usr/share/doc/${PF}/LICENSE.*
 
+	# place the keymaps in /$(libdir)/udev instead of /etc
+	# (fixed upstream but don't want to have to autoreconf)
+	use keymap && \
+	mv "${ED}"/etc/udev/keymaps "${ED}"/$(get_libdir)/udev/keymaps
+
 	# install gentoo-specific rules
 	insinto /usr/lib/udev/rules.d
 	doins "${FILESDIR}"/40-gentoo.rules
@@ -178,9 +184,9 @@ pkg_preinst()
 {
 	local htmldir
 	for htmldir in gudev libudev; do
-		if [[ -d ${EROOT}/usr/share/gtk-doc/html/${htmldir} ]]
+		if [[ -d ${EROOT}usr/share/gtk-doc/html/${htmldir} ]]
 		then
-			rm -rf "${EROOT}"/usr/share/gtk-doc/html/${htmldir}
+			rm -rf "${EROOT}"usr/share/gtk-doc/html/${htmldir}
 		fi
 		if [[ -d ${ED}/usr/share/doc/${PF}/html/${htmldir} ]]
 		then
@@ -192,12 +198,12 @@ pkg_preinst()
 
 pkg_postinst()
 {
-	mkdir -p "${EROOT}"/run
+	mkdir -p "${EROOT}"run
 
 	# "losetup -f" is confused if there is an empty /dev/loop/, Bug #338766
 	# So try to remove it here (will only work if empty).
-	rmdir "${EROOT}"/dev/loop 2>/dev/null
-	if [[ -d ${EROOT}/dev/loop ]]
+	rmdir "${EROOT}"dev/loop 2>/dev/null
+	if [[ -d ${EROOT}dev/loop ]]
 	then
 		ewarn "Please make sure you remove /dev/loop,"
 		ewarn "else losetup may be confused when looking for unused devices."
@@ -205,10 +211,10 @@ pkg_postinst()
 
 	# 64-device-mapper.rules now gets installed by sys-fs/device-mapper
 	# remove it if user don't has sys-fs/device-mapper installed, 27 Jun 2007
-	if [[ -f ${EROOT}/etc/udev/rules.d/64-device-mapper.rules ]] &&
+	if [[ -f ${EROOT}etc/udev/rules.d/64-device-mapper.rules ]] &&
 		! has_version sys-fs/device-mapper
 	then
-		rm -f "${EROOT}"/etc/udev/rules.d/64-device-mapper.rules
+		rm -f "${EROOT}"etc/udev/rules.d/64-device-mapper.rules
 		einfo "Removed unneeded file 64-device-mapper.rules"
 	fi
 
