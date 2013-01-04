@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/courier-authlib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.130 2012/12/29 17:20:00 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.131 2013/01/04 13:51:24 eras Exp $
+
+  04 Jan 2013; Eray Aslan <eras@gentoo.org> -courier-authlib-0.62.2.ebuild,
+  -courier-authlib-0.62.4.ebuild, -courier-authlib-0.63.0.ebuild,
+  -files/0.59.2-configure-db4.patch, -files/0.59.2-remove-obsolete-macro.patch,
+  -files/courier-authlib:
+  Remove old
 
   29 Dec 2012; Raúl Porcel <armin76@gentoo.org> courier-authlib-0.64.0.ebuild:
   alpha/s390/sh/sparc stable wrt #439736
