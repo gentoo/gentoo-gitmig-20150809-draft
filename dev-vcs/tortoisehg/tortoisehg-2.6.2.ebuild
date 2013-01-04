@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-2.6.2.ebuild,v 1.1 2013/01/03 14:49:50 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-2.6.2.ebuild,v 1.2 2013/01/04 08:23:56 polynomial-c Exp $
 
 EAPI=4
 
@@ -10,17 +10,9 @@ RESTRICT_PYTHON_ABIS="2.4 3.* *-pypy-*"
 
 inherit distutils eutils
 
-# At the time I added this ebuild the 2.6.2 source tarball was not available
-# at the usual upstream download space although the release was already
-# announced. So I created the tarball through the following steps:
-#   hg clone https://bitbucket.org/tortoisehg/thg
-#   hg checkout 2.6.2
-#   cd thg && python setup.py sdist && ls -l dist/
-
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64 ~x86"
-	#SRC_URI="mirror://bitbucket/${PN}/targz/downloads/${MY_P}.tar.gz"
-	SRC_URI="http://dev.gentoo.org/~polynomial-c/${P}.tar.gz"
+	SRC_URI="mirror://bitbucket/${PN}/targz/downloads/${P}.tar.gz"
 	HG_DEPEND=">=dev-vcs/mercurial-2.3 <dev-vcs/mercurial-2.5"
 else
 	inherit mercurial
