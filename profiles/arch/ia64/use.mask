@@ -244,3 +244,4 @@ connman
 xine
 
 -zeitgeist
+template_haskell
