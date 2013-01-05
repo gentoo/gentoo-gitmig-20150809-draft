@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.10.0-r2.ebuild,v 1.11 2012/11/06 06:10:40 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.10.0-r2.ebuild,v 1.12 2013/01/05 07:22:37 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6 3:3.1"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.5 3.0 *-jython"
+RESTRICT_PYTHON_ABIS="2.5 3.0 *-jython *-pypy-*"
 
 inherit eutils python waf-utils
 
@@ -71,21 +71,7 @@ src_test() {
 	}
 	python_execute_function -q -s test_installation
 
-	testing() {
-		# Need a variable for the pypy minor version and a variable to set 2 distinct pythonpaths
-		local pypy_v= PyPath= exit_status=0
-		pypy_v=$(python_get_version)
-		if [[ "${PYTHON_ABI:4:4}" == "pypy" ]]; then
-			PyPath=$(find "${T}"/tests/2.7-pypy-$pypy_v/ -name site-packages)
-			PYTHONPATH="${PyPath}" py.test-${PYTHON_ABI} "${WORKDIR}/${P}-${PYTHON_ABI}"/test || exit_status=1
-		else
-			PyPath="${T}/tests/${PYTHON_ABI}${EPREFIX}"$(python_get_sitedir)
-			PYTHONPATH="${PyPath}" py.test "${WORKDIR}/${P}-${PYTHON_ABI}"/test || exit_status=1
-		fi
-
-		return $exit_status
-	}
-	python_execute_function testing
+	python_execute_py.test -P '${T}/tests/${PYTHON_ABI}${EPREFIX}$(python_get_sitedir)' -s
 }
 
 src_install() {
