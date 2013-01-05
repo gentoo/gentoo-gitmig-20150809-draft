@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/ansible
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.6 2012/10/21 14:50:25 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.7 2013/01/05 13:38:15 pinkbyte Exp $
+
+*ansible-0.9 (05 Jan 2013)
+*ansible-0.8 (05 Jan 2013)
+*ansible-0.7.2 (05 Jan 2013)
+
+  05 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> -ansible-0.7.1.ebuild,
+  +ansible-0.7.2.ebuild, +ansible-0.8.ebuild, +ansible-0.9.ebuild:
+  Version bump, thanks to Georgy Kovtunov. Drop old version
 
   21 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> ansible-0.7.1.ebuild,
   ansible-9999.ebuild:
