@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r26.ebuild,v 1.7 2012/08/26 18:20:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r26.ebuild,v 1.8 2013/01/05 23:03:04 pinkbyte Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic toolchain-funcs user
@@ -32,7 +32,7 @@ src_prepare() {
 	elog 'of custom patches.'
 	elog
 	elog 'Some of them can be found at http://tinydns.org/ or'
-	elog 'http://homepages.tesco.net/J.deBoynePollard/Softwares/djbdns/'
+	elog 'http://homepage.ntlworld.com/jonathan.deboynepollard/Softwares/djbdns/'
 	elog
 
 	epatch \

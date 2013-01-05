@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r23.ebuild,v 1.10 2012/06/14 02:04:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r23.ebuild,v 1.11 2013/01/05 23:03:04 pinkbyte Exp $
 
 IUSE="doc ipv6 selinux static"
 
@@ -36,7 +36,7 @@ src_unpack() {
 	elog 'of custom patches.'
 	elog
 	elog 'Some of them can be found at http://tinydns.org/ or'
-	elog 'http://homepages.tesco.net/J.deBoynePollard/Softwares/djbdns/'
+	elog 'http://homepage.ntlworld.com/jonathan.deboynepollard/Softwares/djbdns/'
 	elog
 
 	epatch \
