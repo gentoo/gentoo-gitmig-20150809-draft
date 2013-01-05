@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc13.ebuild,v 1.1 2012/12/23 05:44:24 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc13-r1.ebuild,v 1.1 2013/01/05 16:21:37 ryao Exp $
 
 EAPI="4"
 
@@ -86,13 +86,6 @@ src_install() {
 	rm -rf "${ED}usr/share/dracut"
 	use test-suite || rm -rf "${ED}usr/libexec"
 
-	if use rootfs
-	then
-		doinitd "${FILESDIR}/zfs-shutdown"
-		exeinto /usr/share/zfs
-		doexe "${FILESDIR}/linuxrc"
-	fi
-
 	newbashcomp "${FILESDIR}/bash-completion" zfs
 
 }
@@ -102,7 +95,10 @@ pkg_postinst() {
 	[ -e "${EROOT}/etc/runlevels/boot/zfs" ] \
 		|| ewarn 'You should add zfs to the boot runlevel.'
 
-	use rootfs && ([ -e "${EROOT}/etc/runlevels/shutdown/zfs-shutdown" ] \
-		|| ewarn 'You should add zfs-shutdown to the shutdown runlevel.')
+	if [ -e "${EROOT}/etc/runlevels/shutdown/zfs-shutdown" ]
+	then
+		einfo "The zfs-shutdown script is obsolete. Removing it from runlevel."
+		rm "${EROOT}/etc/runlevels/shutdown/zfs-shutdown"
+	fi
 
 }
