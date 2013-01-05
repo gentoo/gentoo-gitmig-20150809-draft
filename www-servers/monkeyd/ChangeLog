@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/monkeyd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.50 2012/11/21 11:02:51 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.51 2013/01/05 21:47:02 blueness Exp $
+
+  05 Jan 2013; Anthony G. Basile <blueness@gentoo.org> -monkeyd-1.0.1-r1.ebuild,
+  -monkeyd-1.0.1.ebuild, monkeyd-1.1.1.ebuild:
+  Remove older verions, drop virtual/httpd-php to dev-lang/php since it pulls in
+  apache
 
   21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> monkeyd-1.1.1.ebuild:
   Stable for x86, wrt bug #439346
