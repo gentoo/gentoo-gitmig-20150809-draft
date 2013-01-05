@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/winswitch-0.12.17.ebuild,v 1.1 2012/10/15 06:50:32 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/winswitch-0.12.17.ebuild,v 1.2 2013/01/05 13:35:04 xmw Exp $
 
 EAPI=4
 
@@ -44,5 +44,5 @@ pkg_postinst() {
 	elog "    net-misc/tigervnc[?server]"
 	elog "    x11-wm/xpra[?server]"
 	elog "    || ( net-misc/nxclient net-misc/nx ) "
-    elog "and net-dns/avahi[python] for automatic server discovery"
+	elog "and net-dns/avahi[python] for automatic server discovery"
 }
