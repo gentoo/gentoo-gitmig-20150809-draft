@@ -22,7 +22,7 @@
  	@echo "  Compiling $<..."
  	@if [ ! -d build ]; then mkdir build; fi
 -	gcc ${CXXFLAGS} ${METHANE_FLAGS} -c $< -o $@
-+	$(CC) ${CXXFLAGS} ${METHANE_FLAGS} -c $< -o $@
++	$(CXX) ${CXXFLAGS} ${METHANE_FLAGS} -c $< -o $@
  
  
 --- sources/methane.cpp.old	2012-11-27 13:49:22.993003266 +0100

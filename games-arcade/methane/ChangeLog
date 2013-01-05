@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/methane
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/ChangeLog,v 1.23 2013/01/05 20:01:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/ChangeLog,v 1.24 2013/01/05 22:02:14 hasufell Exp $
+
+  05 Jan 2013; Julian Ospald <hasufell@gentoo.org>
+  files/methane-1.5.1-gentoo.patch:
+  use correct compiler wrt #450446
 
   05 Jan 2013; Julian Ospald <hasufell@gentoo.org> methane-1.5.1.ebuild:
   we want mkdir, not dodir :o
