@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-extensions/django-extensions-1.0.2.ebuild,v 1.1 2013/01/04 16:54:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-extensions/django-extensions-1.0.2.ebuild,v 1.2 2013/01/05 07:15:31 idella4 Exp $
 
 EAPI="4"
 
@@ -50,11 +50,7 @@ src_install() {
 
 src_test() {
 	testing() {
-		if [[ $(python_get_version --major) == '2' ]]; then
-			python${PYTHON_ABI} run_tests.py
-		elif [[ ${PYTHON_ABI:4:4} == "pypy" ]]; then
-			pypy-c${PYTHON_ABI:9:11} run_tests.py
-		fi
+		$(PYTHON) run_tests.py
 	}
 	python_execute_function testing
 }
