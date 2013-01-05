@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.5.1.ebuild,v 1.1 2012/11/29 08:24:20 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.5.1.ebuild,v 1.2 2013/01/05 18:19:10 hasufell Exp $
 
 EAPI=4
 inherit eutils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-games/clanlib:0.8[opengl,mikmod]"
+RDEPEND="dev-games/clanlib:2.3[opengl,mikmod]"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
