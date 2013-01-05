@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/step
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.131 2012/12/23 19:34:50 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.132 2013/01/05 20:18:49 creffett Exp $
+
+*step-4.9.5 (05 Jan 2013)
+
+  05 Jan 2013; <creffett@gentoo.org> +step-4.9.5.ebuild:
+  Version bump KDE SC 4.9.5
 
   23 Dec 2012; Markus Meier <maekke@gentoo.org> step-4.9.4.ebuild:
   add ~arm

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdialog
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.229 2012/12/08 11:53:23 dilfridge Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.230 2013/01/05 20:18:59 creffett Exp $
+
+*kdialog-4.9.5 (05 Jan 2013)
+
+  05 Jan 2013; <creffett@gentoo.org> +kdialog-4.9.5.ebuild:
+  Version bump KDE SC 4.9.5
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org> -kdialog-4.8.5.ebuild:
   Drop KDE 4.8

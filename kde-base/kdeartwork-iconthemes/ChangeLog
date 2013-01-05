@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeartwork-iconthemes
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-iconthemes/ChangeLog,v 1.228 2012/12/23 11:53:48 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-iconthemes/ChangeLog,v 1.229 2013/01/05 20:18:37 creffett Exp $
+
+*kdeartwork-iconthemes-4.9.5 (05 Jan 2013)
+
+  05 Jan 2013; <creffett@gentoo.org> +kdeartwork-iconthemes-4.9.5.ebuild:
+  Version bump KDE SC 4.9.5
 
   23 Dec 2012; Markus Meier <maekke@gentoo.org>
   kdeartwork-iconthemes-4.9.4.ebuild:

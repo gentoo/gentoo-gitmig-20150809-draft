@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/krossruby
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/ChangeLog,v 1.97 2012/12/25 15:02:05 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/ChangeLog,v 1.98 2013/01/05 20:18:50 creffett Exp $
+
+*krossruby-4.9.5 (05 Jan 2013)
+
+  05 Jan 2013; <creffett@gentoo.org> +krossruby-4.9.5.ebuild:
+  Version bump KDE SC 4.9.5
 
   25 Dec 2012; Markus Meier <maekke@gentoo.org> krossruby-4.9.4.ebuild:
   add ~arm

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/killbots
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/killbots/ChangeLog,v 1.124 2012/12/23 11:38:00 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/killbots/ChangeLog,v 1.125 2013/01/05 20:18:51 creffett Exp $
+
+*killbots-4.9.5 (05 Jan 2013)
+
+  05 Jan 2013; <creffett@gentoo.org> +killbots-4.9.5.ebuild:
+  Version bump KDE SC 4.9.5
 
   23 Dec 2012; Markus Meier <maekke@gentoo.org> killbots-4.9.4.ebuild:
   add ~arm

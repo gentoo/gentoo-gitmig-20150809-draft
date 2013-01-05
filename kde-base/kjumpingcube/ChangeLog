@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kjumpingcube
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjumpingcube/ChangeLog,v 1.229 2012/12/22 16:13:19 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjumpingcube/ChangeLog,v 1.230 2013/01/05 20:18:31 creffett Exp $
+
+*kjumpingcube-4.9.5 (05 Jan 2013)
+
+  05 Jan 2013; <creffett@gentoo.org> +kjumpingcube-4.9.5.ebuild:
+  Version bump KDE SC 4.9.5
 
   22 Dec 2012; Markus Meier <maekke@gentoo.org> kjumpingcube-4.9.4.ebuild:
   add ~arm

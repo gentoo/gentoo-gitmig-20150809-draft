@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/granatier
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/granatier/ChangeLog,v 1.88 2012/12/22 16:12:29 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/granatier/ChangeLog,v 1.89 2013/01/05 20:18:54 creffett Exp $
+
+*granatier-4.9.5 (05 Jan 2013)
+
+  05 Jan 2013; <creffett@gentoo.org> +granatier-4.9.5.ebuild:
+  Version bump KDE SC 4.9.5
 
   22 Dec 2012; Markus Meier <maekke@gentoo.org> granatier-4.9.4.ebuild:
   add ~arm

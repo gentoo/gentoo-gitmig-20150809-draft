@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kephal
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kephal/ChangeLog,v 1.128 2012/12/08 11:53:43 dilfridge Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kephal/ChangeLog,v 1.129 2013/01/05 20:18:27 creffett Exp $
+
+*kephal-4.9.5 (05 Jan 2013)
+
+  05 Jan 2013; <creffett@gentoo.org> +kephal-4.9.5.ebuild:
+  Version bump KDE SC 4.9.5
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org> -kephal-4.8.5.ebuild:
   Drop KDE 4.8

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/parley
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.143 2012/12/22 16:42:47 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.144 2013/01/05 20:19:13 creffett Exp $
+
+*parley-4.9.5 (05 Jan 2013)
+
+  05 Jan 2013; <creffett@gentoo.org> +parley-4.9.5.ebuild:
+  Version bump KDE SC 4.9.5
 
   22 Dec 2012; Markus Meier <maekke@gentoo.org> parley-4.9.4.ebuild:
   add ~arm

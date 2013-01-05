@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdegames-meta
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.237 2012/12/24 12:53:51 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.238 2013/01/05 20:18:35 creffett Exp $
+
+*kdegames-meta-4.9.5 (05 Jan 2013)
+
+  05 Jan 2013; <creffett@gentoo.org> +kdegames-meta-4.9.5.ebuild:
+  Version bump KDE SC 4.9.5
 
   24 Dec 2012; Markus Meier <maekke@gentoo.org> kdegames-meta-4.9.4.ebuild:
   add ~arm
