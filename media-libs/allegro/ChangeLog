@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/allegro
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.135 2012/10/11 15:51:56 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.136 2013/01/05 05:27:21 mr_bones_ Exp $
+
+*allegro-5.0.8 (05 Jan 2013)
+
+  05 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> +allegro-5.0.8.ebuild:
+  version bump (bug #450314)
 
   11 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> -allegro-5.0.5.ebuild,
   allegro-5.0.7.ebuild:
