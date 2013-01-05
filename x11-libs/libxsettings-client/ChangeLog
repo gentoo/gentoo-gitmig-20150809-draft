@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxsettings-client
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/ChangeLog,v 1.22 2012/05/21 19:33:41 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/ChangeLog,v 1.23 2013/01/05 12:31:09 armin76 Exp $
+
+  05 Jan 2013; Raúl Porcel <armin76@gentoo.org>
+  libxsettings-client-0.17.ebuild:
+  sh stable wrt #397253
 
   21 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
   libxsettings-client-0.10.ebuild:

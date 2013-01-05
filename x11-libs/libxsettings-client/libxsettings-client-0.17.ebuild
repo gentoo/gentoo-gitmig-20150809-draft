@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/libxsettings-client-0.17.ebuild,v 1.8 2012/02/21 16:15:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/libxsettings-client-0.17.ebuild,v 1.9 2013/01/05 12:31:09 armin76 Exp $
 
 GPE_TARBALL_SUFFIX="bz2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="XSETTINGS client code"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~hppa ppc ~sh x86"
+KEYWORDS="amd64 arm ~hppa ppc sh x86"
 
 DOCS="ChangeLog"
 IUSE=""
