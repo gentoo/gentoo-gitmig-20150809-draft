@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-ru/fortune-mod-gentoo-ru-0.26.ebuild,v 1.4 2012/10/20 17:32:08 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-ru/fortune-mod-gentoo-ru-0.26.ebuild,v 1.5 2013/01/05 21:15:42 pinkbyte Exp $
 
 EAPI=4
 
 DESCRIPTION="Fortune database of quotes from gentoo.ru forum and gentoo@conference.gentoo.ru"
-HOMEPAGE="http://marsoft.dyndns.info/fortunes-gentoo-ru/"
+HOMEPAGE="http://fortunes.gentoo.ru"
 SRC_URI="http://slepnoga.googlecode.com/files/gentoo-ru-${PV}.gz
 	http://maryasin.name/fortunes-gentoo-ru/gentoo-ru-${PV}.gz"
 
