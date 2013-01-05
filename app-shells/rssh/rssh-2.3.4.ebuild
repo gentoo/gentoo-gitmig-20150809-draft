@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.3.4.ebuild,v 1.4 2012/12/03 11:17:55 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.3.4.ebuild,v 1.5 2013/01/05 21:35:40 pinkbyte Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -18,6 +18,8 @@ RDEPEND="virtual/ssh"
 
 src_prepare() {
 	sed -i 's:chmod u+s $(:chmod u+s $(DESTDIR)$(:' Makefile.in || die
+	# respect CFLAGS, bug #450458
+	sed -i -e '/$(CC) -c/s/$(CPPFLAGS)/$(CFLAGS)/' Makefile.in || die
 }
 
 src_configure() {
