@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-018_p8.ebuild,v 1.6 2012/11/13 18:03:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-018_p8.ebuild,v 1.7 2013/01/05 12:33:39 armin76 Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info toolchain-funcs udev
@@ -15,7 +15,7 @@ SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${MY_PV}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ppc ~sh x86"
+KEYWORDS="amd64 arm ppc sh x86"
 IUSE="debug staticsocket"
 
 RDEPEND="virtual/modutils"

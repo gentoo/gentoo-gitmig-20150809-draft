@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcmciautils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/ChangeLog,v 1.47 2012/11/18 11:34:54 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/ChangeLog,v 1.48 2013/01/05 12:33:39 armin76 Exp $
+
+  05 Jan 2013; Raúl Porcel <armin76@gentoo.org> pcmciautils-018_p8.ebuild:
+  sh stable wrt #434082
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop mobile herd as talked in gentoo-dev ML
