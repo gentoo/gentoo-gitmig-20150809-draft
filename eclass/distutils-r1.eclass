@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.37 2013/01/05 10:00:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.38 2013/01/05 10:02:44 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -66,6 +66,14 @@ if [[ ! ${_DISTUTILS_R1} ]]; then
 
 RDEPEND=${PYTHON_DEPS}
 DEPEND=${PYTHON_DEPS}
+
+# @ECLASS-VARIABLE: DISTUTILS_JOBS
+# @DEFAULT_UNSET
+# @DECRIPTION:
+# The number of parallel jobs to run for distutils-r1 parallel builds.
+# If unset, the job-count in ${MAKEOPTS} will be used.
+#
+# This variable is intended to be set in make.conf.
 
 # @ECLASS-VARIABLE: PATCHES
 # @DEFAULT_UNSET
@@ -143,15 +151,6 @@ DEPEND=${PYTHON_DEPS}
 # This variable can be used to disable the afore-mentioned feature
 # in case it causes issues with the package.
 
-#
-# If in-source builds are used, the eclass will create a copy of package
-# sources for each Python implementation in python_prepare_all(),
-# and work on that copy afterwards.
-#
-# If out-of-source builds are used, the eclass will instead work
-# on the sources directly, prepending setup.py arguments with
-# 'build --build-base ${BUILD_DIR}' to enforce keeping & using built
-# files in the specific root.
 # @ECLASS-VARIABLE: mydistutilsargs
 # @DEFAULT_UNSET
 # @DESCRIPTION:
@@ -425,6 +424,23 @@ _distutils-r1_run_common_phase() {
 	"${@}"
 }
 
+# @FUNCTION: _distutils-r1_multijob_init
+# @INTERNAL
+# @DESCRIPTION:
+# Init multijob, taking the job-count from ${DISTUTILS_JOBS}.
+_distutils-r1_multijob_init() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local opts
+	if [[ ${DISTUTILS_JOBS} ]]; then
+		opts=-j${DISTUTILS_JOBS}
+	else
+		opts=${MAKEOPTS}
+	fi
+
+	multijob_init "${opts}"
+}
+
 distutils-r1_src_prepare() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -435,7 +451,7 @@ distutils-r1_src_prepare() {
 		distutils-r1_python_prepare_all
 	fi
 
-	multijob_init
+	_distutils-r1_multijob_init
 	if declare -f python_prepare >/dev/null; then
 		python_foreach_impl distutils-r1_run_phase python_prepare
 	else
@@ -445,7 +461,7 @@ distutils-r1_src_prepare() {
 }
 
 distutils-r1_src_configure() {
-	multijob_init
+	_distutils-r1_multijob_init
 	if declare -f python_configure >/dev/null; then
 		python_foreach_impl distutils-r1_run_phase python_configure
 	else
@@ -461,7 +477,7 @@ distutils-r1_src_configure() {
 distutils-r1_src_compile() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	multijob_init
+	_distutils-r1_multijob_init
 	if declare -f python_compile >/dev/null; then
 		python_foreach_impl distutils-r1_run_phase python_compile
 	else
@@ -477,7 +493,7 @@ distutils-r1_src_compile() {
 distutils-r1_src_test() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	multijob_init
+	_distutils-r1_multijob_init
 	if declare -f python_test >/dev/null; then
 		python_foreach_impl distutils-r1_run_phase python_test
 	else
@@ -493,7 +509,7 @@ distutils-r1_src_test() {
 distutils-r1_src_install() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	multijob_init
+	_distutils-r1_multijob_init
 	if declare -f python_install >/dev/null; then
 		python_foreach_impl distutils-r1_run_phase python_install
 	else
