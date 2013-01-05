@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ssh-multiadd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ssh-multiadd/ChangeLog,v 1.18 2012/12/05 01:31:14 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ssh-multiadd/ChangeLog,v 1.19 2013/01/05 21:25:19 pinkbyte Exp $
+
+  05 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Drop proxy maintainers team from metadata, wrt bug #390951
 
   05 Dec 2012; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Change maintainer tag (bug #390951).
