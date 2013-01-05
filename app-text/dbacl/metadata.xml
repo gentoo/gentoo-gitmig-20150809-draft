@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-<email>maintainer-needed@gentoo.org</email>
+<email>aidecoe@gentoo.org</email>
+<name>Amadeusz Żołnowski</name>
 </maintainer>
 <use>
 <flag name="interactive">Enable the interactive mailinspect ability</flag>
