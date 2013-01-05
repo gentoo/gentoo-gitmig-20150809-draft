@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.12 2013/01/02 21:12:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.13 2013/01/05 10:01:20 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -318,17 +318,33 @@ _python_rewrite_shebang() {
 	local f
 	for f; do
 		local shebang=$(head -n 1 "${f}")
+		local from
 		debug-print "${FUNCNAME}: path = ${f}"
 		debug-print "${FUNCNAME}: shebang = ${shebang}"
 
-		if [[ "${shebang} " != *'python '* ]]; then
+		if [[ "${shebang} " == *'python '* ]]; then
+			from=python
+		elif [[ "${shebang} " == *'python2 '* ]]; then
+			from=python2
+		elif [[ "${shebang} " == *'python3 '* ]]; then
+			from=python3
+		else
 			eerror "A file does not seem to have a supported shebang:"
 			eerror "  file: ${f}"
 			eerror "  shebang: ${shebang}"
 			die "${FUNCNAME}: ${f} does not seem to have a valid shebang"
 		fi
 
-		sed -i -e "1s:python:${impl}:" "${f}" || die
+		if [[ ${from} == python2 && ${impl} == python3*
+				|| ${from} == python3 && ${impl} != python3* ]]; then
+			eerror "A file does have shebang not supporting requested impl:"
+			eerror "  file: ${f}"
+			eerror "  shebang: ${shebang}"
+			eerror "  impl: ${impl}"
+			die "${FUNCNAME}: ${f} does have shebang not supporting ${EPYTHON}"
+		fi
+
+		sed -i -e "1s:${from}:${impl}:" "${f}" || die
 	done
 }
 
