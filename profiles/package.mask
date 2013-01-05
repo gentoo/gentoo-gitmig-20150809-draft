@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14347 2013/01/04 09:21:25 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14348 2013/01/05 20:21:43 slyfox Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sergei Trofimovich <slyfox@gentoo.org> (05 Jan 2013)
+# Masked for testing. Known to hang on large repos,
+# is not compatible with cvsps-2 (like bug #450424)
+>=dev-vcs/cvsps-3
 
 # Ole Markus With <olemarkus@gentoo.org> (04 Jan 2013)
 # No release in four years. Replaced by Zeta Components, which also has yet to
