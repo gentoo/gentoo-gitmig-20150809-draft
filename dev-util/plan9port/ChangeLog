@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/plan9port
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/ChangeLog,v 1.6 2013/01/04 04:06:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/ChangeLog,v 1.7 2013/01/05 13:00:12 blueness Exp $
+
+*plan9port-20130103 (05 Jan 2013)
+
+  05 Jan 2013; Anthony G. Basile <blueness@gentoo.org>
+  +plan9port-20130103.ebuild, plan9port-20121219.ebuild:
+  Version bump, fix up license
 
 *plan9port-20121219 (27 Dec 2012)
 
@@ -37,4 +43,3 @@
   +metadata.xml, +plan9port-20070522.ebuild:
   Initial ebuild for Plan9Port, a set of Plan 9 utilities ported to POSIX
   environments.
-
