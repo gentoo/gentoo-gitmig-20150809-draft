@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/xmonad
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.31 2013/01/01 23:59:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.32 2013/01/05 17:47:52 slyfox Exp $
+
+*xmonad-0.11-r1 (05 Jan 2013)
+
+  05 Jan 2013; Sergei Trofimovich <slyfox@gentoo.org> +xmonad-0.11-r1.ebuild:
+  restored session file, example config and man (reported by mimi_vx)
 
   01 Jan 2013; Sergei Trofimovich <slyfox@gentoo.org> xmonad-0.11.ebuild:
   Tuned sort order for keywords.
