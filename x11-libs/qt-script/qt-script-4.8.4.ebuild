@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/qt-script-4.8.4.ebuild,v 1.10 2012/12/29 08:47:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/qt-script-4.8.4.ebuild,v 1.11 2013/01/05 15:09:35 kensington Exp $
 
 EAPI=4
 
@@ -19,6 +19,8 @@ DEPEND="
 	~x11-libs/qt-core-${PV}[aqua=,debug=]
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}/4.8.2-javascriptcore-x32.patch" )
 
 pkg_setup() {
 	QT4_TARGET_DIRECTORIES="
