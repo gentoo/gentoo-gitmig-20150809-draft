@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.103 2013/01/01 14:57:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.104 2013/01/05 19:14:01 aidecoe Exp $
+
+  05 Jan 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-014-r3.ebuild,
+  dracut-018-r3.ebuild, dracut-019-r6.ebuild, dracut-022-r6.ebuild,
+  dracut-023-r4.ebuild, dracut-024-r2.ebuild, dracut-024-r3.ebuild:
+  Revert dependency from virtual/udev to sys-fs/udev. Dracut need to be
+  customized first to depend both on eudev and udev.
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> dracut-024-r3.ebuild:
   Add ~alpha, wrt bug #449220

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-014-r3.ebuild,v 1.7 2012/11/28 10:22:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-014-r3.ebuild,v 1.8 2013/01/05 19:14:01 aidecoe Exp $
 
 EAPI=4
 
@@ -56,7 +56,7 @@ RDEPEND="
 	|| ( >=sys-apps/module-init-tools-3.8 >sys-apps/kmod-5[tools] )
 	>=sys-apps/sysvinit-2.87-r3
 	>=sys-apps/util-linux-2.20
-	>=virtual/udev-164
+	>=sys-fs/udev-164
 	!>=sys-fs/udev-186
 
 	debug? ( dev-util/strace )
