@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/cvsps-3.3-r1.ebuild,v 1.1 2013/01/01 12:42:13 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/cvsps-3.5.ebuild,v 1.1 2013/01/05 18:20:29 slyfox Exp $
 
 EAPI="4"
 
