@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.63 2012/12/22 09:14:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.64 2013/01/05 01:19:27 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils python
@@ -56,7 +56,7 @@ PDEPEND="
 		userland_GNU? ( >=sys-apps/coreutils-6.4 )
 	)"
 # coreutils-6.4 rdep is for date format in emerge-webrsync #164532
-# NOTE: FEATURES=install-sources requires debugedit and rsync
+# NOTE: FEATURES=installsources requires debugedit and rsync
 
 SRC_ARCHIVES="http://dev.gentoo.org/~zmedico/portage/archives"
 
