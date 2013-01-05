@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/coe2/coe2-2007.ebuild,v 1.2 2009/02/12 22:47:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/coe2/coe2-2007.ebuild,v 1.3 2013/01/05 20:13:14 pinkbyte Exp $
 
 EAPI=2
 inherit eutils games
@@ -18,11 +18,14 @@ RDEPEND="media-libs/libsdl"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-S=${WORKDIR}/coe
+S="${WORKDIR}/coe"
+
+# bug #430026
+QA_PREBUILT="/opt/coe2/coe_linux"
 
 src_prepare() {
-	rm *.{dll,exe}
-	rm -r old
+	rm *.{dll,exe} || die 'rm failed'
+	rm -r old || die 'rm failed'
 	if use amd64 ; then
 		mv -f coe_linux64bit coe_linux || die "mv amd64 image failed"
 	fi
@@ -31,7 +34,7 @@ src_prepare() {
 src_install() {
 	insinto "${GAMES_PREFIX_OPT}/${PN}"
 	doins *.{bgm,smp,trp,trs,wrl} || die " doins failed"
-	dodoc history.txt manual.txt readme.txt
+	dodoc history.txt manual.txt readme.txt || die "dodoc failed"
 	exeinto "${GAMES_PREFIX_OPT}/${PN}"
 	doexe coe_linux || die "doexe failed"
 
