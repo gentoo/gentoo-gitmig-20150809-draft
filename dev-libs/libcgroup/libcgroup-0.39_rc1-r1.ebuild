@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/libcgroup-0.39_rc1-r1.ebuild,v 1.1 2013/01/03 20:34:21 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/libcgroup-0.39_rc1-r1.ebuild,v 1.2 2013/01/05 11:24:38 pinkbyte Exp $
 
-EAPI="4"
+EAPI="5"
 
 AUTOTOOLS_AUTORECONF=1
 
@@ -67,7 +67,6 @@ src_configure() {
 		$(use_enable debug)
 		$(use_enable pam)
 		$(use_enable tools)
-		--enable-silent-rules
 		${my_conf}
 		)
 	autotools-utils_src_configure

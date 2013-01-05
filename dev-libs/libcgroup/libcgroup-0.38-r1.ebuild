@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/libcgroup-0.38-r1.ebuild,v 1.3 2013/01/04 22:01:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/libcgroup-0.38-r1.ebuild,v 1.4 2013/01/05 11:24:38 pinkbyte Exp $
 
 EAPI="4"
 
@@ -57,7 +57,8 @@ src_configure() {
 		my_conf="${my_conf} --enable-pam-module-dir=$(getpam_mod_dir)"
 	fi
 
-	econf ${my_conf}
+	# bug #450302
+	econf ${my_conf} --disable-silent-rules
 }
 
 src_install() {
