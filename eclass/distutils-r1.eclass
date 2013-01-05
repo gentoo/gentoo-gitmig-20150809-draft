@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.36 2013/01/04 03:12:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.37 2013/01/05 10:00:30 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -389,7 +389,7 @@ distutils-r1_run_phase() {
 	mkdir -p "${TMPDIR}" || die
 
 	if [[ ${DISTUTILS_NO_PARALLEL_BUILD} ]]; then
-		"${@}"
+		"${@}" 2>&1 | tee -a "${T}/build-${EPYTHON}.log"
 	else
 		(
 			multijob_child_init
