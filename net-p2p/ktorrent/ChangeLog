@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/ktorrent
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.192 2012/12/14 15:45:06 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.193 2013/01/05 18:06:06 creffett Exp $
+
+*ktorrent-4.3.0-r1 (05 Jan 2013)
+
+  05 Jan 2013; Chris Reffett <creffett@gentoo.org>
+  +files/ktorrent-4.3.0-mountedstoragecheck.patch, +ktorrent-4.3.0-r1.ebuild,
+  ktorrent-4.3.0.ebuild:
+  Add upstream patch to fix problems with unmounted network media, fixes bug
+  450358. Credit for finding this to blackd <p.kosseff@gmail.com>.
 
   14 Dec 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Remove redundant USE=upnp description; it matches the global flag meaning.

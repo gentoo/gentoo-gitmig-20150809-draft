@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-4.3.0.ebuild,v 1.6 2013/01/05 18:06:06 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-4.3.0-r1.ebuild,v 1.1 2013/01/05 18:06:06 creffett Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ if [[ ${PV} != 9999* ]]; then
 	SRC_URI="http://ktorrent.org/downloads/${MY_PV}/${MY_P}.tar.bz2"
 	S="${WORKDIR}"/"${MY_P}"
 
-	KEYWORDS="amd64 ppc x86"
+	KEYWORDS="~amd64 ~ppc ~x86"
 else
 	LIBKT_VERSION_MIN="${PV}"
 	LIBKT_VERSION_MAX="99999999"
@@ -66,6 +66,8 @@ RDEPEND="${COMMONDEPEND}
 	)
 	kross? ( $(add_kdebase_dep krosspython) )
 "
+
+PATCHES=( "${FILESDIR}/${PN}-4.3.0-mountedstoragecheck.patch" )
 
 src_prepare() {
 	if ! use plasma; then
