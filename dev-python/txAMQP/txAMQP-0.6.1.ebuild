@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/txAMQP/txAMQP-0.6.1.ebuild,v 1.1 2012/04/19 10:07:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/txAMQP/txAMQP-0.6.1.ebuild,v 1.2 2013/01/05 11:37:04 idella4 Exp $
 
 EAPI="3"
-
+SUPPORT_PYTHON_ABIS="1"
 inherit distutils
 
 DESCRIPTION="Python library for communicating with AMQP peers using Twisted"
