@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/yafu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yafu/ChangeLog,v 1.6 2013/01/06 15:37:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yafu/ChangeLog,v 1.7 2013/01/06 15:39:41 patrick Exp $
+
+  06 Jan 2013; Patrick Lauer <patrick@gentoo.org> yafu-9999.ebuild:
+  Fixing ggnfs default paths for live ebuild too
 
 *yafu-1.33-r2 (06 Jan 2013)
 
