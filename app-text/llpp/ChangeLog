@@ -1,6 +1,11 @@
 # ChangeLog for app-text/llpp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.32 2012/11/28 08:16:43 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.33 2013/01/06 03:27:27 zmedico Exp $
+
+  06 Jan 2013; Zac Medico <zmedico@gentoo.org> Manifest:
+  Update Manifest with digests for a snapshot which I've manually uploaded to
+  dev.gentoo.org:/space/distfiles-local/, since the SRC_URI returns a
+  dynamically generated file with random digests.
 
 *llpp-13_p20121123 (28 Nov 2012)
 
