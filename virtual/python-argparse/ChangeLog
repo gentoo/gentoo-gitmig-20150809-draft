@@ -1,6 +1,10 @@
 # ChangeLog for virtual/python-argparse
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-argparse/ChangeLog,v 1.5 2012/12/17 19:38:35 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-argparse/ChangeLog,v 1.6 2013/01/06 01:23:28 floppym Exp $
+
+  06 Jan 2013; Mike Gilbert <floppym@gentoo.org> python-argparse-0.ebuild,
+  python-argparse-1.ebuild:
+  Python 3.1 needs dev-python/argparse too.
 
   17 Dec 2012; Michał Górny <mgorny@gentoo.org> python-argparse-0.ebuild,
   python-argparse-1.ebuild:
