@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/netpbm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.265 2012/07/18 21:50:27 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.266 2013/01/06 02:00:17 vapier Exp $
+
+*netpbm-10.61.00 (06 Jan 2013)
+
+  06 Jan 2013; Mike Frysinger <vapier@gentoo.org> +netpbm-10.61.00.ebuild:
+  Version bump #450154 by Samuli Suominen.
 
 *netpbm-10.59.00 (18 Jul 2012)
 
