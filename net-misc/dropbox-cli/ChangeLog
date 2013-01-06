@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dropbox-cli
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox-cli/ChangeLog,v 1.3 2012/12/06 04:12:54 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox-cli/ChangeLog,v 1.4 2013/01/06 00:34:02 hasufell Exp $
+
+*dropbox-cli-1-r1 (06 Jan 2013)
+
+  06 Jan 2013; Julian Ospald <hasufell@gentoo.org> +dropbox-cli-1-r1.ebuild:
+  revbump: migrate to distutils-r1
 
   06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> dropbox-cli-1.ebuild:
   x86 stable wrt bug #445099
