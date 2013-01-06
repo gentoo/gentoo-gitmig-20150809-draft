@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/razercfg-0.19_p20121013.ebuild,v 1.1 2012/11/27 13:57:14 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/razercfg-0.19_p20121013.ebuild,v 1.2 2013/01/06 03:54:50 zmedico Exp $
 
 EAPI=4
 
@@ -9,7 +9,8 @@ inherit cmake-utils multilib eutils
 DESCRIPTION="Utility for advanced configuration of Razer mice (DeathAdder, Krait, Lachesis)"
 
 HOMEPAGE="http://bues.ch/cms/hacking/razercfg.html"
-SRC_URI="http://dev.gentoo.org/~joker/distfiles/${P}.tar.bz2"
+EGIT_COMMIT="1416b03a29589dd6ce6ae80d3e80e497cd99282f"
+SRC_URI="http://bues.ch/gitweb?p=razer.git;a=snapshot;h=${EGIT_COMMIT};sf=tgz -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -21,6 +22,7 @@ RDEPEND="${DEPEND}
 	dev-lang/python"
 
 DEPEND="${DEPEND}"
+S="${WORKDIR}/${PN%cfg}-${EGIT_COMMIT:0:7}"
 
 src_prepare() {
 	sed -i \
