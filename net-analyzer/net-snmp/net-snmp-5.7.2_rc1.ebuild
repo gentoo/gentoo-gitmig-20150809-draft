@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2_rc1.ebuild,v 1.12 2013/01/07 04:04:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2_rc1.ebuild,v 1.13 2013/01/07 04:09:58 jer Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 	http://dev.gentoo.org/~flameeyes/${PN}/${MY_P}-patches-${PATCHSET}.tar.xz"
 
 # GPL-2 for the init scripts
-LICENSE="as-is BSD GPL-2"
+LICENSE="HPND BSD GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="bzip2 doc elf ipv6 mfd-rewrites minimal perl python rpm selinux ssl tcpd X zlib lm_sensors ucd-compat"
