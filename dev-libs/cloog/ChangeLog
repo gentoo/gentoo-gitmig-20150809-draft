@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cloog
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/ChangeLog,v 1.5 2012/06/27 06:09:30 dirtyepic Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/ChangeLog,v 1.6 2013/01/07 00:13:36 dirtyepic Exp $
+
+  07 Jan 2013; Ryan Hill <dirtyepic@gentoo.org> cloog-0.17.0.ebuild:
+  Restrict isl to older versions.
 
   27 Jun 2012; Ryan Hill <dirtyepic@gentoo.org> -cloog-0.16.3.ebuild:
   Remove old.
