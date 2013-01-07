@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r1.ebuild,v 1.4 2013/01/07 03:21:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r1.ebuild,v 1.5 2013/01/07 03:26:31 floppym Exp $
 
 EAPI=4
 
@@ -82,8 +82,10 @@ DEPEND="${RDEPEND}
 	)
 "
 RDEPEND+="
-	grub_platforms_efi-32? ( sys-boot/efibootmgr )
-	grub_platforms_efi-64? ( sys-boot/efibootmgr )
+	kernel_linux? (
+		grub_platforms_efi-32? ( sys-boot/efibootmgr )
+		grub_platforms_efi-64? ( sys-boot/efibootmgr )
+	)
 "
 if [[ -n ${DO_AUTORECONF} ]] ; then
 	DEPEND+=" >=sys-devel/autogen-5.10"
@@ -274,6 +276,7 @@ src_configure() {
 
 	use custom-cflags || unset CCASFLAGS CFLAGS CPPFLAGS LDFLAGS
 	use static && append-ldflags -static
+	use elibc_FreeBSD && append-cppflags "-isystem /usr/include"
 
 	# Sandbox bug 404013.
 	use libzfs && addpredict /etc/dfs:/dev/zfs
