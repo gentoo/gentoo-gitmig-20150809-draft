@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.9i.ebuild,v 1.1 2013/01/08 18:31:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.9i.ebuild,v 1.2 2013/01/08 18:43:16 jer Exp $
 
 EAPI=4
 inherit eutils user
 
 DESCRIPTION="Web caching proxy suitable for non-permanent Internet connections"
-SRC_URI="http://www.gedanken.demon.co.uk/download-wwwoffle/${P}.tgz"
-HOMEPAGE="http://www.gedanken.demon.co.uk/wwwoffle"
+HOMEPAGE="http://www.gedanken.org.uk/software/wwwoffle/"
+SRC_URI="http://www.gedanken.org.uk/software/${PN}/download/${P}.tgz"
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
