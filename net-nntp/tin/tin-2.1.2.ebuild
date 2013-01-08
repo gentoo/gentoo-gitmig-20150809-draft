@@ -1,13 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-2.1.2.ebuild,v 1.1 2013/01/08 18:01:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-2.1.2.ebuild,v 1.2 2013/01/08 18:08:17 jer Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs versionator
 
+TIN_PV=$(get_version_component_range 1-2)
 DESCRIPTION="A threaded NNTP and spool based UseNet newsreader"
 HOMEPAGE="http://www.tin.org/"
-SRC_URI="ftp://ftp.tin.org/pub/news/clients/tin/v$(get_version_component_range 1-2)/${P}.tar.bz2"
+SRC_URI="ftp://ftp.tin.org/pub/news/clients/tin/v${TIN_PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -30,6 +31,7 @@ RDEPEND="
 
 DEPEND="
 	${RDEPEND}
+	app-arch/xz-utils
 	virtual/pkgconfig
 "
 
