@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-amqp/py-amqp-1.0.6.ebuild,v 1.1 2013/01/08 21:47:09 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-amqp/py-amqp-1.0.6.ebuild,v 1.2 2013/01/08 21:58:40 iksaif Exp $
 
 EAPI="5"
 
@@ -46,7 +46,7 @@ src_test() {
 src_install() {
 	distutils_src_install
 
-	dodoc docs/*
+	dodoc -r docs/*
 	if use examples; then
 		docinto examples
 		dodoc demo/* || die "dodoc failed"
