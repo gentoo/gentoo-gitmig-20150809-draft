@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/pecl-apc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apc/ChangeLog,v 1.13 2012/09/04 12:29:31 olemarkus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apc/ChangeLog,v 1.14 2013/01/09 12:01:26 olemarkus Exp $
+
+  09 Jan 2013; Ole Markus With <olemarkus@gentoo.org>
+  -files/pecl-apc-3.0.16-CVE-2008-1488.patch,
+  -files/pecl-apc-3.0.16-apc_set_signals.patch:
+  Remove unused patches that should have been removed a long time ago. Thanks to
+  Hanno for notifying me
 
 *pecl-apc-3.1.13 (04 Sep 2012)
 
