@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.241 2013/01/09 09:18:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.242 2013/01/09 15:01:15 ago Exp $
+
+  09 Jan 2013; Agostino Sarubbo <ago@gentoo.org> rails-2.3.15.ebuild:
+  Stable for amd64, wrt bug #450974
 
 *rails-3.0.19 (09 Jan 2013)
 
@@ -985,4 +988,3 @@
   15 Feb 2005; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
   +rails-0.9.5.ebuild:
   Initial commit. bug# 80828
-
