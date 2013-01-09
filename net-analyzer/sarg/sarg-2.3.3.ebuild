@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.3.3.ebuild,v 1.2 2013/01/09 11:24:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.3.3.ebuild,v 1.3 2013/01/09 11:27:10 pinkbyte Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -49,9 +49,6 @@ src_prepare() {
 	sed -e 's:/usr/local/\(sarg/sarg.conf\):/etc/\1:' \
 		-e 's:/usr/local/\(squidGuard/squidGuard.conf\):/etc/\1:' \
 			-i sarg.1 sarg-php/sarg-squidguard-block.php || die
-
-	# https://sourceforge.net/tracker/?func=detail&aid=3415225&group_id=68910&atid=522793
-	sed 's:\(@mandir@\):\1/man1:' -i Makefile.in || die #379395
 
 	eautoreconf
 }
