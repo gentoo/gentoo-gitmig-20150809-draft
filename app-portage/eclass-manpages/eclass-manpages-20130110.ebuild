@@ -1,6 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/eclass-manpages-20130110.ebuild,v 1.1 2013/01/10 17:19:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/eclass-manpages-20130110.ebuild,v 1.2 2013/01/10 17:21:58 vapier Exp $
+
+EAPI="4"
 
 DESCRIPTION="collection of Gentoo eclass manpages"
 HOMEPAGE="http://www.gentoo.org/"
@@ -10,9 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE=""
-
-DEPEND=""
-RDEPEND=""
 
 S=${WORKDIR}
 
@@ -36,5 +35,5 @@ src_compile() {
 }
 
 src_install() {
-	doman *.5 || die
+	doman *.5
 }
