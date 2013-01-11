@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-9999.ebuild,v 1.5 2013/01/11 21:23:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-9999.ebuild,v 1.6 2013/01/11 21:24:08 scarabeus Exp $
 
-EAPI=4
+EAPI=5
 
 EGIT_REPO_URI="git://gitorious.org/orcus/orcus.git"
 
