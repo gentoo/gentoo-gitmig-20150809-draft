@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.197 2013/01/11 18:14:42 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.198 2013/01/11 18:18:28 billie Exp $
+
+  11 Jan 2013; Daniel Pielmeier <billie@gentoo.org>
+  -files/conky-1.8.1-acpitemp.patch, -files/conky-1.8.1-battery-time.patch,
+  -files/conky-1.8.1-curl-headers.patch, -files/conky-1.8.1-lua-5.2.patch,
+  -files/conky-1.8.1-maxinterfaces.patch, -files/conky-1.8.1-nvidia-x.patch,
+  -files/conky-1.8.1-secunia-SA43225.patch, -files/conky-1.8.1-xmms2.patch:
+  Remove unused patches.
 
   11 Jan 2013; Daniel Pielmeier <billie@gentoo.org>
   +files/conky-1.9.0-update-when-message-count-decreases.patch:
