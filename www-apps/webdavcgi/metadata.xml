@@ -21,4 +21,7 @@
 	<use>
 		<flag name="rcs">Adds support for a revision controlled backend with RCS (<pkg>dev-vcs/rcs</pkg>)</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">webdavcgi</remote-id>
+	</upstream>
 </pkgmetadata>
