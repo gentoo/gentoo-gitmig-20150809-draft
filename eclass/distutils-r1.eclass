@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.40 2013/01/11 01:06:37 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.41 2013/01/12 23:13:14 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -491,8 +491,6 @@ distutils-r1_src_prepare() {
 	_distutils-r1_multijob_init
 	if declare -f python_prepare >/dev/null; then
 		python_foreach_impl distutils-r1_run_phase python_prepare
-	else
-		python_foreach_impl distutils-r1_run_phase distutils-r1_python_prepare
 	fi
 	multijob_finish
 }
@@ -501,8 +499,6 @@ distutils-r1_src_configure() {
 	_distutils-r1_multijob_init
 	if declare -f python_configure >/dev/null; then
 		python_foreach_impl distutils-r1_run_phase python_configure
-	else
-		python_foreach_impl distutils-r1_run_phase distutils-r1_python_configure
 	fi
 	multijob_finish
 
@@ -533,8 +529,6 @@ distutils-r1_src_test() {
 	_distutils-r1_multijob_init
 	if declare -f python_test >/dev/null; then
 		python_foreach_impl distutils-r1_run_phase python_test
-	else
-		python_foreach_impl distutils-r1_run_phase distutils-r1_python_test
 	fi
 	multijob_finish
 
