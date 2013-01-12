@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.43 2013/01/12 23:17:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.44 2013/01/12 23:18:20 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -451,9 +451,11 @@ distutils-r1_run_phase() {
 # @DESCRIPTION:
 # Run the given command, restoring the best-implementation state.
 _distutils-r1_run_common_phase() {
+	local DISTUTILS_ORIG_BUILD_DIR=${BUILD_DIR}
+
 	local EPYTHON=${_DISTUTILS_BEST_IMPL[0]}
 	local PYTHON=${_DISTUTILS_BEST_IMPL[1]}
-	local BEST_BUILD_DIR=${_DISTUTILS_BEST_IMPL[2]}
+	local BUILD_DIR=${_DISTUTILS_BEST_IMPL[2]}
 	local PYTHONPATH=${_DISTUTILS_BEST_IMPL[3]}
 
 	export EPYTHON PYTHON PYTHONPATH
