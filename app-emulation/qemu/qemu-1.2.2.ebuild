@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.2.ebuild,v 1.2 2013/01/12 04:32:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.2.ebuild,v 1.3 2013/01/12 04:56:15 cardoe Exp $
 
 EAPI="4"
 
@@ -209,7 +209,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local conf_opts audio_opts user_targets
+	local conf_opts audio_opts
 
 	for target in ${IUSE_SOFTMMU_TARGETS} ; do
 		use "qemu_softmmu_targets_${target}" && \
@@ -335,6 +335,10 @@ src_install() {
 
 	# Avoid collision with app-emulation/libcacard
 	use smartcard && mv "${ED}/usr/bin/vscclient" "${ED}/usr/bin/qemu-vscclient"
+
+	# Install binfmt handler init script for user targets
+	[[ -n ${user_targets} ]] && \
+		newinitd "${FILESDIR}/qemu-binfmt.initd" qemu-binfmt
 
 	# Remove SeaBIOS since we're using the SeaBIOS packaged one
 	rm "${ED}/usr/share/qemu/bios.bin"
