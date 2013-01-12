@@ -1,10 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.15.ebuild,v 1.1 2013/01/12 23:47:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.15.3.ebuild,v 1.1 2013/01/12 23:56:49 cardoe Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
 WANT_AUTOMAKE="1.11"
+
+MY_PV="${PV}-76cb"
+S=${WORKDIR}/${PN}-${MY_PV}
 
 inherit autotools eutils python
 
@@ -15,7 +18,7 @@ HOMEPAGE="http://spice-space.org http://gitorious.org/spice-gtk"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-SRC_URI="http://spice-space.org/download/gtk/${P}.tar.bz2"
+SRC_URI="http://spice-space.org/download/gtk/${PN}-${MY_PV}.tar.bz2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dbus doc gstreamer gtk3 +introspection policykit pulseaudio
 python sasl smartcard static-libs usbredir vala"
