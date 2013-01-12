@@ -20,5 +20,7 @@
 			devices to another machine over TCP</flag>
 		<flag name="vala">Generate <pkg>dev-lang/vala</pkg> bindings using
 			vapigen and regenerate .vala files using valac</flag>
+	    <flag name="dbus">Support for desktop integration such as
+			automounting and other APIs exposed by your DE via D-Bus</flag>
 	</use>
 </pkgmetadata>
