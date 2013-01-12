@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.41 2013/01/12 23:13:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.42 2013/01/12 23:13:44 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -381,7 +381,7 @@ distutils-r1_python_install_all() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	if declare -p DOCS &>/dev/null; then
-		dodoc "${DOCS[@]}" || die "dodoc failed"
+		dodoc -r "${DOCS[@]}" || die "dodoc failed"
 	else
 		local f
 		# same list as in PMS
