@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfs-defrag/reiserfs-defrag-0.2.1.ebuild,v 1.1 2013/01/12 17:10:08 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfs-defrag/reiserfs-defrag-0.2.1.ebuild,v 1.2 2013/01/12 17:11:07 pinkbyte Exp $
 
 EAPI=5
 
@@ -25,5 +25,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "Defragmentation should be done OFFLINE only! Use MUST unmount your reiserfs partition before starting ${PN}"
+	ewarn "Defragmentation should be done OFFLINE only! You MUST unmount your reiserfs partition before starting ${PN}"
 }
