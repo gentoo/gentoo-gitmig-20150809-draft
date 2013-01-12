@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.99.4.ebuild,v 1.1 2013/01/12 15:50:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.99.4.ebuild,v 1.2 2013/01/12 15:52:50 scarabeus Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils multilib
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.fbreader.org/files/desktop/${PN}-sources-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~ppc x86"
 IUSE="debug"
 
 RDEPEND="
@@ -38,7 +38,7 @@ src_prepare() {
 	# Let portage decide about the compiler
 	sed -e "/^CC = /d" \
 		-i makefiles/arch/desktop.mk || die "removing CC line failed"
-	
+
 	# let portage strip the binary
 	sed -e '/@strip/d' \
 		-i fbreader/desktop/Makefile || die
