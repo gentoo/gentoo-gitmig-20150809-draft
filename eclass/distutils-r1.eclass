@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.42 2013/01/12 23:13:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.43 2013/01/12 23:17:22 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -168,20 +168,21 @@ DEPEND=${PYTHON_DEPS}
 # @DESCRIPTION:
 # Run the setup.py using currently selected Python interpreter
 # (if ${PYTHON} is set; fallback 'python' otherwise). The setup.py will
-# be passed default command-line arguments, then ${mydistutilsargs[@]},
-# then any parameters passed to this command.
+# be passed default ${mydistutilsargs[@]}, then any parameters passed
+# to this command and optionally a standard option set (e.g. the build
+# directory in an ebuild using out-of-source builds).
 #
 # This command dies on failure.
 esetup.py() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	local args=()
+	local add_args=()
 	if [[ ! ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
 		if [[ ! ${BUILD_DIR} ]]; then
 			die 'Out-of-source build requested, yet BUILD_DIR unset.'
 		fi
 
-		args+=(
+		add_args+=(
 			build
 			--build-base "${BUILD_DIR}"
 			# using a single directory for them helps us export ${PYTHONPATH}
@@ -192,7 +193,7 @@ esetup.py() {
 	fi
 
 	set -- "${PYTHON:-python}" setup.py \
-		"${args[@]}" "${mydistutilsargs[@]}" "${@}"
+		"${mydistutilsargs[@]}" "${@}" "${add_args[@]}"
 
 	echo "${@}" >&2
 	"${@}" || die
@@ -228,9 +229,7 @@ distutils-r1_python_prepare_all() {
 
 # @FUNCTION: distutils-r1_python_prepare
 # @DESCRIPTION:
-# The default python_prepare(). Currently it is a no-op
-# but in the future it may apply implementation-specific quirks
-# to the build system.
+# The default python_prepare(). A no-op.
 distutils-r1_python_prepare() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -239,7 +238,7 @@ distutils-r1_python_prepare() {
 
 # @FUNCTION: distutils-r1_python_configure
 # @DESCRIPTION:
-# The default python_configure(). Currently a no-op.
+# The default python_configure(). A no-op.
 distutils-r1_python_configure() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -250,7 +249,8 @@ distutils-r1_python_configure() {
 # @USAGE: [additional-args...]
 # @DESCRIPTION:
 # The default python_compile(). Runs 'esetup.py build'. Any parameters
-# passed to this function will be passed to setup.py.
+# passed to this function will be appended to setup.py invocation,
+# i.e. passed as options to the 'build' command.
 distutils-r1_python_compile() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -259,7 +259,7 @@ distutils-r1_python_compile() {
 
 # @FUNCTION: distutils-r1_python_test
 # @DESCRIPTION:
-# The default python_test(). Currently a no-op.
+# The default python_test(). A no-op.
 distutils-r1_python_test() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -304,7 +304,8 @@ _distutils-r1_rename_scripts() {
 # @DESCRIPTION:
 # The default python_install(). Runs 'esetup.py install', appending
 # the optimization flags. Then renames the installed scripts.
-# Any parameters passed to this function will be passed to setup.py.
+# Any parameters passed to this function will be appended
+# to the setup.py invocation (i.e. as options to the 'install' command).
 distutils-r1_python_install() {
 	debug-print-function ${FUNCNAME} "${@}"
 

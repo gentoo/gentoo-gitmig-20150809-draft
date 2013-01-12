@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.611 2013/01/12 23:13:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.612 2013/01/12 23:17:22 mgorny Exp $
+
+  12 Jan 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Pass arguments to setup.py in an predictable order, especially do not prepend
+  commands before user options.
 
   12 Jan 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Support specifying directories in DOCS.
