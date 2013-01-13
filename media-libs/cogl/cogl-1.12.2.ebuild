@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.12.2.ebuild,v 1.3 2013/01/13 22:37:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.12.2.ebuild,v 1.4 2013/01/13 22:46:06 eva Exp $
 
 EAPI="5"
 CLUTTER_LA_PUNT="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.clutter-project.org/"
 
 LICENSE="LGPL-2.1+ FDL-1.1+"
 SLOT="1.0/11"
-IUSE="examples +introspection +opengl gles2 +pango"
+IUSE="doc examples +introspection +opengl gles2 +pango"
 KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 # XXX: need uprof for optional profiling support
@@ -41,18 +41,11 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/gtk-doc-am-1.13
 	sys-devel/gettext
 	virtual/pkgconfig
+	doc? ( >=dev-util/gtk-doc-1.13 )
 	test? (	app-admin/eselect-opengl
 		media-libs/mesa[classic] )
 "
 # Need classic mesa swrast for tests, llvmpipe causes a test failure
-
-src_prepare() {
-	# Workaround silly upstream forcing gtk-doc build for simple install
-	sed -e "s/\(SUBDIRS += .*\)doc/\1/" \
-		-i Makefile.am Makefile.in || die
-
-	gnome2_src_prepare
-}
 
 src_configure() {
 	# XXX: think about kms-egl, quartz, sdl, wayland
@@ -65,7 +58,7 @@ src_configure() {
 		--enable-deprecated        \
 		--enable-gdk-pixbuf        \
 		--enable-glib              \
-		--enable-gtk-doc           \
+		$(use_enable doc gtk-doc)  \
 		$(use_enable opengl glx)   \
 		$(use_enable opengl gl)    \
 		$(use_enable gles2)        \
@@ -93,10 +86,6 @@ src_install() {
 	EXAMPLES="examples/{*.c,*.jpg}"
 
 	clutter_src_install
-
-	# Make sure gtk-doc is installed
-	cd "${S}"/doc || die
-	emake install DESTDIR="${D}" || die
 
 	# Remove silly examples-data directory
 	rm -rvf "${ED}/usr/share/cogl/examples-data/" || die
