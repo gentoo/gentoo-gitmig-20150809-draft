@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.12.2.ebuild,v 1.2 2013/01/13 16:16:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.12.2.ebuild,v 1.3 2013/01/13 22:37:09 eva Exp $
 
 EAPI="5"
 CLUTTER_LA_PUNT="yes"
@@ -13,11 +13,12 @@ HOMEPAGE="http://www.clutter-project.org/"
 
 LICENSE="LGPL-2.1+ FDL-1.1+"
 SLOT="1.0/11"
-IUSE="doc examples +introspection +opengl gles2 +pango"
+IUSE="examples +introspection +opengl gles2 +pango"
 KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 # XXX: need uprof for optional profiling support
-COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
+COMMON_DEPEND="
+	>=dev-libs/glib-2.28.0:2
 	x11-libs/cairo:=
 	>=x11-libs/gdk-pixbuf-2:2
 	x11-libs/libdrm:=
@@ -45,6 +46,14 @@ DEPEND="${COMMON_DEPEND}
 "
 # Need classic mesa swrast for tests, llvmpipe causes a test failure
 
+src_prepare() {
+	# Workaround silly upstream forcing gtk-doc build for simple install
+	sed -e "s/\(SUBDIRS += .*\)doc/\1/" \
+		-i Makefile.am Makefile.in || die
+
+	gnome2_src_prepare
+}
+
 src_configure() {
 	# XXX: think about kms-egl, quartz, sdl, wayland
 	# Prefer gl over gles2 if both are selected
@@ -56,6 +65,7 @@ src_configure() {
 		--enable-deprecated        \
 		--enable-gdk-pixbuf        \
 		--enable-glib              \
+		--enable-gtk-doc           \
 		$(use_enable opengl glx)   \
 		$(use_enable opengl gl)    \
 		$(use_enable gles2)        \
