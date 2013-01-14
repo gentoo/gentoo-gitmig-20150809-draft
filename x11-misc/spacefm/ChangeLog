@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/spacefm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.45 2013/01/14 17:55:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.46 2013/01/14 17:56:49 hasufell Exp $
+
+  14 Jan 2013; Julian Ospald <hasufell@gentoo.org> spacefm-9999.ebuild:
+  update live-ebuild to default to gtk3
 
 *spacefm-0.8.5 (14 Jan 2013)
 

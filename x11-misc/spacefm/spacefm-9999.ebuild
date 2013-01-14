@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-9999.ebuild,v 1.11 2012/12/18 18:32:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-9999.ebuild,v 1.12 2013/01/14 17:56:49 hasufell Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ RDEPEND="dev-libs/glib:2
 	virtual/freedesktop-icon-theme
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
-	x11-libs/gtk+:2
+	x11-libs/gtk+:3
 	x11-libs/pango
 	x11-libs/libX11
 	x11-misc/shared-mime-info
@@ -39,7 +39,8 @@ src_configure() {
 		$(use_enable startup-notification) \
 		--disable-hal \
 		--enable-inotify \
-		--disable-pixmaps
+		--disable-pixmaps \
+		--with-gtk3=yes
 }
 
 pkg_preinst() {
