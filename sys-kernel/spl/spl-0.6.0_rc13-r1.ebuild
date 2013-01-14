@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc11-r2.ebuild,v 1.5 2013/01/14 21:07:59 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc13-r1.ebuild,v 1.1 2013/01/14 21:07:59 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -13,8 +13,8 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
-	SRC_URI="https://github.com/downloads/zfsonlinux/${PN}/${PN}-${MY_PV}.tar.gz"
-	S="${WORKDIR}/${PN}-${MY_PV}"
+	SRC_URI="https://github.com/zfsonlinux/${PN}/archive/${PN}-${MY_PV}.tar.gz"
+	S="${WORKDIR}/${PN}-${PN}-${MY_PV}"
 	KEYWORDS="~amd64"
 fi
 
@@ -45,7 +45,7 @@ pkg_setup() {
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 6 || die "Linux 3.6 is the latest supported version."; }
+		{ kernel_is le 3 8 || die "Linux 3.8 is the latest supported version."; }
 
 	check_extra_config
 }
@@ -56,9 +56,11 @@ src_prepare() {
 
 	if [ ${PV} != "9999" ]
 	then
-		# Linux 3.6 Support
-		epatch "${FILESDIR}/${P}-linux-3.6-compat.patch"
-		epatch "${FILESDIR}/${PN}-0.6.0_rc12-fix-3.6-compat-regression.patch"
+		# Fix on_each_cpu autotools to work correctly
+		epatch "${FILESDIR}/${P}-fix-on_each_cpu-autotools-check.patch"
+		
+		# Fix soft lockup regression
+		epatch "${FILESDIR}/${P}-fix-soft-lockup.patch"
 	fi
 
 	autotools-utils_src_prepare
@@ -80,7 +82,6 @@ src_configure() {
 }
 
 src_test() {
-		$(use_enable debug-log)
 	if [[ ! -e /proc/modules ]]
 	then
 		die  "Missing /proc/modules"
