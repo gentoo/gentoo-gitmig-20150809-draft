@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>spock@gentoo.org</email>
-    <name>Michał Januszewski</name>
+    <email>jlec@gentoo.org</email>
+    <name>Justin Lecher</name>
   </maintainer>
   <use>
     <flag name="emulation">
