@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-pinentry/eselect-pinentry-0.4.ebuild,v 1.1 2013/01/14 12:53:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-pinentry/eselect-pinentry-0.4.ebuild,v 1.2 2013/01/14 12:54:44 ssuominen Exp $
 
 EAPI=5
 
-DESCRIPTION="Manages the /bin/sh (POSIX shell) symlink"
+DESCRIPTION="Manage /usr/bin/pinentry implementation"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
 SRC_URI=""
 
