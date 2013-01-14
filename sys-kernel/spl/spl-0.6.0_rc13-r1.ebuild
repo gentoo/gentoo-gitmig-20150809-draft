@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc13-r1.ebuild,v 1.1 2013/01/14 21:07:59 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc13-r1.ebuild,v 1.2 2013/01/14 21:11:56 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -58,7 +58,7 @@ src_prepare() {
 	then
 		# Fix on_each_cpu autotools to work correctly
 		epatch "${FILESDIR}/${P}-fix-on_each_cpu-autotools-check.patch"
-		
+
 		# Fix soft lockup regression
 		epatch "${FILESDIR}/${P}-fix-soft-lockup.patch"
 	fi

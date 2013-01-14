@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.38 2013/01/14 21:07:59 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.39 2013/01/14 21:11:56 ryao Exp $
+
+  14 Jan 2013; Richard Yao <ryao@gentoo.org> spl-0.6.0_rc13-r1.ebuild:
+  Fix trailing whitespace in ebuild
 
 *spl-0.6.0_rc13-r1 (14 Jan 2013)
 
