@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc13-r1.ebuild,v 1.1 2013/01/14 21:09:13 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc13-r1.ebuild,v 1.2 2013/01/14 21:11:11 ryao Exp $
 
 EAPI="4"
 
@@ -65,7 +65,7 @@ src_prepare() {
 	then
 		# Fix regression where snapshots are not visible
 		epatch "${FILESDIR}/${P}-fix-invisible-snapshots.patch"
-		
+
 		# Fix deadlock involving concurrent `zfs destroy` and `zfs list` commands
 		epatch "${FILESDIR}/${P}-fix-recursive-reader.patch"
 
