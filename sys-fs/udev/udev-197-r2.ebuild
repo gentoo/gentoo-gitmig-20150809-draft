@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r2.ebuild,v 1.6 2013/01/15 15:27:26 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r2.ebuild,v 1.7 2013/01/15 15:30:55 williamh Exp $
 
 EAPI=4
 
 KV_min=2.6.39
 
-inherit autotools eutils linux-info multilib systemd versionator
+inherit autotools eutils linux-info multilib systemd toolchain-funcs versionator
 
 if [[ ${PV} = 9999* ]]
 then
