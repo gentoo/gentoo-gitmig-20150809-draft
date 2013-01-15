@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/libass-0.10.1.ebuild,v 1.1 2012/10/17 19:09:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/libass-0.10.1.ebuild,v 1.2 2013/01/15 13:14:58 aballier Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ RDEPEND="fontconfig? ( >=media-libs/fontconfig-2.4.2 )
 	>=media-libs/freetype-2.4:2
 	virtual/libiconv
 	>=dev-libs/fribidi-0.19.0
-	harfbuzz? ( >=media-libs/harfbuzz-0.9.5 )
+	harfbuzz? ( >=media-libs/harfbuzz-0.9.11 )
 	enca? ( app-i18n/enca )"
 
 DEPEND="${RDEPEND}
