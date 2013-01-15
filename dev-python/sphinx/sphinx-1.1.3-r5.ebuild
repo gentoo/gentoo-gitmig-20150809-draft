@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.1.3-r5.ebuild,v 1.1 2013/01/15 21:31:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.1.3-r5.ebuild,v 1.2 2013/01/15 21:50:22 mgorny Exp $
 
 EAPI=5
 
@@ -48,7 +48,7 @@ python_compile() {
 		fi
 	fi
 
-	# Generate the grammar. It will be catched by install somehow.
+	# Generate the grammar. It will be caught by install somehow.
 	# Note that the tests usually do it for us. However, I don't want
 	# to trust USE=test really running all the tests, especially
 	# with FEATURES=test-fail-continue.
