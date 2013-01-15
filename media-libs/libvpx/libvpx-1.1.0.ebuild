@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.17 2013/01/06 09:51:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.18 2013/01/15 22:36:05 ssuominen Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs base
@@ -47,6 +47,8 @@ PATCHES=(
 )
 
 src_configure() {
+	unset CODECS #357487
+
 	# let the build system decide which AS to use (it honours $AS but
 	# then feeds it with yasm flags without checking...) #345161
 	local a
