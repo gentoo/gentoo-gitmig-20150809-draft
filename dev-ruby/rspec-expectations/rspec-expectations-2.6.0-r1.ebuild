@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/rspec-expectations-2.6.0-r1.ebuild,v 1.10 2012/11/06 17:16:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/rspec-expectations-2.6.0-r1.ebuild,v 1.11 2013/01/15 05:37:03 zerochaos Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19 jruby"
