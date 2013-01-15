@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/mypaint-1.1.0.ebuild,v 1.1 2013/01/15 19:49:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/mypaint-1.1.0.ebuild,v 1.2 2013/01/15 19:59:13 hwoarang Exp $
 
 EAPI=4
 
@@ -40,7 +40,8 @@ pkg_setup(){
 
 src_prepare() {
 	# multilib support
-	sed -i -e "s:lib\/${PN}:$(get_libdir)\/${PN}:" "${S}"/SConstruct || die
+	sed -i -e "s:lib\/${PN}:$(get_libdir)\/${PN}:" \
+		SConstruct SConscript || die
 	# respect CXXFLAGS,CXX,LDFLAGS
 	epatch "${FILESDIR}"/${PN}-1.1.0-gentoo.patch
 }
