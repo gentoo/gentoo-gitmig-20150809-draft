@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ploop/ploop-1.5.ebuild,v 1.2 2013/01/15 11:44:41 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ploop/ploop-1.5.ebuild,v 1.3 2013/01/15 11:58:42 pinkbyte Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.openvz.org/utils/ploop/${PV}/src/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="static-libs"
+IUSE="debug static-libs"
 
 DEPEND="dev-libs/libxml2"
 RDEPEND="${DEPEND}"
@@ -21,9 +21,15 @@ RDEPEND="${DEPEND}"
 DOCS=( tools/README )
 
 src_prepare() {
-	# Respect CFLAGS and CC
-	sed -e 's|CFLAGS =|CFLAGS +=|' -e 's|CC=|CC?=|' \
-		-i Makefile.inc || die 'sed on Makefile.inc failed'
+	# Respect CFLAGS and CC, do not add debug by default
+	sed -i \
+		-e 's|CFLAGS =|CFLAGS +=|' \
+		-e '/CFLAGS/s/-g -O0 //' \
+		-e '/CFLAGS/s/-O2//' \
+		-e 's|CC=|CC?=|' \
+		-e 's/-Werror//' \
+		-e '/DEBUG=yes/d' \
+		Makefile.inc || die 'sed on Makefile.inc failed'
 	# Avoid striping of binaries
 	sed -e '/INSTALL/{s: -s::}' -i tools/Makefile || die 'sed on tools/Makefile failed'
 
@@ -35,7 +41,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" V=1
+	emake CC="$(tc-getCC)" V=1 $(usex debug 'DEBUG' '' '=yes' '')
 }
 
 src_install() {
