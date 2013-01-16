@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.0.1.ebuild,v 1.2 2013/01/16 07:54:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.0.1.ebuild,v 1.3 2013/01/16 07:55:38 ssuominen Exp $
 
 EAPI="4"
 
@@ -132,7 +132,7 @@ src_prepare() {
 			-e 's:cdio/cdda.h:cdio/paranoia/cdda.h:' \
 			-e 's:cdio/paranoia.h:cdio/paranoia/paranoia.h:' \
 			configure libavdevice/libcdio.c || die
-    fi
+	fi
 }
 
 src_configure() {
