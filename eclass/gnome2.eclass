@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.119 2013/01/16 22:52:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.120 2013/01/16 23:01:02 eva Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -49,11 +49,6 @@ ELTCONF=${ELTCONF:-""}
 # @DESCRIPTION:
 # Should we use EINSTALL instead of DESTDIR. DEPRECATED
 USE_EINSTALL=${USE_EINSTALL:-""}
-
-# @ECLASS-VARIABLE: SCROLLKEEPER_UPDATE
-# @DESCRIPTION:
-# Whether to run scrollkeeper for this package or not. DEPRECATED
-SCROLLKEEPER_UPDATE=${SCROLLKEEPER_UPDATE:-"1"}
 
 # @ECLASS-VARIABLE: DOCS
 # @DEFAULT_UNSET
@@ -128,7 +123,7 @@ gnome2_src_configure() {
 	# rebuild docs.
 	# Preserve old behavior for older EAPI.
 	if grep -q "enable-gtk-doc" ${ECONF_SOURCE:-.}/configure ; then
-		if has ${EAPI:-0} 0 1 2 3 4 && has doc ${IUSE} ; then
+		if has ${EAPI:-0} 0 1 2 3 4 && in_iuse doc ; then
 			G2CONF="$(use_enable doc gtk-doc) ${G2CONF}"
 		else
 			G2CONF="--disable-gtk-doc ${G2CONF}"
@@ -236,7 +231,7 @@ gnome2_src_install() {
 	if has ${EAPI:-0} 0 1 2 3 4; then
 		if [[ "${GNOME2_LA_PUNT}" != "no" ]]; then
 			ebegin "Removing .la files"
-			if ! { has static-libs ${IUSE//+} && use static-libs; }; then
+			if ! use_if_iuse static-libs ; then
 				find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
 			fi
 			eend
