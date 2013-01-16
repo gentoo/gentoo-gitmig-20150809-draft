@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.131 2013/01/15 16:01:56 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.132 2013/01/16 13:56:48 ssuominen Exp $
 
 EAPI=4
 
@@ -325,7 +325,7 @@ pkg_preinst()
 	preserve_old_lib /$(get_libdir)/libudev.so.0
 	if has_version '<sys-fs/udev-197'; then
 		net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
-		cp "${FILESDIR}"/80-net-name-slot.rules "${net_rules}"
+		[[ -f ${net_rules} ]] || cp "${FILESDIR}"/80-net-name-slot.rules "${net_rules}"
 	fi
 }
 
