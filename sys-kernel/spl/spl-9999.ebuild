@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.26 2012/12/27 11:47:22 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.27 2013/01/16 09:01:11 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -13,8 +13,8 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
-	SRC_URI="https://github.com/downloads/zfsonlinux/${PN}/${PN}-${MY_PV}.tar.gz"
-	S="${WORKDIR}/${PN}-${MY_PV}"
+	SRC_URI="https://github.com/zfsonlinux/${PN}/archive/${PN}-${MY_PV}.tar.gz"
+	S="${WORKDIR}/${PN}-${PN}-${MY_PV}"
 	KEYWORDS="~amd64"
 fi
 
@@ -23,7 +23,7 @@ HOMEPAGE="http://zfsonlinux.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="custom-cflags debug"
+IUSE="custom-cflags debug debug-log"
 RESTRICT="test"
 
 RDEPEND="!sys-devel/spl"
@@ -45,7 +45,7 @@ pkg_setup() {
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 5 || die "Linux 3.5 is the latest supported version."; }
+		{ kernel_is le 3 8 || die "Linux 3.8 is the latest supported version."; }
 
 	check_extra_config
 }
@@ -54,11 +54,22 @@ src_prepare() {
 	# Workaround for hard coded path
 	sed -i "s|/sbin/lsmod|/bin/lsmod|" scripts/check.sh || die
 
+	if [ ${PV} != "9999" ]
+	then
+		# Fix on_each_cpu autotools to work correctly
+		epatch "${FILESDIR}/${P}-fix-on_each_cpu-autotools-check.patch"
+
+		# Fix soft lockup regression
+		epatch "${FILESDIR}/${P}-fix-soft-lockup.patch"
+	fi
+
 	autotools-utils_src_prepare
 }
 
 src_configure() {
 	use custom-cflags || strip-flags
+	filter-ldflags -Wl,*
+
 	set_arch_to_kernel
 	local myeconfargs=(
 		--bindir="${EPREFIX}/bin"
@@ -67,6 +78,7 @@ src_configure() {
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
 		$(use_enable debug)
+		$(use_enable debug-log)
 	)
 	autotools-utils_src_configure
 }
