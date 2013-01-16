@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r2.ebuild,v 1.8 2013/01/16 13:55:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r3.ebuild,v 1.1 2013/01/16 13:55:29 ssuominen Exp $
 
 EAPI=4
 
@@ -323,9 +323,10 @@ pkg_preinst()
 		fi
 	done
 	preserve_old_lib /$(get_libdir)/libudev.so.0
-
-	net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
-	[[ -f ${net_rules} ]] || cp "${FILESDIR}"/80-net-name-slot.rules "${net_rules}"
+	if has_version '<sys-fs/udev-197'; then
+		net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
+		[[ -f ${net_rules} ]] || cp "${FILESDIR}"/80-net-name-slot.rules "${net_rules}"
+	fi
 }
 
 # This function determines if a directory is a mount point.
