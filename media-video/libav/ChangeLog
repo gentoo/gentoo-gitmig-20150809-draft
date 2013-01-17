@@ -1,6 +1,10 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.133 2013/01/17 10:38:23 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.134 2013/01/17 10:55:55 lu_zero Exp $
+
+  17 Jan 2013; Luca Barbato <lu_zero@gentoo.org> libav-0.8.5.ebuild,
+  +files/libav-0.8.5-support-libcdio-paranoia.patch:
+  Support newer libcdio-paranoia
 
   17 Jan 2013; Luca Barbato <lu_zero@gentoo.org>
   +files/0001-libcdio-support-recent-cdio-paranoia.patch, libav-9.1.ebuild:
