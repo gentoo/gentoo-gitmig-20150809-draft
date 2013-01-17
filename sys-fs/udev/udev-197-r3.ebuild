@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r3.ebuild,v 1.4 2013/01/17 19:08:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r3.ebuild,v 1.5 2013/01/17 19:21:39 ssuominen Exp $
 
 EAPI=4
 
@@ -142,7 +142,8 @@ src_prepare()
 	# This check is for maintainers only
 	if [[ ${PV} = 9999* ]]; then
 		# Support uClibc wrt bug #443030 with a safe kludge so we know when
-		# to check for other uses than logs
+		# to check for other uses than logs. See the echo for secure_getenv
+		# at the end of src_prepare().
 		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 16 ]]; then
 			eerror "The line count of secure_getenv failed, see bug #443030"
 			die
@@ -175,7 +176,7 @@ src_prepare()
 		elibtoolize
 	fi
 
-	# Run this after possible eautoreconf to verify config.h is there
+	# This is the actual fix for bug #443030 if the check earlier doesn't fail
 	use elibc_glibc || echo '#define secure_getenv(x) NULL' >> config.h
 }
 
