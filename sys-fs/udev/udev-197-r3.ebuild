@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r3.ebuild,v 1.5 2013/01/17 19:21:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r3.ebuild,v 1.6 2013/01/17 19:24:33 ssuominen Exp $
 
 EAPI=4
 
@@ -176,7 +176,8 @@ src_prepare()
 		elibtoolize
 	fi
 
-	# This is the actual fix for bug #443030 if the check earlier doesn't fail
+	# This is the actual fix for bug #443030 if the check earlier doesn't fail.
+	# Run after eautoreconf to ensure config.h is there.
 	use elibc_glibc || echo '#define secure_getenv(x) NULL' >> config.h
 }
 
