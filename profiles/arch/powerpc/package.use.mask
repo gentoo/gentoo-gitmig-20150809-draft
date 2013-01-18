@@ -1,11 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.157 2013/01/18 14:20:49 ssuominen Exp $
-
-# Samuli Suominen <ssuominen@gentoo.org> (18 Jan 2013)
-# libdlm and cman are not keyworded
-cman
-clvm
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.158 2013/01/18 14:28:25 ssuominen Exp $
 
 # Sergei Trofimovich <slyfox@gentoo.org> (11 Jan 2013)
 # Current sys-libs/libseccomp (up to 1.0.1) support
