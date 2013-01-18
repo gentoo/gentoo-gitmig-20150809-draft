@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/angelscript/angelscript-2.25.2.ebuild,v 1.1 2013/01/18 20:46:44 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/angelscript/angelscript-2.25.2.ebuild,v 1.2 2013/01/18 20:52:02 hasufell Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.angelcode.com/angelscript/sdk/files/angelscript_${PV}.zip"
 LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="static-libs"
+IUSE="doc static-libs"
 
 DEPEND="app-arch/unzip"
 
@@ -47,4 +47,6 @@ src_install() {
 	if use static-libs ; then
 		 dolib.a "${S2}"/${PN}/lib/libangelscript.a
 	fi
+
+	use doc && dohtml -r "${WORKDIR}"/sdk/docs/*
 }
