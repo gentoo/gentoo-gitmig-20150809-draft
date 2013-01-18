@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.98.ebuild,v 1.2 2013/01/18 03:36:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.98.ebuild,v 1.3 2013/01/18 03:39:06 ssuominen Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs autotools linux-info udev
@@ -53,10 +53,6 @@ pkg_setup() {
 		elog "their static versions. If you need the static binaries,"
 		elog "you must append .static to the filename!"
 	fi
-}
-
-src_unpack() {
-	unpack ${A}
 }
 
 src_prepare() {
