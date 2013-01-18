@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/3to2/3to2-1.0.ebuild,v 1.3 2012/12/17 19:55:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/3to2/3to2-1.0.ebuild,v 1.4 2013/01/18 23:42:02 mgorny Exp $
 
 EAPI=5
 
@@ -15,3 +15,8 @@ LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
+
+python_test() {
+	"${PYTHON}" "${BUILD_DIR}"/lib/lib3to2/tests/test_all_fixers.py \
+		|| die "Tests fail with ${EPYTHON}"
+}
