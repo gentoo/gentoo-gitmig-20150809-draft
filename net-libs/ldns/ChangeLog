@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ldns
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.40 2013/01/18 02:10:23 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.41 2013/01/18 02:13:35 ryao Exp $
+
+  18 Jan 2013; Richard Yao <ryao@gentoo.org> ldns-1.6.13-r1.ebuild:
+  Drop ~x64-freebsd keyword because USE=vim-syntax is not prefix-safe.
 
   18 Jan 2013; Richard Yao <ryao@gentoo.org> ldns-1.6.13-r1.ebuild:
   Keyword ~amd64-fbsd and ~x64-freebsd
