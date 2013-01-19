@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r4.ebuild,v 1.4 2013/01/19 18:27:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r4.ebuild,v 1.5 2013/01/19 18:30:59 ssuominen Exp $
 
 EAPI=4
 
@@ -322,7 +322,7 @@ src_install()
 				man/SD_CRIT.3 man/SD_ERR.3 man/SD_WARNING.3 man/SD_NOTICE.3 \
 				man/SD_INFO.3 man/SD_DEBUG.3 man/systemd-udevd.8"
 		dist_systemunit_DATA="units/systemd-udevd-control.socket \
-			units/systemd-udevd-kernel.socket"
+				units/systemd-udevd-kernel.socket"
 		nodist_systemunit_DATA="units/systemd-udevd.service \
 				units/systemd-udev-trigger.service \
 				units/systemd-udev-settle.service"
