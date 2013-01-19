@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.5.0.ebuild,v 1.2 2013/01/19 22:28:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.5.0.ebuild,v 1.3 2013/01/19 22:31:15 ssuominen Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -21,7 +21,7 @@ CDEPEND="sys-libs/ncurses[unicode?]
 	alsa? ( >=media-libs/alsa-lib-1.0.11 )
 	ao? ( media-libs/libao )
 	cue? ( media-libs/libcue )
-	cdda? ( dev-libs/libcdio )
+	cdda? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
 	cddb? ( media-libs/libcddb )
 	discid? ( media-libs/libdiscid )
 	flac? ( media-libs/flac )
