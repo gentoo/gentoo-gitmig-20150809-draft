@@ -1,11 +1,11 @@
 # ChangeLog for kde-misc/kover
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kover/ChangeLog,v 1.6 2013/01/19 23:25:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kover/ChangeLog,v 1.7 2013/01/19 23:26:23 ssuominen Exp $
 
   19 Jan 2013; Chris Reffett <creffett@gentoo.org> -kover-5.ebuild:
   old
 
-*kover-6 (10 Dec 2012)
+*kover-6 (19 Jan 2013)
 
   19 Jan 2013; Chris Reffett <creffett@gentoo.org> +kover-6.ebuild:
   Version bump.
