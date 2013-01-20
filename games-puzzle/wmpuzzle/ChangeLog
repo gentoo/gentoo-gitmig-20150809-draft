@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/wmpuzzle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wmpuzzle/ChangeLog,v 1.7 2013/01/20 12:19:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wmpuzzle/ChangeLog,v 1.8 2013/01/20 12:24:26 ssuominen Exp $
+
+*wmpuzzle-0.5.1 (20 Jan 2013)
+
+  20 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> +wmpuzzle-0.5.1.ebuild:
+  Version bump wrt #453120 by Agostino Sarubbo
 
   20 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Missing desktop-dock in metadata.xml
