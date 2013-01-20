@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/engauge
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/engauge/ChangeLog,v 1.12 2013/01/20 16:48:16 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/engauge/ChangeLog,v 1.13 2013/01/20 16:55:30 calchan Exp $
+
+  20 Jan 2013; Denis Dupeyron <calchan@gentoo.org> -engauge-4.1-r1.ebuild,
+  -files/engauge-5.1-gcc47.patch, -files/engauge-5.1-qreal-double.patch:
+  Remove old version which doesn't work any longer (bug #436818).
 
 *engauge-5.1 (20 Jan 2013)
 
