@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/google-perftools-2.0.ebuild,v 1.4 2013/01/20 23:30:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/google-perftools-2.0.ebuild,v 1.5 2013/01/20 23:32:36 robbat2 Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SLOT="0"
 # linux x86/amd64/ppc/ppc64/arm
 # OSX ppc/amd64
 # AIX ppc/ppc64
-KEYWORDS="-* ~amd64 ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="-* ~arm ~amd64 ~ppc64 ~x86 ~x86-fbsd"
 IUSE="largepages +debug minimal test"
 
 DEPEND="sys-libs/libunwind"
