@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.629 2013/01/20 01:00:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.630 2013/01/20 01:46:12 robbat2 Exp $
+
+  20 Jan 2013; Robin H. Johnson <robbat2@gentoo.org> -mysql-5.1.51.ebuild,
+  -mysql-5.1.52-r1.ebuild, -mysql-5.1.52.ebuild, -mysql-5.1.53.ebuild,
+  -mysql-5.1.56-r1.ebuild, -mysql-5.1.56.ebuild, -mysql-5.1.57.ebuild,
+  -mysql-5.1.58-r1.ebuild, -mysql-5.1.59.ebuild, -mysql-5.1.61.ebuild,
+  -mysql-5.1.62-r1.ebuild, -mysql-5.1.62.ebuild:
+  Clean up old 5.1 versions.
 
   20 Jan 2013; Robin H. Johnson <robbat2@gentoo.org> mysql-5.5.19.ebuild,
   mysql-5.5.20.ebuild, mysql-5.5.21.ebuild, mysql-5.5.22-r1.ebuild,
