@@ -1,0 +1,49 @@
+From 38d610ed8f9dd1390c37e341435a4c3d1837d8be Mon Sep 17 00:00:00 2001
+From: Tomas Chvatal <tchvatal@suse.cz>
+Date: Mon, 21 Jan 2013 21:00:07 +0100
+Subject: [PATCH] Fix multilib issues in libprojectM and projectM-qt
+
+---
+ src/libprojectM/CMakeLists.txt | 6 +++---
+ src/projectM-qt/CMakeLists.txt | 4 ++--
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/src/libprojectM/CMakeLists.txt b/src/libprojectM/CMakeLists.txt
+index 8f275c8..3bccf05 100644
+--- a/src/libprojectM/CMakeLists.txt
++++ b/src/libprojectM/CMakeLists.txt
+@@ -35,7 +35,7 @@ set(PROJECTM_ABI_LEVEL 2)
+ 
+ ADD_DEFINITIONS(-DCMAKE_INSTALL_PREFIX=\"${CMAKE_INSTALL_PREFIX}\")
+ 
+-SET(LIB_INSTALL_DIR "\${exec_prefix}/lib"
++SET(LIB_INSTALL_DIR "\${exec_prefix}/lib${LIB_SUFFIX}"
+   CACHE PATH "The subdirectory relative to the install prefix where libraries will be installed (default is /lib)"
+   FORCE)
+ 
+@@ -234,7 +234,7 @@ ENDIF(projectM_FONT_MENU MATCHES "${CMAKE_INSTALL_PREFIX}/${RESOURCE_PREFIX}/fon
+ FILE(GLOB presets "presets/*.milk" "presets/*.prjm" "presets/*.tga")
+ INSTALL(FILES ${presets} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/projectM/presets)
+ INSTALL(FILES ${Renderer_SOURCE_DIR}/projectM.cg ${Renderer_SOURCE_DIR}/blur.cg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/projectM/shaders)
+-INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/libprojectM.pc DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/pkgconfig)
++INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/libprojectM.pc DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}/pkgconfig)
+ INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/config.inp DESTINATION ${CMAKE_INSTALL_PREFIX}/share/projectM)
+ INSTALL(FILES projectM.hpp event.h dlldefs.h fatal.h PCM.hpp Common.hpp DESTINATION include/libprojectM)
+-INSTALL(TARGETS projectM DESTINATION lib)
++INSTALL(TARGETS projectM DESTINATION lib${LIB_SUFFIX})
+diff --git a/src/projectM-qt/CMakeLists.txt b/src/projectM-qt/CMakeLists.txt
+index 750d1ed..ed14840 100644
+--- a/src/projectM-qt/CMakeLists.txt
++++ b/src/projectM-qt/CMakeLists.txt
+@@ -131,6 +131,6 @@ include_directories(${PROJECTM_INCLUDE} ${QT_INCLUDE_DIR} ${QT_QTGUI_INCLUDE_DIR
+ target_link_libraries(projectM-qt projectM GLEW GL ${QT_QTGUI_LIBRARIES} ${QT_QTOPENGL_LIBRARIES} ${QT_QTXML_LIBRARIES} ${QT_LIBRARIES})
+ 
+ install(FILES qprojectm_mainwindow.hpp DESTINATION include/libprojectM-qt)
+-install(TARGETS projectM-qt DESTINATION lib)
+-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/libprojectM-qt.pc" DESTINATION lib/pkgconfig)
++install(TARGETS projectM-qt DESTINATION lib${LIB_SUFFIX})
++install(FILES "${CMAKE_CURRENT_BINARY_DIR}/libprojectM-qt.pc" DESTINATION lib${LIB_SUFFIX}/pkgconfig)
+ install(FILES "images/icons/prjm16-transparent.svg" DESTINATION	${CMAKE_INSTALL_PREFIX}/share/pixmaps)
+-- 
+1.7.12.4
+
