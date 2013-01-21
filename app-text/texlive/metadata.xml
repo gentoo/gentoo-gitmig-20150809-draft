@@ -22,6 +22,7 @@
   <flag name='jadetex'>Add support for <pkg>app-text/jadetex</pkg>
     (for processing tex files produced by the TeX backend of Jade)</flag>
   <flag name='luatex'>Add extra support for luatex</flag>
+  <flag name='metapost'>Add support for metapost: A tool for creating graphics in scalable PostScript.</flag>
   <flag name='music'>Add support for music typesetting
     (<pkg>dev-texlive/texlive-music</pkg>)</flag>
   <flag name='omega'>Add omega packages

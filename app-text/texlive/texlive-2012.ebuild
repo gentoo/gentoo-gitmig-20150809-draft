@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2012.ebuild,v 1.11 2013/01/21 10:37:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2012.ebuild,v 1.12 2013/01/21 10:49:09 aballier Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ LICENSE="metapackage"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="cjk context detex doc dvi2tty dvipdfm extra epspdf games graphics
-humanities jadetex luatex music omega pdfannotextractor png pstricks publishers
+humanities jadetex luatex metapost music omega pdfannotextractor png pstricks publishers
 science tex4ht texi2html truetype xetex xindy xml X"
 
 LANGS="af ar as bg bn bo ca cs cy da de el en en_GB eo es et eu fa fi fr ga gl
@@ -52,8 +52,10 @@ RDEPEND="${DEPEND}
 	>=${TEXLIVE_CAT}/texlive-latexrecommended-${PV}
 	>=dev-tex/xcolor-2.11
 	>=dev-tex/latex-beamer-3.20
-	>=${TEXLIVE_CAT}/texlive-metapost-${PV}
-		dev-tex/feynmf
+	metapost? (
+		>=${TEXLIVE_CAT}/texlive-metapost-${PV}
+			dev-tex/feynmf
+	)
 	>=${TEXLIVE_CAT}/texlive-genericrecommended-${PV}
 	pdfannotextractor? ( dev-tex/pdfannotextractor )
 	extra? (
