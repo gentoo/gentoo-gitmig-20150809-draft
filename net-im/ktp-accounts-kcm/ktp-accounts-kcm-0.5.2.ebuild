@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-accounts-kcm/ktp-accounts-kcm-0.4.1.ebuild,v 1.1 2012/07/26 12:28:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-accounts-kcm/ktp-accounts-kcm-0.5.2.ebuild,v 1.1 2013/01/21 14:19:08 scarabeus Exp $
 
 EAPI=4
 
@@ -8,7 +8,6 @@ KDE_MINIMAL="4.7"
 KDE_LINGUAS="ca cs da de el en_GB eo es et fi fr ga gl hu it ja km lt mai nb nds
 nl pl pt pt_BR ru sk sr sr@ijekavian sr@ijekavianlatin sr@latin sv tr ug uk vi
 zh_CN zh_TW"
-KDE_SCM="git"
 inherit kde4-base
 
 DESCRIPTION="KDE Telepathy account management kcm"
@@ -28,7 +27,7 @@ DEPEND="
 	>=net-im/ktp-common-internals-${PV}
 	net-im/telepathy-mission-control
 	net-libs/telepathy-glib
-	>=net-libs/telepathy-qt-0.9.1
+	>=net-libs/telepathy-qt-0.9.3
 "
 RDEPEND="${DEPEND}
 "

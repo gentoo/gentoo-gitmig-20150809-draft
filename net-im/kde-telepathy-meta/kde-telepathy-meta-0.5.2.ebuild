@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kde-telepathy-meta/kde-telepathy-meta-0.5.1.ebuild,v 1.1 2012/11/22 02:46:33 dastergon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kde-telepathy-meta/kde-telepathy-meta-0.5.2.ebuild,v 1.1 2013/01/21 14:29:17 scarabeus Exp $
 
 EAPI=4
 

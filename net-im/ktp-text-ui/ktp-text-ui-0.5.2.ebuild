@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-text-ui/ktp-text-ui-0.5.1.ebuild,v 1.1 2012/11/22 00:56:46 dastergon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-text-ui/ktp-text-ui-0.5.2.ebuild,v 1.1 2013/01/21 14:28:21 scarabeus Exp $
 
 EAPI=4
 
 KDE_LINGUAS="ca cs da de el es et fi fr ga gl hu it ja km lt nb nds nl pl pt
-pt_BR sk sr sr@ijekavian sr@ijekavianlatin sr@latin sv ug uk zh_CN zh_TW"
+pt_BR ru sk sr sr@ijekavian sr@ijekavianlatin sr@latin sv ug uk zh_CN zh_TW"
 inherit kde4-base
 
 DESCRIPTION="KDE Telepathy text chat window"
@@ -28,8 +28,6 @@ DEPEND="
 RDEPEND="${DEPEND}
 	>=net-im/ktp-contact-list-${PV}
 "
-
-RESTRICT="test"
 
 src_configure() {
 	mycmakeargs=(
