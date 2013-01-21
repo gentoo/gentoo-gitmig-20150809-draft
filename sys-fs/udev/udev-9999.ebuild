@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.153 2013/01/21 20:20:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.154 2013/01/21 20:21:28 ssuominen Exp $
 
 EAPI=4
 
@@ -457,7 +457,7 @@ pkg_postinst()
 	fi
 
 	local fstab="${ROOT}"etc/fstab
-	if grep -qs "\/dev" "${fstab}" && grep -qs devtmpfs "${fstab}"; then
+	if grep -qs "\/dev" "${fstab}" && ! grep -qs devtmpfs "${fstab}"; then
 		ewarn "You need to edit your /dev line in ${fstab} to have devtmpfs"
 		ewarn "filesystem. Otherwise udev won't be able to boot."
 		ewarn "See, http://bugs.gentoo.org/453186"
