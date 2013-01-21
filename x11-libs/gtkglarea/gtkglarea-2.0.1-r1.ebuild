@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-2.0.1.ebuild,v 1.12 2013/01/21 19:28:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-2.0.1-r1.ebuild,v 1.1 2013/01/21 19:28:54 tetromino Exp $
 
 EAPI="5"
 
@@ -14,11 +14,10 @@ HOMEPAGE="http://www.mono-project.com/GtkGLArea"
 
 LICENSE="LGPL-2+ GPL-2+" # examples are GPL-2+, library is LGPL-2+
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="examples"
 
 RDEPEND=">=x11-libs/gtk+-2.0.3:2
-	virtual/glu
 	virtual/opengl"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -26,6 +25,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# Do not build examples
 	sed "s:\(SUBDIRS.*\)examples:\1:" -i Makefile.am Makefile.in || die "sed 1 failed"
+	# -lGLU is only needed for building examples. Avoid autoreconf.
+	sed -e 's: -lGLU::' -i configure || die "sed 2 failed"
 
 	gnome2_src_prepare
 }
