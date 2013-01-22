@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.12 2013/01/22 21:16:58 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.13 2013/01/22 21:24:40 axs Exp $
 
 EAPI=4
 
@@ -209,9 +209,9 @@ pkg_postinst()
 		einfo "Removed unneeded file 64-device-mapper.rules"
 	fi
 
+	# drop distributed hwdb files and build hwdb.bin
+	rm -f "${EROOT}"etc/udev/hwdb.d/*.hwdb
 	if use hwdb ; then
-		# drop distributed hwdb files and build hwdb.bin
-		rm -f "${EROOT}"etc/udev/hwdb.d/*.hwdb
 		udevadm hwdb --update
 	fi
 
