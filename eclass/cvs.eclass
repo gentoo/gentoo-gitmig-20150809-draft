@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.80 2013/01/22 07:26:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.81 2013/01/22 07:29:02 vapier Exp $
 
 # @ECLASS: cvs.eclass
 # @MAINTAINER:
@@ -116,6 +116,12 @@ inherit eutils
 # This must be set when cvs_src_unpack is called.  This can include
 # several directory levels, i.e. "foo/bar/baz"
 #[[ -z ${ECVS_MODULE} ]] && die "$ECLASS: error: ECVS_MODULE not set, cannot continue"
+
+# @ECLASS-VARIABLE: ECVS_DATE
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# The date of the checkout.  See the -D date_spec option in the cvs
+# man page for more details.
 
 # @ECLASS-VARIABLE: ECVS_BRANCH
 # @DEFAULT_UNSET
@@ -237,6 +243,11 @@ cvs_fetch() {
 
 	if [[ -n ${ECVS_CLEAN} ]] ; then
 		ECVS_UP_OPTS+=" -C"
+	fi
+
+	if [[ -n ${ECVS_DATE} ]] ; then
+		ECVS_CO_OPTS+=" -D ${ECVS_DATE}"
+		ECVS_UP_OPTS+=" -D ${ECVS_DATE}"
 	fi
 
 	# It would be easiest to always be in "run-as mode", logic-wise,
