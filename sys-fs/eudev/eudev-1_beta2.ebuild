@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta2.ebuild,v 1.2 2013/01/22 21:24:40 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta2.ebuild,v 1.3 2013/01/22 21:29:06 axs Exp $
 
 EAPI=4
 
@@ -169,6 +169,9 @@ src_install()
 	# install gentoo-specific rules
 	insinto /lib/udev/rules.d
 	doins "${FILESDIR}"/40-gentoo.rules
+
+	# drop distributed hwdb files, they override sys-apps/hwids
+	rm -f "${ED}"/etc/udev/hwdb.d/*.hwdb
 }
 
 pkg_preinst()
@@ -209,11 +212,7 @@ pkg_postinst()
 		einfo "Removed unneeded file 64-device-mapper.rules"
 	fi
 
-	# drop distributed hwdb files and build hwdb.bin
-	rm -f "${EROOT}"etc/udev/hwdb.d/*.hwdb
-	if use hwdb ; then
-		udevadm hwdb --update
-	fi
+	use hwdb && udevadm hwdb --update
 
 	ewarn
 	ewarn "You need to restart eudev as soon as possible to make the"
