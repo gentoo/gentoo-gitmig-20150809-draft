@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.1_p1-r1.ebuild,v 1.3 2013/01/22 02:49:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.1_p1-r1.ebuild,v 1.4 2013/01/22 02:51:55 robbat2 Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd versionator
@@ -34,9 +34,9 @@ LIB_DEPEND="selinux? ( >=sys-libs/libselinux-1.28[static-libs(+)] )
 	>=sys-libs/zlib-1.2.3[static-libs(+)]
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6[static-libs(+)] )"
 RDEPEND="
-	!static? ( 
+	!static? (
 		${LIB_DEPEND//\[static-libs(+)]}
-		ldns? ( 
+		ldns? (
 			!bindist? ( net-libs/ldns[ecdsa,ssl] )
 			bindist? ( net-libs/ldns[-ecdsa,ssl] )
 		)
@@ -45,9 +45,9 @@ RDEPEND="
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )"
 DEPEND="${RDEPEND}
-	static? ( 
+	static? (
 		${LIB_DEPEND}
-		ldns? ( 
+		ldns? (
 			!bindist? ( net-libs/ldns[ecdsa,ssl,static-libs(+)] )
 			bindist? ( net-libs/ldns[-ecdsa,ssl,static-libs(+)] )
 		)
