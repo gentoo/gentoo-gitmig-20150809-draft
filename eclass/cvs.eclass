@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.77 2012/09/09 07:03:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.78 2013/01/22 07:02:06 vapier Exp $
 
 # @ECLASS: cvs.eclass
 # @MAINTAINER:
@@ -12,6 +12,9 @@
 # inheriting. Then either leave the default src_unpack or extend over
 # cvs_src_unpack. If you find that you need to call the cvs_* functions
 # directly, I'd be interested to hear about it.
+
+if [[ ${___ECLASS_ONCE_CVS} != "recur -_+^+_- spank" ]] ; then
+___ECLASS_ONCE_CVS="recur -_+^+_- spank"
 
 inherit eutils
 
@@ -578,3 +581,5 @@ cvs_src_unpack() {
 }
 
 EXPORT_FUNCTIONS src_unpack
+
+fi
