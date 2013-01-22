@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.79 2013/01/22 07:25:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.80 2013/01/22 07:26:25 vapier Exp $
 
 # @ECLASS: cvs.eclass
 # @MAINTAINER:
@@ -177,9 +177,6 @@ inherit eutils
 # special magic.
 
 # : ${ECVS_RUNAS:=$(whoami)}
-
-# ECVS_SUBDIR -- deprecated, do not use
-[[ -n ${ECVS_SUBDIR} ]] && die "ERROR: deprecated ECVS_SUBDIR defined. Please fix this ebuild."
 
 # add cvs to deps
 # ssh is used for ext auth
