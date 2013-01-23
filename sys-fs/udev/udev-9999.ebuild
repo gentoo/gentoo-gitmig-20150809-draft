@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.156 2013/01/23 11:10:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.157 2013/01/23 11:14:36 ssuominen Exp $
 
 EAPI=4
 
@@ -484,6 +484,8 @@ pkg_postinst()
 		ewarn "network interfaces. For example, it's not possible to assign based"
 		ewarn "on MAC address to existing interface eth0."
 		ewarn "See http://bugs.gentoo.org/453494 for more information."
+		ewarn "Rename your file to something else starting with 70- to silence"
+		ewarn "this warning."
 	fi
 
 	ewarn
