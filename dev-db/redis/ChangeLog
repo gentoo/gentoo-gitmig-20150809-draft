@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.56 2013/01/12 14:51:30 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.57 2013/01/24 12:09:13 djc Exp $
+
+*redis-2.6.9 (24 Jan 2013)
+
+  24 Jan 2013; Dirkjan Ochtman <djc@gentoo.org> +redis-2.6.9.ebuild,
+  +files/redis-2.6.9-tclsh86.patch:
+  Version bump to 2.6.9 (bug 453606).
 
 *redis-2.6.8 (12 Jan 2013)
 
