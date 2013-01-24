@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/easy-rsa/easy-rsa-2.2.0.ebuild,v 1.1 2013/01/24 09:49:12 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/easy-rsa/easy-rsa-2.2.0.ebuild,v 1.2 2013/01/24 09:58:39 djc Exp $
 
 EAPI=4
 
@@ -16,7 +16,8 @@ SLOT="0"
 IUSE=""
 
 DEPEND=">=dev-libs/openssl-0.9.6"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+		!<net-misc/openvpn-2.3"
 
 S="${WORKDIR}/${P}_master"
 
