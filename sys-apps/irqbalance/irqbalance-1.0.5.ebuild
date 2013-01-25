@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-1.0.5.ebuild,v 1.1 2012/12/04 15:45:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-1.0.5.ebuild,v 1.2 2013/01/25 18:38:10 cardoe Exp $
 
 EAPI=4
 
-inherit systemd
+inherit systemd linux-info
 
 DESCRIPTION="Distribute hardware interrupts across processors on a multiprocessor system"
 HOMEPAGE="http://irqbalance.googlecode.com/"
@@ -20,6 +20,11 @@ RDEPEND="dev-libs/glib:2
 	numa? ( sys-process/numactl )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+pkg_setup() {
+	CONFIG_CHECK="~PCI_MSI"
+	linux-info_pkg_setup
+}
 
 src_configure() {
 	econf \
