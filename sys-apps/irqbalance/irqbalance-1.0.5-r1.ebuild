@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-1.0.5.ebuild,v 1.2 2013/01/25 18:38:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-1.0.5-r1.ebuild,v 1.1 2013/01/25 18:59:14 cardoe Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://irqbalance.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="caps numa"
+IUSE="caps +numa"
 
 RDEPEND="dev-libs/glib:2
 	caps? ( sys-libs/libcap-ng )
@@ -34,7 +34,7 @@ src_configure() {
 
 src_install() {
 	default
-	newinitd "${FILESDIR}"/irqbalance.init.2 irqbalance
+	newinitd "${FILESDIR}"/irqbalance.init.3 irqbalance
 	newconfd "${FILESDIR}"/irqbalance.confd-1 irqbalance
 	systemd_dounit "${FILESDIR}"/irqbalance.service
 }
