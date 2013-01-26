@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.132 2013/01/26 11:04:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.133 2013/01/26 11:17:37 scarabeus Exp $
 
 EAPI="4"
 
@@ -56,6 +56,8 @@ COMMON_DEPEND="virtual/glu
 	dev-libs/tinyxml[stl]
 	dev-libs/yajl
 	dev-python/simplejson
+	media-fonts/corefonts
+	media-fonts/roboto
 	media-libs/alsa-lib
 	media-libs/flac
 	media-libs/fontconfig
@@ -233,6 +235,18 @@ src_install() {
 	# Can't be patched upstream because they just find all files and install
 	# them into same structure like they have in git.
 	rm -rf "${ED}"/usr/share/xbmc/system/players/dvdplayer/etc
+
+	# Replace bundled fonts with system ones
+	# corefonts: arial ; unknown source teletext.ttf
+	rm -rf "${ED}"/usr/share/xbmc/media/Fonts/arial.ttf
+	dosym /usr/share/fonts/corefonts/arial.ttf \
+		/usr/share/xbmc/media/Fonts/
+	# roboto: roboto-bold, roboto-regular ; unknown source: bold-caps
+	rm -rf "${ED}"/usr/share/xbmc/addons/skin.confluence/fonts/Roboto-*
+	dosym /usr/share/fonts/roboto/Roboto-Regular.ttf \
+		/usr/share/xbmc/addons/skin.confluence/fonts/
+	dosym /usr/share/fonts/roboto/Roboto-Bold.ttf \
+		/usr/share/xbmc/addons/skin.confluence/fonts/
 
 	insinto "$(python_get_sitedir)" #309885
 	doins tools/EventClients/lib/python/xbmcclient.py || die
