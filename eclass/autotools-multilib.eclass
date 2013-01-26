@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.4 2013/01/26 11:34:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.5 2013/01/26 11:35:38 mgorny Exp $
 
 # @ECLASS: autotools-multilib.eclass
 # @MAINTAINER:
@@ -28,7 +28,7 @@ if [[ ${AUTOTOOLS_IN_SOURCE_BUILD} ]]; then
 	die "${ECLASS}: multilib support requires out-of-source builds."
 fi
 
-inherit autotools-utils multilib
+inherit autotools-utils multilib multiprocessing
 
 EXPORT_FUNCTIONS src_configure src_compile src_test src_install
 
@@ -69,8 +69,45 @@ autotools-multilib_foreach_abi() {
 	fi
 }
 
+# @FUNCTION: autotools-multilib_parallel_foreach_abi
+# @USAGE: argv...
+# @DESCRIPTION:
+# If multilib support is enabled, sets the toolchain up for each
+# supported ABI along with the ABI variable and correct BUILD_DIR,
+# and runs the given commands with them. The commands are run
+# in parallel with number of jobs being determined from MAKEOPTS.
+#
+# If multilib support is disabled, it just runs the commands. No setup
+# is done.
+#
+# Useful for running configure scripts.
+autotools-multilib_parallel_foreach_abi() {
+	local initial_dir=${BUILD_DIR:-${S}}
+
+	if use multilib; then
+		multijob_init
+
+		local ABI
+		for ABI in $(get_all_abis); do
+			(
+				multijob_child_init
+
+				multilib_toolchain_setup "${ABI}"
+				BUILD_DIR=${initial_dir%%/}-${ABI}
+				"${@}"
+			) &
+
+			multijob_post_fork
+		done
+
+		multijob_finish
+	else
+		"${@}"
+	fi
+}
+
 autotools-multilib_src_configure() {
-	autotools-multilib_foreach_abi autotools-utils_src_configure
+	autotools-multilib_parallel_foreach_abi autotools-utils_src_configure
 }
 
 autotools-multilib_src_compile() {

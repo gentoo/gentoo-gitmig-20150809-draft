@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.637 2013/01/26 11:34:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.638 2013/01/26 11:35:38 mgorny Exp $
+
+  26 Jan 2013; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass:
+  Support running commands in parallel and use it to run configure scripts.
 
   26 Jan 2013; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass:
   Introduce MULTILIB_USEDEP to enforce correct dependencies.
