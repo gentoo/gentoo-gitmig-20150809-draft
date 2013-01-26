@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.5 2013/01/26 11:35:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.6 2013/01/26 11:38:43 mgorny Exp $
 
 # @ECLASS: autotools-multilib.eclass
 # @MAINTAINER:
@@ -19,8 +19,9 @@
 # enabled. Thus, it is impossible to use AUTOTOOLS_IN_SOURCE_BUILD with
 # it.
 
+# EAPI=5 is required for meaningful MULTILIB_USEDEP.
 case ${EAPI:-0} in
-	2|3|4|5) ;;
+	5) ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
