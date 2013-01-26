@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.6 2013/01/26 11:38:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.7 2013/01/26 11:39:41 mgorny Exp $
 
 # @ECLASS: autotools-multilib.eclass
 # @MAINTAINER:
@@ -45,7 +45,7 @@ IUSE=multilib
 # RDEPEND="dev-libs/libfoo[${MULTILIB_USEDEP}]
 #	net-libs/libbar[ssl,${MULTILIB_USEDEP}]"
 # @CODE
-MULTILIB_USEDEP=multilib?
+MULTILIB_USEDEP='multilib(-)?'
 
 # @FUNCTION: autotools-multilib_foreach_abi
 # @USAGE: argv...
