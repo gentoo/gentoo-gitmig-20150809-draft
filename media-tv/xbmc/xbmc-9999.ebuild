@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.131 2013/01/21 21:08:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.132 2013/01/26 11:04:51 scarabeus Exp $
 
 EAPI="4"
 
@@ -229,6 +229,10 @@ src_install() {
 
 	# punt simplejson bundle, we use the system one anyway
 	rm -rf "${ED}"/usr/share/xbmc/addons/script.module.simplejson/lib
+	# Remove fonconfig settings that are used only on MacOSX.
+	# Can't be patched upstream because they just find all files and install
+	# them into same structure like they have in git.
+	rm -rf "${ED}"/usr/share/xbmc/system/players/dvdplayer/etc
 
 	insinto "$(python_get_sitedir)" #309885
 	doins tools/EventClients/lib/python/xbmcclient.py || die
