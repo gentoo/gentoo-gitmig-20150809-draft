@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.3 2013/01/20 23:42:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.4 2013/01/26 11:34:16 mgorny Exp $
 
 # @ECLASS: autotools-multilib.eclass
 # @MAINTAINER:
@@ -33,6 +33,18 @@ inherit autotools-utils multilib
 EXPORT_FUNCTIONS src_configure src_compile src_test src_install
 
 IUSE=multilib
+
+# @ECLASS-VARIABLE: MULTILIB_USEDEP
+# @DESCRIPTION:
+# The USE-dependency to be used on dependencies (libraries) needing
+# to support multilib as well.
+#
+# Example use:
+# @CODE
+# RDEPEND="dev-libs/libfoo[${MULTILIB_USEDEP}]
+#	net-libs/libbar[ssl,${MULTILIB_USEDEP}]"
+# @CODE
+MULTILIB_USEDEP=multilib?
 
 # @FUNCTION: autotools-multilib_foreach_abi
 # @USAGE: argv...
