@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.646 2013/01/27 13:32:44 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.647 2013/01/27 16:35:33 mgorny Exp $
+
+  27 Jan 2013; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
+  Introduce python_doheader(), to install headers specific to a Python
+  implementation.
 
   27 Jan 2013; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
   reverted last changes
