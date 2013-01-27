@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.648 2013/01/27 16:36:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.649 2013/01/27 16:37:28 mgorny Exp $
+
+  27 Jan 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Support making dependency and phase function enforcement optional.
 
   27 Jan 2013; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
   Introduce run_in_build_dir() function as used by GNOME ebuilds.

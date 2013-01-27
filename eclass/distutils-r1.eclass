@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.46 2013/01/20 21:41:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.47 2013/01/27 16:37:28 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -54,18 +54,34 @@ case "${EAPI:-0}" in
 		;;
 esac
 
+# @ECLASS-VARIABLE: DISTUTILS_OPTIONAL
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# If set to a non-null value, distutils part in the ebuild will
+# be considered optional. No dependencies will be added and no phase
+# functions will be exported.
+#
+# If you enable DISTUTILS_OPTIONAL, you have to set proper dependencies
+# for your package (using ${PYTHON_DEPS}) and to either call
+# distutils-r1 default phase functions or call the build system
+# manually.
+
 if [[ ! ${_DISTUTILS_R1} ]]; then
 
 inherit eutils multiprocessing python-r1
 
 fi
 
-EXPORT_FUNCTIONS src_prepare src_configure src_compile src_test src_install
+if [[ ! ${DISTUTILS_OPTIONAL} ]]; then
+	EXPORT_FUNCTIONS src_prepare src_configure src_compile src_test src_install
+fi
 
 if [[ ! ${_DISTUTILS_R1} ]]; then
 
-RDEPEND=${PYTHON_DEPS}
-DEPEND=${PYTHON_DEPS}
+if [[ ! ${DISTUTILS_OPTIONAL} ]]; then
+	RDEPEND=${PYTHON_DEPS}
+	DEPEND=${PYTHON_DEPS}
+fi
 
 # @ECLASS-VARIABLE: DISTUTILS_JOBS
 # @DEFAULT_UNSET
