@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/awale/awale-1.5.ebuild,v 1.1 2013/01/27 19:20:44 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/awale/awale-1.5.ebuild,v 1.2 2013/01/27 19:27:19 hasufell Exp $
 
 EAPI=5
 inherit autotools eutils gnome2-utils games
@@ -40,14 +40,14 @@ src_install() {
 
 pkg_preinst() {
 	games_pkg_preinst
-	gnome2_icon_savelist
+	use tk && gnome2_icon_savelist
 }
 
 pkg_postinst() {
 	games_pkg_postinst
-	gnome2_icon_cache_update
+	use tk && gnome2_icon_cache_update
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
+	use tk && gnome2_icon_cache_update
 }
