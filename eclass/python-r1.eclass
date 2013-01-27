@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.38 2013/01/27 16:36:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.39 2013/01/27 16:40:15 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -692,10 +692,10 @@ run_in_build_dir() {
 	[[ ${#} -ne 0 ]] || die "${FUNCNAME}: no command specified."
 	[[ ${BUILD_DIR} ]] || die "${FUNCNAME}: BUILD_DIR not set."
 
-	pushd "${BUILD_DIR}" &>/dev/null || die
+	pushd "${BUILD_DIR}" >/dev/null || die
 	"${@}"
 	ret=${?}
-	popd &>/dev/null || die
+	popd >/dev/null || die
 
 	return ${ret}
 }
