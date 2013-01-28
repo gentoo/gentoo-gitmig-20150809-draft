@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jsoncpp/jsoncpp-0.5.0.ebuild,v 1.2 2013/01/08 04:15:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jsoncpp/jsoncpp-0.5.0.ebuild,v 1.3 2013/01/28 08:02:55 jlec Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -23,7 +23,7 @@ DEPEND="
 		app-doc/doxygen
 		${PYTHON_DEPS}
 	)"
-RDEPEND=""
+RDEPEND="!<dev-libs/json-c-0.10"
 
 S="${WORKDIR}/${MY_P}"
 
