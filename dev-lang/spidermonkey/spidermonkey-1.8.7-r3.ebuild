@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.7-r3.ebuild,v 1.3 2013/01/06 18:17:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.7-r3.ebuild,v 1.4 2013/01/28 14:43:06 aballier Exp $
 
 EAPI="5"
 WANT_AUTOCONF="2.1"
@@ -53,11 +53,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-symbol-versions.patch
 
 	epatch_user
-
-	if [[ ${CHOST} == *-freebsd* ]]; then
-		# Don't try to be smart, this does not work in cross-compile anyway
-		ln -sfn "${BUILDDIR}/config/Linux_All.mk" "${S}/config/$(uname -s)$(uname -r).mk" || die
-	fi
 
 	cd "${BUILDDIR}" || die
 	eautoconf
