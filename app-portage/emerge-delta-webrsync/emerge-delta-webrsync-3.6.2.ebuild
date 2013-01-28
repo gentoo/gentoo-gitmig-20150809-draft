@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/emerge-delta-webrsync-3.6.2.ebuild,v 1.3 2013/01/28 17:50:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/emerge-delta-webrsync-3.6.2.ebuild,v 1.4 2013/01/28 17:58:55 zmedico Exp $
 
 EAPI=4
 DESCRIPTION="emerge-webrsync using patches to minimize bandwidth"
@@ -34,13 +34,10 @@ pkg_preinst() {
 	# Failure here is non-fatal, since the "portage" group
 	# doesn't necessarily exist on prefix systems.
 	chgrp portage "${ED}"/var/delta-webrsync 2>/dev/null
-
-	has_version "$CATEGORY/$PN"
-	WAS_PREVIOUSLY_INSTALLED=$?
 }
 
 pkg_postinst() {
-	if [[ $WAS_PREVIOUSLY_INSTALLED != 0 ]] && \
+	if [[ -z ${REPLACING_VERSIONS} ]] && \
 		! has_version app-arch/tarsync ; then
 		elog "For maximum emerge-delta-webrsync" \
 			"performance, install app-arch/tarsync."
