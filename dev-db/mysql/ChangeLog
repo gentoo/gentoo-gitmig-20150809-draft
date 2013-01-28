@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.642 2013/01/21 19:29:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.643 2013/01/28 02:09:11 robbat2 Exp $
+
+  28 Jan 2013; Robin H. Johnson <robbat2@gentoo.org> -mysql-5.5.19.ebuild,
+  -mysql-5.5.20.ebuild, -mysql-5.5.21.ebuild, -mysql-5.5.22-r1.ebuild,
+  -mysql-5.5.22.ebuild, -mysql-5.5.28.ebuild:
+  Remove unneeded versions.
 
   21 Jan 2013; Jeroen Roovers <jer@gentoo.org> mysql-5.1.67.ebuild:
   Stable for HPPA (bug #445602).
