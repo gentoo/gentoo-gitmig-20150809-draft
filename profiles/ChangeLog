@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7409 2013/01/27 23:47:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7410 2013/01/28 00:19:34 rich0 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Jan 2013; Richard Freeman <rich0@gentoo.org> package.mask:
+  Unmask mythtv 0.26
 
   27 Jan 2013; Alexis Ballier <aballier@gentoo.org> desc/fftools.desc:
   Add descriptions for ffescape and fourcc2pixfmt
