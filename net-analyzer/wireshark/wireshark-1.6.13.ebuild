@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.13.ebuild,v 1.2 2013/01/30 03:40:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.13.ebuild,v 1.3 2013/01/30 04:07:41 jer Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -101,8 +101,6 @@ pkg_setup() {
 		python_set_active_version 2
 		python_pkg_setup
 	fi
-	# Add group for users allowed to sniff.
-	enewgroup wireshark
 }
 
 src_prepare() {
@@ -221,9 +219,11 @@ pkg_postinst() {
 	if use caps && use pcap; then
 		fcaps 0:wireshark 550 cap_dac_read_search,cap_net_raw,cap_net_admin "${EROOT}"/usr/bin/dumpcap
 	fi
-	echo
+
+	# Add group for users allowed to sniff.
+	enewgroup wireshark
+
 	ewarn "NOTE: To run wireshark as normal user you have to add yourself to"
 	ewarn "the wireshark group. This security measure ensures that only trusted"
 	ewarn "users are allowed to sniff your traffic."
-	echo
 }
