@@ -22,6 +22,17 @@ diff -ru scummvm-1.5.0.orig/config.guess scummvm-1.5.0/config.guess
 diff -ru scummvm-1.5.0.orig/configure scummvm-1.5.0/configure
 --- scummvm-1.5.0.orig/configure	2012-10-07 21:21:27.856337073 -0400
 +++ scummvm-1.5.0/configure	2012-10-07 21:26:08.689750153 -0400
+@@ -3464,8 +3464,8 @@
+ 	if test -z "$_freetypeconfig"; then
+ 		_freetype2=no
+ 	else
+-		FREETYPE2_LIBS=`$_freetypeconfig --prefix="$_freetypepath" --libs`
+-		FREETYPE2_CFLAGS=`$_freetypeconfig --prefix="$_freetypepath" --cflags`
++		FREETYPE2_LIBS=`pkg-config --libs freetype2 2>/dev/null || $_freetypeconfig --prefix="$_freetypepath" --libs`
++		FREETYPE2_CFLAGS=`pkg-config --cflags freetype2 2>/dev/null || $_freetypeconfig --prefix="$_freetypepath" --cflags`
+ 
+ 		if test "$_freetype2" = "auto"; then
+ 			_freetype2=no
 @@ -3897,7 +3897,7 @@
  	fi
  
