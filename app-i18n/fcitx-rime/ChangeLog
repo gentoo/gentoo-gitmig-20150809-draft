@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/fcitx-rime
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-rime/ChangeLog,v 1.4 2013/01/31 09:54:50 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-rime/ChangeLog,v 1.5 2013/01/31 09:56:27 yngwin Exp $
+
+  31 Jan 2013; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  update metadata
 
 *fcitx-rime-0.2.0 (31 Jan 2013)
 
