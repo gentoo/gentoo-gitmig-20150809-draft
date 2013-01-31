@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.208 2013/01/31 17:44:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.209 2013/01/31 17:45:35 ago Exp $
+
+  31 Jan 2013; Agostino Sarubbo <ago@gentoo.org> activesupport-2.3.16.ebuild:
+  Stable for ppc, wrt bug #453844
 
   31 Jan 2013; Agostino Sarubbo <ago@gentoo.org> activesupport-2.3.16.ebuild:
   Stable for x86, wrt bug #453844
