@@ -7,7 +7,7 @@
 		mostly written in Erlang, and works on many platforms.
 	</longdescription>
 	<use>
-		<flag name='mod_irc'>Build irc gateway </flag>
+		<flag name='mod_irc'>Build irc gateway</flag>
 		<flag name='mod_muc'>Build Multi User Chat module</flag>
 		<flag name='mod_pubsub'>Build Pubsub module</flag>
 		<flag name='web'>Enable web admin interface</flag>
