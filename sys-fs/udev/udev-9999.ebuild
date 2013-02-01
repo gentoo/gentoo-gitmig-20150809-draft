@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.169 2013/02/01 17:31:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.170 2013/02/01 17:36:30 ssuominen Exp $
 
 EAPI=4
 
@@ -134,7 +134,7 @@ src_prepare()
 		EPATCH_SUFFIX=patch EPATCH_FORCE=yes epatch
 	fi
 
-	# Set there here since they are not part of 50-udev-default.rules
+	# These are missing from upstream 50-udev-default.rules
 	cat <<-EOF > "${T}"/40-gentoo.rules
 	SUBSYSTEM=="snd", GROUP="audio"
 	SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", GROUP="usb"
