@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14423 2013/02/01 00:08:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14424 2013/02/01 11:32:00 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -314,12 +314,6 @@ net-misc/asterisk-chan_misdn
 # Upstream dead, some problems (#277348), one possible replacement
 # includes mod_authnz_external. Removal in a month.
 www-apache/mod_authn_pam
-
-# Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# Patrick Lauer <patrick@gentoo.org> (16 Oct 2012)
-# upstream dead since 2008, doesn't build
-# See bug #282479. Removal in a month.
-www-apache/mod_cplusplus
 
 # Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
 # Incompatible with recent kernels (#300047) , upstream dead,
