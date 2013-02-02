@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.5 2013/02/02 00:28:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.6 2013/02/02 00:30:33 ssuominen Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ RDEPEND=""
 ASM_DEP=">=dev-lang/yasm-1"
 DEPEND="
 	amd64? ( ${ASM_DEP} )
-	amd64-fbsd? ( >=dev-lang/yasm-1 )
+	amd64-fbsd? ( ${ASM_DEP} )
 	x86? ( ${ASM_DEP} )
 	x86-fbsd? ( ${ASM_DEP} )
 "
