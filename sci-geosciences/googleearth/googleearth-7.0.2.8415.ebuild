@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-7.0.2.8415.ebuild,v 1.1 2013/02/02 13:23:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-7.0.2.8415.ebuild,v 1.2 2013/02/02 13:26:49 hasufell Exp $
 
 EAPI=5
 
@@ -178,7 +178,7 @@ pkg_postinst() {
 	ewarn
 	ewarn "You might need to run:"
 	ewarn "  eselect fontconfig disable 65-fonts-persian.conf"
-	ewarn "or googleearth will segfault."
+	ewarn "or googleearth will segfault, see bug #455124"
 	ewarn
 
 	fdo-mime_desktop_database_update
