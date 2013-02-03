@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.5-r1.ebuild,v 1.1 2013/02/03 00:12:49 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.5-r1.ebuild,v 1.2 2013/02/03 00:13:48 hasufell Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc nls"
 
-RDEPEND="media-libs/sdl-ttf
+RDEPEND="${PYTHON_DEPS}
+	media-libs/sdl-ttf
 	media-libs/sdl-mixer[vorbis]
 	media-libs/libsdl[X,video,audio]
 	sys-libs/zlib
