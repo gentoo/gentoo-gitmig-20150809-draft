@@ -9,8 +9,9 @@
 #
 # To activate this function, copy 80-net-name-slot.rules from /lib/udev/rules.d/
 # to /etc/udev/rules.d/
-# Deleting the file works too but when you re-emerge the current stable udev
-# it will restore this dummy file there if it isn't there already!
+# Deleting the file from /etc/udev/rules.d/ works too but when you re-emerge
+# the current stable udev it will restore this dummy file there if it isn't there
+# already!
 #
 # If you want to deactivate this function, install a udev rules file as
 # /etc/udev/rules.d/80-net-name-slot.rules then reboot your system.
