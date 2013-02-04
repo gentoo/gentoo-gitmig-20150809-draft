@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.17 2013/02/04 13:52:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.18 2013/02/04 13:53:54 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -124,6 +124,18 @@ _python_impl_supported() {
 # /usr/include/python2.6
 # @CODE
 
+# @ECLASS-VARIABLE: PYTHON_LIBPATH
+# @DESCRIPTION:
+# The path to Python library.
+#
+# Set and exported on request using python_export().
+# Valid only for CPython.
+#
+# Example value:
+# @CODE
+# /usr/lib64/libpython2.6.so
+# @CODE
+
 # @ECLASS-VARIABLE: PYTHON_PKG_DEP
 # @DESCRIPTION:
 # The complete dependency on a particular Python package as a string.
@@ -219,6 +231,22 @@ python_export() {
 				export PYTHON_INCLUDEDIR=${EPREFIX}${dir}
 				debug-print "${FUNCNAME}: PYTHON_INCLUDEDIR = ${PYTHON_INCLUDEDIR}"
 				;;
+			PYTHON_LIBPATH)
+				local libname
+				case "${impl}" in
+					python*)
+						libname=lib${impl}
+						;;
+					*)
+						die "${EPYTHON} lacks a dynamic library"
+						;;
+				esac
+
+				local path=${EPREFIX}/usr/$(get_libdir)
+
+				export PYTHON_LIBPATH=${path}/${libname}$(get_libname)
+				debug-print "${FUNCNAME}: PYTHON_LIBPATH = ${PYTHON_LIBPATH}"
+				;;
 			PYTHON_PKG_DEP)
 				local d
 				case ${impl} in
@@ -308,6 +336,21 @@ python_get_includedir() {
 
 	python_export "${@}" PYTHON_INCLUDEDIR
 	echo "${PYTHON_INCLUDEDIR}"
+}
+
+# @FUNCTION: python_get_library_path
+# @USAGE: [<impl>]
+# @DESCRIPTION:
+# Obtain and print the Python library path for the given implementation.
+# If no implementation is provided, ${EPYTHON} will be used.
+#
+# Please note that this function can be used with CPython only. Use
+# in another implementation will result in a fatal failure.
+python_get_library_path() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	python_export "${@}" PYTHON_LIBPATH
+	echo "${PYTHON_LIBPATH}"
 }
 
 # @FUNCTION: _python_rewrite_shebang
