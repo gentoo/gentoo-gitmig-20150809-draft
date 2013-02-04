@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.16 2013/01/29 21:12:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.17 2013/02/04 13:52:09 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -521,7 +521,34 @@ python_scriptinto() {
 python_doscript() {
 	debug-print-function ${FUNCNAME} "${@}"
 
+	local f
+	for f; do
+		python_newscript "${f}" "${f##*/}"
+	done
+}
+
+# @FUNCTION: python_newscript
+# @USAGE: <path> <new-name>
+# @DESCRIPTION:
+# Install the given script into current python_scriptroot
+# for the current Python implementation (${EPYTHON}), and name it
+# <new-name>.
+#
+# The file must start with a 'python' shebang. The shebang will be
+# converted, the file will be renamed to be EPYTHON-suffixed
+# and a wrapper will be installed in place of the <new-name>.
+#
+# Example:
+# @CODE
+# src_install() {
+#   python_foreach_impl python_newscript foo.py foo
+# }
+# @CODE
+python_newscript() {
+	debug-print-function ${FUNCNAME} "${@}"
+
 	[[ ${EPYTHON} ]] || die 'No Python implementation set (EPYTHON is null).'
+	[[ ${#} -eq 2 ]] || die "Usage: ${FUNCNAME} <path> <new-name>"
 
 	local d=${python_scriptroot:-${DESTTREE}/bin}
 	local INSDESTTREE INSOPTIONS
@@ -529,18 +556,17 @@ python_doscript() {
 	insinto "${d}"
 	insopts -m755
 
-	local f
-	for f; do
-		local oldfn=${f##*/}
-		local newfn=${oldfn}-${EPYTHON}
+	local f=${1}
+	local barefn=${2}
 
-		debug-print "${FUNCNAME}: ${oldfn} -> ${newfn}"
-		newins "${f}" "${newfn}" || die
-		_python_rewrite_shebang "${ED}/${d}/${newfn}"
+	local newfn=${barefn}-${EPYTHON}
 
-		# install the wrapper
-		_python_ln_rel "${ED}"/usr/bin/python-exec "${ED}/${d}/${oldfn}" || die
-	done
+	debug-print "${FUNCNAME}: ${f} -> ${d}/${newfn}"
+	newins "${f}" "${newfn}" || die
+	_python_rewrite_shebang "${ED}/${d}/${newfn}"
+
+	# install the wrapper
+	_python_ln_rel "${ED}"/usr/bin/python-exec "${ED}/${d}/${barefn}" || die
 }
 
 # @ECLASS-VARIABLE: python_moduleroot
