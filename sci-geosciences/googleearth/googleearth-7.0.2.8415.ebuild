@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-7.0.2.8415.ebuild,v 1.2 2013/02/02 13:26:49 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-7.0.2.8415.ebuild,v 1.3 2013/02/04 23:34:26 hasufell Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://earth.google.com/"
 # no upstream versioning, version determined from help/about
 # incorrect digest means upstream bumped and thus needs version bump
 SRC_URI="x86? ( http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
-			-> GoogleEarthLnux-${PV}_i386.deb )
+			-> GoogleEarthLinux-${PV}_i386.deb )
 	amd64? ( http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
 			-> GoogleEarthLinux-${PV}_amd64.deb ) "
 LICENSE="googleearth GPL-2"
