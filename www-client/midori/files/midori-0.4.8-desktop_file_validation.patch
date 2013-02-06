@@ -31,7 +31,7 @@ http://bugs.launchpad.net/midori/+bug/1117543
  Terminal=false
  StartupNotify=true
 -NotShowIn=Pantheon
-+NotShowIn=X-Pantheon
++NotShowIn=X-Pantheon;
  X-Osso-Type=application/x-executable
  X-Osso-Service=midori
  
