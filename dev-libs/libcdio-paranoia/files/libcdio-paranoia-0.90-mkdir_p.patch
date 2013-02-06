@@ -1,0 +1,13 @@
+http://bugs.gentoo.org/455374
+
+--- configure.ac
++++ configure.ac
+@@ -394,7 +394,7 @@
+ dnl
+ dnl Newest automake workaround - needed for multi-language manual pages
+ dnl
+-AC_SUBST(mkdir_p)
++AC_SUBST(mkdir_p, "${MKDIR_P}")
+ 
+ dnl
+ dnl Output configuration files
