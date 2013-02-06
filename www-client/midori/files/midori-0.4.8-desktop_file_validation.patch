@@ -24,3 +24,14 @@ http://bugs.launchpad.net/midori/+bug/1117543
  _Name=New Private Browsing Window
  Exec=midori --private
  TargetEnvironment=Unity
+--- data/midori-private.desktop.in
++++ data/midori-private.desktop.in
+@@ -9,7 +9,7 @@
+ Icon=midori
+ Terminal=false
+ StartupNotify=true
+-NotShowIn=Pantheon
++NotShowIn=X-Pantheon
+ X-Osso-Type=application/x-executable
+ X-Osso-Service=midori
+ 
