@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-2.5.0.ebuild,v 1.1 2013/02/06 03:03:27 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-2.5.0.ebuild,v 1.2 2013/02/06 03:16:53 blueness Exp $
 
-EAPI="4"
+EAPI="5"
 
 WANT_AUTOMAKE=1.12
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86"
 CACHE_SIZE="small big +huge"
 CRYPTO_OPTS="aes-gcm aes-ccm aes-ni camellia +hc128 md2 +psk +ripemd sha512"
 CERT_OPTS="ocsp crl crl-monitor +sessioncerts +testcert"
-IUSE="debug -dtls ipv6 +httpd +sniffer static-libs threads +zlib cyassl-hardening ${CACHE_SIZE} ${CRYPTO_OPTS} ${CERT_OPTS}"
+IUSE="debug -dtls ipv6 +httpd +sniffer static-libs threads +zlib cyassl-hardening ${CACHE_SIZE} ${CRYPTO_OPTS} ${CERT_OPTS} test"
 
 #You can only pick one cach size
 #sha512 is broken on x86
@@ -60,6 +60,7 @@ src_configure() {
 	#There are lots of options, so we'll force a few reasonable
 	#We may change this in the future, in particular ecc needs to be fixed
 	econf \
+		--disable-silent-rules              \
 		--enable-opensslExtra               \
 		--enable-fortress                   \
 		--enable-keygen                     \
