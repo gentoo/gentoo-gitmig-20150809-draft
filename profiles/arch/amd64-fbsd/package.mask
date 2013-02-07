@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.mask,v 1.27 2013/02/07 04:45:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/package.mask,v 1.1 2013/02/07 04:45:57 alexxy Exp $
 
 # Alexey Shvetsov <alexxy@gentoo.org> (07 Feb 2013)
 # Mask kde 4.10.0 for keywording bug #455960
@@ -296,9 +296,3 @@
 ~kde-base/systemsettings-4.10.0
 ~kde-base/thumbnailers-4.10.0
 ~kde-base/umbrello-4.10.0
-
-
-# Zac Medico <zmedico@gentoo.org> (09 Aug 2011)
-# Bug #377907 - Use package.mask for compatibility with PMS section 5.2.7, and
-# future versions of sys-apps/portage.
-<sys-devel/gcc-3.2
