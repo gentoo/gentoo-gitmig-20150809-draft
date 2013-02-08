@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.135 2013/02/08 13:21:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.136 2013/02/08 13:29:33 aballier Exp $
 
 EAPI=4
 
@@ -274,11 +274,14 @@ src_configure() {
 	# disable svga since we don't want it
 	# disable arts since we don't have kde3
 	# always disable internal ass
+	# disable opus since it only controls opus support in internal ffmpeg which
+	#         we do not use
 	myconf+="
 		--disable-svga --disable-svgalib_helper
 		--disable-ass-internal
 		--disable-arts
 		--disable-kai
+		--disable-libopus
 		$(use_enable network networking)
 		$(use_enable joystick)
 	"

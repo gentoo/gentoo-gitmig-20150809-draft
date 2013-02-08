@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.876 2013/02/08 13:21:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.877 2013/02/08 13:29:33 aballier Exp $
+
+  08 Feb 2013; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  disable opus since it only controls opus support in internal ffmpeg which we
+  do not use, bug #434258
 
   08 Feb 2013; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   fix and simplify tremor and vorbis useflags by using external tremor, bug
