@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-2011.1-r1.ebuild,v 1.6 2013/02/08 09:21:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-2011.1-r1.ebuild,v 1.7 2013/02/08 09:26:19 patrick Exp $
 EAPI=4
 
 inherit autotools
@@ -75,8 +75,8 @@ src_configure() {
 		econf --prefix=/opt/opendylan --with-mps=/usr/include/mps/ || die
 	fi
 	if use x86; then
-        # Includedir, pointing at something wrong
-        sed -i -e 's:-I$(MPS)/code:-I$(MPS):'  sources/lib/run-time/pentium-linux/Makefile || die "Couldn't fix mps path"
+	# Includedir, pointing at something wrong
+	sed -i -e 's:-I$(MPS)/code:-I$(MPS):'  sources/lib/run-time/pentium-linux/Makefile || die "Couldn't fix mps path"
 	sed -i -e 's~(cd $(MPS)/code; make -f lii4gc.gmk mmdw.a)~:;~' sources/lib/run-time/pentium-linux/Makefile || die "Couldn't fix mps building"
 	sed -i -e 's~(cd $(MPS)/code; make -f lii4gc.gmk mpsplan.a)~:;~' sources/lib/run-time/pentium-linux/Makefile || die "Couldn't fix mps building"
 	sed -i -e 's~$(MPS_LIB)/mpsplan.a~/usr/lib/mpsplan.a~' sources/lib/run-time/pentium-linux/Makefile || die "Couldn't fix mps clone"
@@ -93,7 +93,7 @@ src_install() {
 	ulimit -s 32000 # this is naughty build system
 	# because of Makefile weirdness it rebuilds quite a bit here
 	# upstream has been notified
-	emake -j1 DESTDIR=${D} install
+	emake -j1 DESTDIR="${D}" install
 	mkdir -p "${D}/etc/env.d/opendylan/"
 	echo "export PATH=/opt/opendylan/bin:\$PATH" > "${D}/etc/env.d/opendylan/99-opendylan" || die "Failed to add env settings"
 }
