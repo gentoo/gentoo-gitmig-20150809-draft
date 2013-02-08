@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/meteor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/meteor/ChangeLog,v 1.3 2013/02/08 19:10:49 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/meteor/ChangeLog,v 1.4 2013/02/08 19:26:04 tomwij Exp $
+
+  08 Feb 2013; Tom Wijsman <TomWij@gentoo.org> -meteor-0.5.4.ebuild,
+  meteor-0.5.4-r1.ebuild, meteor-9999.ebuild:
+  Removed old revision of meteor.
 
 *meteor-9999 (08 Feb 2013)
 *meteor-0.5.4-r1 (08 Feb 2013)

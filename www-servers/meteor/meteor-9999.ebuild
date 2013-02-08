@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/meteor/meteor-9999.ebuild,v 1.1 2013/02/08 19:10:49 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/meteor/meteor-9999.ebuild,v 1.2 2013/02/08 19:26:04 tomwij Exp $
 
 EAPI=5
 
@@ -40,7 +40,7 @@ KEYWORDS=""
 src_prepare() {
 	einfo "Patching files ..."
 	sed -i 's/DEV_BUNDLE=$(dirname "$SCRIPT_DIR")/DEV_BUNDLE="$SCRIPT_DIR"/g' meteor || die "Couldn't patch DEV_BUNDLE script dir."
-	sed -i -e 's/^exports\.CURRENT_VERSION.*/exports.CURRENT_VERSION = "devel-gentoo";/g' app/lib/updater.js || die "Couldn't patch version to devel branch."
+	sed -i 's/^exports\.CURRENT_VERSION.*/exports.CURRENT_VERSION = "devel-gentoo";/g' app/lib/updater.js || die "Couldn't patch version to devel branch."
 
 	einfo "Removing updater since Portage covers this ..."
 	epatch "${FILESDIR}"/${PN}-0.5.4.remove_updater.patch
