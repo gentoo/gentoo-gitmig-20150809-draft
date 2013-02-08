@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/kismet
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.128 2012/11/18 11:19:32 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.129 2013/02/08 05:51:51 zerochaos Exp $
+
+  08 Feb 2013; Rick Farina <zerochaos@gentoo.org> kismet-2011.03.2-r3.ebuild,
+  kismet-9999.ebuild:
+  adjust deps to prevent segfault when libpcap is built against libnl:1 and
+  kismet is built against libnl:3
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop mobile herd as talked in gentoo-dev ML
