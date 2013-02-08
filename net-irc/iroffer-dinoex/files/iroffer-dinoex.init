@@ -1,7 +1,12 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/iroffer-dinoex/files/iroffer-dinoex.init,v 1.1 2013/02/08 11:44:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/iroffer-dinoex/files/iroffer-dinoex.init,v 1.2 2013/02/08 12:00:11 pinkbyte Exp $
+
+extra_commands="reload reconnect"
+
+description_reload="Reload the config file"
+description_reconnect="Force reconnection to an IRC server"
 
 depend() {
 	need net
@@ -27,5 +32,17 @@ start() {
 stop() {
 	ebegin "Stopping iroffer-dinoex"
 	start-stop-daemon --stop --pidfile "${PIDFILE}" --exec "${BIN}"
+	eend $?
+}
+
+reload(){
+	ebegin "Reload iroffer-dinoex"
+	start-stop-daemon --signal SIGUSR2 --pidfile "${PIDFILE}"
+	eend $?
+}
+
+reconnect(){
+	ebegin "Try to reconnect iroffer-dinoex to servers"
+	start-stop-daemon --signal SIGUSR1 --pidfile "${PIDFILE}"
 	eend $?
 }
