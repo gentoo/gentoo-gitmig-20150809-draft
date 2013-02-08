@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.472 2013/02/06 00:02:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.473 2013/02/08 06:17:18 vapier Exp $
+
+  08 Feb 2013; Mike Frysinger <vapier@gentoo.org> openssl-1.0.0h.ebuild,
+  openssl-1.0.0i.ebuild, openssl-1.0.0j.ebuild, openssl-1.0.1a.ebuild,
+  openssl-1.0.1b.ebuild, openssl-1.0.1c.ebuild, openssl-1.0.1d.ebuild:
+  Drop /~checkout~/ from pld cvs url #455892 by Csaba Péter.
 
 *openssl-0.9.8y (06 Feb 2013)
 *openssl-1.0.1d (06 Feb 2013)
