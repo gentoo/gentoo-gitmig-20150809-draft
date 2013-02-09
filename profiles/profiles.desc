@@ -140,14 +140,6 @@ sparc           default/linux/sparc/13.0/desktop/kde            stable
 sparc           default/linux/sparc/13.0/developer              stable
 
 # x86 Profiles
-x86             default/linux/x86/10.0                          stable
-x86             default/linux/x86/10.0/selinux                  dev
-x86             default/linux/x86/10.0/desktop                  stable
-x86             default/linux/x86/10.0/desktop/gnome            stable
-x86             default/linux/x86/10.0/desktop/kde              stable
-x86             default/linux/x86/10.0/developer                stable
-x86             default/linux/x86/10.0/server                   stable
-
 x86             default/linux/x86/13.0                          stable
 x86             default/linux/x86/13.0/selinux                  dev
 x86             default/linux/x86/13.0/desktop                  stable
