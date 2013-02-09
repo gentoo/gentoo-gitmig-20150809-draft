@@ -61,13 +61,6 @@ hppa            default/linux/hppa/13.0/desktop                 dev
 hppa            default/linux/hppa/13.0/developer               dev
 
 # IA64 Profiles
-ia64            default/linux/ia64/10.0                         stable
-ia64            default/linux/ia64/10.0/desktop                 stable
-ia64            default/linux/ia64/10.0/desktop/gnome           stable
-ia64            default/linux/ia64/10.0/desktop/kde             stable
-ia64            default/linux/ia64/10.0/developer               stable
-ia64            default/linux/ia64/10.0/server                  stable
-
 ia64            default/linux/ia64/13.0                         stable
 ia64            default/linux/ia64/13.0/desktop                 stable
 ia64            default/linux/ia64/13.0/desktop/gnome           stable
