@@ -1,23 +1,23 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-9999.ebuild,v 1.7 2013/02/09 21:15:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.1.3.ebuild,v 1.1 2013/02/09 21:15:34 radhermit Exp $
 
 EAPI="5"
 
-inherit cmake-utils toolchain-funcs gnome2-utils fdo-mime git-2 pax-utils eutils
-
-EGIT_REPO_URI="git://github.com/darktable-org/darktable.git"
+inherit cmake-utils toolchain-funcs gnome2-utils fdo-mime pax-utils eutils
 
 DESCRIPTION="A virtual lighttable and darkroom for photographers"
 HOMEPAGE="http://www.darktable.org/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz
+	doc? ( mirror://sourceforge/${PN}/${PN}-usermanual-1.1.2.pdf )"
 
-LICENSE="GPL-3"
+LICENSE="GPL-3 CC-BY-3.0"
 SLOT="0"
-KEYWORDS=""
-IUSE="colord facebook flickr geo gnome-keyring gphoto2 graphicsmagick jpeg2k kde
+KEYWORDS="~amd64 ~x86"
+IUSE="colord doc facebook flickr geo gnome-keyring gphoto2 kde
 nls opencl openmp pax_kernel +rawspeed +slideshow"
 
-CDEPEND="
+RDEPEND="
 	dev-db/sqlite:3
 	>=dev-libs/glib-2.28:2
 	dev-libs/libxml2:2
@@ -28,8 +28,10 @@ CDEPEND="
 	gnome-keyring? ( gnome-base/gnome-keyring )
 	gnome-base/librsvg:2
 	gphoto2? ( media-libs/libgphoto2 )
-	graphicsmagick? ( media-gfx/graphicsmagick )
-	jpeg2k? ( media-libs/openjpeg )
+	kde? (
+		dev-libs/dbus-glib
+		kde-base/kwalletd
+	)
 	media-gfx/exiv2[xmp]
 	media-libs/lcms:2
 	>=media-libs/lensfun-0.2.3
@@ -48,9 +50,7 @@ CDEPEND="
 	x11-libs/gdk-pixbuf:2
 	x11-libs/gtk+:2
 	x11-libs/pango"
-RDEPEND="${CDEPEND}
-	kde? ( kde-base/kwalletd )"
-DEPEND="${CDEPEND}
+DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
@@ -76,8 +76,7 @@ src_configure() {
 		$(cmake-utils_use_use geo GEO)
 		$(cmake-utils_use_use gnome-keyring GNOME_KEYRING)
 		$(cmake-utils_use_use gphoto2 CAMERA_SUPPORT)
-		$(cmake-utils_use_use graphicsmagick GRAPHICSMAGICK)
-		$(cmake-utils_use_use jpeg2k OPENJPEG)
+		$(cmake-utils_use_use kde KWALLET)
 		$(cmake-utils_use_use nls NLS)
 		$(cmake-utils_use_use opencl OPENCL)
 		$(cmake-utils_use_use openmp OPENMP)
@@ -92,6 +91,7 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
+	use doc && dodoc "${DISTDIR}"/${PN}-usermanual-${PV}.pdf
 
 	if use pax_kernel && use opencl ; then
 		pax-mark Cm "${ED}"/usr/bin/${PN} || die
