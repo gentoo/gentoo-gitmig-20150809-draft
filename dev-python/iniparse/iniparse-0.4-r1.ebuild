@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/iniparse/iniparse-0.4-r1.ebuild,v 1.1 2013/02/09 18:48:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/iniparse/iniparse-0.4-r1.ebuild,v 1.2 2013/02/09 18:49:27 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{5,6,7} )
@@ -20,5 +20,5 @@ DEPEND=""
 RDEPEND=""
 
 python_test() {
-	"${PYTHON}" runtests.py
+	"${PYTHON}" runtests.py || die
 }
