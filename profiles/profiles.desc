@@ -7,13 +7,6 @@
 #arch		profile_directory				status
 
 # Alpha Profiles
-alpha           default/linux/alpha/10.0                        stable
-alpha           default/linux/alpha/10.0/desktop                stable
-alpha           default/linux/alpha/10.0/desktop/gnome          stable
-alpha           default/linux/alpha/10.0/desktop/kde            stable
-alpha           default/linux/alpha/10.0/developer              stable
-alpha           default/linux/alpha/10.0/server                 stable
-
 alpha           default/linux/alpha/13.0                        stable
 alpha           default/linux/alpha/13.0/desktop                stable
 alpha           default/linux/alpha/13.0/desktop/gnome          stable

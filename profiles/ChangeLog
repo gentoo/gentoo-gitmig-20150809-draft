@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7449 2013/02/08 19:55:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7450 2013/02/09 10:33:30 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +default/linux/alpha/10.0/deprecated,
+  +default/linux/alpha/10.0/desktop/deprecated,
+  +default/linux/alpha/10.0/desktop/gnome/deprecated,
+  +default/linux/alpha/10.0/desktop/kde/deprecated,
+  +default/linux/alpha/10.0/developer/deprecated,
+  +default/linux/alpha/10.0/server/deprecated, profiles.desc:
+  alpha: deprecate 10.0 profiles and remove them from profiles.desc
 
   08 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org> profiles.desc:
   All 13.0 profiles stable as in 10.0, except ia64
