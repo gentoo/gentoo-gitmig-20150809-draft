@@ -68,11 +68,11 @@ ia64            default/linux/ia64/10.0/desktop/kde             stable
 ia64            default/linux/ia64/10.0/developer               stable
 ia64            default/linux/ia64/10.0/server                  stable
 
-ia64            default/linux/ia64/13.0                         dev
-ia64            default/linux/ia64/13.0/desktop                 dev
-ia64            default/linux/ia64/13.0/desktop/gnome           dev
-ia64            default/linux/ia64/13.0/desktop/kde             dev
-ia64            default/linux/ia64/13.0/developer               dev
+ia64            default/linux/ia64/13.0                         stable
+ia64            default/linux/ia64/13.0/desktop                 stable
+ia64            default/linux/ia64/13.0/desktop/gnome           stable
+ia64            default/linux/ia64/13.0/desktop/kde             stable
+ia64            default/linux/ia64/13.0/developer               stable
 
 # M68K Profiles
 m68k            default/linux/m68k/10.0                         dev
