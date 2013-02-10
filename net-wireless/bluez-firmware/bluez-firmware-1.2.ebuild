@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-firmware/bluez-firmware-1.2.ebuild,v 1.5 2013/02/10 13:12:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-firmware/bluez-firmware-1.2.ebuild,v 1.6 2013/02/10 13:13:09 ssuominen Exp $
 
 EAPI=5
 
@@ -15,6 +15,6 @@ IUSE=""
 
 DOCS="AUTHORS ChangeLog README"
 
-src_compile() {
+src_configure() {
 	econf --libdir=/lib
 }
