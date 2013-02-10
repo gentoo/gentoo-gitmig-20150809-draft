@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.98 2013/02/10 14:23:03 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.99 2013/02/10 14:26:06 slyfox Exp $
+
+  10 Feb 2013; Sergei Trofimovich <slyfox@gentoo.org> haddock-2.6.1.ebuild:
+  Constrained older haddock release ot use ghc-6.12 (bug #454442 by fffaaaaew).
 
 *haddock-2.13.1-r2 (10 Feb 2013)
 
