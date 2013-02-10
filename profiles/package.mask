@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14453 2013/02/10 18:44:09 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14454 2013/02/10 18:45:24 zerochaos Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -101,7 +101,7 @@ media-tv/ivtv-firmware
 media-tv/ivtv
 
 # Rick Farina <zerochaos@gentoo.org> (10 Feb 2013)
-# This firmware has been replaced by rtlwifi/rtl8192cufw.bin
+# This firmware has been replaced by rtlwifi/*
 # which is already in the linux-firmware package.
 # Removal at 01 Apr 2013
 net-wireless/rtl8192su-firmware
