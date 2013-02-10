@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.2-r100.ebuild,v 1.2 2013/02/02 01:14:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.2-r3.ebuild,v 1.1 2013/02/10 21:23:48 cardoe Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ MY_P=${MY_PN}-1.2.0
 
 PYTHON_DEPEND="2"
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib python user udev
-BACKPORTS=9489a8c0-1
+BACKPORTS=7c9a3a87
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/virt/kvm/qemu-kvm.git"
@@ -348,31 +348,31 @@ src_configure() {
 		einfo "Building the following user targets: ${user_targets}"
 
 	if [[ -n ${softmmu_targets} ]]; then
-		mkdir ${S}/softmmu-build
+		mkdir "${S}/softmmu-build"
 		qemu_src_configure "softmmu" "${S}/softmmu-build"
 	fi
 
 	if [[ -n ${user_targets} ]]; then
-		mkdir ${S}/user-build
+		mkdir "${S}/user-build"
 		qemu_src_configure "user" "${S}/user-build"
 	fi
 }
 
 src_compile() {
 	if [[ -n ${user_targets} ]]; then
-		cd ${S}/user-build
+		cd "${S}/user-build"
 		default
 	fi
 
 	if [[ -n ${softmmu_targets} ]]; then
-		cd ${S}/softmmu-build
+		cd "${S}/softmmu-build"
 		default
 	fi
 }
 
 src_install() {
 	if [[ -n ${user_targets} ]]; then
-		cd ${S}/user-build
+		cd "${S}/user-build"
 		emake DESTDIR="${ED}" install
 
 		# Install binfmt handler init script for user targets
@@ -380,7 +380,7 @@ src_install() {
 	fi
 
 	if [[ -n ${softmmu_targets} ]]; then
-		cd ${S}/softmmu-build
+		cd "${S}/softmmu-build"
 		emake DESTDIR="${ED}" install
 
 		if use kernel_linux; then
@@ -397,11 +397,11 @@ src_install() {
 			elog "of the /usr/bin/qemu-kvm symlink."
 		fi
 
-		use python && dobin ${S}/scripts/kvm/kvm_stat
-		use python && dobin ${S}/scripts/kvm/vmxcap
+		use python && dobin "${S}/scripts/kvm/kvm_stat"
+		use python && dobin "${S}/scripts/kvm/vmxcap"
 	fi
 
-	cd ${S}
+	cd "${S}"
 	dodoc Changelog MAINTAINERS TODO pci-ids.txt
 	newdoc pc-bios/README README.pc-bios
 
