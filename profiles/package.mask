@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14451 2013/02/10 16:41:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14452 2013/02/10 16:45:30 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -106,7 +106,7 @@ media-tv/ivtv
 # is using rtl8172fw.bin firmware. This would need to be
 # packaged in 2 packages: the new driver, and the
 # rtl8172fw-firmware.
-# Removel at 01 Apr 2013
+# Removal at 01 Apr 2013
 net-wireless/rtl8192su-firmware
 
 # Ryan Hill <dirtyepic@gentoo.org> (07 Feb 2013)
