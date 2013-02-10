@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.18.ebuild,v 1.3 2013/02/10 20:08:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.18.ebuild,v 1.4 2013/02/10 20:11:37 scarabeus Exp $
 
 EAPI=5
 PYTHON_DEPEND=2:2.7
@@ -117,7 +117,7 @@ src_install() {
 	#  File "/usr/lib/python2.6/locale.py", line 418, in _parse_localename
 	#    raise ValueError, 'unknown locale: %s' % localename
 	#ValueError: unknown locale: 46
-	#export -n LANGUAGE
+	export -n LANGUAGE
 
 	# Bug #295672 - Avoid sandbox violation in ~/.config by forcing
 	# variables to point to our fake temporary $HOME.
