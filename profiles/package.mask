@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14446 2013/02/10 14:01:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14447 2013/02/10 15:39:57 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -76,8 +76,6 @@ net-wireless/rt2870-firmware
 net-wireless/rt61-firmware
 net-wireless/rt73-firmware
 net-wireless/rtl8192su-firmware
-net-wireless/zd1201-firmware
-net-wireless/zd1211-firmware
 net-wireless/i2400m-fw
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2013)
