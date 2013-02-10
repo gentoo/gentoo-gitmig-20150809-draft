@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.98 2013/02/10 06:18:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.99 2013/02/10 06:20:10 vapier Exp $
 
 # @ECLASS: linux-info.eclass
 # @MAINTAINER:
@@ -110,9 +110,6 @@
 inherit toolchain-funcs versionator
 
 EXPORT_FUNCTIONS pkg_setup
-
-DEPEND=""
-RDEPEND=""
 
 # Overwritable environment Var's
 # ---------------------------------------
