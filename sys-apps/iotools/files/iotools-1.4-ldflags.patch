@@ -1,5 +1,5 @@
-diff --git a/Makefile b/Makefile
-index 73ef77b..67663a9 100644
+http://code.google.com/p/iotools/issues/detail?id=3
+
 --- a/Makefile
 +++ b/Makefile
 @@ -44,7 +44,7 @@ OBJS=$(OBJS_TO_BUILD)

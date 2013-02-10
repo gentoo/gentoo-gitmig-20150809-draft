@@ -1,5 +1,5 @@
-diff --git a/misc.c b/misc.c
-index dcf0705..f95b087 100644
+http://code.google.com/p/iotools/issues/detail?id=2
+
 --- a/misc.c
 +++ b/misc.c
 @@ -149,8 +149,16 @@ cpuid_inline(int cpu, int function, int index, uint32_t *data)
@@ -20,6 +20,3 @@ index dcf0705..f95b087 100644
  	      : "0" (function), "2" (index)
  	      : "memory"
  	);
-diff --git a/misc.o b/misc.o
-index 9ff453a..4482533 100644
-Binary files a/misc.o and b/misc.o differ
