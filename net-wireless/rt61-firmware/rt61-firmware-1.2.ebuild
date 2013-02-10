@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt61-firmware/rt61-firmware-1.2.ebuild,v 1.6 2013/02/10 13:06:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt61-firmware/rt61-firmware-1.2.ebuild,v 1.7 2013/02/10 13:08:08 ssuominen Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.ralinktech.com.tw/data/${MY_P}.zip"
 
 LICENSE="ralink-firmware"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=""
