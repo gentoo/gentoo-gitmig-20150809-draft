@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7468 2013/02/10 15:39:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7469 2013/02/10 15:41:39 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -8,7 +8,7 @@
 
   10 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Unmask both zd1201 and zd1211 firmware pkgs as they are not in linux-firmware
-  pkg.
+  pkg wrt #456638
 
   10 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask net-wireless/bluez-firmware because of missing or unclear licensing.
