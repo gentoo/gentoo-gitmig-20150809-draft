@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.49 2013/02/10 11:38:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.50 2013/02/10 11:39:42 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -213,6 +213,13 @@ esetup.py() {
 	if [[ ! ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
 		if [[ ! ${BUILD_DIR} ]]; then
 			die 'Out-of-source build requested, yet BUILD_DIR unset.'
+		fi
+
+		# if setuptools is used, adjust egg_info path as well
+		if "${PYTHON:-python}" setup.py --help egg_info &>/dev/null; then
+			add_args+=(
+				egg_info --egg-base "${BUILD_DIR}"
+			)
 		fi
 
 		add_args+=(
