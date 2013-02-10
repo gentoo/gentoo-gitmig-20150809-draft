@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.50 2013/02/10 11:39:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.51 2013/02/10 11:41:07 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -237,6 +237,60 @@ esetup.py() {
 
 	echo "${@}" >&2
 	"${@}" || die
+}
+
+# @FUNCTION: distutils_install_for_testing
+# @USAGE: [<args>...]
+# @DESCRIPTION:
+# Install the package into a temporary location for running tests.
+# Update PYTHONPATH appropriately and set TEST_DIR to the test
+# installation root. The Python packages will be installed in 'lib'
+# subdir, and scripts in 'scripts' subdir (like in BUILD_DIR).
+#
+# Please note that this function should be only used if package uses
+# namespaces (and therefore proper install needs to be done to enforce
+# PYTHONPATH) or tests rely on the results of install command.
+# For most of the packages, tests built in BUILD_DIR are good enough.
+distutils_install_for_testing() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	# A few notes:
+	# 1) because of namespaces, we can't use 'install --root',
+	# 2) 'install --home' is terribly broken on pypy, so we need
+	#    to override --install-lib and --install-scripts,
+	# 3) non-root 'install' complains about PYTHONPATH and missing dirs,
+	#    so we need to set it properly and mkdir them,
+	# 4) it runs a bunch of commands which write random files to cwd,
+	#    in order to avoid that, we need to run them ourselves to pass
+	#    alternate build paths,
+	# 5) 'install' needs to go before 'bdist_egg' or the latter would
+	#    re-set install paths.
+
+	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
+		# use 'build' subdirectory to reduce the risk of collisions
+		local BUILD_DIR=${BUILD_DIR}/build
+	fi
+
+	TEST_DIR=${BUILD_DIR}/test
+	local bindir=${TEST_DIR}/scripts
+	local libdir=${TEST_DIR}/lib
+	PYTHONPATH=${libdir}:${PYTHONPATH}
+
+	local add_args=(
+		install
+			--home="${TEST_DIR}"
+			--install-lib="${libdir}"
+			--install-scripts="${bindir}"
+	)
+
+	if "${PYTHON:-python}" setup.py --help bdist_egg &>/dev/null; then
+		add_args+=(
+			bdist_egg --dist-dir="${TEST_DIR}"
+		)
+	fi
+
+	mkdir -p "${libdir}" || die
+	esetup.py "${add_args[@]}"
 }
 
 # @FUNCTION: distutils-r1_python_prepare_all
