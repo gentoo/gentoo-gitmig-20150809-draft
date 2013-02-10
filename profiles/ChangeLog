@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7463 2013/02/10 08:39:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7464 2013/02/10 08:53:53 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Move prism54-firmware to it's own mask because of missing license. Unmask
+  ipw2100 and ipw2200 firmware pkgs as they are not included in the
+  linux-firmware pkg.
 
   10 Feb 2013; Pacho Ramos <pacho@gentoo.org> package.mask:
   Cleanup old mask entries
