@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r1.ebuild,v 1.5 2013/02/11 09:44:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r2.ebuild,v 1.1 2013/02/11 09:44:41 idella4 Exp $
 
 EAPI=5
 
@@ -183,9 +183,9 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-4.1.1-bridge.patch"
 
 	# Don't build ipxe with pie on hardened, Bug #360805
-#	if gcc-specs-pie; then
-#		epatch "${FILESDIR}"/ipxe-nopie.patch
-#	fi
+	if gcc-specs-pie; then
+		epatch "${FILESDIR}"/ipxe-nopie.patch
+	fi
 
 	# Prevent double stripping of files at install
 	epatch "${FILESDIR}"/${PN/-tools/}-4.2.0-nostrip.patch
@@ -195,6 +195,8 @@ src_prepare() {
 
 	#Sec patch, currently valid
 	epatch "${FILESDIR}"/xen-4-CVE-2012-6075-XSA-41.patch
+
+	use hvm && cp -r "${FILESDIR}"/stubs-32.h xen/tools/include && einfo "stubs-32.h added" || die
 }
 
 src_compile() {
@@ -224,14 +226,14 @@ src_install() {
 	local PYTHONDONTWRITEBYTECODE
 	export PYTHONDONTWRITEBYTECODE
 
-	emake DESTDIR="${ED}" DOCDIR="/usr/share/doc/${PF}" \
-		XEN_PYTHON_NATIVE_INSTALL=y install-tools
+	emake DESTDIR="${D}" DOCDIR="/usr/share/doc/${PF}" install-tools
+#		XEN_PYTHON_NATIVE_INSTALL=y install-tools
 
 	# Fix the remaining Python shebangs.
-	python_fix_shebang "${ED}"
+	python_fix_shebang "${D}"
 
 	# Remove RedHat-specific stuff
-	rm -rf "${ED}"tmp || die
+	rm -rf "${D}"tmp || die
 
 	# uncomment lines in xl.conf
 	sed -e 's:^#autoballoon=1:autoballoon=1:' \
@@ -240,15 +242,15 @@ src_install() {
 		-i tools/examples/xl.conf  || die
 
 	if use doc; then
-		emake DESTDIR="${ED}" DOCDIR="/usr/share/doc/${PF}" install-docs
+		emake DESTDIR="${D}" DOCDIR="/usr/share/doc/${PF}" install-docs
 
 		dohtml -r docs/
 		docinto pdf
 		dodoc ${DOCS[@]}
-		[ -d "${ED}"/usr/share/doc/xen ] && mv "${ED}"/usr/share/doc/xen/* "${ED}"/usr/share/doc/${PF}/html
+		[ -d "${D}"/usr/share/doc/xen ] && mv "${D}"/usr/share/doc/xen/* "${D}"/usr/share/doc/${PF}/html
 	fi
 
-	rm -rf "${ED}"/usr/share/doc/xen/
+	rm -rf "${D}"/usr/share/doc/xen/
 	doman docs/man?/*
 
 	if use xend; then
@@ -262,14 +264,14 @@ src_install() {
 	newinitd "${FILESDIR}"/xenconsoled.initd xenconsoled
 
 	if use screen; then
-		cat "${FILESDIR}"/xendomains-screen.confd >> "${ED}"/etc/conf.d/xendomains || die
-		cp "${FILESDIR}"/xen-consoles.logrotate "${ED}"/etc/xen/ || die
+		cat "${FILESDIR}"/xendomains-screen.confd >> "${D}"/etc/conf.d/xendomains || die
+		cp "${FILESDIR}"/xen-consoles.logrotate "${D}"/etc/xen/ || die
 		keepdir /var/log/xen-consoles
 	fi
 
 	# For -static-libs wrt Bug 384355
 	if ! use static-libs; then
-		rm -f "${ED}"usr/$(get_libdir)/*.a "${ED}"usr/$(get_libdir)/ocaml/*/*.a
+		rm -f "${D}"usr/$(get_libdir)/*.a "${D}"usr/$(get_libdir)/ocaml/*/*.a
 	fi
 
 	# xend expects these to exist
@@ -280,11 +282,11 @@ src_install() {
 
 	# Temp QA workaround
 	dodir "$(udev_get_udevdir)"
-	mv "${ED}"/etc/udev/* "${ED}/$(udev_get_udevdir)"
-	rm -rf "${ED}"/etc/udev
+	mv "${D}"/etc/udev/* "${D}/$(udev_get_udevdir)"
+	rm -rf "${D}"/etc/udev
 
 	# Remove files failing QA AFTER emake installs them, avoiding seeking absent files
-	find "${ED}" \( -name openbios-sparc32 -o -name openbios-sparc64 \
+	find "${D}" \( -name openbios-sparc32 -o -name openbios-sparc64 \
 		-o -name openbios-ppc -o -name palcode-clipper \) -delete || die
 }
 
