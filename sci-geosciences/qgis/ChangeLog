@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/qgis
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.26 2012/05/24 12:53:24 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.27 2013/02/11 02:37:34 hasufell Exp $
+
+*qgis-1.8.0 (11 Feb 2013)
+
+  11 Feb 2013; Julian Ospald <hasufell@gentoo.org> +qgis-1.8.0.ebuild,
+  +files/qgis-1.8.0-no-python-pyc.patch:
+  version bump wrt #421093, remove broken wrt #449348
 
   24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/qgis-no-python-pyc.patch, qgis-1.7.4.ebuild:
