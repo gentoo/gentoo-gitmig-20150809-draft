@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argh/argh-0.23.0-r1.ebuild,v 1.1 2013/02/12 00:50:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argh/argh-0.23.0-r1.ebuild,v 1.2 2013/02/12 00:55:19 mgorny Exp $
 
 EAPI=5
 
@@ -26,5 +26,5 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 
 python_test() {
 	# setup.py tries to install argparse for some reason...
-	py.test || ewarn "Tests fail with ${EPYTHON}"
+	py.test || die "Tests fail with ${EPYTHON}"
 }
