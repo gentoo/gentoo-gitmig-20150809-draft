@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.148_p1.ebuild,v 1.1 2013/02/12 21:57:56 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.148_p1.ebuild,v 1.2 2013/02/12 22:15:02 hasufell Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -141,7 +141,7 @@ src_install() {
 	doexe chdman jedutil ldresample ldverify regrep romcmp testkeys
 
 	doman src/osd/sdl/man/{chdman,jedutil,ldresample,ldverify,romcmp,testkeys}.1
-	newman src/osd/sdl/man/mame.6 src/osd/sdl/man/${PN}.6
+	newman src/osd/sdl/man/mame.6 ${PN}.6
 
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins -r src/osd/sdl/keymaps
