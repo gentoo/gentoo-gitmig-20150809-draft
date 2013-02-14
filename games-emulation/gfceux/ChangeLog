@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/gfceux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/ChangeLog,v 1.6 2013/01/12 15:38:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/ChangeLog,v 1.7 2013/02/14 12:02:40 ago Exp $
+
+  14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gfceux-2.1.1-r1.ebuild:
+  Stable for amd64, wrt bug #457112
 
   12 Jan 2013; Julian Ospald <hasufell@gentoo.org> gfceux-2.1.1-r1.ebuild:
   remove inherit magic and call functions explicitly
@@ -25,4 +28,3 @@
   29 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org> +gfceux-2.1.1.ebuild,
   +files/gfceux-2.1.1-gentoo.patch, +metadata.xml:
   intial commit
-
