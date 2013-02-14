@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/vdradmin-am
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.27 2013/02/14 12:17:31 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.28 2013/02/14 12:26:26 hd_brummy Exp $
+
+  14 Feb 2013; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdradmin-am-3.6.8.ebuild:
+  missing inherit user.eclass added
 
   14 Feb 2013; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdradmin-am-3.6.8.ebuild, vdradmin-am-3.6.9.ebuild:
