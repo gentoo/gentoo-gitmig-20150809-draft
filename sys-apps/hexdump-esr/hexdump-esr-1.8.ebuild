@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hexdump-esr/hexdump-esr-1.8.ebuild,v 1.1 2013/01/12 17:34:28 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hexdump-esr/hexdump-esr-1.8.ebuild,v 1.2 2013/02/14 14:43:19 pinkbyte Exp $
 
 EAPI=5
 
@@ -18,6 +18,9 @@ KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~pp
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
+
+# tests are broken in this release(missing files)
+RESTRICT="test"
 
 src_prepare() {
 	sed -i Makefile \
