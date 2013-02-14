@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.009.ebuild,v 1.2 2013/02/14 12:03:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.009.ebuild,v 1.3 2013/02/14 12:10:01 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://download.urbanterror.info/urt/42/zips/UrbanTerror42_full_${PV:4:
 
 LICENSE="GPL-2 Q3AEULA"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+curl debug dedicated openal +sdl server smp vorbis"
 RESTRICT="mirror"
 
