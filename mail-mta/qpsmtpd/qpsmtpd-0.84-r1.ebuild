@@ -1,19 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-9999.ebuild,v 1.5 2013/02/15 14:19:53 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.84-r1.ebuild,v 1.1 2013/02/15 14:19:53 eras Exp $
 
 EAPI=2
 
-inherit eutils git-2 perl-app user
+inherit eutils perl-app user
 
 DESCRIPTION="qpsmtpd is a flexible smtpd daemon written in Perl"
 HOMEPAGE="http://smtpd.develooper.com"
-EGIT_REPO_URI="git://git.develooper.com/qpsmtpd.git
-	http://git.develooper.com/qpsmtpd.git"
+SRC_URI="http://smtpd.develooper.com/files/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="postfix ipv6 syslog"
 
 RDEPEND=">=dev-lang/perl-5.8.0
@@ -39,7 +38,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.40-badrcptto_allowrelay.patch
-	epatch "${FILESDIR}"/${PN}-0.83-clamd_conf.patch
+	#epatch "${FILESDIR}"/${PN}-0.83-clamd_conf.patch
+	epatch "${FILESDIR}"/${PN}-0.83-accept-empty-email.patch
 }
 
 src_install() {
@@ -51,23 +51,19 @@ src_install() {
 	dodir /usr/share/qpsmtpd
 	cp -Rf plugins "${D}"/usr/share/qpsmtpd/
 
-	diropts -m 0755 -o smtpd -g smtpd
-	dodir /var/spool/qpsmtpd
-	keepdir /var/spool/qpsmtpd
-
-	dodir /etc/qpsmtpd
 	insinto /etc/qpsmtpd
 	doins config.sample/*
 
 	echo "/usr/share/qpsmtpd/plugins" > "${D}"/etc/qpsmtpd/plugin_dirs
 	echo "/var/spool/qpsmtpd" > "${D}"/etc/qpsmtpd/spool_dir
+	cat >"${D}"/etc/qpsmtpd/logging <<-EOF
+		#logging/syslog loglevel LOGINFO priority LOG_NOTICE
+		#logging/file loglevel LOGINFO /var/log/qpsmtpd/%Y-%m-%d
+	EOF
 	if use syslog; then
-		echo "logging/syslog loglevel LOGINFO priority LOG_NOTICE" > "${D}"/etc/qpsmtpd/logging
+		sed -i -e '/^#logging\/syslog/s,^#,,g' "${D}"/etc/qpsmtpd/logging
 	else
-		diropts -m 0755 -o smtpd -g smtpd
-		dodir /var/log/qpsmtpd
-		keepdir /var/log/qpsmtpd
-		echo "logging/file loglevel LOGINFO /var/log/qpsmtpd/%Y-%m-%d" > "${D}"/etc/qpsmtpd/logging
+		sed -i -e '/^#logging\/file/s,^#,,g' "${D}"/etc/qpsmtpd/logging
 	fi
 
 	newenvd "${FILESDIR}"/qpsmtpd.envd 99qpsmtpd
@@ -76,4 +72,9 @@ src_install() {
 	newinitd "${FILESDIR}"/qpsmtpd.initd-r1 qpsmtpd || die "Installing init.d file"
 
 	dodoc CREDITS Changes README README.plugins STATUS
+
+	diropts -m 0755 -o smtpd -g smtpd
+	dodir /var/spool/qpsmtpd /var/log/qpsmtpd
+	keepdir /var/spool/qpsmtpd /var/log/qpsmtpd
+
 }
