@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/leechcraft-full
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.37 2013/02/16 21:08:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.38 2013/02/16 21:30:02 ago Exp $
+
+  16 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  leechcraft-full-0.5.90-r1.ebuild:
+  Stable for x86, wrt bug #457824
 
   16 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   leechcraft-full-0.5.90-r1.ebuild:
