@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>web-apps</herd>
-	<maintainer>
-		<email>pva@gentoo.org</email>
-		<name>Peter Volkov</name>
-	</maintainer>
 	<use>
 		<flag name='vacation'>Install vacation.pl script and dependencies</flag>
 	</use>
