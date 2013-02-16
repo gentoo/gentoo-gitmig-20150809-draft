@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.10-r1.ebuild,v 1.14 2013/02/16 09:45:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.10-r1.ebuild,v 1.15 2013/02/16 09:50:14 zmedico Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs java-pkg-opt-2
@@ -61,8 +61,9 @@ src_unpack() {
 	fi
 
 	unpack ${A}
-	cd "${S}"
+}
 
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.3.10-pathfixes.patch" # fixes bug 78385 and 146099
 	epatch "${FILESDIR}/${PN}-1.3.8-imake-tmpdir.patch" # fixes bug 23483
 	epatch "${FILESDIR}/${PN}-1.3.8-darwin.patch" # fixes bug 89908
@@ -74,7 +75,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/1.3.9-sh.patch
 	epatch "${FILESDIR}"/${PV}-sparc.patch
 	sed -e "s:\\(/etc/\\|/usr/share/\\):${EPREFIX}\\1:g" -i vncserver || die
-		
 
 	if use java; then
 		cd "${WORKDIR}"
