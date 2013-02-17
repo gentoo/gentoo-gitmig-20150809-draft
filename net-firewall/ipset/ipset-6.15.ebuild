@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-6.15.ebuild,v 1.3 2013/02/17 18:43:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-6.15.ebuild,v 1.4 2013/02/17 19:01:11 pinkbyte Exp $
 
 EAPI="4"
 inherit autotools linux-info linux-mod
@@ -81,7 +81,8 @@ src_configure() {
 		--with-maxsets=${IP_NF_SET_MAX} \
 		--libdir="${EPREFIX}/$(get_libdir)" \
 		--with-ksource="${KV_DIR}" \
-		--with-kbuild="${KV_OUT_DIR}"
+		--with-kbuild="${KV_OUT_DIR}" \
+		--disable-silent-rules
 }
 
 src_compile() {
