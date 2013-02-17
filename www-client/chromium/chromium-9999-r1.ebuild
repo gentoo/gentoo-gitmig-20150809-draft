@@ -1,16 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.165 2013/02/17 20:15:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.166 2013/02/17 20:19:02 floppym Exp $
 
 EAPI="5"
-PYTHON_DEPEND="2:2.6"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 CHROMIUM_LANGS="am ar bg bn ca cs da de el en_GB es es_LA et fa fi fil fr gu he
 	hi hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt_BR pt_PT ro ru sk sl sr
 	sv sw ta te th tr uk vi zh_CN zh_TW"
 
 inherit chromium eutils flag-o-matic multilib \
-	pax-utils portability python subversion toolchain-funcs versionator virtualx
+	pax-utils portability python-any-r1 subversion toolchain-funcs versionator virtualx
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
@@ -163,8 +163,7 @@ pkg_setup() {
 	CHROMIUM_HOME="/usr/$(get_libdir)/chromium-browser${CHROMIUM_SUFFIX}"
 
 	# Make sure the build system will use the right python, bug #344367.
-	python_set_active_version 2
-	python_pkg_setup
+	python-any-r1_pkg_setup
 
 	if ! use selinux; then
 		chromium_suid_sandbox_check_kernel_config
