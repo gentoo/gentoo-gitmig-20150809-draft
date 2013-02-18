@@ -80,6 +80,9 @@ opengl
 xpm
 video_cards_sis
 
+# mask wayland since dev-libs/wayland isn't keyworded
+wayland
+
 # I need to have some of the bad tcltk uses fixed, until then...
 # tcl was marked stable on this platform so only adding tk to mask
 tk
