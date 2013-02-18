@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.8.0_beta5.ebuild,v 1.1 2013/02/18 13:17:18 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.8.0_beta5.ebuild,v 1.2 2013/02/18 13:19:44 eras Exp $
 
 EAPI=5
 inherit eutils db-use autotools user
@@ -109,8 +109,8 @@ src_configure() {
 		--enable-sender_macro \
 		--enable-vbr \
 		--disable-rpath \
-		--disable-live-testing \
-		--with-test-socket=/tmp/opendkim-S
+		--disable-live-testing
+		#--with-test-socket=/tmp/opendkim-S
 }
 
 src_install() {
