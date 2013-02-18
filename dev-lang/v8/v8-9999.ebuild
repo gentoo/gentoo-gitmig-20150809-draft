@@ -1,10 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.35 2013/02/18 16:53:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.36 2013/02/18 16:59:00 floppym Exp $
 
 EAPI="5"
+PYTHON_COMPAT=( python2_{6,7} )
 
-inherit eutils multilib pax-utils python-utils-r1 subversion toolchain-funcs
+inherit eutils multilib pax-utils python-any-r1 subversion toolchain-funcs
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
@@ -15,7 +16,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="|| ( dev-lang/python:2.7 dev-lang/python:2.6 )"
+DEPEND="${PYTHON_DEPS}"
 
 src_unpack() {
 	subversion_src_unpack
@@ -26,7 +27,6 @@ src_unpack() {
 src_configure() {
 	tc-export AR CC CXX RANLIB
 	export LINK=${CXX}
-	python_export python2 EPYTHON
 
 	local hardfp=off
 
