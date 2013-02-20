@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/openerp-7.0.20130219-r2.ebuild,v 1.1 2013/02/20 04:55:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/openerp-7.0.20130219-r3.ebuild,v 1.1 2013/02/20 06:35:55 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -43,7 +43,8 @@ CDEPEND="postgres? ( dev-db/postgresql-server )
 	dev-python/vatnumber
 	dev-python/zsi
 	dev-python/mock
-	dev-python/unittest2"
+	dev-python/unittest2
+	dev-python/jinja"
 
 RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}"

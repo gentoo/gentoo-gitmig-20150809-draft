@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openerp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/ChangeLog,v 1.6 2013/02/20 04:55:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/ChangeLog,v 1.7 2013/02/20 06:35:55 patrick Exp $
+
+*openerp-7.0.20130219-r3 (20 Feb 2013)
+
+  20 Feb 2013; Patrick Lauer <patrick@gentoo.org>
+  +openerp-7.0.20130219-r3.ebuild, -openerp-7.0.20130219-r2.ebuild:
+  Add jinja dep
 
 *openerp-7.0.20130219-r2 (20 Feb 2013)
 
