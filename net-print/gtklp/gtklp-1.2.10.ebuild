@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/gtklp-1.2.9.ebuild,v 1.1 2012/08/22 12:40:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/gtklp-1.2.10.ebuild,v 1.1 2013/02/20 14:03:20 scarabeus Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit autotools eutils
 
@@ -28,8 +28,8 @@ DOCS="AUTHORS BUGS ChangeLog README TODO USAGE"
 src_prepare() {
 	sed -e '/DEF_BROWSER_CMD/{s:netscape:firefox:}' \
 		-e '/DEF_HELP_HOME/{s:631/sum.html#STANDARD_OPTIONS:631/help/:}' \
-		-i include/defaults.h
-	eautoreconf # avoid "maintainer mode"
+		-i include/defaults.h || die
+	eautoreconf
 }
 
 src_configure() {
