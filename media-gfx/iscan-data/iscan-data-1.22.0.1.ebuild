@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-data/iscan-data-1.22.0.1.ebuild,v 1.2 2013/02/20 13:15:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-data/iscan-data-1.22.0.1.ebuild,v 1.3 2013/02/20 13:20:04 flameeyes Exp $
 
 EAPI=5
 
-inherit eutils versionator udev
+inherit eutils versionator udev multilib
 
 MY_PV="$(get_version_component_range 1-3)"
 MY_PVR="$(replace_version_separator 3 -)"
