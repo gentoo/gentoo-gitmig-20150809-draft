@@ -1,6 +1,9 @@
 # ChangeLog for app-text/acroread
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.192 2013/02/21 19:36:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.193 2013/02/21 19:37:49 scarabeus Exp $
+
+  21 Feb 2013; Tomáš Chvátal <scarabeus@gentoo.org> acroread-9.5.4.ebuild:
+  Stable on amd64 and x86.
 
 *acroread-9.5.4 (21 Feb 2013)
 
