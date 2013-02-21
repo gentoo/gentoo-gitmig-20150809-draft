@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/sdl-sopwith-1.7.5-r1.ebuild,v 1.1 2013/02/21 18:22:27 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/sdl-sopwith-1.7.5-r1.ebuild,v 1.2 2013/02/21 18:25:37 pinkbyte Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -12,12 +12,13 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.1.3[video]"
+RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	rm acconfig.h
