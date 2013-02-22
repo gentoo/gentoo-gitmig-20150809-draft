@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14494 2013/02/22 23:05:44 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14495 2013/02/22 23:17:18 moult Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -314,11 +314,6 @@ app-misc/secure-delete
 # Pacho Ramos <pacho@gentoo.org>
 # No upstream, doesn't work well (#350559). Removal in a month.
 app-misc/ccal
-
-# Pacho Ramos <pacho@gentoo.org>
-# Still uses depend.php (#449820), upstream dead for ages and
-# newer versions don't work. Removal in a month.
-www-apps/online-bookmarks
 
 # Pacho Ramos <pacho@gentoo.org>
 # It's for kernel-2.4 only (#450594). Removal in a month.
