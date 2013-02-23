@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.7.15.2.ebuild,v 1.4 2013/02/23 21:09:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.7.15.2.ebuild,v 1.5 2013/02/23 21:31:19 floppym Exp $
 
 EAPI="5"
 
@@ -50,8 +50,6 @@ pkg_setup() {
 src_prepare() {
 	# At least ppc-aix, x86-interix and *-solaris need newer libtool.
 	use prefix && eautoreconf
-
-	epunt_cxx
 }
 
 src_configure() {
