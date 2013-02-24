@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/opendkim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.59 2013/02/24 11:24:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.60 2013/02/24 11:30:34 ago Exp $
+
+  24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> opendkim-2.7.4-r1.ebuild:
+  Stable for x86, wrt bug #458702
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> opendkim-2.7.4-r1.ebuild:
   Stable for amd64, wrt bug #458702
