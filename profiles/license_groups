@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.194 2013/02/21 21:57:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.195 2013/02/24 13:12:58 ulm Exp $
 
 # Please report bugs or other requests at bugs.gentoo.org and assign to
 # licenses@gentoo.org
@@ -47,7 +47,7 @@ FSF-APPROVED-OTHER Arphic CC-BY-2.0 CC-BY-SA-2.0 DSL FDL-1.1 FDL-1.1+ FDL-1.2 FD
 
 # Misc licenses for free documents and other works (including fonts)
 # that follow the definition at http://freedomdefined.org/ but are NOT
-# listed in @FSF-APPROVED-OTHER.
+# listed in @FSF-APPROVED-OTHER
 MISC-FREE-DOCS BitstreamVera CC-PD CC-BY-2.5 CC-BY-3.0 CC-BY-SA-2.5 CC-BY-SA-3.0 CC-SA-1.0 LDP-1 LDP-1a man-pages man-pages-posix MaxMind2 mplus-fonts myspell-en_CA-KevinAtkinson Texinfo-manual UbuntuFontLicense-1.0 Unicode_Fonts_for_Ancient_Scripts vlgothic wxWinFDL-3
 
 # Metaset for all free documents
@@ -63,14 +63,14 @@ EULA AdobeFlash-10.3 AdobeFlash-11.x BCS Broadcom cadsoft DOOM3 ETQW FraunhoferF
 
 # As proposed: http://archives.gentoo.org/gentoo-dev/msg_6c950b46c50fe72ebc5e650bbf70f77c.xml
 # Excerpt of the rules for this license group:
-# - MUST permit redistribution in binary form.
+# - MUST permit redistribution in binary form
 # - MUST NOT require explicit approval (No items from @EULA)
-# - MUST NOT restrict the cost of redistribution.
+# - MUST NOT restrict the cost of redistribution
 # - MAY require explicit inclusion of the license with
 #   the distribution
 # - IF (and only if) there is an explicit inclusion requirement,
 #   USE=bindist MUST cause a copy of the license to be installed
-#   in a file location compliant with the license,
+#   in a file location compliant with the license
 BINARY-REDISTRIBUTABLE @FREE adobe-ps atheros-hal hashcat intel-psb intel-ucode ipw2100-fw ipw2200-fw ipw3945 libertas-fw NVIDIA qlogic-fibre-channel-firmware radeon-ucode ralink-firmware SmartLabs
 
 # Deprecated license labels, used by repoman
