@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/pragha-1.1.2.ebuild,v 1.1 2013/02/25 09:49:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/pragha-1.1.2.ebuild,v 1.2 2013/02/25 09:54:05 ssuominen Exp $
 
 EAPI=5
 inherit flag-o-matic xfconf
@@ -52,8 +52,7 @@ src_prepare() {
 }
 
 src_configure() {
-	# This version should be fixed for libcdio-paranoia, but the ./configure
-	# check never adds this required -D flag
+	# src/cdda.h should #include config.h to get this defined:
 	# http://github.com/matiasdelellis/pragha/issues/46
 	append-cppflags -DHAVE_PARANOIA_NEW_INCLUDES
 	xfconf_src_configure
