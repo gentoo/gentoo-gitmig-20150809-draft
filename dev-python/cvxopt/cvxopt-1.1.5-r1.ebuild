@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.5-r1.ebuild,v 1.2 2013/02/25 07:11:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.5-r1.ebuild,v 1.3 2013/02/25 07:21:24 bicatali Exp $
 
 EAPI=4
 
@@ -36,7 +36,7 @@ S="${WORKDIR}/${P}/src"
 
 src_prepare(){
 	epatch "${FILESDIR}"/${P}-setup.patch
-	rm -r src/C/SuiteSparse*/ || die
+	rm -r C/SuiteSparse*/ || die
 	rm -r ../doc/build  || die # 413905
 
 	pkg_lib() {
@@ -44,7 +44,7 @@ src_prepare(){
 			-e 's/^-l//' \
 			-e "s/ -l/\',\'/g" \
 			-e 's/.,.pthread//g' \
-			-e "s:[[:space:]]::")\'
+			-e "s:[[:space:]]::g")\'
 		sed -i -e "/_LIB = /s:\(.*\)'${1}'\(.*\):\1${pylib}\2:" setup.py
 	}
 
