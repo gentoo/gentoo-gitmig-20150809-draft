@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3check/mp3check-0.8.7.ebuild,v 1.1 2013/02/25 07:45:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3check/mp3check-0.8.7.ebuild,v 1.2 2013/02/25 07:49:47 ssuominen Exp $
 
 EAPI=5
 inherit flag-o-matic toolchain-funcs
@@ -30,4 +30,5 @@ src_compile() {
 
 src_install() {
 	dobin ${PN}
+	doman *.1
 }
