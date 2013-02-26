@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.688 2013/02/26 14:35:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.689 2013/02/26 14:36:40 mgorny Exp $
+
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> eutils.eclass:
+  prune_libtool_files: support running without pkg-config installed, using sed
+  fallback.
 
   26 Feb 2013; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
   Re-enable split logs, now directly handled by python*_foreach_impl().
