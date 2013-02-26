@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.40 2013/01/30 10:42:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.41 2013/02/26 14:32:49 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -583,8 +583,11 @@ _python_check_USE_PYTHON() {
 # @DESCRIPTION:
 # Run the given command for each of the enabled Python implementations.
 # If additional parameters are passed, they will be passed through
-# to the command. If the command fails, python_foreach_impl dies.
-# If necessary, use ':' to force a successful return.
+# to the command.
+#
+# The function will return 0 status if all invocations succeed.
+# Otherwise, the return code from first failing invocation will
+# be returned.
 #
 # For each command being run, EPYTHON, PYTHON and BUILD_DIR are set
 # locally, and the former two are exported to the command environment.
@@ -596,6 +599,7 @@ python_foreach_impl() {
 
 	local impl
 	local bdir=${BUILD_DIR:-${S}}
+	local ret=0 lret=0
 
 	debug-print "${FUNCNAME}: bdir = ${bdir}"
 	for impl in "${_PYTHON_ALL_IMPLS[@]}"; do
@@ -609,9 +613,14 @@ python_foreach_impl() {
 			export EPYTHON PYTHON
 
 			einfo "${EPYTHON}: running ${@}"
-			"${@}" || die "${EPYTHON}: ${1} failed"
+			"${@}"
+			lret=${?}
+
+			[[ ${ret} -eq 0 && ${lret} -ne 0 ]] && ret=${lret}
 		fi
 	done
+
+	return ${ret}
 }
 
 # @FUNCTION: python_export_best
