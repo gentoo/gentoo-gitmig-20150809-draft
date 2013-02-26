@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.55 2013/02/26 14:33:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.56 2013/02/26 14:34:32 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -550,16 +550,7 @@ distutils-r1_run_phase() {
 
 	mkdir -p "${TMPDIR}" || die
 
-	if [[ ${DISTUTILS_NO_PARALLEL_BUILD} || ${DISTUTILS_SINGLE_IMPL} ]]
-	then
-		"${@}" 2>&1 | tee -a "${T}/build-${EPYTHON}.log"
-	else
-		(
-			multijob_child_init
-			"${@}" 2>&1 | tee -a "${T}/build-${EPYTHON}.log"
-		) &
-		multijob_post_fork
-	fi
+	"${@}"
 
 	if [[ ${DISTUTILS_IN_SOURCE_BUILD} && ! ${DISTUTILS_SINGLE_IMPL} ]]
 	then
@@ -591,39 +582,6 @@ _distutils-r1_run_common_phase() {
 	"${@}"
 }
 
-# @FUNCTION: _distutils-r1_multijob_init
-# @INTERNAL
-# @DESCRIPTION:
-# Init multijob, taking the job-count from ${DISTUTILS_JOBS}.
-_distutils-r1_multijob_init() {
-	debug-print-function ${FUNCNAME} "${@}"
-
-	if [[ ! ${DISTUTILS_NO_PARALLEL_BUILD} && ! ${DISTUTILS_SINGLE_IMPL} ]]
-	then
-		local opts
-		if [[ ${DISTUTILS_JOBS} ]]; then
-			opts=-j${DISTUTILS_JOBS}
-		else
-			opts=${MAKEOPTS}
-		fi
-
-		multijob_init "${opts}"
-	fi
-}
-
-# @FUNCTION: _distutils-r1_multijob_finish
-# @INTERNAL
-# @DESCRIPTION:
-# Finish multijob if used.
-_distutils-r1_multijob_finish() {
-	debug-print-function ${FUNCNAME} "${@}"
-
-	if [[ ! ${DISTUTILS_NO_PARALLEL_BUILD} && ! ${DISTUTILS_SINGLE_IMPL} ]]
-	then
-		multijob_finish
-	fi
-}
-
 # @FUNCTION: _distutils-r1_run_foreach_impl
 # @INTERNAL
 # @DESCRIPTION:
@@ -635,7 +593,12 @@ _distutils-r1_run_foreach_impl() {
 	set -- distutils-r1_run_phase "${@}"
 
 	if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
-		python_foreach_impl "${@}"
+		if [[ ${DISTUTILS_NO_PARALLEL_BUILD} || ${DISTUTILS_SINGLE_IMPL} ]]
+		then
+			python_foreach_impl "${@}"
+		else
+			python_parallel_foreach_impl "${@}"
+		fi
 	else
 		if [[ ! ${EPYTHON} ]]; then
 			die "EPYTHON unset, python-single-r1_pkg_setup not called?!"
@@ -657,19 +620,15 @@ distutils-r1_src_prepare() {
 		distutils-r1_python_prepare_all
 	fi
 
-	_distutils-r1_multijob_init
 	if declare -f python_prepare >/dev/null; then
 		_distutils-r1_run_foreach_impl python_prepare
 	fi
-	_distutils-r1_multijob_finish
 }
 
 distutils-r1_src_configure() {
-	_distutils-r1_multijob_init
 	if declare -f python_configure >/dev/null; then
 		_distutils-r1_run_foreach_impl python_configure
 	fi
-	_distutils-r1_multijob_finish
 
 	if declare -f python_configure_all >/dev/null; then
 		_distutils-r1_run_common_phase python_configure_all
@@ -679,13 +638,11 @@ distutils-r1_src_configure() {
 distutils-r1_src_compile() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	_distutils-r1_multijob_init
 	if declare -f python_compile >/dev/null; then
 		_distutils-r1_run_foreach_impl python_compile
 	else
 		_distutils-r1_run_foreach_impl distutils-r1_python_compile
 	fi
-	_distutils-r1_multijob_finish
 
 	if declare -f python_compile_all >/dev/null; then
 		_distutils-r1_run_common_phase python_compile_all
@@ -695,11 +652,9 @@ distutils-r1_src_compile() {
 distutils-r1_src_test() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	_distutils-r1_multijob_init
 	if declare -f python_test >/dev/null; then
 		_distutils-r1_run_foreach_impl python_test
 	fi
-	_distutils-r1_multijob_finish
 
 	if declare -f python_test_all >/dev/null; then
 		_distutils-r1_run_common_phase python_test_all
@@ -709,13 +664,11 @@ distutils-r1_src_test() {
 distutils-r1_src_install() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	_distutils-r1_multijob_init
 	if declare -f python_install >/dev/null; then
 		_distutils-r1_run_foreach_impl python_install
 	else
 		_distutils-r1_run_foreach_impl distutils-r1_python_install
 	fi
-	_distutils-r1_multijob_finish
 
 	if declare -f python_install_all >/dev/null; then
 		_distutils-r1_run_common_phase python_install_all
