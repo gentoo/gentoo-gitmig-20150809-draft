@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.42 2013/02/26 14:33:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.43 2013/02/26 14:35:13 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -620,8 +620,17 @@ python_foreach_impl() {
 			local BUILD_DIR=${bdir%%/}-${impl}
 			export EPYTHON PYTHON
 
-			einfo "${EPYTHON}: running ${@}"
-			"${@}"
+			einfo "${EPYTHON}: running ${@}" \
+				| tee -a "${T}/build-${EPYTHON}.log"
+
+			# _python_parallel() does redirection internally.
+			# note: this is a hidden API to avoid writing python_foreach_impl
+			# twice. do *not* even think of using it anywhere else.
+			if [[ ${1} == _python_parallel ]]; then
+				"${@}"
+			else
+				"${@}" 2>&1 | tee -a "${T}/build-${EPYTHON}.log"
+			fi
 			lret=${?}
 
 			[[ ${ret} -eq 0 && ${lret} -ne 0 ]] && ret=${lret}
@@ -655,7 +664,8 @@ python_parallel_foreach_impl() {
 	_python_parallel() {
 		(
 			multijob_child_init
-			"${@}"
+			"${@}" 2>&1 | tee -a "${T}/build-${EPYTHON}.log"
+			exit ${PIPESTATUS[0]}
 		) &
 		multijob_post_fork
 	}
