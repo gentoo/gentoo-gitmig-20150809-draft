@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ucommon-6.0.3.ebuild,v 1.2 2013/02/26 10:54:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ucommon-6.0.3.ebuild,v 1.3 2013/02/26 10:59:17 ago Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/commoncpp/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux"
 IUSE="doc static-libs socks +cxx debug ssl gnutls"
 
 RDEPEND="ssl? (
