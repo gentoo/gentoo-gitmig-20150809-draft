@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/atpy-0.9.5.3.ebuild,v 1.3 2013/02/27 07:19:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/atpy-0.9.5.3.ebuild,v 1.4 2013/02/27 07:20:30 floppym Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ RDEPEND="dev-python/numpy
 
 DEPEND=">=dev-python/numpy-1.3"
 
-IUSE="+fits hdf5 mysql postgres sqlite +votable"
+IUSE="+fits hdf5 mysql postgres +votable"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-3"
