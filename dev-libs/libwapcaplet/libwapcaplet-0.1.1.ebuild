@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwapcaplet/libwapcaplet-0.1.1.ebuild,v 1.6 2013/02/27 08:18:33 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwapcaplet/libwapcaplet-0.1.1.ebuild,v 1.7 2013/02/27 08:21:27 xmw Exp $
 
 EAPI=4
 
@@ -23,7 +23,6 @@ src_prepare() {
 	sed -e "/^CCOPT :=/s:=.*:=:" \
 		-i build/makefiles/Makefile.{gcc,clang} || die
 	sed -e "/^INSTALL_ITEMS/s: /lib: /$(get_libdir):g" \
-		-e "s:-Werror::g" \
 		-i Makefile || die
 	sed -e "/^libdir/s:/lib:/$(get_libdir):g" \
 		-i ${PN}.pc.in || die
