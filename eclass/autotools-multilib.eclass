@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.11 2013/02/27 21:46:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.12 2013/02/27 21:47:38 mgorny Exp $
 
 # @ECLASS: autotools-multilib.eclass
 # @MAINTAINER:
@@ -31,7 +31,11 @@ fi
 
 inherit autotools-utils multilib-build
 
-EXPORT_FUNCTIONS src_configure src_compile src_test src_install
+EXPORT_FUNCTIONS src_prepare src_configure src_compile src_test src_install
+
+autotools-multilib_src_prepare() {
+	autotools-utils_src_prepare "${@}"
+}
 
 autotools-multilib_src_configure() {
 	multilib_parallel_foreach_abi autotools-utils_src_configure "${@}"
