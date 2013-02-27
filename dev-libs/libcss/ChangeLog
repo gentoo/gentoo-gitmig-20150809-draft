@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcss/ChangeLog,v 1.7 2013/02/27 09:44:36 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcss/ChangeLog,v 1.8 2013/02/27 09:48:29 xmw Exp $
+
+  27 Feb 2013; Michael Weber <xmw@gentoo.org> libcss-0.1.2.ebuild:
+  Add DEPEND virtual/pkgconfig.
 
   27 Feb 2013; Michael Weber <xmw@gentoo.org> libcss-0.1.2.ebuild,
   +files/libcss-0.1.2-enum-compare.patch:

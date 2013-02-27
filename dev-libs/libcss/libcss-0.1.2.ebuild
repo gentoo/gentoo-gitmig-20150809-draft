@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcss/libcss-0.1.2.ebuild,v 1.7 2013/02/27 09:44:36 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcss/libcss-0.1.2.ebuild,v 1.8 2013/02/27 09:48:29 xmw Exp $
 
 EAPI=5
 
@@ -18,6 +18,7 @@ IUSE="debug static-libs test"
 RDEPEND="dev-libs/libparserutils
 	dev-libs/libwapcaplet"
 DEPEND="${RDEPEND}
+	virtual/pkgconfig
 	test? ( dev-lang/perl )"
 
 pkg_setup(){
