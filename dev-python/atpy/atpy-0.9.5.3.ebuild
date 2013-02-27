@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/atpy-0.9.5.3.ebuild,v 1.2 2012/04/23 20:18:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/atpy-0.9.5.3.ebuild,v 1.3 2013/02/27 07:19:50 floppym Exp $
 
 EAPI="2"
 
@@ -23,7 +23,6 @@ RDEPEND="dev-python/numpy
 	hdf5? ( dev-python/h5py )
 	mysql? ( dev-python/mysql-python )
 	postgres? ( dev-db/pygresql )
-	sqlite? ( dev-python/pysqlite )
 	votable? ( dev-python/vo )"
 
 DEPEND=">=dev-python/numpy-1.3"
