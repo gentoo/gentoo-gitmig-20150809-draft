@@ -1,11 +1,6 @@
 # ChangeLog for dev-python/python-djvulibre
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-djvulibre/ChangeLog,v 1.2 2013/02/28 16:14:05 pinkbyte Exp $
-
-  28 Feb 2013; Sergey Popov <pinkbyte@gentoo.org>
-  python-djvulibre-0.3.9.ebuild:
-  Package buildsystem is designed to work only with one python implementation,
-  adding DISTUTILS_SINGLE_IMPL
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-djvulibre/ChangeLog,v 1.3 2013/02/28 16:18:38 pinkbyte Exp $
 
 *python-djvulibre-0.3.9 (28 Feb 2013)
 
