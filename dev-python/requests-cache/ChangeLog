@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/requests-cache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-cache/ChangeLog,v 1.1 2013/02/28 17:31:13 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-cache/ChangeLog,v 1.2 2013/02/28 17:32:47 zx2c4 Exp $
+
+  28 Feb 2013; Jason A. Donenfeld <zx2c4@gentoo.org>
+  requests-cache-0.3.0.ebuild:
+  Fix metadata.
 
 *requests-cache-0.3.0 (28 Feb 2013)
 
