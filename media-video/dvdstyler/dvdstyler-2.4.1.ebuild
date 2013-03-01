@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-2.4.1.ebuild,v 1.1 2013/03/01 15:57:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-2.4.1.ebuild,v 1.2 2013/03/01 16:00:39 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
 MY_P=${P/dvds/DVDS}
 WX_GTK_VER=2.8
