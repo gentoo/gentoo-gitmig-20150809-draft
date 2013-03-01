@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.210 2013/03/01 11:04:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.211 2013/03/01 11:08:03 ago Exp $
+
+  01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> apache-2.2.24.ebuild:
+  Stable for arm, wrt bug #438680
 
   01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> apache-2.2.24.ebuild:
   Stable for ia64, wrt bug #438680
