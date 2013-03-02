@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.142 2013/01/03 08:39:49 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.143 2013/03/02 21:44:33 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -48,45 +48,6 @@ DEPEND="virtual/pkgconfig"
 if [[ ${QT4_BUILD_TYPE} == live ]]; then
 	DEPEND+=" dev-lang/perl"
 fi
-
-RDEPEND="
-	!<x11-libs/qt-assistant-${PV}:4
-	!>x11-libs/qt-assistant-${PV}-r9999:4
-	!<x11-libs/qt-bearer-${PV}:4
-	!>x11-libs/qt-bearer-${PV}-r9999:4
-	!<x11-libs/qt-core-${PV}:4
-	!>x11-libs/qt-core-${PV}-r9999:4
-	!<x11-libs/qt-dbus-${PV}:4
-	!>x11-libs/qt-dbus-${PV}-r9999:4
-	!<x11-libs/qt-declarative-${PV}:4
-	!>x11-libs/qt-declarative-${PV}-r9999:4
-	!<x11-libs/qt-demo-${PV}:4
-	!>x11-libs/qt-demo-${PV}-r9999:4
-	!<x11-libs/qt-gui-${PV}:4
-	!>x11-libs/qt-gui-${PV}-r9999:4
-	!<x11-libs/qt-multimedia-${PV}:4
-	!>x11-libs/qt-multimedia-${PV}-r9999:4
-	!<x11-libs/qt-opengl-${PV}:4
-	!>x11-libs/qt-opengl-${PV}-r9999:4
-	!<x11-libs/qt-openvg-${PV}:4
-	!>x11-libs/qt-openvg-${PV}-r9999:4
-	!<x11-libs/qt-phonon-${PV}:4
-	!>x11-libs/qt-phonon-${PV}-r9999:4
-	!<x11-libs/qt-qt3support-${PV}:4
-	!>x11-libs/qt-qt3support-${PV}-r9999:4
-	!<x11-libs/qt-script-${PV}:4
-	!>x11-libs/qt-script-${PV}-r9999:4
-	!<x11-libs/qt-sql-${PV}:4
-	!>x11-libs/qt-sql-${PV}-r9999:4
-	!<x11-libs/qt-svg-${PV}:4
-	!>x11-libs/qt-svg-${PV}-r9999:4
-	!<x11-libs/qt-test-${PV}:4
-	!>x11-libs/qt-test-${PV}-r9999:4
-	!<x11-libs/qt-webkit-${PV}:4
-	!>x11-libs/qt-webkit-${PV}-r9999:4
-	!<x11-libs/qt-xmlpatterns-${PV}:4
-	!>x11-libs/qt-xmlpatterns-${PV}-r9999:4
-"
 
 S=${WORKDIR}/${MY_P}
 
