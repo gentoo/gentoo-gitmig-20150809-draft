@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-313.18.ebuild,v 1.5 2013/03/02 11:30:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-313.18.ebuild,v 1.6 2013/03/02 16:02:57 cardoe Exp $
 
 EAPI=5
 
@@ -155,9 +155,6 @@ src_prepare() {
 	    epatch "${FILESDIR}"/nvidia-drivers-pax-const.patch
 	    epatch "${FILESDIR}"/nvidia-drivers-pax-usercopy.patch
 	fi
-
-	epatch "${FILESDIR}"/${PN}-313.18-builddir-config.patch
-	epatch "${FILESDIR}"/${PN}-313.18-linux-3.{7,8}+.patch #447566
 
 	# Allow user patches so they can support RC kernels and whatever else
 	epatch_user
