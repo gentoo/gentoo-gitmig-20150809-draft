@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.59 2013/03/02 07:16:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.60 2013/03/02 07:17:50 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -578,6 +578,9 @@ distutils-r1_run_phase() {
 # @INTERNAL
 # @DESCRIPTION:
 # Run the given command, restoring the best-implementation state.
+#
+# If in-source build is used, the command will be run in the copy
+# of sources made for the best Python interpreter.
 _distutils-r1_run_common_phase() {
 	local DISTUTILS_ORIG_BUILD_DIR=${BUILD_DIR}
 
@@ -588,8 +591,16 @@ _distutils-r1_run_common_phase() {
 
 	export EPYTHON PYTHON PYTHONPATH
 
+	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
+		pushd "${BUILD_DIR}"/.. >/dev/null || die
+	fi
+
 	einfo "common: running ${1}"
 	"${@}"
+
+	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
+		popd >/dev/null || die
+	fi
 }
 
 # @FUNCTION: _distutils-r1_multijob_init
