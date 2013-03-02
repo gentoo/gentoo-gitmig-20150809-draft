@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7545 2013/03/02 20:45:50 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7546 2013/03/02 20:52:16 pesa Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Mar 2013; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Unmask dev-qt/*
 
   02 Mar 2013; Davide Pesavento <pesa@gentoo.org> arch/alpha/package.use.mask,
   arch/alpha/use.mask, arch/amd64-fbsd/todo/package.use.mask,
