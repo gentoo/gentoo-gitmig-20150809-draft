@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-1.1.2-r1.ebuild,v 1.1 2013/02/04 14:02:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-1.1.2-r1.ebuild,v 1.2 2013/03/02 20:11:20 hwoarang Exp $
 
 EAPI=5
 
@@ -43,7 +43,7 @@ RDEPEND="
 		>=x11-libs/qt-test-${QT_PV}
 	)
 	declarative? ( >=x11-libs/qt-declarative-${QT_PV} )
-	help? ( >=x11-libs/qt-assistant-${QT_PV} )
+	help? ( >=dev-qt/qthelp-${QT_PV} )
 	multimedia? ( >=x11-libs/qt-multimedia-${QT_PV} )
 	opengl? ( >=x11-libs/qt-opengl-${QT_PV} )
 	phonon? (
