@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.57 2013/02/27 21:02:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.58 2013/03/02 07:13:32 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -285,11 +285,6 @@ distutils_install_for_testing() {
 	# 5) 'install' needs to go before 'bdist_egg' or the latter would
 	#    re-set install paths.
 
-	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
-		# use 'build' subdirectory to reduce the risk of collisions
-		local BUILD_DIR=${BUILD_DIR}/build
-	fi
-
 	TEST_DIR=${BUILD_DIR}/test
 	local bindir=${TEST_DIR}/scripts
 	local libdir=${TEST_DIR}/lib
@@ -540,8 +535,9 @@ distutils-r1_python_install_all() {
 # directory, with BUILD_DIR pointing at the build directory
 # and PYTHONPATH having an entry for the module build directory.
 #
-# If in-source builds are used, the command is executed in the BUILD_DIR
-# (the directory holding per-implementation copy of sources).
+# If in-source builds are used, the command is executed in the directory
+# holding the per-implementation copy of sources. BUILD_DIR points
+# to the 'build' subdirectory.
 distutils-r1_run_phase() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -549,6 +545,7 @@ distutils-r1_run_phase() {
 		if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
 			pushd "${BUILD_DIR}" >/dev/null || die
 		fi
+		local BUILD_DIR=${BUILD_DIR}/build
 	else
 		local PYTHONPATH="${BUILD_DIR}/lib:${PYTHONPATH}"
 		export PYTHONPATH
