@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.1-r1.ebuild,v 1.1 2013/03/02 17:25:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.1-r1.ebuild,v 1.2 2013/03/02 21:53:13 ulm Exp $
 
 EAPI=5
 
@@ -98,15 +98,15 @@ src_prepare() {
 	fi
 
 	DOC_CONTENTS='Gnuplot no longer links against pdflib, see the ChangeLog
-		for details. You can use the "pdfcairo" terminal for PDF output.'
-	use cairo || DOC_CONTENTS+=' It is available with USE="cairo".'
+		for details.  You can use the "pdfcairo" terminal for PDF output.'
+	use cairo || DOC_CONTENTS+='  It is available with USE="cairo".'
 	use svga && DOC_CONTENTS+='\n\nIn order to enable ordinary users to use
 		SVGA console graphics, gnuplot needs to be set up as setuid root.
 		Please note that this is usually considered to be a security hazard.
 		As root, manually "chmod u+s /usr/bin/gnuplot".'
 	use gd && DOC_CONTENTS+='\n\nFor font support in png/jpeg/gif output,
 		you may have to set the GDFONTPATH and GNUPLOT_DEFAULT_GDFONT
-		environment variables. See the FAQ file in /usr/share/doc/${PF}/
+		environment variables.  See the FAQ file in /usr/share/doc/${PF}/
 		for more information.'
 }
 
