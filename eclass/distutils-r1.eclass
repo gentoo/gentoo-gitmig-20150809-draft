@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.58 2013/03/02 07:13:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.59 2013/03/02 07:16:43 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -228,11 +228,7 @@ esetup.py() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	local add_args=()
-	if [[ ! ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
-		if [[ ! ${BUILD_DIR} ]]; then
-			die 'Out-of-source build requested, yet BUILD_DIR unset.'
-		fi
-
+	if [[ ${BUILD_DIR} ]]; then
 		# if setuptools is used, adjust egg_info path as well
 		# (disabled since it causes build not to install scripts)
 #		if "${PYTHON:-python}" setup.py --help egg_info &>/dev/null; then
@@ -249,6 +245,8 @@ esetup.py() {
 			# make the ebuild writer lives easier
 			--build-scripts "${BUILD_DIR}/scripts"
 		)
+	elif [[ ! ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
+		die 'Out-of-source build requested, yet BUILD_DIR unset.'
 	fi
 
 	set -- "${PYTHON:-python}" setup.py \
@@ -546,10 +544,8 @@ distutils-r1_run_phase() {
 			pushd "${BUILD_DIR}" >/dev/null || die
 		fi
 		local BUILD_DIR=${BUILD_DIR}/build
-	else
-		local PYTHONPATH="${BUILD_DIR}/lib:${PYTHONPATH}"
-		export PYTHONPATH
 	fi
+	local -x PYTHONPATH="${BUILD_DIR}/lib:${PYTHONPATH}"
 
 	local TMPDIR=${T}/${EPYTHON}
 
