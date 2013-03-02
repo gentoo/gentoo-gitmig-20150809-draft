@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monkeystudio/monkeystudio-1.9.0.4.ebuild,v 1.1 2013/02/06 14:55:19 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monkeystudio/monkeystudio-1.9.0.4.ebuild,v 1.2 2013/03/02 20:23:02 hwoarang Exp $
 
 EAPI=5
 LANGS="be es fr ru"
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc plugins"
 
 RDEPEND="plugins? ( >=x11-libs/qt-webkit-4.7.0:4 )
-	>=x11-libs/qt-assistant-4.7.0:4
+	>=dev-qt/qthelp-4.7.0:4
 	>=x11-libs/qt-core-4.7.0:4
 	>=x11-libs/qt-gui-4.7.0:4
 	>=x11-libs/qt-sql-4.7.0:4

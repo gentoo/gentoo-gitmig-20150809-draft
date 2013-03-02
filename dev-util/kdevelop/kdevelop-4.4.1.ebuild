@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.4.1.ebuild,v 1.5 2012/12/22 13:54:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.4.1.ebuild,v 1.6 2013/03/02 20:22:21 hwoarang Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ DEPEND="
 	$(add_kdebase_dep ksysguard)
 	$(add_kdebase_dep libkworkspace)
 	okteta? ( $(add_kdebase_dep okteta) )
-	qthelp? ( x11-libs/qt-assistant:4 )
+	qthelp? ( dev-qt/qthelp:4 )
 "
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep kapptemplate)
