@@ -1,16 +1,16 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-it/festival-it-1.0-r1.ebuild,v 1.2 2009/05/08 21:32:51 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-it/festival-it-1.0-r2.ebuild,v 1.1 2013/03/03 01:27:25 neurogeek Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils
 
 DESCRIPTION="A collection of italian voices for Festival TTS."
-HOMEPAGE="http://www.pd.istc.cnr.it/TTS/It-FESTIVAL.htm"
+HOMEPAGE="http://www2.pd.istc.cnr.it/FESTIVAL/home"
 SRC_URI="mirror://sourceforge/it-festival/Italian-FESTIVAL.zip"
 
-RDEPEND=">=app-accessibility/festival-1.96_beta[mbrola?]
+RDEPEND=">=app-accessibility/festival-2.1
 		mbrola? ( >=app-accessibility/mbrola-3.0.1h-r4[linguas_it] )"
 DEPEND="app-arch/unzip"
 IUSE="mbrola"
@@ -19,15 +19,9 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 
-pkg_postinst () {
-	einfo "Italian voices installed:"
-	for VOICE in `ls "${ROOT}/usr/share/festival/voices/italian/"`; do
-	  einfo "   (voice_${VOICE})"
-	done
-}
+S=${WORKDIR}
 
-src_unpack () {
-	unpack ${A}
+src_prepare() {
 
 	unzip -qo italian_scm.zip
 	unzip -qo lex_ifd.zip
@@ -79,4 +73,11 @@ src_install () {
 	  dosym /opt/mbrola/it3 /usr/share/festival/voices/italian/pc_mbrola/it3
 	  dosym /opt/mbrola/it4 /usr/share/festival/voices/italian/lp_mbrola/it4
 	fi
+}
+
+pkg_postinst () {
+	einfo "Italian voices installed:"
+	for VOICE in `ls "${ROOT}/usr/share/festival/voices/italian/"`; do
+	  einfo "   (voice_${VOICE})"
+	done
 }
