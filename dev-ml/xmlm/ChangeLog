@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/xmlm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/xmlm/ChangeLog,v 1.7 2013/03/03 11:18:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/xmlm/ChangeLog,v 1.8 2013/03/03 11:20:39 aballier Exp $
+
+  03 Mar 2013; Alexis Ballier <aballier@gentoo.org> xmlm-1.1.1.ebuild:
+  eapi5, define subslot and use slot deps
 
   03 Mar 2013; Alexis Ballier <aballier@gentoo.org> -xmlm-1.1.0.ebuild:
   remove old
