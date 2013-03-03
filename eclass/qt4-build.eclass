@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.143 2013/03/02 21:44:33 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.144 2013/03/03 00:22:56 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -41,8 +41,8 @@ case ${QT4_BUILD_TYPE} in
 esac
 
 IUSE="aqua debug pch"
-[[ ${CATEGORY}/${PN} != x11-libs/qt-xmlpatterns ]] && IUSE+=" +exceptions"
-[[ ${CATEGORY}/${PN} != x11-libs/qt-webkit ]] && IUSE+=" c++0x"
+[[ ${CATEGORY}/${PN} != dev-qt/qtwebkit ]] && IUSE+=" c++0x"
+[[ ${CATEGORY}/${PN} != dev-qt/qtxmlpatterns ]] && IUSE+=" +exceptions"
 
 DEPEND="virtual/pkgconfig"
 if [[ ${QT4_BUILD_TYPE} == live ]]; then
@@ -103,7 +103,7 @@ qt4-build_src_unpack() {
 		ewarn "Using a GCC version lower than 4.1 is not supported."
 	fi
 
-	if [[ ${PN} == qt-webkit ]]; then
+	if [[ ${CATEGORY}/${PN} == dev-qt/qtwebkit ]]; then
 		eshopts_push -s extglob
 		if is-flagq '-g?(gdb)?([1-9])'; then
 			echo
@@ -161,7 +161,7 @@ qt4-build_src_prepare() {
 	fi
 
 	# avoid X11 dependency in non-gui packages
-	local nolibx11_pkgs="qt-core qt-dbus qt-script qt-sql qt-test qt-xmlpatterns"
+	local nolibx11_pkgs="qtcore qtdbus qtscript qtsql qttest qtxmlpatterns"
 	has ${PN} ${nolibx11_pkgs} && qt_nolibx11
 
 	if use aqua; then
@@ -173,7 +173,7 @@ qt4-build_src_prepare() {
 			-i mkspecs/$(qt_mkspecs_dir)/qmake.conf || die
 	fi
 
-	if [[ ${PN} != qt-core ]]; then
+	if [[ ${CATEGORY}/${PN} != dev-qt/qtcore ]]; then
 		skip_qmake_build
 		skip_project_generation
 		symlink_binaries_to_buildtree
@@ -431,7 +431,7 @@ qt4-build_src_compile() {
 # Runs tests only in target directories.
 qt4-build_src_test() {
 	# QtMultimedia does not have any test suite (bug #332299)
-	[[ ${PN} == qt-multimedia ]] && return
+	[[ ${CATEGORY}/${PN} == dev-qt/qtmultimedia ]] && return
 
 	for dir in ${QT4_TARGET_DIRECTORIES}; do
 		emake -j1 check -C ${dir}
@@ -623,7 +623,7 @@ install_qconfigs() {
 # @DESCRIPTION:
 # Generates gentoo-specific qconfig.{h,pri}.
 generate_qconfigs() {
-	if [[ -n ${QCONFIG_ADD} || -n ${QCONFIG_REMOVE} || -n ${QCONFIG_DEFINE} || ${PN} == qt-core ]]; then
+	if [[ -n ${QCONFIG_ADD} || -n ${QCONFIG_REMOVE} || -n ${QCONFIG_DEFINE} || ${CATEGORY}/${PN} == dev-qt/qtcore ]]; then
 		local x qconfig_add qconfig_remove qconfig_new
 		for x in "${ROOT}${QTDATADIR}"/mkspecs/gentoo/*-qconfig.pri; do
 			[[ -f ${x} ]] || continue
@@ -634,7 +634,7 @@ generate_qconfigs() {
 		# these error checks do not use die because dying in pkg_post{inst,rm}
 		# just makes things worse.
 		if [[ -e "${ROOT}${QTDATADIR}"/mkspecs/gentoo/qconfig.pri ]]; then
-			# start with the qconfig.pri that qt-core installed
+			# start with the qconfig.pri that qtcore installed
 			if ! cp "${ROOT}${QTDATADIR}"/mkspecs/gentoo/qconfig.pri \
 				"${ROOT}${QTDATADIR}"/mkspecs/qconfig.pri; then
 				eerror "cp qconfig failed."
@@ -696,7 +696,7 @@ qt4-build_pkg_postinst() {
 # @FUNCTION: skip_qmake_build
 # @INTERNAL
 # @DESCRIPTION:
-# Patches configure to skip qmake compilation, as it's already installed by qt-core.
+# Patches configure to skip qmake compilation, as it's already installed by qtcore.
 skip_qmake_build() {
 	sed -i -e "s:if true:if false:g" "${S}"/configure || die
 }
