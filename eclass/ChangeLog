@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.703 2013/03/03 12:05:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.704 2013/03/04 19:10:31 robbat2 Exp $
+
+  04 Mar 2013; Robin H. Johnson <robbat2@gentoo.org> mysql-cmake.eclass:
+  MySQL 5.6 needs to NOT have -fno-implicit-templates, also support
+  epatch_user.
 
   03 Mar 2013; Pacho Ramos <pacho@gentoo.org> readme.gentoo.eclass:
   Change formatting tool as discussed with Ulrich Müller in bug #460050,
