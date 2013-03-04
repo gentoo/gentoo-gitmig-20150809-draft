@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.44 2013/02/27 21:02:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.45 2013/03/04 19:22:13 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -48,7 +48,7 @@ elif [[ ${_PYTHON_ANY_R1} ]]; then
 	die 'python-r1.eclass can not be used with python-any-r1.eclass.'
 fi
 
-inherit python-utils-r1
+inherit multibuild python-utils-r1
 
 # @ECLASS-VARIABLE: PYTHON_COMPAT
 # @REQUIRED
@@ -688,25 +688,6 @@ python_replicate_script() {
 	for f; do
 		_python_ln_rel "${ED}"/usr/bin/python-exec "${f}" || die
 	done
-}
-
-# @FUNCTION: run_in_build_dir
-# @USAGE: <argv>...
-# @DESCRIPTION:
-# Run the given command in the directory pointed by BUILD_DIR.
-run_in_build_dir() {
-	debug-print-function ${FUNCNAME} "${@}"
-	local ret
-
-	[[ ${#} -ne 0 ]] || die "${FUNCNAME}: no command specified."
-	[[ ${BUILD_DIR} ]] || die "${FUNCNAME}: BUILD_DIR not set."
-
-	pushd "${BUILD_DIR}" >/dev/null || die
-	"${@}"
-	ret=${?}
-	popd >/dev/null || die
-
-	return ${ret}
 }
 
 _PYTHON_R1=1

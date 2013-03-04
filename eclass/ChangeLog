@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.705 2013/03/04 19:21:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.706 2013/03/04 19:22:13 mgorny Exp $
+
+  04 Mar 2013; Michał Górny <mgorny@gentoo.org> multibuild.eclass,
+  python-r1.eclass:
+  Move run_in_build_dir() to multibuild.eclass.
 
   04 Mar 2013; Michał Górny <mgorny@gentoo.org> +multibuild.eclass:
   Introduce multibuild.eclass to handle building multiple variants of the same

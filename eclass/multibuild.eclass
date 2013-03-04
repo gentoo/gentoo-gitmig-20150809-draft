@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.1 2013/03/04 19:21:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.2 2013/03/04 19:22:13 mgorny Exp $
 
 # @ECLASS: multibuild
 # @MAINTAINER:
@@ -171,6 +171,25 @@ multibuild_parallel_foreach_variant() {
 	lret=${?}
 
 	[[ ${ret} -eq 0 ]] && ret=${lret}
+	return ${ret}
+}
+
+# @FUNCTION: run_in_build_dir
+# @USAGE: <argv>...
+# @DESCRIPTION:
+# Run the given command in the directory pointed by BUILD_DIR.
+run_in_build_dir() {
+	debug-print-function ${FUNCNAME} "${@}"
+	local ret
+
+	[[ ${#} -ne 0 ]] || die "${FUNCNAME}: no command specified."
+	[[ ${BUILD_DIR} ]] || die "${FUNCNAME}: BUILD_DIR not set."
+
+	pushd "${BUILD_DIR}" >/dev/null || die
+	"${@}"
+	ret=${?}
+	popd >/dev/null || die
+
 	return ${ret}
 }
 
