@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.117 2013/03/04 11:40:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.118 2013/03/04 11:48:00 aballier Exp $
 
 EAPI="4"
 
@@ -301,8 +301,8 @@ src_install() {
 	dodoc Changelog README CREDITS doc/*.txt doc/APIchanges doc/RELEASE_NOTES
 	use doc && dohtml -r doc/*
 	if use examples ; then
-		insinto "/usr/share/doc/${PF}/examples"
-		doins -r doc/examples/*
+		dodoc -r doc/examples
+		docompress -x /usr/share/doc/${PF}/examples
 	fi
 }
 
