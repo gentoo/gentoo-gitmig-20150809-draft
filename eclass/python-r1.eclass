@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.45 2013/03/04 19:22:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.46 2013/03/04 19:27:58 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -578,6 +578,37 @@ _python_check_USE_PYTHON() {
 	fi
 }
 
+# @FUNCTION: _python_obtain_impls
+# @INTERNAL
+# @DESCRIPTION:
+# Set up the enabled implementation list.
+_python_obtain_impls() {
+	MULTIBUILD_VARIANTS=()
+
+	for impl in "${_PYTHON_ALL_IMPLS[@]}"; do
+		if has "${impl}" "${PYTHON_COMPAT[@]}" \
+			&& use "python_targets_${impl}"
+		then
+			MULTIBUILD_VARIANTS+=( "${impl}" )
+		fi
+	done
+}
+
+# @FUNCTION: _python_multibuild_wrapper
+# @USAGE: <command> [<args>...]
+# @INTERNAL
+# @DESCRIPTION:
+# Initialize the environment for Python implementation selected
+# for multibuild.
+_python_multibuild_wrapper() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local -x EPYTHON PYTHON
+	python_export "${MULTIBUILD_VARIANT}" EPYTHON PYTHON
+
+	"${@}"
+}
+
 # @FUNCTION: python_foreach_impl
 # @USAGE: <command> [<args>...]
 # @DESCRIPTION:
@@ -597,30 +628,10 @@ python_foreach_impl() {
 	_python_validate_useflags
 	_python_check_USE_PYTHON
 
-	local impl
-	local bdir=${BUILD_DIR:-${S}}
-	local ret=0 lret=0
+	local MULTIBUILD_VARIANTS
+	_python_obtain_impls
 
-	debug-print "${FUNCNAME}: bdir = ${bdir}"
-	for impl in "${_PYTHON_ALL_IMPLS[@]}"; do
-		if has "${impl}" "${PYTHON_COMPAT[@]}" \
-			&& _python_impl_supported "${impl}" \
-			&& use "python_targets_${impl}"
-		then
-			local EPYTHON PYTHON
-			python_export "${impl}" EPYTHON PYTHON
-			local BUILD_DIR=${bdir%%/}-${impl}
-			export EPYTHON PYTHON
-
-			einfo "${EPYTHON}: running ${@}"
-			"${@}"
-			lret=${?}
-
-			[[ ${ret} -eq 0 && ${lret} -ne 0 ]] && ret=${lret}
-		fi
-	done
-
-	return ${ret}
+	multibuild_foreach_variant _python_multibuild_wrapper "${@}"
 }
 
 # @FUNCTION: python_export_best
