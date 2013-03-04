@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.706 2013/03/04 19:22:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.707 2013/03/04 19:27:00 mgorny Exp $
+
+  04 Mar 2013; Michał Górny <mgorny@gentoo.org> multibuild.eclass:
+  Print only the "public" part of commands.
 
   04 Mar 2013; Michał Górny <mgorny@gentoo.org> multibuild.eclass,
   python-r1.eclass:
