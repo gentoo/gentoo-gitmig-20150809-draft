@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.3 2013/03/04 19:27:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.4 2013/03/04 19:27:24 mgorny Exp $
 
 # @ECLASS: multibuild
 # @MAINTAINER:
@@ -183,6 +183,26 @@ multibuild_parallel_foreach_variant() {
 
 	[[ ${ret} -eq 0 ]] && ret=${lret}
 	return ${ret}
+}
+
+# @FUNCTION: multibuild_for_best_variant
+# @USAGE: [<argv>...]
+# @DESCRIPTION:
+# Run the passed command once, for the best of the enabled package
+# variants.
+#
+# The run will have a proper, variant-specificBUILD_DIR set, and output
+# teed to a separate log in ${T}.
+#
+# The function returns command exit status.
+multibuild_for_best_variant() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	[[ ${MULTIBUILD_VARIANTS} ]] \
+		|| die "MULTIBUILD_VARIANTS need to be set"
+
+	local MULTIBUILD_VARIANTS=( "${MULTIBUILD_VARIANTS[-1]}" )
+	multibuild_foreach_variant "${@}"
 }
 
 # @FUNCTION: run_in_build_dir
