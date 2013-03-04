@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.8 2013/03/04 19:30:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.9 2013/03/04 19:31:01 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -137,6 +137,18 @@ multilib_parallel_foreach_abi() {
 
 	local MULTIBUILD_VARIANTS=( $(multilib_get_enabled_abis) )
 	multibuild_parallel_foreach_variant _multilib_multibuild_wrapper "${@}"
+}
+
+# @FUNCTION: multilib_for_best_abi
+# @USAGE: <argv>...
+# @DESCRIPTION:
+# Runs the given command with setup for the 'best' (usually native) ABI.
+multilib_for_best_abi() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local MULTIBUILD_VARIANTS=( $(multilib_get_enabled_abis) )
+
+	multibuild_for_best_variant _multilib_multibuild_wrapper "${@}"
 }
 
 # @FUNCTION: multilib_check_headers
