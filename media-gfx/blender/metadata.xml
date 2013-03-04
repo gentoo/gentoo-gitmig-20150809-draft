@@ -8,10 +8,6 @@
     <name>Luca Barbato</name>
   </maintainer>
 
-  <maintainer>
-    <email>flameeyes@gentoo.org</email>
-  </maintainer>
-
   <longdescription>
     Blender, the open source software for 3D modeling, animation,
     rendering, post-production, interactive creation and playback.
