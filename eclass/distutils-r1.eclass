@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.61 2013/03/04 19:28:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.62 2013/03/04 19:29:43 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -549,11 +549,6 @@ distutils-r1_run_phase() {
 	then
 		popd >/dev/null || die
 	fi
-
-	# Store them for reuse.
-	_DISTUTILS_BEST_IMPL=(
-		"${EPYTHON}" "${PYTHON}" "${BUILD_DIR}" "${PYTHONPATH}"
-	)
 }
 
 # @FUNCTION: _distutils-r1_run_common_phase
@@ -567,23 +562,11 @@ distutils-r1_run_phase() {
 _distutils-r1_run_common_phase() {
 	local DISTUTILS_ORIG_BUILD_DIR=${BUILD_DIR}
 
-	local EPYTHON=${_DISTUTILS_BEST_IMPL[0]}
-	local PYTHON=${_DISTUTILS_BEST_IMPL[1]}
-	local BUILD_DIR=${_DISTUTILS_BEST_IMPL[2]}
-	local PYTHONPATH=${_DISTUTILS_BEST_IMPL[3]}
+	local MULTIBUILD_VARIANTS
+	_python_obtain_impls
 
-	export EPYTHON PYTHON PYTHONPATH
-
-	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
-		pushd "${BUILD_DIR}"/.. >/dev/null || die
-	fi
-
-	einfo "common: running ${1}"
-	"${@}"
-
-	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
-		popd >/dev/null || die
-	fi
+	multibuild_for_best_variant _python_multibuild_wrapper \
+		distutils-r1_run_phase "${@}"
 }
 
 # @FUNCTION: _distutils-r1_run_foreach_impl
