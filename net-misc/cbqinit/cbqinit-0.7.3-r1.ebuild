@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/cbqinit-0.7.3-r1.ebuild,v 1.7 2013/03/05 09:18:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/cbqinit-0.7.3-r1.ebuild,v 1.8 2013/03/05 09:19:28 scarabeus Exp $
 
 EAPI=5
 
@@ -23,6 +23,9 @@ S=${WORKDIR}
 src_unpack() {
 	cp "${DISTDIR}"/${P} "${S}"/cbqinit || die
 	grep '^#' cbqinit > README
+}
+
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
