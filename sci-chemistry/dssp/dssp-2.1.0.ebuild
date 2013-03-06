@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/dssp/dssp-2.0.4.ebuild,v 1.2 2013/03/06 13:59:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/dssp/dssp-2.1.0.ebuild,v 1.1 2013/03/06 13:59:23 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils multilib toolchain-funcs
 
@@ -28,7 +28,6 @@ src_prepare() {
 	EOF
 
 	epatch \
-		"${FILESDIR}"/${P}-gcc47.patch \
 		"${FILESDIR}"/${P}-gentoo.patch
 }
 
