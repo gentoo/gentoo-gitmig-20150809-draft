@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.7-r2.ebuild,v 1.2 2013/03/06 16:06:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.7-r2.ebuild,v 1.3 2013/03/06 16:28:54 jer Exp $
 
 EAPI="5"
 
@@ -15,16 +15,15 @@ SRC_URI="http://oss.oetiker.ch/rrdtool/pub/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos ~x86-solaris"
-IUSE="dbi doc +graph lua perl python ruby rrdcgi tcl tcpd"
+IUSE="dbi doc +graph lua perl python ruby rrdcgi static-libs tcl tcpd"
 
-# This versions are minimal versions upstream tested with.
 RDEPEND="
-	>=dev-libs/glib-2.28.7
-	>=dev-libs/libxml2-2.7.8
-	dbi? ( dev-db/libdbi )
+	>=dev-libs/glib-2.28.7[static-libs=]
+	>=dev-libs/libxml2-2.7.8[static-libs=]
+	dbi? ( dev-db/libdbi[static-libs=] )
 	graph? (
-		>=media-libs/libpng-1.5.10
-		>=x11-libs/cairo-1.10.2[svg]
+		>=media-libs/libpng-1.5.10[static-libs=]
+		>=x11-libs/cairo-1.10.2[svg,static-libs=]
 		>=x11-libs/pango-1.28
 	)
 	lua? ( dev-lang/lua[deprecated] )
@@ -96,9 +95,9 @@ src_configure() {
 		$(use_enable rrdcgi) \
 		$(use_enable ruby ruby-site-install) \
 		$(use_enable ruby) \
+		$(use_enable static-libs static) \
 		$(use_enable tcl) \
 		$(use_with tcl tcllib "${EPREFIX}"/usr/$(get_libdir)) \
-		--disable-static \
 		--with-perl-options=INSTALLDIRS=vendor \
 		${myconf[@]}
 }
