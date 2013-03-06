@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/soxr/soxr-0.1.0.ebuild,v 1.3 2013/03/06 11:54:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/soxr/soxr-0.1.0.ebuild,v 1.4 2013/03/06 11:57:57 aballier Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ PATCHES=(
 src_install() {
 	cmake-multilib_src_install
 	if use examples ; then
-		insinto /usr/share/doc/${PF}/examples
-		doins examples/*.[cCh] examples/README
+		dodoc -r examples
+		docompress -x /usr/share/doc/${PF}/examples
 	fi
 }
