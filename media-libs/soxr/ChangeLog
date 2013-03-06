@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/soxr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/soxr/ChangeLog,v 1.2 2013/03/06 01:14:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/soxr/ChangeLog,v 1.3 2013/03/06 11:54:47 aballier Exp $
+
+  06 Mar 2013; Alexis Ballier <aballier@gentoo.org> soxr-0.1.0.ebuild:
+  use cmake-multilib.eclass to get multilib support
 
   06 Mar 2013; Anthony G. Basile <blueness@gentoo.org> soxr-0.1.0.ebuild:
   Keyword ~mips for the lemote yeeloong
