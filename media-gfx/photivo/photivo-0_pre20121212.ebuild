@@ -1,33 +1,38 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/photivo-9999.ebuild,v 1.4 2013/03/07 21:10:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/photivo-0_pre20121212.ebuild,v 1.1 2013/03/07 21:10:14 hwoarang Exp $
 
 EAPI=4
 
-inherit qt4-r2 mercurial
+inherit qt4-r2
 
 DESCRIPTION="Photo processor for RAW and Bitmap images"
 HOMEPAGE="http://www.photivo.org"
-EHG_REPO_URI="https://photivo.googlecode.com/hg/"
-EHG_REVISION="default"
+SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="gimp"
 
 RDEPEND="dev-qt/qtcore:4
 	dev-qt/qtgui:4
-	|| ( media-libs/jpeg:62 media-libs/libjpeg-turbo )
+	virtual/jpeg
+	media-libs/tiff
+	media-libs/libpng
 	media-gfx/exiv2
-	media-libs/cimg
 	media-libs/lcms:2
 	media-libs/lensfun
 	sci-libs/fftw:3.0
 	media-libs/liblqr
 	media-gfx/graphicsmagick[q16,-lcms]
+	media-gfx/greycstoration[lapack]
+	virtual/lapack
+	media-libs/cimg
 	gimp? ( media-gfx/gimp )"
 DEPEND="${RDEPEND}"
+
+S=${WORKDIR}/${PN}-${PV/0_pre/}
 
 src_prepare() {
 	# remove ccache dependency
