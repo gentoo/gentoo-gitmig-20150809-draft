@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.366 2013/03/07 08:24:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.367 2013/03/07 08:26:50 eva Exp $
+
+  07 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
+  Remove unused or redundant USE flag description.
 
   07 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -files/gdm-2.32.0-automagic-libxklavier-support.patch, -files/3.4.1/gdm,
