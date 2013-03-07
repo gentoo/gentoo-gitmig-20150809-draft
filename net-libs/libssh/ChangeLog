@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.73 2013/03/07 18:02:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.74 2013/03/07 18:04:50 ago Exp $
+
+  07 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libssh-0.5.4.ebuild:
+  Stable for x86, wrt bug #460620
 
   07 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libssh-0.5.4.ebuild:
   Stable for amd64, wrt bug #460620
