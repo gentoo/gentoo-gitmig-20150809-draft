@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.181 2013/03/08 22:45:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.182 2013/03/08 22:45:59 ssuominen Exp $
 
 EAPI=4
 
@@ -132,7 +132,7 @@ src_prepare()
 		fi
 
 		# gperf disable if keymaps are not requested wrt bug #452760
-        if ! [[ $(grep -i gperf Makefile.am | wc -l) -eq 27 ]]; then
+	if ! [[ $(grep -i gperf Makefile.am | wc -l) -eq 27 ]]; then
 			eerror "The line count for gperf references failed, see bug 452760"
 			die
 		fi
