@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.183 2013/03/08 22:51:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.184 2013/03/08 23:08:54 ssuominen Exp $
 
 EAPI=4
 
@@ -305,6 +305,7 @@ src_install()
 		install-typelibsDATA
 		install-dist_docDATA
 		libudev-install-hook
+		install-directories-hook
 	)
 
 	if use gudev
@@ -328,6 +329,8 @@ src_install()
 				units/systemd-udev-settle.service"
 		pkgconfiglib_DATA="${pkgconfiglib_DATA}"
 		systemunitdir="$(systemd_get_unitdir)"
+		INSTALL_DIRS='$(sysconfdir)/udev/rules.d \
+				$(sysconfdir)/udev/hwdb.d'
 	)
 	emake DESTDIR="${D}" "${targets[@]}"
 	if use doc
@@ -356,8 +359,6 @@ src_install()
 	dosym /sbin/udevd "$(systemd_get_utildir)"/systemd-udevd
 	find "${ED}/$(systemd_get_unitdir)" -name '*.service' -exec \
 		sed -i -e "/ExecStart/s:/lib/systemd:$(systemd_get_utildir):" {} +
-
-	keepdir /etc/udev/rules.d
 }
 
 pkg_preinst()
