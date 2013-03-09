@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/tt-rss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.15 2013/03/09 10:15:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.16 2013/03/09 10:16:46 hwoarang Exp $
+
+*tt-rss-1.7.1 (09 Mar 2013)
+
+  09 Mar 2013; Markos Chandras <hwoarang@gentoo.org> +tt-rss-1.7.1.ebuild:
+  Version bump. Bug #460876
 
   09 Mar 2013; Markos Chandras <hwoarang@gentoo.org> tt-rss-1.5.10.ebuild,
   tt-rss-1.5.11.ebuild, tt-rss-1.6.1.ebuild, tt-rss-1.6.2.ebuild,
