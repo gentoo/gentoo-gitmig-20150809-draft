@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/liblangtag-0.4.0-r1.ebuild,v 1.2 2013/03/07 11:42:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/liblangtag-0.4.0-r1.ebuild,v 1.3 2013/03/09 18:19:26 scarabeus Exp $
 
 EAPI=5
 
@@ -29,12 +29,15 @@ DEPEND="${RDEPEND}
 # Upstream expect liblangtag to be installed when one runs tests...
 RESTRICT="test"
 
-PATCHES=( "${FILESDIR}"/${P}-module.patch )
+PATCHES=(
+	"${FILESDIR}"/${P}-module.patch
+	"${FILESDIR}"/${P}-arm.patch
+)
 
 src_configure() {
 	local myeconfargs=(
 		$(use_enable introspection)
 		$(use_enable test)
-		)
+	)
 	autotools-utils_src_configure
 }
