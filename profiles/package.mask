@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14540 2013/03/09 23:33:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14541 2013/03/09 23:57:28 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -380,10 +380,6 @@ sys-apps/i2c
 # Unmaintained and replaced by built-in sqlite3 module in Python.
 # Masked for removal in 30 days, bug 452122.
 >=dev-python/pysqlite-2
-
-# Maciej Mrozowski <reavertm@gentoo.org>
-# API change breaks packages, bug 449534.
->=app-text/poppler-0.22.0
 
 # Alexis Ballier <aballier@gentoo.org>
 # Not really compatible with TeX Live 2012, breaks texdoc, produces some non
