@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.48 2013/03/09 13:51:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.49 2013/03/09 13:52:55 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -357,9 +357,6 @@ python_gen_cond_dep() {
 python_copy_sources() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	_python_validate_useflags
-	_python_check_USE_PYTHON
-
 	local MULTIBUILD_VARIANTS
 	_python_obtain_impls
 
@@ -579,6 +576,9 @@ _python_check_USE_PYTHON() {
 # @DESCRIPTION:
 # Set up the enabled implementation list.
 _python_obtain_impls() {
+	_python_validate_useflags
+	_python_check_USE_PYTHON
+
 	MULTIBUILD_VARIANTS=()
 
 	for impl in "${_PYTHON_ALL_IMPLS[@]}"; do
@@ -620,9 +620,6 @@ _python_multibuild_wrapper() {
 # locally, and the former two are exported to the command environment.
 python_foreach_impl() {
 	debug-print-function ${FUNCNAME} "${@}"
-
-	_python_validate_useflags
-	_python_check_USE_PYTHON
 
 	local MULTIBUILD_VARIANTS
 	_python_obtain_impls
@@ -694,8 +691,6 @@ python_export_best() {
 # having a matching shebang will be refused.
 python_replicate_script() {
 	debug-print-function ${FUNCNAME} "${@}"
-
-	_python_validate_useflags
 
 	local suffixes=()
 
