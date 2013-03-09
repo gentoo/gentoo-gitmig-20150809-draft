@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.121 2013/03/09 11:46:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.122 2013/03/09 12:01:02 aballier Exp $
 
 EAPI="4"
 
@@ -138,8 +138,6 @@ src_configure() {
 	cd "${BUILD_DIR}"
 
 	local myconf="${EXTRA_FFMPEG_CONF}"
-	# Set to --enable-version3 if (L)GPL-3 is required
-	local version3=""
 
 	# options to use as use_enable in the foo[:bar] form.
 	# This will feed configure with $(use_enable foo bar)
@@ -158,7 +156,7 @@ src_configure() {
 
 		# Licensing.
 		if use aac || use amr ; then
-			version3=" --enable-version3"
+			myconf="${myconf} --enable-version3"
 		fi
 		if use aacplus || use faac || use fdk ; then
 			myconf="${myconf} --enable-nonfree"
@@ -193,7 +191,7 @@ src_configure() {
 
 	# Decoders
 	ffuse="${ffuse} amr:libopencore-amrwb amr:libopencore-amrnb	jpeg2k:libopenjpeg"
-	use amr && version3=" --enable-version3"
+	use amr && myconf="${myconf} --enable-version3"
 	for i in bluray celt gsm modplug opus rtmp schroedinger speex vorbis vpx; do
 		ffuse="${ffuse} ${i}:lib${i}"
 	done
@@ -227,7 +225,6 @@ src_configure() {
 	# Mandatory configuration
 	myconf="
 		--enable-gpl
-		${version3}
 		--enable-postproc
 		--enable-avfilter
 		--disable-stripping
