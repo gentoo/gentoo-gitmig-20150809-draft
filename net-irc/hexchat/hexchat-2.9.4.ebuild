@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.4.ebuild,v 1.11 2013/03/08 12:30:10 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.4.ebuild,v 1.12 2013/03/09 11:18:42 pinkbyte Exp $
 
 EAPI=5
 
@@ -49,6 +49,11 @@ src_prepare() {
 		sed -e 's:${prefix}/lib/hexchat:${libdir}/hexchat:' \
 			-i configure.ac || die 'sed failed'
 	fi
+
+        # Fix to compile with USE=-gtk when there is no gtk installed          
+        if ! use gtk ; then
+                 sed -i 's/AM_PATH_GTK_2_0//' configure.ac || die 'sed failed'
+        fi
 
 	mkdir "m4" || die "mkdir failed"
 	./autogen.sh || die "autogen.sh failed"
