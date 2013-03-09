@@ -1,16 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.15 2013/03/09 13:47:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198.ebuild,v 1.1 2013/03/09 13:47:44 mgorny Exp $
 
 EAPI=5
-
-#if LIVE
-AUTOTOOLS_AUTORECONF=yes
-EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}/${PN}
-	http://cgit.freedesktop.org/${PN}/${PN}/"
-
-inherit git-2
-#endif
 
 PYTHON_COMPAT=( python2_7 )
 inherit autotools-utils linux-info pam python-single-r1 systemd user
@@ -65,31 +57,13 @@ DEPEND="${COMMON_DEPEND}
 	sys-fs/quota
 	>=sys-kernel/linux-headers-${MINKV}"
 
-#if LIVE
-SRC_URI=
-KEYWORDS=
-
-DEPEND+=" dev-libs/gobject-introspection
-	>=dev-util/gtk-doc-1.18"
-
-pkg_pretend() {
-	ewarn "Please note that the live systemd ebuild is not actively maintained"
-	ewarn "and since the udev split, it is an easy way to get your system broken"
-	ewarn "and unbootable. Please consider using the release ebuilds instead."
-}
-#endif
-
 src_prepare() {
 	# link against external udev.
 	sed -i -e 's:lib\(udev\)\.la:-l\1:' Makefile.am
 
 	local PATCHES=(
-		"${FILESDIR}"/199-0001-Disable-udev-targets.patch
+		"${FILESDIR}"/198-0001-Disable-udev-targets.patch
 	)
-
-#if LIVE
-	gtkdocize --docdir docs/ || die
-#endif
 
 	autotools-utils_src_prepare
 
