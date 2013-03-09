@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/nb-0.8.14.ebuild,v 1.1 2013/03/09 18:19:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/nb-0.8.14.ebuild,v 1.2 2013/03/09 18:23:17 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -32,9 +32,6 @@ src_prepare() {
 		-e '/@include fdl.texi/d' \
 		doc/nbTutorial/nbTutorial.texi || die
 
-for file in $(find . -name configure.ac); do
-	cp -av $file{,.org}
-done
 	epatch "${FILESDIR}"/${PN}-0.8.14-include.patch
 	epatch "${FILESDIR}"/${PN}-0.8.14-configure.patch
 
