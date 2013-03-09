@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.47 2013/03/04 19:28:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.48 2013/03/09 13:51:39 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -348,34 +348,22 @@ python_gen_cond_dep() {
 
 # @FUNCTION: python_copy_sources
 # @DESCRIPTION:
-# Create a single copy of the package sources (${S}) for each enabled
-# Python implementation.
+# Create a single copy of the package sources for each enabled Python
+# implementation.
 #
-# The sources are always copied from S to implementation-specific build
-# directories respecting BUILD_DIR.
+# The sources are always copied from initial BUILD_DIR (or S if unset)
+# to implementation-specific build directory matching BUILD_DIR used by
+# python_foreach_abi().
 python_copy_sources() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	_python_validate_useflags
+	_python_check_USE_PYTHON
 
-	local impl
-	local bdir=${BUILD_DIR:-${S}}
+	local MULTIBUILD_VARIANTS
+	_python_obtain_impls
 
-	debug-print "${FUNCNAME}: bdir = ${bdir}"
-	einfo "Will copy sources from ${S}"
-	# the order is irrelevant here
-	for impl in "${PYTHON_COMPAT[@]}"; do
-		_python_impl_supported "${impl}" || continue
-
-		if use "python_targets_${impl}"
-		then
-			local BUILD_DIR=${bdir%%/}-${impl}
-
-			einfo "${impl}: copying to ${BUILD_DIR}"
-			debug-print "${FUNCNAME}: [${impl}] cp ${S} => ${BUILD_DIR}"
-			cp -pr "${S}" "${BUILD_DIR}" || die
-		fi
-	done
+	multibuild_copy_sources
 }
 
 # @FUNCTION: _python_check_USE_PYTHON
