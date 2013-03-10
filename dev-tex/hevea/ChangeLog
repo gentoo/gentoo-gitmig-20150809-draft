@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/hevea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.37 2013/03/10 09:51:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.38 2013/03/10 09:55:02 aballier Exp $
+
+*hevea-2.03 (10 Mar 2013)
+
+  10 Mar 2013; Alexis Ballier <aballier@gentoo.org> +hevea-2.03.ebuild:
+  version bump
 
   10 Mar 2013; Alexis Ballier <aballier@gentoo.org> hevea-2.02.ebuild:
   eapi5: slot dep on ocaml
