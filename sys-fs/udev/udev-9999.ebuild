@@ -1,10 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.188 2013/03/10 17:17:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.189 2013/03/10 17:28:25 ssuominen Exp $
 
 EAPI=4
 
-KV_min=2.6.32
+# accept4() patch is only in non-live version
+if [[ ${PV} = 9999* ]]
+then
+	KV_min=2.6.39
+else
+	KV_min=2.6.32
+fi
 
 inherit autotools eutils linux-info multilib systemd toolchain-funcs versionator
 
