@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/obrowser
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/obrowser/ChangeLog,v 1.9 2013/03/10 10:52:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/obrowser/ChangeLog,v 1.10 2013/03/10 10:53:19 aballier Exp $
+
+  10 Mar 2013; Alexis Ballier <aballier@gentoo.org> obrowser-1.1.1.ebuild:
+  define subslot for real this time
 
   10 Mar 2013; Alexis Ballier <aballier@gentoo.org> obrowser-1.1.1.ebuild:
   eapi5: define subslot, slot dep on ocaml packages, remove useless || die
@@ -36,4 +39,3 @@
   07 Nov 2010; Alexis Ballier <aballier@gentoo.org> +obrowser-1.1.ebuild,
   +metadata.xml:
   initial import, ebuild by me
-
