@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.1.7.ebuild,v 1.1 2013/03/10 13:50:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.1.7.ebuild,v 1.2 2013/03/10 14:12:05 ssuominen Exp $
 
 EAPI=5
 
@@ -48,6 +48,10 @@ RDEPEND="dev-libs/boost[python?]
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${P}/src
+
+pkg_setup() {
+	use python && python-single-r1_pkg_setup
+}
 
 src_prepare() {
 	# remove bundled code to make it build
