@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.78 2013/03/10 15:38:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.79 2013/03/10 15:48:41 ssuominen Exp $
+
+*procps-3.3.6 (10 Mar 2013)
+
+  10 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> +procps-3.3.6.ebuild,
+  +files/procps-3.3.6-error_at_line.patch:
+  Version bump wrt #461272 by Roman Žilka
 
   10 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
   -files/3.2.5-top-sort.patch, -procps-3.2.8.ebuild, -procps-3.2.8-r1.ebuild,
