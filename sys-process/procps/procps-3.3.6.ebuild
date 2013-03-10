@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.6.ebuild,v 1.1 2013/03/10 15:48:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.6.ebuild,v 1.2 2013/03/10 15:53:20 ssuominen Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ inherit eutils toolchain-funcs
 DESCRIPTION="standard informational utilities and process-handling tools"
 # http://packages.debian.org/sid/procps
 HOMEPAGE="http://procps.sourceforge.net/ http://gitorious.org/procps"
-# SRC_URI="mirror://debian/pool/main/p/${PN}/${PN}_${PV}.orig.tar.xz
+# SRC_URI="mirror://debian/pool/main/p/${PN}/${PN}_${PV}.orig.tar.xz"
 SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/${PN}-ng/${PN}-ng-${PV}.tar.xz/0a050d9be531921db3cd38f1371e73e3/${PN}-ng-${PV}.tar.xz"
 
 LICENSE="GPL-2"
