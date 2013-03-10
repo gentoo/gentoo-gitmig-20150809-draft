@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.1.7.ebuild,v 1.2 2013/03/10 14:12:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.1.7.ebuild,v 1.3 2013/03/10 14:25:57 ssuominen Exp $
 
 EAPI=5
 
@@ -62,7 +62,7 @@ src_prepare() {
 	# https://github.com/OpenImageIO/oiio/issues/404
 	use qt4 || sed -i -e '/list.*APPEND.*cli_tools.*iv/d' doc/CMakeLists.txt
 
-	python_fix_shebang .
+	use python && python_fix_shebang .
 }
 
 src_configure() {
