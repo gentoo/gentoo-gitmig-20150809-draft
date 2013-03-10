@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/netselect
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.41 2013/03/10 20:06:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.42 2013/03/10 20:30:49 jer Exp $
+
+  10 Mar 2013; Jeroen Roovers <jer@gentoo.org> netselect-0.3-r3.ebuild,
+  +files/netselect-0.3-glibc.patch:
+  Do not inject -g. size_t -> socklen_t.
 
 *netselect-0.3-r3 (10 Mar 2013)
 

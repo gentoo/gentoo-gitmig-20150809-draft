@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/netselect-0.3-r3.ebuild,v 1.1 2013/03/10 20:06:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/netselect-0.3-r3.ebuild,v 1.2 2013/03/10 20:30:49 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs
@@ -18,11 +18,12 @@ S=${WORKDIR}/${PN}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-bsd.patch"
+	epatch "${FILESDIR}/${P}-glibc.patch"
 
 	sed -i \
 		-e "s:PREFIX =.*:PREFIX = ${ED}usr:" \
-		-e "s:CFLAGS =.*:CFLAGS = -Wall -I. -g ${CFLAGS}:" \
-		-e "s:LDFLAGS =.*:LDFLAGS = -g ${LDFLAGS}:" \
+		-e "s:CFLAGS =.*:CFLAGS = -Wall -I. ${CFLAGS}:" \
+		-e "s:LDFLAGS =.*:LDFLAGS = ${LDFLAGS}:" \
 		-e '23,27d' \
 		-e '34d' \
 		Makefile || die
