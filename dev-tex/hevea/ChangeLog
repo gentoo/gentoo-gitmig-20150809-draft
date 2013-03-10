@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/hevea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.35 2013/02/04 12:54:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.36 2013/03/10 09:49:09 aballier Exp $
+
+  10 Mar 2013; Alexis Ballier <aballier@gentoo.org> -hevea-1.10-r1.ebuild:
+  remove old
 
 *hevea-2.02 (04 Feb 2013)
 
