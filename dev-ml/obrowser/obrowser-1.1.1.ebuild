@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/obrowser/obrowser-1.1.1.ebuild,v 1.4 2012/10/10 12:43:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/obrowser/obrowser-1.1.1.ebuild,v 1.5 2013/03/10 10:52:31 aballier Exp $
 
-EAPI=3
+EAPI=5
 
 inherit findlib eutils
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/ocaml-3.12.0
-	dev-ml/lwt"
+RDEPEND=">=dev-lang/ocaml-3.12.0:=
+	dev-ml/lwt:="
 DEPEND="${RDEPEND}
 	app-arch/sharutils"
 
@@ -26,11 +26,11 @@ src_prepare() {
 
 src_compile() {
 	touch .check_version
-	emake -j1 EXAMPLES_TARGETS="" || die
+	emake -j1 EXAMPLES_TARGETS=""
 }
 
 src_install() {
 	findlib_src_preinst
-	OCAMLPATH=${OCAMLFIND_DESTDIR} emake DESTDIR="${D}" install || die
-	dodoc README.TXT || die
+	OCAMLPATH=${OCAMLFIND_DESTDIR} emake DESTDIR="${D}" install
+	dodoc README.TXT
 }
