@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.188 2013/03/10 17:17:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-198-r1.ebuild,v 1.1 2013/03/10 17:17:17 ssuominen Exp $
 
 EAPI=4
 
@@ -13,12 +13,13 @@ then
 	EGIT_REPO_URI="git://anongit.freedesktop.org/systemd/systemd"
 	inherit git-2
 else
-	patchset=
+	patchset=1
 	SRC_URI="http://www.freedesktop.org/software/systemd/systemd-${PV}.tar.xz"
 	if [[ -n "${patchset}" ]]
 		then
 				SRC_URI="${SRC_URI}
-					http://dev.gentoo.org/~williamh/dist/${P}-patches-${patchset}.tar.bz2"
+					http://dev.gentoo.org/~ssuominen/${P}-patches-${patchset}.tar.xz
+					http://dev.gentoo.org/~williamh/dist/${P}-patches-${patchset}.tar.xz"
 			fi
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 fi
