@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-198-r1.ebuild,v 1.3 2013/03/11 12:04:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-198-r1.ebuild,v 1.4 2013/03/11 12:07:22 ssuominen Exp $
 
 EAPI=4
 
@@ -200,7 +200,7 @@ src_prepare()
 		sed -i -e '/error.*secure_getenv/s:.*:#define secure_getenv(x) NULL:' src/shared/missing.h || die
 	fi
 
-	# This will link udevd(8) to systemd-udevd.service(8) manpage
+	# link udevd(8) to systemd-udevd.service(8) manpage
 	echo '.so systemd-udevd.service.8' > "${T}"/udevd.8
 }
 
@@ -373,7 +373,7 @@ src_install()
 	find "${ED}/$(systemd_get_unitdir)" -name '*.service' -exec \
 		sed -i -e "/ExecStart/s:/lib/systemd:$(systemd_get_utildir):" {} +
 
-	# This is linking to systemd-udevd.8, see src_prepare()
+	# see src_prepare() where this is created
 	doman "${T}"/udevd.8
 }
 
