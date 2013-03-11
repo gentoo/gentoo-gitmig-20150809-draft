@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.193 2013/03/11 13:36:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.194 2013/03/11 13:45:54 ssuominen Exp $
 
 EAPI=4
 
@@ -471,9 +471,9 @@ pkg_postinst()
 	ewarn "and the new predictable network interface names are used by default:"
 	ewarn "http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames"
 	ewarn
-	ewarn "You can use the following command before booting to get the required"
-	ewarn "information for determining the new interface name:"
-	ewarn "# udevadm test-builtin net_id /sys/class/net/ifname 2> /dev/null"
+	ewarn "Example command to get the information for the new interface name before booting"
+	ewarn "(replace ifname with, for example, eth0):"
+	ewarn "# udevadm test-builtin net_id /sys/class/net/<ifname> 2> /dev/null"
 
 	ewarn
 	ewarn "You need to restart udev as soon as possible to make the upgrade go"
