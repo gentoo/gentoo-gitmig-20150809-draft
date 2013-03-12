@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-qxl/xf86-video-qxl-0.0.17-r1.ebuild,v 1.1 2012/08/08 13:33:10 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-qxl/xf86-video-qxl-0.1.0-r1.ebuild,v 1.1 2013/03/12 16:36:30 chithanh Exp $
 
-EAPI=4
+EAPI=5
 inherit xorg-2
 
 DESCRIPTION="QEMU QXL paravirt video driver"
@@ -14,11 +14,7 @@ RDEPEND="xspice? ( app-emulation/spice )
 	x11-base/xorg-server[-minimal]"
 DEPEND="${RDEPEND}
 	x11-proto/xf86dgaproto
-	>=app-emulation/spice-protocol-0.8.1"
-
-PATCHES=(
-	"${FILESDIR}"/${P}-xorg-server-1.13.patch
-)
+	>=app-emulation/spice-protocol-0.12.0"
 
 pkg_setup() {
 	xorg-2_pkg_setup
@@ -26,3 +22,7 @@ pkg_setup() {
 		$(use_enable xspice)
 	)
 }
+
+PATCHES=(
+	"${FILESDIR}"/${P}-remove-mibstore_h.patch
+)
