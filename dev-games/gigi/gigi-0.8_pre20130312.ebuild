@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/gigi/gigi-0.8_pre20120910.ebuild,v 1.1 2012/09/11 15:57:21 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/gigi/gigi-0.8_pre20130312.ebuild,v 1.1 2013/03/12 16:59:11 tomka Exp $
 
 EAPI=4
 
@@ -46,14 +46,14 @@ CMAKE_USE_DIR="${S}"
 # For segfaults during compile see  https://qa.mandriva.com/show_bug.cgi?id=62558"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-docdir.patch
+	epatch "${FILESDIR}"/${PN}-0.8_pre20120910-docdir.patch
 
 	# use systems ltdl
 	rm -r "${CMAKE_USE_DIR}"/libltdl || die
-	epatch "${FILESDIR}"/${P}-libtool.patch
+	epatch "${FILESDIR}"/${PN}-0.8_pre20120910-libtool.patch
 
 	# fix devil (apply after libtool.patch)
-	epatch "${FILESDIR}"/${P}-devil.patch
+	epatch "${FILESDIR}"/${PN}-0.8_pre20120910-devil.patch
 
 	python_convert_shebangs 2 GG/gen_signals.py
 }
