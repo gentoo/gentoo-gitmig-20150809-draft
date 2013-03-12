@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/freeorion-0.4.2_pre20120910-r1.ebuild,v 1.2 2013/02/07 22:17:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/freeorion-0.4.3_pre20130312.ebuild,v 1.1 2013/03/12 16:59:50 tomka Exp $
 
 EAPI=4
 
@@ -8,9 +8,11 @@ PYTHON_DEPEND="2"
 
 inherit cmake-utils python games
 
+myPN="FreeOrion"
+
 DESCRIPTION="A free turn-based space empire and galactic conquest game"
 HOMEPAGE="http://www.freeorion.org"
-SRC_URI="http://dev.gentoo.org/~tomka/files/FreeOrion-${PV}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~tomka/files/${P}.tar.bz2"
 
 LICENSE="GPL-2 CC-BY-SA-3.0"
 SLOT="0"
@@ -34,7 +36,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-S="${WORKDIR}/FreeOrion-${PV}/"
+S="${WORKDIR}/${myPN}"
 CMAKE_USE_DIR="${S}"
 CMAKE_VERBOSE="1"
 
@@ -56,6 +58,9 @@ src_prepare() {
 		echo "Plugin=Plugin_CgProgramManager" \
 			>> "${CMAKE_USE_DIR}"/ogre_plugins.cfg || die
 	fi
+
+	# set revision for display in game -- update on bump!
+	sed -i -e 's/???/5854/' CMakeLists.txt
 }
 
 src_configure() {
@@ -73,9 +78,6 @@ src_compile() {
 src_install() {
 	# data files
 	rm "${CMAKE_USE_DIR}"/default/COPYING || die
-	# get rid of .svn (remove from next snapshot!)
-	find "${CMAKE_USE_DIR}"default/ -depth -type d -name .svn \
-		-exec rm -rf '{}' \; || die
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r "${CMAKE_USE_DIR}"/default || die
 
