@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libmwaw/libmwaw-0.1.7.ebuild,v 1.1 2013/03/13 10:07:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libmwaw/libmwaw-0.1.7.ebuild,v 1.2 2013/03/13 10:09:57 scarabeus Exp $
 
 EAPI=5
 
 inherit base eutils
 
-DESCRIPTION="Library parsing the visio documents"
+DESCRIPTION="Library parsing many pre-OSX MAC text formats"
 HOMEPAGE="http://sourceforge.net/p/libmwaw/wiki/Home/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
