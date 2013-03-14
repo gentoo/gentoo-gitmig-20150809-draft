@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/worker
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.104 2013/03/14 07:56:09 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.105 2013/03/14 07:57:12 pinkbyte Exp $
+
+  14 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> worker-2.18.1.ebuild,
+  worker-2.19.6.ebuild:
+  Fix HOMEPAGE and SRC_URI
 
 *worker-2.19.6 (14 Mar 2013)
 

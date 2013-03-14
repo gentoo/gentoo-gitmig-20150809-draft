@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.19.6.ebuild,v 1.1 2013/03/14 07:56:09 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.19.6.ebuild,v 1.2 2013/03/14 07:57:12 pinkbyte Exp $
 
 EAPI=5
 
 inherit eutils
 
 DESCRIPTION="Worker Filemanager: Amiga Directory Opus 4 clone"
-HOMEPAGE="http://www.boomerangsworld.de/worker/"
+HOMEPAGE="http://www.boomerangsworld.de/cms/worker/"
 SRC_URI="http://www.boomerangsworld.de/cms/worker/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
