@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.2.2.ebuild,v 1.11 2013/03/15 12:42:15 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.2.2.ebuild,v 1.12 2013/03/15 12:46:35 pinkbyte Exp $
 
 EAPI=4
 
@@ -81,7 +81,7 @@ src_configure() {
 
 	use qt4 || myconf="${myconf} --without-qt4"
 
-	tc-export CC
+	tc-export AR CC
 	sh config.sh ${myconf} || die "Configure failed"
 
 	for i in "${S}" "${S}"/mpsl "${S}"/mpdm;do
