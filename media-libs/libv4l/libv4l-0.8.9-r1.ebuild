@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-0.8.9-r1.ebuild,v 1.1 2013/03/16 16:53:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-0.8.9-r1.ebuild,v 1.2 2013/03/16 16:54:59 ssuominen Exp $
 
 EAPI=5
-inherit eutils linux-info toolchain-funcs multilib-minimal
+inherit eutils linux-info multilib toolchain-funcs multilib-minimal
 
 MY_P=v4l-utils-${PV}
 
