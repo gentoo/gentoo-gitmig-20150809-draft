@@ -3,6 +3,7 @@
 <pkgmetadata>
   <herd>xfce</herd>
   <herd>media-optical</herd>
+  <herd>proxy-maintainers</herd>
   <upstream>
     <maintainer>
       <email>mario@xfce.org</email>
