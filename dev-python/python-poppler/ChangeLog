@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-poppler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/ChangeLog,v 1.25 2013/03/17 17:02:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/ChangeLog,v 1.26 2013/03/17 17:06:03 floppym Exp $
+
+  17 Mar 2013; Mike Gilbert <floppym@gentoo.org>
+  python-poppler-0.12.1-r4.ebuild:
+  Remove unnecessary die.
 
   17 Mar 2013; Mike Gilbert <floppym@gentoo.org>
   python-poppler-0.12.1-r4.ebuild:
