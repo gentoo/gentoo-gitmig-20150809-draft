@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r6.ebuild,v 1.8 2012/10/19 10:36:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r6.ebuild,v 1.9 2013/03/17 14:46:03 jlec Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2"
 
-inherit eutils fortran-2 prefix python toolchain-funcs
+inherit eutils fortran-2 multilib prefix python toolchain-funcs
 
 MY_PV="${PV//./_}"
 

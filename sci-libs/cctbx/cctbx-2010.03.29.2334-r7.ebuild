@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r7.ebuild,v 1.1 2013/03/17 14:44:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r7.ebuild,v 1.2 2013/03/17 14:46:03 jlec Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 
 PYTHON_DEPEND="2"
 
-inherit eutils fortran-2 prefix python-single-r1 toolchain-funcs
+inherit eutils fortran-2 multilib prefix python-single-r1 toolchain-funcs
 
 MY_PV="${PV//./_}"
 
