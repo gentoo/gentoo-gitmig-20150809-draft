@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.21.ebuild,v 1.3 2013/03/17 19:11:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.21.ebuild,v 1.4 2013/03/17 19:12:02 ago Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/ijbswa/${P%_*}-${PRIVOXY_STATUS}-src.tar.gz"
 
 IUSE="selinux threads zlib"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 LICENSE="GPL-2"
 
 DEPEND="dev-libs/libpcre
