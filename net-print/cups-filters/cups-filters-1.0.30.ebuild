@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999-r1.ebuild,v 1.2 2013/03/17 15:39:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.30.ebuild,v 1.1 2013/03/17 15:39:45 dilfridge Exp $
 
 EAPI=5
 
@@ -42,7 +42,10 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
-PATCHES=( "${FILESDIR}/${PN}-1.0.29-openrc.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-1.0.29-openrc.patch"
+	"${FILESDIR}/${PN}-1.0.30-noavahi.patch"
+)
 
 src_prepare() {
 	base_src_prepare
