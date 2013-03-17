@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.82 2013/03/17 19:16:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.83 2013/03/17 19:22:02 ago Exp $
+
+  17 Mar 2013; Agostino Sarubbo <ago@gentoo.org> -privoxy-3.0.12.ebuild,
+  -privoxy-3.0.13_beta.ebuild, -privoxy-3.0.14_beta.ebuild,
+  -privoxy-3.0.15_beta.ebuild, -privoxy-3.0.16.ebuild, -privoxy-3.0.17.ebuild,
+  -privoxy-3.0.19.ebuild:
+  Remove old
 
   17 Mar 2013; Agostino Sarubbo <ago@gentoo.org> privoxy-3.0.21.ebuild:
   Stable for sparc, wrt bug #461526
