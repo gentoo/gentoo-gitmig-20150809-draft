@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/suse-build-2013.02.27.ebuild,v 1.1 2013/03/18 10:18:58 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/suse-build-2013.02.27.ebuild,v 1.2 2013/03/18 10:23:04 miska Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ HOMEPAGE="https://build.opensuse.org/package/show?package=build&project=openSUSE
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="symlink"
-[[ "${PV}" == "9999" ]] || KEYWORDS="~amd64 ~x86"
+[[ "${PV}" == "9999" ]] || KEYWORDS="amd64 x86"
 
 RDEPEND="
 	virtual/perl-Digest-MD5
