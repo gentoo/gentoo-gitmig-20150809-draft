@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/suse-build-9999.ebuild,v 1.6 2013/03/18 10:18:58 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/suse-build-2013.02.27.ebuild,v 1.1 2013/03/18 10:18:58 miska Exp $
 
 EAPI=5
 
@@ -45,11 +45,11 @@ src_install() {
 	cd "${ED}"/usr
 	find bin -type l | while read i; do
 		mv "${i}" "${i/bin\//bin/suse-}"
-		use symlink && dosym "${i/bin\//suse-}" "/usr/${i}"
+		use !symlink || dosym "${i/bin\//suse-}" "/usr/${i}"
 	done
 	find share/man/man1 -type f | while read i; do
 		mv "${i}" "${i/man1\//man1/suse-}"
-		use symlink && dosym "${i/man1\//suse-}" "/usr/${i}"
+		use !symlink || dosym "${i/man1\//suse-}" "/usr/${i}"
 	done
 	find . -type f -exec sed -i 's|/usr/lib/build|/usr/libexec/suse-build|' {} +
 }
