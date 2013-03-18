@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/argh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argh/ChangeLog,v 1.10 2013/03/18 09:15:19 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argh/ChangeLog,v 1.11 2013/03/18 09:16:18 xarthisius Exp $
+
+  18 Mar 2013; Kacper Kowalik <xarthisius@gentoo.org> -argh-0.15.1.ebuild,
+  -argh-0.16.0.ebuild, -argh-0.17.2.ebuild:
+  drop old
 
 *argh-0.23.1 (18 Mar 2013)
 
