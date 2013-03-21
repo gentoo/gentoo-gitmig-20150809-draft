@@ -1,12 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.0_alpha6.ebuild,v 1.2 2013/03/21 13:33:45 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.0_beta1.ebuild,v 1.1 2013/03/21 13:33:45 olemarkus Exp $
 
 EAPI=5
 
 inherit eutils autotools flag-o-matic versionator depend.apache apache-module db-use libtool
 
-FPM_VERSION="builtin"
 EXPECTED_TEST_FAILURES=""
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
@@ -42,6 +41,7 @@ PHP_PV="${PHP_PV/_alpha/alpha}"
 PHP_PV="${PHP_PV/_beta/beta}"
 PHP_RELEASE="php"
 [[ ${PV} == ${PV/_alpha/} ]] || PHP_RELEASE="php-pre"
+[[ ${PV} == ${PV/_beta/} ]] || PHP_RELEASE="php-pre"
 [[ ${PV} == ${PV/_rc/} ]] || PHP_RELEASE="php-pre"
 PHP_P="${PN}-${PHP_PV}"
 
@@ -49,7 +49,7 @@ PHP_PATCHSET_LOC="olemarkus"
 
 PHP_SRC_URI="$(php_get_uri "${PHP_RELEASE}" "${PHP_P}.tar.bz2")"
 
-PHP_PATCHSET="0"
+PHP_PATCHSET="1"
 PHP_PATCHSET_URI="
 	$(php_get_uri "${PHP_PATCHSET_LOC}" "php-patchset-${SLOT}-r${PHP_PATCHSET}.tar.bz2")"
 
@@ -80,7 +80,7 @@ IUSE="${IUSE} bcmath berkdb bzip2 calendar cdb cjk
 	flatfile ftp gd gdbm gmp +hash +iconv imap inifile
 	intl iodbc ipv6 +json kerberos ldap ldap-sasl libedit mhash
 	mssql mysql mysqlnd mysqli nls
-	oci8-instant-client odbc pcntl pdo +phar +posix postgres qdbm
+	oci8-instant-client odbc opcache pcntl pdo +phar +posix postgres qdbm
 	readline recode selinux +session sharedmem
 	+simplexml snmp soap sockets spell sqlite ssl
 	sybase-ct sysvipc tidy +tokenizer truetype unicode wddx
@@ -402,6 +402,7 @@ src_configure() {
 	$(use_enable pcntl pcntl )
 	$(use_enable phar phar )
 	$(use_enable pdo pdo )
+	$(use_enable opcache opcache )
 	$(use_with postgres pgsql "${EPREFIX}"/usr)
 	$(use_enable posix posix )
 	$(use_with spell pspell "${EPREFIX}"/usr)
