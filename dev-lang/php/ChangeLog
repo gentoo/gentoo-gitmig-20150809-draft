@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.675 2013/03/21 13:33:45 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.676 2013/03/21 13:34:38 olemarkus Exp $
+
+  21 Mar 2013; Ole Markus With <olemarkus@gentoo.org> -php-5.5.0_alpha2.ebuild,
+  -php-5.5.0_alpha4.ebuild, -php-5.5.0_alpha6.ebuild:
+  Removing php 5.5 alphas
 
 *php-5.5.0_beta1 (21 Mar 2013)
 
