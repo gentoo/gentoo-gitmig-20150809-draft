@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/mkxf86config
-# Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.42 2013/01/31 01:11:03 zerochaos Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.43 2013/03/22 10:26:47 ssuominen Exp $
+
+  22 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
+  mkxf86config-0.9.10.ebuild:
+  Use gentoo.org as HOMEPAGE and SRC_URI wrt #416169. Revert keywording back to
+  ~arch to reflect current status wrt eg. bug #220121
 
   31 Jan 2013; Rick Farina <zerochaos@gentoo.org> metadata.xml:
   I am taking maintainership of mkxf86config

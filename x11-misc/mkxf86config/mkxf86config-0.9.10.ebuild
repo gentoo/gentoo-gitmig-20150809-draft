@@ -1,16 +1,16 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.9.10.ebuild,v 1.4 2008/09/04 12:53:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.9.10.ebuild,v 1.5 2013/03/22 10:26:47 ssuominen Exp $
 
-inherit eutils
+EAPI=5
 
-DESCRIPTION="xorg-x11 configuration builder - used only on LiveCD"
-HOMEPAGE="http://wolf31o2.org"
-SRC_URI="http://wolf31o2.org/sources/${PN}/${P}.tar.bz2"
+DESCRIPTION="X.org (X11) configuration builder for LiveCDs"
+HOMEPAGE="http://www.gentoo.org/"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ia64 ~mips ppc x86"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~x86"
 IUSE=""
 
 RDEPEND="!mips? ( sys-apps/hwsetup )"
@@ -22,14 +22,14 @@ pkg_setup() {
 }
 
 src_install() {
+	dosbin ${PN}.sh
+
 	insinto /etc/X11
-	if use mips
-	then
+	if use mips; then
 		doins xorg.conf.impact xorg.conf.newport xorg.conf.o2-fbdev
 	else
 		doins xorg.conf.in
 	fi
-	exeinto /usr/sbin
-	doexe mkxf86config.sh
-	newinitd "${FILESDIR}"/mkxf86config.initd mkxf86config
+
+	newinitd "${FILESDIR}"/${PN}.initd ${PN}
 }
