@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14572 2013/03/22 20:50:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14573 2013/03/22 20:53:12 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -223,12 +223,6 @@ dev-util/ciabot-svn
 # Uses deprecated version of dev-db/sqlite.
 # Removal in 30 days.
 dev-python/pysqlite:0
-
-# Dion Moult <moult@gentoo.org> (23 Feb 2013)
-# Crashing with promises for a next version which never came
-# See bug #457832
-# Masked for removal in 30 days, on 2013-03-23
-net-misc/wxdfast
 
 # Jeroen Roovers <jer@gentoo.org> (22 Feb 2013)
 # Masked until bug #456788 is fixed.
