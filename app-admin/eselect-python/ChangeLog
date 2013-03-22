@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.66 2013/03/22 03:09:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.67 2013/03/22 03:25:53 vapier Exp $
+
+  22 Mar 2013; Mike Frysinger <vapier@gentoo.org>
+  eselect-python-99999999.ebuild:
+  Update to git and simplify wrapper selection #441008 by Michał Górny.
 
   22 Mar 2013; Mike Frysinger <vapier@gentoo.org>
   eselect-python-20091230.ebuild, eselect-python-20100321.ebuild,
