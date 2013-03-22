@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14574 2013/03/22 20:55:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14575 2013/03/22 20:59:25 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -360,10 +360,6 @@ dev-lang/ruby-enterprise
 # Dead since 2003, doesn't work with journaling filesystems.
 # Also collides with dev-util/smem (#288721). Removal in a month.
 app-misc/secure-delete
-
-# Pacho Ramos <pacho@gentoo.org>
-# No upstream, doesn't work well (#350559). Removal in a month.
-app-misc/ccal
 
 # Michał Górny <mgorny@gentoo.org>
 # Unmaintained and replaced by built-in sqlite3 module in Python.
