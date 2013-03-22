@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14573 2013/03/22 20:53:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14574 2013/03/22 20:55:49 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -364,10 +364,6 @@ app-misc/secure-delete
 # Pacho Ramos <pacho@gentoo.org>
 # No upstream, doesn't work well (#350559). Removal in a month.
 app-misc/ccal
-
-# Pacho Ramos <pacho@gentoo.org>
-# It's for kernel-2.4 only (#450594). Removal in a month.
-sys-apps/i2c
 
 # Michał Górny <mgorny@gentoo.org>
 # Unmaintained and replaced by built-in sqlite3 module in Python.
