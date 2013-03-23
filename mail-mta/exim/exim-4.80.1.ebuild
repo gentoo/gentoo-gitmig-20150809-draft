@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.1.ebuild,v 1.11 2013/02/28 17:49:32 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.1.ebuild,v 1.12 2013/03/23 17:35:15 grobian Exp $
 
 EAPI="3"
 
@@ -354,5 +354,5 @@ pkg_postinst() {
 	einfo "Exim maintains some db files under its spool directory that need"
 	einfo "cleaning from time to time.  (${EROOT}var/spool/exim/db)"
 	einfo "Please use the exim_tidydb tool as documented in the Exim manual:"
-	einfo "http://www.exim.org/exim-html-current/doc/html/spec_html/ch50.html#SECThindatmai"
+	einfo "http://www.exim.org/exim-html-current/doc/html/spec_html/ch-exim_utilities.html#SECThindatmai"
 }
