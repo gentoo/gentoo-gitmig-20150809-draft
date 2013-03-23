@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/office-ext-r1.eclass,v 1.1 2013/03/23 10:16:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/office-ext-r1.eclass,v 1.2 2013/03/23 10:19:39 scarabeus Exp $
 
 # @ECLASS: office-ext-r1.eclass
 # @MAINTAINER:
@@ -28,7 +28,7 @@ inherit eutils multilib
 # @CODE
 if [[ ${OFFICE_REQ_USE} ]]; then
 	# Append the brackets for the depend bellow
-	PYTHON_REQ_USE="[${OFFICE_REQ_USE}]"
+	OFFICE_REQ_USE="[${OFFICE_REQ_USE}]"
 fi
 
 # @ECLASS-VARIABLE: OFFICE_IMPLEMENTATIONS
