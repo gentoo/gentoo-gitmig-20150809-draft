@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.204 2013/03/23 07:05:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-198-r5.ebuild,v 1.1 2013/03/23 07:05:24 ssuominen Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ if [[ ${PV} = 9999* ]]; then
 	EGIT_REPO_URI="git://anongit.freedesktop.org/systemd/systemd"
 	inherit git-2
 else
-	patchset=
+	patchset=4
 	SRC_URI="http://www.freedesktop.org/software/systemd/systemd-${PV}.tar.xz"
 	if [[ -n "${patchset}" ]]; then
 				SRC_URI="${SRC_URI}
@@ -32,7 +32,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="acl doc firmware-loader gudev hwdb introspection keymap +kmod +openrc selinux static-libs"
+IUSE="acl doc gudev hwdb introspection keymap +kmod +openrc selinux static-libs"
 
 RESTRICT="test"
 
@@ -236,11 +236,6 @@ src_configure() {
 	if use introspection; then
 		econf_args+=(
 			--enable-introspection=$(usex introspection)
-		)
-	fi
-	if use firmware-loader; then
-		econf_args+=(
-			--with-firmware-path="/lib/firmware/updates:/lib/firmware"
 		)
 	fi
 	econf "${econf_args[@]}"
