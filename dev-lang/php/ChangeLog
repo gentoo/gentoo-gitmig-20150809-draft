@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.687 2013/03/23 19:44:45 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.688 2013/03/23 19:45:32 olemarkus Exp $
+
+  23 Mar 2013; Ole Markus With <olemarkus@gentoo.org> metadata.xml:
+  Removing suhosin USE flag description from metadata.xml
 
 *php-5.4.13-r2 (23 Mar 2013)
 *php-5.5.0_beta1-r2 (23 Mar 2013)
