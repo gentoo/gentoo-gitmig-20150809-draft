@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/office-ext-r1.eclass,v 1.2 2013/03/23 10:19:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/office-ext-r1.eclass,v 1.3 2013/03/23 10:24:42 scarabeus Exp $
 
 # @ECLASS: office-ext-r1.eclass
 # @MAINTAINER:
@@ -61,13 +61,7 @@ IUSE=""
 RDEPEND=""
 
 for i in ${OFFICE_IMPLEMENTATIONS[@]}; do
-	# Set default on for the libreoffice implementation.
-	# Or if we have just one impl set it also on enabled.
-	if [[ ${i} == libreoffice || ${#OFFICE_IMPLEMENTATIONS[@]} == 1 ]]; then
-		IUSE+=" +office_implementation_${i}"
-	else
-		IUSE+=" office_implementation_${i}"
-	fi
+	IUSE+=" office_implementation_${i}"
 	RDEPEND+="
 		office_implementation_${i}? (
 			|| (
