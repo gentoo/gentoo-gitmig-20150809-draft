@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-99999999.ebuild,v 1.9 2013/03/24 19:32:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-99999999.ebuild,v 1.10 2013/03/24 19:50:36 dilfridge Exp $
 
 EAPI="4"
 
@@ -36,6 +36,7 @@ src_unpack() {
 	tar zxf "${WORKDIR}/${PN}.tar.gz"
 
 	epatch "${FILESDIR}/${PN}-udev.patch"
+	epatch "${FILESDIR}/${PN}-usbbackend.patch"
 
 	cd "${S}"
 
