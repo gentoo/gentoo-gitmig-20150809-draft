@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/udev.eclass,v 1.10 2013/03/24 15:50:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/udev.eclass,v 1.11 2013/03/24 15:52:01 ssuominen Exp $
 
 # @ECLASS: udev.eclass
 # @MAINTAINER:
@@ -101,7 +101,7 @@ udev_newrules() {
 
 # @FUNCTION: udev_reload
 # @DESCRIPTION:
-# Execute udevadm control --reload to reload rules and databases
+# Run udevadm control --reload to refresh rules and databases
 udev_reload() {
 	if [[ ${ROOT} != "" ]] && [[ ${ROOT} != "/" ]]; then
 		return 0
