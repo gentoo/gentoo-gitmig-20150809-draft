@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.6.ebuild,v 1.13 2013/03/24 20:22:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.6.ebuild,v 1.14 2013/03/24 20:29:48 vapier Exp $
 
 EAPI="4"
 
@@ -109,7 +109,9 @@ src_install() {
 	for f in nfs nfsmount rpc.statd ${list} ; do
 		newinitd "${FILESDIR}"/${f}.initd ${f}
 	done
-	newconfd "${FILESDIR}"/nfs.confd nfs
+	for f in nfs nfsmount ; do
+		newconfd "${FILESDIR}"/${f}.confd ${f}
+	done
 	sed -i \
 		-e "/^NFS_NEEDED_SERVICES=/s:=.*:=\"${opt_need}\":" \
 		"${ED}"/etc/conf.d/nfs || die #234132
