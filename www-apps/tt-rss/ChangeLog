@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/tt-rss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.19 2013/03/24 10:22:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.20 2013/03/24 10:23:19 scarabeus Exp $
+
+  24 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> tt-rss-1.7.5.ebuild:
+  Also inherit user eclass just to make repoman happy (it is taken from eutils
+  eclass for now).
 
 *tt-rss-1.7.5 (24 Mar 2013)
 

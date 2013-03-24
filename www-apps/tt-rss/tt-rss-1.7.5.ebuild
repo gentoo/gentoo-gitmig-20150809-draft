@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.7.5.ebuild,v 1.1 2013/03/24 10:22:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.7.5.ebuild,v 1.2 2013/03/24 10:23:19 scarabeus Exp $
 
 EAPI=5
 
-inherit eutils webapp depend.php depend.apache vcs-snapshot
+inherit user eutils webapp depend.php depend.apache vcs-snapshot
 
 DESCRIPTION="Tiny Tiny RSS - A web-based news feed (RSS/Atom) aggregator using AJAX"
 HOMEPAGE="http://tt-rss.org/"
