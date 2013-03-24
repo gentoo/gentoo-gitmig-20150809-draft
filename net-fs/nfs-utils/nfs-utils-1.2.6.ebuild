@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.6.ebuild,v 1.14 2013/03/24 20:29:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.6.ebuild,v 1.15 2013/03/24 21:44:02 vapier Exp $
 
 EAPI="4"
 
@@ -59,6 +59,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.2.6-osd-install.patch
 	epatch "${FILESDIR}"/${PN}-1.2.6-conditionals.patch
 	epatch "${FILESDIR}"/${PN}-1.2.7-nfsiostat-python3.patch #458934
+	epatch "${FILESDIR}"/${PN}-1.2.7-libio.patch #459200
 	eautoreconf
 }
 
