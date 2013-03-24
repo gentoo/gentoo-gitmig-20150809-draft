@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cliapp/cliapp-1.20130313.ebuild,v 1.1 2013/03/24 12:20:33 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cliapp/cliapp-1.20130313.ebuild,v 1.2 2013/03/24 12:24:13 mschiff Exp $
 
 EAPI=5
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-DEPEND="test? ( dev-python/CoverageTestRunner )"
+DEPEND="${PYTHON_DEPS}
+	test? ( dev-python/CoverageTestRunner )"
 
 src_test() {
 	addwrite /proc/self/comm
