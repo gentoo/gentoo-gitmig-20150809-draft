@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14589 2013/03/24 11:25:56 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14590 2013/03/24 11:29:40 moult Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -324,12 +324,6 @@ media-gfx/picasa
 # Ryan Hill <dirtyepic@gentoo.org> (07 Feb 2013)
 # Breaks everything (bug #456108)
 =dev-libs/openssl-1.0.1d
-
-# Rafael G. Martins <rafaelmartins@gentoo.org> (31 Jan 2013)
-# Renamed to xombrero. Please install www-client/xombrero (bug #417555)
-# The package was not pkg-moved to fix the upstream versioning mess.
-# Removal in 30 days
-www-client/xxxterm
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (28 Jan 2013)
 # Beta versions masked for testing
