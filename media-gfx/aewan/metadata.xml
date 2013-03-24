@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-<email>maintainer-needed@gentoo.org</email>
-</maintainer>
+	<herd>proxy-maintainers</herd>
+	<maintainer>
+		<email>zlog.gentoo@gmail.com</email>
+		<name>Mikle Kolyada</name>
+		<description>Maintainer. Assign bugs to him</description>
+	</maintainer>
+	<maintainer>
+		<email>pinkbyte@gentoo.org</email>
+		<name>Sergey Popov</name>
+		<description>Proxy maintainer. CC him on bugs</description>
+	</maintainer>
 <longdescription lang="en">
 Aewan is a multi-layered ascii-art/animation editor that produces both
 stand-alone cat-able art files and an easy-to-parse format for integration in
