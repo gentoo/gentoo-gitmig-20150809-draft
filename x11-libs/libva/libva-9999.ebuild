@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.13 2013/02/14 19:08:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.14 2013/03/26 16:29:25 aballier Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ if [ "${PV%9999}" != "${PV}" ] ; then # Live ebuild
 	SRC_URI=""
 	S="${WORKDIR}/${PN}"
 else
-	SRC_URI="http://cgit.freedesktop.org/vaapi/libva/snapshot/${P}.tar.bz2"
+	SRC_URI="http://www.freedesktop.org/software/vaapi/releases/libva/${P}.tar.bz2"
 fi
 
 LICENSE="MIT"
