@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/libva-intel-driver-9999.ebuild,v 1.6 2012/11/21 18:16:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/libva-intel-driver-9999.ebuild,v 1.7 2013/03/26 16:36:03 aballier Exp $
 
 EAPI="3"
 
@@ -34,7 +34,7 @@ IUSE="wayland X"
 RDEPEND=">=x11-libs/libva-1.1.0[X?,wayland?]
 	!<x11-libs/libva-1.0.15[video_cards_intel]
 	>=x11-libs/libdrm-2.4.23[video_cards_intel]
-	wayland? ( media-libs/mesa[egl] )"
+	wayland? ( media-libs/mesa[egl] >=dev-libs/wayland-1 )"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
