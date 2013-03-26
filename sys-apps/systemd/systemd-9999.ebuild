@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.28 2013/03/26 16:35:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.29 2013/03/26 17:19:57 mgorny Exp $
 
 EAPI=5
 
@@ -242,6 +242,19 @@ pkg_postinst() {
 	elog "be installed:"
 	optfeature 'for GTK+ systemadm UI and gnome-ask-password-agent' \
 		'sys-apps/systemd-ui'
+
+	# read null-terminated argv[0] from PID 1
+	# and see which path to systemd was used (if any)
+	local init_path
+	IFS= read -r -d '' init_path < /proc/1/cmdline
+	if [[ ${init_path} == */bin/systemd ]]; then
+		ewarn
+		ewarn "You are using a compatibility symlink to run systemd. The symlink"
+		ewarn "will be removed in near future. Please update your bootloader"
+		ewarn "to use:"
+		ewarn
+		ewarn "	init=/usr/lib/systemd/systemd"
+	fi
 }
 
 pkg_prerm() {
