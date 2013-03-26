@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.2.ebuild,v 1.1 2013/03/26 19:15:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.2.ebuild,v 1.2 2013/03/26 19:17:21 eva Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -68,7 +68,7 @@ src_prepare() {
 	# Fix incorrect codegendir check: h2def.py is in pygobject, not pygtk, upstream bug#????
 	sed -e 's/codegendir pygtk-2.0/codegendir pygobject-2.0/g' \
 		-i src/Makefile.* || die
-	
+
 	# libtool seems unable to find this via VPATH so help it
 	sed -r "s:(gtkvnc_la_LIBADD =) libgtk-vnc-.*\.la:\1 ${GTK2_BUILDDIR}/src/libgtk-vnc-1.0.la:" \
 		-i src/Makefile.{am,in} || die
