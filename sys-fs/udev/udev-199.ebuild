@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.209 2013/03/26 19:20:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-199.ebuild,v 1.1 2013/03/26 19:20:02 ssuominen Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ if [[ ${PV} = 9999* ]]; then
 	EGIT_REPO_URI="git://anongit.freedesktop.org/systemd/systemd"
 	inherit git-2
 else
-	patchset=
+	patchset=1
 	SRC_URI="http://www.freedesktop.org/software/systemd/systemd-${PV}.tar.xz"
 	if [[ -n "${patchset}" ]]; then
 				SRC_URI="${SRC_URI}
@@ -43,7 +43,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	kmod? ( >=sys-apps/kmod-12 )
 	selinux? ( >=sys-libs/libselinux-2.1.9 )
 	!<sys-libs/glibc-2.11
-	!<sys-apps/systemd-${PV}"
+	!sys-apps/systemd"
 
 DEPEND="${COMMON_DEPEND}
 	virtual/os-headers
