@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.12_p12.ebuild,v 1.5 2013/03/27 18:04:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.12_p12.ebuild,v 1.6 2013/03/27 18:35:26 vapier Exp $
 
 EAPI="4"
 
@@ -49,6 +49,22 @@ suite3270_makelist() {
 		$(usex ncurses c3270 '') \
 		$(usex tcl tcl3270 '') \
 		$(usex X x3270 '')
+}
+
+src_prepare() {
+	# Some subdirs (like c3270/x3270/s3270) install the same set of data files
+	# (they have the same contents).  Wrap that in a retry to avoid errors.
+	cat <<-EOF > _install
+	#!/bin/sh
+	for n in {1..5}; do
+		install "\$@" && exit
+		echo "retrying ..."
+	done
+	EOF
+	chmod a+rx _install
+	sed -i \
+		-e "s:@INSTALL@:${S}/_install:" \
+		*/Makefile.in
 }
 
 src_configure() {
