@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14597 2013/03/27 13:18:31 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14598 2013/03/27 13:37:18 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -249,12 +249,6 @@ app-emacs/yow
 # Doug Goldstein <cardoe@gentoo.org> (24 Feb 2013)
 # Working on the next stable patchset
 =app-emulation/qemu-1.2.2-r4
-
-# Markos Chandras <hwoarang@gentoo.org> (24 Feb 2013)
-# Not functional as cia.vc is gone
-# No maintainer, dead upstream, last bump in 2005
-# See #445644. Removal in 30 days
-dev-util/ciabot-svn
 
 # Jeroen Roovers <jer@gentoo.org> (22 Feb 2013)
 # Masked until bug #456788 is fixed.
