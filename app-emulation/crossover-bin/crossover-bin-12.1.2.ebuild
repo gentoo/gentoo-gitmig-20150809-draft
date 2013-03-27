@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/crossover-bin-12.1.2.ebuild,v 1.1 2013/03/27 18:16:59 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/crossover-bin-12.1.2.ebuild,v 1.2 2013/03/27 18:30:31 ryao Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -97,7 +97,7 @@ pkg_nofetch() {
 
 src_unpack() {
 	# self unpacking zip archive; unzip warns about the exe stuff
-	unpack_zip
+	unpack_zip ${A}
 }
 
 src_prepare() {
