@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.42 2013/03/28 17:42:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.43 2013/03/28 17:49:23 vapier Exp $
 
 EAPI="3"
 
@@ -90,6 +90,7 @@ src_configure() {
 		--disable-su \
 		--disable-wall \
 		--enable-write \
+		$(use_enable suid makeinstall-chown) \
 		$(use_enable suid makeinstall-setuid) \
 		$(use_with selinux) \
 		$(use_with slang) \
