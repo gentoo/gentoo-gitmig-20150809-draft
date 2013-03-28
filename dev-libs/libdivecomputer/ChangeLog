@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libdivecomputer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdivecomputer/ChangeLog,v 1.1 2013/03/28 18:32:41 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdivecomputer/ChangeLog,v 1.2 2013/03/28 18:43:29 tomwij Exp $
+
+*libdivecomputer-9999 (28 Mar 2013)
+
+  28 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +libdivecomputer-9999.ebuild:
+  Added live ebuild for testing purposes.
 
 *libdivecomputer-0.3.0 (28 Mar 2013)
 
