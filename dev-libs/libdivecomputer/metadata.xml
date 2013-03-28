@@ -11,6 +11,7 @@
     <name>Tom Wijsman</name>
     <description>Committer. CC bugs to him.</description>
   </maintainer>
+  <herd>proxy-maintainers</herd>
   <longdescription lang="en">
     Library for communication with dive computers from various manufacturers.
   </longdescription>
