@@ -1,16 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.33 2013/03/29 15:49:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-200.ebuild,v 1.1 2013/03/29 15:49:38 mgorny Exp $
 
 EAPI=5
-
-#if LIVE
-AUTOTOOLS_AUTORECONF=yes
-EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}/${PN}
-	http://cgit.freedesktop.org/${PN}/${PN}/"
-
-inherit git-2
-#endif
 
 PYTHON_COMPAT=( python2_7 )
 inherit autotools-utils linux-info multilib pam python-single-r1 systemd udev user
@@ -70,28 +62,6 @@ DEPEND="${COMMON_DEPEND}
 	>=sys-kernel/linux-headers-${MINKV}
 	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.18 )"
-
-#if LIVE
-DEPEND="${DEPEND}
-	dev-libs/gobject-introspection
-	>=dev-libs/libgcrypt-1.4.5
-	>=dev-util/gtk-doc-1.18"
-
-SRC_URI=
-KEYWORDS=
-
-pkg_pretend() {
-	ewarn "Please note that the live systemd ebuild is not actively maintained"
-	ewarn "and it is an easy way to get your system broken and unbootable."
-	ewarn "Please consider using the release ebuilds instead."
-}
-
-src_prepare() {
-	gtkdocize --docdir docs/ || die
-
-	autotools-utils_src_prepare
-}
-#endif
 
 src_configure() {
 	local myeconfargs=(
