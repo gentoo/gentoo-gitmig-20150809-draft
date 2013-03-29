@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-muralis/ut2004-muralis-1.15.ebuild,v 1.5 2013/03/29 16:19:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-muralis/ut2004-muralis-1.15.ebuild,v 1.6 2013/03/29 16:20:16 hasufell Exp $
 
 EAPI=2
 
@@ -22,10 +22,6 @@ pkg_nofetch() {
 	elog "Please download ${SRC_URI} from:"
 	elog "http://www.atomicgamer.com/file.php?id=42750"
 	elog "and move it to ${DISTDIR}"
-}
-
-src_unpack() {
-	unpack_zip ${A}
 }
 
 src_prepare() {
