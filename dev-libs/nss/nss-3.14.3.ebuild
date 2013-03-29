@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.14.3.ebuild,v 1.12 2013/03/29 22:45:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.14.3.ebuild,v 1.13 2013/03/29 22:54:52 vapier Exp $
 
 EAPI=3
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -37,7 +37,6 @@ src_prepare() {
 	epatch "${DISTDIR}/${PN}-3.14.1-add_spi+cacerts_ca_certs.patch"
 	epatch "${DISTDIR}/${PN}-3.13.3_pem.support"
 	epatch "${FILESDIR}/${PN}-3.14.2-x32.patch"
-	epatch "${FILESDIR}/${PN}-3.14.2-sqlite.patch"
 	epatch "${FILESDIR}/${PN}-3.14.3_sync_with_upstream_softokn_changes.patch"
 
 	cd "${S}"/mozilla/security/coreconf || die
