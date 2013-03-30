@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14615 2013/03/30 22:52:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14616 2013/03/30 22:55:09 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -44,7 +44,6 @@
 >=app-accessibility/accerciser-3.8
 >=app-accessibility/at-spi2-atk-2.8
 >=app-accessibility/at-spi2-core-2.8
->=app-accessibility/caribou-0.4.8
 >=app-accessibility/orca-3.8
 >=app-admin/gnome-system-log-3.8
 >=app-arch/file-roller-3.8
@@ -66,7 +65,6 @@
 >=dev-libs/glib-2.36
 >=dev-libs/gobject-introspection-common-1.36
 >=dev-libs/gobject-introspection-1.36
->=dev-libs/libgee-0.10
 >=dev-libs/libgweather-3.8
 >=dev-libs/libpeas-1.8
 >=dev-libs/libwacom-0.7
@@ -106,7 +104,6 @@
 >=gnome-extra/gnome-user-share-3.8
 >=gnome-extra/gucharmap-3.8
 >=gnome-extra/mousetweaks-3.8
->=gnome-extra/nautilus-open-terminal-0.20
 >=gnome-extra/nautilus-sendto-3.8
 >=gnome-extra/nautilus-tracker-tags-0.16
 >=gnome-extra/nm-applet-0.9.8
