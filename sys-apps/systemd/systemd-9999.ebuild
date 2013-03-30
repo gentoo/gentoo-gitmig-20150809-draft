@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.35 2013/03/30 09:37:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.36 2013/03/30 09:58:53 floppym Exp $
 
 EAPI=5
 
@@ -235,7 +235,7 @@ pkg_postinst() {
 
 	# Keep this here in case the database format changes so it gets updated
 	# when required. Despite that this file is owned by sys-apps/hwids.
-	if use hwdb && has_version "sys-apps/hwids[udev]"; then
+	if has_version "sys-apps/hwids[udev]"; then
 		udevadm hwdb --update --root="${ROOT%/}"
 	fi
 
