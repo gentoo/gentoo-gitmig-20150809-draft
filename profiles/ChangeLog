@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7673 2013/03/30 22:41:06 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7674 2013/03/30 22:52:04 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Split DLNA stack mask out of Gnome 3.8 mask, they are most likely not
+  blocking each other.
 
   30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> updates/1Q-2013:
   Move old gupnp-dlna to slot 1.0.

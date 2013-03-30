@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14614 2013/03/30 18:44:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14615 2013/03/30 22:52:04 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Gilles Dartiguelongue <eva@gentoo.org> (30 Mar 2013)
+# the DLNA stack mask, may or may not be related to Gnome 3.8
+>=media-libs/gupnp-dlna-0.10
+>=net-libs/gssdp-0.14
+>=net-libs/gupnp-av-0.12
+>=net-libs/gupnp-0.20
+>=net-misc/rygel-0.18
 
 # Pacho Ramos <pacho@gentoo.org> (28 Mar 2013)
 # Gnome 3.8 Mask
@@ -117,21 +125,16 @@
 >=media-libs/clutter-1.14
 >=media-libs/cogl-1.14
 >=media-libs/fontconfig-2.10.91
->=media-libs/gupnp-dlna-0.10
 >=media-video/cheese-3.8
 >=media-video/totem-3.8
 >=net-im/empathy-3.8
 >=net-im/telepathy-logger-0.8
 >=net-libs/glib-networking-2.36
 >=net-libs/gnome-online-accounts-3.8
->=net-libs/gssdp-0.14
->=net-libs/gupnp-av-0.12
->=net-libs/gupnp-0.20
 >=net-libs/libsoup-2.42
 >=net-libs/libzapojit-0.0.3
 >=net-libs/webkit-gtk-2
 >=net-misc/networkmanager-0.9.8
->=net-misc/rygel-0.18
 >=net-misc/vinagre-3.8
 >=net-misc/vino-3.8
 >=net-wireless/gnome-bluetooth-3.8
