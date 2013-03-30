@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemonize/daemonize-1.7.4.ebuild,v 1.2 2013/03/30 09:41:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemonize/daemonize-1.7.4.ebuild,v 1.3 2013/03/30 09:43:00 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://github.com/bmc/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DOCS=( README.md CHANGELOG.md )
