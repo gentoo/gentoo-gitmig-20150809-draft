@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-noepg/vdr-noepg-0.0.4.ebuild,v 1.1 2013/03/31 17:20:51 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-noepg/vdr-noepg-0.0.4.ebuild,v 1.2 2013/03/31 17:22:46 hd_brummy Exp $
 
 EAPI="4"
 
@@ -19,4 +19,4 @@ IUSE=""
 DEPEND=">=media-video/vdr-2.0.0"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/vdr-plugin-${P}"
+S="${WORKDIR}/vdr-plugin-${VDRPLUGIN}-${PV}"
