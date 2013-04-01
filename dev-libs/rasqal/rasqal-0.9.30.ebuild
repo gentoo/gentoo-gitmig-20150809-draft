@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.30.ebuild,v 1.1 2013/04/01 18:07:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.30.ebuild,v 1.2 2013/04/01 18:10:54 scarabeus Exp $
 
-EAPI=4
+EAPI=5
 inherit libtool
 
 DESCRIPTION="library that handles Resource Description Framework (RDF)"
