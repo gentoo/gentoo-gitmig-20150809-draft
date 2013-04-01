@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.571 2013/04/01 07:59:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.572 2013/04/01 08:00:05 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -163,7 +163,6 @@ if in_iuse graphite ; then
 fi
 
 DEPEND="${RDEPEND}
-	>=sys-apps/texinfo-4.8
 	>=sys-devel/bison-1.875
 	>=sys-devel/flex-2.5.4
 	test? (
@@ -794,6 +793,10 @@ toolchain_src_unpack() {
 	elibtoolize --portage --shallow --no-uclibc
 
 	gnuconfig_update
+
+	# keep info pages from regenerating due to our custom version/bug url
+	# settings.  there's no real gain from doing so, but there is pain. #464008
+	touch -r . gcc/gcc-vers.texi
 
 	# update configure files
 	local f
