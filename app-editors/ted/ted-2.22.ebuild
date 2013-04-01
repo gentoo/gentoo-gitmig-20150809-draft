@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.22.ebuild,v 1.6 2013/03/15 10:38:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.22.ebuild,v 1.7 2013/04/01 09:07:56 pinkbyte Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -18,6 +18,7 @@ RDEPEND="x11-libs/gtk+:2
 	media-libs/tiff
 	virtual/jpeg
 	media-libs/libpng
+	x11-libs/libXft
 	x11-libs/libXpm"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
