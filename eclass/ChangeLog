@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.761 2013/04/01 09:16:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.762 2013/04/01 09:17:53 mgorny Exp $
+
+  01 Apr 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass,
+  multibuild.eclass:
+  Introduce multibuild_merge_root, as an universal interim-install merging
+  function.
 
   01 Apr 2013; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
   Support setting mode of prune_libtool_files through
