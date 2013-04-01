@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.16.ebuild,v 1.2 2013/04/01 18:16:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.16.ebuild,v 1.3 2013/04/01 18:17:23 scarabeus Exp $
 
 EAPI=4
 inherit libtool
@@ -76,5 +76,5 @@ src_install() {
 	# fix stupid addition of LDFLAGS to libs
 	sed -i \
 		-e "s:${LDFLAGS} ::g" \
-		${ED}/usr/$(get_libdir)/pkgconfig/redland.pc || die
+		"${ED}"/usr/$(get_libdir)/pkgconfig/redland.pc || die
 }
