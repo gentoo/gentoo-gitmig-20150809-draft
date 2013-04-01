@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bleachbit/bleachbit-0.9.5.ebuild,v 1.1 2013/04/01 08:50:25 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bleachbit/bleachbit-0.9.5.ebuild,v 1.2 2013/04/01 08:51:09 pinkbyte Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ DESCRIPTION="Clean junk to free disk space and to maintain privacy"
 HOMEPAGE="http://bleachbit.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nls"
