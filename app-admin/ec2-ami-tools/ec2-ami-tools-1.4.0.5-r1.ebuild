@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ec2-ami-tools-1.4.0.5-r1.ebuild,v 1.1 2013/04/02 22:37:43 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ec2-ami-tools-1.4.0.5-r1.ebuild,v 1.2 2013/04/02 22:50:49 tomwij Exp $
 
 EAPI="5"
 
@@ -10,7 +10,8 @@ DESCRIPTION="These command-line tools serve as the client interface to the Amazo
 HOMEPAGE="http://developer.amazonwebservices.com/connect/entry.jspa?externalID=368&categoryID=88"
 SRC_URI="http://s3.amazonaws.com/ec2-downloads/${P}.zip"
 
-LICENSE="Amazon"
+LICENSE="Amazon
+	|| ( Ruby GPL-2 )"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
@@ -26,7 +27,10 @@ src_prepare() {
 	# be what upstream has been using; since Gentoo supports alternative
 	# implementations as well it is not guaranteed that ruby is ruby18.
 	# There are forks which patch this, but Amazon hasn't patched this yet.
-	sed -i -e '$s:^ruby:exec ruby18:' bin/* || die
+	sed -i -e '$s:^ruby:exec ruby18:' bin/* || die 'Sed failed.'
+
+	# Remove a left behind license file.
+	rm lib/ec2/oem/LICENSE.txt || die 'Removal of LICENSE failed.'
 }
 
 src_install() {
