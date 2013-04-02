@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/bbswitch/bbswitch-0.6.ebuild,v 1.1 2013/04/02 16:43:27 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/bbswitch/bbswitch-0.6.ebuild,v 1.2 2013/04/02 16:53:16 zerochaos Exp $
 
 EAPI=5
 inherit eutils linux-mod
@@ -10,7 +10,7 @@ HOMEPAGE="https://github.com/Bumblebee-Project/bbswitch"
 SRC_URI="https://github.com/Bumblebee-Project/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 SLOT="0"
-LICENSE="GPL-2"
+LICENSE="GPL-3+"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
