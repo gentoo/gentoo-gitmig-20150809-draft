@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-9999.ebuild,v 1.2 2013/02/05 18:10:33 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-9999.ebuild,v 1.3 2013/04/03 16:06:22 ssuominen Exp $
 
 EAPI=4
 
@@ -19,7 +19,8 @@ IUSE=""
 
 DEPEND="sys-libs/ncurses"
 RDEPEND="${DEPEND}
-	dev-lang/perl"
+	dev-lang/perl
+	virtual/pkgconfig"
 
 src_prepare() {
 	# Change the version number to reflect the ebuild version
