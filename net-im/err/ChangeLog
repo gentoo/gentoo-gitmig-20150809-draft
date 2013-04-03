@@ -1,6 +1,11 @@
 # ChangeLog for net-im/err
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/err/ChangeLog,v 1.11 2013/04/03 10:35:34 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/err/ChangeLog,v 1.12 2013/04/03 10:36:09 pinkbyte Exp $
+
+*err-1.6.1 (03 Apr 2013)
+
+  03 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> +err-1.6.1.ebuild:
+  Version bump
 
   03 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> files/errd.confd,
   metadata.xml:
