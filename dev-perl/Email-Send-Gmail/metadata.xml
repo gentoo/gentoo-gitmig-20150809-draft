@@ -12,4 +12,8 @@
 		<name>Sergey Popov</name>
 		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
+	<upstream>
+		<remote-id type="cpan">Email-Send-Gmail</remote-id>
+		<remote-id type="cpan-module">Email::Send::Gmail</remote-id>
+	</upstream>
 </pkgmetadata>
