@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.2.2.ebuild,v 1.1 2013/04/04 11:39:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.2.2.ebuild,v 1.2 2013/04/04 11:41:00 scarabeus Exp $
 
 EAPI=5
 
@@ -324,7 +324,6 @@ src_prepare() {
 	export PYTHON="${PYTHON}"
 	export PYTHON_CFLAGS=$(python_get_CFLAGS)
 	export PYTHON_LIBS=$(python_get_LIBS)
-
 
 	# patchset
 	if [[ -n ${PATCHSET} ]]; then
