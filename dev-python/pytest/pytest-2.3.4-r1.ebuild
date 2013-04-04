@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/pytest-2.3.4-r1.ebuild,v 1.1 2013/04/04 12:38:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/pytest-2.3.4-r1.ebuild,v 1.2 2013/04/04 18:24:34 floppym Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ IUSE="doc test"
 
 # When bumping, please check setup.py for the proper py version
 PY_VER="1.4.12"
-RDEPEND=">=dev-python/py-${PY_VER}"
+RDEPEND=">=dev-python/py-${PY_VER}[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	app-arch/unzip
 	dev-python/setuptools[${PYTHON_USEDEP}]"
@@ -43,15 +43,7 @@ python_compile_all() {
 }
 
 python_test() {
-	cd "${BUILD_DIR}"/lib/ || die
-	# pytest.py draws from "${S}" if / when absent of a local testing folder; Bug 462552
-	if [[ "${EPYTHON:6:1}" == 3 ]]; then
-		cp -a "${S}"/testing/ . || die
-		"${PYTHON}" pytest.py || die "tests failed with ${EPYTHON}"
-		rm -rf testing/
-	else
-		"${PYTHON}" pytest.py || die "tests failed with ${EPYTHON}"
-	fi
+	"${PYTHON}" pytest.py || die "tests failed with ${EPYTHON}"
 }
 
 python_install_all() {
