@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libxtract
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libxtract/ChangeLog,v 1.9 2013/04/04 08:26:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libxtract/ChangeLog,v 1.10 2013/04/04 08:28:52 aballier Exp $
+
+  04 Apr 2013; Alexis Ballier <aballier@gentoo.org> libxtract-0.4.7.ebuild,
+  libxtract-0.6.3.ebuild:
+  update homepage
 
   04 Apr 2013; Alexis Ballier <aballier@gentoo.org> libxtract-0.6.3.ebuild:
   add static-libs useflag, drop .la file, bug #397669
