@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.122 2013/04/06 00:44:30 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.123 2013/04/06 00:50:31 naota Exp $
+
+  06 Apr 2013; Naohiro Aota <naota@gentoo.org> python-ldap-2.4.10-r1.ebuild:
+  Add ~x86-fbsd.
 
   06 Apr 2013; Naohiro Aota <naota@gentoo.org> python-ldap-2.4.10-r1.ebuild:
   libresolv should be added only on glibc system. #450384
