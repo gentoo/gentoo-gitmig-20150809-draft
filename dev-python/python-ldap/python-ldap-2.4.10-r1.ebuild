@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.4.10-r1.ebuild,v 1.1 2013/02/21 11:14:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.4.10-r1.ebuild,v 1.2 2013/04/06 00:44:30 naota Exp $
 
 EAPI=5
 
@@ -40,8 +40,9 @@ python_prepare_all() {
 		sed -e 's/HAVE_SASL//g' -i setup.cfg || die
 	fi
 	use ssl && mylibs="${mylibs} ssl crypto"
+	use elibc_glibc && mylibs="${mylibs} resolv"
 
-	sed -e "s:^libs = .*:libs = lber resolv ${mylibs}:" \
+	sed -e "s:^libs = .*:libs = lber ${mylibs}:" \
 		-i setup.cfg || die "error setting up libs in setup.cfg"
 
 	distutils-r1_python_prepare_all
