@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.644 2013/04/07 20:03:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.645 2013/04/07 20:20:18 mgorny Exp $
+
+  07 Apr 2013; Michał Górny <mgorny@gentoo.org> python-2.6.8-r1.ebuild,
+  python-2.7.3-r3.ebuild, python-2.7.4.ebuild:
+  Fix wininst removal typo. Fixes bug #462862.
 
 *python-2.7.4 (07 Apr 2013)
 

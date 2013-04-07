@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.4.ebuild,v 1.1 2013/04/07 20:03:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.4.ebuild,v 1.2 2013/04/07 20:20:18 mgorny Exp $
 
 EAPI="5"
 WANT_AUTOMAKE="none"
@@ -309,7 +309,7 @@ src_install() {
 	fi
 
 	use threads || rm -fr "${libdir}/multiprocessing"
-	use wininst || rm -f "${libdir})/distutils/command/"wininst-*.exe
+	use wininst || rm -f "${libdir}/distutils/command/"wininst-*.exe
 
 	dodoc "${S}"/Misc/{ACKS,HISTORY,NEWS} || die "dodoc failed"
 
