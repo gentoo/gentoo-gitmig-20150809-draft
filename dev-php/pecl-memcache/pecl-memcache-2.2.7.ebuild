@@ -1,14 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcache/pecl-memcache-3.0.7.ebuild,v 1.2 2013/04/07 17:49:45 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcache/pecl-memcache-2.2.7.ebuild,v 1.1 2013/04/07 17:49:45 olemarkus Exp $
 
-EAPI="5"
+EAPI="4"
 PHP_EXT_NAME="memcache"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 DOCS="README"
-
-USE_PHP="php5-5 php5-3 php5-4"
 
 inherit php-ext-pecl-r2
 
@@ -38,9 +36,6 @@ src_install() {
 	php-ext-source-r2_addtoinifiles "memcache.max_failover_attempts" "20"
 	php-ext-source-r2_addtoinifiles "memcache.chunk_size" "32768"
 	php-ext-source-r2_addtoinifiles "memcache.default_port" "11211"
-	php-ext-source-r2_addtoinifiles "memcache.hash_strategy" "consistent"
+	php-ext-source-r2_addtoinifiles "memcache.hash_strategy" "standard"
 	php-ext-source-r2_addtoinifiles "memcache.hash_function" "crc32"
-	php-ext-source-r2_addtoinifiles "memcache.redundancy" "1"
-	php-ext-source-r2_addtoinifiles "memcache.session_redundancy" "2"
-	php-ext-source-r2_addtoinifiles "memcache.protocol" "ascii"
 }
