@@ -1,6 +1,13 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.769 2013/04/07 16:56:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.770 2013/04/07 17:02:52 mgorny Exp $
+
+  07 Apr 2013; Michał Górny <mgorny@gentoo.org> python-any-r1.eclass,
+  python-r1.eclass, python-single-r1.eclass, python-utils-r1.eclass:
+  Create temporary symlinks for executables and pkg-config files, and add them
+  to $PATH and $PKG_CONFIG_PATH respectively. This makes it easier for broken
+  build systems to find Python, and gives us the possibility of dropping
+  python-wrapper.
 
   07 Apr 2013; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass,
   multilib-build.eclass, multilib-minimal.eclass:
