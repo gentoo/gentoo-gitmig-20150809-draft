@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-20.0-r1.ebuild,v 1.1 2013/04/08 14:23:37 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-20.0-r1.ebuild,v 1.2 2013/04/08 14:30:50 anarchy Exp $
 
 EAPI="4"
 
@@ -31,8 +31,7 @@ SRC_URI="${SRC_URI}
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip mirror binchecks"
 
-KEYWORDS=""
-#KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="startup-notification"
@@ -77,7 +76,6 @@ src_install() {
 
 	# Fix prefs that make no sense for a system-wide install
 	insinto ${MOZILLA_FIVE_HOME}/defaults/pref/
-	doins "${FILESDIR}"/${PN}-prefs.js || die
 	doins "${FILESDIR}"/local-settings.js
 	insinto ${MOZILLA_FIVE_HOME}/
 	doins "${FILESDIR}"/all-gentoo.js
