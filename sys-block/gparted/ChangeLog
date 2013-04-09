@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.123 2013/04/09 09:56:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.124 2013/04/09 09:59:40 ssuominen Exp $
+
+  09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> gparted-0.14.1.ebuild:
+  Remove sys-fs/device-mapper from || () syntax in favour of sys-fs/lvm2 wrt
+  #461382
 
   09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> -gparted-0.12.0.ebuild,
   -gparted-0.14.0.ebuild:
