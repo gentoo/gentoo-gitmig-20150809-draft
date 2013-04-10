@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-319.12.ebuild,v 1.1 2013/04/10 14:49:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-319.12.ebuild,v 1.2 2013/04/10 14:51:04 jer Exp $
 
 EAPI=5
 
@@ -26,18 +26,22 @@ IUSE="acpi multilib kernel_FreeBSD kernel_linux pax_kernel +tools +X"
 RESTRICT="bindist mirror strip"
 EMULTILIB_PKG="true"
 
-COMMON="app-admin/eselect-opencl
+COMMON="
+	app-admin/eselect-opencl
 	kernel_linux? ( >=sys-libs/glibc-2.6.1 )
 	multilib? ( app-emulation/emul-linux-x86-xlibs )
 	X? (
 		<x11-base/xorg-server-1.14.99
 		>=app-admin/eselect-opengl-1.0.9
-	)"
-DEPEND="${COMMON}
-	kernel_linux? (
-		virtual/linux-sources
-	)"
-RDEPEND="${COMMON}
+	)
+"
+DEPEND="
+	${COMMON}
+	app-arch/xz-utils
+	kernel_linux? ( virtual/linux-sources )
+"
+RDEPEND="
+	${COMMON}
 	acpi? ( sys-power/acpid )
 	tools? (
 		dev-libs/atk
@@ -48,7 +52,8 @@ RDEPEND="${COMMON}
 		x11-libs/libXext
 		x11-libs/pango[X]
 	)
-	X? ( >=x11-libs/libvdpau-0.3-r1 )"
+	X? ( >=x11-libs/libvdpau-0.3-r1 )
+"
 
 REQUIRED_USE="tools? ( X )"
 
