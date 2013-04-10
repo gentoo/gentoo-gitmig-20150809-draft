@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.20 2013/04/10 15:06:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.21 2013/04/10 15:10:18 jer Exp $
 
 # @ECLASS: nvidia-driver.eclass
 # @MAINTAINER:
@@ -17,7 +17,7 @@ inherit versionator
 DEPEND="sys-apps/pciutils"
 
 # the data below is derived from
-# http://us.download.nvidia.com/XFree86/Linux-x86_64/177.13/README/appendix-a.html
+# http://us.download.nvidia.com/XFree86/Linux-x86_64/319.12/README/supportedchips.html
 
 drv_96xx="0110 0111 0112 0113 0170 0171 0172 0173 0174 0175 0176 0177 0178 \
 0179 017a 017c 017d 0181 0182 0183 0185 0188 018a 018b 018c 01a0 01f0 0200 \
