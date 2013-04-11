@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-17.0.5.ebuild,v 1.5 2013/04/11 03:02:20 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-17.0.5.ebuild,v 1.6 2013/04/11 13:31:46 zerochaos Exp $
 
 EAPI="4"
 MOZ_ESR="1"
@@ -66,6 +66,21 @@ src_unpack() {
 src_install() {
 	declare MOZILLA_FIVE_HOME="/opt/${MOZ_PN}"
 
+        local size sizes icon_path icon name
+        sizes="16 22 24 32 48 256"
+        icon_path="${S}/chrome/icons/default"
+        icon="${PN}"
+        name="Thunderbird"
+
+        # Install icons and .desktop for menu entry
+        for size in ${sizes}; do
+                insinto "/usr/share/icons/hicolor/${size}x${size}/apps"
+                newins "${icon_path}/default${size}.png" "${icon}.png" || die
+        done
+        # Install a 48x48 icon into /usr/share/pixmaps for legacy DEs
+        newicon "${S}"/chrome/icons/default/default48.png ${PN}-icon.png
+        domenu "${FILESDIR}"/icon/${PN}.desktop
+
 	# Install thunderbird in /opt
 	dodir ${MOZILLA_FIVE_HOME%/*}
 	mv "${S}" "${D}"${MOZILLA_FIVE_HOME}
@@ -82,10 +97,6 @@ LD_LIBRARY_PATH="${MOZILLA_FIVE_HOME}"
 exec ${MOZILLA_FIVE_HOME}/thunderbird "\$@"
 EOF
 	fperms 0755 /usr/bin/${PN}
-
-	# Install icon and .desktop for menu entry
-	newicon "${S}"/chrome/icons/default/default48.png ${PN}-icon.png
-	domenu "${FILESDIR}"/icon/${PN}.desktop
 
 	# revdep-rebuild entry
 	insinto /etc/revdep-rebuild
