@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-17.0.5.ebuild,v 1.7 2013/04/11 13:49:07 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-17.0.5.ebuild,v 1.8 2013/04/11 13:58:09 zerochaos Exp $
 
 EAPI="5"
 MOZ_ESR="1"
@@ -33,7 +33,7 @@ SRC_URI="${SRC_URI}
 	amd64? ( ${MOZ_FTP_URI}/${MOZ_PV}/linux-x86_64/en-US/${MOZ_P}.tar.bz2 -> ${PN}_x86_64-${PV}.tar.bz2 )
 	x86? ( ${MOZ_FTP_URI}/${MOZ_PV}/linux-i686/en-US/${MOZ_P}.tar.bz2 -> ${PN}_i686-${PV}.tar.bz2 )"
 HOMEPAGE="http://www.mozilla.com/thunderbird"
-RESTRICT="strip mirror binchecks"
+RESTRICT="strip mirror"
 
 KEYWORDS="-* amd64 x86"
 SLOT="0"
@@ -54,6 +54,16 @@ RDEPEND="virtual/freedesktop-icon-theme
 	!net-libs/libproxy[spidermonkey]
 "
 
+QA_PREBUILT="
+	opt/${MOZ_PN}/*.so
+	opt/${MOZ_PN}/${MOZ_PN}
+	opt/${MOZ_PN}/${PN}
+	opt/${MOZ_PN}/crashreporter
+	opt/${MOZ_PN}/plugin-container
+	opt/${MOZ_PN}/mozilla-xremote-client
+	opt/${MOZ_PN}/updater
+"
+
 S="${WORKDIR}/${MOZ_PN}"
 
 src_unpack() {
@@ -66,18 +76,18 @@ src_unpack() {
 src_install() {
 	declare MOZILLA_FIVE_HOME="/opt/${MOZ_PN}"
 
-        local size sizes icon_path name
-        sizes="16 22 24 32 48 256"
-        icon_path="${S}/chrome/icons/default"
-        name="Thunderbird"
+	local size sizes icon_path name
+	sizes="16 22 24 32 48 256"
+	icon_path="${S}/chrome/icons/default"
+	name="Thunderbird"
 
-        # Install icons and .desktop for menu entry
-        for size in ${sizes}; do
+	# Install icons and .desktop for menu entry
+	for size in ${sizes}; do
 		newicon -s ${size} "${icon_path}/default${size}.png" "${PN}-icon.png"
-        done
-        # Install a 48x48 icon into /usr/share/pixmaps for legacy DEs
-        newicon "${S}"/chrome/icons/default/default48.png ${PN}-icon.png
-        domenu "${FILESDIR}"/icon/${PN}.desktop
+	done
+	# Install a 48x48 icon into /usr/share/pixmaps for legacy DEs
+	newicon "${S}"/chrome/icons/default/default48.png ${PN}-icon.png
+	domenu "${FILESDIR}"/icon/${PN}.desktop
 
 	# Install thunderbird in /opt
 	dodir ${MOZILLA_FIVE_HOME%/*}
