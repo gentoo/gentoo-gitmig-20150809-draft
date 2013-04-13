@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.784 2013/04/13 14:01:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.785 2013/04/13 19:07:31 hd_brummy Exp $
+
+  13 Apr 2013; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
+  spell fix
 
   13 Apr 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Unmask the egg_info block for further testing. Feel free to comment it out if
