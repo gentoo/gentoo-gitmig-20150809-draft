@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.787 2013/04/13 22:35:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.788 2013/04/13 22:49:21 floppym Exp $
+
+  13 Apr 2013; Mike Gilbert <floppym@gentoo.org> systemd.eclass:
+  Replace basename usage with a shell parameter replacement.
 
   13 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd.eclass:
   Use pkg-config to query systemd directories.
