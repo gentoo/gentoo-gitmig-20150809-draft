@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.23 2013/04/13 22:35:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.24 2013/04/13 22:36:51 mgorny Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -62,7 +62,7 @@ systemd_get_unitdir() {
 # @DESCRIPTION:
 # Get unprefixed userunitdir.
 _systemd_get_userunitdir() {
-	if $($(tc-getPKG_CONFIG) --exists systemd); then
+	if $(tc-getPKG_CONFIG) --exists systemd; then
 		echo "$($(tc-getPKG_CONFIG) --variable=systemduserunitdir systemd)"
 	else
 		echo /usr/lib/systemd/user
@@ -86,7 +86,7 @@ systemd_get_userunitdir() {
 # @DESCRIPTION:
 # Get unprefixed utildir.
 _systemd_get_utildir() {
-	if $($(tc-getPKG_CONFIG) --exists systemd); then
+	if $(tc-getPKG_CONFIG) --exists systemd; then
 		echo "$($(tc-getPKG_CONFIG) --variable=systemdutildir systemd)"
 	else
 		echo /usr/lib/systemd
