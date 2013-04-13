@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.785 2013/04/13 19:07:31 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.786 2013/04/13 19:15:04 xmw Exp $
+
+  13 Apr 2013; Michael Weber <xmw@gentoo.org> cmake-multilib.eclass:
+  Pass ${@} in phase functions. Approved by author on dev-ml.
 
   13 Apr 2013; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
   spell fix
