@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/pdb-tools-0.1.4-r4.ebuild,v 1.1 2013/04/16 08:41:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/pdb-tools-0.1.4-r4.ebuild,v 1.2 2013/04/16 08:57:43 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} pypy{1_8,1_9} )
 
-inherit fortran-2 python-r1 toolchain-funcs
+inherit fortran-2 python-single-r1 toolchain-funcs
 
 DESCRIPTION="Tools for manipulating and doing calculations on wwPDB macromolecule structure files"
 HOMEPAGE="http://code.google.com/p/pdb-tools/"
@@ -21,6 +21,11 @@ RDEPEND="sci-chemistry/dssp"
 DEPEND=""
 
 S="${WORKDIR}"/${PN}_${PV}
+
+pkg_setup() {
+	python-single-r1_pkg_setup
+	fortran-2_pkg_setup
+}
 
 src_prepare() {
 	sed \
@@ -50,14 +55,18 @@ src_install() {
 	doins -r pdb_data/peptides
 	rm -rf pdb_data/peptides || die
 
-	for script in pdb_*.py; do
-		python_foreach_impl python_newscript ${script} ${script%.py}
+	python_domodule helper pdb_data
+
+	python_moduleinto ${PN/-/_}
+	python_domodule *.py
+
+	for i in pdb_*.py; do
+		cat > ${i/.py} <<- EOF
+		#!${EPREFIX}/bin/bash
+		${PYTHON} -O "${EPREFIX}$(python_get_sitedir)/${PN/-/_}/${i}" \$@
+		EOF
+		dobin ${i/.py}
 	done
-
-	python_foreach_impl python_domodule helper pdb_data
-
-	python_moduleinto ${PN}
-	python_foreach_impl python_domodule *.py
 
 	dobin bin/*
 	dodoc README

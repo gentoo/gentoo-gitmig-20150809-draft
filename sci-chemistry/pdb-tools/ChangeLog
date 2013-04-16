@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pdb-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/ChangeLog,v 1.9 2013/04/16 08:41:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/ChangeLog,v 1.10 2013/04/16 08:57:43 jlec Exp $
+
+  16 Apr 2013; Justin Lecher <jlec@gentoo.org> pdb-tools-0.1.4-r4.ebuild:
+  This package cannot be installed for multiple py abis
 
 *pdb-tools-0.1.4-r4 (16 Apr 2013)
 
