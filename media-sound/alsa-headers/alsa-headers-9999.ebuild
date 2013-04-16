@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-9999.ebuild,v 1.9 2013/04/16 04:09:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-9999.ebuild,v 1.10 2013/04/16 04:13:09 ssuominen Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	[[ ${PV} = 9999* ]] || epatch "${FILESDIR}"/${PN}-1.0.6a-user.patch
+	epatch "${FILESDIR}"/${PN}-1.0.6a-user.patch
 }
 
 src_configure() { :; }
