@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.54 2013/04/16 07:24:39 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.55 2013/04/16 07:26:33 pinkbyte Exp $
 
 EAPI=4
 
@@ -122,7 +122,7 @@ RDEPEND+="
 	vorbis? ( media-libs/libvorbis )
 	xanim? ( media-video/xanim )
 	xvid? ( media-libs/xvid )
-	>=virtual/ffmpeg-0.10.2
+	>=virtual/ffmpeg-9
 	symlink? ( !media-video/mplayer )
 "
 ASM_DEP="dev-lang/yasm"
