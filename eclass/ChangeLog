@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.792 2013/04/17 18:01:48 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.793 2013/04/17 20:59:24 tomwij Exp $
+
+  17 Apr 2013; Tom Wijsman <TomWij@gentoo.org> kernel-2.eclass:
+  Reverted .tmp_gas_check patch, see bug #336732.
 
   17 Apr 2013; Ralph Sennhauser <sera@gentoo.org> java-utils-2.eclass:
   Request package specific emerge --info in death hook.

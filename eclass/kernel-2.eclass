@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.282 2013/04/17 13:52:17 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.283 2013/04/17 20:59:24 tomwij Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -1171,11 +1171,11 @@ kernel-2_src_unpack() {
 	if [[ -n ${KV_MINOR} &&  ${KV_MAJOR}.${KV_MINOR}.${KV_PATCH} < 2.6.27 ]]
 	then
 		sed -i \
-			-e "s|TOUT	:= .tmp_gas_check|TOUT	:= \"${T}\"/.tmp_gas_check|" \
+			-e 's|TOUT      := .tmp_gas_check|TOUT  := $(T).tmp_gas_check|' \
 			"${S}"/arch/ppc/Makefile
 	else
 		sed -i \
-			-e "s|TOUT	:= .tmp_gas_check|TOUT	:= \"${T}\"/.tmp_gas_check|" \
+			-e 's|TOUT      := .tmp_gas_check|TOUT  := $(T).tmp_gas_check|' \
 			"${S}"/arch/powerpc/Makefile
 	fi
 }
