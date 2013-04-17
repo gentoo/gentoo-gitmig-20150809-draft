@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.13.4.ebuild,v 1.1 2013/04/17 22:47:56 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.13.4.ebuild,v 1.2 2013/04/17 23:24:01 chithanh Exp $
 
 EAPI=5
 
@@ -205,10 +205,8 @@ pkg_postinst() {
 		ewarn "of module version mismatch errors, this is your problem."
 
 		echo
-		ewarn "You can generate a list of all installed packages in the x11-drivers"
+		ewarn "You can rebuild all installed packages in the x11-drivers"
 		ewarn "category using this command:"
-		ewarn "	emerge portage-utils; qlist -I -C x11-drivers/"
-		ewarn "or using sets from portage-2.2:"
 		ewarn "	emerge @x11-module-rebuild"
 	fi
 
