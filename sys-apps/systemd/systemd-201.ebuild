@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-201.ebuild,v 1.6 2013/04/17 11:01:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-201.ebuild,v 1.7 2013/04/17 18:35:59 mgorny Exp $
 
 EAPI=5
 
@@ -88,8 +88,6 @@ src_configure() {
 		# disable sysv compatibility
 		--with-sysvinit-path=
 		--with-sysvrcnd-path=
-		# just text files
-		--enable-polkit
 		# no deps
 		--enable-efi
 		--enable-ima
