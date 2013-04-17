@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.49 2013/04/17 20:58:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.50 2013/04/17 22:29:15 williamh Exp $
 
 EAPI=5
 
@@ -113,7 +113,6 @@ pkg_pretend() {
 src_configure() {
 	local myeconfargs=(
 		--localstatedir=/var
-		# but pam modules have to lie in /lib*
 		--with-pamlibdir=$(getpam_mod_dir)
 		# make sure we get /bin:/sbin in $PATH
 		--enable-split-usr
