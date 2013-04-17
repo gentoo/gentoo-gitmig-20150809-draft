@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.35 2013/04/17 13:26:26 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.36 2013/04/17 13:34:54 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -95,7 +95,7 @@ src_install() {
 	dodoc AUTHORS DISCLAIMER README.markdown
 
 	# Provide /usr/src/spl symlink for lustre
-	dosym "$(basename $(echo "${ED}/usr/src/spl-"*))/${KV_FULL}" /usr/src/spl
+	dosym "$(basename $(echo "${ED}/usr/src/spl-"*))" /usr/src/spl
 }
 
 pkg_postinst() {
