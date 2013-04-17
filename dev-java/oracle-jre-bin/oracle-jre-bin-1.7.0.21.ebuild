@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.7.0.15.ebuild,v 1.2 2013/02/24 08:36:02 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.7.0.21.ebuild,v 1.1 2013/04/17 13:29:37 sera Exp $
 
 EAPI="5"
 
@@ -28,7 +28,7 @@ SRC_URI="
 
 LICENSE="Oracle-BCLA-JavaSE"
 SLOT="1.7"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="X alsa fontconfig jce nsplugin pax_kernel"
 
 RESTRICT="fetch strip"
@@ -83,10 +83,18 @@ src_compile() {
 
 	# see bug #207282
 	einfo "Creating the Class Data Sharing archives"
-	if use x86; then
-		bin/java -client -Xshare:dump || die
-	fi
-	bin/java -server -Xshare:dump || die
+	case ${ARCH} in
+		arm|ia64)
+			bin/java -client -Xshare:dump || die
+			;;
+		x86)
+			bin/java -client -Xshare:dump || die
+			bin/java -server -Xshare:dump || die
+			;;
+		*)
+			bin/java -server -Xshare:dump || die
+			;;
+	esac
 
 	# Create files used as storage for system preferences.
 	mkdir .systemPrefs || die
