@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.15 2013/04/17 13:27:54 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.16 2013/04/17 13:35:13 ryao Exp $
 
 EAPI="4"
 
@@ -92,7 +92,7 @@ src_install() {
 	dodoc AUTHORS COPYRIGHT DISCLAIMER README.markdown
 
 	# Provide /usr/src/zfs symlink for lustre
-	dosym "$(basename $(echo "${ED}/usr/src/zfs-"*))/${KV_FULL}" /usr/src/zfs
+	dosym "$(basename $(echo "${ED}/usr/src/zfs-"*))" /usr/src/zfs
 }
 
 pkg_postinst() {
