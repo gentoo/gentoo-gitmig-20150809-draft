@@ -1,26 +1,25 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.9.ebuild,v 1.1 2013/03/13 13:48:26 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.10_rc1.ebuild,v 1.1 2013/04/17 12:53:39 ultrabug Exp $
 
-EAPI=4
-
+EAPI="5"
 PYTHON_DEPEND="2"
+WANT_AUTOMAKE="1.12"
 
 inherit autotools base python
 
-MY_PN=Pacemaker
-MY_P=${MY_PN}-${PV}
-MY_TREE="2a917dd"
+MY_PN="Pacemaker"
+MY_P=${MY_PN}-${PV/_/-}
 
 DESCRIPTION="Pacemaker CRM"
 HOMEPAGE="http://www.linux-ha.org/wiki/Pacemaker"
-SRC_URI="https://github.com/ClusterLabs/${PN}/tarball/${MY_P} -> ${P}.tar.gz"
+SRC_URI="https://github.com/ClusterLabs/${PN}/archive/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86"
 REQUIRED_USE="cman? ( !heartbeat )"
-IUSE="-acl cman heartbeat smtp snmp static-libs"
+IUSE="acl cman heartbeat smtp snmp static-libs"
 
 DEPEND="
 	app-text/docbook-xsl-stylesheets
@@ -37,7 +36,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 PDEPEND="sys-cluster/crmsh"
 
-S="${WORKDIR}/ClusterLabs-${PN}-${MY_TREE}"
+S="${WORKDIR}/${PN}-${MY_P}"
 
 pkg_setup() {
 	python_set_active_version 2
@@ -47,8 +46,9 @@ pkg_setup() {
 src_prepare() {
 	base_src_prepare
 	sed -i -e "/ggdb3/d" configure.ac || die
-	sed -e "s:<glib/ghash.h>:<glib.h>:" \
-		-i lib/ais/plugin.c || die
+	sed -i -e "s/ -ggdb//g" configure.ac || die
+	sed -i -e "s/uid2username(uid)/uid2username(uid_client)/g" lib/common/ipc.c || die
+	sed -i -e "s:<glib/ghash.h>:<glib.h>:" lib/ais/plugin.c || die
 	eautoreconf
 	python_convert_shebangs -r 2 .
 }
@@ -83,12 +83,5 @@ src_install() {
 	if has_version "<sys-cluster/corosync-2.0"; then
 		insinto /etc/corosync/service.d
 		newins "${FILESDIR}/${PN}.service" ${PN} || die
-	fi
-}
-
-pkg_postinst() {
-	if use acl ; then
-		ewarn "ACL support requires you to add root to the haclient group !"
-		ewarn "    # usermod -a -G haclient root"
 	fi
 }
