@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.41.ebuild,v 1.2 2013/02/24 08:27:32 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.45.ebuild,v 1.1 2013/04/17 12:37:45 sera Exp $
 
 EAPI="5"
 
@@ -50,7 +50,7 @@ SRC_URI+=" jce? ( ${JCE_FILE} )"
 
 LICENSE="Oracle-BCLA-JavaSE examples? ( BSD )"
 SLOT="1.6"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="+X alsa derby doc examples jce kernel_SunOS nsplugin pax_kernel source"
 
 RESTRICT="fetch strip"
@@ -152,12 +152,20 @@ src_compile() {
 
 	# see bug #207282
 	einfo "Creating the Class Data Sharing archives"
-	if use x86; then
-		bin/java -client -Xshare:dump || die
-	fi
-	# limit heap size for large memory on x86 #405239
-	# this is a workaround and shouldn't be needed.
-	bin/java -server -Xmx64m -Xshare:dump || die
+	case ${ARCH} in
+		ia64)
+			bin/java -client -Xshare:dump || die
+			;;
+		x86)
+			bin/java -client -Xshare:dump || die
+			# limit heap size for large memory on x86 #405239
+			# this is a workaround and shouldn't be needed.
+			bin/java -server -Xmx64m -Xshare:dump || die
+			;;
+		*)
+			bin/java -server -Xshare:dump || die
+			;;
+	esac
 }
 
 src_install() {
