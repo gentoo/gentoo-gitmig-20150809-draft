@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/emerald-0.8.8.ebuild,v 1.4 2013/04/20 10:26:20 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/emerald-0.8.8.ebuild,v 1.5 2013/04/20 10:29:43 pinkbyte Exp $
 
 EAPI="4"
 
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.15
 "
 
-DOCS="AUTHORS ChangeLog INSTALL NEWS README TODO"
+DOCS=( AUTHORS ChangeLog INSTALL NEWS README TODO )
 
 src_prepare() {
 	# Fix pkg-config file pollution wrt #380197
@@ -41,6 +41,8 @@ src_prepare() {
 		include/emerald.h || die
 	# Fix underlinking
 	append-libs -ldl -lm
+
+	epatch_user
 }
 
 src_configure() {
