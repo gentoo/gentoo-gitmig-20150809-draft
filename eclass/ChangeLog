@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.796 2013/04/21 23:23:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.797 2013/04/21 23:24:24 radhermit Exp $
+
+  21 Apr 2013; Tim Harder <radhermit@gentoo.org> vim.eclass:
+  Disable python.eclass inherit in vim-core (patch by mgorny, bug #458794).
 
   21 Apr 2013; Tim Harder <radhermit@gentoo.org> vim.eclass:
   Move EAPI check earlier (patch by mgorny, bug #458794).
