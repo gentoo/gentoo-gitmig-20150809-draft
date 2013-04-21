@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.209 2013/04/21 23:25:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.210 2013/04/21 23:26:59 radhermit Exp $
 
 # Authors:
 # 	Jim Ramsay <lack@gentoo.org>
@@ -29,6 +29,9 @@ case "${EAPI:-0}" in
 		;;
 	2|3)
 		;;
+	5)
+		HAS_PYTHON_R1=1
+		;;
 	*)
 		die "Unknown EAPI ${EAPI}"
 		;;
@@ -38,11 +41,16 @@ esac
 MY_PN=${PN%-cvs}
 
 if [[ ${MY_PN} != "vim-core" ]] ; then
-	# vim supports python-2 only
-	PYTHON_DEPEND="python? 2"
-	PYTHON_USE_WITH_OPT="python"
-	PYTHON_USE_WITH="threads"
-	inherit python
+	if [[ ${HAS_PYTHON_R1} ]]; then
+		PYTHON_REQ_USE=threads
+		inherit python-r1
+	else
+		# vim supports python-2 only
+		PYTHON_DEPEND="python? 2"
+		PYTHON_USE_WITH_OPT="python"
+		PYTHON_USE_WITH="threads"
+		inherit python
+	fi
 fi
 inherit eutils vim-doc flag-o-matic versionator fdo-mime bash-completion-r1 prefix
 
@@ -76,6 +84,20 @@ if [[ ${MY_PN} == "vim-core" ]] ; then
 	PDEPEND="!livecd? ( app-vim/gentoo-syntax )"
 else
 	IUSE="${IUSE} cscope debug gpm perl python ruby"
+
+	if [[ ${HAS_PYTHON_R1} ]]; then
+		DEPEND="${DEPEND}
+			python? ( ${PYTHON_DEPS} )"
+		RDEPEND="${RDEPEND}
+			python? ( ${PYTHON_DEPS} )"
+		# at most one version of py2 and one of py3
+		REQUIRED_USE="${REQUIRED_USE}
+			python? (
+				|| ( $(python_gen_useflags '*') )
+				?? ( $(python_gen_useflags 'python2*') )
+				?? ( $(python_gen_useflags 'python3*') )
+			)"
+	fi
 
 	DEPEND="${DEPEND}
 		cscope?  ( dev-util/cscope )
@@ -233,12 +255,14 @@ vim_pkg_setup() {
 	mkdir -p "${T}/home"
 	export HOME="${T}/home"
 
-	if [[ ${MY_PN} != "vim-core" ]] && use python; then
-		# vim supports python-2 only
-		python_set_active_version 2
-		# python.eclass only defines python_pkg_setup for EAPIs that support
-		# USE dependencies
-		python_pkg_setup
+	if [[ ! ${HAS_PYTHON_R1} ]]; then
+		if [[ ${MY_PN} != "vim-core" ]] && use python; then
+			# vim supports python-2 only
+			python_set_active_version 2
+			# python.eclass only defines python_pkg_setup for EAPIs that support
+			# USE dependencies
+			python_pkg_setup
+		fi
 	fi
 }
 
@@ -410,7 +434,25 @@ vim_src_configure() {
 		myconf="${myconf} `use_enable cscope`"
 		myconf="${myconf} `use_enable gpm`"
 		myconf="${myconf} `use_enable perl perlinterp`"
-		myconf="${myconf} `use_enable python pythoninterp`"
+		if [[ ${HAS_PYTHON_R1} ]]; then
+			if use python; then
+				py_add_interp() {
+					local v
+
+					[[ ${EPYTHON} == python3* ]] && v=3
+
+					myconf="${myconf} --enable-python${v}interp
+						vi_cv_path_python${v}=${PYTHON}"
+				}
+
+				python_foreach_impl py_add_interp
+			else
+				myconf="${myconf} --disable-pythoninterp
+					--disable-python3interp"
+			fi
+		else
+			myconf="${myconf} `use_enable python pythoninterp`"
+		fi
 		myconf="${myconf} `use_enable ruby rubyinterp`"
 		# tclinterp is broken; when you --enable-tclinterp flag, then
 		# the following command never returns:
