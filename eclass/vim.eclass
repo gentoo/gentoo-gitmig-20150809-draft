@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.208 2013/04/21 23:24:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.209 2013/04/21 23:25:34 radhermit Exp $
 
 # Authors:
 # 	Jim Ramsay <lack@gentoo.org>
@@ -28,8 +28,6 @@ case "${EAPI:-0}" in
 		die "vim.eclass no longer supports EAPI 0 or 1"
 		;;
 	2|3)
-		HAS_SRC_PREPARE=1
-		HAS_USE_DEP=1
 		;;
 	*)
 		die "Unknown EAPI ${EAPI}"
@@ -58,13 +56,8 @@ fi
 
 IUSE="nls acl"
 
-TO_EXPORT="pkg_setup src_compile src_install src_test pkg_postinst pkg_postrm"
-if [[ $HAS_SRC_PREPARE ]]; then
-	TO_EXPORT="${TO_EXPORT} src_prepare src_configure"
-else
-	TO_EXPORT="${TO_EXPORT} src_unpack"
-fi
-EXPORT_FUNCTIONS ${TO_EXPORT}
+EXPORT_FUNCTIONS pkg_setup src_prepare src_compile src_configure \
+	src_install src_test pkg_postinst pkg_postrm
 
 DEPEND="${DEPEND}
 	>=app-admin/eselect-vi-1.1
@@ -243,13 +236,9 @@ vim_pkg_setup() {
 	if [[ ${MY_PN} != "vim-core" ]] && use python; then
 		# vim supports python-2 only
 		python_set_active_version 2
-		if [[ $HAS_USE_DEP ]]; then
-			# python.eclass only defines python_pkg_setup for EAPIs that support
-			# USE dependencies
-			python_pkg_setup
-		elif ! has_version "=dev-lang/python-2*[threads]"; then
-			die "You must build dev-lang/python with USE=threads"
-		fi
+		# python.eclass only defines python_pkg_setup for EAPIs that support
+		# USE dependencies
+		python_pkg_setup
 	fi
 }
 
