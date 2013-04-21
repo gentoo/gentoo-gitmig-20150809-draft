@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.206 2013/03/10 02:02:30 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.207 2013/04/21 23:23:22 radhermit Exp $
 
 # Authors:
 # 	Jim Ramsay <lack@gentoo.org>
@@ -22,6 +22,20 @@
 # -aqua -gtk -motif neXt        NEXTAW
 # -aqua -gtk -motif -neXt       ATHENA
 
+# Check for EAPI functions we need:
+case "${EAPI:-0}" in
+	0|1)
+		die "vim.eclass no longer supports EAPI 0 or 1"
+		;;
+	2|3)
+		HAS_SRC_PREPARE=1
+		HAS_USE_DEP=1
+		;;
+	*)
+		die "Unknown EAPI ${EAPI}"
+		;;
+esac
+
 # Support -cvs ebuilds, even though they're not in the official tree.
 MY_PN=${PN%-cvs}
 
@@ -36,20 +50,6 @@ inherit eutils vim-doc flag-o-matic versionator fdo-mime bash-completion-r1 pref
 HOMEPAGE="http://www.vim.org/"
 SLOT="0"
 LICENSE="vim"
-
-# Check for EAPI functions we need:
-case "${EAPI:-0}" in
-	0|1)
-		die "vim.eclass no longer supports EAPI 0 or 1"
-		;;
-	2|3)
-		HAS_SRC_PREPARE=1
-		HAS_USE_DEP=1
-		;;
-	*)
-		die "Unknown EAPI ${EAPI}"
-		;;
-esac
 
 if [[ ${PN##*-} == "cvs" ]] ; then
 	inherit cvs
