@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14677 2013/04/23 20:00:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14678 2013/04/23 20:01:09 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -343,12 +343,6 @@ sci-visualization/udav
 # Jeroen Roovers <jer@gentoo.org> (25 Mar 2013)
 # Unlocking fails (bug #463180)
 =x11-misc/xlockmore-5.42
-
-# Markos Chandras <hwoarang@gentoo.org> (23 Mar 2013)
-# Dead upstream. No maintainer
-# Does not seem to work anymore
-# Removal in 30 days. Bug #457254
-app-text/gonzui
 
 # Markos Chandras <hwoarang@gentoo.org> (23 Mar 2013)
 # MSN service terminated.
