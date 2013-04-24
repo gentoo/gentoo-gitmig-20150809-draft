@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ninja-ide-2.1.1-r3.ebuild,v 1.1 2013/01/22 19:24:20 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ninja-ide-2.1.1-r3.ebuild,v 1.2 2013/04/24 22:03:25 hasufell Exp $
 
 # XXX: tests
 
@@ -21,9 +21,9 @@ IUSE=""
 
 RDEPEND="
 	dev-python/PyQt4[webkit]
-	dev-python/simplejson
 	dev-python/pyinotify
-	virtual/python-argparse[${PYTHON_USEDEP}]"
+	virtual/python-argparse[${PYTHON_USEDEP}]
+	virtual/python-json[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 PATCHES=( "${FILESDIR}"/${P}-lang.patch )
