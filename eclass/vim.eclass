@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.211 2013/04/24 01:46:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.212 2013/04/24 01:49:40 radhermit Exp $
 
 # Authors:
 # 	Jim Ramsay <lack@gentoo.org>
@@ -531,8 +531,6 @@ vim_src_configure() {
 }
 
 vim_src_compile() {
-	has src_configure ${TO_EXPORT} || vim_src_configure
-
 	# The following allows emake to be used
 	emake -j1 -C src auto/osdef.h objects || die "make failed"
 
