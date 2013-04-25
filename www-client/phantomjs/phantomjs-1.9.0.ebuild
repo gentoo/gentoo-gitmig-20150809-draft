@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/phantomjs-1.9.0.ebuild,v 1.3 2013/04/25 22:06:45 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/phantomjs-1.9.0.ebuild,v 1.4 2013/04/25 22:16:43 zx2c4 Exp $
 
 EAPI=5
 
-inherit toolchain-funcs
+inherit toolchain-funcs pax-utils
 
 DESCRIPTION="A headless WebKit scriptable with a JavaScript API."
 HOMEPAGE="http://phantomjs.org/"
@@ -55,6 +55,7 @@ src_test() {
 }
 
 src_install() {
+	pax-mark m bin/phantomjs || die
 	dobin bin/phantomjs || die
 	dodoc ChangeLog README.md
 	if use examples ; then
