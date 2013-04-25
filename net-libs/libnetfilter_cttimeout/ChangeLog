@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnetfilter_cttimeout
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_cttimeout/ChangeLog,v 1.6 2013/04/25 15:05:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_cttimeout/ChangeLog,v 1.7 2013/04/25 15:20:14 jer Exp $
+
+  25 Apr 2013; Jeroen Roovers <jer@gentoo.org>
+  libnetfilter_cttimeout-1.0.0.ebuild:
+  Stable for HPPA (bug #451316).
 
   25 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
   libnetfilter_cttimeout-1.0.0.ebuild:
