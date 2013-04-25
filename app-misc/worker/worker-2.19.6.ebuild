@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.19.6.ebuild,v 1.5 2013/04/15 19:03:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.19.6.ebuild,v 1.6 2013/04/25 18:41:10 pinkbyte Exp $
 
 EAPI=5
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Worker Filemanager: Amiga Directory Opus 4 clone"
 HOMEPAGE="http://www.boomerangsworld.de/cms/worker/"
@@ -27,6 +27,9 @@ DEPEND="${RDEPEND}"
 DOCS=( AUTHORS ChangeLog INSTALL NEWS README README_LARGEFILES THANKS )
 
 src_prepare() {
+	# respect AR, bug #466014
+	sed -i -e "/AR/s/ar/$(tc-getAR)/" src/aguix/Makefile.in || die 'sed on Makefile.in failed'
+
 	epatch_user
 }
 
