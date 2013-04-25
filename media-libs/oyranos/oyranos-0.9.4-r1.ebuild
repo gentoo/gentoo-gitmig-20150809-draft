@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.4-r1.ebuild,v 1.2 2013/04/25 19:31:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.4-r1.ebuild,v 1.3 2013/04/25 19:46:07 xmw Exp $
 
 EAPI=5
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="X cairo cups doc exif fltk qt4 raw test"
 
 RDEPEND="=app-admin/elektra-0.7*[${MULTILIB_USEDEP}]
+	dev-libs/yajl[${MULTILIB_USEDEP}]
 	media-libs/icc-profiles-basiccolor-printing2009
 	media-libs/icc-profiles-basiccolor-printing2009
 	>=media-libs/libXcm-0.5.2[${MULTILIB_USEDEP}]
@@ -48,7 +49,6 @@ RDEPEND="=app-admin/elektra-0.7*[${MULTILIB_USEDEP}]
 		)
 	)
 	media-gfx/graphviz
-	dev-libs/yajl
 	exif? ( media-gfx/exiv2 )
 	fltk? ( x11-libs/fltk:1 )"
 DEPEND="${RDEPEND}
