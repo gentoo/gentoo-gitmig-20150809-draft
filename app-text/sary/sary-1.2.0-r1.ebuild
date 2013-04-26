@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sary/sary-1.2.0-r1.ebuild,v 1.11 2013/04/26 09:02:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sary/sary-1.2.0-r1.ebuild,v 1.12 2013/04/26 09:08:10 patrick Exp $
 
 EAPI=4
 inherit autotools
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	echo "libsary_la_LIBADD = @GLIB_LIBS@" >> sary/Makefile.am || die
-        sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
+        sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.in || die
 	eautoreconf
 }
 src_configure() {
