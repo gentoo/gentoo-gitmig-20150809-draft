@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/liblangtag-0.4.0-r1.ebuild,v 1.6 2013/04/26 19:07:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/liblangtag-0.4.0-r1.ebuild,v 1.7 2013/04/26 19:13:02 scarabeus Exp $
 
 EAPI=5
 
@@ -32,6 +32,7 @@ RESTRICT="test"
 PATCHES=(
 	"${FILESDIR}"/${P}-module.patch
 	"${FILESDIR}"/${P}-arm.patch
+	"${FILESDIR}"/${P}-introspection.patch
 )
 
 src_prepare() {
