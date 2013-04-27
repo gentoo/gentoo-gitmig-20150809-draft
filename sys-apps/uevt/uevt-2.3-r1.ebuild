@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uevt/uevt-2.3-r1.ebuild,v 1.2 2012/11/01 23:17:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uevt/uevt-2.3-r1.ebuild,v 1.3 2013/04/27 14:33:53 jer Exp $
 
 EAPI=4
 inherit eutils
 
 UEVT_VALA_VERSION=0.16
 
-DESCRIPTION="A lightweight, desktop-independant daemon for disks mounting and power managing"
+DESCRIPTION="UPower/UDisks Event, a lightweight desktop-independent power and disk manager"
 HOMEPAGE="http://elentir.sleipnir.fr/ http://git.sleipnir.fr/uevt/"
 SRC_URI="http://ftp.sleipnir.fr/${PN}/${P}.tar.bz2"
 
