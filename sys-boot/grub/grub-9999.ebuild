@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.87 2013/02/18 16:45:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.88 2013/04/27 20:58:24 floppym Exp $
 
 EAPI=4
 
@@ -240,7 +240,10 @@ src_prepare() {
 		epatch "${FILESDIR}/${P}-hardcoded-awk.patch" #424137
 		epatch "${FILESDIR}/${P}-freebsd.patch" #442050
 		epatch "${FILESDIR}/${P}-compression.patch" #424527
-		epatch "${FILESDIR}/${P}-zfs-feature-flag-support.patch" #455358
+		epatch "${FILESDIR}/${P}-zfs-feature-flag-support-r1.patch" #455358
+		epatch "${FILESDIR}/${P}-20_linux_xen.patch" #463992
+		epatch "${FILESDIR}/${P}-dmraid.patch" #430748
+		epatch "${FILESDIR}/${P}-texinfo.patch"
 	fi
 
 	# fix texinfo file name, bug 416035
