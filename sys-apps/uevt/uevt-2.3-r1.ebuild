@@ -1,11 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uevt/uevt-2.3-r1.ebuild,v 1.3 2013/04/27 14:33:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uevt/uevt-2.3-r1.ebuild,v 1.4 2013/04/27 14:43:06 jer Exp $
 
 EAPI=4
-inherit eutils
-
-UEVT_VALA_VERSION=0.16
+VALA_MIN_API_VERSION="0.16"
+inherit eutils vala
 
 DESCRIPTION="UPower/UDisks Event, a lightweight desktop-independent power and disk manager"
 HOMEPAGE="http://elentir.sleipnir.fr/ http://git.sleipnir.fr/uevt/"
@@ -23,7 +22,6 @@ RDEPEND="${COMMON_DEPEND}
 	>=sys-fs/udisks-1.0.4-r2:0
 	>=sys-power/upower-0.9.16"
 DEPEND="${COMMON_DEPEND}
-	dev-lang/vala:${UEVT_VALA_VERSION}
 	dev-util/intltool
 	sys-devel/gettext
 	virtual/pkgconfig"
@@ -41,4 +39,6 @@ src_prepare() {
 	# See http://bugs.gentoo.org/ wrt #428438
 	echo src/configurator.c >> po/POTFILES.skip
 	echo src/power-infos.c >> po/POTFILES.skip
+
+	vala_src_prepare
 }
