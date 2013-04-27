@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.14_rc21.ebuild,v 1.7 2013/04/27 12:11:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.14_rc21-r1.ebuild,v 1.1 2013/04/27 12:20:10 mgorny Exp $
 
 EAPI=5
-inherit eutils
+inherit eutils systemd
 
 MY_P=${P/_/}
 DESCRIPTION="A very small and very fast http daemon"
@@ -51,6 +51,8 @@ src_install() {
 
 	newinitd "${FILESDIR}"/boa.rc6 boa
 	newconfd "${FILESDIR}"/boa.conf.d boa
+
+	systemd_dounit "${FILESDIR}"/boa.service
 
 	exeinto /usr/lib/boa
 	doexe src/boa_indexer
