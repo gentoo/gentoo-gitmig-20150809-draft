@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.2.0-r1.ebuild,v 1.5 2013/04/28 15:12:13 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.2.0-r1.ebuild,v 1.6 2013/04/28 15:29:57 sping Exp $
 
 EAPI=4
 
@@ -38,12 +38,12 @@ RDEPEND=">=media-libs/babl-0.1.10[introspection?]
 	svg? ( >=gnome-base/librsvg-2.14:2 )
 	umfpack? ( sci-libs/umfpack )
 	v4l? ( media-libs/libv4l )
-	dev-lang/perl
 	introspection? ( >=dev-libs/gobject-introspection-0.10
 			>=dev-python/pygobject-2.26:2 )
 	lensfun? ( >=media-libs/lensfun-0.2.5 )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40.1
+	dev-lang/perl
 	virtual/pkgconfig
 	>=sys-devel/libtool-2.2
 	vala? ( $(vala_depend) )"
