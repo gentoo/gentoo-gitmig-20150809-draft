@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.90 2013/04/28 23:50:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.91 2013/04/29 01:02:31 floppym Exp $
 
 EAPI=5
 AUTOTOOLS_AUTO_DEPEND=yes
@@ -207,6 +207,10 @@ src_compile() {
 
 	use doc && multibuild_for_best_variant \
 		autotools-utils_src_compile -C docs html
+}
+
+src_test() {
+	multibuild_foreach_variant autotools-utils_src_test
 }
 
 src_install() {
