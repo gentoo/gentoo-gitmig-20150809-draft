@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.8 2013/04/30 05:32:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.9 2013/04/30 05:33:19 mgorny Exp $
 
 # @ECLASS: python-any-r1
 # @MAINTAINER:
@@ -215,6 +215,12 @@ python-any-r1_pkg_setup() {
 			return
 		fi
 	done
+
+	eerror "No Python implementation found for the build. This is usually"
+	eerror "a bug in the ebuild. Please report it to bugs.gentoo.org"
+	eerror "along with the build log."
+	echo
+	die "No supported Python implementation installed."
 }
 
 _PYTHON_ANY_R1=1
