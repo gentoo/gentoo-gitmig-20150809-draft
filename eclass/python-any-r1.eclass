@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.9 2013/04/30 05:33:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.10 2013/04/30 05:34:33 mgorny Exp $
 
 # @ECLASS: python-any-r1
 # @MAINTAINER:
@@ -19,6 +19,14 @@
 # string on any of the supported Python implementations. It also exports
 # pkg_setup() which finds the best supported implementation and sets it
 # as the active one.
+#
+# Optionally, you can define a python_check_deps() function. It will
+# be called by the eclass with EPYTHON set to each matching Python
+# implementation and it is expected to check whether the implementation
+# fulfills the package requirements. You can use the locally exported
+# PYTHON_USEDEP to check USE-dependencies of relevant packages. It
+# should return a true value (0) if the Python implementation fulfills
+# the requirements, a false value (non-zero) otherwise.
 #
 # Please note that python-any-r1 will always inherit python-utils-r1
 # as well. Thus, all the functions defined there can be used in the
@@ -134,16 +142,38 @@ _python_build_set_globals() {
 }
 _python_build_set_globals
 
+# @ECLASS-VARIABLE: PYTHON_USEDEP
+# @DESCRIPTION:
+# An eclass-generated USE-dependency string for the currently tested
+# implementation. It is set locally for python_check_deps() call.
+#
+# The generate USE-flag list is compatible with packages using python-r1,
+# python-single-r1 and python-distutils-ng eclasses. It must not be used
+# on packages using python.eclass.
+#
+# Example use:
+# @CODE
+# python_check_deps() {
+#	has_version "dev-python/foo[${PYTHON_USEDEP}]"
+# }
+# @CODE
+#
+# Example value:
+# @CODE
+# python_targets_python2_7(-)?,python_single_target_python2_7(+)?
+# @CODE
+
 # @FUNCTION: _python_EPYTHON_supported
 # @USAGE: <epython>
 # @INTERNAL
 # @DESCRIPTION:
 # Check whether the specified implementation is supported by package
-# (specified in PYTHON_COMPAT).
+# (specified in PYTHON_COMPAT). Calls python_check_deps() if declared.
 _python_EPYTHON_supported() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	local i=${1/./_}
+	local EPYTHON=${1}
+	local i=${EPYTHON/./_}
 
 	case "${i}" in
 		python*|jython*)
@@ -161,6 +191,12 @@ _python_EPYTHON_supported() {
 		local PYTHON_PKG_DEP
 		python_export "${i}" PYTHON_PKG_DEP
 		if ROOT=/ has_version "${PYTHON_PKG_DEP}"; then
+			if declare -f python_check_deps >/dev/null; then
+				local PYTHON_USEDEP="python_targets_${i}(-),python_single_target_${i}(+)"
+				python_check_deps
+				return ${?}
+			fi
+
 			return 0
 		fi
 	elif ! has "${i}" "${_PYTHON_ALL_IMPLS[@]}"; then

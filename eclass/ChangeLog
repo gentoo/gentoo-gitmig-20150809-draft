@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.806 2013/04/30 05:33:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.807 2013/04/30 05:34:33 mgorny Exp $
+
+  30 Apr 2013; Michal Gorny <mgorny@gentoo.org> python-any-r1.eclass:
+  Support declaring python_check_deps() in ebuilds, to check Python impl for
+  proper deps.
 
   30 Apr 2013; Michal Gorny <mgorny@gentoo.org> python-any-r1.eclass:
   Report no matching impl properly.
