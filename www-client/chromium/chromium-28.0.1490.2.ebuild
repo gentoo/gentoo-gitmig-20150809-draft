@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1478.0.ebuild,v 1.1 2013/04/16 17:33:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-28.0.1490.2.ebuild,v 1.1 2013/05/01 21:24:55 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -33,7 +33,7 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 		>=net-print/cups-1.3.11:=
 	)
 	>=dev-lang/v8-3.17.6:=
-	=dev-lang/v8-3.17*
+	=dev-lang/v8-3.18*
 	>=dev-libs/elfutils-0.149
 	dev-libs/expat:=
 	>=dev-libs/icu-49.1.1-r1:=
@@ -134,14 +134,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-gpsd-r0.patch"
 	epatch "${FILESDIR}/${PN}-system-ffmpeg-r4.patch"
 
-	# Fix build issue with smhasher, bug #459126 .
-	epatch "${FILESDIR}/${PN}-smhasher-r0.patch"
-
-	# Fix build with speech-dispatcher-0.8, bug #463550 .
-	epatch "${FILESDIR}/${PN}-speech-dispatcher-0.8-r0.patch"
-
-	# Fix build with system minizip, to be upstreamed.
-	epatch "${FILESDIR}/${PN}-system-minizip-r0.patch"
+	# Fix build with system libraries, to be upstreamed.
+	epatch "${FILESDIR}/${PN}-shim-headers-r0.patch"
 
 	epatch_user
 
@@ -292,7 +286,8 @@ src_configure() {
 	myconf+="
 		-Dlinux_link_gsettings=1
 		-Dlinux_link_libpci=1
-		-Dlinux_link_libspeechd=1"
+		-Dlinux_link_libspeechd=1
+		-Dlibspeechd_h_prefix=speech-dispatcher/"
 
 	# TODO: use the file at run time instead of effectively compiling it in.
 	myconf+="
@@ -359,6 +354,7 @@ src_configure() {
 	# Tools for building programs to be executed on the build system, bug #410883.
 	tc-export_build_env BUILD_AR BUILD_CC BUILD_CXX
 
+	build/linux/unbundle/replace_gyp_files.py ${myconf} || die
 	egyp_chromium ${myconf} || die
 }
 

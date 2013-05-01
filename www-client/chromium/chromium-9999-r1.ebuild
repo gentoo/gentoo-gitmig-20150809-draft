@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.189 2013/04/23 00:34:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.190 2013/05/01 21:24:55 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -411,6 +411,7 @@ src_configure() {
 	# Tools for building programs to be executed on the build system, bug #410883.
 	tc-export_build_env BUILD_AR BUILD_CC BUILD_CXX
 
+	build/linux/unbundle/replace_gyp_files.py ${myconf} || die
 	egyp_chromium ${myconf} || die
 }
 
