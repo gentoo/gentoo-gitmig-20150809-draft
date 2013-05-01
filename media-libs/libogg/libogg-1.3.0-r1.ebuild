@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.3.0-r1.ebuild,v 1.3 2013/05/01 21:08:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.3.0-r1.ebuild,v 1.4 2013/05/01 21:30:07 mgorny Exp $
 
 EAPI=5
 
@@ -33,8 +33,11 @@ src_prepare() {
 		configure.in || die
 
 	# Un-hack docdir redefinition.
+	# https://trac.xiph.org/ticket/1758
 	find -name 'Makefile.am' \
-		-exec sed -i -e 's:$(datadir)/doc/$(PACKAGE)-$(VERSION):@docdir@/html:' {} +
+		-exec sed -i \
+			-e 's:$(datadir)/doc/$(PACKAGE)-$(VERSION):@docdir@/html:' \
+			{} + || die
 
 	autotools-multilib_src_prepare
 }
