@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4-r1.ebuild,v 1.1 2013/05/01 13:33:22 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4-r1.ebuild,v 1.2 2013/05/01 13:42:39 hasufell Exp $
 
 EAPI=5
 
@@ -80,7 +80,7 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-0.48.3.1-desktop.patch \
 		"${FILESDIR}"/${PN}-0.48.4-epython.patch \
 		"${FILESDIR}"/${PN}-0.48.4-fix-member-decl.patch \
-		"${FILESDIR}"/${PN}-0.48.4-automake-1.3.patch
+		"${FILESDIR}"/${PN}-0.48.4-automake-1.13.patch
 
 	sed -i \
 		-e "s#@EPYTHON@#${EPYTHON}#" \
