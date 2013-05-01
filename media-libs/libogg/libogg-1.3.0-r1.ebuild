@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.3.0-r1.ebuild,v 1.1 2013/05/01 20:11:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.3.0-r1.ebuild,v 1.2 2013/05/01 20:20:31 ssuominen Exp $
 
 EAPI=5
 inherit autotools-multilib
@@ -26,5 +26,5 @@ MULTILIB_WRAPPED_HEADERS=(
 
 src_install() {
 	# docdir, http://trac.xiph.org/ticket/1758
-	autotools-multilib_src_install docdir=/usr/share/doc/${PF}/ogg install
+	autotools-multilib_src_install docdir=/usr/share/doc/${PF}/ogg
 }
