@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.0.19.ebuild,v 1.2 2013/05/01 00:41:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.0.19.ebuild,v 1.3 2013/05/01 00:42:44 floppym Exp $
 
 EAPI=5
 
@@ -59,9 +59,9 @@ python_compile_all() {
 
 python_test() {
 	if [[ "$EPYTHON}" = python3* ]]; then
-		einfo "Some dependencies of testsuite do no support python3"
+		ewarn "Some dependencies of testsuite do no support python3"
 	else
-		nosetests || die
+		nosetests || die "Tests fail with ${EPYTHON}"
 #		einfo "running funtests"
 #		"${PYTHON}" funtests/setup.py test || die "Failure occured in funtests"
 	fi
