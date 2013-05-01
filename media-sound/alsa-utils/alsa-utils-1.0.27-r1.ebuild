@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.27-r1.ebuild,v 1.1 2013/05/01 16:18:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.27-r1.ebuild,v 1.2 2013/05/01 16:23:48 ssuominen Exp $
 
 EAPI=5
 inherit eutils systemd udev
@@ -29,6 +29,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-service.patch \
 		"${FILESDIR}"/${P}-arecord.patch \
 		"${FILESDIR}"/${P}-alsactl.patch
+
+	epatch_user
 }
 
 src_configure() {
