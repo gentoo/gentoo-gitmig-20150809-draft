@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14709 2013/05/02 12:48:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14710 2013/05/02 13:38:57 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -488,10 +488,6 @@ media-gfx/yafaray
 # Jeroen Roovers <jer@gentoo.org> (22 Feb 2013)
 # Masked until bug #456788 is fixed.
 =net-analyzer/mtr-0.83
-
-# Jeroen Roovers <jer@gentoo.org> (22 Feb 2013)
-# Development versions of net-analyzer/wireshark
->net-analyzer/wireshark-1.9
 
 # Markos Chandras <hwoarang@gentoo.org> (17 Feb 2013)
 # Does not build with libav-0.8
