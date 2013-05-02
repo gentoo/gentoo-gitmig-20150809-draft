@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.9.2.ebuild,v 1.6 2012/12/09 10:23:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.9.2.ebuild,v 1.7 2013/05/02 19:20:02 ulm Exp $
 
 EAPI=4
 NEED_EMACS=22
@@ -26,7 +26,7 @@ ELISP_REMOVE="lisp/org-install.el"
 SITEFILE="50${PN}-gentoo.el"
 
 src_compile() {
-	emake
+	emake datadir="${SITEETC}/${PN}"
 	use doc && emake pdf card
 }
 
@@ -34,6 +34,8 @@ src_install() {
 	emake \
 		DESTDIR="${D}" \
 		ETCDIRS="styles $(use odt-schema && echo schema)" \
+		lispdir="${SITELISP}/${PN}" \
+		datadir="${SITEETC}/${PN}" \
 		install
 
 	cp "${FILESDIR}/${SITEFILE}" "${T}/${SITEFILE}"
