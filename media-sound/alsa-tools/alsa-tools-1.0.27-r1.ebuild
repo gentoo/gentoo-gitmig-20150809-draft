@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.27-r1.ebuild,v 1.1 2013/05/02 01:01:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.27-r1.ebuild,v 1.2 2013/05/02 01:11:23 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic
@@ -31,7 +31,8 @@ RDEPEND=">=media-libs/alsa-lib-${PV}
 		x11-libs/gtk+:2
 		x11-libs/gtk+:3
 		)"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 pkg_setup() {
 	ALSA_TOOLS="seq/sbiload us428control hwmixvolume hda-verb"
