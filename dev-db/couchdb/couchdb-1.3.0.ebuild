@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-1.3.0.ebuild,v 1.2 2013/05/03 11:31:19 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-1.3.0.ebuild,v 1.3 2013/05/03 11:37:54 djc Exp $
 
 EAPI="2"
 
@@ -28,6 +28,10 @@ S="${WORKDIR}/apache-${P}"
 pkg_setup() {
 	enewgroup couchdb
 	enewuser couchdb -1 -1 /var/lib/couchdb couchdb
+}
+
+src_prepare() {
+	sed -i ./src/couchdb/priv/Makefile.* -e 's|-Werror||g' || die
 }
 
 src_configure() {
