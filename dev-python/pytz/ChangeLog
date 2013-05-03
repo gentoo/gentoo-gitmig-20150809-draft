@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.134 2013/05/03 12:31:19 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.135 2013/05/03 12:33:23 djc Exp $
+
+*pytz-2013b (03 May 2013)
+
+  03 May 2013; Dirkjan Ochtman <djc@gentoo.org> +pytz-2013b.ebuild:
+  Version bump pytz to 2013b.
 
   03 May 2013; Dirkjan Ochtman <djc@gentoo.org> -pytz-2011e.ebuild,
   -pytz-2012d.ebuild, -pytz-2012f.ebuild, -pytz-2012g.ebuild,
