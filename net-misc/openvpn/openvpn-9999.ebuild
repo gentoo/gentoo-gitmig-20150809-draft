@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-9999.ebuild,v 1.6 2013/01/12 14:43:29 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-9999.ebuild,v 1.7 2013/05/03 07:56:29 djc Exp $
 
 EAPI=4
 
@@ -13,9 +13,10 @@ HOMEPAGE="http://openvpn.net/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="examples down-root iproute2 pam passwordsave pkcs11 +plugins selinux +ssl +lzo static userland_BSD"
+IUSE="examples down-root iproute2 pam passwordsave pkcs11 +plugins polarssl selinux +ssl +lzo static userland_BSD"
 
 REQUIRED_USE="static? ( !plugins !pkcs11 )
+			polarssl? ( ssl )
 			!plugins? ( !pam !down-root )"
 
 DEPEND="
@@ -24,7 +25,9 @@ DEPEND="
 	)
 	pam? ( virtual/pam )
 	selinux? ( sec-policy/selinux-openvpn )
-	ssl? ( >=dev-libs/openssl-0.9.7 )
+	ssl? (
+		!polarssl? ( >=dev-libs/openssl-0.9.7 ) polarssl? ( >=net-libs/polarssl-1.1.0 )
+	)
 	lzo? ( >=dev-libs/lzo-1.07 )
 	pkcs11? ( >=dev-libs/pkcs11-helper-1.05 )"
 RDEPEND="${DEPEND}"
@@ -35,7 +38,10 @@ src_prepare() {
 
 src_configure() {
 	use static && LDFLAGS="${LDFLAGS} -Xcompiler -static"
+	local myconf
+	use polarssl && myconf="--with-crypto-library=polarssl"
 	econf \
+		${myconf} \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--with-plugindir="${ROOT}/usr/$(get_libdir)/$PN" \
 		$(use_enable passwordsave password-save) \
