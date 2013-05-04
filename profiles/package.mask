@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14718 2013/05/04 05:52:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14719 2013/05/04 05:57:19 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,6 +34,7 @@
 # Patrick Lauer <patrick@gentoo.org> (04 May 2013)
 # Dependency on nonexisting =gnome-extra/evolution-data-server-3.4* 
 =gnome-extra/evolution-groupwise-3.4.2
+=gnome-extra/evolution-exchange-3.4.4
 
 # Jeroen Roovers <jer@gentoo.org> (02 May 2013)
 # Has long surpassed its use, removal in thirty days
