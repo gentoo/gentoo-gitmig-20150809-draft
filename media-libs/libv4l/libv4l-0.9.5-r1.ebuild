@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-0.9.5-r1.ebuild,v 1.1 2013/05/04 16:45:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-0.9.5-r1.ebuild,v 1.2 2013/05/04 16:55:25 ssuominen Exp $
 
 EAPI=5
 inherit eutils linux-info udev multilib-minimal
@@ -22,7 +22,6 @@ RDEPEND="virtual/jpeg:=
 	virtual/opengl
 	x11-libs/libX11:=
 	!media-tv/v4l2-ctl
-	!media-tv/v4l-utils
 	!<media-tv/ivtv-utils-1.4.0-r2
 	amd64? ( abi_x86_32? ( app-emulation/emul-linux-x86-baselibs[development] ) )"
 DEPEND="${RDEPEND}
