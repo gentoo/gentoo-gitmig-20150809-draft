@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.103 2013/05/04 05:23:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.104 2013/05/04 05:24:05 vapier Exp $
 
 # @ECLASS: libtool.eclass
 # @MAINTAINER:
@@ -136,7 +136,7 @@ elibtoolize() {
 	local deptoremove=
 	local do_shallow="no"
 	local force="false"
-	local elt_patches="install-sh ltmain portage relink max_cmd_len sed test tmp cross as-needed"
+	local elt_patches="install-sh ltmain portage relink max_cmd_len sed test tmp cross as-needed target-nm"
 
 	for x in "$@" ; do
 		case ${x} in
@@ -353,6 +353,10 @@ elibtoolize() {
 						# have at least one patch succeeded.
 						ret=0
 					fi
+					;;
+				target-nm)
+					ELT_walk_patches "${d}/configure" "${p}"
+					ret=$?
 					;;
 				install-sh)
 					ELT_walk_patches "${d}/install-sh" "${p}"
