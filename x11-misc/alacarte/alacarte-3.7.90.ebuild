@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-3.7.90.ebuild,v 1.1 2013/05/05 09:35:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-3.7.90.ebuild,v 1.2 2013/05/05 09:37:56 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -23,7 +23,6 @@ COMMON_DEPEND="
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
 	>=gnome-base/gnome-menus-3.5.3:3[introspection]
 "
-# gnome-panel needed for gnome-desktop-item-edit
 RDEPEND="${COMMON_DEPEND}
 	x11-libs/gdk-pixbuf:2[introspection]
 	x11-libs/gtk+:3[introspection]
