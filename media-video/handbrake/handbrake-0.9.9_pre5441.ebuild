@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9_pre5441.ebuild,v 1.3 2013/05/07 17:26:23 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9_pre5441.ebuild,v 1.4 2013/05/07 17:30:59 thev00d00 Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python2_{5,6,7} )
 
-inherit eutils gnome2-utils python-any-r1
+inherit autotools eutils gnome2-utils python-any-r1
 
 if [[ ${PV} = *9999* ]]; then
 	ESVN_REPO_URI="svn://svn.handbrake.fr/HandBrake/trunk"
