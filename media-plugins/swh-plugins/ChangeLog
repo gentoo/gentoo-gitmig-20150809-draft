@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/swh-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.44 2013/05/08 12:06:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.45 2013/05/08 12:19:02 aballier Exp $
+
+*swh-plugins-0.4.15-r2 (08 May 2013)
+
+  08 May 2013; Alexis Ballier <aballier@gentoo.org>
+  +swh-plugins-0.4.15-r2.ebuild,
+  +files/swh-plugins-0.4.15-x86-asm-optional.patch:
+  Fix enabling/disabling asm code, bug #391675 by cJ and Risto A. Paju.
 
   08 May 2013; Alexis Ballier <aballier@gentoo.org>
   swh-plugins-0.4.15-r1.ebuild:
