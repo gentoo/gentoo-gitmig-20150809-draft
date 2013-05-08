@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.15-r1.ebuild,v 1.4 2012/05/05 08:27:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.15-r1.ebuild,v 1.5 2013/05/08 12:05:07 aballier Exp $
 
 inherit eutils autotools
 
@@ -40,6 +40,9 @@ src_unpack() {
 
 	# it doesn't get updated otherwise
 	rm -f missing
+
+	# Fix build with automake 1.13
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.in || die
 
 	eautoreconf
 	elibtoolize
