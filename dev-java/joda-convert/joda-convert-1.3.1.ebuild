@@ -1,10 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-convert/joda-convert-1.3.1.ebuild,v 1.3 2013/05/09 18:23:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-convert/joda-convert-1.3.1.ebuild,v 1.4 2013/05/09 18:25:44 radhermit Exp $
 
 EAPI="5"
 JAVA_PKG_IUSE="doc source test"
-JAVA_ANT_REWRITE_CLASSPATH="true"
 
 inherit java-pkg-2 java-ant-2
 
