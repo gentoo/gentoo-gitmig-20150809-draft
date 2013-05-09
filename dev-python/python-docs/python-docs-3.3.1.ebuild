@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-3.3.1.ebuild,v 1.1 2013/05/09 21:49:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-3.3.1.ebuild,v 1.2 2013/05/09 21:56:26 floppym Exp $
 
 EAPI="3"
 
@@ -17,14 +17,6 @@ DEPEND=""
 RDEPEND=""
 
 S="${WORKDIR}/python-${PV}-docs-html"
-
-pkg_setup() {
-	# Compatibility with Arfrever's pre-release ebuilds.
-	# Remove this in python-docs-3.3.1.
-	if has_version "=dev-lang/python-3.3_pre*[doc]"; then
-		rm -f "${EROOT}etc/env.d/60python-docs-3.3"
-	fi
-}
 
 src_install() {
 	dohtml -A xml -r ./
