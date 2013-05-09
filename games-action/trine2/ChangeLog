@@ -1,6 +1,10 @@
 # ChangeLog for games-action/trine2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trine2/ChangeLog,v 1.4 2013/05/09 14:13:08 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trine2/ChangeLog,v 1.5 2013/05/09 14:15:54 hasufell Exp $
+
+  09 May 2013; Julian Ospald <hasufell@gentoo.org> metadata.xml,
+  trine2-1.16.ebuild:
+  convert system-libs useflag to bundled-libs
 
   09 May 2013; Julian Ospald <hasufell@gentoo.org> trine2-1.16.ebuild:
   restrict splitdebug
