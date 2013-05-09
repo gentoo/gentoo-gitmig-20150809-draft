@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trine2/trine2-1.16.ebuild,v 1.4 2013/04/11 16:47:01 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trine2/trine2-1.16.ebuild,v 1.5 2013/05/09 14:13:08 hasufell Exp $
 
 EAPI=5
 inherit eutils unpacker gnome2-utils games
@@ -14,7 +14,7 @@ LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="+launcher system-libs"
-RESTRICT="fetch bindist"
+RESTRICT="fetch bindist splitdebug"
 
 QA_PREBUILT="${GAMES_PREFIX_OPT}/${PN}/${PN}*
 	${GAMES_PREFIX_OPT}/${PN}/lib/*"
