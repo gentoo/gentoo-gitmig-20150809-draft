@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.76 2013/05/10 09:38:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.77 2013/05/10 09:42:39 ago Exp $
+
+  10 May 2013; Agostino Sarubbo <ago@gentoo.org> inspircd-2.0.11.ebuild:
+  Stable for x86, wrt bug #469200
 
   10 May 2013; Agostino Sarubbo <ago@gentoo.org> inspircd-2.0.11.ebuild:
   Stable for amd64, wrt bug #469200
