@@ -1,6 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/super-hexagon/super-hexagon-15.ebuild,v 1.4 2013/05/09 14:12:14 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/super-hexagon/super-hexagon-15.ebuild,v 1.5 2013/05/10 18:46:38 hasufell Exp $
+
+# we use bundled glew, cause slotting 1.6 does not give us
+# much benefit for one consumer
 
 EAPI=5
 
@@ -13,7 +16,7 @@ SRC_URI="${PN}-linux-${PV}-bin"
 LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="bundled-libs +bundled-glew"
+IUSE="bundled-libs"
 RESTRICT="bindist fetch splitdebug"
 
 MYGAMEDIR=${GAMES_PREFIX_OPT}/${PN}
@@ -38,8 +41,7 @@ RDEPEND="
 		media-libs/libogg
 		media-libs/libvorbis
 		media-libs/openal
-	)
-	!bundled-glew? ( ~media-libs/glew-1.6.0 )"
+	)"
 
 S=${WORKDIR}/data
 
@@ -61,9 +63,8 @@ src_prepare() {
 	if ! use bundled-libs ; then
 		einfo "removing bundled-libs..."
 		cd $(usex amd64 "x86_64" "x86") || die
-		rm libglut.so* libogg.so* libopenal.so* libstdc++.so*\
-			libvorbis.so* libvorbisfile.so* \
-			$(usex bundled-glew "" "libGLEW.so.1.6") || die
+		rm libglut.so* libogg.so* libopenal.so* libstdc++.so* \
+			libvorbis.so* libvorbisfile.so*
 	fi
 }
 
