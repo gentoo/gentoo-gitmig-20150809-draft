@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.139 2013/05/10 19:45:40 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.140 2013/05/10 19:52:17 nimiux Exp $
+
+  10 May 2013; Chema Alonso <nimiux@gentoo.org>
+  -files/logrotate-3.7.7-datehack.patch,
+  -files/logrotate-3.8.0-atomic-create.patch,
+  -files/logrotate-3.8.0-fbsd.patch,
+  -files/logrotate-3.8.0-ignore-hidden.patch, -logrotate-3.8.1.ebuild,
+  -files/logrotate-3.8.1-noasprintf.patch, -logrotate-3.8.2.ebuild,
+  -files/logrotate-3.8.2-atomic-create.patch,
+  -files/logrotate-3.8.2-fbsd.patch:
+  Clean old
 
 *logrotate-3.8.4 (10 May 2013)
 
