@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20120628.ebuild,v 1.2 2013/05/11 16:32:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20120628.ebuild,v 1.3 2013/05/11 16:33:54 vapier Exp $
 
 EAPI="4"
 
@@ -33,6 +33,8 @@ S=${WORKDIR}/${PN}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-20061201-prelink-conf.patch
+
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.in || die #469126
 
 	sed -i -e '/^CC=/s: : -Wl,--disable-new-dtags :' testsuite/functions.sh #100147
 	# >=binutils-2.22 --no-copy-dt-needed-entries is the default
