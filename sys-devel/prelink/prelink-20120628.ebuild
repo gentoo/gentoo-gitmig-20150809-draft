@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20120628.ebuild,v 1.1 2012/08/18 06:47:48 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20120628.ebuild,v 1.2 2013/05/11 16:32:52 vapier Exp $
 
 EAPI="4"
 
@@ -20,9 +20,10 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 -arm ~ppc ~ppc64 ~x86"
-IUSE=""
+IUSE="selinux"
 
 DEPEND=">=dev-libs/elfutils-0.100[static-libs(+)]
+	selinux? ( sys-libs/libselinux[static-libs(+)] )
 	!dev-libs/libelf
 	>=sys-libs/glibc-2.8"
 RDEPEND="${DEPEND}
@@ -54,6 +55,8 @@ src_prepare() {
 	# have to do this after eautoreconf or automake barfs on the trailing
 	# backslash of the previous line
 	sed -i -e 's:undosyslibs.sh::' testsuite/Makefile.in # 254201
+
+	export ac_cv_{header_selinux_selinux_h,lib_selinux_is_selinux_enabled}=$(usex selinux)
 }
 
 src_install() {
