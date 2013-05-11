@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/mitmproxy/mitmproxy-0.8.1.ebuild,v 1.1 2013/05/11 11:19:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/mitmproxy/mitmproxy-0.8.1.ebuild,v 1.2 2013/05/11 11:22:48 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 
 python_test() {
 	cd test || die
-	"${EROOT}"/usr/bin/pry-${EPYTHON} || die
+	pry || die
 }
 
 python_install_all() {
