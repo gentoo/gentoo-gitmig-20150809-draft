@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-9999.ebuild,v 1.4 2013/05/11 18:42:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-9999.ebuild,v 1.5 2013/05/11 18:45:24 ssuominen Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -40,13 +40,17 @@ src_prepare() {
 	sed -i -e '1c\#!/usr/bin/env sh' YASM-VERSION-GEN.sh || die
 	eautoreconf
 
-	if [[ ${PV} == 9999* ]] ; then
+	if [[ ${PV} == 9999* ]]; then
 		./modules/arch/x86/gen_x86_insn.py || die
 	fi
 }
 
 src_configure() {
-	python_export_best
+	if [[ ${PV} == 9999* ]]; then
+		python_export_best
+	else
+		use python && python_export_best
+	fi
 
 	econf \
 		--disable-warnerror \
