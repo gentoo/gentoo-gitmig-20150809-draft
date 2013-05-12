@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.102 2013/04/10 13:10:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.103 2013/05/12 14:04:44 ago Exp $
+
+  12 May 2013; Agostino Sarubbo <ago@gentoo.org> mpc-0.23.ebuild:
+  Stable for arm, wrt bug #469470
 
 *mpc-0.23 (10 Apr 2013)
 
