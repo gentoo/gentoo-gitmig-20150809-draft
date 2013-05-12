@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/broadcom-sta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.49 2013/05/12 10:02:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.50 2013/05/12 10:45:38 pinkbyte Exp $
+
+  12 May 2013; Sergey Popov <pinkbyte@gentoo.org>
+  broadcom-sta-6.30.223.30-r1.ebuild:
+  Remove incorrect explicit call to linux-info_pkg_setup
 
 *broadcom-sta-6.30.223.30-r1 (12 May 2013)
 

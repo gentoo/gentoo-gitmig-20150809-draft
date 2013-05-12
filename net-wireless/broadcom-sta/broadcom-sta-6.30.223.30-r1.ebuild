@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-6.30.223.30-r1.ebuild,v 1.1 2013/05/12 10:02:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-6.30.223.30-r1.ebuild,v 1.2 2013/05/12 10:45:38 pinkbyte Exp $
 
 EAPI="5"
 inherit eutils linux-info linux-mod unpacker
@@ -27,8 +27,6 @@ MODULE_NAMES="wl(net/wireless)"
 MODULESD_WL_ALIASES=("wlan0 wl")
 
 pkg_setup() {
-	linux-info_pkg_setup
-
 	# bug #300570
 	# NOTE<lxnay>: module builds correctly anyway with b43 and SSB enabled
 	# make checks non-fatal. The correct fix is blackisting ssb and, perhaps
