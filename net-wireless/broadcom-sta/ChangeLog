@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/broadcom-sta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.51 2013/05/12 10:50:32 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.52 2013/05/12 10:52:13 pinkbyte Exp $
+
+  12 May 2013; Sergey Popov <pinkbyte@gentoo.org>
+  broadcom-sta-5.100.82.112-r2.ebuild:
+  Add '-*' to KEYWORDS, as package ships blobs that can not be used on other
+  arches
 
 *broadcom-sta-5.100.82.112-r3 (12 May 2013)
 
