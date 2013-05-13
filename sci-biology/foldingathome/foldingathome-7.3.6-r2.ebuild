@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-7.3.6-r2.ebuild,v 1.3 2013/05/13 16:33:19 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-7.3.6-r2.ebuild,v 1.4 2013/05/13 16:47:20 axs Exp $
 
 EAPI="4"
 
@@ -36,6 +36,9 @@ QA_PREBUILT="${I}/*"
 
 pkg_setup() {
 	I="${EROOT}/${I}"
+	einfo ""
+	cat "${PORTDIR}"/licenses/FAH-special-permission
+	einfo ""
 }
 
 src_install() {
