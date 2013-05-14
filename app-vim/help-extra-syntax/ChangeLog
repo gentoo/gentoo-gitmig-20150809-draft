@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/help-extra-syntax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/help-extra-syntax/ChangeLog,v 1.13 2013/05/14 05:26:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/help-extra-syntax/ChangeLog,v 1.14 2013/05/14 05:27:15 radhermit Exp $
+
+  14 May 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant long description from metadata.
 
   14 May 2013; Tim Harder <radhermit@gentoo.org>
   -help-extra-syntax-20050106.ebuild:
