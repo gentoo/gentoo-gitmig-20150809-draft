@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gmchess/gmchess-0.29.6-r1.ebuild,v 1.1 2013/05/14 01:37:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gmchess/gmchess-0.29.6-r1.ebuild,v 1.2 2013/05/14 01:40:19 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools libtool gnome2-utils games
@@ -21,7 +21,7 @@ RDEPEND=${DEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	sed -i \
-		-e "s:GAMES_LIBDIR:${GAMES_LIBDIR}:" \
+		-e "s:GAMES_LIBDIR:$(games_get_libdir):" \
 		-e "s:GAMES_DATADIR:${GAMES_DATADIR}:" \
 		src/engine/eleeye.cpp || die
 	eautoreconf
