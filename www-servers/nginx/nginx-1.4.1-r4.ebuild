@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.4.1-r4.ebuild,v 1.1 2013/05/14 21:38:03 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.4.1-r4.ebuild,v 1.2 2013/05/14 21:47:27 dev-zero Exp $
 
 EAPI="5"
 
@@ -183,7 +183,8 @@ DEPEND="${CDEPEND}
 PDEPEND="vim-syntax? ( app-vim/nginx-syntax )"
 
 REQUIRED_USE="pcre-jit? ( pcre )
-	nginx_modules_http_lua? ( nginx_modules_http_rewrite )"
+	nginx_modules_http_lua? ( nginx_modules_http_rewrite )
+	nginx_modules_http_naxsi? ( pcre )"
 
 pkg_setup() {
 	NGINX_HOME="/var/lib/nginx"
