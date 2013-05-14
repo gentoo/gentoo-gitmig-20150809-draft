@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/nx_util/nx_util-0.3.ebuild,v 1.1 2013/05/14 21:39:22 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/nx_util/nx_util-0.3.ebuild,v 1.2 2013/05/14 21:57:32 dev-zero Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ DESCRIPTION="Whitelist & Reports generation for Naxsi (Web Application Firewall 
 HOMEPAGE="https://code.google.com/p/naxsi/"
 SRC_URI="https://naxsi.googlecode.com/files/${P}.tgz"
 
-LICENSE="GPL-2+"
+LICENSE="GPL-2+ Apache-2.0 CC-BY-NC-SA-3.0"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
