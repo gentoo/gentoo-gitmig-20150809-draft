@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/FTL/FTL-1.03.1.ebuild,v 1.9 2013/05/14 19:30:35 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/FTL/FTL-1.03.1.ebuild,v 1.10 2013/05/14 19:31:46 hasufell Exp $
 
 # TODO: update libpng to slot 1.5 when stable
 
@@ -29,8 +29,8 @@ RDEPEND="
 		sys-libs/zlib
 	)"
 
-QA_PREBUILT="${GAMES_PREFIX_OPT}/${PN}/bin/${PN}
-	${GAMES_PREFIX_OPT}/${PN}/lib/*"
+QA_PREBUILT="${GAMES_PREFIX_OPT#/}/${PN}/bin/${PN}
+	${GAMES_PREFIX_OPT#/}/${PN}/lib/*"
 
 S=${WORKDIR}/${PN}
 
