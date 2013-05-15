@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.116 2013/05/15 18:36:06 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.117 2013/05/15 18:37:29 idella4 Exp $
+
+  15 May 2013; Ian Delaney <idella4@gentoo.org> xen-4.2.1-r1.ebuild,
+  xen-4.2.1-r2.ebuild:
+  Manifests
 
   15 May 2013; Ian Delaney <idella4@gentoo.org> xen-4.2.1-r1.ebuild,
   xen-4.2.1-r2.ebuild, xen-4.2.2.ebuild:
