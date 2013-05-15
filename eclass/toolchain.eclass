@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.588 2013/05/15 00:55:21 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.589 2013/05/15 00:56:49 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -97,7 +97,7 @@ STDCXX_INCDIR=${TOOLCHAIN_STDCXX_INCDIR:-${LIBPATH}/include/g++-v${GCC_BRANCH_VE
 
 
 #---->> SLOT+IUSE logic <<----
-IUSE="multislot nls nptl test vanilla"
+IUSE="multislot nls nptl regression-test vanilla"
 
 if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 	IUSE+=" altivec cxx fortran"
@@ -164,7 +164,7 @@ fi
 DEPEND="${RDEPEND}
 	>=sys-devel/bison-1.875
 	>=sys-devel/flex-2.5.4
-	test? (
+	regression-test? (
 		>=dev-util/dejagnu-1.4.4
 		>=sys-devel/autogen-5.5.4
 	)"
@@ -609,6 +609,11 @@ toolchain_pkg_postinst() {
 		# Since these aren't critical files and portage sucks with
 		# handling of binpkgs, don't require these to be found
 		cp "${ROOT}/${DATAPATH}"/c{89,99} "${ROOT}"/usr/bin/ 2>/dev/null
+	fi
+
+	if use regression-test ; then
+		elog "Testsuite results have been installed into /usr/share/doc/${PF}/testsuite"
+		echo
 	fi
 }
 
@@ -1472,8 +1477,10 @@ toolchain_src_compile() {
 }
 
 toolchain_src_test() {
-	cd "${WORKDIR}"/build
-	emake -k check || ewarn "check failed and that sucks :("
+	if use regression-test ; then
+		cd "${WORKDIR}"/build
+		emake -k check
+	fi
 }
 
 toolchain_src_install() {
@@ -1585,7 +1592,7 @@ toolchain_src_install() {
 	find "${D}" -depth -type d -delete 2>/dev/null
 
 	# install testsuite results
-	if use test; then
+	if use regression-test; then
 		docinto testsuite
 		find "${WORKDIR}"/build -type f -name "*.sum" -print0 | xargs -0 dodoc
 		find "${WORKDIR}"/build -type f -path "*/testsuite/*.log" -print0 \
