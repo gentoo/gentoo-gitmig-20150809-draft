@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.587 2013/05/14 18:46:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.588 2013/05/15 00:55:21 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -114,7 +114,7 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 		tc_version_is_at_least "4.2" && IUSE+=" openmp"
 		tc_version_is_at_least "4.3" && IUSE+=" fixed-point"
 		tc_version_is_at_least "4.6" && IUSE+=" graphite"
-		[[ ${GCC_BRANCH_VER} == 4.5 ]] && IUSE+=" lto"
+		tc_version_is_at_least "4.6" && IUSE+=" lto"
 		tc_version_is_at_least "4.7" && IUSE+=" go"
 	fi
 fi
@@ -144,7 +144,6 @@ if tc_version_is_at_least 4 ; then
 	if tc_version_is_at_least 4.5 ; then
 		RDEPEND+=" >=dev-libs/mpc-0.8.1"
 	fi
-	in_iuse lto && RDEPEND+=" lto? ( || ( >=dev-libs/elfutils-0.143 dev-libs/libelf ) )"
 fi
 if in_iuse graphite ; then
 	if tc_version_is_at_least 4.8 ; then
@@ -1096,14 +1095,7 @@ gcc_do_configure() {
 		confgcc+=" --without-ppl"
 	fi
 
-	# LTO support was added in 4.5, which depends upon elfutils.  This allows
-	# users to enable that option, and pull in the additional library.  In 4.6,
-	# the dependency is no longer required.
-	if tc_version_is_at_least "4.6" ; then
-		confgcc+=" --enable-lto"
-	elif tc_version_is_at_least "4.5" ; then
-		confgcc+=" $(use_enable lto)"
-	fi
+	tc_version_is_at_least "4.6" && confgcc+=" $(use_enable lto)"
 
 	case $(tc-is-softfloat) in
 	yes)    confgcc+=" --with-float=soft" ;;
