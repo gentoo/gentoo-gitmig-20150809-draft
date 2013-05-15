@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/magic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/ChangeLog,v 1.71 2013/05/15 09:18:02 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/ChangeLog,v 1.72 2013/05/15 11:51:11 xmw Exp $
+
+  15 May 2013; Michael Weber <xmw@gentoo.org>
+  +files/magic-7.5.231-ldflags.patch, +files/magic-7.5.231-verbose-build.patch,
+  -magic-7.5.230.ebuild, magic-7.5.231.ebuild:
+  Version bump, verbose build log (bug 466808)
 
 *magic-7.5.231 (15 May 2013)
 
