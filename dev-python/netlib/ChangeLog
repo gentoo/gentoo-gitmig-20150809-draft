@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/netlib
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netlib/ChangeLog,v 1.1 2013/05/16 08:10:31 radhermit Exp $
+
+*netlib-0.9 (16 May 2013)
+
+  16 May 2013; Tim Harder <radhermit@gentoo.org> +netlib-0.9.ebuild,
+  +metadata.xml:
+  Initial import.
+
