@@ -5,9 +5,11 @@
   <email>udev-bugs@gentoo.org</email>
 </maintainer>
 <use>
+  <flag name='audit'>Enable support for sys-process/audit (only used for logind)</flag>
   <flag name='firmware-loader'>Enable userspace firmware loader (DEPRECATED, replaced by in-kernel loader in 3.8+)</flag>
   <flag name='gudev'>Build the gobject interface library</flag>
   <flag name='hwdb'>Read vendor/device string database and add it to udev database</flag>
+  <flag name='logind'>Build the login session tracking daemon</flag>
   <flag name='keymap'>Map custom hardware's multimedia keys</flag>
   <flag name='kmod'>Enable kernel module loading/unloading support using <pkg>sys-apps/kmod</pkg></flag>
   <flag name='openrc'>Install the OpenRC init scripts</flag>
