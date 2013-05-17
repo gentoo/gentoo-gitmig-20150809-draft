@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.215 2013/05/17 00:33:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.216 2013/05/17 00:52:46 radhermit Exp $
 
 # Authors:
 # 	Jim Ramsay <lack@gentoo.org>
@@ -365,11 +365,6 @@ END
 		sed -i "s:\\\$(PERLLIB)/ExtUtils/xsubpp:${EPREFIX}/usr/bin/xsubpp:"	\
 			"${S}"/src/Makefile || die 'sed for ExtUtils-ParseXS failed'
 	fi
-}
-
-vim_src_unpack() {
-	unpack ${A}
-	vim_src_prepare
 }
 
 vim_src_configure() {
