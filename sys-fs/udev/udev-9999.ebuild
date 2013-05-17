@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.227 2013/05/17 13:44:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.228 2013/05/17 13:50:18 ssuominen Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ else
 	KV_min=2.6.32
 fi
 
-inherit autotools eutils linux-info multilib pam toolchain-funcs versionator
+inherit autotools eutils linux-info multilib toolchain-funcs versionator
 
 if [[ ${PV} = 9999* ]]; then
 	EGIT_REPO_URI="git://anongit.freedesktop.org/systemd/systemd"
@@ -32,21 +32,14 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="acl audit doc +firmware-loader gudev hwdb introspection logind keymap +kmod +openrc pam selinux static-libs"
+IUSE="acl doc +firmware-loader gudev hwdb introspection keymap +kmod +openrc selinux static-libs"
 
 RESTRICT="test"
 
 COMMON_DEPEND=">=sys-apps/util-linux-2.20
+	acl? ( sys-apps/acl )
 	gudev? ( >=dev-libs/glib-2 )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
-	logind? (
-		sys-apps/dbus
-		sys-auth/polkit
-		sys-libs/libcap
-		acl? ( sys-apps/acl )
-		audit? ( >=sys-process/audit-2 )
-		pam? ( virtual/pam )
-		)
 	kmod? ( >=sys-apps/kmod-13 )
 	selinux? ( >=sys-libs/libselinux-2.1.9 )
 	!<sys-libs/glibc-2.11
@@ -60,8 +53,7 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	!<sys-kernel/linux-headers-${KV_min}
 	doc? ( >=dev-util/gtk-doc-1.18 )
-	keymap? ( dev-util/gperf )
-	logind? ( dev-util/gperf )"
+	keymap? ( dev-util/gperf )"
 
 if [[ ${PV} = 9999* ]]; then
 	DEPEND="${DEPEND}
@@ -85,7 +77,7 @@ PDEPEND=">=virtual/udev-197-r1
 
 S=${WORKDIR}/systemd-${PV}
 
-QA_MULTILIB_PATHS="lib/systemd/.*"
+#QA_MULTILIB_PATHS="lib/systemd/systemd-udevd"
 
 udev_check_KV() {
 	if kernel_is lt ${KV_min//./ }; then
@@ -109,8 +101,6 @@ check_default_rules() {
 
 pkg_setup() {
 	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~!IDE ~INOTIFY_USER ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2 ~SIGNALFD ~EPOLL"
-	# check me from console login using pam module -> required just like for pam_ck_connector.so.?
-	# use logind && CONFIG_CHECK++=" ~AUDITSYSCALL"
 
 	linux-info_pkg_setup
 
@@ -203,69 +193,58 @@ src_prepare() {
 
 src_configure() {
 	tc-export CC #463846
-	use keymap || { use logind || export ac_cv_prog_ac_ct_GPERF=true; } #452760
+	use keymap || export ac_cv_prog_ac_ct_GPERF=true #452760
 
 	local econf_args
 
 	econf_args=(
-		--libdir="/usr/$(get_libdir)"
+		ac_cv_search_cap_init=
+		ac_cv_header_sys_capability_h=yes
+		DBUS_CFLAGS=' '
+		DBUS_LIBS=' '
+		--bindir=/bin
 		--docdir=/usr/share/doc/${PF}
-		$(use_enable static-libs static)
-		--disable-nls
-		$(use_enable doc gtk-doc)
-		$(use_enable kmod)
-		--disable-ima
-		$(use_enable selinux)
-		--disable-xz
-		--disable-tcpwrap
-		--disable-pam
-		--disable-acl
-		--disable-audit
-		--disable-libcryptsetup
-		--disable-readahead
-		--disable-quotacheck
-		--disable-logind
-		--disable-hostnamed
-		--disable-timedated
-		--disable-localed
-		--disable-coredump
-		--disable-polkit
-		--disable-myhostname
-		$(use_enable gudev)
-		$(use_enable keymap)
-		--enable-split-usr
+		--libdir=/usr/$(get_libdir)
 		--with-html-dir=/usr/share/doc/${PF}/html
-		--without-python
-		--with-bashcompletiondir=/usr/share/bash-completion
 		--with-rootprefix=
 		--with-rootlibdir=/$(get_libdir)
+		--with-bashcompletiondir=/usr/share/bash-completion
+		--without-python
+		--disable-audit
+		--disable-coredump
+		--disable-hostnamed
+		--disable-ima
+		--disable-libcryptsetup
+		--disable-localed
+		--disable-logind
+		--disable-myhostname
+		--disable-nls
+		--disable-pam
+		--disable-quotacheck
+		--disable-readahead
+		--enable-split-usr
+		--disable-tcpwrap
+		--disable-timedated
+		--disable-xz
+		--disable-polkit
+		$(use_enable acl)
+		$(use_enable doc gtk-doc)
+		$(use_enable gudev)
+		$(use_enable keymap)
+		$(use_enable kmod)
+		$(use_enable selinux)
+		$(use_enable static-libs static)
 	)
-
-	if use logind; then
+	if use introspection; then
 		econf_args+=(
-			--enable-logind
-			--enable-polkit
-			$(use_enable acl)
-			$(use_enable audit)
-		)
-		if use pam; then
-			econf_args+=(
-				--enable-pam
-				--with-pamlibdir="$(getpam_mod_dir)"
-			)
-		fi
-	else
-		econf_args+=(
-			ac_cv_search_cap_init=
-			ac_cv_header_sys_capability_h=yes
-			DBUS_CFLAGS=' '
-			DBUS_LIBS=' '
+			--enable-introspection=$(usex introspection)
 		)
 	fi
-
-	use firmware-loader && econf_args+=( -with-firmware-path="/lib/firmware/updates:/lib/firmware" )
-	use introspection && econf_args+=( --enable-introspection=$(usex introspection) )
-
+	if use firmware-loader; then
+		econf_args+=(
+			--with-firmware-path="/lib/firmware/updates:/lib/firmware"
+		)
+	fi
 	econf "${econf_args[@]}"
 }
 
@@ -273,6 +252,7 @@ src_compile() {
 	echo 'BUILT_SOURCES: $(BUILT_SOURCES)' > "${T}"/Makefile.extra
 	emake -f Makefile -f "${T}"/Makefile.extra BUILT_SOURCES
 	local targets=(
+		libudev.la
 		systemd-udevd
 		udevadm
 		ata_id
@@ -287,22 +267,9 @@ src_compile() {
 		man/systemd-udevd.service.8
 	)
 	use keymap && targets+=( keymap )
-	if use logind; then
-		logind_targets=(
-			libsystemd-daemon.la
-			libsystemd-login.la
-			systemd-logind
-			systemd-user-sessions
-			loginctl
-		)
-		use pam && logind_targets+=( pam_systemd.la )
-	fi
 	use gudev && targets+=( libgudev-1.0.la )
 
-	# Build libudev.la and dependencies before the helpers (parallel error)
-	emake libudev.la
 	emake "${targets[@]}"
-	emake -j1 "${logind_targets}"
 	if use doc; then
 		emake -C docs/libudev
 		use gudev && emake -C docs/gudev
@@ -310,17 +277,14 @@ src_compile() {
 }
 
 src_install() {
-	local lib_LTLIBRARIES=libudev.la \
-		pkgconfiglib_DATA=src/libudev/libudev.pc \
-		dist_bashcompletion_DATA=shell-completion/bash/udevadm \
-		rootbin_PROGRAMS=udevadm \
-		rootlibexec_PROGRAMS=systemd-udevd
+	local lib_LTLIBRARIES="libudev.la" \
+		pkgconfiglib_DATA="src/libudev/libudev.pc"
 
 	local targets=(
 		install-libLTLIBRARIES
 		install-includeHEADERS
 		install-libgudev_includeHEADERS
-		install-rootbinPROGRAMS
+		install-binPROGRAMS
 		install-rootlibexecPROGRAMS
 		install-udevlibexecPROGRAMS
 		install-dist_udevconfDATA
@@ -338,35 +302,17 @@ src_install() {
 		libudev-install-hook
 		install-directories-hook
 		install-dist_bashcompletionDATA
-		install-dist_pkgsysconfDATA
-		install-pamlibLTLIBRARIES
-		install-pkgincludeHEADERS
 	)
 
-	# add final values of variables:
 	if use gudev; then
 		lib_LTLIBRARIES+=" libgudev-1.0.la"
 		pkgconfiglib_DATA+=" src/gudev/gudev-1.0.pc"
 	fi
 
-	if use logind; then
-		dist_bashcompletion_DATA+=" shell-completion/bash/loginctl"
-		lib_LTLIBRARIES+=" libsystemd-login.la libsystemd-daemon.la"
-		rootlibexec_PROGRAMS+=" systemd-logind systemd-user-sessions"
-		rootbin_PROGRAMS+=" loginctl"
-		pkgconfiglib_DATA+=" src/login/libsystemd-login.pc"
-		dist_pkgsysconf_DATA+=" src/login/logind.conf"
-		pkgconfiglib_DATA+=" src/libsystemd-daemon/libsystemd-daemon.pc"
-		use pam && pamlib_LTLIBRARIES+=" pam_systemd.la"
-		pkginclude_HEADERS+=" src/systemd/sd-daemon.h"
-		targets+=( libsystemd-daemon-install-hook )
-	fi
-
+	# add final values of variables:
 	targets+=(
-		pkginclude_HEADERS="${pkginclude_HEADERS}"
-		dist_pkgsysconf_DATA="${dist_pkgsysconf_DATA}"
-		rootlibexec_PROGRAMS="${rootlibexec_PROGRAMS}"
-		rootbin_PROGRAMS="${rootbin_PROGRAMS}"
+		rootlibexec_PROGRAMS=systemd-udevd
+		bin_PROGRAMS=udevadm
 		lib_LTLIBRARIES="${lib_LTLIBRARIES}"
 		MANPAGES="man/udev.7 man/udevadm.8 \
 				man/systemd-udevd.service.8"
@@ -374,9 +320,8 @@ src_install() {
 		pkgconfiglib_DATA="${pkgconfiglib_DATA}"
 		INSTALL_DIRS='$(sysconfdir)/udev/rules.d \
 				$(sysconfdir)/udev/hwdb.d'
-		dist_bashcompletion_DATA="${dist_bashcompletion_DATA}"
+		dist_bashcompletion_DATA="shell-completion/bash/udevadm"
 	)
-
 	emake -j1 DESTDIR="${D}" "${targets[@]}"
 	if use doc; then
 		emake -C docs/libudev DESTDIR="${D}" install
@@ -389,10 +334,11 @@ src_install() {
 		"${D}"/lib/udev/rules.d/99-systemd.rules \
 		"${D}"/usr/share/doc/${PF}/LICENSE.*
 
+	# see src_prepare() for content of these files
 	insinto /lib/udev/rules.d
 	doins "${T}"/40-gentoo.rules
-
-	doman "${T}"/*.8
+	doman "${T}"/udevd.8
+	doman "${T}"/systemd-udevd.8
 
 	# install udevadm compatibility symlink
 	dosym {../bin,sbin}/udevadm
@@ -400,12 +346,7 @@ src_install() {
 	# install udevd to /sbin and remove empty and redudant directory
 	# /lib/systemd because systemd is installed to /usr wrt #462750
 	mv "${D}"/{lib/systemd/systemd-,sbin/}udevd || die
-
-	if use logind; then
-		doinitd "${FILESDIR}"/logind
-	else
-		rm -r "${D}"/lib/systemd
-	fi
+	rm -r "${D}"/lib/systemd
 }
 
 pkg_preinst() {
