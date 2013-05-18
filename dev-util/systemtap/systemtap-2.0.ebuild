@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-2.0.ebuild,v 1.6 2013/01/28 20:31:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-2.0.ebuild,v 1.7 2013/05/18 21:41:37 swegener Exp $
 
 EAPI=4
 
@@ -9,8 +9,8 @@ PYTHON_DEPEND="2"
 inherit linux-info autotools eutils python
 
 DESCRIPTION="A linux trace/probe tool"
-HOMEPAGE="http://sourceware.org/systemtap/"
-SRC_URI="http://sources.redhat.com/${PN}/ftp/releases/${P}.tar.gz"
+HOMEPAGE="http://www.sourceware.org/systemtap/"
+SRC_URI="http://www.sourceware.org/${PN}/ftp/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
