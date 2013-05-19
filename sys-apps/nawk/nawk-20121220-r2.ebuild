@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nawk/nawk-20121220-r2.ebuild,v 1.2 2013/05/19 17:49:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nawk/nawk-20121220-r2.ebuild,v 1.3 2013/05/19 17:51:36 aballier Exp $
 
 EAPI="4"
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-macos"
 IUSE=""
 
-RDEPEND="app-admin/eselect-awk"
+RDEPEND="app-admin/eselect-awk
+	!sys-freebsd/freebsd-ubin"
 DEPEND="${RDEPEND}
 	virtual/yacc"
 
