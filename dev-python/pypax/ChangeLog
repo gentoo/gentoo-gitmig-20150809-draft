@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pypax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.60 2013/04/13 07:36:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.61 2013/05/20 22:05:36 blueness Exp $
+
+*pypax-0.8.2 (20 May 2013)
+
+  20 May 2013; Anthony G. Basile <blueness@gentoo.org> +pypax-0.8.2.ebuild:
+  Version bump: avoid ELF_C_RDWR_MMAP for uclibc systems
 
   13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> pypax-0.8.1-r1.ebuild:
   Stable for sparc, wrt bug #464426
