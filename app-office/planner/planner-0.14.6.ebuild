@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.6.ebuild,v 1.7 2013/05/20 11:12:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.6.ebuild,v 1.8 2013/05/20 11:14:29 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -59,7 +59,6 @@ pkg_setup() {
 src_prepare() {
 	# Find python in a faster way, bug #344231, upstream bug #654044
 	epatch "${FILESDIR}/${PN}-0.14.6-find-python.patch"
-
 
 	sed -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADER/' \
 		-i configure.in || die

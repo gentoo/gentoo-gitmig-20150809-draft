@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.6_p20130520.ebuild,v 1.1 2013/05/20 11:12:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.6_p20130520.ebuild,v 1.2 2013/05/20 11:14:29 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python2_{6,7} )
 
-inherit autotools eutils gnome2 python-single-r1
+inherit gnome2 python-single-r1
 
 DESCRIPTION="Project manager for Gnome"
 HOMEPAGE="http://live.gnome.org/Planner/"
