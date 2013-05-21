@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/numbat/numbat-0.999.ebuild,v 1.1 2013/05/21 10:55:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/numbat/numbat-0.999.ebuild,v 1.2 2013/05/21 10:58:45 jlec Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="new user-friendly method built for automatic dX-tensor determination"
 HOMEPAGE="http://www.nmr.chem.uu.nl/~christophe/numbat.html"
-SRC_URI="${MY_P}.tar.gz"
+SRC_URI="http://comp-bio.anu.edu.au/private/downloads/Numbat/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-3"
@@ -30,15 +30,7 @@ RDEPEND="${CDEPEND}
 	sci-chemistry/molmol
 	sci-chemistry/pymol"
 
-RESTRICT="fetch"
-
 S="${WORKDIR}"/${MY_P}
-
-pkg_nofetch() {
-	elog "Please email the author (numbat.pcs@gmail.com)"
-	elog "in order to obtain a copy of the source code"
-	elog "and place it in ${DISTDIR}"
-}
 
 src_prepare() {
 	sed \
