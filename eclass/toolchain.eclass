@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.591 2013/05/21 20:44:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.592 2013/05/21 20:47:44 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -959,62 +959,62 @@ gcc-compiler-configure() {
 
 	local with_abi_map=()
 	case $(tc-arch) in
-		arm)	#264534 #414395
-			local a arm_arch=${CTARGET%%-*}
-			# Remove trailing endian variations first: eb el be bl b l
-			for a in e{b,l} {b,l}e b l ; do
-				if [[ ${arm_arch} == *${a} ]] ; then
-					arm_arch=${arm_arch%${a}}
-					break
-				fi
-			done
-			# Convert armv7{a,r,m} to armv7-{a,r,m}
-			[[ ${arm_arch} == armv7? ]] && arm_arch=${arm_arch/7/7-}
-			# See if this is a valid --with-arch flag
-			if (srcdir=${S}/gcc target=${CTARGET} with_arch=${arm_arch};
-			    . "${srcdir}"/config.gcc) &>/dev/null
-			then
-				confgcc+=( --with-arch=${arm_arch} )
+	arm)	#264534 #414395
+		local a arm_arch=${CTARGET%%-*}
+		# Remove trailing endian variations first: eb el be bl b l
+		for a in e{b,l} {b,l}e b l ; do
+			if [[ ${arm_arch} == *${a} ]] ; then
+				arm_arch=${arm_arch%${a}}
+				break
 			fi
+		done
+		# Convert armv7{a,r,m} to armv7-{a,r,m}
+		[[ ${arm_arch} == armv7? ]] && arm_arch=${arm_arch/7/7-}
+		# See if this is a valid --with-arch flag
+		if (srcdir=${S}/gcc target=${CTARGET} with_arch=${arm_arch};
+		    . "${srcdir}"/config.gcc) &>/dev/null
+		then
+			confgcc+=( --with-arch=${arm_arch} )
+		fi
 
-			# Enable hardvfp
-			if [[ $(tc-is-softfloat) == "no" ]] && \
-			   [[ ${CTARGET} == armv[67]* ]] && \
-			   tc_version_is_at_least "4.5"
-			then
-				# Follow the new arm hardfp distro standard by default
-				confgcc+=( --with-float=hard )
-				case ${CTARGET} in
-				armv6*) confgcc+=( --with-fpu=vfp ) ;;
-				armv7*) confgcc+=( --with-fpu=vfpv3-d16 ) ;;
-				esac
-			fi
-			;;
+		# Enable hardvfp
+		if [[ $(tc-is-softfloat) == "no" ]] && \
+		   [[ ${CTARGET} == armv[67]* ]] && \
+		   tc_version_is_at_least "4.5"
+		then
+			# Follow the new arm hardfp distro standard by default
+			confgcc+=( --with-float=hard )
+			case ${CTARGET} in
+			armv6*) confgcc+=( --with-fpu=vfp ) ;;
+			armv7*) confgcc+=( --with-fpu=vfpv3-d16 ) ;;
+			esac
+		fi
+		;;
+	mips)
 		# Add --with-abi flags to set default ABI
-		mips)
+		confgcc+=( --with-abi=$(gcc-abi-map ${TARGET_DEFAULT_ABI}) )
+		;;
+	amd64)
+		# drop the older/ABI checks once this get's merged into some
+		# version of gcc upstream
+		if tc_version_is_at_least 4.7 && has x32 $(get_all_abis TARGET) ; then
 			confgcc+=( --with-abi=$(gcc-abi-map ${TARGET_DEFAULT_ABI}) )
-			;;
-		amd64)
-			# drop the older/ABI checks once this get's merged into some
-			# version of gcc upstream
-			if tc_version_is_at_least 4.7 && has x32 $(get_all_abis TARGET) ; then
-				confgcc+=( --with-abi=$(gcc-abi-map ${TARGET_DEFAULT_ABI}) )
-			fi
-			;;
+		fi
+		;;
+	x86)
 		# Default arch for x86 is normally i386, lets give it a bump
 		# since glibc will do so based on CTARGET anyways
-		x86)
-			confgcc+=( --with-arch=${CTARGET%%-*} )
-			;;
+		confgcc+=( --with-arch=${CTARGET%%-*} )
+		;;
+	hppa)
 		# Enable sjlj exceptions for backward compatibility on hppa
-		hppa)
-			[[ ${GCCMAJOR} == "3" ]] && confgcc+=( --enable-sjlj-exceptions )
-			;;
+		[[ ${GCCMAJOR} == "3" ]] && confgcc+=( --enable-sjlj-exceptions )
+		;;
+	ppc)
 		# Set up defaults based on current CFLAGS
-		ppc)
-			is-flagq -mfloat-gprs=double && confgcc+=( --enable-e500-double )
-			[[ ${CTARGET//_/-} == *-e500v2-* ]] && confgcc+=( --enable-e500-double )
-			;;
+		is-flagq -mfloat-gprs=double && confgcc+=( --enable-e500-double )
+		[[ ${CTARGET//_/-} == *-e500v2-* ]] && confgcc+=( --enable-e500-double )
+		;;
 	esac
 
 	local GCC_LANG="c"
@@ -1138,26 +1138,26 @@ gcc_do_configure() {
 		# disable a bunch of features or gcc goes boom
 		local needed_libc=""
 		case ${CTARGET} in
-			*-linux)		 needed_libc=no-fucking-clue;;
-			*-dietlibc)		 needed_libc=dietlibc;;
-			*-elf|*-eabi)	 needed_libc=newlib;;
-			*-freebsd*)		 needed_libc=freebsd-lib;;
-			*-gnu*)			 needed_libc=glibc;;
-			*-klibc)		 needed_libc=klibc;;
-			*-uclibc*)
-				if ! echo '#include <features.h>' | \
-				   $(tc-getCPP ${CTARGET}) -E -dD - 2>/dev/null | \
-				   grep -q __HAVE_SHARED__
-				then #291870
-					confgcc+=( --disable-shared )
-				fi
-				needed_libc=uclibc
-				;;
-			*-cygwin)		 needed_libc=cygwin;;
-			x86_64-*-mingw*|\
-			*-w64-mingw*)	 needed_libc=mingw64-runtime;;
-			mingw*|*-mingw*) needed_libc=mingw-runtime;;
-			avr)			 confgcc+=( --enable-shared --disable-threads );;
+		*-linux)		 needed_libc=no-fucking-clue;;
+		*-dietlibc)		 needed_libc=dietlibc;;
+		*-elf|*-eabi)	 needed_libc=newlib;;
+		*-freebsd*)		 needed_libc=freebsd-lib;;
+		*-gnu*)			 needed_libc=glibc;;
+		*-klibc)		 needed_libc=klibc;;
+		*-uclibc*)
+			if ! echo '#include <features.h>' | \
+			   $(tc-getCPP ${CTARGET}) -E -dD - 2>/dev/null | \
+			   grep -q __HAVE_SHARED__
+			then #291870
+				confgcc+=( --disable-shared )
+			fi
+			needed_libc=uclibc
+			;;
+		*-cygwin)		 needed_libc=cygwin;;
+		x86_64-*-mingw*|\
+		*-w64-mingw*)	 needed_libc=mingw64-runtime;;
+		mingw*|*-mingw*) needed_libc=mingw-runtime;;
+		avr)			 confgcc+=( --enable-shared --disable-threads );;
 		esac
 		if [[ -n ${needed_libc} ]] ; then
 			local confgcc_no_libc=( --disable-shared )
@@ -1186,10 +1186,10 @@ gcc_do_configure() {
 			confgcc+=( --enable-shared )
 		fi
 		case ${CHOST} in
-			mingw*|*-mingw*|*-cygwin)
-				confgcc+=( --enable-threads=win32 ) ;;
-			*)
-				confgcc+=( --enable-threads=posix ) ;;
+		mingw*|*-mingw*|*-cygwin)
+			confgcc+=( --enable-threads=win32 ) ;;
+		*)
+			confgcc+=( --enable-threads=posix ) ;;
 		esac
 	fi
 	# __cxa_atexit is "essential for fully standards-compliant handling of
@@ -1431,7 +1431,7 @@ gcc_do_filter_flags() {
 		replace-cpu-flags c3-2 pentium2 pentium3 pentium3m pentium-m i686
 		;;
 	esac
-	
+
 	# CFLAGS logic (verified with 3.4.3):
 	# CFLAGS:
 	#	This conflicts when creating a crosscompiler, so set to a sane
@@ -1982,11 +1982,11 @@ setup_multilib_osdirnames() {
 
 	# this only makes sense for some Linux targets
 	case ${CTARGET} in
-		x86_64*-linux*)    config="i386" ;;
-		powerpc64*-linux*) config="rs6000" ;;
-		sparc64*-linux*)   config="sparc" ;;
-		s390x*-linux*)     config="s390" ;;
-		*)	               return 0 ;;
+	x86_64*-linux*)    config="i386" ;;
+	powerpc64*-linux*) config="rs6000" ;;
+	sparc64*-linux*)   config="sparc" ;;
+	s390x*-linux*)     config="s390" ;;
+	*)	               return 0 ;;
 	esac
 	config+="/t-linux64"
 
