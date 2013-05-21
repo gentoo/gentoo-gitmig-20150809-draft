@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14767 2013/05/21 05:40:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14768 2013/05/21 05:49:52 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -987,10 +987,6 @@ net-misc/netcf
 # Fails to self-verify/sign in FIPS mode, pending upstream response before
 # usage for GSoC project.
 app-crypt/hmaccalc
-
-# Luca Barbato <lu_zero@gentoo.org> (21 May 2010)
-# development release
-=dev-db/mongodb-1.5*
 
 # Justin Lecher <jlec@gentoo.org> (16 May 2010)
 # Upstreams testing version
