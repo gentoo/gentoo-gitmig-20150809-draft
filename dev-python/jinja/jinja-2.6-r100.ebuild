@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.6-r100.ebuild,v 1.1 2013/05/23 00:38:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.6-r100.ebuild,v 1.2 2013/05/23 00:41:41 floppym Exp $
 
 EAPI=5
 
@@ -74,9 +74,6 @@ python_install_all() {
 		insinto /usr/share/doc/${PF}
 		doins -r examples
 	fi
-
-	insinto /usr/share/vim/vimfiles/syntax
-	doins ext/Vim/*
 }
 
 pkg_postinst() {
