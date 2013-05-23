@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/jinja
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.70 2013/05/23 01:34:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.71 2013/05/23 01:44:48 floppym Exp $
+
+  23 May 2013; Mike Gilbert <floppym@gentoo.org> +files/jinja-2.7-docs.patch,
+  jinja-2.7.ebuild:
+  Fix error building docs, bug 470856.
 
   23 May 2013; Mike Gilbert <floppym@gentoo.org> jinja-2.7.ebuild:
   Simplify docs build.
