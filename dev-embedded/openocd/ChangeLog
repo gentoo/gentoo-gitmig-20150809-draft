@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/openocd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.38 2013/05/24 22:19:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.39 2013/05/24 22:21:15 hwoarang Exp $
+
+  24 May 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml,
+  openocd-0.6.1.ebuild:
+  typo
 
   24 May 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml,
   openocd-0.6.1.ebuild, openocd-9999.ebuild:
