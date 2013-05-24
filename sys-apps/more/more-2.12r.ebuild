@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/more/more-2.12r.ebuild,v 1.5 2013/05/24 20:31:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/more/more-2.12r.ebuild,v 1.6 2013/05/24 20:33:56 aballier Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ S=${WORKDIR}/util-linux-${PV}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86-fbsd"
+KEYWORDS="~amd64-fbsd ~x86-fbsd"
 IUSE="static nls selinux"
 
 RDEPEND="!static? ( >=sys-libs/ncurses-5.2-r2 )
