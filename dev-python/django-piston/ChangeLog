@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/django-piston
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-piston/ChangeLog,v 1.5 2013/05/27 13:39:04 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-piston/ChangeLog,v 1.6 2013/05/27 13:42:09 idella4 Exp $
+
+  27 May 2013; Ian Delaney <idella4@gentoo.org> -django-piston-0.2.2.ebuild,
+  -django-piston-0.2.3.ebuild:
+  this time drop old
 
 *django-piston-0.2.3-r1 (27 May 2013)
 
