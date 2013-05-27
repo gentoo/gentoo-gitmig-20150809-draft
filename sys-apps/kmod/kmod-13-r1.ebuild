@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-13-r1.ebuild,v 1.1 2013/05/27 15:38:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-13-r1.ebuild,v 1.2 2013/05/27 15:47:58 ssuominen Exp $
 
 EAPI=5
 
@@ -41,7 +41,6 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	CONFIG_CHECK="~MODULES ~MODULE_UNLOAD"
-
 	linux-info_pkg_setup
 }
 
@@ -60,8 +59,7 @@ src_prepare() {
 	fi
 }
 
-src_configure()
-{
+src_configure() {
 	econf \
 		--bindir=/bin \
 		--with-rootlibdir=/$(get_libdir) \
@@ -73,8 +71,7 @@ src_configure()
 		$(use_with zlib)
 }
 
-src_install()
-{
+src_install() {
 	default
 	prune_libtool_files
 
