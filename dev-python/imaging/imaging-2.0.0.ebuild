@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-2.0.0.ebuild,v 1.2 2013/05/28 22:29:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-2.0.0.ebuild,v 1.3 2013/05/28 22:34:54 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -29,6 +29,7 @@ RDEPEND="
 	webp? ( media-libs/libwebp:0= )
 	zlib? ( sys-libs/zlib:0= )"
 DEPEND="${RDEPEND}
+	app-arch/unzip
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx )"
 
