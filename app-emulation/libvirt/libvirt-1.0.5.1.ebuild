@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.5.1.ebuild,v 1.4 2013/05/22 15:56:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.5.1.ebuild,v 1.5 2013/05/28 15:22:43 cardoe Exp $
 
 EAPI=5
 
@@ -374,7 +374,7 @@ pkg_preinst() {
 	fi
 
 	# Only sysctl files ending in .conf work
-	mv "${D}"/usr/lib/sysctl.d/libvirtd "${D}"/etc/sysctl.d/libvirtd.conf
+	mv "${D}"/usr/lib/sysctl.d/libvirtd.conf "${D}"/etc/sysctl.d/libvirtd.conf
 }
 
 pkg_postinst() {

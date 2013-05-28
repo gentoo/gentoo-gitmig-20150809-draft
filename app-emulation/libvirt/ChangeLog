@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.271 2013/05/22 15:56:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.272 2013/05/28 15:22:43 cardoe Exp $
+
+  28 May 2013; Doug Goldstein <cardoe@gentoo.org> libvirt-1.0.5.1.ebuild:
+  Fix path change.
 
   22 May 2013; Doug Goldstein <cardoe@gentoo.org>
   -files/libvirt-1.0.5-sanitytest.py, -files/libvirtd.init-r10,
