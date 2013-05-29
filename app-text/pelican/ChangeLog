@@ -1,9 +1,9 @@
 # ChangeLog for app-text/pelican
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/ChangeLog,v 1.9 2013/05/29 06:10:10 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/ChangeLog,v 1.10 2013/05/29 06:15:19 idella4 Exp $
 
   29 May 2013; Ian Delaney <idella4@gentoo.org> pelican-3.2.1.ebuild:
-  add py3.3 support, fixes Bug #470278
+  add py3 support, fixes Bug #470278
 
 *pelican-3.2.1 (22 May 2013)
 
