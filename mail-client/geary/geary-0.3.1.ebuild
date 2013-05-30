@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/geary-0.3.1.ebuild,v 1.1 2013/05/30 13:41:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/geary-0.3.1.ebuild,v 1.2 2013/05/30 13:45:08 hasufell Exp $
 
 # REMINDER: next release probably swaps gnome-keyring for libsecret-1
 
@@ -11,7 +11,7 @@ VALA_MIN_API_VERSION=0.17
 inherit eutils fdo-mime gnome2-utils vala cmake-utils
 
 DESCRIPTION="A lightweight, easy-to-use, feature-rich email client"
-HOMEPAGE="http://redmine.yorba.org/projects/geary/wiki"
+HOMEPAGE="http://www.yorba.org/projects/geary/"
 SRC_URI="http://yorba.org/download/geary/${PV:0:3}/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
