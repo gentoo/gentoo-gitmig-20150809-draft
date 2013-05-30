@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.3 2013/05/30 09:31:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.4 2013/05/30 09:35:42 jlec Exp $
+
+  30 May 2013; Justin Lecher <jlec@gentoo.org>
+  linux/amd64/no-multilib/package.mask:
+  Mask sci-chemistry/xdsgui due to missing support for
+  sci-chemistry/xdsstat-bin
 
   30 May 2013; Justin Lecher <jlec@gentoo.org>
   linux/amd64/no-multilib/package.mask:
