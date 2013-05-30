@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.6.0.ebuild,v 1.7 2013/03/02 21:52:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.6.0.ebuild,v 1.8 2013/05/30 12:09:02 kensington Exp $
 
 EAPI=4
 
@@ -31,7 +31,7 @@ RESTRICT="test"
 COMMONDEPEND="
 	app-crypt/qca:2
 	>=app-misc/strigi-0.5.7
-	$(add_kdebase_dep kdelibs 'opengl?,semantic-desktop?')
+	$(add_kdebase_dep kdelibs 'opengl?,semantic-desktop(+)?')
 	$(add_kdebase_dep kdebase-kioslaves)
 	>=media-libs/taglib-1.7[asf,mp4]
 	>=media-libs/taglib-extras-1.0.1
