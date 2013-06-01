@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.845 2013/06/01 09:25:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.846 2013/06/01 09:28:16 radhermit Exp $
+
+  01 Jun 2013; Tim Harder <radhermit@gentoo.org> vim-plugin.eclass:
+  Remove unnecessary blank IUSE.
 
   01 Jun 2013; Tim Harder <radhermit@gentoo.org> vim-plugin.eclass:
   Don't set SRC_URI for live ebuilds.
