@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.63.ebuild,v 1.1 2013/06/01 01:52:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.63.ebuild,v 1.2 2013/06/01 01:58:26 radhermit Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ DESCRIPTION="MediaInfo libraries"
 HOMEPAGE="http://mediainfo.sourceforge.net/"
 SRC_URI="mirror://sourceforge/mediainfo/${PN}_${PV}.tar.bz2"
 
-LICENSE="LGPL-3"
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="curl doc mms static-libs"
