@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/screenlets/screenlets-0.1.6.ebuild,v 1.2 2013/06/01 14:07:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/screenlets/screenlets-0.1.6.ebuild,v 1.3 2013/06/01 14:10:47 jer Exp $
 
 EAPI=5
 
@@ -21,6 +21,7 @@ IUSE="+svg"
 RDEPEND="
 	dev-python/beautifulsoup:python-2
 	dev-python/dbus-python
+	dev-python/gconf-python
 	dev-python/gnome-keyring-python
 	dev-python/libwnck-python
 	dev-python/pyxdg
