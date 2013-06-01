@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aften/aften-0.0.8.ebuild,v 1.6 2013/06/01 23:34:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aften/aften-0.0.8.ebuild,v 1.7 2013/06/01 23:42:47 radhermit Exp $
 
 EAPI=5
 
-inherit eutils cmake-utils
+inherit cmake-utils
 
 DESCRIPTION="An A/52 (AC-3) audio encoder"
 HOMEPAGE="http://aften.sourceforge.net/"
