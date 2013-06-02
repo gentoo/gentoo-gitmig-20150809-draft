@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.4.0-r1.ebuild,v 1.1 2013/06/02 14:46:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.4.0-r1.ebuild,v 1.2 2013/06/02 14:50:22 jer Exp $
 
 EAPI=5
 
@@ -79,11 +79,6 @@ src_install() {
 	dodoc *.awk
 	dodoc CHANGES CREDITS README
 
-	if use chroot; then
-		keepdir /var/lib/tcpdump
-		fperms 700 /var/lib/tcpdump
-		fowners tcpdump:tcpdump /var/lib/tcpdump
-	fi
 	if use suid; then
 		fowners root:tcpdump /usr/sbin/tcpdump
 		fperms 4110 /usr/sbin/tcpdump
