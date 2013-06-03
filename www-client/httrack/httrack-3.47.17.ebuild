@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/httrack-3.47.17.ebuild,v 1.1 2013/06/03 19:46:12 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/httrack-3.47.17.ebuild,v 1.2 2013/06/03 19:48:26 sping Exp $
 
 EAPI="4"
 
@@ -40,11 +40,4 @@ src_configure() {
 src_install() {
 	default
 	find "${ED}" -type f -name '*.la' -delete || die
-}
-
-src_test() {
-	######## set -x
-	####### default
-	pwd
-	emake -j1 check || die
 }
