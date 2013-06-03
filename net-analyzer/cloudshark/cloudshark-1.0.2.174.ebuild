@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cloudshark/cloudshark-1.0.2.174.ebuild,v 1.1 2013/06/03 04:11:05 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cloudshark/cloudshark-1.0.2.174.ebuild,v 1.2 2013/06/03 13:37:39 zerochaos Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit eutils multilib
 
 SV="1.0.2-174"
 
-DESCRIPTION="Instantly Upload Your WIRESHARK CAPTURES to CloudShark."
+DESCRIPTION="Easily upload your wireshark captures to CloudShark"
 HOMEPAGE="http://appliance.cloudshark.org/plug-ins-wireshark.html"
 SRC_URI="http://appliance.cloudshark.org/downloads/${PN}-plugin-${SV}.tgz"
 
