@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/south/south-0.8.1.ebuild,v 1.1 2013/06/03 04:21:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/south/south-0.8.1.ebuild,v 1.2 2013/06/03 04:22:41 dev-zero Exp $
 
 EAPI=5
 
@@ -51,7 +51,7 @@ python_compile() {
 python_test() {
 	# http://south.aeracode.org/ticket/1256
 	cd "${BUILD_DIR}/southtest"
-	"${EPYTHON}" manage.py test south || die "tests failed for ${EPYTHON}"	
+	"${EPYTHON}" manage.py test south || die "tests failed for ${EPYTHON}"
 }
 
 pkg_postinst() {
