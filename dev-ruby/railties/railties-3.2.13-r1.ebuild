@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/railties-3.2.13-r1.ebuild,v 1.1 2013/06/04 18:14:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/railties-3.2.13-r1.ebuild,v 1.2 2013/06/04 18:19:03 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19"
@@ -62,8 +62,10 @@ all_ruby_prepare() {
 all_ruby_install() {
 	all_fakegem_install
 
-	mv guides/output guides/guides || die
-	dohtml -r guides/guides
+	if use doc ; then
+		mv guides/output guides/guides || die
+		dohtml -r guides/guides
+	fi
 
 	ruby_fakegem_binwrapper rails rails-${PV}
 }
