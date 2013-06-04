@@ -1,12 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/crmsh/crmsh-1.2.5-r3.ebuild,v 1.1 2013/06/04 12:17:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/crmsh/crmsh-1.2.5-r3.ebuild,v 1.2 2013/06/04 12:30:54 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit autotools-utils python-single-r1
+AUTOTOOLS_AUTORECONF=true
+
+inherit autotools-utils python-r1
 
 MY_TREE="ef3f08547688"
 
@@ -31,6 +33,18 @@ src_prepare() {
 	sed \
 		-e 's@CRM_CACHE_DIR=${localstatedir}/cache/crm@CRM_CACHE_DIR=${localstatedir}/crmsh@g' \
 		-i configure.ac || die
-	python_fix_shebang "${S}"/crm
-	eautoreconf
+	autotools-utils_src_prepare
+}
+
+src_configure() {
+	python_foreach_impl autotools-utils_src_configure
+}
+
+src_compile() {
+	python_foreach_impl autotools-utils_src_compile
+}
+
+src_install() {
+	python_foreach_impl autotools-utils_src_install
+	python_replicate_script "${ED}"/usr/sbin/crm
 }
