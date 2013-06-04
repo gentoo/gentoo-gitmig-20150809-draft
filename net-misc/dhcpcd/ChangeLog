@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.357 2013/06/04 16:11:35 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.358 2013/06/04 16:23:20 williamh Exp $
+
+  04 Jun 2013; William Hubbs <williamh@gentoo.org>
+  -files/dhcpcd-5.6.2-if-bsd.patch, -files/dhcpcd.initd-1:
+  remove old files
 
 *dhcpcd-5.99.7 (04 Jun 2013)
 
