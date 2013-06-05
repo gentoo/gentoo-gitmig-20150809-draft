@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.55 2013/06/02 13:03:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.56 2013/06/05 20:45:45 blueness Exp $
+
+  05 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +files/monkeyd-fix-DoS-headers-parser.patch, monkeyd-1.2.0.ebuild:
+  Fix DoS bug on headers parser, bug #472400, CVE-2013-3843
 
   02 Jun 2013; Anthony G. Basile <blueness@gentoo.org> monkeyd-1.2.0.ebuild:
   Almost everyone will need liana, so turn it on by default
