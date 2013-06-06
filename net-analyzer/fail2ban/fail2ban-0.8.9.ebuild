@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.9.ebuild,v 1.2 2013/06/06 16:53:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.9.ebuild,v 1.3 2013/06/06 17:00:14 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{5,6,7} )
@@ -39,14 +39,15 @@ src_install() {
 
 	rm -rf "${D}"/usr/share/doc/fail2ban
 
-	newconfd "${FILESDIR}"/gentoo-confd fail2ban
-	newinitd "${FILESDIR}"/gentoo-initd fail2ban
+	# not FILESDIR
+	newconfd files/gentoo-confd fail2ban
+	newinitd files/gentoo-initd fail2ban
 	doman man/*.1
 
 	# Use INSTALL_MASK  if you do not want to touch /etc/logrotate.d.
 	# See http://thread.gmane.org/gmane.linux.gentoo.devel/35675
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}"/${PN}-logrotate ${PN}
+	newins files/${PN}-logrotate ${PN}
 }
 
 pkg_preinst() {
