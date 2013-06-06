@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.8.ebuild,v 1.7 2013/01/04 13:15:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.8.ebuild,v 1.8 2013/06/06 16:53:14 jer Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -35,8 +35,8 @@ src_prepare() {
 src_install() {
 	distutils_src_install
 
-	newconfd files/gentoo-confd fail2ban
-	newinitd files/gentoo-initd fail2ban
+	newconfd "${FILESDIR}"/gentoo-confd fail2ban
+	newinitd "${FILESDIR}"/gentoo-initd fail2ban
 	dodoc ChangeLog README TODO
 	doman man/*.1
 
