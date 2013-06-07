@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1280 2013/06/07 08:28:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1281 2013/06/07 08:29:12 ago Exp $
+
+  07 Jun 2013; Agostino Sarubbo <ago@gentoo.org> portage-2.1.12.2.ebuild:
+  Stable for sparc, wrt bug #472540
 
   07 Jun 2013; Agostino Sarubbo <ago@gentoo.org> portage-2.1.12.2.ebuild:
   Stable for sh, wrt bug #472540
