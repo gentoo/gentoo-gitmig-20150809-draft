@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyogg/pyogg-1.3-r2.ebuild,v 1.1 2013/06/08 19:39:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyogg/pyogg-1.3-r2.ebuild,v 1.2 2013/06/08 19:49:13 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-inherit distutils-r1 multilib toolchain-funcs
+inherit distutils-r1 toolchain-funcs
 
 DESCRIPTION="Python bindings for the ogg library"
 HOMEPAGE="http://www.andrewchatham.com/pyogg/"
@@ -25,11 +25,7 @@ DOCS=( COPYING ChangeLog )
 
 python_configure_all() {
 	tc-export CC
-	cat > Setup <<-EOF
-	ogg_libs = ogg
-	ogg_lib_dir = /usr/$(get_libdir)
-	ogg_include_dir = /usr/include
-	EOF
+	"${PYTHON}" config_unix.py --prefix /usr || die "Configuration failed"
 }
 
 python_install_all() {
