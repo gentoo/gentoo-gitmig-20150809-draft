@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-2.4.4-r1.ebuild,v 1.1 2013/06/08 18:54:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-2.4.4-r1.ebuild,v 1.2 2013/06/08 18:56:09 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 DOCS=( CHANGES README.markdown TODO )
+# Race in the test suite
 DISTUTILS_IN_SOURCE_BUILD=1
 
 python_prepare_all() {
