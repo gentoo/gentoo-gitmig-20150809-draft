@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.218 2013/06/09 20:33:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.219 2013/06/09 20:41:50 radhermit Exp $
 
 # Authors:
 # 	Jim Ramsay <lack@gentoo.org>
@@ -396,9 +396,9 @@ vim_src_configure() {
 
 		myconf="--with-features=huge \
 			--enable-multibyte"
-		myconf="${myconf} `use_enable cscope`"
-		myconf="${myconf} `use_enable gpm`"
-		myconf="${myconf} `use_enable perl perlinterp`"
+		myconf="${myconf} $(use_enable cscope)"
+		myconf="${myconf} $(use_enable gpm)"
+		myconf="${myconf} $(use_enable perl perlinterp)"
 		if [[ ${HAS_PYTHON_R1} ]]; then
 			if use python; then
 				if [[ ${EPYTHON} == python3* ]]; then
@@ -412,16 +412,16 @@ vim_src_configure() {
 				myconf="${myconf} --disable-pythoninterp --disable-python3interp"
 			fi
 		else
-			myconf="${myconf} `use_enable python pythoninterp`"
+			myconf="${myconf} $(use_enable python pythoninterp)"
 		fi
-		myconf="${myconf} `use_enable ruby rubyinterp`"
+		myconf="${myconf} $(use_enable ruby rubyinterp)"
 		# tclinterp is broken; when you --enable-tclinterp flag, then
 		# the following command never returns:
 		#   VIMINIT='let OS=system("uname -s")' vim
 		# mzscheme support is currently broken. bug #91970
-		#myconf="${myconf} `use_enable mzscheme mzschemeinterp`"
+		#myconf="${myconf} $(use_enable mzscheme mzschemeinterp)"
 		if [[ ${PN} == gvim ]] ; then
-			myconf="${myconf} `use_enable netbeans`"
+			myconf="${myconf} $(use_enable netbeans)"
 		fi
 
 		# --with-features=huge forces on cscope even if we --disable it. We need
@@ -434,7 +434,7 @@ vim_src_configure() {
 		if [[ ${PN} == vim ]] ; then
 			# don't test USE=X here ... see bug #19115
 			# but need to provide a way to link against X ... see bug #20093
-			myconf="${myconf} --enable-gui=no --disable-darwin `use_with X x`"
+			myconf="${myconf} --enable-gui=no --disable-darwin $(use_with X x)"
 
 		elif [[ ${PN} == gvim ]] ; then
 			myconf="${myconf} --with-vim-name=gvim --with-x"
@@ -472,7 +472,7 @@ vim_src_configure() {
 	if [[ ${PN} == vim ]] && use minimal ; then
 		myconf="${myconf} --disable-nls --disable-multibyte --disable-acl"
 	else
-		myconf="${myconf} `use_enable nls` `use_enable acl`"
+		myconf="${myconf} $(use_enable nls) $(use_enable acl)"
 	fi
 
 	myconf="${myconf} --disable-selinux"
