@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.71 2013/06/09 11:33:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.72 2013/06/09 11:33:51 ago Exp $
+
+  09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> netqmail-1.06-r2.ebuild:
+  Stable for sparc, wrt bug #372967
 
   09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> netqmail-1.06-r2.ebuild:
   Stable for ppc, wrt bug #372967
