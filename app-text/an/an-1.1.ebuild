@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-1.1.ebuild,v 1.1 2013/06/11 14:45:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-1.1.ebuild,v 1.2 2013/06/11 14:48:07 jer Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://packages.debian.org/unstable/games/an"
 
 SRC_URI="mirror://debian/pool/main/a/${PN}/${PN}_${PV}.orig.tar.bz2"
 
-LICENSE="GPL-2 LGPL-2"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE=""
