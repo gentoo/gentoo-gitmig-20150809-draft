@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbiff/kbiff-4.0.ebuild,v 1.3 2013/06/11 15:50:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbiff/kbiff-4.0.ebuild,v 1.4 2013/06/11 15:52:21 ago Exp $
 
 EAPI=5
 
@@ -12,6 +12,6 @@ HOMEPAGE="http://www.kbiff.org"
 SRC_URI="mirror://sourceforge/${PN}/kbiff/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="4"
 IUSE=""
