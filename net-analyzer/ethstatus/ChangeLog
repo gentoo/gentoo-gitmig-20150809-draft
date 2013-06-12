@@ -1,11 +1,11 @@
 # ChangeLog for net-analyzer/ethstatus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethstatus/ChangeLog,v 1.11 2013/06/12 00:17:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethstatus/ChangeLog,v 1.12 2013/06/12 00:18:33 jer Exp $
 
 *ethstatus-0.4.3 (12 Jun 2013)
 
   12 Jun 2013; Jeroen Roovers <jer@gentoo.org> +ethstatus-0.4.3.ebuild:
-  Version bump. Respect CC, LDFLAGS.
+  Version bump. Respect CC, LDFLAGS by Bertrand Jacquin (bug #473030).
 
   02 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup up due #48914
