@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/genindent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/genindent/ChangeLog,v 1.28 2013/06/12 22:01:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/genindent/ChangeLog,v 1.29 2013/06/12 22:02:54 radhermit Exp $
+
+  12 Jun 2013; Tim Harder <radhermit@gentoo.org> genindent-1.1.ebuild:
+  Change LICENSE to vim (bug #473080 by Andrius Štikonas).
 
   12 Jun 2013; Tim Harder <radhermit@gentoo.org> -genindent-1.0.ebuild:
   Remove old.
