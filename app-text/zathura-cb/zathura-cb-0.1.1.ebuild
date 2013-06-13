@@ -1,9 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-cb/zathura-cb-0.1.1.ebuild,v 1.1 2013/06/13 21:43:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-cb/zathura-cb-0.1.1.ebuild,v 1.2 2013/06/13 21:52:51 xmw Exp $
 
 EAPI=5
-inherit toolchain-funcs
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Comic book plug-in for zathura with 7zip, rar, tar and zip support"
 HOMEPAGE="http://pwmt.org/projects/zathura/"
@@ -32,7 +33,8 @@ pkg_setup() {
 		CC="$(tc-getCC)"
 		LD="$(tc-getLD)"
 		VERBOSE=1
-		DESTDIR="${D}" )
+		DESTDIR="${D}"
+	)
 }
 
 src_compile() {
