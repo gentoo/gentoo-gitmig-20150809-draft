@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dunst/dunst-1.0.0.ebuild,v 1.1 2013/06/15 16:45:28 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dunst/dunst-1.0.0.ebuild,v 1.2 2013/06/15 16:49:23 wired Exp $
 
 EAPI=5
 
@@ -36,7 +36,6 @@ src_prepare() {
 		s:-g::
 		s:-O.::
 	}" config.mk || die "sed failed"
-
 
 	if ! use dunstify; then
 		# don't build dunstify: it pulls in deps but is not being installed
