@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/frox-0.7.18-r5.ebuild,v 1.1 2013/06/17 14:36:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/frox-0.7.18-r5.ebuild,v 1.2 2013/06/17 14:41:03 pinkbyte Exp $
 
 EAPI=5
 
-inherit autotools eutils
+inherit autotools eutils user
 
 DESCRIPTION="A transparent ftp proxy"
 SRC_URI="http://frox.sourceforge.net/download/${P}.tar.bz2"
