@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/commoncpp2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.56 2013/06/17 13:12:24 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.57 2013/06/17 13:27:14 dev-zero Exp $
+
+*commoncpp2-1.8.1-r1 (17 Jun 2013)
+
+  17 Jun 2013; Tiziano Müller <dev-zero@gentoo.org> +commoncpp2-1.8.1-r1.ebuild,
+  +files/1.8.1-fix-no-ssl-build.patch, -commoncpp2-1.8.1.ebuild:
+  Fix openssl/gnutls selection and build without ssl.
 
 *commoncpp2-1.8.1 (17 Jun 2013)
 

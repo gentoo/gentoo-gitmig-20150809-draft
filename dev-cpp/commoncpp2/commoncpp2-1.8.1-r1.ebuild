@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.8.1.ebuild,v 1.1 2013/06/17 13:12:24 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.8.1-r1.ebuild,v 1.1 2013/06/17 13:27:14 dev-zero Exp $
 
 EAPI="5"
 
@@ -12,11 +12,12 @@ HOMEPAGE="http://www.gnu.org/software/commoncpp/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="debug doc examples ipv6 gnutls static-libs"
+IUSE="debug doc examples ipv6 gnutls ssl static-libs"
+REQUIRED_USE="gnutls? ( ssl )"
 
-RDEPEND="gnutls? ( dev-libs/libgcrypt
-		net-libs/gnutls )
-	!gnutls? ( dev-libs/openssl )
+RDEPEND="ssl? ( gnutls? ( dev-libs/libgcrypt
+			net-libs/gnutls )
+		!gnutls? ( dev-libs/openssl ) )
 	sys-libs/zlib"
 DEPEND="doc? ( >=app-doc/doxygen-1.3.6 )
 	${RDEPEND}"
@@ -26,7 +27,8 @@ src_prepare() {
 		"${FILESDIR}/1.8.1-configure_detect_netfilter.patch" \
 		"${FILESDIR}/1.8.0-glibc212.patch" \
 		"${FILESDIR}/1.8.1-autoconf-update.patch" \
-		"${FILESDIR}/1.8.1-fix-buffer-overflow.patch"
+		"${FILESDIR}/1.8.1-fix-buffer-overflow.patch" \
+		"${FILESDIR}/1.8.1-fix-no-ssl-build.patch"
 	eautoreconf
 }
 
@@ -35,10 +37,11 @@ src_configure() {
 		sed -i "s/^DOXYGEN=.*/DOXYGEN=no/" configure || die "sed failed"
 
 	local myconf
+
 	if use gnutls; then
-		myconf="--with-gnutls --without-openssl"
+		myconf="--with-gnutls"
 	else
-		myconf="--without-gnutls --with-openssl"
+		use ssl && myconf="--with-openssl"
 	fi
 
 	econf \
