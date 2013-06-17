@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/winswitch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/ChangeLog,v 1.6 2013/06/17 07:32:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/ChangeLog,v 1.7 2013/06/17 07:41:04 xmw Exp $
+
+  17 Jun 2013; Michael Weber <xmw@gentoo.org> files/winswitch-0.12.18-PIL.patch:
+  Add upstream ticket
 
 *winswitch-0.12.18-r1 (17 Jun 2013)
 

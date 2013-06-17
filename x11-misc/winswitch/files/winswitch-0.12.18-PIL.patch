@@ -1,4 +1,5 @@
 https://bugs.gentoo.org/show_bug.cgi?id=471564
+https://winswitch.org/trac/ticket/238
 
 --- winswitch-0.12.18/winswitch/virt/xpra_client_util.py
 +++ winswitch-0.12.18/winswitch/virt/xpra_client_util.py
