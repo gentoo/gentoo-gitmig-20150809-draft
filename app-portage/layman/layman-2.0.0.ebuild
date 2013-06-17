@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.0.0.ebuild,v 1.12 2013/06/17 04:14:28 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.0.0.ebuild,v 1.13 2013/06/17 04:27:34 dolsen Exp $
 
 EAPI="5"
 
@@ -31,7 +31,9 @@ RDEPEND="
 			>=dev-vcs/subversion-1.5.4[webdav-neon]
 			>=dev-vcs/subversion-1.5.4[webdav-serf]
 		)
-	)"
+	)
+	virtual/python-argparse[${PYTHON_USEDEP}]
+	"
 
 python_prepare_all()  {
 	python_export_best
