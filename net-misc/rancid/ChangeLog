@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rancid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rancid/ChangeLog,v 1.5 2013/06/17 10:19:30 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rancid/ChangeLog,v 1.6 2013/06/17 10:22:08 pinkbyte Exp $
+
+  17 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> rancid-2.3.8.ebuild:
+  Add blocker dependency for app-arch/par as a workaround for bug #455838
 
   17 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> rancid-2.3.8.ebuild:
   Bump EAPI to 5, make cvs USE-flag default per upstream, add ~x86 keyword
