@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-9999.ebuild,v 1.9 2013/06/17 19:49:46 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-9999.ebuild,v 1.10 2013/06/17 19:57:29 zerochaos Exp $
 
 EAPI=5
 PYTHON_DEPEND="python? 2"
@@ -51,11 +51,11 @@ src_configure() {
 		$(cmake-utils_use_enable hackrf)
 		$(cmake-utils_use_enable iqbalance)
 		$(cmake-utils_use_enable mirisdr MIRI)
-		$(cmake-utils_use_enable osmosdr)
 		$(cmake-utils_use_enable python)
 		$(cmake-utils_use_enable rtlsdr RTL)
 		$(cmake-utils_use_enable uhd)
 	)
+#		$(cmake-utils_use_enable osmosdr)
 
 	cmake-utils_src_configure
 }
