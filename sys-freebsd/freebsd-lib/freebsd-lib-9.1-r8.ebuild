@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1-r8.ebuild,v 1.1 2013/06/18 19:15:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1-r8.ebuild,v 1.2 2013/06/18 22:20:51 aballier Exp $
 
 EAPI=5
 
@@ -191,12 +191,6 @@ src_prepare() {
 		sed -i.bak -e 's:${INSTALL} -C:${INSTALL}:' "${WORKDIR}/include/Makefile"
 	fi
 
-	# Let arch-specific includes to be found
-	local machine
-	machine=$(tc-arch-kernel ${CTARGET})
-	ln -s "${WORKDIR}/sys/${machine}/include" "${WORKDIR}/include/machine" || \
-		die "Couldn't make ${machine}/include symlink."
-
 	cd "${S}"
 	use bootstrap && dummy_mk libstand
 	# Try to fix sed calls for GNU sed. Do it only with GNU userland and force
@@ -273,7 +267,7 @@ is_native_abi() {
 
 # Do we need to bootstrap the csu and libssp_nonshared?
 need_bootstrap() {
-	is_crosscompile || use build || ! is_native_abi || has_version "<${CATEGORY}/${P}"
+	is_crosscompile || use build || { ! is_native_abi && ! has_version '>=sys-freebsd/freebsd-lib-9.1-r8[multilib]' ; } || has_version "<${CATEGORY}/${P}"
 }
 
 # Get the subdirs we are building.
@@ -333,7 +327,11 @@ do_bootstrap() {
 do_compile() {
 	# Bootstrap if needed, otherwise assume the system headers are in
 	# /usr/include.
-	need_bootstrap && do_bootstrap
+	if need_bootstrap ; then
+		do_bootstrap
+	else
+		CFLAGS="${CFLAGS} -isystem /usr/include"
+	fi
 
 	export RAW_LDFLAGS=$(raw-ldflags)
 
