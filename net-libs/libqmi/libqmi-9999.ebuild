@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/libqmi-9999.ebuild,v 1.4 2013/05/10 18:05:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/libqmi-9999.ebuild,v 1.5 2013/06/18 21:27:56 vapier Exp $
 
 EAPI="4"
 
@@ -21,8 +21,9 @@ SLOT="0"
 IUSE="doc static-libs test"
 
 RDEPEND=">=dev-libs/glib-2.32"
+# We have to always depend on gtk-doc since eautoreconf uses it #469214
 DEPEND="${RDEPEND}
-	doc? ( dev-util/gtk-doc )
+	dev-util/gtk-doc
 	virtual/pkgconfig"
 
 src_prepare() {
