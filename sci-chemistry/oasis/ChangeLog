@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/oasis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/ChangeLog,v 1.20 2013/06/19 04:14:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/ChangeLog,v 1.21 2013/06/19 04:27:30 bicatali Exp $
+
+  19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  sci-chemistry only
 
   19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Changed herd to sci-chemistry
