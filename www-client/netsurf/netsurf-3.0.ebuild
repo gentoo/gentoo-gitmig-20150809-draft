@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/netsurf-3.0.ebuild,v 1.1 2013/06/19 06:56:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/netsurf-3.0.ebuild,v 1.2 2013/06/19 07:20:26 xmw Exp $
 
 EAPI=5
 
@@ -64,6 +64,7 @@ NETSURF_COMPONENT_TYPE=binary
 ### future context of netsurf.eclass
 
 NETSURF_BUILDSYSTEM="${NETSURF_BUILDSYSTEM:-buildsystem-1.0}"
+NETSURF_COMPONENT_TYPE="${NETSURF_COMPONENT_TYPE:-lib-static lib-shared}"
 SRC_URI=${SRC_URI:-http://download.netsurf-browser.org/libs/releases/${P}-src.tar.gz}
 SRC_URI+="
 	http://download.netsurf-browser.org/libs/releases/${NETSURF_BUILDSYSTEM}.tar.gz -> netsurf-${NETSURF_BUILDSYSTEM}.tar.gz"
