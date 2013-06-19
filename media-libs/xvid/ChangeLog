@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xvid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.135 2013/06/19 15:51:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.136 2013/06/19 15:55:14 aballier Exp $
+
+  19 Jun 2013; Alexis Ballier <aballier@gentoo.org> -xvid-1.2.2-r2.ebuild,
+  -xvid-1.3.1.ebuild, -files/xvid-1.2.2-noexecstack.patch:
+  remove old
 
 *xvid-1.3.2-r1 (19 Jun 2013)
 
