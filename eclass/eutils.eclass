@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.422 2013/06/21 23:52:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.423 2013/06/21 23:56:06 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -144,6 +144,77 @@ estack_pop() {
 		eval ${__estack_retvar}=\"\${${__estack_name}\[${__estack_i}\]}\"
 	fi
 	eval unset ${__estack_name}\[${__estack_i}\]
+}
+
+# @FUNCTION: evar_push
+# @USAGE: <variable to save> [more vars to save]
+# @DESCRIPTION:
+# This let's you temporarily modify a variable and then restore it (including
+# set vs unset semantics).  Arrays are not supported at this time.
+#
+# This is meant for variables where using `local` does not work (such as
+# exported variables, or only temporarily changing things in a func).
+#
+# For example:
+# @CODE
+#		evar_push LC_ALL
+#		export LC_ALL=C
+#		... do some stuff that needs LC_ALL=C set ...
+#		evar_pop
+#
+#		# You can also save/restore more than one var at a time
+#		evar_push BUTTERFLY IN THE SKY
+#		... do stuff with the vars ...
+#		evar_pop     # This restores just one var, SKY
+#		... do more stuff ...
+#		evar_pop 3   # This pops the remaining 3 vars
+# @CODE
+evar_push() {
+	local var val
+	for var ; do
+		[[ ${!var+set} == "set" ]] \
+			&& val=${!var} \
+			|| val="${___ECLASS_ONCE_EUTILS}"
+		estack_push evar "${var}" "${val}"
+	done
+}
+
+# @FUNCTION: evar_push_set
+# @USAGE: <variable to save> [new value to store]
+# @DESCRIPTION:
+# This is a handy shortcut to save and temporarily set a variable.  If a value
+# is not specified, the var will be unset.
+evar_push_set() {
+	local var=$1
+	evar_push ${var}
+	case $# in
+	1) unset ${var} ;;
+	2) printf -v "${var}" '%s' "$2" ;;
+	*) die "${FUNCNAME}: incorrect # of args: $*" ;;
+	esac
+}
+
+# @FUNCTION: evar_pop
+# @USAGE: [number of vars to restore]
+# @DESCRIPTION:
+# Restore the variables to the state saved with the corresponding
+# evar_push call.  See that function for more details.
+evar_pop() {
+	local cnt=${1:-bad}
+	case $# in
+	0) cnt=1 ;;
+	1) isdigit "${cnt}" || die "${FUNCNAME}: first arg must be a number: $*" ;;
+	*) die "${FUNCNAME}: only accepts one arg: $*" ;;
+	esac
+
+	local var val
+	while (( cnt-- )) ; do
+		estack_pop evar val || die "${FUNCNAME}: unbalanced push"
+		estack_pop evar var || die "${FUNCNAME}: unbalanced push"
+		[[ ${val} == "${___ECLASS_ONCE_EUTILS}" ]] \
+			&& unset ${var} \
+			|| printf -v "${var}" '%s' "${val}"
+	done
 }
 
 # @FUNCTION: eshopts_push
