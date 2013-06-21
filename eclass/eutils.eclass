@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.421 2013/05/22 05:10:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.422 2013/06/21 23:52:50 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -216,6 +216,18 @@ eumask_pop() {
 	local s
 	estack_pop eumask s || die "${FUNCNAME}: unbalanced push"
 	umask ${s} || die "${FUNCNAME}: sanity: could not restore umask: ${s}"
+}
+
+# @FUNCTION: isdigit
+# @USAGE: <number> [more numbers]
+# @DESCRIPTION:
+# Return true if all arguments are numbers.
+isdigit() {
+	local d
+	for d ; do
+		[[ ${d:-bad} == *[!0-9]* ]] && return 1
+	done
+	return 0
 }
 
 # @VARIABLE: EPATCH_SOURCE
