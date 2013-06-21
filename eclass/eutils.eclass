@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.423 2013/06/21 23:56:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.424 2013/06/21 23:57:03 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -427,8 +427,11 @@ epatch() {
 		local EPATCH_SUFFIX=$1
 
 	elif [[ -d $1 ]] ; then
-		# Some people like to make dirs of patches w/out suffixes (vim)
+		# We have to force sorting to C so that the wildcard expansion is consistent #471666.
+		evar_push_set LC_COLLATE C
+		# Some people like to make dirs of patches w/out suffixes (vim).
 		set -- "$1"/*${EPATCH_SUFFIX:+."${EPATCH_SUFFIX}"}
+		evar_pop
 
 	elif [[ -f ${EPATCH_SOURCE}/$1 ]] ; then
 		# Re-use EPATCH_SOURCE as a search dir
