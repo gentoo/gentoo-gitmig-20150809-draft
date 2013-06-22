@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lotus-notes/lotus-notes-8.5.3.ebuild,v 1.2 2013/06/22 12:38:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lotus-notes/lotus-notes-8.5.3.ebuild,v 1.3 2013/06/22 13:22:15 scarabeus Exp $
 
 EAPI=5
 
@@ -67,6 +67,10 @@ src_prepare() {
 	sed -i \
 		-e 's:`dirname "$0"`:/opt/ibm/lotus/notes/:' \
 		lotus-notes-gtk-patch/notes-wrapper || die
+	# force initial configuration to avoid overwritting configs in /opt/
+	sed -i \
+		-e '/.initial./d' \
+		opt/ibm/lotus/notes/framework/rcp/rcplauncher.properties || die
 }
 
 src_compile() {
