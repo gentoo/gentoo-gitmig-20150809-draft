@@ -1,6 +1,54 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.121 2013/05/20 18:22:56 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.122 2013/06/23 09:43:16 aidecoe Exp $
+
+*dracut-029 (23 Jun 2013)
+
+  23 Jun 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-029.ebuild,
+  +files/029-0001-dracut-functions.sh-support-for-altern.patch,
+  +files/029-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  +files/029-0003-LatArCyrHeb-16-as-a-default-i18n-font-.patch:
+  Version bump.
+
+  NEWS
+  ~~~~
+  (from Dracut NEWS file)
+
+  dracut-029
+  ==========
+  - wait for IPv6 autoconfiguration
+  - i18n: make the default font configurable
+  - proper handle "rd.break" in systemd mode before switch-root
+  - systemd: make unit files symlinks
+  - build without dash requirement
+  - add dracut-shutdown.service.8 manpage
+  - handle MACs for "ip="
+    "ip=77-77-6f-6f-64-73:dhcp"
+  - don't explode when mixing BOOTIF and ip=
+  - 90lvm/module-setup.sh: redirect error message of lvs to /dev/null
+
+  dracut-028
+  ==========
+  - full integration of crypto devs in systemd logic
+  - support for bridge over team and vlan tagged team
+  - support multiple bonding interfaces
+  - new kernel command line param "rd.action_on_fail"
+    to control the emergency action
+  - support for bridge over a vlan tagged interface
+  - support for "iso-scan/filename" kernel parameter
+  - lsinitrd got some love and does not use "file" anymore
+  - fixed issue with noexec mounted tmp dirs
+  - FIPS mode fixed
+  - dracut_install got some love
+  - fixed some /usr mounting problems
+  - ifcfg dracut module got some love and fixes
+  - default installed font is now latarcyrheb-sun16
+  - new parameters rd.live.dir and rd.live.squashimg
+  - lvm: add tools for thin provisioning
+  - also install non-hwcap libs
+  - setup correct system time and time zone in initrd
+  - s390: fixed cms setup
+  - add systemd-udevd persistent network interface naming
 
 *dracut-027-r3 (20 May 2013)
 
