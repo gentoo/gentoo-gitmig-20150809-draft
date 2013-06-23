@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.138 2013/06/02 10:59:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.139 2013/06/23 18:40:19 pinkbyte Exp $
+
+  23 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> -djbdns-1.05-r23.ebuild,
+  -djbdns-1.05-r24.ebuild, -djbdns-1.05-r25.ebuild, -files/djbdns-setup-r17:
+  Drop old revisions by maintainer's request, bug #474510
 
   02 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #328951
