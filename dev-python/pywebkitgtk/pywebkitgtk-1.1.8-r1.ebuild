@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/pywebkitgtk-1.1.8-r1.ebuild,v 1.2 2013/06/23 15:08:57 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/pywebkitgtk-1.1.8-r1.ebuild,v 1.3 2013/06/23 15:26:55 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit python-r1
+inherit autotools-utils python-r1
 
 DESCRIPTION="Python bindings for the WebKit GTK+ port"
 HOMEPAGE="http://code.google.com/p/pywebkitgtk/"
@@ -23,23 +23,15 @@ RDEPEND="dev-python/pygobject:2[${PYTHON_USEDEP}]
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-DOCS=( AUTHORS MAINTAINERS NEWS README )
 RESTRICT="test"
 
-src_prepare() {
-	python_copy_sources
-}
-
 src_configure() {
-	config() {
-		econf --disable-static
-	}
-#ECONF_SOURCE="{S}" econf --disable-static
-	python_parallel_foreach_impl run_in_build_dir config
+	local myeconfargs=( --disable-static )
+	python_parallel_foreach_impl autotools-utils_src_configure
 }
 
 src_compile() {
-	python_foreach_impl run_in_build_dir emake
+	python_foreach_impl autotools-utils_src_compile
 }
 
 # Need fix a dbus session issue run as root
@@ -64,5 +56,7 @@ src_test() {
 }
 
 src_install() {
-	python_foreach_impl run_in_build_dir default
+	local AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
+	local DOCS=( AUTHORS MAINTAINERS NEWS README )
+	python_foreach_impl autotools-utils_src_install
 }
