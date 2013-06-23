@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-sh/mplayer-sh-0.8.7.ebuild,v 1.5 2013/06/23 18:05:38 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-sh/mplayer-sh-0.8.7.ebuild,v 1.6 2013/06/23 18:09:30 hd_brummy Exp $
 
 EAPI="5"
 
@@ -21,11 +21,7 @@ RDEPEND=">=media-video/mplayer-0.1.20070321"
 
 S=${WORKDIR}
 
-src_unpack() {
-
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${P}-parameter-aid.diff"
 
 	sed -i "s:^declare CFGFIL.*$:declare CFGFIL=\"\/etc\/vdr\/plugins\/mplayer\/mplayer.sh.conf\":"  mplayer.sh
