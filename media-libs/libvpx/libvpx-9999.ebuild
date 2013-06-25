@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.33 2013/06/25 16:37:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.34 2013/06/25 16:53:33 aballier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs flag-o-matic multilib-minimal
@@ -38,6 +38,7 @@ DEPEND="abi_x86_32? ( dev-lang/yasm )
 
 REQUIRED_USE="
 	sse2? ( mmx )
+	ssse3? ( sse2 )
 	"
 
 multilib_src_configure() {
