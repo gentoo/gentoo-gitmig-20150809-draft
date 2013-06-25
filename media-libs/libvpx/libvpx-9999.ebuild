@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.34 2013/06/25 16:53:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.35 2013/06/25 17:02:49 aballier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs flag-o-matic multilib-minimal
@@ -56,6 +56,9 @@ multilib_src_configure() {
 
 	# build verbose by default
 	MAKEOPTS="${MAKEOPTS} verbose=yes"
+
+	# do not build examples that will not be installed
+	MAKEOPTS="${MAKEOPTS} GEN_EXAMPLES="
 
 	# http://bugs.gentoo.org/show_bug.cgi?id=384585
 	addpredict /usr/share/snmp/mibs/.index
