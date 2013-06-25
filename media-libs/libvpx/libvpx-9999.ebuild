@@ -1,9 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.39 2013/06/25 18:35:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.40 2013/06/25 18:45:40 aballier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs multilib-minimal
+
+LIBVPX_TESTDATA_VER=1.2.0
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git-2
@@ -17,6 +19,8 @@ else
 	KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 	S="${WORKDIR}/${PN}-v${PV}"
 fi
+SRC_URI="${SRC_URI}
+	test? ( mirror://gentoo/${PN}-testdata-${LIBVPX_TESTDATA_VER}.tar.bz2 )"
 
 DESCRIPTION="WebM VP8 Codec SDK"
 HOMEPAGE="http://www.webmproject.org"
@@ -95,7 +99,10 @@ multilib_src_compile() {
 	emake verbose=yes GEN_EXAMPLES=
 }
 
+multilib_src_test() {
+	emake verbose=yes GEN_EXAMPLES=  LIBVPX_TEST_DATA_PATH="${WORKDIR}/${PN}-testdata" test
+}
+
 multilib_src_install() {
 	emake verbose=yes GEN_EXAMPLES= DESTDIR="${D}" install
 }
-
