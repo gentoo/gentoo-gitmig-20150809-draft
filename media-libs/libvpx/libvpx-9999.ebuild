@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.38 2013/06/25 18:27:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.39 2013/06/25 18:35:40 aballier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs multilib-minimal
@@ -52,12 +52,6 @@ multilib_src_configure() {
 		x86_64*) export AS=yasm;;
 	esac
 
-	# build verbose by default
-	MAKEOPTS="${MAKEOPTS} verbose=yes"
-
-	# do not build examples that will not be installed
-	MAKEOPTS="${MAKEOPTS} GEN_EXAMPLES="
-
 	# http://bugs.gentoo.org/show_bug.cgi?id=384585
 	addpredict /usr/share/snmp/mibs/.index
 
@@ -95,3 +89,13 @@ multilib_src_configure() {
 		${myconf} \
 		|| die
 }
+
+multilib_src_compile() {
+	# build verbose by default and do not build examples that will not be installed
+	emake verbose=yes GEN_EXAMPLES=
+}
+
+multilib_src_install() {
+	emake verbose=yes GEN_EXAMPLES= DESTDIR="${D}" install
+}
+
