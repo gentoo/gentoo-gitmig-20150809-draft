@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.79 2013/06/25 15:07:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.80 2013/06/25 16:26:41 aballier Exp $
+
+  25 Jun 2013; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild:
+  use proper abi_x86 flags for the yasm dep; leave the *-fbsd ones until it has
+  abi_x86 support
 
   25 Jun 2013; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild:
   Go multilib and add missing yasm dep for amd64-fbsd
