@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ps2pkm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ps2pkm/ChangeLog,v 1.39 2013/06/25 21:35:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ps2pkm/ChangeLog,v 1.40 2013/06/25 21:37:37 aballier Exp $
+
+  25 Jun 2013; Alexis Ballier <aballier@gentoo.org>
+  -ps2pkm-1.5_p20110705.ebuild:
+  remove old
 
 *ps2pkm-1.5_p20130530 (25 Jun 2013)
 
