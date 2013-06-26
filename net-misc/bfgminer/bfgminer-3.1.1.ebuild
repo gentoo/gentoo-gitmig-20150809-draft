@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-3.1.0-r1.ebuild,v 1.2 2013/06/26 17:09:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-3.1.1.ebuild,v 1.1 2013/06/26 17:09:41 blueness Exp $
 
-EAPI="4"
+EAPI=4
 
 inherit eutils
 
@@ -15,14 +15,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 
 IUSE="+adl avalon bitforce cpumining examples hardened icarus lm_sensors modminer ncurses +opencl scrypt +udev x6500 ztex"
-REQUIRED_USE="
+REQUIRED_USE='
 	|| ( avalon bitforce cpumining icarus modminer opencl x6500 ztex )
 	adl? ( opencl )
 	lm_sensors? ( opencl )
 	scrypt? ( || ( cpumining opencl ) )
-"
+'
 
-DEPEND="
+DEPEND='
 	net-misc/curl
 	ncurses? (
 		sys-libs/ncurses
@@ -41,10 +41,20 @@ DEPEND="
 	ztex? (
 		virtual/libusb:1
 	)
-"
+'
 RDEPEND="${DEPEND}
 	opencl? (
-		virtual/opencl
+		|| (
+			virtual/opencl
+			virtual/opencl-sdk
+			dev-util/ati-stream-sdk
+			dev-util/ati-stream-sdk-bin
+			dev-util/amdstream
+			dev-util/amd-app-sdk
+			dev-util/amd-app-sdk-bin
+			dev-util/nvidia-cuda-sdk[opencl]
+			dev-util/intel-opencl-sdk
+		)
 	)
 "
 DEPEND="${DEPEND}
@@ -60,12 +70,6 @@ DEPEND="${DEPEND}
 		)
 	)
 "
-
-src_prepare() {
-	epatch "${FILESDIR}/3.1.0-Bugfix-opencl-Build-fpgautils-even-if-OpenCL-is-the-.patch"
-	epatch "${FILESDIR}/3.1.0-Bugfix-opencl-Add-missing-include-for-fpgautils.h-ne.patch"
-	NOSUBMODULES=1 ./autogen.sh
-}
 
 src_configure() {
 	local CFLAGS="${CFLAGS}"
@@ -92,18 +96,6 @@ src_configure() {
 
 src_install() {
 	emake install DESTDIR="$D"
-	if ! use avalon; then
-		rm "${D}/usr/share/doc/${PF}/README.ASIC"
-	fi
-	if ! { use modminer || use bitforce || use icarus || use ztex; }; then
-		rm "${D}/usr/share/doc/${PF}/README.FPGA"
-	fi
-	if ! use opencl; then
-		rm "${D}/usr/share/doc/${PF}/README.GPU"
-	fi
-	if ! use scrypt; then
-		rm "${D}/usr/share/doc/${PF}/README.scrypt"
-	fi
 	if ! use examples; then
 		rm -r "${D}/usr/share/doc/${PF}/rpc-examples"
 	fi
