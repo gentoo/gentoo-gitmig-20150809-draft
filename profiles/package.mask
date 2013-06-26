@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14859 2013/06/26 10:49:50 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14860 2013/06/26 13:13:14 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Julian Ospald <hasufell@gentoo.org> (26 Jun 2013)
+# Depends on masked dev-lang/lua-5.2
+>=games-emulation/sdlmame-0.149
+>=games-emulation/sdlmess-0.149
 
 # Aaron W. Swenson <titanofold@gentoo.org> (26 Jun 2013)
 # PostGIS beta/rc releases are not considered production ready neither
