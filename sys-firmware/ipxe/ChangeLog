@@ -1,6 +1,10 @@
 # ChangeLog for sys-firmware/ipxe
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ChangeLog,v 1.6 2013/06/27 22:08:44 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ChangeLog,v 1.7 2013/06/27 22:10:51 cardoe Exp $
+
+  27 Jun 2013; Doug Goldstein <cardoe@gentoo.org> ipxe-1.0.0_p20120905.ebuild,
+  ipxe-1.0.0_p20130225.ebuild, ipxe-1.0.0_p20130624.ebuild:
+  Generally disable -Werror.
 
 *ipxe-1.0.0_p20130225 (27 Jun 2013)
 *ipxe-1.0.0_p20130624 (27 Jun 2013)

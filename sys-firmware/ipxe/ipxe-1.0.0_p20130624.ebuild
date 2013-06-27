@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ipxe-1.0.0_p20130624.ebuild,v 1.1 2013/06/27 22:08:44 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ipxe-1.0.0_p20130624.ebuild,v 1.2 2013/06/27 22:10:51 cardoe Exp $
 
 EAPI=5
 
@@ -44,6 +44,7 @@ src_configure() {
 }
 
 src_compile() {
+	export NO_WERROR=1
 	if use qemu; then
 		emake bin/808610de.rom # pxe-e1000.rom (old)
 		emake bin/8086100e.rom # pxe-e1000.rom
