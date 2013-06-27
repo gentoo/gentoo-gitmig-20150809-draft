@@ -1,6 +1,10 @@
 # ChangeLog for sys-firmware/ipxe
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ChangeLog,v 1.8 2013/06/27 22:13:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ChangeLog,v 1.9 2013/06/27 22:18:30 cardoe Exp $
+
+  27 Jun 2013; Doug Goldstein <cardoe@gentoo.org> ipxe-1.0.0_p20130225.ebuild,
+  ipxe-1.0.0_p20130624.ebuild:
+  Use filename pointers to give a meaningful name to the tarball.
 
   27 Jun 2013; Doug Goldstein <cardoe@gentoo.org> ipxe-1.0.0_p20130624.ebuild:
   Simplify generating our configs for VMWare.
