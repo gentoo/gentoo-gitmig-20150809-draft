@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/ladspa-sdk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.55 2013/06/27 14:36:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.56 2013/06/27 14:57:20 aballier Exp $
+
+*ladspa-sdk-1.13-r2 (27 Jun 2013)
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> +ladspa-sdk-1.13-r2.ebuild:
+  go multilib
 
   27 Jun 2013; Alexis Ballier <aballier@gentoo.org> -ladspa-sdk-1.12-r2.ebuild,
   -ladspa-sdk-1.13.ebuild, -files/ladspa-sdk-1.12-fbsd.patch,
