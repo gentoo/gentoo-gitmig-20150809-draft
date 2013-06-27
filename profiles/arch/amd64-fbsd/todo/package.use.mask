@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.305 2013/06/27 20:39:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.306 2013/06/27 20:46:33 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -62,9 +62,6 @@ media-gfx/ufraw fits
 
 # >=media-gfx/gimp-2
 media-gfx/ufraw gimp
-
-# app-crypt/heimdal
-net-nds/openldap smbkrb5passwd
 
 # app-office/lyx
 dev-tex/latex-beamer lyx
