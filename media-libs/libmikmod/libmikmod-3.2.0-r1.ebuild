@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.2.0-r1.ebuild,v 1.3 2013/06/27 18:11:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.2.0-r1.ebuild,v 1.4 2013/06/27 18:20:10 aballier Exp $
 
 EAPI=5
 inherit autotools eutils multilib-minimal
@@ -17,7 +17,9 @@ IUSE="+alsa altivec coreaudio debug oss static-libs +threads"
 REQUIRED_USE="|| ( alsa oss coreaudio )"
 
 RDEPEND="alsa? ( media-libs/alsa-lib:=[${MULTILIB_USEDEP}] )
-	!${CATEGORY}/${PN}:2"
+	!${CATEGORY}/${PN}:2
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224-r3
+					!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	oss? ( virtual/os-headers )"
 

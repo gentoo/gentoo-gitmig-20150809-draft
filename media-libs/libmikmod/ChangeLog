@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.108 2013/06/27 18:11:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.109 2013/06/27 18:20:10 aballier Exp $
+
+  27 Jun 2013; Alexis Ballier <aballier@gentoo.org> libmikmod-3.2.0-r1.ebuild:
+  add a blocker on emul-linux-soundlibs
 
   27 Jun 2013; Alexis Ballier <aballier@gentoo.org> libmikmod-3.2.0-r1.ebuild:
   Add missing MULTILIB_USEDEP on alsa-lib. Add altivec, debug and threads
