@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/simon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/simon/ChangeLog,v 1.5 2013/06/27 18:19:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/simon/ChangeLog,v 1.6 2013/06/27 18:20:38 ago Exp $
+
+  27 Jun 2013; Agostino Sarubbo <ago@gentoo.org> simon-0.4.0.ebuild:
+  Stable for x86, wrt bug #474436
 
   27 Jun 2013; Agostino Sarubbo <ago@gentoo.org> simon-0.4.0.ebuild:
   Stable for amd64, wrt bug #474436

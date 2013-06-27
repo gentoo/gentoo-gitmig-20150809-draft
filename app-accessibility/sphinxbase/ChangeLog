@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/sphinxbase
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/ChangeLog,v 1.7 2013/06/27 18:20:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/ChangeLog,v 1.8 2013/06/27 18:20:54 ago Exp $
+
+  27 Jun 2013; Agostino Sarubbo <ago@gentoo.org> sphinxbase-0.8.ebuild:
+  Stable for x86, wrt bug #474436
 
   27 Jun 2013; Agostino Sarubbo <ago@gentoo.org> sphinxbase-0.8.ebuild:
   Stable for amd64, wrt bug #474436
