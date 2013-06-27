@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ipxe-1.0.0_p20130624.ebuild,v 1.2 2013/06/27 22:10:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ipxe-1.0.0_p20130624.ebuild,v 1.3 2013/06/27 22:13:57 cardoe Exp $
 
 EAPI=5
 
@@ -32,14 +32,12 @@ src_prepare() {
 #undef BANNER_TIMEOUT
 #define BANNER_TIMEOUT 0
 EOF
-}
 
-src_configure() {
 	if use vmware; then
-		sed -i config/sideband.h \
-			-e 's|//#define[[:space:]]VMWARE_SETTINGS|#define VMWARE_SETTINGS|'
-		sed -i config/console.h \
-			-e 's|//#define[[:space:]]CONSOLE_VMWARE|#define CONSOLE_VMWARE|'
+		cat <<-EOF >> "${S}"/config/local/general.h
+#define VMWARE_SETTINGS
+#define CONSOLE_VMWARE
+EOF
 	fi
 }
 
