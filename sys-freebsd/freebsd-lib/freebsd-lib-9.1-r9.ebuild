@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1-r9.ebuild,v 1.2 2013/06/27 23:05:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1-r9.ebuild,v 1.3 2013/06/27 23:07:13 aballier Exp $
 
 EAPI=5
 
@@ -315,10 +315,7 @@ do_bootstrap() {
 	bootstrap_csu
 	bootstrap_libssp_nonshared
 	is_crosscompile && bootstrap_libc
-	if ! is_crosscompile && ! is_native_abi ; then
-		# Bootstrap the compiler libs
-		bootstrap_libgcc
-	fi
+	is_crosscompile || is_native_abi || bootstrap_libgcc
 }
 
 # Compile it. Assume we have the toolchain setup correctly.
