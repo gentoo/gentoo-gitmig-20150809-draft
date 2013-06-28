@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2013.06.34.2.ebuild,v 1.1 2013/06/28 15:27:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2013.06.34.2.ebuild,v 1.2 2013/06/28 15:31:19 jer Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=(python{2_5,2_6,2_7,3_3})
+PYTHON_COMPAT=(python{2_6,2_7,3_3})
 DISTUTILS_SINGLE_IMPL=true
 inherit bash-completion-r1 distutils-r1 eutils
 
