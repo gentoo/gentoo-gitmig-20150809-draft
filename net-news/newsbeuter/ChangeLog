@@ -1,6 +1,9 @@
 # ChangeLog for net-news/newsbeuter
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.44 2013/06/30 12:37:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.45 2013/06/30 12:42:54 ago Exp $
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> newsbeuter-2.6.ebuild:
+  Stable for x86, wrt bug #475296
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> newsbeuter-2.6.ebuild:
   Stable for amd64, wrt bug #475296
