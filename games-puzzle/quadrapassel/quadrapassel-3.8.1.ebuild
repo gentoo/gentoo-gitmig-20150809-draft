@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadrapassel/quadrapassel-3.8.1.ebuild,v 1.1 2013/06/30 12:20:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadrapassel/quadrapassel-3.8.1.ebuild,v 1.2 2013/06/30 12:22:29 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,8 +8,8 @@ VALA_MIN_API_VERSION="0.16"
 
 inherit gnome-games vala
 
-DESCRIPTION="Dominate the board in a classic version of Reversi"
-HOMEPAGE="https://wiki.gnome.org/Iagno"
+DESCRIPTION="Fit falling blocks together"
+HOMEPAGE="https://wiki.gnome.org/Quadrapassel"
 
 LICENSE="GPL-2+"
 SLOT="0"
