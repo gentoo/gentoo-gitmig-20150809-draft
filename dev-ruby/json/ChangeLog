@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.128 2013/06/30 08:36:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.129 2013/06/30 08:38:54 graaff Exp $
+
+*json-1.8.0 (30 Jun 2013)
+
+  30 Jun 2013; Hans de Graaff <graaff@gentoo.org> +json-1.8.0.ebuild:
+  Version bump.
 
   30 Jun 2013; Hans de Graaff <graaff@gentoo.org> -json-1.6.7.ebuild,
   -json-1.7.6.ebuild:
