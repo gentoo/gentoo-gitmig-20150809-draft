@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.231 2013/07/01 17:35:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.232 2013/07/01 17:39:45 ssuominen Exp $
 
 EAPI=5
 
@@ -350,7 +350,7 @@ src_install() {
 		"${D}"/lib/udev/rules.d/99-systemd.rules \
 		"${D}"/usr/share/doc/${PF}/LICENSE.*
 
-	# see src_prepare() for content of these
+	# see src_prepare() for content of these files
 	insinto /lib/udev/rules.d
 	doins "${T}"/40-gentoo.rules
 	doman "${T}"/{systemd-,}udevd.8
@@ -459,8 +459,8 @@ pkg_postinst() {
 
 	if has_version sys-apps/biosdevname; then
 		ewarn
-		ewarn "You can replace the functionality of  sys-apps/biosdevname which you have"
-		ewarn "installed with the new predictable network interface names."
+		ewarn "You can replace the functionality of sys-apps/biosdevname which has been"
+		ewaen "detected to be installed with the new predictable network interface names."
 	fi
 
 	ewarn
