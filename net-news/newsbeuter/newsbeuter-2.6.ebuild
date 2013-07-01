@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-2.6.ebuild,v 1.4 2013/06/30 12:42:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-2.6.ebuild,v 1.5 2013/07/01 07:25:20 radhermit Exp $
 
 EAPI="5"
 
@@ -44,6 +44,10 @@ src_prepare() {
 
 src_configure() {
 	./config.sh || die
+}
+
+src_compile() {
+	emake AR="$(tc-getAR)" RANLIB="$(tc-getRANLIB)"
 }
 
 src_test() {
