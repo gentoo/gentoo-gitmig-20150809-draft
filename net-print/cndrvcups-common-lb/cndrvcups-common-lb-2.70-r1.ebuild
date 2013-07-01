@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cndrvcups-common-lb/cndrvcups-common-lb-2.70.ebuild,v 1.1 2013/06/29 11:29:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cndrvcups-common-lb/cndrvcups-common-lb-2.70-r1.ebuild,v 1.1 2013/07/01 19:04:05 pacho Exp $
 
 EAPI=5
 inherit autotools versionator
@@ -45,6 +45,10 @@ change_dir() {
 }
 
 src_prepare() {
+	sed -i -e \
+		"s:backenddir = \$(libdir)/cups/backend:backenddir = `cups-config --serverbin`/backend:" \
+		backend/Makefile.am || die
+
 	export "LIBS=-lgmodule-2.0"
 	change_dir eautoreconf
 }
