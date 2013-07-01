@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cndrvcups-lb/cndrvcups-lb-2.70.ebuild,v 1.1 2013/06/29 11:28:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cndrvcups-lb/cndrvcups-lb-2.70-r1.ebuild,v 1.1 2013/07/01 19:10:18 pacho Exp $
 
 EAPI=5
 inherit eutils autotools versionator
@@ -47,6 +47,10 @@ change_dir() {
 }
 
 src_prepare() {
+	sed -i -e \
+		"s:filterdir = \$(libdir)/cups/filter:filterdir = `cups-config --serverbin`/filter:" \
+		pstoufr2cpca/filter/Makefile.am || die
+
 	export "LIBS=-lgmodule-2.0"
 	change_dir eautoreconf
 }
