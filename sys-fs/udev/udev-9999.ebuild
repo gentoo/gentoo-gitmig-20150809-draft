@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.230 2013/07/01 17:32:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.231 2013/07/01 17:35:27 ssuominen Exp $
 
 EAPI=5
 
@@ -234,7 +234,6 @@ src_configure() {
 		--disable-timedated
 		--disable-xz
 		--disable-polkit
-		--disable-smack
 		--disable-tmpfiles
 		--enable-introspection=$(usex introspection)
 		$(use_enable acl)
