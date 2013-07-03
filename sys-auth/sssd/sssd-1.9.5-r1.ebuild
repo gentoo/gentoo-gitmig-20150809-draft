@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.9.5-r1.ebuild,v 1.1 2013/07/03 20:26:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.9.5-r1.ebuild,v 1.2 2013/07/03 20:28:47 hwoarang Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ COMMON_DEP="
 	>=sys-libs/talloc-2.0.7
 	>=sys-libs/tdb-1.2.9
 	>=sys-libs/tevent-0.9.16
-	=sys-libs/ldb-1.1.15-r1
+	>=sys-libs/ldb-1.1.15-r1
 	>=net-nds/openldap-2.4.30
 	>=dev-libs/libpcre-8.30
 	>=app-crypt/mit-krb5-1.10.3
