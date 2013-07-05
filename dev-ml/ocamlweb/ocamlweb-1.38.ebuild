@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ocamlweb-1.38.ebuild,v 1.3 2012/07/03 16:18:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ocamlweb-1.38.ebuild,v 1.4 2013/07/05 23:04:43 aballier Exp $
 
-EAPI=4
+EAPI=5
 
 inherit latex-package eutils base
 
@@ -16,7 +16,7 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 
-DEPEND=">=dev-lang/ocaml-3.09
+DEPEND=">=dev-lang/ocaml-3.09:=
 	virtual/latex-base
 	dev-texlive/texlive-latexextra
 	"
@@ -24,6 +24,10 @@ DEPEND=">=dev-lang/ocaml-3.09
 PATCHES=(
 	"${FILESDIR}/${PN}-1.37-strip.patch"
 	)
+
+src_compile() {
+	emake
+}
 
 src_install() {
 	emake UPDATETEX="" prefix="${D}/usr" MANDIR="${D}/usr/share/man" install || die
