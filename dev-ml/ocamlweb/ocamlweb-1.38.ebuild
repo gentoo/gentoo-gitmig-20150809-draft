@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ocamlweb-1.38.ebuild,v 1.4 2013/07/05 23:04:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ocamlweb-1.38.ebuild,v 1.5 2013/07/05 23:08:05 aballier Exp $
 
 EAPI=5
 
@@ -30,6 +30,6 @@ src_compile() {
 }
 
 src_install() {
-	emake UPDATETEX="" prefix="${D}/usr" MANDIR="${D}/usr/share/man" install || die
+	emake UPDATETEX="" prefix="${D}/usr" MANDIR="${D}/usr/share/man" BASETEXDIR="${D}/${TEXMF}" install
 	dodoc README CHANGES
 }
