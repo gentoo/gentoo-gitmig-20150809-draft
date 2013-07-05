@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.20.ebuild,v 1.1 2013/07/05 06:15:08 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.20.ebuild,v 1.2 2013/07/05 06:16:48 dev-zero Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -10,7 +10,7 @@ VALA_USE_DEPEND="vapigen"
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit autotools eutils python-single-r1 vala
+inherit eutils python-single-r1 vala
 
 PYTHON_DEPEND="2"
 
