@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/cjk-latex-4.8.3.ebuild,v 1.12 2013/03/05 09:15:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/cjk-latex-4.8.3.ebuild,v 1.13 2013/07/06 00:54:04 aballier Exp $
 
 EAPI=4
 
@@ -102,12 +102,14 @@ src_install() {
 	cd "${S}"
 
 	# Install pk fonts
-	for d in texmf/fonts/pk/modeless/*/* ; do
-		insinto /usr/share/${d}
+	pushd texmf &>/dev/null
+	for d in fonts/pk/modeless/*/* ; do
+		insinto ${TEXMF}/${d}
 		for f in "${T}"/${d##*/}*.pk ; do
 			newins $f `basename ${f/.pk/.500pk}` || die "newins failed"
 		done
 	done
+	popd &>/dev/null
 
 	insinto "${TEXMF}/tex/latex/${PN}"
 	doins -r texinput/* || die "installing texinput files failed"

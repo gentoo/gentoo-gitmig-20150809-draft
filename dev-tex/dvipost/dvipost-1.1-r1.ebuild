@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvipost/dvipost-1.1-r1.ebuild,v 1.7 2011/11/29 19:23:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvipost/dvipost-1.1-r1.ebuild,v 1.8 2013/07/06 00:51:10 aballier Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ src_install() {
 	dosym dvipost /usr/bin/pptex || die
 	dosym dvipost /usr/bin/pplatex || die
 
-	insinto /usr/share/texmf/tex/latex/misc/
+	insinto ${TEXMF}/tex/latex/misc/
 	insopts -m0644
 	doins dvipost.sty || die
 
