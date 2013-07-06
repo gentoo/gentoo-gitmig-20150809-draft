@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/dvipost
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvipost/ChangeLog,v 1.31 2013/07/06 00:51:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvipost/ChangeLog,v 1.32 2013/07/06 00:53:26 aballier Exp $
+
+*dvipost-1.1-r2 (06 Jul 2013)
+
+  06 Jul 2013; Alexis Ballier <aballier@gentoo.org> +dvipost-1.1-r2.ebuild:
+  revbump to make sure everyone gets the texmf change
 
   06 Jul 2013; Alexis Ballier <aballier@gentoo.org> dvipost-1.1-r1.ebuild:
   honour TEXMF from latex-package.eclass
