@@ -1,9 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cvmfs/cvmfs-2.1.12.ebuild,v 1.1 2013/07/09 00:39:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cvmfs/cvmfs-2.1.12.ebuild,v 1.2 2013/07/09 00:44:02 bicatali Exp $
 
 EAPI=5
 
+CMAKE_IN_SOURCE_BUILD=1
 inherit cmake-utils
 
 DESCRIPTION="HTTP read-only file system for distributing software"
