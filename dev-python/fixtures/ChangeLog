@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/fixtures
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fixtures/ChangeLog,v 1.3 2013/07/09 15:46:18 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fixtures/ChangeLog,v 1.4 2013/07/09 15:52:21 prometheanfire Exp $
+
+  09 Jul 2013; Matthew Thode <prometheanfire@gentoo.org>
+  fixtures-0.3.12-r1.ebuild:
+  expanded usable python options
 
 *fixtures-0.3.12-r1 (09 Jul 2013)
 
