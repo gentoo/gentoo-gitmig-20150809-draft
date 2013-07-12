@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.47.11.ebuild,v 1.3 2013/07/12 06:45:38 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.47.11.ebuild,v 1.4 2013/07/12 06:52:31 williamh Exp $
 
 EAPI=5
 
@@ -68,9 +68,8 @@ src_install() {
 
 pkg_preinst() {
 	local voicedir="${ROOT}/usr/share/${PN}-data/voices/en"
-	local errormsg="${voicedir} not empty.  Please remove it manually."
 	if [ -d "${voicedir}" ]; then
-		rm -rf "${voicedir}" || die "${errormsg}"
+		rm -rf "${voicedir}"
 	fi
 }
 
