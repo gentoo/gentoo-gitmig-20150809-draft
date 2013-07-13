@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/elixir/elixir-0.9.3.ebuild,v 1.1 2013/07/13 11:42:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/elixir/elixir-0.9.3.ebuild,v 1.2 2013/07/13 11:47:33 hasufell Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/elixir-lang/elixir/archive/v${PV}.tar.gz -> ${P}.tar
 
 LICENSE="Apache-2.0 ErlPL-1.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/erlang-16"
