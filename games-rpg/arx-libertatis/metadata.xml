@@ -50,7 +50,7 @@
 		</maintainer>
 		<bugs-to>https://bugs.arx-libertatis.org/</bugs-to>
 		<changelog>
-			https://github.com/arx/ArxLibertatis/blob/1.1/CHANGELOG
+			http://wiki.arx-libertatis.org/Changelog
 		</changelog>
 		<doc lang='en'>http://wiki.arx-libertatis.org/</doc>
 		<remote-id type='github'>arx/ArxLibertatis</remote-id>
