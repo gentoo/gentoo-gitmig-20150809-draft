@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14925 2013/07/15 14:09:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14926 2013/07/15 14:23:24 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -406,13 +406,6 @@ x11-misc/pcmanfm-qt
 # Michael Weber <xmw@gentoo.org> (18 Apr 2013)
 # Masked due test failures
 =app-arch/advancecomp-1.17
-
-# Samuli Suominen <ssuominen@gentoo.org> (09 Apr 2013)
-# Broken. Should be bumped to 0.13.0 but needs a dedicated
-# maintainer to look after it. See bug #465244.
-# Removal in 30 days. Use dracut or genkernel instead.
-<sys-kernel/mkinitcpio-0.13.0
-sys-kernel/mkinitcpio-nfs-utils
 
 # Christoph Mende <angelos@gentoo.org> (09 Apr 2013)
 # Fails to build (bug #449860), abandoned by upstream.
