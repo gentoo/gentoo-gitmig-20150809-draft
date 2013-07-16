@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r1.ebuild,v 1.3 2013/07/16 01:03:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r1.ebuild,v 1.4 2013/07/16 01:26:22 ssuominen Exp $
 
 EAPI=5
 
@@ -42,8 +42,8 @@ pkg_postinst() {
 		elog "/usr/share/bash-completion/bash_completion in your ~/.bashrc."
 	else
 		ewarn "Please re-emerge all packages on your system which install"
-		ewarn "completions and helpers in /usr/share/bash-completion."
-		ewarn "They should now be in their own sub directories."
+		ewarn "completions in /usr/share/bash-completion."
+		ewarn "They should now be in their own completions/ sub directory."
 		ewarn
 		ewarn "One way to do this is to run the following command:"
 		ewarn "emerge -av1 \$(qfile -q -S -C /usr/share/bash-completion)"
