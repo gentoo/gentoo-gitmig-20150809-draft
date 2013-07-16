@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.8.4.ebuild,v 1.1 2013/07/16 05:43:06 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.8.4.ebuild,v 1.2 2013/07/16 05:51:37 eras Exp $
 
 EAPI=5
 inherit autotools db-use eutils user
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/opendkim/${P}.tar.gz"
 
 LICENSE="Sendmail-Open-Source BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+berkdb gnutls ldap lua memcached opendbx poll sasl +ssl static-libs unbound"
 
 DEPEND="|| ( mail-filter/libmilter mail-mta/sendmail )
@@ -52,7 +52,7 @@ src_prepare() {
 	       -e 's:mailnull:milter:g' \
 	       -e 's:^#[[:space:]]*PidFile.*:PidFile /var/run/opendkim/opendkim.pid:' \
 		   opendkim/opendkim.conf.sample opendkim/opendkim.conf.simple.in \
-		   stats/opendkim-reportstats || die
+		   stats/opendkim-reportstats{,.in} || die
 
 	sed -i -e 's:dist_doc_DATA:dist_html_DATA:' libopendkim/docs/Makefile.am \
 		|| die
