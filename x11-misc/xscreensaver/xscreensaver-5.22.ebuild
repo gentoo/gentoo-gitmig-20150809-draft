@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.22.ebuild,v 1.1 2013/07/17 02:33:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.22.ebuild,v 1.2 2013/07/17 02:48:04 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit autotools eutils flag-o-matic multilib pam
 
 DESCRIPTION="A modular screen saver and locker for the X Window System"
@@ -85,40 +85,40 @@ src_configure() {
 		append-flags -U__VEC__
 	fi
 
-	unset LINGUAS #113681
 	unset BC_ENV_ARGS #24568
 	export RPM_PACKAGE_VERSION=no #368025
 
 	econf \
-		--x-includes="${EPREFIX}"/usr/include \
-		--x-libraries="${EPREFIX}"/usr/$(get_libdir) \
-		--enable-locking \
-		--with-hackdir="${EPREFIX}"/usr/$(get_libdir)/misc/${PN} \
-		--with-configdir="${EPREFIX}"/usr/share/${PN}/config \
-		--with-x-app-defaults="${EPREFIX}"/usr/share/X11/app-defaults \
-		--with-dpms-ext \
-		$(use_with xinerama xinerama-ext) \
-		--with-xinput-ext \
-		--with-xf86vmode-ext \
-		--with-xf86gamma-ext \
-		--with-randr-ext \
-		--with-proc-interrupts \
-		$(use_with pam) \
-		--without-kerberos \
-		$(use_with new-login login-manager) \
-		--with-gtk \
-		$(use_with opengl gl) \
-		--without-gle \
-		--with-pixbuf \
 		$(use_with jpeg) \
-		--with-xshm-ext \
-		--with-xdbe-ext \
+		$(use_with new-login login-manager) \
+		$(use_with opengl gl) \
+		$(use_with pam) \
+		$(use_with suid setuid-hacks) \
+		$(use_with xinerama xinerama-ext) \
+		--enable-locking \
+		--with-configdir="${EPREFIX}"/usr/share/${PN}/config \
+		--with-dpms-ext \
+		--with-gtk \
+		--with-hackdir="${EPREFIX}"/usr/$(get_libdir)/misc/${PN} \
+		--with-pixbuf \
+		--with-proc-interrupts \
+		--with-randr-ext \
 		--with-text-file="${EPREFIX}"/etc/gentoo-release \
-		$(use_with suid setuid-hacks)
+		--with-x-app-defaults="${EPREFIX}"/usr/share/X11/app-defaults \
+		--with-xdbe-ext \
+		--with-xf86gamma-ext \
+		--with-xf86vmode-ext \
+		--with-xinput-ext \
+		--with-xshm-ext \
+		--without-gle \
+		--without-kerberos \
+		--x-includes="${EPREFIX}"/usr/include \
+		--x-libraries="${EPREFIX}"/usr/$(get_libdir)
 }
 
 src_install() {
 	emake install_prefix="${D}" install
+
 	dodoc README{,.hacking}
 
 	use pam && fperms 755 /usr/bin/${PN}
