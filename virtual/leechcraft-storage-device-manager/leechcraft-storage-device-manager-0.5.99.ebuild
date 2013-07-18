@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-storage-device-manager/leechcraft-storage-device-manager-0.5.98.ebuild,v 1.1 2013/07/03 16:26:12 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-storage-device-manager/leechcraft-storage-device-manager-0.5.99.ebuild,v 1.1 2013/07/18 12:56:09 maksbotan Exp $
 
 EAPI=4
 
