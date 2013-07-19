@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgbouncer/pgbouncer-1.5.4.ebuild,v 1.1 2013/07/19 00:47:55 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgbouncer/pgbouncer-1.5.4.ebuild,v 1.2 2013/07/19 00:55:04 titanofold Exp $
 
 EAPI="5"
 
@@ -21,18 +21,20 @@ REQUIRED_USE="
 	libevent? ( !udns )
 	udns? ( !libevent )
 "
-DEPEND="
+RDEPEND="
 	>=sys-libs/glibc-2.10
+	libevent? ( >=dev-libs/libevent-2.0 )
+	udns? ( >=net-libs/udns-0.1 )
+"
+
+DEPEND="
+	${RDEPEND}
 	doc? (
 			app-text/docbook-xml-dtd:4.5
 			app-text/xmlto
 			>=app-text/asciidoc-8.4
 	)
-	libevent? ( >=dev-libs/libevent-2.0 )
-	udns? ( >=net-libs/udns-0.1 )
 "
-
-RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	enewgroup postgres 70
