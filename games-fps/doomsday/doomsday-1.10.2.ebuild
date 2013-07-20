@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.10.2.ebuild,v 1.3 2013/07/20 09:07:47 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.10.2.ebuild,v 1.4 2013/07/20 09:11:48 hasufell Exp $
 
 # TODO: fmod support broken (deng_fmod)
 
@@ -38,16 +38,16 @@ DEPEND="
 		x11-libs/libX11
 		x11-libs/libXrandr
 		x11-libs/libXxf86vm
-		snowberry? ( ${PYTHON_DEPS} )
 	)
 	fluidsynth? ( media-sound/fluidsynth )
 	openal? ( media-libs/openal )
 	tools? ( sys-libs/ncurses )"
 RDEPEND="${DEPEND}
-	${PYTHON_DEPS}
 	!dedicated? (
-		snowberry? ( dev-python/wxpython )
+		snowberry? ( ${PYTHON_DEPS} dev-python/wxpython )
 	)"
+DEPEND="${DEPEND}
+	${PYTHON_DEPS}"
 PDEPEND="
 	!dedicated? (
 		demo? ( games-fps/doom-data )
