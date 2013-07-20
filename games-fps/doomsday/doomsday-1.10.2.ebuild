@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.10.2.ebuild,v 1.2 2013/07/19 18:00:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.10.2.ebuild,v 1.3 2013/07/20 09:07:47 hasufell Exp $
 
 # TODO: fmod support broken (deng_fmod)
 
@@ -17,7 +17,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="dedicated fluidsynth openal snowberry +doom demo freedoom heretic hexen resources tools"
-REQUIRED_USE="snowberry? ( ${PYTHON_REQUIRED_USE} )
+# we need python at build time, so
+# snowberry? ( ${PYTHON_REQUIRED_USE} )
+# could break the build
+REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	demo? ( doom ) freedoom? ( doom ) resources? ( doom )"
 
 DEPEND="
@@ -41,6 +44,7 @@ DEPEND="
 	openal? ( media-libs/openal )
 	tools? ( sys-libs/ncurses )"
 RDEPEND="${DEPEND}
+	${PYTHON_DEPS}
 	!dedicated? (
 		snowberry? ( dev-python/wxpython )
 	)"
