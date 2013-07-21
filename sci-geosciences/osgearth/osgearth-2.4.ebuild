@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osgearth/osgearth-2.4.ebuild,v 1.1 2013/07/21 17:45:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osgearth/osgearth-2.4.ebuild,v 1.2 2013/07/21 17:58:13 hasufell Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ RDEPEND="
 		dev-qt/qtgui:4
 		dev-qt/qtopengl:4
 	)"
-DEPEND="
+DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( dev-python/sphinx )"
 
