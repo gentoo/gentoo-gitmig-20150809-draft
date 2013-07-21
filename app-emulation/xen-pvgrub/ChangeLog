@@ -1,13 +1,13 @@
 # ChangeLog for app-emulation/xen-pvgrub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.33 2013/07/21 09:19:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.34 2013/07/21 09:24:32 idella4 Exp $
 
 *xen-pvgrub-4.3.0 (21 Jul 2013)
 
   21 Jul 2013; Ian Delaney <idella4@gentoo.org> +files/xen-4.3-externals.patch,
   +files/xen-4.3-fix_dotconfig-gcc.patch, +xen-pvgrub-4.3.0.ebuild:
-  bump; Cull redundant sec. patches, upgrade 2 patches, add 1 new DEP and and 1
-  new external package
+  bump; Remove pt2.6 bu duscretion, cull redundant sec. patches, upgrade 2 
+  patches, add 1 new DEP and and 1 new external package
 
   16 Jul 2013; Ian Delaney <idella4@gentoo.org> -xen-pvgrub-4.2.1-r2.ebuild,
   -xen-pvgrub-4.2.2.ebuild:
