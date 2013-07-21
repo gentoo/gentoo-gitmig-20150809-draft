@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.878 2013/07/21 16:11:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.879 2013/07/21 16:15:53 blueness Exp $
+
+  21 Jul 2013; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-2.6.32-r174.ebuild, -hardened-sources-3.2.48.ebuild,
+  -hardened-sources-3.9.8-r1.ebuild:
+  Remove all unstable except candidates for stabilization
 
   21 Jul 2013; Anthony G. Basile <blueness@gentoo.org>
   -hardened-sources-2.6.32-r177.ebuild, -hardened-sources-3.10.1.ebuild,
