@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsolv/libsolv-0.3.0.ebuild,v 1.1 2013/07/22 04:14:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsolv/libsolv-0.3.0.ebuild,v 1.2 2013/07/22 04:25:42 scarabeus Exp $
 
 EAPI=5
 
@@ -29,9 +29,14 @@ DEPEND="${DEPEND}
 "
 
 src_prepare() {
+	# enabling suse features also mess up headers detection
 	sed -i \
 		-e "s:include <rpm/db.h>:include <db.h>:g" \
 		ext/repo_rpmdb.c || die
+	# respect ldflags
+	sed -i \
+		-e 's:LINK_FLAGS}:LINK_FLAGS} ${CMAKE_SHARED_LINKER_FLAGS}:g' \
+		src/CMakeLists.txt || die
 }
 
 src_configure() {
