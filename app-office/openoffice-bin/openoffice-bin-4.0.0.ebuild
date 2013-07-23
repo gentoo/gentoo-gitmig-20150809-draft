@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-4.0.0.ebuild,v 1.1 2013/07/23 22:42:25 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-4.0.0.ebuild,v 1.2 2013/07/23 22:58:46 chithanh Exp $
 
 EAPI="4"
 
@@ -148,6 +148,9 @@ src_install () {
 	dosym ${INSTDIR}/program/spadmin /usr/bin/ooffice-printeradmin
 	dosym ${INSTDIR}/program/soffice /usr/bin/soffice
 
+	# Non-java weirdness see bug #99366
+	use !java && rm -f "${ED}${INSTDIR}/program/javaldx"
+
 	# prevent revdep-rebuild from attempting to rebuild all the time
 	insinto /etc/revdep-rebuild && doins "${T}/50-${PN}"
 
@@ -158,7 +161,7 @@ src_install () {
 	# libreoffice
 	cd "${ED}${EPREFIX}/usr/bin/"
 	for i in oo*; do
-		[[ ${i} == ooffice ]] && continue
+		[[ ${i} == ooffice* ]] && continue
 
 		rm ${i}
 		cat >> ${i} << EOF
