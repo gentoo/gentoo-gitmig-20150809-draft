@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigenserver/ocsigenserver-2.2.0.ebuild,v 1.1 2013/01/13 19:57:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigenserver/ocsigenserver-2.2.0.ebuild,v 1.2 2013/07/23 17:51:39 aballier Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RESTRICT="strip installsources"
 DEPEND=">=dev-ml/lwt-2.3.0[react,ssl]
 		zlib? ( >=dev-ml/camlzip-1.03-r1 )
 		dev-ml/cryptokit
-		>=dev-ml/ocamlnet-2.2.9
+		>=dev-ml/ocamlnet-3.6[pcre]
 		>=dev-ml/pcre-ocaml-6.0.1
 		>=dev-ml/tyxml-2.1
 		>=dev-lang/ocaml-3.12[ocamlopt?]
@@ -31,6 +31,10 @@ RDEPEND="${DEPEND}"
 pkg_setup() {
 	enewgroup ocsigenserver
 	enewuser ocsigenserver -1 -1 /var/www ocsigenserver
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/pcre.patch"
 }
 
 src_configure() {
