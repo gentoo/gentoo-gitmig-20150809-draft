@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.126 2013/07/23 00:55:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.127 2013/07/23 01:04:46 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -117,11 +117,6 @@ net-im/pidgin eds
 # Ben de Groot <yngwin@gentoo.org> (16 Jan 2010)
 # qtmultimedia is not keyworded, bug 293671
 dev-python/PyQt4 multimedia
-
-# Jeroen Roovers <jer@gentoo.org> (31 May 2009)
-# Mask media-gfx/imagemagick[openmp] until we have a stable
-# sys-devel/gcc-4.3[openmp] (bug #225917).
-media-gfx/imagemagick openmp
 
 # Jeroen Roovers <jer@gentoo.org> (15 Apr 2008)
 # media-sound/fluidsynth fails to build with stable libtool, so it can't be
