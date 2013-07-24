@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.20 2013/07/24 01:41:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.21 2013/07/24 01:44:58 aballier Exp $
 
 EAPI=5
 
@@ -50,10 +50,9 @@ src_configure() {
 		# Very hackish, see $HOMEPAGE
 		# If someone has a clever idea, please share it!
 		local includes="$(echo | ${CHOST}-g++ -Wp,-v -x c++ - -fsyntax-only 2>&1 | grep -C 2 '#include.*<...>' | tail -n 2 | sed -e 's/^ /-I/' | tr '\n' ' ')"
-		local libdirs="$(echo | ${CHOST}-g++ -Wp,-v -x c++ - -fsyntax-only 2>&1 | grep -C 2 '#include.*<...>' | tail -n 2 | sed -e 's/^ /-L/' | tr '\n' ' ')"
-		export libcxx_gcc_dirs="$(echo | ${CHOST}-g++ -Wp,-v -x c++ - -fsyntax-only 2>&1 | grep -C 2 '#include.*<...>' | tail -n 2 | tr '\n' ' ')"
+		local libcxx_gcc_dirs="$(echo | ${CHOST}-g++ -Wp,-v -x c++ - -fsyntax-only 2>&1 | grep -C 2 '#include.*<...>' | tail -n 2 | tr '\n' ' ')"
 		append-cppflags -D__GLIBCXX__ ${includes}
-		LIBS="${libdirs} -lsupc++ ${LIBS}"
+		LIBS="-lsupc++ ${LIBS}"
 		local libsupcxx_includes="cxxabi.h bits/c++config.h bits/os_defines.h bits/cpu_defines.h bits/cxxabi_tweaks.h bits/cxxabi_forced.h"
 		for i in ${libsupcxx_includes} ; do
 			local found=""
