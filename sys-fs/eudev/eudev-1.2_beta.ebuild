@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.33 2013/07/24 20:49:11 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2_beta.ebuild,v 1.1 2013/07/24 20:49:11 axs Exp $
 
 EAPI="5"
 
@@ -13,7 +13,8 @@ then
 	EGIT_REPO_URI="git://github.com/gentoo/eudev.git"
 	inherit git-2
 else
-	SRC_URI="http://dev.gentoo.org/~blueness/${PN}/${P}.tar.gz"
+	SRC_URI="http://dev.gentoo.org/~blueness/${PN}/${PN}-1.1.tar.gz
+		 http://dev.gentoo.org/~axs/distfiles/eudev-1.1-to-1.2beta.patch.gz"
 	KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86"
 fi
 
@@ -52,6 +53,8 @@ RDEPEND="${COMMON_DEPEND}
 
 PDEPEND=">=virtual/udev-180
 	openrc? ( >=sys-fs/udev-init-scripts-18 )"
+
+S="${WORKDIR}/${PN}-1.1"
 
 pkg_pretend()
 {
@@ -94,6 +97,10 @@ src_prepare()
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' -i rules/*.rules \
 	|| die "failed to change group dialout to uucp"
+
+	# patch 1.1 to 1.2beta and remove configure so autoreconf loads
+	epatch "${WORKDIR}"/${PN}-1.1-to-1.2beta.patch
+	rm configure
 
 	epatch_user
 
