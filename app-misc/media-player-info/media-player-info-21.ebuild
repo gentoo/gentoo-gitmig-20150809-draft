@@ -1,8 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/media-player-info-21.ebuild,v 1.1 2013/07/24 14:13:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/media-player-info-21.ebuild,v 1.2 2013/07/24 14:22:27 tetromino Exp $
 
 EAPI=5
+
+PYTHON_COMPAT=( python{3_2,3_3} )
+
+inherit python-any-r1
 
 DESCRIPTION="A repository of data files describing media player capabilities"
 HOMEPAGE="http://cgit.freedesktop.org/media-player-info/"
@@ -16,6 +20,7 @@ IUSE=""
 # http://cgit.freedesktop.org/media-player-info/commit/?id=d83dd01a0a1df6198ee08954da1c033b88a1004b
 RDEPEND=">=virtual/udev-196[hwdb]"
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	virtual/pkgconfig"
 
 DOCS="AUTHORS NEWS README"
