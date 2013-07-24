@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzypp/libzypp-13.3.0.ebuild,v 1.1 2013/07/24 21:13:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzypp/libzypp-13.3.0.ebuild,v 1.2 2013/07/24 21:24:28 scarabeus Exp $
 
 EAPI=5
 
@@ -52,7 +52,17 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
+src_compile() {
+	cmake-utils_src_compile
+	cmake-utils_src_compile -C po translations
+}
+
 src_test() {
-	BUILD_DIR="${CMAKE_BUILD_DIR}/tests/" cmake-utils_src_compile
+	cmake-utils_src_compile -C tests
 	cmake-utils_src_test
+}
+
+src_install() {
+	cmake-utils_src_install
+	cmake-utils_src_install -C po
 }
