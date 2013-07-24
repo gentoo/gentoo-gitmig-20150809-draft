@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.17 2013/07/24 01:00:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.18 2013/07/24 01:01:27 aballier Exp $
 
 EAPI=5
 
@@ -114,7 +114,7 @@ gen_shared_ldscript() {
 		local deps="${EPREFIX}/usr/$(get_libdir)/libc++_shared.so ${EPREFIX}/usr/$(get_libdir)/libcxxrt.so"
 		gen_ldscript "${deps}" > "${ED}/usr/$(get_libdir)/libc++.so"
 	fi
-	# TODO: Generate the linked script for other confiurations too.
+	# TODO: Generate the linker script for other confiurations too.
 }
 
 multilib_src_install() {
