@@ -8,10 +8,10 @@ Path fixes at least following cases:
 
 The fix is basically following mechanical conversion:
 ---    curl_easy_setopt_or_die(ftpfs.connection, CURLOPT_URL, something);
-+++    escaped_something = ftpfs.connection, something, 0);
-+++    curl_easy_setopt_or_die(ftpfs.connection, CURLOPT_URL, something);
++++    something_uri = path_to_uri(something);
++++    curl_easy_setopt_or_die(ftpfs.connection, CURLOPT_URL, something_uri);
 ===    curl_easy_perform();
-+++    curl_free(escaped_something);
++++    free_uri(something_uri);
 
 What is not yet converted is ftp hostname.
 
