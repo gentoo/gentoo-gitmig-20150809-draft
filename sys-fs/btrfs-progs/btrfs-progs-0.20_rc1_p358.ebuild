@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-0.20_rc1_p358.ebuild,v 1.1 2013/07/25 02:07:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-0.20_rc1_p358.ebuild,v 1.2 2013/07/25 02:23:27 floppym Exp $
 
 EAPI=5
 
@@ -31,7 +31,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	bash version.sh || die
 	emake \
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
