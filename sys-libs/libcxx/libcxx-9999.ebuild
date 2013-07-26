@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.22 2013/07/26 00:37:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.23 2013/07/26 00:44:05 aballier Exp $
 
 EAPI=5
 
@@ -40,6 +40,11 @@ pkg_setup() {
 		ewarn "You have disabled USE=libcxxrt. This will build ${PN} against"
 		ewarn "libsupc++. Please note that this is not well supported."
 		ewarn "In particular, static linking will not work."
+	fi
+	if [[ $(gcc-version) < 4.7 ]] && [[ $(tc-getCXX) != *clang++* ]] ; then
+		eerror "${PN} needs to be built with clang++ or gcc-4.7 or later."
+		eerror "Please use gcc-config to switch to gcc-4.7 or later version."
+		die
 	fi
 }
 
