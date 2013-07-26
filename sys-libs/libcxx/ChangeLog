@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcxx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.29 2013/07/24 01:44:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.30 2013/07/26 00:37:22 aballier Exp $
+
+  26 Jul 2013; Alexis Ballier <aballier@gentoo.org> libcxx-9999.ebuild:
+  Warn if building on top of libsupc++ since it is not well supported.
 
   24 Jul 2013; Alexis Ballier <aballier@gentoo.org> libcxx-9999.ebuild:
   remove useless code from previous commit
