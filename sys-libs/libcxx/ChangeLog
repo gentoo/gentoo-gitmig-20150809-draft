@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libcxx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.31 2013/07/26 00:44:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.32 2013/07/26 00:55:44 aballier Exp $
+
+*libcxx-0.0_p20130725 (26 Jul 2013)
+
+  26 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  +libcxx-0.0_p20130725.ebuild:
+  bump a new snapshot with all the accumulated fixes and improvements
 
   26 Jul 2013; Alexis Ballier <aballier@gentoo.org> libcxx-9999.ebuild:
   Die if someone tries to build it with <gcc-4.7. Based on a patch by Yuta
