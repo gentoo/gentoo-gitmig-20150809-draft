@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/logger/logger-0.ebuild,v 1.6 2013/07/26 03:53:16 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/logger/logger-0.ebuild,v 1.7 2013/07/26 03:59:21 williamh Exp $
 
 EAPI=3
 
@@ -23,5 +23,5 @@ RDEPEND="|| (
 	app-admin/syslogread
 	sys-freebsd/freebsd-usbin
 	sys-apps/busybox[syslog]
-	sys-apps/systemd
+	>=sys-apps/systemd-38
 )"
