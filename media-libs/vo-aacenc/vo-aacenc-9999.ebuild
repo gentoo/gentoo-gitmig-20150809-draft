@@ -1,16 +1,17 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/vo-aacenc-9999.ebuild,v 1.10 2013/02/20 23:34:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/vo-aacenc-9999.ebuild,v 1.11 2013/07/28 19:25:41 aballier Exp $
 
-EAPI=4
+EAPI=5
 
 if [[ ${PV} == *9999 ]] ; then
 	SCM="git-2"
 	EGIT_REPO_URI="git://github.com/mstorsjo/${PN}.git"
 	[[ ${PV%9999} != "" ]] && EGIT_BRANCH="release/${PV%.9999}"
+	AUTOTOOLS_AUTORECONF=yes
 fi
 
-inherit eutils multilib autotools ${SCM}
+inherit autotools-multilib ${SCM}
 
 DESCRIPTION="VisualOn AAC encoder library"
 HOMEPAGE="http://sourceforge.net/projects/opencore-amr/"
@@ -30,20 +31,12 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x64-macos"
 IUSE="examples static-libs neon"
 
-src_prepare() {
-	[[ ${PV} == *9999 ]] && eautoreconf
-}
+AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
 
 src_configure() {
-	econf \
-		--disable-silent-rules \
-		--disable-dependency-tracking \
-		$(use_enable examples example) \
-		$(use_enable neon armv7neon) \
-		$(use_enable static-libs static)
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	find "${D}"usr/$(get_libdir) -name '*.la' -delete
+	local myeconfargs=(
+		"$(use_enable examples example)"
+		"$(use_enable neon armv7neon)"
+	)
+	autotools-multilib_src_configure
 }
