@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.150 2013/07/29 20:39:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.151 2013/07/29 20:48:14 aballier Exp $
 
 EAPI=5
 
@@ -206,6 +206,12 @@ pkg_setup() {
 		ewarn "You won't need this turned on if you are only building"
 		ewarn "mplayer for this system. Also, if your compile fails, try"
 		ewarn "disabling this use flag."
+	fi
+
+	if has_version 'media-video/libav' ; then
+		ewarn "Please note that upstream uses media-video/ffmpeg."
+		ewarn "media-video/libav should be fine in theroy but if you"
+		ewarn "experience any problem, try to move to media-video/ffmpeg."
 	fi
 }
 
