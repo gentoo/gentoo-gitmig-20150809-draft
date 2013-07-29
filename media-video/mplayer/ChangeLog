@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.907 2013/07/29 20:48:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.908 2013/07/29 20:55:00 aballier Exp $
+
+  29 Jul 2013; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  allow snapshots named _pre
 
   29 Jul 2013; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   Add a warning for libav users.
