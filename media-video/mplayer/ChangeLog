@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.903 2013/07/29 20:11:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.904 2013/07/29 20:17:17 aballier Exp $
+
+  29 Jul 2013; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  do not default enable rtc, by Nikoli, bug #476316
 
   29 Jul 2013; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   remove comment about win32codecs

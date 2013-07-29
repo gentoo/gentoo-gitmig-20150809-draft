@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.148 2013/07/29 20:11:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.149 2013/07/29 20:17:17 aballier Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +encode faac +faad fbcon
 ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
 +libass libcaca libmpeg2 lirc +live lzo mad md5sum +mmx mmxext mng +mp3 nas
 +network nut openal +opengl +osdmenu oss png pnm pulseaudio pvr
-radio +rar +rtc rtmp samba +shm sdl +speex sse sse2 ssse3
+radio +rar rtc rtmp samba +shm sdl +speex sse sse2 ssse3
 tga +theora tremor +truetype +toolame +twolame +unicode v4l vdpau vidix
 +vorbis +X +x264 xanim xinerama +xscreensaver +xv +xvid xvmc zoran"
 
