@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.147 2013/07/29 20:08:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.148 2013/07/29 20:11:04 aballier Exp $
 
 EAPI=5
 
@@ -162,7 +162,7 @@ else
 	KEYWORDS=""
 fi
 
-# faac codecs are nonfree, win32codecs are nonfree
+# faac codecs are nonfree
 # libcdio support: prefer libcdio over cdparanoia and don't check for cddb w/cdio
 # dvd navigation requires dvd read support
 # ass and freetype font require iconv and ass requires freetype fonts
