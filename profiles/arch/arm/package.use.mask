@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.158 2013/07/30 14:23:40 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.159 2013/07/30 14:27:59 pinkbyte Exp $
 
-# Sergey Popov <pinkbyte@gentoo.org> (23 Jul 2013)
+# Sergey Popov <pinkbyte@gentoo.org> (30 Jul 2013)
 # Not tested
 media-libs/devil allegro nvtt
 
