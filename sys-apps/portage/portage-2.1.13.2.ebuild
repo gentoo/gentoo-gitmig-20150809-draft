@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.13.2.ebuild,v 1.1 2013/07/30 06:53:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.13.2.ebuild,v 1.2 2013/07/30 07:01:10 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -470,9 +470,10 @@ pkg_postinst() {
 		if [[ ! -f ${dest} ]] && mkdir -p "${dest}" 2>/dev/null ; then
 			dest=${ROOT}/etc/portage/repos.conf/${repo_name:-gentoo}.conf
 		fi
-		# Don't install the config update if the file exists, since
-		# users may accept it blindly (bug #478726).
-		[[ -e ${dest} ]] || \
+		# Don't install the config update if the desired repos.conf directory
+		# and config file exist, since users may accept it blindly and break
+		# their config (bug #478726).
+		[[ -e ${ROOT}/etc/portage/repos.conf/${repo_name:-gentoo}.conf ]] || \
 			mv "${T}/repos.conf" "$(new_config_protect "${dest}")"
 	fi
 
