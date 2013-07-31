@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.286 2013/07/31 21:18:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.287 2013/07/31 21:25:50 hasufell Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -814,7 +814,7 @@ postinst_sources() {
 	# optionally display security unsupported message
 	#  Start with why
 	if [[ ${K_SECURITY_UNSUPPORTED} = deblob ]]; then
-		ewarn "Deblobbed kernels may not be up-to-date security wise"
+		ewarn "Deblobbed kernels may not be up-to-date security-wise"
 		ewarn "as they depend on external scripts."
 	elif [[ -n ${K_SECURITY_UNSUPPORTED} ]]; then
 		ewarn "${PN} is UNSUPPORTED by Gentoo Security."
