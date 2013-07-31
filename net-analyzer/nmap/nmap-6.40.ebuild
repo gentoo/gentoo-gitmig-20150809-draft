@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.40.ebuild,v 1.1 2013/07/30 07:42:31 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.40.ebuild,v 1.2 2013/07/31 00:46:37 jer Exp $
 
-EAPI="4"
+EAPI=5
 
-inherit eutils flag-o-matic python toolchain-funcs
+inherit eutils flag-o-matic libtool python toolchain-funcs
 
 MY_P=${P/_beta/BETA}
 
@@ -42,7 +42,7 @@ RDEPEND="
 		>=dev-python/pygtk-2.6
 		${NMAP_PYTHON_DEPEND}
 	)
-	lua? ( >=dev-lang/lua-5.1.4-r1[deprecated] )
+	lua? ( >=dev-lang/lua-5.2[deprecated] )
 	ndiff? ( ${NMAP_PYTHON_DEPEND} )
 	nls? ( virtual/libintl )
 	nmap-update? ( dev-libs/apr dev-vcs/subversion )
@@ -103,6 +103,7 @@ src_prepare() {
 		zenmap/install_scripts/unix/zenmap-root.desktop \
 		zenmap/install_scripts/unix/zenmap.desktop || die
 
+	elibtoolize
 }
 
 src_configure() {
@@ -112,7 +113,7 @@ src_configure() {
 		$(use_enable ipv6) \
 		$(use_enable nls) \
 		$(use_with gtk zenmap) \
-		$(use_with lua liblua) \
+		$(use_with lua liblua=/usr) \
 		$(use_with ncat) \
 		$(use_with ndiff) \
 		$(use_with nmap-update) \
