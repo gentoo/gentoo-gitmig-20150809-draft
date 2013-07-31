@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.40.ebuild,v 1.2 2013/07/31 00:46:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.40.ebuild,v 1.3 2013/07/31 00:57:19 jer Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic libtool python toolchain-funcs
+inherit eutils flag-o-matic python toolchain-funcs
 
 MY_P=${P/_beta/BETA}
 
@@ -102,8 +102,6 @@ src_prepare() {
 		-e 's|^Categories=.*|Categories=Network;System;Security;|g' \
 		zenmap/install_scripts/unix/zenmap-root.desktop \
 		zenmap/install_scripts/unix/zenmap.desktop || die
-
-	elibtoolize
 }
 
 src_configure() {
@@ -113,7 +111,7 @@ src_configure() {
 		$(use_enable ipv6) \
 		$(use_enable nls) \
 		$(use_with gtk zenmap) \
-		$(use_with lua liblua=/usr) \
+		$(usex lua --with-liblua=/usr --without-liblua) \
 		$(use_with ncat) \
 		$(use_with ndiff) \
 		$(use_with nmap-update) \
