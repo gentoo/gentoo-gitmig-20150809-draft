@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.3.0-r1.ebuild,v 1.4 2013/07/31 21:24:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.3.0-r1.ebuild,v 1.5 2013/07/31 21:28:57 aballier Exp $
 
 EAPI=5
 
@@ -40,6 +40,8 @@ DEPEND="${COMMON_DEPEND}
 	x86-linux? ( ${ASM_DEPEND} )
 	x64-macos? ( ${ASM_DEPEND} )
 	java? ( >=virtual/jdk-1.5 )"
+
+MULTILIB_WRAPPED_HEADERS=( /usr/include/jconfig.h )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.2.0-x32.patch #420239
@@ -108,7 +110,6 @@ multilib_src_install() {
 		rm -rf "${ED}"usr/classes
 		java-pkg_dojar java/turbojpeg.jar
 	fi
-
 }
 
 multilib_src_install_all() {
