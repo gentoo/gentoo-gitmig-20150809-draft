@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/libusb-compat-0.1.5-r1.ebuild,v 1.1 2013/08/01 12:22:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/libusb-compat-0.1.5-r1.ebuild,v 1.2 2013/08/01 12:22:45 ssuominen Exp $
 
 EAPI=5
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Userspace access to USB devices (libusb-0.1 compat wrapper)"
 HOMEPAGE="http://libusb.sourceforge.net/"
