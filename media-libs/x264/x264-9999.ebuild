@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.11 2013/08/01 16:16:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.12 2013/08/01 16:39:38 aballier Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ SONAME="135"
 SLOT="0/${SONAME}"
 
 LICENSE="GPL-2"
-IUSE="10bit custom-cflags +interlaced pic static-libs +threads"
+IUSE="10bit +interlaced pic static-libs +threads"
 
 ASM_DEP=">=dev-lang/yasm-1.2.0"
 DEPEND="amd64? ( ${ASM_DEP} )
@@ -41,9 +41,6 @@ src_prepare() {
 src_configure() {
 	tc-export CC
 	local asm_conf=""
-
-	# let upstream pick the optimization level by default
-	use custom-cflags || filter-flags -O?
 
 	if use x86 && use pic || [[ ${ABI} == "x32" ]]; then
 		asm_conf=" --disable-asm"
@@ -66,15 +63,4 @@ src_configure() {
 		$(usex static-libs "" "--enable-static") \
 		$(usex threads "" "--disable-thread") \
 		${asm_conf} || die
-
-	# this is a nasty workaround for bug #376925 as upstream doesn't like us
-	# fiddling with their CFLAGS
-	if use custom-cflags; then
-		local cflags
-		cflags="$(grep "^CFLAGS=" config.mak | sed 's/CFLAGS=//')"
-		cflags="${cflags//$(get-flag O)/}"
-		cflags="${cflags//-O? /$(get-flag O) }"
-		cflags="${cflags//-g /}"
-		sed -i "s:^CFLAGS=.*:CFLAGS=${cflags//:/\\:}:" config.mak
-	fi
 }
