@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.10 2013/08/01 16:14:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.11 2013/08/01 16:16:28 aballier Exp $
 
 EAPI=5
 
-inherit flag-o-matic multilib toolchain-funcs
+inherit flag-o-matic multilib toolchain-funcs eutils
 
 DESCRIPTION="A free library for encoding X264/AVC streams"
 HOMEPAGE="http://www.videolan.org/developers/x264.html"
