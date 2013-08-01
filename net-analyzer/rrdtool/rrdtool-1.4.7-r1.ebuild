@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.7-r1.ebuild,v 1.10 2013/02/13 00:36:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.7-r1.ebuild,v 1.11 2013/08/01 13:19:10 jer Exp $
 
 EAPI="4"
 
@@ -45,7 +45,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch	"${FILESDIR}"/0001_"${P}"-configure.ac.patch
+	epatch	"${FILESDIR}"/"${P}"-configure.ac.patch
 	epatch	"${FILESDIR}/${PN}"-1.4.5-automake-1.11.2.patch
 
 	# bug 281694
