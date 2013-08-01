@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.9 2013/06/26 04:38:09 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.10 2013/08/01 16:14:49 aballier Exp $
 
 EAPI=5
 
@@ -11,18 +11,16 @@ HOMEPAGE="http://www.videolan.org/developers/x264.html"
 if [[ ${PV} == 9999 ]]; then
 	inherit git-2
 	EGIT_REPO_URI="git://git.videolan.org/x264.git"
-	SLOT="0"
 else
 	inherit versionator
 	MY_P="x264-snapshot-$(get_version_component_range 3)-2245"
 	SRC_URI="http://download.videolan.org/pub/videolan/x264/snapshots/${MY_P}.tar.bz2"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-
-	SONAME="132"
-	SLOT="0/${SONAME}"
-
 	S="${WORKDIR}/${MY_P}"
 fi
+
+SONAME="135"
+SLOT="0/${SONAME}"
 
 LICENSE="GPL-2"
 IUSE="10bit custom-cflags +interlaced pic static-libs +threads"
