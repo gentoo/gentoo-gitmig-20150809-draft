@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.12 2013/08/01 16:39:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.13 2013/08/01 16:59:00 aballier Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ SONAME="135"
 SLOT="0/${SONAME}"
 
 LICENSE="GPL-2"
-IUSE="10bit +interlaced pic static-libs +threads"
+IUSE="10bit +interlaced pic static-libs sse +threads"
 
 ASM_DEP=">=dev-lang/yasm-1.2.0"
 DEPEND="amd64? ( ${ASM_DEP} )
@@ -35,7 +35,8 @@ DOCS="AUTHORS doc/*.txt"
 
 src_prepare() {
 	# Initial support for x32 ABI, bug #420241
-	epatch "${FILESDIR}"/x264-x32.patch
+	# Avoid messing too much with CFLAGS.
+	epatch "${FILESDIR}"/x264-cflags.patch
 }
 
 src_configure() {
@@ -45,6 +46,9 @@ src_configure() {
 	if use x86 && use pic || [[ ${ABI} == "x32" ]]; then
 		asm_conf=" --disable-asm"
 	fi
+
+	# Upstream uses this, see the cflags patch
+	use sse && append-flags "-msse" "-mfpmath=sse"
 
 	./configure \
 		--prefix="${EPREFIX}"/usr \
