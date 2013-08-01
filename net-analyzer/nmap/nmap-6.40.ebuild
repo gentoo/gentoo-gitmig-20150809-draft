@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.40.ebuild,v 1.3 2013/07/31 00:57:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.40.ebuild,v 1.4 2013/08/01 16:33:38 jer Exp $
 
 EAPI=5
 
@@ -117,7 +117,8 @@ src_configure() {
 		$(use_with nmap-update) \
 		$(use_with nping) \
 		$(use_with ssl openssl) \
-		--with-libdnet=included
+		--with-libdnet=included \
+		--with-pcre=/usr
 }
 
 src_compile() {
