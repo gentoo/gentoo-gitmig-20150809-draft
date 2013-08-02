@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.99.ebuild,v 1.4 2013/08/02 15:31:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.99.ebuild,v 1.5 2013/08/02 15:53:33 ssuominen Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs autotools linux-info udev systemd
@@ -38,7 +38,7 @@ DEPEND="${DEPEND_COMMON}
 
 S=${WORKDIR}/${PN/lvm/LVM}.${PV}
 
-QA_MULTILIB_PATHS="usr/lib/systemd/system-generators/.*" #479520
+#QA_MULTILIB_PATHS="usr/lib/systemd/system-generators/.*" #479520
 
 pkg_setup() {
 	local CONFIG_CHECK="~SYSVIPC"
