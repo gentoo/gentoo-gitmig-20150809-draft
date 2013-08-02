@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/gnat-gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.58 2013/08/02 18:00:55 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.59 2013/08/02 19:08:15 george Exp $
+
+  02 Aug 2013; george <george@gentoo.org>
+  -files/patches/51_all_gcc-3.4-libiberty-pic.patch,
+  -files/patches/74_all_sh-pr24836.patch:
+  removing stale patches
 
   02 Aug 2013;  George Shapovalov <george@gentoo.org> -gnat-gcc-4.3.2.ebuild,
   -gnat-gcc-4.3.3.ebuild:
