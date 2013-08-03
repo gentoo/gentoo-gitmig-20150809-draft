@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-outline-fonts/mplus-outline-fonts-0_pre055.ebuild,v 1.1 2013/05/23 14:15:22 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-outline-fonts/mplus-outline-fonts-0_pre055.ebuild,v 1.2 2013/08/03 04:26:30 hattya Exp $
 
 EAPI="4"
+
 inherit font
 
 MY_P="mplus-${PV/0_pre/TESTFLIGHT-}"
@@ -12,23 +13,20 @@ SRC_URI="mirror://sourceforge.jp/mplus-fonts/6650/${MY_P}.tar.xz"
 
 LICENSE="mplus-fonts ipafont? ( IPAfont )"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~x86 ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc x86 ~ppc-macos ~x86-macos"
 IUSE="ipafont"
+RESTRICT="binchecks strip"
 
 DEPEND="ipafont? (
 		media-gfx/fontforge
-		>=media-fonts/ja-ipafonts-003.02
+		media-fonts/ja-ipafonts
 	)"
 RDEPEND=""
-
 S="${WORKDIR}/${MY_P}"
 
 FONT_SUFFIX="ttf"
 FONT_S="${S}"
-
 DOCS="README_J README_E"
-
-RESTRICT="strip binchecks"
 
 IPAFONT_DIR="${EPREFIX}/usr/share/fonts/ja-ipafonts"
 
@@ -41,6 +39,6 @@ src_prepare() {
 src_compile() {
 	if use ipafont ; then
 		fontforge -script m++ipa.pe || die
-		rm -f ipag.ttf || die
+		rm -f ipag.ttf
 	fi
 }
