@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.74 2013/08/03 20:40:03 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.75 2013/08/03 20:41:16 aidecoe Exp $
 
 *notmuch-0.16 (03 Aug 2013)
 
@@ -12,7 +12,7 @@
 
   Notmuch 0.16 has new Vim UI which needs Ruby bindings. Unfortunatelly the
   ebuild doesn't support Ruby bindings until somebody add it. Patches with
-  support for Ruby bindings using ruby-ng eclass are welcome.
+  support for Ruby bindings using ruby-ng eclass are welcome.  See bug #475624.
 
   NEWS
   ~~~~
