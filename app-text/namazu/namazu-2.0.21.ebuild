@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.21.ebuild,v 1.5 2013/08/03 06:38:13 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.21.ebuild,v 1.6 2013/08/03 06:48:17 hattya Exp $
 
 EAPI="5"
 
@@ -31,7 +31,6 @@ RDEPEND=">=dev-perl/File-MMagic-1.20
 		dev-lang/tk
 		www-client/lynx
 	)"
-
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
