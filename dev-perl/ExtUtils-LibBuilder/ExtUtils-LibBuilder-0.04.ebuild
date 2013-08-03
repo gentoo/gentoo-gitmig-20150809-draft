@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-LibBuilder/ExtUtils-LibBuilder-0.04.ebuild,v 1.1 2013/08/03 20:05:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-LibBuilder/ExtUtils-LibBuilder-0.04.ebuild,v 1.2 2013/08/03 20:17:50 mrueg Exp $
 
 EAPI=5
 
@@ -14,8 +14,6 @@ DESCRIPTION="A tool to build C libraries"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test"
-
-RESTRICT="mirror"
 
 DEPEND="virtual/perl-ExtUtils-CBuilder
 	virtual/perl-Module-Build
