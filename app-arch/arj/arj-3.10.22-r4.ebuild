@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r4.ebuild,v 1.3 2013/08/03 15:44:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r4.ebuild,v 1.4 2013/08/03 15:45:34 pinkbyte Exp $
 
 EAPI=4
 
@@ -45,12 +45,11 @@ src_compile() {
 
 	emake CC=$(tc-getCC) libdir="${ARJLIBDIR}" \
 		ADD_LDFLAGS="${LDFLAGS}" \
-		pkglibdir="${ARJLIBDIR}" all || die "emake failed."
+		pkglibdir="${ARJLIBDIR}" all
 }
 
 src_install() {
-	emake pkglibdir="${ARJLIBDIR}" \
-		DESTDIR="${D}" install || die "emake install failed."
+	emake pkglibdir="${ARJLIBDIR}" DESTDIR="${D}" install
 
 	dodoc doc/rev_hist.txt
 }
