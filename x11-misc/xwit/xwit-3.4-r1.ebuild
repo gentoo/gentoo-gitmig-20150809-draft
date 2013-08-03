@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwit/xwit-3.4-r1.ebuild,v 1.1 2013/08/03 17:01:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwit/xwit-3.4-r1.ebuild,v 1.2 2013/08/03 17:04:30 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -29,4 +29,5 @@ src_prepare() {
 src_install() {
 	dobin xwit
 	newman xwit.man xwit.1
+	dodoc README
 }
