@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.37.0.ebuild,v 1.1 2013/08/03 22:18:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.37.0.ebuild,v 1.2 2013/08/03 22:20:07 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -55,7 +55,7 @@ src_configure() {
 	DOCS="AUTHORS ChangeLog README NEWS TODO"
 
 	local myconf=""
-	
+
 	# -Bsymbolic is not supported by the Darwin toolchain
 	if [[ ${CHOST} == *-darwin* ]]; then
 		myconf="${myconf} --disable-Bsymbolic"
