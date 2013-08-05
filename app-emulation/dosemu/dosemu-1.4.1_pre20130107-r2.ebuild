@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.4.1_pre20130107-r2.ebuild,v 1.1 2013/08/05 09:52:57 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.4.1_pre20130107-r2.ebuild,v 1.2 2013/08/05 09:55:20 slyfox Exp $
 
 EAPI=5
 
@@ -68,8 +68,8 @@ src_configure() {
 src_install() {
 	default
 
-	# r - randmmap. dosemu tries to get address mapping
-	#       exactly where asked
-	# m - PWX mapping as it's an emulator / code laoder
+	# r - randmmap: dosemu tries to get address mapping
+	#     exactly where asked, loops otherwise.
+	# m - allow RWX mapping: as it's an emulator / code loader
 	pax-mark -mr "${ED}/usr/bin/dosemu.bin"
 }
