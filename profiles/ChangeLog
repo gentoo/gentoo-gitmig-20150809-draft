@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8118 2013/08/06 13:34:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8119 2013/08/06 13:46:58 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -8,6 +8,7 @@
 
   06 Aug 2013; Ulrich Müller <ulm@gentoo.org> use.desc:
   Remove unused nocxx flag.
+  Make USE flag descriptions more uniform, use imperative form throughout.
 
   05 Aug 2013; Ulrich Müller <ulm@gentoo.org> use.desc:
   Remove unused kdeprefix flag.
