@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-9999.ebuild,v 1.15 2013/08/07 22:39:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-9999.ebuild,v 1.16 2013/08/07 22:47:41 mgorny Exp $
 
 # Remember: we cannot leverage autotools in this ebuild in order
 #           to avoid circular deps with autotools
@@ -31,9 +31,7 @@ IUSE="nls static-libs +threads"
 
 RDEPEND="!<app-arch/lzma-4.63
 	!app-arch/lzma-utils
-	!<app-arch/p7zip-4.57
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r6
-		!>app-emulation/emul-linux-x86-baselibs-20130224-r6[-abi_x86_32] )"
+	!<app-arch/p7zip-4.57"
 DEPEND="${RDEPEND}
 	${EXTRA_DEPEND}"
 
