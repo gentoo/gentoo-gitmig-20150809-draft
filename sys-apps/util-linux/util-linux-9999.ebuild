@@ -1,29 +1,23 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.45 2013/07/16 01:23:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.46 2013/08/07 22:49:56 radhermit Exp $
 
-EAPI="3"
-
-EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux/util-linux.git"
+EAPI="4"
 inherit eutils toolchain-funcs libtool flag-o-matic bash-completion-r1
-if [[ ${PV} == "9999" ]] ; then
-	inherit git-2 autotools
-	#KEYWORDS=""
-else
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
-fi
 
 MY_PV=${PV/_/-}
 MY_P=${PN}-${MY_PV}
-S=${WORKDIR}/${MY_P}
+
+if [[ ${PV} == 9999 ]] ; then
+	inherit git-2 autotools
+	EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux/util-linux.git"
+else
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
+	SRC_URI="mirror://kernel/linux/utils/util-linux/v${PV:0:4}/${MY_P}.tar.xz"
+fi
 
 DESCRIPTION="Various useful Linux utilities"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
-if [[ ${PV} == "9999" ]] ; then
-	SRC_URI=""
-else
-	SRC_URI="mirror://kernel/linux/utils/util-linux/v${PV:0:4}/${MY_P}.tar.xz"
-fi
 
 LICENSE="GPL-2 GPL-3 LGPL-2.1 BSD-4 MIT public-domain"
 SLOT="0"
@@ -43,12 +37,15 @@ RDEPEND="!sys-process/schedutils
 	slang? ( sys-libs/slang )
 	udev? ( virtual/udev )"
 DEPEND="${RDEPEND}
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 	test? ( sys-devel/bc )
 	virtual/os-headers"
 
+S=${WORKDIR}/${MY_P}
+
 src_prepare() {
-	if [[ ${PV} == "9999" ]] ; then
+	if [[ ${PV} == 9999 ]] ; then
 		po/update-potfiles
 		eautoreconf
 	fi
@@ -58,9 +55,9 @@ src_prepare() {
 lfs_fallocate_test() {
 	# Make sure we can use fallocate with LFS #300307
 	cat <<-EOF > "${T}"/fallocate.c
-	#define _GNU_SOURCE
-	#include <fcntl.h>
-	main() { return fallocate(0, 0, 0, 0); }
+		#define _GNU_SOURCE
+		#include <fcntl.h>
+		main() { return fallocate(0, 0, 0, 0); }
 	EOF
 	append-lfs-flags
 	$(tc-getCC) ${CFLAGS} ${CPPFLAGS} ${LDFLAGS} "${T}"/fallocate.c -o /dev/null >/dev/null 2>&1 \
@@ -104,16 +101,19 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	default
 	dodoc AUTHORS NEWS README* Documentation/{TODO,*.txt,releases/*}
 
 	# need the libs in /
 	gen_usr_ldscript -a blkid mount uuid
+
 	# e2fsprogs-libs didnt install .la files, and .pc work fine
-	find "${ED}" -name '*.la' -delete
+	prune_libtool_files
 }
 
 pkg_postinst() {
-	elog "The agetty util now clears the terminal by default.  You"
-	elog "might want to add --noclear to your /etc/inittab lines."
+	if [[ -z ${REPLACING_VERSIONS} ]]; then
+		elog "The agetty util now clears the terminal by default. You"
+		elog "might want to add --noclear to your /etc/inittab lines."
+	fi
 }
