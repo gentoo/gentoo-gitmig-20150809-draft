@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/putty
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.77 2013/08/07 13:48:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.78 2013/08/07 13:49:27 jer Exp $
+
+  07 Aug 2013; Jeroen Roovers <jer@gentoo.org> putty-0.63.ebuild:
+  Stable for AMD64 (bug #479872).
 
 *putty-0.63 (07 Aug 2013)
 
