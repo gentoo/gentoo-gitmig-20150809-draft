@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.34 2013/07/25 15:31:49 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.35 2013/08/07 20:18:37 axs Exp $
 
 EAPI="5"
 
 KV_min=2.6.31
 
-inherit autotools eutils linux-info
+inherit autotools eutils multilib linux-info multilib-minimal
 
 if [[ ${PV} = 9999* ]]
 then
@@ -56,6 +56,7 @@ PDEPEND=">=virtual/udev-180
 	openrc? ( >=sys-fs/udev-init-scripts-18 )"
 
 REQUIRED_USE="keymap? ( hwdb )"
+DOCS=""
 
 pkg_pretend()
 {
@@ -115,7 +116,7 @@ src_prepare()
 	fi
 }
 
-src_configure()
+multilib_src_configure()
 {
 	local econf_args
 
@@ -129,37 +130,55 @@ src_configure()
 		--libdir=/usr/$(get_libdir)
 		--with-firmware-path="${EPREFIX}usr/lib/firmware/updates:${EPREFIX}usr/lib/firmware:${EPREFIX}lib/firmware/updates:${EPREFIX}lib/firmware"
 		--with-html-dir="/usr/share/doc/${PF}/html"
-		--with-rootlibdir=/$(get_libdir)
 		--enable-split-usr
 		--exec-prefix=/
 		$(use_enable doc gtk-doc)
-		$(use_enable gudev)
-		$(use_enable introspection)
 		$(use_enable keymap)
 		$(use_enable kmod libkmod)
 		$(use_enable modutils modules)
 		$(use_enable selinux)
-		$(use_enable static-libs static)
 		$(use_enable rule-generator)
 	)
-	econf "${econf_args[@]}"
+	# only install libs to /lib and build gudev for native abi
+	# also non-native-abi only need dynamic libs, so skip static
+	if multilib_is_native_abi; then econf_args+=(
+		--with-rootlibdir=/$(get_libdir)
+		$(use_enable gudev)
+		$(use_enable introspection)
+		$(use_enable static-libs static)
+		)
+	else econf_args+=(
+		--disable-gudev
+		--disable-introspection
+		--disable-static
+		)
+	fi
+	ECONF_SOURCE="${S}" econf "${econf_args[@]}"
 }
 
-src_test() {
+multilib_src_test()
+{
 	# make sandbox get out of the way
 	# these are safe because there is a fake root filesystem put in place,
 	# but sandbox seems to evaluate the paths of the test i/o instead of the
 	# paths of the actual i/o that results.
-	addread /sys
-	addwrite /dev
-	addwrite /run
-	default_src_test
+	# also only test for native abi
+	if multilib_is_native_abi; then
+		addread /sys
+		addwrite /dev
+		addwrite /run
+		default_src_test
+	fi
 }
 
-src_install()
+# disable header checks because we only install libudev headers for non-native abi
+multilib_check_headers()
 {
-	emake DESTDIR="${D}" install
+	:
+}
 
+multilib_src_install_all()
+{
 	prune_libtool_files --all
 	rm -rf "${ED}"/usr/share/doc/${PF}/LICENSE.*
 
