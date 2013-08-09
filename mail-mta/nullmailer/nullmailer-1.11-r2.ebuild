@@ -1,35 +1,33 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.13-r1.ebuild,v 1.2 2013/08/09 16:45:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.11-r2.ebuild,v 1.1 2013/08/09 16:45:11 robbat2 Exp $
 
-EAPI=5
-
-inherit autotools eutils flag-o-matic multilib systemd user
+EAPI=4
+WANT_AUTOMAKE="1.10.3"
+inherit eutils flag-o-matic autotools user multilib
 
 MY_P="${P/_rc/RC}"
-
+S=${WORKDIR}/${MY_P}
 DEBIAN_PV=1.11
-DEBIAN_PR="2"
+DEBIAN_PR="1"
 DEBIAN_P="${PN}-${DEBIAN_PV}"
 DEBIAN_PF="${DEBIAN_P/-/_}-${DEBIAN_PR}"
 DEBIAN_SRC="${DEBIAN_PF}.debian.tar.gz"
-
 DESCRIPTION="Simple relay-only local mail transport agent"
+SRC_URI="http://untroubled.org/${PN}/archive/${MY_P}.tar.gz
+		mirror://debian/pool/main/n/${PN}/${DEBIAN_SRC}"
 HOMEPAGE="http://untroubled.org/nullmailer/"
-SRC_URI="http://untroubled.org/${PN}/archive/${MY_P}.tar.gz"
-#		mirror://debian/pool/main/n/${PN}/${DEBIAN_SRC}"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
+
 IUSE="ssl"
 
-DEPEND="
-	sys-apps/groff
+DEPEND="sys-apps/groff
 	ssl? ( net-libs/gnutls )"
-RDEPEND="
+RDEPEND="virtual/shadow
 	virtual/logger
-	virtual/shadow
 	ssl? ( net-libs/gnutls )
 	!mail-mta/courier
 	!mail-mta/esmtp
@@ -43,16 +41,14 @@ RDEPEND="
 	!mail-mta/opensmtpd
 	!mail-mta/ssmtp"
 
-S=${WORKDIR}/${MY_P}
-
 src_prepare() {
-#	sed -i -e 's/nullmailer-1.10/nullmailer-1.11/g' \
-#		"${WORKDIR}"/debian/patches/*.diff || die
-#	EPATCH_OPTS="-d ${S} -p1" \
-#	epatch "${DISTDIR}"/${DEBIAN_SRC}
+	sed -i -e 's/nullmailer-1.10/nullmailer-1.11/g' \
+		"${WORKDIR}"/debian/patches/*.diff || die
+	EPATCH_OPTS="-d ${S} -p1" \
+	epatch "${DISTDIR}"/${DEBIAN_SRC}
 	# why revert?  Ask Robin when he is back!
-#	EPATCH_OPTS="-d ${WORKDIR} -p0 -R" \
-#	epatch "${WORKDIR}"/debian/patches/02_ipv6.diff
+	EPATCH_OPTS="-d ${WORKDIR} -p0 -R" \
+	epatch "${WORKDIR}"/debian/patches/02_ipv6.diff
 	# this fixes the debian daemon/syslog to actually compile
 	sed -i.orig \
 		-e '/^nullmailer_send_LDADD/s, =, = ../lib/cli++/libcli++.a,' \
@@ -100,7 +96,6 @@ src_install () {
 	fowners nullmail:nullmail /var/log/nullmailer /var/nullmailer/{tmp,queue,trigger}
 	fperms 660 /var/nullmailer/trigger
 	newinitd "${FILESDIR}"/init.d-nullmailer-r2 nullmailer
-	systemd_dounit "${FILESDIR}"/${PN}.service
 }
 
 pkg_postinst() {
