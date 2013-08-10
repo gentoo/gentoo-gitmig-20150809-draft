@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-4.0.3-r3.ebuild,v 1.1 2013/08/10 17:12:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-4.0.3-r3.ebuild,v 1.2 2013/08/10 17:15:29 aballier Exp $
 
 EAPI=5
 inherit eutils libtool multilib-minimal
@@ -18,7 +18,11 @@ IUSE="+cxx jbig jpeg lzma static-libs zlib"
 RDEPEND="jpeg? ( virtual/jpeg:0=[${MULTILIB_USEDEP}] )
 	jbig? ( media-libs/jbigkit:=[${MULTILIB_USEDEP}] )
 	lzma? ( app-arch/xz-utils:=[${MULTILIB_USEDEP}] )
-	zlib? ( sys-libs/zlib:=[${MULTILIB_USEDEP}] )"
+	zlib? ( sys-libs/zlib:=[${MULTILIB_USEDEP}] )
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20130224-r9
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)"
 DEPEND="${RDEPEND}"
 
 MULTILIB_WRAPPED_HEADERS=(
