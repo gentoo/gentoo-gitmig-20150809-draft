@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.1.1-r2.ebuild,v 1.1 2013/08/10 03:42:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.1.1-r2.ebuild,v 1.2 2013/08/10 03:53:09 cardoe Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ MY_P="${P/_rc/-rc}"
 
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-inherit eutils python-single-r1 user autotools linux-info systemd
+inherit eutils python-single-r1 user autotools linux-info systemd readme.gentoo
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-2
@@ -111,6 +111,16 @@ DEPEND="${RDEPEND}
 	app-text/xhtml1
 	dev-lang/perl
 	dev-libs/libxslt"
+
+DOC_CONTENTS="For the basic networking support (bridged and routed networks)
+you don't need any extra software. For more complex network modes
+including but not limited to NATed network, you can enable the
+'virt-network' USE flag.\n\n
+If you are using dnsmasq on your system, you will have
+to configure /etc/dnsmasq.conf to enable the following settings:\n\n
+ bind-interfaces\n
+ interface or except-interface\n\n
+Otherwise you might have issues with your existing DNS server."
 
 LXC_CONFIG_CHECK="
 	~CGROUPS
@@ -409,20 +419,7 @@ pkg_postinst() {
 	use libvirtd || return 0
 	# From here, only libvirtd-related instructions, be warned!
 
-	elog
-	elog "For the basic networking support (bridged and routed networks)"
-	elog "you don't need any extra software. For more complex network modes"
-	elog "including but not limited to NATed network, you can enable the"
-	elog "'virt-network' USE flag."
-	elog
-	if has_version net-dns/dnsmasq; then
-		ewarn "If you have a DNS server setup on your machine, you will have"
-		ewarn "to configure /etc/dnsmasq.conf to enable the following settings: "
-		ewarn " bind-interfaces"
-		ewarn " interface or except-interface"
-		ewarn
-		ewarn "Otherwise you might have issues with your existing DNS server."
-	fi
+	readme.gentoo_print_elog
 
 	if use caps && use qemu; then
 		elog "libvirt will now start qemu/kvm VMs with non-root privileges."
