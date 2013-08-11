@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/czmq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/ChangeLog,v 1.7 2013/08/11 12:39:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/ChangeLog,v 1.8 2013/08/11 12:40:16 jer Exp $
+
+  11 Aug 2013; Jeroen Roovers <jer@gentoo.org> czmq-1.2.0-r1.ebuild:
+  Stable for HPPA too.
 
 *czmq-1.2.0-r1 (11 Aug 2013)
 
