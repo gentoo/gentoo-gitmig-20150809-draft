@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-5.5.22.ebuild,v 1.2 2013/08/11 12:21:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-5.5.22.ebuild,v 1.3 2013/08/11 12:29:44 jlec Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="
 SLOT="0/${PV}"
 LICENSE="NVIDIA-CUDA"
 KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="debugger doc examples eclipse profiler"
+IUSE="debugger doc eclipse profiler"
 
 DEPEND=""
 RDEPEND="${DEPEND}
@@ -42,7 +42,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpacker
-	unpacker run_files/cuda*run
+	unpacker run_files/cuda-linux*.run
 }
 
 src_prepare() {
@@ -70,12 +70,6 @@ src_install() {
 	use debugger || remove+=" bin/cuda-gdb extras/Debugger"
 	( use profiler || use eclipse ) || remove+=" libnsight"
 	use amd64 || remove+=" cuda-installer.pl"
-
-	if use examples; then
-		insinto /usr/share/doc/${PN}
-		doins -r cuda-samples
-	fi
-	find cuda-samples -delete || die
 
 	if use profiler; then
 		# hack found in install-linux.pl
