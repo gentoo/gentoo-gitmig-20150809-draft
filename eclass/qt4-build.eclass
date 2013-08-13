@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.149 2013/08/13 10:05:37 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.150 2013/08/13 10:17:54 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -181,20 +181,25 @@ qt4-build_src_prepare() {
 		symlink_binaries_to_buildtree
 	fi
 
-	if [[ ${CHOST} == *86*-apple-darwin* ]]; then
-		# qmake bus errors with -O2 or -O3 but -O1 works
-		# Bug 373061
-		replace-flags -O[23] -O1
-	fi
-
 	if use_if_iuse c++0x; then
 		append-cxxflags -std=c++0x
 	fi
 
 	# Bug 261632
 	if use ppc64; then
-		ewarn "Appending -mminimal-toc to CFLAGS/CXXFLAGS"
 		append-flags -mminimal-toc
+	fi
+
+	# Bug 373061
+	# qmake bus errors with -O2 or -O3 but -O1 works
+	if [[ ${CHOST} == *86*-apple-darwin* ]]; then
+		replace-flags -O[23] -O1
+	fi
+
+	# Bug 417105
+	# graphite on gcc 4.7 causes miscompilations
+	if [[ $(gcc-version) == "4.7" ]]; then
+		filter-flags -fgraphite-identity
 	fi
 
 	# Respect CC, CXX, {C,CXX,LD}FLAGS in .qmake.cache
