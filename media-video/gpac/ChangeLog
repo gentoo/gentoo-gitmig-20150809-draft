@@ -1,6 +1,12 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.112 2013/08/14 21:00:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.113 2013/08/14 21:20:02 aballier Exp $
+
+*gpac-0.5.0-r1 (14 Aug 2013)
+
+  14 Aug 2013; Alexis Ballier <aballier@gentoo.org> -gpac-0.5.0.ebuild,
+  +gpac-0.5.0-r1.ebuild:
+  revision bump for all the previous changes
 
   14 Aug 2013; Alexis Ballier <aballier@gentoo.org> gpac-0.5.0.ebuild:
   Drop wxwidgets useflag since it is disabled upstream
