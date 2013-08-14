@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.244 2013/08/14 19:39:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.245 2013/08/14 19:50:39 dilfridge Exp $
+
+  14 Aug 2013; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask:
+  mask rdesktop support of krdp-4.11 until keyworded
 
   14 Aug 2013; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask:
   mask facebook support of kdepim-runtime until keyworded
