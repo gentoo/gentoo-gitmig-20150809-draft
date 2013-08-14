@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.5.0.ebuild,v 1.7 2013/08/14 20:08:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.5.0.ebuild,v 1.8 2013/08/14 20:25:17 aballier Exp $
 
 EAPI=4
 
@@ -79,14 +79,6 @@ src_prepare() {
 	else
 		sed -i -e "s:wx-config:wx-config-doesnotexist:g" configure || die
 	fi
-
-	# remove default rule for building objects from code, so that
-	# default make rules apply (fixes -fPIC issues)
-	sed -i -e '/^\%\.o: \%\.c/{N;d;}' \
-		src/Makefile modules/*/Makefile ||die
-
-	# use this to cut down on the warnings noise
-	#append-flags -fno-strict-aliasing
 }
 
 src_configure() {
@@ -121,22 +113,14 @@ src_configure() {
 		$(my_use truetype ft) \
 		$(my_use vorbis) \
 		$(my_use xvid) \
+		--extra-cflags="${CFLAGS}" \
 		--cc="$(tc-getCC)" \
 		--libdir="/$(get_libdir)"
-
-	#temporary build fix
-	cp config.h include/gpac/
-}
-
-src_compile() {
-#	#emake OPTFLAGS="${CFLAGS} -fPIC"
-#	LD="$(tc-getCC)" \
-	emake OPTFLAGS="${CFLAGS}"
 }
 
 src_install() {
-	emake STRIP="true" OPTFLAGS="${CFLAGS}" DESTDIR="${D}" install
-	emake STRIP="true" OPTFLAGS="${CFLAGS}" DESTDIR="${D}" install-lib
+	emake STRIP="true" DESTDIR="${D}" install
+	emake STRIP="true" DESTDIR="${D}" install-lib
 	dodoc AUTHORS BUGS Changelog README TODO INSTALLME
 	dodoc doc/*.txt
 	dohtml doc/*.html
