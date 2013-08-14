@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15020 2013/08/13 06:18:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15021 2013/08/14 03:48:36 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Patrick Lauer <patrick@gentoo.org> (14 Aug 2013)
+# Untested / unconfirmed major bump of perl #479064
+# Needs proper testing before being unleashed
+=dev-lang/perl-5.18.1
 
 # Justin Lecher <jlec@gentoo.org> (11 Aug 2013)
 # Not needed anymore
