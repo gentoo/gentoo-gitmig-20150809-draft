@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.5.0.ebuild,v 1.8 2013/08/14 20:25:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.5.0.ebuild,v 1.9 2013/08/14 20:38:04 aballier Exp $
 
 EAPI=4
 
@@ -61,7 +61,8 @@ src_prepare() {
 		"${FILESDIR}"/210_all_system_libogg.patch \
 		"${FILESDIR}"/${P}-build-fixes.patch \
 		"${FILESDIR}"/${P}-libav9.patch \
-		"${FILESDIR}"/${P}-ffmpeg2.patch
+		"${FILESDIR}"/${P}-ffmpeg2.patch \
+		"${FILESDIR}"/${P}-mp42ts.patch
 
 	# remove last of internal ogg
 	sed -i \
