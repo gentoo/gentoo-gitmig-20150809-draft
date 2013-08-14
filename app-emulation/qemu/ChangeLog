@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.231 2013/08/14 04:13:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.232 2013/08/14 04:15:29 cardoe Exp $
+
+  14 Aug 2013; Doug Goldstein <cardoe@gentoo.org> -qemu-1.5.2.ebuild:
+  Remove older version
 
 *qemu-1.5.2-r2 (14 Aug 2013)
 
