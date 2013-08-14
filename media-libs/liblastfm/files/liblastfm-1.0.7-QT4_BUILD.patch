@@ -1,0 +1,16 @@
+diff -up liblastfm-1.0.7/CMakeLists.txt.QT4_BUILD liblastfm-1.0.7/CMakeLists.txt
+--- liblastfm-1.0.7/CMakeLists.txt.QT4_BUILD	2013-02-27 03:01:06.000000000 -0600
++++ liblastfm-1.0.7/CMakeLists.txt	2013-06-17 07:57:16.458399726 -0500
+@@ -26,7 +26,11 @@ set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PA
+ 
+ # setup qt stuff
+ set(CMAKE_AUTOMOC ON)
+-find_package(Qt5Core QUIET)
++
++option(QT4_BUILD "Force building with Qt4 even if Qt5 is found")
++if (NOT QT4_BUILD)
++    find_package(Qt5Core QUIET)
++endif(NOT QT4_BUILD)
+ if(Qt5Core_DIR)
+     message(STATUS "Found Qt5! Please keep in mind, this is highly experimental and not our main development target..")
+ 
