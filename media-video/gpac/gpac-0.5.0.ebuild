@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.5.0.ebuild,v 1.6 2013/08/14 19:56:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.5.0.ebuild,v 1.7 2013/08/14 20:08:54 aballier Exp $
 
 EAPI=4
 
@@ -90,14 +90,6 @@ src_prepare() {
 }
 
 src_configure() {
-	myconf="${myconf} --use-ogg=system"
-	if use vorbis; then
-		myconf="${myconf} --use-vorbis=system"
-	fi
-	if use theora; then
-		myconf="${myconf} --use-theora=system"
-	fi
-
 	tc-export CC CXX AR RANLIB
 
 	econf \
@@ -105,30 +97,32 @@ src_configure() {
 		--enable-pic \
 		--disable-amr \
 		--use-js=no \
+		--use-ogg=system \
+		$(use_enable alsa) \
 		$(use_enable debug) \
-		$(use_enable opengl) \
-		$(use_enable oss oss-audio) \
-		$(use_enable ssl) \
 		$(use_enable ipv6) \
 		$(use_enable jack jack yes) \
+		$(use_enable opengl) \
+		$(use_enable oss oss-audio) \
 		$(use_enable pulseaudio pulseaudio yes) \
-		$(use_enable alsa) \
 		$(use_enable sdl) \
-		$(use_enable wxwidgets wx) \
+		$(use_enable ssl) \
 		$(use_enable static-libs static-lib) \
-		$(my_use ffmpeg) \
+		$(use_enable wxwidgets wx) \
+		$(my_use a52) \
 		$(my_use aac faad) \
 		$(my_use dvb dvbx) \
+		$(my_use ffmpeg) \
 		$(my_use jpeg) \
+		$(my_use jpeg2k openjpeg) \
 		$(my_use mad) \
 		$(my_use png) \
+		$(my_use theora) \
 		$(my_use truetype ft) \
+		$(my_use vorbis) \
 		$(my_use xvid) \
-		$(my_use jpeg2k openjpeg) \
-		$(my_use a52) \
 		--cc="$(tc-getCC)" \
-		--libdir="/$(get_libdir)" \
-		${myconf}
+		--libdir="/$(get_libdir)"
 
 	#temporary build fix
 	cp config.h include/gpac/
