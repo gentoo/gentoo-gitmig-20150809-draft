@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.71 2013/08/15 15:10:05 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.72 2013/08/15 15:29:58 kensington Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -24,9 +24,6 @@ EXPORT_FUNCTIONS ${KDEMETA_EXPF}
 
 # Add dependencies that all packages in a certain module share.
 case ${KMNAME} in
-	kdebase|kdebase-apps|kde-baseapps|kdebase-workspace|kde-workspace|kdebase-runtime|kde-runtime|kdegraphics)
-		COMMONDEPEND+=" >=media-libs/qimageblitz-0.0.4"
-		;;
 	kdepim|kdepim-runtime)
 		case ${PN} in
 			akregator|kaddressbook|kjots|kmail|knode|knotes|korganizer|ktimetracker)
@@ -511,7 +508,7 @@ kde4-meta_change_cmakelists() {
 					"${S}"/CMakeLists.txt || die "${LINENO}: sed died removing kde-workspace opengl dependency"
 			fi
 			;;
-		kdebase-runtime | kde-runtime)
+		kde-runtime)
 			# COLLISION PROTECT section
 			# Only install the kde4 script as part of kde-base/kdebase-data
 			if [[ ${PN} != kdebase-data && -f CMakeLists.txt ]]; then
@@ -551,14 +548,6 @@ kde4-meta_change_cmakelists() {
 					;;
 			esac
 			;;
-		kdewebdev)
-			# Disable hardcoded checks
-			sed -e 's/find_package(KdepimLibs REQUIRED)/macro_optional_find_package(KdepimLibs)/' \
-				-e 's/find_package(LibXml2 REQUIRED)/macro_optional_find_package(LibXml2)/' \
-				-e 's/find_package(LibXslt REQUIRED)/macro_optional_find_package(LibXslt)/' \
-				-e 's/find_package(Boost REQUIRED)/macro_optional_find_package(Boost)/' \
-				-i CMakeLists.txt || die "failed to disable hardcoded checks"
-			;;
 	esac
 
 	popd > /dev/null
@@ -570,25 +559,6 @@ kde4-meta_change_cmakelists() {
 # ebuilds.
 kde4-meta_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
-
-	# backwards-compatibility: make mycmakeargs an array, if it isn't already
-	if [[ $(declare -p mycmakeargs 2>&-) != "declare -a mycmakeargs="* ]]; then
-		mycmakeargs=(${mycmakeargs})
-	fi
-
-	# Set some cmake default values here (usually workarounds for automagic deps)
-	case ${KMNAME} in
-		kdewebdev)
-			mycmakeargs=(
-				-DWITH_KdepimLibs=OFF
-				-DWITH_LibXml2=OFF
-				-DWITH_LibXslt=OFF
-				-DWITH_Boost=OFF
-				-DWITH_LibTidy=OFF
-				"${mycmakeargs[@]}"
-			)
-			;;
-	esac
 
 	kde4-base_src_configure
 }

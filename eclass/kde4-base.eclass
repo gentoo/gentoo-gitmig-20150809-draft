@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.129 2013/08/15 15:10:05 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.130 2013/08/15 15:29:58 kensington Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -375,28 +375,6 @@ case ${KDE_SELINUX_MODULE} in
 	*)
 		IUSE+=" selinux"
 		kdecommondepend+=" selinux? ( sec-policy/selinux-${KDE_SELINUX_MODULE} )"
-		;;
-esac
-
-# These dependencies are added as they are unconditionally required by kde-workspace.
-# They are not necessarily required by individual applications but are pulled in to prevent
-# bugs like bug #444438. This list is subject to change in the future so do not rely on it
-# in ebuilds - always set correct dependencies.
-case ${KMNAME} in
-	kde-workspace)
-		kdedepend+="
-			x11-libs/xcb-util
-			x11-libs/libX11
-			x11-libs/libXcomposite
-			x11-libs/libXcursor
-			x11-libs/libXdamage
-			x11-libs/libXfixes
-			x11-libs/libxkbfile
-			x11-libs/libXrandr
-			x11-libs/libXrender
-		"
-		;;
-	*)
 		;;
 esac
 
