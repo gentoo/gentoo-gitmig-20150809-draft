@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.70 2013/04/07 17:46:23 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.71 2013/08/15 15:10:05 kensington Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -34,11 +34,6 @@ case ${KMNAME} in
 				RDEPEND+=" kontact? ( $(add_kdebase_dep kontact) )"
 				;;
 		esac
-		;;
-	kdegames)
-		if [[ ${PN} != libkdegames ]]; then
-			COMMONDEPEND+=" $(add_kdebase_dep libkdegames)"
-		fi
 		;;
 esac
 
@@ -131,7 +126,6 @@ kde4-meta_src_unpack() {
 	if [[ ${KDE_BUILD_TYPE} = live ]]; then
 		case "${KDE_SCM}" in
 			svn)
-				migrate_store_dir
 				S="${WORKDIR}/${P}"
 				mkdir -p "${S}"
 				ESVN_RESTRICT="export" subversion_src_unpack
@@ -199,16 +193,7 @@ kde4-meta_src_extract() {
 			KMTARPARAMS+=" --xz"
 		fi
 
-		case ${KMNAME} in
-			kdebase-apps)
-				# kdebase/apps -> kdebase-apps
-				tarball="kdebase-${PV}.tar.${postfix}"
-				;;
-			*)
-				# Create tarball name from module name (this is the default)
-				tarball="${KMNAME}-${PV}.tar.${postfix}"
-				;;
-		esac
+		tarball="${KMNAME}-${PV}.tar.${postfix}"
 
 		# Full path to source tarball
 		tarfile="${DISTDIR}/${tarball}"
@@ -286,18 +271,18 @@ kde4-meta_create_extractlists() {
 	# Note that this actually doesn't include KMEXTRA handling.
 	# In those cases you should care to add the relevant files to KMEXTRACTONLY
 	case ${KMNAME} in
-		kdebase | kdebase-apps | kde-baseapps)
+		kde-baseapps)
 			KMEXTRACTONLY+="
 				CTestConfig.cmake
 				config-apps.h.cmake
 				ConfigureChecks.cmake"
 			;;
-		kdebase-runtime | kde-runtime)
+		kde-runtime)
 			KMEXTRACTONLY+="
 				CTestConfig.cmake
 				config-runtime.h.cmake"
 			;;
-		kdebase-workspace | kde-workspace)
+		kde-workspace)
 			KMEXTRACTONLY+="
 				config-unix.h.cmake
 				ConfigureChecks.cmake
@@ -305,13 +290,6 @@ kde4-meta_create_extractlists() {
 				config-X11.h.cmake
 				startkde.cmake
 				KDE4WorkspaceConfig.cmake.in"
-			;;
-		kdegames)
-			if [[ ${PN} != libkdegames ]]; then
-				KMEXTRACTONLY+="
-					libkdegames/"
-				KMLOADLIBS="${KMLOADLIBS} libkdegames"
-			fi
 			;;
 		kdepim)
 			if [[ ${PN} != libkdepim ]]; then
@@ -328,10 +306,6 @@ kde4-meta_create_extractlists() {
 				KMEXTRA+="
 					kontact/plugins/${PLUGINNAME:-${PN}}/"
 			fi
-			;;
-		kdeutils)
-			KMEXTRACTONLY+="
-				kdeutils-version.h"
 			;;
 	esac
 	# Don't install cmake modules for split ebuilds, to avoid collisions.
@@ -511,7 +485,7 @@ kde4-meta_change_cmakelists() {
 	done
 
 	case ${KMNAME} in
-		kdebase-workspace | kde-workspace)
+		kde-workspace)
 			# COLLISION PROTECT section
 			# Install the startkde script just once, as a part of kde-base/kdebase-startkde,
 			# not as a part of every package.

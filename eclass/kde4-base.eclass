@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.128 2013/08/15 14:52:58 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.129 2013/08/15 15:10:05 kensington Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -444,13 +444,7 @@ _calculate_src_uri() {
 
 	# calculate tarball module name
 	if [[ -n ${KMNAME} ]]; then
-		# fixup kdebase-apps name
-		case ${KMNAME} in
-			kdebase-apps)
-				_kmname="kdebase" ;;
-			*)
-				_kmname="${KMNAME}" ;;
-		esac
+		_kmname="${KMNAME}"
 	else
 		_kmname=${PN}
 	fi
@@ -647,7 +641,6 @@ kde4-base_src_unpack() {
 	if [[ ${KDE_BUILD_TYPE} = live ]]; then
 		case ${KDE_SCM} in
 			svn)
-				migrate_store_dir
 				subversion_src_unpack
 				;;
 			git)
