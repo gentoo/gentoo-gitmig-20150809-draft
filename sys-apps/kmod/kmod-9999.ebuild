@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.62 2013/08/16 14:06:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.63 2013/08/16 14:07:33 ssuominen Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ RESTRICT="test"
 RDEPEND="!sys-apps/module-init-tools
 	!sys-apps/modutils
 	lzma? ( >=app-arch/xz-utils-5.0.4-r1 )
-	openrc? ( >=sys-apps/openrc-0.12 )
+	openrc? ( !<sys-apps/openrc-0.12 )
 	zlib? ( >=sys-libs/zlib-1.2.6 )" #427130
 DEPEND="${RDEPEND}
 	dev-libs/libxslt

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.106 2013/08/16 14:06:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.107 2013/08/16 14:07:33 ssuominen Exp $
+
+  16 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> kmod-14-r2.ebuild,
+  kmod-9999.ebuild:
+  Block old OpenRC instead of depending on new one to prevent circular
+  dependency.
 
 *kmod-14-r2 (16 Aug 2013)
 
