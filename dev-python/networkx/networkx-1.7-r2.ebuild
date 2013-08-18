@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/networkx-1.7-r2.ebuild,v 1.2 2013/08/18 10:33:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/networkx-1.7-r2.ebuild,v 1.3 2013/08/18 10:38:07 mgorny Exp $
 
 EAPI=5
 
@@ -45,6 +45,10 @@ python_compile_all() {
 			-i doc/Makefile || die
 		emake -C doc html
 	fi
+}
+
+python_test() {
+	nosetests || die
 }
 
 python_install_all() {
