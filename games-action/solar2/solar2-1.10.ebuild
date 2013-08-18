@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/solar2/solar2-1.10.ebuild,v 1.4 2013/08/18 00:23:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/solar2/solar2-1.10.ebuild,v 1.5 2013/08/18 00:25:18 hasufell Exp $
 
 # TODO: - unbundle libmono for 64bit
 #       - unbundling libSDL_mixer breaks the game
@@ -19,7 +19,7 @@ SRC_URI="${GAMEBALL} ${ICONFILE}"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="bundled-libs"
 RESTRICT="bindist fetch splitdebug"
 
