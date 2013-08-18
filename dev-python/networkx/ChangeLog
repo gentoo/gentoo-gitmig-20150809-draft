@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/networkx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.17 2013/04/26 09:50:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.18 2013/08/18 10:33:24 mgorny Exp $
+
+  18 Aug 2013; Michał Górny <mgorny@gentoo.org> networkx-1.7-r2.ebuild:
+  Improve the distutils-r1 ebuild. Install docs into /usr/share/doc/${PF}.
 
 *networkx-1.7-r2 (26 Apr 2013)
 

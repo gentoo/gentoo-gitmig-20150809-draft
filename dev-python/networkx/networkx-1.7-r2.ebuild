@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/networkx-1.7-r2.ebuild,v 1.1 2013/04/26 09:50:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/networkx-1.7-r2.ebuild,v 1.2 2013/08/18 10:33:24 mgorny Exp $
 
 EAPI=5
 
@@ -36,28 +36,23 @@ RDEPEND="
 		virtual/pyparsing[${PYTHON_USEDEP}]
 		dev-python/pyyaml[${PYTHON_USEDEP}]
 		sci-libs/scipy[${PYTHON_USEDEP}]
-	 )"
+	)"
 
 python_compile_all() {
 	if use doc; then
-		elog "Building docs"
-		# PYTHONPATH is necessary to use networkx to be installed.
-		cd "${S}"/doc || die
 		sed \
 			-e "s:^\t\./:\t${PYTHON} :g" \
-			-i Makefile || die
-		pwd
-		PYTHONPATH="${S}:${PYTHONPATH}" make html \
-			|| die "doc compilation failed"
+			-i doc/Makefile || die
+		emake -C doc html
 	fi
 }
 
 python_install_all() {
-	distutils-r1_python_install_all
+	# Oh my.
+	rm -r "${ED}"usr/share/doc/${P} || die
 
-	rm -f "${ED}"usr/share/doc/${PF}/{INSTALL,LICENSE}.txt || die
-	if ! use examples; then
-		rm -r "${ED}"usr/share/doc/${P}/examples || die
-	fi
-	use doc && dohtml -r doc/build/html/*
+	use doc && local HTML_DOCS=( doc/build/html/. )
+	use examples && local EXAMPLES=( examples/. )
+
+	distutils-r1_python_install_all
 }
