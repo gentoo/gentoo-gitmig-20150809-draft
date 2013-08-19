@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.484 2013/08/08 12:37:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.485 2013/08/19 16:55:43 radhermit Exp $
+
+*gnupg-2.0.21 (19 Aug 2013)
+
+  19 Aug 2013; Tim Harder <radhermit@gentoo.org> +gnupg-2.0.21.ebuild:
+  Version bump.
 
   08 Aug 2013; Agostino Sarubbo <ago@gentoo.org> gnupg-1.4.14.ebuild:
   Stable for sh, wrt bug #478184
