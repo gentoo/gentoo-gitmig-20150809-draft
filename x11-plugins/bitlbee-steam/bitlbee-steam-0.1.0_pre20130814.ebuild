@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bitlbee-steam/bitlbee-steam-0_pre20130814.ebuild,v 1.1 2013/08/19 00:36:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bitlbee-steam/bitlbee-steam-0.1.0_pre20130814.ebuild,v 1.1 2013/08/19 00:38:55 hasufell Exp $
 
 EAPI=5
 
