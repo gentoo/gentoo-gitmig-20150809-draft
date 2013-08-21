@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-geoclue/python-geoclue-0.1.0-r1.ebuild,v 1.1 2013/08/21 13:41:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-geoclue/python-geoclue-0.1.0-r1.ebuild,v 1.2 2013/08/21 13:44:03 jlec Exp $
 
 EAPI=5
 
@@ -24,7 +24,10 @@ DEPEND="test? ( app-misc/geoclue )"
 
 S="${WORKDIR}"/${PN}
 
-DISTUTILS_NO_PARALLEL_BUILD=true
+python_prepare_all() {
+	use test && DISTUTILS_NO_PARALLEL_BUILD=true
+	distutils-r1_python_prepare_all
+}
 
 python_test() {
 	VIRTUALX_COMMAND="${PYTHON}"
