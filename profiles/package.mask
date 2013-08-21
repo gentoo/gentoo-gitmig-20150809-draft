@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15047 2013/08/20 02:39:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15048 2013/08/21 13:14:45 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Patrick Lauer <patrick@gentoo.org> (21 Aug 2013)
+# Missing dependencies
+=sys-kernel/aufs-sources-3.10.7
 
 # Doug Goldstein <cardoe@gentoo.org> (19 Aug 2013)
 # Masked for development (not complete, do not use)
