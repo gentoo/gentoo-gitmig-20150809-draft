@@ -7,7 +7,7 @@
 	Use the PolicyKit framework (<pkg>sys-auth/polkit</pkg>) to get
 	authorization for suspend/shutdown.
 	</flag>
-	<flag name='systemd'>
+	<flag name='systemd-units'>
 	Install systemd unit files despite <pkg>sys-apps/systemd</pkg>
 	and systemd-logind. Not recommended.
 	</flag>

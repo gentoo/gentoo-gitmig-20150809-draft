@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.6.ebuild,v 1.9 2013/08/21 19:20:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.6.ebuild,v 1.10 2013/08/21 19:29:03 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils linux-info pam systemd
@@ -15,7 +15,7 @@ SRC_URI="http://www.freedesktop.org/software/${MY_PN}/dist/${MY_P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
-IUSE="acl debug doc kernel_linux pam policykit selinux systemd test"
+IUSE="acl debug doc kernel_linux pam policykit selinux systemd-units test"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.100:=
 	>=dev-libs/glib-2.22:2=
@@ -60,7 +60,7 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-udev-acl-install_to_usr.patch \
 		"${FILESDIR}"/${PN}-0.4.5-polkit-automagic.patch
 
-	if ! use systemd; then
+	if ! use systemd-units; then
 		sed -i -e '/SystemdService/d' data/org.freedesktop.ConsoleKit.service.in || die
 	fi
 
@@ -69,7 +69,7 @@ src_prepare() {
 
 src_configure() {
 	local myconf
-	if use systemd; then
+	if use systemd-units; then
 		myconf="$(systemd_with_unitdir)"
 	else
 		myconf="--with-systemdsystemunitdir=/tmp"
@@ -115,5 +115,5 @@ src_install() {
 
 	prune_libtool_files --all # --all for pam_ck_connector.la
 
-	use systemd || rm -rf "${ED}"/tmp
+	use systemd-units || rm -rf "${ED}"/tmp
 }
