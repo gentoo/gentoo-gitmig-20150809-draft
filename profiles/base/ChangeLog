@@ -1,10 +1,6 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.586 2013/08/21 19:24:59 ssuominen Exp $
-
-  21 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
-  Default mask systemd unit files for Consolekit in favour of systemd-logind
-  wrt #478258
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.587 2013/08/21 19:27:17 ssuominen Exp $
 
   16 Aug 2013; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Fix date.
