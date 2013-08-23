@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/libuv-0.11.8.ebuild,v 1.2 2013/08/23 06:46:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/libuv-0.11.8.ebuild,v 1.3 2013/08/23 06:47:45 hasufell Exp $
 
 EAPI=5
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="static-libs"
 
 src_prepare() {
+	# https://github.com/joyent/libuv/pull/900
 	epatch "${FILESDIR}"/${P}-Werror.patch
 
 	echo "m4_define([UV_EXTRA_AUTOMAKE_FLAGS], [serial-tests])" \
