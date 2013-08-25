@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/gnome-sudoku-3.8.1.ebuild,v 1.3 2013/08/25 17:39:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/gnome-sudoku-3.8.1.ebuild,v 1.4 2013/08/25 17:40:23 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -51,6 +51,6 @@ src_configure() {
 }
 
 src_install() {
-	python_fix_shebang src 
+	python_fix_shebang src
 	gnome-games_src_install
 }
