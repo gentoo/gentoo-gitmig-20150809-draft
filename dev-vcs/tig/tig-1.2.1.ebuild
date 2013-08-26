@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/tig-1.2.1.ebuild,v 1.1 2013/08/26 05:05:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/tig-1.2.1.ebuild,v 1.2 2013/08/26 05:14:59 radhermit Exp $
 
 EAPI=5
 
@@ -27,6 +27,11 @@ src_prepare() {
 
 src_configure() {
 	econf CURSES_LIB="$($(tc-getPKG_CONFIG) --libs ncursesw)"
+}
+
+src_compile() {
+	# fix version set wrong in tarball
+	emake VERSION=${PV}
 }
 
 src_install() {
