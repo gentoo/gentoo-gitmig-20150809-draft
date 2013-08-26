@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/fbpanel-6.1-r1.ebuild,v 1.1 2013/08/26 19:07:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/fbpanel-6.1-r1.ebuild,v 1.2 2013/08/26 19:17:03 jer Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs
@@ -22,13 +22,13 @@ DOCS=( CHANGELOG CREDITS README )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-underlinking.patch
-	sed -i -e "/libdir/s|/lib|/$(get_libdir)|g" configure || die
 	tc-export CC
 }
 
 src_configure() {
 	# not autotools based
-	./configure || die
+	echo "./configure --datadir=/usr/share --libdir=/usr/$(get_libdir)"
+	./configure --datadir=/usr/share --libdir=/usr/$(get_libdir) || die
 }
 
 pkg_postinst() {
