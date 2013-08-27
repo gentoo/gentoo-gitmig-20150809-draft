@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.241 2013/05/24 16:31:01 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.242 2013/08/27 18:22:28 axs Exp $
+
+  27 Aug 2013; Ian Stakenvicius <axs@gentoo.org>
+  +files/lirc-0.9.0-add-zotac-support.patch, lirc-0.9.0-r2.ebuild:
+  added support for zotac, bug 462596
 
   24 May 2013; Ian Stakenvicius <axs@gentoo.org>
   +files/lirc-0.9.0-kernel-3.8-fixes.patch, lirc-0.9.0-r2.ebuild:
