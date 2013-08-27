@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.326 2013/08/27 21:49:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.327 2013/08/27 21:50:32 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -178,7 +178,6 @@ x11-base/xorg-drivers video_cards_vmware
 
 # >=dev-cpp/clucene-0.9.21[-debug]
 app-misc/strigi clucene
-dev-libs/soprano clucene
 
 # >=sys-auth/polkit-qt-0.103.0
 # >=kde-misc/polkit-kde-kcmodules-0.98_pre20101127
