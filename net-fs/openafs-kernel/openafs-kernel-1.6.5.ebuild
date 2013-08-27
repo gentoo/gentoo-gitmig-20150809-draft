@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.6.5.ebuild,v 1.1 2013/08/27 08:07:30 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.6.5.ebuild,v 1.2 2013/08/27 08:08:43 tomwij Exp $
 
 EAPI="4"
 
-inherit eutils autotools multilib linux-mod versionator toolchain-funcs
+inherit eutils multilib linux-mod versionator toolchain-funcs
 
 MY_PV=$(delete_version_separator '_')
 MY_PN=${PN/-kernel}
