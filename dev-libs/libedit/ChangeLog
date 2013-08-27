@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libedit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.79 2013/08/27 23:23:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.80 2013/08/27 23:25:31 aballier Exp $
+
+*libedit-20130712.3.1 (27 Aug 2013)
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  +libedit-20130712.3.1.ebuild:
+  version bump
 
   27 Aug 2013; Alexis Ballier <aballier@gentoo.org>
   -libedit-20120311.3.0.ebuild, -libedit-20130611.3.1.ebuild:
