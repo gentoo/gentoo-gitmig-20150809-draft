@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.37 2013/08/27 19:45:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.38 2013/08/27 22:03:09 aballier Exp $
 
 
 # Richard Yao <ryao@gentoo.org> (09 Nov 2012)
@@ -84,6 +84,10 @@ media-libs/xine-lib fusion
 
 # needs udev
 kde-base/kdelibs udisks upower
+media-libs/mesa gbm
+x11-base/xorg-drivers video_cards_radeonsi
+x11-drivers/xf86-video-ati glamor
+x11-drivers/xf86-video-intel glamor
 
 # connman is Linux only
 dev-qt/qtbearer connman
