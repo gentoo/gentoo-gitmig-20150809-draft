@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8192 2013/08/27 23:05:45 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8193 2013/08/27 23:25:17 tomwij Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Aug 2013; Tom Wijsman <TomWij@gentoo.org> package.mask:
+  Clarified what eselect was exactly masked for, expanded 'it'.
 
   27 Aug 2013; Tom Wijsman <TomWij@gentoo.org> package.mask:
   Masked =app-admin/eselect-1.3.7 and =apps-shells/bash-completion-2.1-r1 on
