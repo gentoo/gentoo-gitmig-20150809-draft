@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.38 2013/08/27 22:03:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.39 2013/08/27 22:04:58 aballier Exp $
 
 
 # Richard Yao <ryao@gentoo.org> (09 Nov 2012)
@@ -38,10 +38,6 @@ sys-apps/help2man nls
 net-im/pidgin networkmanager zephyr
 
 media-video/totem bluetooth
-
-# Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
-# media-plugins/gst-plugins-mythtv not keyworded
-media-plugins/gst-plugins-meta mythtv
 
 # Alexis Ballier <aballier@gentoo.org> (18 Jul 2008)
 # Requires a linux only library,  bug #226085
