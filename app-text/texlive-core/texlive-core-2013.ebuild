@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013.ebuild,v 1.7 2013/08/27 16:09:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013.ebuild,v 1.8 2013/08/27 16:26:46 aballier Exp $
 
 EAPI=5
 
@@ -237,12 +237,13 @@ src_compile() {
 	cd "${B}"
 	# Mimic updmap --syncwithtrees to enable only fonts installed
 	# Code copied from updmap script
-	for i in `egrep '^(Mixed)?Map' "texmf-dist/web2c/updmap.cfg" | sed 's@.* @@'`; do
+	for i in `egrep '^(Mixed|Kanji)?Map' "texmf-dist/web2c/updmap.cfg" | sed 's@.* @@'`; do
 		texlive-common_is_file_present_in_texmf "$i" || echo "$i"
 	done > "${T}/updmap_update"
 	{
 		sed 's@/@\\/@g; s@^@/^MixedMap[     ]*@; s@$@$/s/^/#! /@' <"${T}/updmap_update"
 		sed 's@/@\\/@g; s@^@/^Map[  ]*@; s@$@$/s/^/#! /@' <"${T}/updmap_update"
+		sed 's@/@\\/@g; s@^@/^KanjiMap[     ]*@; s@$@$/s/^/#! /@' <"${T}/updmap_update"
 	} > "${T}/updmap_update2"
 	sed -f "${T}/updmap_update2" "texmf-dist/web2c/updmap.cfg" >	"${T}/updmap_update3"\
 		&& cat "${T}/updmap_update3" > "texmf-dist/web2c/updmap.cfg"
