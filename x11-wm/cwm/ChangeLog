@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/cwm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.43 2012/10/06 12:33:54 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.44 2013/08/27 20:12:55 xmw Exp $
+
+  27 Aug 2013; Michael Weber <xmw@gentoo.org> cwm-9999.ebuild:
+  Update live ebuild.
 
   06 Oct 2012; Michael Weber <xmw@gentoo.org> cwm-9999.ebuild:
   Add xmw patches as USE=-vanilla.
