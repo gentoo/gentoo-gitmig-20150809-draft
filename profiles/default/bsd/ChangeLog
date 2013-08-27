@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.157 2013/08/27 22:10:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.158 2013/08/27 22:17:04 aballier Exp $
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  mask app-misc/geoclue skyhook here since networkmanager is masked here
 
   27 Aug 2013; Alexis Ballier <aballier@gentoo.org> fbsd/package.mask,
   package.mask:
