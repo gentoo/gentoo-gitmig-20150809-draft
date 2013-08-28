@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.3.ebuild,v 1.2 2013/08/28 22:26:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.3_pre20130704.ebuild,v 1.1 2013/08/28 22:26:18 xmw Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic multilib toolchain-funcs
+inherit eutils flag-o-matic multilib toolchain-funcs vcs-snapshot
 
 DESCRIPTION="a lightweight PDF viewer and toolkit written in portable C"
 HOMEPAGE="http://mupdf.com/"
-SRC_URI="http://${PN}.googlecode.com/files/${P}-source.tar.gz"
+SRC_URI="http://git.ghostscript.com/?p=mupdf.git;a=snapshot;h=ac84904af638b243284e24d5f401c3f1a21cb0ef;sf=tgz -> ${P}.tar.gz"
 
 LICENSE="AGPL-3"
 SLOT="0/1.3"
@@ -33,24 +33,22 @@ DEPEND="${RDEPEND}
 		x11-libs/libXdmcp[static-libs]
 		x11-libs/libxcb[static-libs] )"
 
-S=${WORKDIR}/${P}-source
-
 src_prepare() {
 	rm -rf thirdparty || die
 
 	epatch \
-		"${FILESDIR}"/${P}-CFLAGS.patch \
-		"${FILESDIR}"/${P}-openjpeg2.patch \
-		"${FILESDIR}"/${P}-pkg-config.patch \
-		"${FILESDIR}"/${P}-sys_curl.patch
+		"${FILESDIR}"/${PN}-1.3-CFLAGS.patch \
+		"${FILESDIR}"/${PN}-1.3-openjpeg2.patch \
+		"${FILESDIR}"/${PN}-1.3-pkg-config.patch \
+		"${FILESDIR}"/${PN}-1.3-sys_curl.patch
 
 	sed -e "/^libdir=/s:/lib:/$(get_libdir):" \
 		-e "/^prefix=/s:=.*:=${EROOR}/usr:" \
 		-i platform/debian/${PN}.pc || die
 
 	use vanilla || epatch \
-		"${FILESDIR}"/${P}-zoom-2.patch \
-		"${FILESDIR}"/${P}-forward_back.patch
+		"${FILESDIR}"/${PN}-1.3-zoom-2.patch \
+		"${FILESDIR}"/${PN}-1.3-forward_back.patch
 
 	#http://bugs.ghostscript.com/show_bug.cgi?id=693467
 	sed -e '/^\(Actions\|MimeType\)=/s:\(.*\):\1;:' \
