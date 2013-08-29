@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15069 2013/08/28 01:30:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15070 2013/08/29 13:39:01 axs Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ian Stakenvicius <axs@gentoo.org> (29 Aug 2013)
+# new 'zotac' device patch causes build failures for
+# other devices, masking until patch can be fixed
+# See bug 482826
+=app-misc/lirc-0.9.0-r3
 
 # Tom Wijsman <TomWij@gentoo.org> (28 Aug 2013)
 # on behalf of Luca Barbato <lu_zero@gentoo.org>
