@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.2.ebuild,v 1.2 2013/08/03 09:45:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.2.ebuild,v 1.3 2013/08/29 12:47:55 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 
 IUSE="afp archive avahi bluetooth bluray cdda fuse gdu gnome-keyring gnome-online-accounts gphoto2 gtk +http mtp ios samba systemd test +udev udisks"
-REQUIRED_USE="systemd? ( udisks )"
+REQUIRED_USE="udisks? ( udev ) systemd? ( udisks )"
 
 # Can use libgphoto-2.5.0 as well. Automagic detection.
 RDEPEND="
