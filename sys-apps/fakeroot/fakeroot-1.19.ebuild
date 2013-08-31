@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/fakeroot-1.19.ebuild,v 1.5 2013/08/28 13:50:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/fakeroot-1.19.ebuild,v 1.6 2013/08/31 12:47:49 ago Exp $
 
 EAPI=4
 inherit eutils
@@ -15,7 +15,8 @@ KEYWORDS="alpha ~amd64 ~arm hppa ppc sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="acl static-libs test"
 
 DEPEND="acl? ( sys-apps/acl )
-	test? ( app-arch/sharutils )"
+	test? ( app-arch/sharutils )
+	sys-libs/libcap"
 
 DOCS="AUTHORS BUGS DEBUG README doc/README.saving"
 
