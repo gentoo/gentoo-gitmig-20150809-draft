@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.3 2013/08/28 17:46:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.4 2013/09/01 00:04:55 hasufell Exp $
 
 EAPI=5
 
@@ -65,7 +65,6 @@ src_prepare() {
 		-e "/po\/Makefile.in/d" \
 		configure.ac || die
 	sed -i -e "/SUBDIRS/s/intl//" Makefile.am || die
-	sed -i -e 's/Exec=.*$/Exec=thememan %f/' share/misc/htm.desktop || die
 	epatch -p1 \
 		"${FILESDIR}"/${PN}-2.9.5-autoconf-missing-macros.patch
 	epatch_user
