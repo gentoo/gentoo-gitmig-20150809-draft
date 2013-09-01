@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/bottle-0.11.6-r1.ebuild,v 1.1 2013/09/01 15:48:32 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/bottle-0.11.6-r1.ebuild,v 1.2 2013/09/01 15:50:04 dev-zero Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ python_prepare_all() {
 pkg_postinst() {
 	elog "Due to problems with bottle.py being in /usr/bin (see bug #474874)"
 	elog "we do as most other distros and do not install the script anymore."
-	elog "If you do want/have to call it directly rather than through your app," 
+	elog "If you do want/have to call it directly rather than through your app,"
 	elog "please use the following instead:"
 	elog '  `python -m bottle`'
 }
