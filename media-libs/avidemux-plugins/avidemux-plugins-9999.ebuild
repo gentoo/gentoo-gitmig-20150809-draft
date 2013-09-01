@@ -1,10 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-9999.ebuild,v 1.2 2013/08/31 15:50:30 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-9999.ebuild,v 1.3 2013/09/01 11:51:16 tomwij Exp $
 
 EAPI="5"
 
-inherit cmake-utils eutils flag-o-matic
+PYTHON_COMPAT=( python2_7 )
+
+inherit cmake-utils eutils flag-o-matic python-single-r1
 
 SLOT="2.6"
 
@@ -61,6 +63,7 @@ DEPEND="
 	xvid? ( media-libs/xvid:0 )
 	vorbis? ( media-libs/libvorbis:0 )
 	vpx? ( media-libs/libvpx:0 )
+	${PYTHON_DEPS}
 "
 RDEPEND="$DEPEND"
 
@@ -135,4 +138,6 @@ src_install() {
 			grep '^install/fast' Makefile && emake DESTDIR="${D}" install/fast
 		popd > /dev/null || die
 	done
+
+	python_fix_shebang "${D}"
 }
