@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/pyquery-1.2.4.ebuild,v 1.5 2013/06/06 03:33:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/pyquery-1.2.4.ebuild,v 1.6 2013/09/01 14:55:04 floppym Exp $
 
 EAPI=5
 
@@ -35,6 +35,8 @@ python_prepare_all() {
 	done
 	sed -e 's:>>> d = pq(url:>>> # d = pq(url:' -i README.rst || die
 	sed -e 's:class TestWebScrapping:class _TestWebScrapping:' -i ${PN}/test.py || die
+
+	distutils-r1_python_prepare_all
 }
 
 python_test() {
