@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cssselect
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssselect/ChangeLog,v 1.14 2013/09/01 14:59:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssselect/ChangeLog,v 1.15 2013/09/01 15:00:30 ago Exp $
+
+  01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> cssselect-0.7.1-r1.ebuild:
+  Stable for x86, wrt bug #450174
 
   01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> cssselect-0.7.1-r1.ebuild:
   Stable for amd64, wrt bug #450174
