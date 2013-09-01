@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/reload/reload-0.6.17.ebuild,v 1.1 2013/09/01 23:17:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/reload/reload-0.6.17.ebuild,v 1.2 2013/09/01 23:23:53 radhermit Exp $
 
 EAPI=5
 
-inherit vim-plugin vcs-snapshot
+inherit vim-plugin
 
 DESCRIPTION="vim plugin: automatic reloading of vim scripts"
 HOMEPAGE="http://peterodding.com/code/vim/reload/"
@@ -16,6 +16,8 @@ RDEPEND=">=app-vim/vim-misc-1.8.5"
 
 VIM_PLUGIN_HELPFILES="${PN}.txt"
 
+S=${WORKDIR}/vim-${P}
+
 src_prepare() {
-	rm INSTALL.md README.md || die
+	rm addon-info.json *.md || die
 }
