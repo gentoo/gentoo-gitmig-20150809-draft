@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jinja
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.97 2013/09/02 11:21:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.98 2013/09/02 11:22:08 ago Exp $
+
+  02 Sep 2013; Agostino Sarubbo <ago@gentoo.org> jinja-2.7.ebuild:
+  Stable for sparc, wrt bug #480092
 
   02 Sep 2013; Agostino Sarubbo <ago@gentoo.org> jinja-2.6-r100.ebuild:
   Stable for sparc, wrt bug #481800
