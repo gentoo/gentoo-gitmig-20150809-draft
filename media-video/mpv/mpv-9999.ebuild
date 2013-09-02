@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.16 2013/08/19 13:32:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.17 2013/09/02 08:10:12 pinkbyte Exp $
 
 EAPI=5
 
@@ -20,8 +20,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="+alsa aqua bluray bs2b +cdio dvb +dvd +enca encode +iconv jack joystick
 jpeg ladspa lcms +libass libcaca libguess lirc mng +mp3 -openal +opengl oss
-portaudio +postproc pulseaudio pvr +quvi radio samba +shm +threads v4l vcd
-vdpau vf-dlopen wayland +X xinerama +xscreensaver +xv"
+portaudio +postproc pulseaudio pvr +quvi radio samba +shm +threads v4l vaapi
+vcd vdpau vf-dlopen wayland +X xinerama +xscreensaver +xv"
 
 REQUIRED_USE="
 	enca? ( iconv )
@@ -32,6 +32,7 @@ REQUIRED_USE="
 	pvr? ( v4l )
 	radio? ( v4l || ( alsa oss ) )
 	v4l? ( threads )
+	vaapi? ( X )
 	vdpau? ( X )
 	wayland? ( opengl )
 	xinerama? ( X )
@@ -41,8 +42,8 @@ REQUIRED_USE="
 
 RDEPEND+="
 	|| (
-		>=media-video/libav-9:=[encode?,threads?,vdpau?]
-		>=media-video/ffmpeg-1.2:0=[encode?,threads?,vdpau?]
+		>=media-video/libav-9:=[encode?,threads?,vaapi?,vdpau?]
+		>=media-video/ffmpeg-1.2:0=[encode?,threads?,vaapi?,vdpau?]
 	)
 	sys-libs/ncurses
 	sys-libs/zlib
@@ -51,6 +52,7 @@ RDEPEND+="
 		x11-libs/libXxf86vm
 		opengl? ( virtual/opengl )
 		lcms? ( media-libs/lcms:2 )
+		vaapi? ( x11-libs/libva[X(+)] )
 		vdpau? ( x11-libs/libvdpau )
 		xinerama? ( x11-libs/libXinerama )
 		xscreensaver? ( x11-libs/libXScrnSaver )
@@ -86,7 +88,7 @@ RDEPEND+="
 	postproc? (
 		|| (
 			media-libs/libpostproc
-			>=media-video/ffmpeg-1.2:0[encode?,threads?,vdpau?]
+			>=media-video/ffmpeg-1.2:0[encode?,threads?,vaapi?,vdpau?]
 		)
 	)
 	pulseaudio? ( media-sound/pulseaudio )
@@ -252,7 +254,7 @@ src_configure() {
 	# X enabled configuration #
 	###########################
 	use X || myconf+=" --disable-x11"
-	uses="vdpau wayland xinerama xv"
+	uses="vaapi vdpau wayland xinerama xv"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
