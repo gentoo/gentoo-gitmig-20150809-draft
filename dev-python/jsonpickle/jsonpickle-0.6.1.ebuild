@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/jsonpickle-0.6.1.ebuild,v 1.1 2013/09/02 04:33:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/jsonpickle-0.6.1.ebuild,v 1.2 2013/09/02 04:34:40 patrick Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE="test"
 
 RDEPEND="dev-python/simplejson[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	test? ( dev-python/feedparser[${PYTHON_USEDEP}] 
+	test? ( dev-python/feedparser[${PYTHON_USEDEP}]
 		dev-python/ujson[${PYTHON_USEDEP}] )"
 
 python_test() {
