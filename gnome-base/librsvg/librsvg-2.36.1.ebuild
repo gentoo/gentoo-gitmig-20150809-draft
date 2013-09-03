@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.36.1.ebuild,v 1.15 2013/09/03 22:10:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.36.1.ebuild,v 1.16 2013/09/03 22:12:02 eva Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -14,7 +14,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/introspection.m4.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="s390 sh sparc"
+KEYWORDS="s390"
 IUSE="doc +gtk +introspection tools"
 
 RDEPEND=">=dev-libs/glib-2.24:2
