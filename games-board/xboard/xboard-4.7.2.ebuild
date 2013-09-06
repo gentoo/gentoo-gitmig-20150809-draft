@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.7.2.ebuild,v 1.1 2013/09/06 16:40:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.7.2.ebuild,v 1.2 2013/09/06 19:02:19 hasufell Exp $
 
 EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils games
@@ -20,6 +20,7 @@ RDEPEND="
 	dev-libs/glib:2
 	gnome-base/librsvg:2
 	x11-libs/cairo[X]
+	virtual/libintl
 	Xaw3d? ( x11-libs/libXaw3d )
 	!Xaw3d? ( !gtk? ( x11-libs/libXaw ) )
 	default-font? (
@@ -36,7 +37,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	x11-proto/xproto
 	virtual/pkgconfig
-	nls? ( dev-util/intltool )"
+	nls? ( sys-devel/gettext )"
 
 src_prepare() {
 	epatch \
