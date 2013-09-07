@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.11_pre20130825.ebuild,v 1.1 2013/09/02 05:49:12 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.11_pre20130825.ebuild,v 1.2 2013/09/07 08:43:12 eras Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib pam ssl-cert systemd toolchain-funcs user versionator
@@ -68,10 +68,6 @@ pkg_setup() {
 src_prepare() {
 	if use vda; then
 		epatch "${DISTDIR}"/${VDA_P}.patch
-	fi
-
-	if ! use berkdb; then
-		epatch "${FILESDIR}/${PN}_no-berkdb.patch"
 	fi
 
 	sed -i -e "/^#define ALIAS_DB_MAP/s|:/etc/aliases|:/etc/mail/aliases|" \
