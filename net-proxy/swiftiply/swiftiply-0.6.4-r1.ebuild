@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/swiftiply/swiftiply-0.6.4-r1.ebuild,v 1.1 2013/09/07 13:51:03 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/swiftiply/swiftiply-0.6.4-r1.ebuild,v 1.2 2013/09/07 13:56:56 tomwij Exp $
 
 EAPI="5"
 
-USE_RUBY="ruby19"
+USE_RUBY="ruby18 ruby19"
 
 inherit ruby-ng ruby-fakegem
 
