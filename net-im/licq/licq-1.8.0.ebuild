@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.7.1.ebuild,v 1.2 2013/09/09 13:39:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.8.0.ebuild,v 1.1 2013/09/09 13:39:07 polynomial-c Exp $
 
 EAPI=5
 
