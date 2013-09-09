@@ -1,6 +1,9 @@
 # ChangeLog for net-im/licq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.123 2013/09/09 13:39:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.124 2013/09/09 13:47:20 polynomial-c Exp $
+
+  09 Sep 2013; Lars Wendler <polynomial-c@gentoo.org> licq-1.8.0.ebuild:
+  Removed ncurses USE flag as console plugin was removed from licq.
 
 *licq-1.8.0 (09 Sep 2013)
 
