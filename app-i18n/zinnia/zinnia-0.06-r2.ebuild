@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/zinnia-0.06-r2.ebuild,v 1.1 2013/09/10 08:31:38 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/zinnia-0.06-r2.ebuild,v 1.2 2013/09/10 08:33:50 idella4 Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/zinnia/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-# Package warrants ISUE doc
+# Package warrants IUSE doc
 IUSE="perl"
 DOCS=( AUTHORS ChangeLog NEWS README )
 
