@@ -5,13 +5,13 @@
 		<email>mrueg@gentoo.org</email>
 		<name>Manuel Rüger</name>
 	</maintainer>
-
 	<longdescription>
-	NaCl (pronounced "salt") is a new easy-to-use high-speed software library for 
-	network communication, encryption, decryption, signatures, etc. NaCl's goal
-	is to provide all of the core operations needed to build higher-level
-	cryptographic tools. Sodium is a portable, cross-compilable, installable,
-	packageable fork of NaCl, with a compatible API.
+		NaCl (pronounced "salt") is a new easy-to-use high-speed software
+		library for network communication, encryption, decryption,
+		signatures, etc. NaCl's goal is to provide all of the core
+		operations needed to build higher-level cryptographic tools.
+		Sodium is a portable, cross-compilable, installable,
+		packageable fork of NaCl, with a compatible API.
 	</longdescription>
 	<use>
 		<flag name="asm">Enables assembly implementations</flag>
