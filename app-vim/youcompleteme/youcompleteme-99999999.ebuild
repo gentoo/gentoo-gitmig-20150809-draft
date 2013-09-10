@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/youcompleteme/youcompleteme-99999999.ebuild,v 1.1 2013/09/10 10:32:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/youcompleteme/youcompleteme-99999999.ebuild,v 1.2 2013/09/10 10:41:22 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -68,13 +68,12 @@ src_install() {
 	dodoc *.md
 	rm -r *.md *.sh COPYING.txt cpp || die
 	find python -name *test* -exec rm -rf {} + || die
+	rm python/libclang.so || die
 
 	vim-plugin_src_install
 
 	python_optimize "${ED}"
 	python_fix_shebang "${ED}"
-
-	use clang && dosym /usr/$(get_libdir)/llvm/libclang.so /usr/share/vim/vimfiles/python/libclang.so
 }
 
 pkg_postinst() {
