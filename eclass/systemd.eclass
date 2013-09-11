@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.27 2013/09/11 07:58:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.28 2013/09/11 08:50:07 mgorny Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -12,20 +12,20 @@
 # @EXAMPLE:
 #
 # @CODE
-# inherit autotools-utils systemd
+# inherit systemd
 #
 # src_configure() {
 #	local myeconfargs=(
 #		--enable-foo
 #		--disable-bar
+#		"$(systemd_with_unitdir)"
 #	)
 #
-#	systemd_to_myeconfargs
-#	autotools-utils_src_configure
+#	econf "${myeconfargs[@]}"
 # }
 # @CODE
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 case ${EAPI:-0} in
 	0|1|2|3|4|5) ;;
@@ -226,6 +226,9 @@ systemd_with_utildir() {
 # quoting automatically.
 systemd_to_myeconfargs() {
 	debug-print-function ${FUNCNAME} "${@}"
+
+	eqawarn 'systemd_to_myeconfargs() is deprecated and will be removed on 2013-10-11.'
+	eqawarn 'Please use $(systemd_with_unitdir) instead.'
 
 	myeconfargs=(
 		"${myeconfargs[@]}"
