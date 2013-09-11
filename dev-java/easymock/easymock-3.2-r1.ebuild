@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/easymock/easymock-3.2.ebuild,v 1.1 2013/09/10 17:53:33 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/easymock/easymock-3.2-r1.ebuild,v 1.1 2013/09/11 16:26:16 ercpe Exp $
 
 EAPI="5"
 
@@ -18,13 +18,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 COMMON_DEPEND="
-	dev-java/junit
-	dev-java/objenesis
+	dev-java/junit:4
+	dev-java/objenesis:0
 	dev-java/cglib:2.2
 "
 
 DEPEND=">=virtual/jdk-1.5
-	dev-java/junit:4
 	app-arch/unzip
 	${COMMON_DEPEND}"
 
