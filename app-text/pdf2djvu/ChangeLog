@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pdf2djvu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/ChangeLog,v 1.20 2013/09/12 21:10:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/ChangeLog,v 1.21 2013/09/12 21:16:00 mgorny Exp $
+
+  12 Sep 2013; Michał Górny <mgorny@gentoo.org> pdf2djvu-0.7.17.ebuild:
+  Minor cleanup: call python-single-r1_pkg_setup only if USE=test is used. Add
+  REQUIRED_USE for it as well.
 
   12 Sep 2013; Michał Górny <mgorny@gentoo.org> pdf2djvu-0.7.17.ebuild:
   Remove unnecessary nosetests ${EPYTHON}-variant enforcement. The pkg_setup()
