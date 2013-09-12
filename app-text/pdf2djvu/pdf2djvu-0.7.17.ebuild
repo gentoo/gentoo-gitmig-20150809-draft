@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/pdf2djvu-0.7.17.ebuild,v 1.1 2013/06/21 09:58:31 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/pdf2djvu-0.7.17.ebuild,v 1.2 2013/09/12 21:10:23 mgorny Exp $
 
 EAPI=5
 
@@ -32,11 +32,6 @@ DEPEND="${RDEPEND}
 "
 
 REQUIRED_USE="test? ( graphicsmagick )"
-
-src_prepare() {
-	sed -e "s:nosetests :nosetests-${EPYTHON} :" \
-		-i tests/Makefile || die
-}
 
 src_configure() {
 	local openmp=--disable-openmp
