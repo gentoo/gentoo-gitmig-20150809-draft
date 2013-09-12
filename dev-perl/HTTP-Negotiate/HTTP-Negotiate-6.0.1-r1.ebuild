@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Negotiate/HTTP-Negotiate-6.0.1.ebuild,v 1.3 2013/02/19 02:10:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Negotiate/HTTP-Negotiate-6.0.1-r1.ebuild,v 1.1 2013/09/12 15:29:50 idella4 Exp $
 
-EAPI=3
+EAPI=5
 
 MODULE_AUTHOR=GAAS
 MODULE_VERSION=${PV/0./0}
