@@ -1,4 +1,8 @@
 
+  13 Sep 2013; Anthony G. Basile <blueness@gentoo.org>
+  +files/remove-static-lib-20130911.patch, libnatpmp-20130911.ebuild:
+  Fix USE=-static-libs, bug #484692
+
 *libnatpmp-20130911 (12 Sep 2013)
 
   12 Sep 2013; Anthony G. Basile <blueness@gentoo.org>
