@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.0.ebuild,v 1.1 2013/09/13 09:16:13 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.0-r1.ebuild,v 1.1 2013/09/13 20:42:56 nirbheek Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -31,6 +31,8 @@ REQUIRED_USE="
 
 # FIXME: double check what to do with fm-radio plugin
 # webkit-gtk-1.10 is needed because it uses gstreamer-1.0
+#
+# To add support for libdmapsharing-2.9.19, use commit 	92d75eaa from git
 COMMON_DEPEND=">=dev-libs/glib-2.34.0:2
 	dev-libs/json-glib
 	>=dev-libs/libxml2-2.7.8:2
@@ -54,6 +56,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.34.0:2
 	cdr? ( >=app-cdr/brasero-2.91.90 )
 	daap? (
 		>=net-libs/libdmapsharing-2.9.16:3.0
+		<net-libs/libdmapsharing-2.9.19:3.0
 		media-plugins/gst-plugins-soup:1.0 )
 	libsecret? ( >=app-crypt/libsecret-0.14 )
 	html? ( >=net-libs/webkit-gtk-1.10:3 )
@@ -137,6 +140,13 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# https://bugzilla.gnome.org/show_bug.cgi?id=706470
+	# In git, remove for bump
+	epatch "${FILESDIR}/${P}-gdbus-return-value.patch"
+
+	# https://bugzilla.gnome.org/show_bug.cgi?id=708044
+	epatch "${FILESDIR}/${P}-rbzeitgeist-python3.patch"
+
 	gnome2_src_prepare
 	echo > py-compile
 }
