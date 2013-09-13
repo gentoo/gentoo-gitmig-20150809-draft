@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-neutronclient/python-neutronclient-2.2.6.ebuild,v 1.1 2013/08/20 18:37:30 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-neutronclient/python-neutronclient-2.2.6-r1.ebuild,v 1.1 2013/09/13 20:36:10 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -24,3 +24,11 @@ RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
 		dev-python/httplib2[${PYTHON_USEDEP}]
 		>=dev-python/iso8601-0.1.4[${PYTHON_USEDEP}]
 		>=dev-python/simplejson-2.0.9[${PYTHON_USEDEP}]"
+
+python_install() {
+	distutils-r1_python_install
+	cd "${D%/}$(python_get_sitedir)" || die
+	local egg=( python_neutronclient*.egg-info )
+	#[[ -f ${egg[0]} ]] || die "python_quantumclient*.egg-info not found"
+	ln -s "${egg[0]}" "${egg[0]/neutron/quantum}" || die
+}
