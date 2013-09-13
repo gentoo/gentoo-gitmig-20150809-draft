@@ -1,21 +1,20 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/horizon-2013.1.9999.ebuild,v 1.6 2013/09/13 20:49:41 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/horizon-2013.1.3-r2.ebuild,v 1.1 2013/09/13 20:49:41 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 git-2
+inherit distutils-r1
 
 DESCRIPTION="Horizon is a Django-based project aimed at providing a complete
 OpenStack Dashboard."
 HOMEPAGE="https://launchpad.net/horizon"
-EGIT_REPO_URI="https://github.com/openstack/horizon.git"
-EGIT_BRANCH="stable/grizzly"
+SRC_URI="http://launchpad.net/${PN}/grizzly/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=">=dev-python/django-1.4[${PYTHON_USEDEP}]
