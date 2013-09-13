@@ -1,4 +1,10 @@
 
+*libnatpmp-20130911 (13 Sep 2013)
+
+  13 Sep 2013; Anthony G. Basile <blueness@gentoo.org>
+  +libnatpmp-20130911.ebuild:
+  Version bump
+
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> libnatpmp-20120821-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
 
