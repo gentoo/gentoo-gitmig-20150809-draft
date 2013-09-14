@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.79 2013/09/14 17:26:31 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.80 2013/09/14 17:28:42 aidecoe Exp $
+
+  14 Sep 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  -files/0.15-0001-lib-Makefile.local-depend-on-libs-we-a.patch,
+  -files/0.15.1-0001-lib-Makefile.local-depend-on-libs-we-a.patch:
+  Removed old, unused patches.
 
   14 Sep 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.12.ebuild,
   notmuch-0.13.1.ebuild, notmuch-0.14-r1.ebuild, notmuch-0.15.2.ebuild,
