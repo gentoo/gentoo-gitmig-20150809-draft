@@ -1,0 +1,30 @@
+diff -Nur zeromq-3.2.3/tests/test_disconnect_inproc.cpp zeromq-3.2.3a/tests/test_disconnect_inproc.cpp
+--- zeromq-3.2.3/tests/test_disconnect_inproc.cpp	2013-09-12 16:45:38.204739478 +0200
++++ zeromq-3.2.3a/tests/test_disconnect_inproc.cpp	2013-09-12 17:13:06.487156998 +0200
+@@ -40,13 +40,13 @@
+                 zmq_msg_t msg;
+                 zmq_msg_init (&msg);
+                 zmq_msg_recv (&msg, pubSocket, 0);
+-                int msgSize = zmq_msg_size(&msg);
+                 char* buffer = (char*)zmq_msg_data(&msg);
+ 
+                 if (buffer[0] == 0) {
+                     assert(isSubscribed);
+                     isSubscribed = false;
+-                } else {
++                } 
++                else {
+                     assert(!isSubscribed);
+                     isSubscribed = true;
+                 }
+@@ -64,10 +64,6 @@
+                 zmq_msg_t msg;
+                 zmq_msg_init (&msg);
+                 zmq_msg_recv (&msg, subSocket, 0);
+-                int msgSize = zmq_msg_size(&msg);
+-                char* buffer = (char*)zmq_msg_data(&msg);
+-        
+-        
+                 zmq_getsockopt (subSocket, ZMQ_RCVMORE, &more, &more_size);
+                 zmq_msg_close (&msg);
+         
