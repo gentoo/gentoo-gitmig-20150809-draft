@@ -1,21 +1,21 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openswan/networkmanager-openswan-0.9.6.0.ebuild,v 1.4 2013/09/16 01:16:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openswan/networkmanager-openswan-0.9.8.4.ebuild,v 1.1 2013/09/16 01:16:33 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 GNOME_ORG_MODULE="NetworkManager-${PN##*-}"
 
-inherit gnome.org
+inherit gnome.org gnome2-utils
 
 DESCRIPTION="NetworkManager Openswan plugin"
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="gtk"
 
 RDEPEND="
-	>=net-misc/networkmanager-${PV}
+	>=net-misc/networkmanager-0.9.8:=
 	>=dev-libs/dbus-glib-0.74
 	net-misc/openswan
 	gtk? (
@@ -28,18 +28,21 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	virtual/pkgconfig"
 
-src_configure() {
-	ECONF="--disable-more-warnings
-		--disable-static
-		--with-dist-version=Gentoo
-		--with-gtkver=3
-		$(use_with gtk gnome)"
+src_prepare() {
+	gnome2_disable_deprecation_warning
+	default
+}
 
-	econf ${ECONF}
+src_configure() {
+	econf \
+		--disable-more-warnings \
+		--disable-static \
+		--with-dist-version=Gentoo \
+		--with-gtkver=3 \
+		$(use_with gtk gnome)
 }
 
 src_install() {
 	default
-	# Remove useless .la files
-	find "${D}" -name '*.la' -exec rm -f {} +
+	prune_libtool_files --modules
 }
