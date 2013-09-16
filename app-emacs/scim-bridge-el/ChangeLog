@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/scim-bridge-el
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/scim-bridge-el/ChangeLog,v 1.1 2013/09/16 11:55:41 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/scim-bridge-el/ChangeLog,v 1.2 2013/09/16 11:57:20 heroxbd Exp $
+
+  16 Sep 2013; Benda Xu <heroxbd@gentoo.org> scim-bridge-el-0.8.2.ebuild:
+  RDEPEND to scim and emacs.
 
 *scim-bridge-el-0.8.2 (16 Sep 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/scim-bridge-el/scim-bridge-el-0.8.2.ebuild,v 1.1 2013/09/16 11:55:41 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/scim-bridge-el/scim-bridge-el-0.8.2.ebuild,v 1.2 2013/09/16 11:57:20 heroxbd Exp $
 
 EAPI=5
 inherit elisp versionator
@@ -15,7 +15,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-DEPEND="app-i18n/scim"
+DEPEND=""
+RDEPEND="app-i18n/scim
+	app-editors/emacs"
 
 src_prepare () {
 	epatch "${FILESDIR}"/${PN}-0.8.2-im-agent.patch
