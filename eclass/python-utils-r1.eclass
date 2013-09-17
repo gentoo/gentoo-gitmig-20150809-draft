@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.35 2013/09/16 17:58:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.36 2013/09/17 13:24:39 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -734,22 +734,21 @@ python_newscript() {
 	[[ ${#} -eq 2 ]] || die "Usage: ${FUNCNAME} <path> <new-name>"
 
 	local d=${python_scriptroot:-${DESTTREE}/bin}
-	local INSDESTTREE INSOPTIONS
-
-	insinto "${d}"
-	insopts -m755
 
 	local f=${1}
 	local barefn=${2}
 
 	local newfn=${barefn}-${EPYTHON}
 
-	debug-print "${FUNCNAME}: ${f} -> ${d}/${newfn}"
-	newins "${f}" "${newfn}" || die
-	_python_rewrite_shebang "${ED}/${d}/${newfn}"
+	(
+		exeinto "${d}"
+		newexe "${f}" "${newfn}" || die
+	)
+	_python_rewrite_shebang "${ED%/}/${d}/${newfn}"
 
 	# install the wrapper
-	_python_ln_rel "${ED}"/usr/bin/python-exec "${ED}/${d}/${barefn}" || die
+	_python_ln_rel "${ED%/}"/usr/bin/python-exec \
+		"${ED%/}/${d}/${barefn}" || die
 }
 
 # @ECLASS-VARIABLE: python_moduleroot
