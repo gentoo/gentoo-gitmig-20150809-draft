@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15119 2013/09/17 16:04:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15120 2013/09/17 16:10:35 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,6 +34,7 @@
 # Michał Górny <mgorny@gentoo.org> (17 Sep 2013)
 # Mask for testing. It enables some new eclass code, some new distutils
 # magic and certainly will trigger some random failures.
+# http://thread.gmane.org/gmane.linux.gentoo.devel/88175
 >=dev-python/python-exec-2
 
 # Tim Harder <radhermit@gentoo.org> (16 Sep 2013)
