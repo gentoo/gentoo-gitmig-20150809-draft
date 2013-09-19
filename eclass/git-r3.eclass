@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.5 2013/09/13 15:08:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.6 2013/09/19 09:37:14 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -208,8 +208,10 @@ _git-r3_set_gitdir() {
 		mkdir "${GIT_DIR}" || die
 		git init --bare || die
 
-		# avoid auto-unshallow :)
-		touch "${GIT_DIR}"/shallow || die
+		if [[ ! ${EGIT_NONSHALLOW} ]]; then
+			# avoid auto-unshallow :)
+			touch "${GIT_DIR}"/shallow || die
+		fi
 	fi
 }
 
