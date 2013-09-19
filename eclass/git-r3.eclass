@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.6 2013/09/19 09:37:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.7 2013/09/19 09:42:32 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -170,6 +170,9 @@ _git-r3_set_gitdir() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	local repo_name=${1#*://*/}
+
+	# strip the trailing slash
+	repo_name=${repo_name%/}
 
 	# strip common prefixes to make paths more likely to match
 	# e.g. git://X/Y.git vs https://X/git/Y.git
