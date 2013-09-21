@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.102 2013/09/21 17:41:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.103 2013/09/21 17:49:56 floppym Exp $
 
 EAPI=5
 
@@ -195,7 +195,6 @@ grub_configure() {
 	fi
 
 	# Bug 485592
-	local BUILD_CC
 	tc-export BUILD_CC
 
 	autotools-utils_src_configure

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r1.ebuild,v 1.2 2013/09/21 17:41:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r1.ebuild,v 1.3 2013/09/21 17:49:56 floppym Exp $
 
 EAPI=5
 
@@ -195,7 +195,6 @@ grub_configure() {
 	fi
 
 	# Bug 485592
-	local BUILD_CC
 	tc-export BUILD_CC
 
 	autotools-utils_src_configure
