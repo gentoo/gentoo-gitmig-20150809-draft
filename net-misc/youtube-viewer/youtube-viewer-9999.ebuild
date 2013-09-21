@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-9999.ebuild,v 1.12 2013/09/21 12:35:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-9999.ebuild,v 1.13 2013/09/21 12:36:17 hasufell Exp $
 
 EAPI=5
 
@@ -29,7 +29,6 @@ RDEPEND="
 	virtual/perl-Text-Tabs+Wrap
 	gtk? (
 		>=dev-perl/gtk2-perl-1.244.0
-		!net-misc/gtk-youtube-viewer
 		virtual/freedesktop-icon-theme
 		x11-libs/gdk-pixbuf:2[X,jpeg]
 	)"
