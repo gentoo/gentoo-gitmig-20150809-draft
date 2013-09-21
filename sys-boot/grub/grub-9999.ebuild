@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.103 2013/09/21 17:49:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.104 2013/09/21 17:56:16 floppym Exp $
 
 EAPI=5
 
@@ -194,9 +194,6 @@ grub_configure() {
 		myeconfargs+=( --program-transform-name="s,grub,grub2," )
 	fi
 
-	# Bug 485592
-	tc-export BUILD_CC
-
 	autotools-utils_src_configure
 }
 
@@ -210,6 +207,7 @@ src_configure() {
 
 	tc-export CC NM OBJCOPY STRIP
 	export TARGET_CC=${TARGET_CC:-${CC}}
+	tc-export BUILD_CC # Bug 485592
 
 	# Portage will take care of cleaning up GRUB_PLATFORMS
 	MULTIBUILD_VARIANTS=( ${GRUB_PLATFORMS:-guessed} )
