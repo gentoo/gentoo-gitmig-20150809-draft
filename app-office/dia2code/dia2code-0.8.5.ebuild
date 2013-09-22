@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/dia2code-0.8.5.ebuild,v 1.7 2013/09/22 11:28:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/dia2code-0.8.5.ebuild,v 1.8 2013/09/22 11:30:33 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -24,6 +24,8 @@ RDEPEND="${DEPEND}
 src_prepare() {
 	# Respect AR, bug #462968
 	epatch "${FILESDIR}/${PN}-0.8.5-ar.patch"
+
+	sed -i -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.in || die
 
 	eautoreconf # Needed to prevent maintainer-mode to get activated
 	gnome2_src_prepare
