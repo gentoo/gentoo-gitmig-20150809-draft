@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.3.3.ebuild,v 1.5 2013/09/05 18:46:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.3.3-r1.ebuild,v 1.1 2013/09/23 12:04:30 jlec Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ DOCS="Pmw/README"
 # https://sourceforge.net/tracker/?func=detail&aid=3603487&group_id=10743&atid=110743
 RESTRICT="test"
 
-pythone_prepare_all() {
+python_prepare_all() {
 	local PATCHES=(
 		"${FILESDIR}"/${PN}-1.3.2-install-no-docs.patch
 		"${FILESDIR}"/1.3.2-python2.5.patch
