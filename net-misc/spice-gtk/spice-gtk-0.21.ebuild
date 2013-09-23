@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.21.ebuild,v 1.1 2013/09/19 16:21:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.21.ebuild,v 1.2 2013/09/23 01:16:13 cardoe Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -41,7 +41,7 @@ RDEPEND="${PYTHON_DEPS}
 	dev-libs/openssl
 	gtk3? ( x11-libs/gtk+:3[introspection?] )
 	x11-libs/gtk+:2[introspection?]
-	>=dev-libs/glib-2.26:2
+	>=dev-libs/glib-2.34:2
 	>=x11-libs/cairo-1.2
 	virtual/jpeg
 	sys-libs/zlib
