@@ -77,6 +77,7 @@ dev-libs/libRocket abi_x86_32
 dev-libs/libsigc++ abi_x86_32
 dev-libs/libtasn1 abi_x86_32
 dev-libs/libusb abi_x86_32
+dev-libs/libusbx abi_x86_32
 dev-libs/libwapcaplet abi_x86_32
 dev-libs/libxml2 abi_x86_32
 dev-libs/libxslt abi_x86_32
@@ -95,6 +96,7 @@ gnome-base/libglade abi_x86_32
 gnome-base/orbit abi_x86_32
 media-gfx/sane-backends abi_x86_32
 media-libs/a52dec abi_x86_32
+media-libs/allegro abi_x86_32
 media-libs/alsa-lib abi_x86_32
 media-libs/alsa-oss abi_x86_32
 media-libs/audiofile abi_x86_32
@@ -268,7 +270,9 @@ media-video/vcdimager abi_x86_32
 net-dialup/capi4k-utils abi_x86_32
 net-dns/libidn abi_x86_32
 net-libs/gnutls abi_x86_32
+net-libs/libdom abi_x86_32
 net-libs/libgssglue abi_x86_32
+net-libs/libhubbub abi_x86_32
 net-libs/libsoup abi_x86_32
 net-libs/libtirpc abi_x86_32
 net-libs/nacl abi_x86_32
