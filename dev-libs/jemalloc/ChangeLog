@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/jemalloc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.34 2013/09/24 22:51:43 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.35 2013/09/24 22:52:47 anarchy Exp $
+
+  24 Sep 2013; Jory A. Pratt <anarchy@gentoo.org>
+  +files/jemalloc-fix-ar-call.patch:
+  Add missing patch to fix ar from being called directly
 
 *jemalloc-3.4.0 (24 Sep 2013)
 
