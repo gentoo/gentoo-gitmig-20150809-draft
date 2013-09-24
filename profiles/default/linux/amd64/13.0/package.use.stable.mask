@@ -78,6 +78,7 @@ dev-libs/libsigc++ abi_x86_32
 dev-libs/libtasn1 abi_x86_32
 dev-libs/libusb abi_x86_32
 dev-libs/libusbx abi_x86_32
+dev-libs/libusb-compat abi_x86_32
 dev-libs/libwapcaplet abi_x86_32
 dev-libs/libxml2 abi_x86_32
 dev-libs/libxslt abi_x86_32
