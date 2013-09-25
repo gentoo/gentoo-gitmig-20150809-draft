@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.13-r2.ebuild,v 1.1 2013/09/25 10:16:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.13-r2.ebuild,v 1.2 2013/09/25 10:21:20 jlec Exp $
 
 EAPI=5
 
@@ -68,6 +68,7 @@ src_prepare() {
 	sed \
 		-e "s:^AC_PROG_RANLIB:AC_CHECK_TOOL(AR, ar, false)\nAC_PROG_RANLIB:g" \
 		-i configure.in || die
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.in || die
 	eautoreconf
 }
 
