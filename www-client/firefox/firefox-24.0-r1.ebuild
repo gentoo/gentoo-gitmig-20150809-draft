@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-24.0-r1.ebuild,v 1.4 2013/09/26 14:50:18 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-24.0-r1.ebuild,v 1.5 2013/09/26 15:00:20 axs Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -147,7 +147,7 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
-	# drop -Wl,--build-id from LDFLAGS, bug #465446
+	# drop -Wl,--build-id from LDFLAGS, bug #465466
 	epatch "${FILESDIR}"/moz${PV%%\.*}-drop-Wl-build-id.patch
 
 	# Allow user to apply any additional patches without modifing ebuild
