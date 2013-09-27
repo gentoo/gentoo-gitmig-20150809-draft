@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.83 2013/09/26 11:58:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.84 2013/09/27 19:19:57 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -547,9 +547,10 @@ distutils-r1_run_phase() {
 	fi
 	local -x PYTHONPATH="${BUILD_DIR}/lib:${PYTHONPATH}"
 
-	local TMPDIR=${T}/${EPYTHON}
+	local -x TMPDIR=${T}/${EPYTHON}
+	local -x HOME=${TMPDIR}/home
 
-	mkdir -p "${TMPDIR}" || die
+	mkdir -p "${TMPDIR}" "${HOME}" || die
 
 	"${@}"
 
