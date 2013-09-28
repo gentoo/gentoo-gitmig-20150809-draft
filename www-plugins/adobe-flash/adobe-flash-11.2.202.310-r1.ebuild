@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.310-r1.ebuild,v 1.3 2013/09/28 15:07:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.310-r1.ebuild,v 1.4 2013/09/28 15:09:30 jer Exp $
 
 EAPI=5
 inherit nsplugins toolchain-funcs versionator multilib-minimal
@@ -111,7 +111,7 @@ RDEPEND="
 "
 
 # Ignore QA warnings in these closed-source binaries, since we can't fix them:
-QA_PREBUILT="usr/"
+QA_PREBUILT="usr/*"
 
 any_cpu_missing_flag() {
 	local value=${1}
