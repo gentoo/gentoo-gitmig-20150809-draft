@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pillow
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.6 2013/09/28 19:19:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.7 2013/09/28 19:22:44 floppym Exp $
+
+  28 Sep 2013; Mike Gilbert <floppym@gentoo.org> pillow-2.1.0.ebuild:
+  Drop obsolete sed command.
 
 *pillow-2.1.0 (28 Sep 2013)
 

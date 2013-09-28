@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/pillow-2.1.0.ebuild,v 1.1 2013/09/28 19:19:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/pillow-2.1.0.ebuild,v 1.2 2013/09/28 19:22:44 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -45,10 +45,6 @@ python_prepare_all() {
 		"${FILESDIR}/imaging-1.1.7-no-xv.patch"
 	)
 	epatch "${patches[@]}"
-
-	# Add shebangs.
-	# https://github.com/python-imaging/Pillow/pull/197
-	sed -e "1i#!/usr/bin/env python" -i Scripts/*.py || die
 
 	# Disable all the stuff we don't want.
 	local f
