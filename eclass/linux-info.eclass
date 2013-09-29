@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.100 2013/02/10 07:53:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.101 2013/09/29 02:36:17 vapier Exp $
 
 # @ECLASS: linux-info.eclass
 # @MAINTAINER:
@@ -429,7 +429,7 @@ get_version_warning_done=
 # KBUILD_OUTPUT (in a decreasing priority list, we look for the env var, makefile var or the
 # symlink /lib/modules/${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${KV_EXTRA}/build).
 get_version() {
-	local kbuild_output mkfunc tmplocal
+	local mkfunc tmplocal
 
 	# no need to execute this twice assuming KV_FULL is populated.
 	# we can force by unsetting KV_FULL
@@ -497,8 +497,9 @@ get_version() {
 	mkfunc="$(get_makefile_extract_function "${KERNEL_MAKEFILE}")"
 
 	# And if we didn't pass it, we can take a nosey in the Makefile
-	kbuild_output="$(${mkfunc} KBUILD_OUTPUT ${KERNEL_MAKEFILE})"
-	OUTPUT_DIR="${OUTPUT_DIR:-${kbuild_output}}"
+	if [[ -z ${OUTPUT_DIR} ]]; then
+		OUTPUT_DIR=$(${mkfunc} KBUILD_OUTPUT "${KERNEL_MAKEFILE}")
+	fi
 
 	# And contrary to existing functions I feel we shouldn't trust the
 	# directory name to find version information as this seems insane.
