@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.4-r1.ebuild,v 1.2 2013/09/05 18:29:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.4-r1.ebuild,v 1.3 2013/09/29 10:33:32 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -175,6 +175,11 @@ multilib_src_configure() {
 
 	local myconf
 
+	case "${CHOST}" in
+		*-mingw*)	myconf="${myconf} --with-threads=win32" ;;
+		*)		myconf="${myconf} --with-threads=posix" ;;
+	esac
+
 	# Building with --disable-debug highly unrecommended.  It will build glib in
 	# an unusable form as it disables some commonly used API.  Please do not
 	# convert this to the use_enable form, as it results in a broken build.
@@ -202,7 +207,6 @@ multilib_src_configure() {
 		--disable-compile-warnings \
 		--enable-man \
 		--with-pcre=internal \
-		--with-threads=posix \
 		--with-xml-catalog="${EPREFIX}/etc/xml/catalog"
 }
 
