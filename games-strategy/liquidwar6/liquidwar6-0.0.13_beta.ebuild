@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/liquidwar6-0.0.13_beta.ebuild,v 1.1 2013/09/30 12:13:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/liquidwar6-0.0.13_beta.ebuild,v 1.2 2013/09/30 12:17:37 hasufell Exp $
 
 EAPI=5
 
@@ -96,5 +96,6 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install
 	use maps && emake -C "${S_MAPS}" DESTDIR="${D}" install
+	prune_libtool_files --all
 	prepgamesdirs
 }
