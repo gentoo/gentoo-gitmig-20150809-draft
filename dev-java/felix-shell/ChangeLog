@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/felix-shell
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/felix-shell/ChangeLog,v 1.1 2013/10/02 22:23:10 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/felix-shell/ChangeLog,v 1.2 2013/10/02 22:24:19 tomwij Exp $
+
+  02 Oct 2013; Tom Wijsman <TomWij@gentoo.org> felix-shell-1.4.3.ebuild:
+  Fixed trailing whitespace; maybe I need to make repoman bail out on warnings,
+  missed it twice today.
 
 *felix-shell-1.4.3 (02 Oct 2013)
 
