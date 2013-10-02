@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ognl-3.0.8.ebuild,v 1.1 2013/10/02 18:54:10 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ognl-3.0.8.ebuild,v 1.2 2013/10/02 18:54:44 tomwij Exp $
 
 EAPI="5"
 
@@ -42,7 +42,7 @@ EANT_DOC_TARGET="javadocs"
 
 src_install() {
 	java-pkg_newjar build/ognl-2.7.2.jar ${PN}.jar
-	
+
 	use doc && java-pkg_dohtml -r dist/docs/api
 	use source && java-pkg_dosrc src/java/*
 }
