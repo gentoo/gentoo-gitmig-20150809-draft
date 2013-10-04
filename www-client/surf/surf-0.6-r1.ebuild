@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.6-r1.ebuild,v 1.3 2013/10/04 14:21:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.6-r1.ebuild,v 1.4 2013/10/04 14:35:29 jer Exp $
 
 EAPI=5
 inherit eutils savedconfig toolchain-funcs
@@ -58,6 +58,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "Please correct the permissions of your \$HOME/.surf/ directory"
-	ewarn "and its contents to no longer be world readable (see bug #404983)"
+	if [[ ${REPLACING_VERSIONS} ]] && [[ ${REPLACING_VERSIONS} < 0.4.1-r1 ]]; then
+		ewarn "Please correct the permissions of your \$HOME/.surf/ directory"
+		ewarn "and its contents to no longer be world readable (see bug #404983)"
+	fi
 }
