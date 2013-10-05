@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.8.ebuild,v 1.4 2013/10/05 03:09:44 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.8.ebuild,v 1.5 2013/10/05 03:12:50 zerochaos Exp $
 
 EAPI="5"
 
@@ -217,8 +217,6 @@ pkg_postinst() {
 				ewarn "Please be aware that this might impose a security risk,"
 				ewarn "depending on the code quality of fping."
 				ewarn
-				ebeep 3
-				epause 5
 				;;
 		esac
 	fi

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.136 2013/10/05 03:09:44 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.137 2013/10/05 03:12:50 zerochaos Exp $
+
+  05 Oct 2013; Rick Farina <zerochaos@gentoo.org> zabbix-2.0.8.ebuild,
+  zabbix-2.0.9_rc1-r2.ebuild, zabbix-2.0.9_rc1-r3.ebuild:
+  silence QA warning by removing epause and ebeep (not defined in EAPI5)
 
   05 Oct 2013; Rick Farina <zerochaos@gentoo.org> zabbix-2.0.8.ebuild,
   zabbix-2.0.9_rc1-r2.ebuild, zabbix-2.0.9_rc1-r3.ebuild:
