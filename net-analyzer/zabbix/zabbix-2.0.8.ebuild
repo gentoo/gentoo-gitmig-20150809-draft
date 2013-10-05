@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.8.ebuild,v 1.3 2013/09/22 06:49:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.8.ebuild,v 1.4 2013/10/05 03:09:44 zerochaos Exp $
 
 EAPI="5"
 
@@ -287,6 +287,8 @@ src_install() {
 		doins -r \
 			database \
 			upgrades
+		#remove unneeded files left over from wholesale copy (bug #433708)
+		rm "${ED}"/usr/share/zabbix/{database,upgrades}/Makefile{,.in,.am}
 		fowners zabbix:zabbix \
 			/etc/zabbix/zabbix_server.conf \
 			/etc/zabbix/zabbix_trapper.conf
