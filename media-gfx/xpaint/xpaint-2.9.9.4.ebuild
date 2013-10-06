@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.9.9.4.ebuild,v 1.1 2013/10/06 19:33:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.9.9.4.ebuild,v 1.2 2013/10/06 19:43:05 hasufell Exp $
 
 EAPI=5
 
 inherit autotools eutils
 
-DESCRIPTION="XPaint image editor with tiff, jpeg and png support"
+DESCRIPTION="Image editor with tiff, jpeg and png support"
 HOMEPAGE="http://sf-xpaint.sourceforge.net/"
 SRC_URI="mirror://sourceforge/sf-xpaint/${P}.tar.bz2"
 
