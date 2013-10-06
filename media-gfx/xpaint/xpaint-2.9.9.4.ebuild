@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.9.9.4.ebuild,v 1.2 2013/10/06 19:43:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.9.9.4.ebuild,v 1.3 2013/10/06 19:51:16 hasufell Exp $
 
 EAPI=5
 
@@ -67,7 +67,7 @@ src_install() {
 
 pkg_postinst() {
 	elog "optional dependencies:"
-	elog "  app-text/gv (external viewer for PostScript outpu)"
+	elog "  app-text/gv (external viewer for PostScript output)"
 	elog "  media-gfx/imagemagick (external viewer for pixel graphics)"
 	elog "  net-print/cups (printing)"
 }
