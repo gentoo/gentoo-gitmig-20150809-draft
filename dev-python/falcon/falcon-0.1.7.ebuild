@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/falcon/falcon-0.1.7.ebuild,v 1.1 2013/10/06 01:08:03 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/falcon/falcon-0.1.7.ebuild,v 1.2 2013/10/06 01:15:46 rafaelmartins Exp $
 
 EAPI=5
 
@@ -21,6 +21,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+cython test"
 
 RDEPEND="dev-python/six[${PYTHON_USEDEP}]
+	dev-python/mimeparse[${PYTHON_USEDEP}]
 	cython? (
 		dev-python/cython[$(python_gen_usedep python{2_7,3_3})] )"
 
