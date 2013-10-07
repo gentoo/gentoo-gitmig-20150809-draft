@@ -1,0 +1,11 @@
+--- Makefile.in
++++ Makefile.in
+@@ -219,7 +219,7 @@
+ 
+ thin_metadata_size: thin-provisioning/thin_metadata_size.o
+ 	@echo "    [LD]  $@"
+-	$(V) $(CC) $(CFLAGS) -o $@ $+ -lm
++	$(V) $(CC) $(CFLAGS) $(LDFLAGS) -o $@ $+ -lm
+ 
+ #----------------------------------------------------------------
+ # Cache tools
