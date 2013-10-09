@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdcraw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.184 2013/10/09 23:04:46 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.185 2013/10/09 23:16:48 creffett Exp $
+
+  09 Oct 2013; Chris Reffett <creffett@gentoo.org>
+  files/libkdcraw-4.10.90-extlibraw.patch:
+  Version bump KDE SC 4.11.2
 
 *libkdcraw-4.11.2 (08 Oct 2013)
 
