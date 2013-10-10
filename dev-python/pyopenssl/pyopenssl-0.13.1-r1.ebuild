@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.13.1-r1.ebuild,v 1.1 2013/10/10 11:37:06 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.13.1-r1.ebuild,v 1.2 2013/10/10 11:41:40 djc Exp $
 
 EAPI=5
 
@@ -60,6 +60,7 @@ python_test() {
 	for t in test_*.py; do
 		"${PYTHON}" "${t}" || die "Test ${t} fails with ${EPYTHON}"
 	done
+	# https://bugs.launchpad.net/pyopenssl/+bug/1237953
 	rm -rf tmp* *.key *.pem
 }
 
