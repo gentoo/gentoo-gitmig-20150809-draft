@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.8.ebuild,v 1.1 2013/10/10 19:11:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.8.ebuild,v 1.2 2013/10/10 19:16:48 pacho Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
@@ -14,7 +14,7 @@ HOMEPAGE="http://projects.gnome.org/NetworkManager/"
 
 LICENSE="GPL-2+"
 SLOT="0" # add subslot if libnm-util.so.2 or libnm-glib.so.4 bumps soname version
-IUSE="avahi bluetooth connection-sharing consolekit dhclient +dhcpcd gnutls +introspection kernel_linux +nss modemmanager +ppp resolvconf systemd test vala +wext" # wimax
+IUSE="avahi bluetooth connection-sharing consolekit dhclient +dhcpcd gnutls +introspection kernel_linux +nss modemmanager +ppp resolvconf systemd test vala +wext +wifi" # wimax
 
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
@@ -34,7 +34,6 @@ COMMON_DEPEND="
 	>=dev-libs/libnl-3.2.7:3=
 	>=sys-auth/polkit-0.106
 	>=net-libs/libsoup-2.26:2.4=
-	>=net-wireless/wpa_supplicant-0.7.3-r3[dbus]
 	>=virtual/udev-165[gudev]
 	bluetooth? ( >=net-wireless/bluez-4.82 )
 	avahi? ( net-dns/avahi:=[autoipd] )
@@ -56,6 +55,7 @@ COMMON_DEPEND="
 "
 RDEPEND="${COMMON_DEPEND}
 	consolekit? ( sys-auth/consolekit )
+	wifi? ( >=net-wireless/wpa_supplicant-0.7.3-r3[dbus] )
 "
 DEPEND="${COMMON_DEPEND}
 	dev-util/gtk-doc-am
