@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.138 2013/10/11 05:31:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.139 2013/10/11 05:42:07 aballier Exp $
 
 EAPI="5"
 
@@ -43,8 +43,8 @@ IUSE="
 	aac aacplus alsa amr amrenc bindist bluray +bzip2 cdio celt
 	cpudetection debug doc +encode examples faac fdk flite fontconfig frei0r
 	gme	gnutls gsm +hardcoded-tables +iconv iec61883 ieee1394 jack jpeg2k
-	libass libcaca libsoxr libv4l modplug mp3 network openal openssl opus oss
-	pic pulseaudio quvi rtmp schroedinger sdl speex static-libs test theora
+	ladspa libass libcaca libsoxr libv4l modplug mp3 network openal openssl opus
+	oss pic pulseaudio quvi rtmp schroedinger sdl speex static-libs test theora
 	threads truetype twolame v4l vaapi vdpau vorbis vpx wavpack X x264 xvid
 	+zlib
 	"
@@ -125,6 +125,7 @@ DEPEND="${RDEPEND}
 	fontconfig? ( virtual/pkgconfig )
 	gnutls? ( virtual/pkgconfig )
 	ieee1394? ( virtual/pkgconfig )
+	ladspa? ( media-libs/ladspa-sdk )
 	libv4l? ( virtual/pkgconfig )
 	mmx? ( >=dev-lang/yasm-1.2 )
 	rtmp? ( virtual/pkgconfig )
@@ -197,7 +198,7 @@ src_configure() {
 	done
 
 	# libavfilter options
-	ffuse="${ffuse} flite:libflite frei0r fontconfig libass truetype:libfreetype"
+	ffuse="${ffuse} flite:libflite frei0r fontconfig ladspa libass truetype:libfreetype"
 
 	# libswresample options
 	ffuse="${ffuse} libsoxr"
