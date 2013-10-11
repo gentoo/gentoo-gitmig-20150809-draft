@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-1.2.ebuild,v 1.1 2013/10/07 14:55:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-1.2.ebuild,v 1.2 2013/10/11 07:32:03 ssuominen Exp $
 
 EAPI=5
-inherit fdo-mime
+inherit eutils fdo-mime
 
 DESCRIPTION="The Shared MIME-info Database specification"
 HOMEPAGE="http://freedesktop.org/wiki/Software/shared-mime-info"
@@ -22,6 +22,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 DOCS=( ChangeLog HACKING NEWS README )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-g_type_init.patch
+}
 
 src_configure() {
 	econf \
