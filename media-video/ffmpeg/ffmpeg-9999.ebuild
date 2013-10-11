@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.139 2013/10/11 05:42:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.140 2013/10/11 05:50:08 aballier Exp $
 
 EAPI="5"
 
@@ -46,7 +46,7 @@ IUSE="
 	ladspa libass libcaca libsoxr libv4l modplug mp3 network openal openssl opus
 	oss pic pulseaudio quvi rtmp schroedinger sdl speex static-libs test theora
 	threads truetype twolame v4l vaapi vdpau vorbis vpx wavpack X x264 xvid
-	+zlib
+	+zlib zvbi
 	"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -115,6 +115,7 @@ RDEPEND="
 	vpx? ( >=media-libs/libvpx-0.9.6 )
 	X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXfixes )
 	zlib? ( sys-libs/zlib )
+	zvbi? ( media-libs/zvbi )
 	!media-video/qt-faststart
 	!media-libs/libpostproc
 "
@@ -209,7 +210,7 @@ src_configure() {
 	# Decoders
 	ffuse="${ffuse} amr:libopencore-amrwb amr:libopencore-amrnb fdk:libfdk-aac jpeg2k:libopenjpeg"
 	use amr && myconf="${myconf} --enable-version3"
-	for i in bluray celt gme gsm modplug opus quvi rtmp schroedinger speex vorbis vpx; do
+	for i in bluray celt gme gsm modplug opus quvi rtmp schroedinger speex vorbis vpx zvbi; do
 		ffuse="${ffuse} ${i}:lib${i}"
 	done
 	use fdk && myconf="${myconf} --enable-nonfree"
