@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-1.2.ebuild,v 1.2 2013/10/11 07:32:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-1.2.ebuild,v 1.3 2013/10/11 07:53:24 ssuominen Exp $
 
 EAPI=5
 inherit eutils fdo-mime
@@ -28,6 +28,8 @@ src_prepare() {
 }
 
 src_configure() {
+	export ac_cv_func_fdatasync=no #487504
+
 	econf \
 		$(use_enable test default-make-check) \
 		--disable-update-mimedb
