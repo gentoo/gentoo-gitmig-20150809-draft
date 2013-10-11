@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.136 2013/08/12 00:09:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.137 2013/10/11 05:27:49 aballier Exp $
 
 EAPI="5"
 
@@ -126,7 +126,7 @@ DEPEND="${RDEPEND}
 	gnutls? ( virtual/pkgconfig )
 	ieee1394? ( virtual/pkgconfig )
 	libv4l? ( virtual/pkgconfig )
-	mmx? ( dev-lang/yasm )
+	mmx? ( >=dev-lang/yasm-1.2 )
 	rtmp? ( virtual/pkgconfig )
 	schroedinger? ( virtual/pkgconfig )
 	test? ( net-misc/wget )
