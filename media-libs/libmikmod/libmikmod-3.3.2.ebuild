@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.3.2.ebuild,v 1.1 2013/10/11 06:14:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.3.2.ebuild,v 1.2 2013/10/11 06:15:25 ssuominen Exp $
 
 EAPI=5
-inherit autotools eutils multilib-minimal
+inherit eutils multilib-minimal
 
 DESCRIPTION="A library to play a wide range of module formats"
 HOMEPAGE="http://mikmod.shlomifish.org/"
