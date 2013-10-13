@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r1.ebuild,v 1.13 2013/10/04 15:43:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r1.ebuild,v 1.14 2013/10/13 07:34:11 mgorny Exp $
 
 EAPI=5
 
@@ -165,7 +165,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.2-nodoctargz.patch
 	epatch "${FILESDIR}"/${P}-R600_debug.patch
 	epatch "${FILESDIR}"/${PN}-3.3-gentoo-install.patch
-	use clang && epatch "${FILESDIR}"/clang-3.3-gentoo-install.patch
+	if use clang; then
+		epatch "${FILESDIR}"/clang-3.3-gentoo-install.patch
+		# backport support for g++-X.Y header location
+		epatch "${FILESDIR}"/clang-3.3-gcc-header-path.patch
+	fi
 
 	local sub_files=(
 		Makefile.config.in
