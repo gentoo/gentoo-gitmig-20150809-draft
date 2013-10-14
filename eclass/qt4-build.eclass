@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.151 2013/10/14 17:24:36 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.152 2013/10/14 17:29:55 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -165,7 +165,7 @@ qt4-build_src_prepare() {
 	fi
 
 	# avoid X11 dependency in non-gui packages
-	local nolibx11_pkgs="qtcore qtdbus qtscript qtsql qttest qtxmlpatterns"
+	local nolibx11_pkgs="qtbearer qtcore qtdbus qtscript qtsql qttest qtxmlpatterns"
 	has ${PN} ${nolibx11_pkgs} && qt_nolibx11
 
 	if use aqua; then
