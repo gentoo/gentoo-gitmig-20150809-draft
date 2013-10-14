@@ -4,6 +4,7 @@
 <herd>gnome-office</herd>
 <use>
 	<flag name='collab'>Enable collaborative editing plugin</flag>
+	<flag name='goffice'>Enable goffice plugin</flag>
 	<flag name='grammar'>Enable grammar checking via <pkg>dev-libs/link-grammar</pkg></flag>
 	<flag name="map">Enable world map support through <pkg>media-libs/libchamplain</pkg></flag>
 	<flag name='math'>Enable support for <pkg>x11-libs/gtkmathview</pkg></flag>

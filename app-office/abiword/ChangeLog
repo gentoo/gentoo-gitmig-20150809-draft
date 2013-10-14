@@ -1,6 +1,10 @@
 # ChangeLog for app-office/abiword
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.263 2013/10/14 20:57:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.264 2013/10/14 21:00:55 pacho Exp $
+
+  14 Oct 2013; Pacho Ramos <pacho@gentoo.org> abiword-3.0.0.ebuild,
+  metadata.xml:
+  Move from 'gnome' to 'goffice' (#416829 by Maxim Kammerer)
 
 *abiword-3.0.0 (14 Oct 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.0.ebuild,v 1.1 2013/10/14 20:57:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.0.ebuild,v 1.2 2013/10/14 21:00:55 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -15,7 +15,7 @@ SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/source/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="calendar collab cups eds gnome grammar +introspection latex map math ots openxml +plugins readline redland spell wordperfect wmf thesaurus"
+IUSE="calendar collab cups eds +goffice grammar +introspection latex map math ots openxml +plugins readline redland spell wordperfect wmf thesaurus"
 
 # You need 'plugins' enabled if want to enable the extra plugins
 REQUIRED_USE="!plugins? ( !collab !grammar !latex !math !openxml !ots !readline !thesaurus !wordperfect !wmf )"
@@ -35,7 +35,7 @@ RDEPEND="
 	>=x11-libs/gtk+-3.0.8:3[cups?]
 	calendar? ( >=dev-libs/libical-0.46 )
 	eds? ( gnome-extra/evolution-data-server )
-	gnome? ( >=x11-libs/goffice-0.10.0:0.10 )
+	goffice? ( >=x11-libs/goffice-0.10.0:0.10 )
 	introspection? ( >=dev-libs/gobject-introspection-1.0.0 )
 	map? ( >=media-libs/libchamplain-0.12 )
 	plugins? (
@@ -97,7 +97,7 @@ src_configure() {
 		# libtidy: gsf + tidy.h
 		# paint: windows only ?
 		use collab && plugins="${plugins} collab"
-		use gnome && plugins="${plugins} goffice"
+		use goffice && plugins="${plugins} goffice"
 		use latex && plugins="${plugins} latex"
 		use math && plugins="${plugins} mathview"
 		use openxml && plugins="${plugins} openxml"
@@ -122,7 +122,7 @@ src_configure() {
 		--with-gio \
 		--without-gnomevfs \
 		--without-gtk2 \
-		$(use_with gnome goffice) \
+		$(use_with goffice goffice) \
 		$(use_with calendar libical) \
 		$(use_enable cups print) \
 		$(use_enable collab collab-backend-xmpp) \
