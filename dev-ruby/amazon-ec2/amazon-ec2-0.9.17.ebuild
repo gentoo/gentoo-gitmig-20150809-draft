@@ -1,16 +1,16 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/amazon-ec2-0.9.17.ebuild,v 1.2 2011/08/07 00:14:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/amazon-ec2-0.9.17.ebuild,v 1.3 2013/10/15 19:14:31 graaff Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18 ruby19 jruby ree18"
+USE_RUBY="ruby18 ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_DOC="yard"
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="README.rdoc ChangeLog"
 
-RUBY_FAKEGEM_BINWRAP="ec2sh"
+RUBY_FAKEGEM_BINWRAP="awshell ec2sh"
 
 inherit ruby-fakegem
 
@@ -21,11 +21,6 @@ LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-
-# We only need yard for Ruby 1.8, as we use it for documentation
-# generation. It is however also loaded when we run tests.
-USE_RUBY=ruby18 \
-	ruby_add_bdepend "doc? ( dev-ruby/yard )"
 
 ruby_add_bdepend "
 	test? (
