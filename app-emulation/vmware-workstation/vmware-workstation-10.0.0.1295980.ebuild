@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-9.0.2.1031769-r1.ebuild,v 1.2 2013/10/19 11:38:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-10.0.0.1295980.ebuild,v 1.1 2013/10/19 11:38:38 dilfridge Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ SRC_URI="
 	"
 LICENSE="vmware GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS=""
 IUSE="cups doc ovftool server vix vmware-tools"
 RESTRICT="mirror strip"
 
@@ -83,7 +83,7 @@ RDEPEND="dev-cpp/cairomm
 	x11-libs/startup-notification
 	x11-themes/hicolor-icon-theme
 	!app-emulation/vmware-player"
-PDEPEND="~app-emulation/vmware-modules-271.${PV_MINOR}
+PDEPEND="~app-emulation/vmware-modules-279.${PV_MINOR}
 	vmware-tools? ( app-emulation/vmware-tools )"
 
 S=${WORKDIR}
@@ -115,7 +115,7 @@ src_unpack() {
 
 	if use vix; then
 		vmware-bundle_extract-bundle-component "${bundle}" vmware-vix-core vmware-vix
-		vmware-bundle_extract-bundle-component "${bundle}" vmware-vix-lib-Workstation900andvSphere510 vmware-vix
+		vmware-bundle_extract-bundle-component "${bundle}" vmware-vix-lib-Workstation1000andvSphere550 vmware-vix
 	fi
 	if use ovftool; then
 		vmware-bundle_extract-bundle-component "${bundle}" vmware-ovftool
@@ -282,8 +282,8 @@ src_install() {
 	fi
 
 	# create symlinks for the various tools
-	local tool ; for tool in thnuclnt vmware vmplayer{,-daemon} \
-			vmware-{acetool,enter-serial,gksu,fuseUI,modconfig{,-console},netcfg,tray,unity-helper} ; do
+	local tool ; for tool in thnuclnt vmware vmplayer{,-daemon} licenseTool vmamqpd \
+			vmware-{acetool,enter-serial,gksu,fuseUI,modconfig{,-console},netcfg,tray,unity-helper,zenity} ; do
 		dosym appLoader "${VM_INSTALL_DIR}"/lib/vmware/bin/"${tool}"
 	done
 	dosym "${VM_INSTALL_DIR}"/lib/vmware/bin/vmplayer "${VM_INSTALL_DIR}"/bin/vmplayer
@@ -458,7 +458,7 @@ src_install() {
 	fi
 
 	# install systemd unit files
-	systemd_dounit "${WORKDIR}/systemd-vmware-${SYSTEMD_UNITS_TAG}"/*.{service,target}
+	systemd_dounit "${WORKDIR}/systemd-vmware-${SYSTEMD_UNITS_TAG}/"*.{service,target}
 }
 
 pkg_config() {
