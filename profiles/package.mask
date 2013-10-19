@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15166 2013/10/19 06:05:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15167 2013/10/19 06:15:37 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -152,29 +152,6 @@ sys-firmware/amd-ucode
 # See bug #442122 for discussion
 # Masked for removal in 30 days
 www-plugins/mozplugger
-
-# Michael Sterrett <mr_bones_@gentoo.org> (19 Sep 2013)
-# Old nasty gtk+-1-using things.
-# masked for removal on 20131019
-app-dicts/babytrans
-app-dicts/babytrans-en2en
-app-dicts/babytrans-en2fre
-app-dicts/babytrans-en2ger
-app-dicts/babytrans-en2ita
-app-dicts/babytrans-en2pt
-app-dicts/babytrans-en2spa
-app-mobilephone/tsemgr
-dev-embedded/xgpasm
-net-dialup/gcdial
-net-p2p/gnapster
-net-p2p/lopster
-x11-plugins/mountapp
-x11-plugins/yawmppp
-
-# Michael Sterrett <mr_bones_@gentoo.org> (19 Sep 2013)
-# dead upstream and unused by anything in the tree
-# masked for removal on 20131019
-dev-db/edb
 
 # Tom Wijsman <TomWij@gentoo.org> (18 Sep 2013)
 # Temporarily masked due to QA issue during attempts to unbundle dependencies;
