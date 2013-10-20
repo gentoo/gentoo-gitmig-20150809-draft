@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.144 2013/10/20 08:47:25 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.145 2013/10/20 08:54:05 djc Exp $
+
+*pycrypto-2.6.1 (20 Oct 2013)
+
+  20 Oct 2013; Dirkjan Ochtman <djc@gentoo.org> +pycrypto-2.6.1.ebuild:
+  Version bump pycrypto for bug 488630.
 
   20 Oct 2013; Dirkjan Ochtman <djc@gentoo.org> -pycrypto-2.3.ebuild,
   -pycrypto-2.4.1.ebuild, -pycrypto-2.5.ebuild, -pycrypto-2.6-r1.ebuild,
