@@ -20,13 +20,13 @@
 -    ADD_DEFINITIONS(-DUSE_JASPER)
 -    INCLUDE_DIRECTORIES(${JASPER_INCLUDE_DIR})
 +IF(ENABLE_JASPER)
-+	FIND_PACKAGE(Jasper)
++    FIND_PACKAGE(Jasper)
 +
-+	# Flag to use libjasper with LibRaw RedCine codec
-+	IF(JASPER_FOUND)
-+		ADD_DEFINITIONS(-DUSE_JASPER)
-+		INCLUDE_DIRECTORIES(${JASPER_INCLUDE_DIR})
-+	ENDIF()
++    # Flag to use libjasper with LibRaw RedCine codec
++    IF(JASPER_FOUND)
++        ADD_DEFINITIONS(-DUSE_JASPER)
++        INCLUDE_DIRECTORIES(${JASPER_INCLUDE_DIR})
++    ENDIF()
  ENDIF()
  
  # For registration to libraw_config.h
