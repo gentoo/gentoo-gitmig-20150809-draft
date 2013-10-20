@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/barby/barby-0.5.0-r2.ebuild,v 1.1 2012/05/12 04:29:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/barby/barby-0.5.0-r2.ebuild,v 1.2 2013/10/20 06:46:58 graaff Exp $
 
 EAPI=4
 
-USE_RUBY="ruby18 ree18 jruby ruby19"
+USE_RUBY="ruby18 jruby ruby19"
 
 RUBY_FAKEGEM_TASK_TEST="test"
 
@@ -29,12 +29,12 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test datamatrix pdf-writer qrcode rmagick prawn png cairo"
 
-USE_RUBY="ruby18 ree18" \
+USE_RUBY="ruby18" \
 	ruby_add_rdepend "
 		datamatrix? ( dev-ruby/semacode )
 		pdf-writer? ( dev-ruby/pdf-writer )"
 
-USE_RUBY="ruby18 ruby19 ree18" \
+USE_RUBY="ruby18 ruby19" \
 	ruby_add_rdepend "
 		rmagick? ( dev-ruby/rmagick )
 		cairo? ( dev-ruby/rcairo )"
@@ -50,10 +50,10 @@ DEPEND+=" test? ( media-gfx/imagemagick[png] )"
 
 # make sure that the various options require a compatible Ruby implementation
 REQUIRE_USE+="
-	datamatrix? ( || ( ruby_targets_ruby18 ruby_targets_ree18 )
-	pdf-writer? ( || ( ruby_targets_ruby18 ruby_targets_ree18 )
-	rmagick?    ( || ( ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ree18 ) )
-	cairo?      ( || ( ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ree18 ) )
+	datamatrix? ( || ( ruby_targets_ruby18 )
+	pdf-writer? ( || ( ruby_targets_ruby18 )
+	rmagick?    ( || ( ruby_targets_ruby18 ruby_targets_ruby19 ) )
+	cairo?      ( || ( ruby_targets_ruby18 ruby_targets_ruby19 ) )
 "
 
 # prawn breaks tests for some reasons, needs to be investigated; code
