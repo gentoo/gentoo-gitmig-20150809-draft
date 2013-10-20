@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15169 2013/10/20 07:08:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15170 2013/10/20 07:10:38 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -32,7 +32,8 @@
 #--- END OF EXAMPLES ---
 
 # Hans de Graaff <graaff@gentoo.org> (20 Oct 2013)
-# Mask more ruby18-only packages.
+# Mask more ruby18-only packages for removal in 30 days.
+# All of these packages no longer have dependencies on them.
 dev-ruby/amstd
 dev-ruby/markaby
 dev-ruby/pdf-writer
