@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-fuse/go-fuse-9999.ebuild,v 1.1 2013/10/21 00:58:01 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-fuse/go-fuse-9999.ebuild,v 1.2 2013/10/21 01:06:58 zerochaos Exp $
 
 EAPI=5
 
@@ -48,5 +48,7 @@ done
 #insinto /usr/lib/go/src/pkg/${GO_PN}/
 #doins -r "${S}/pkg/linux_${ARCH}/${GO_PN}/."
 insinto /usr/lib/go/
-doins -r "${S}/."
+doins -r "${S}/pkg"
+insinto /usr/lib/go/src/pkg
+doins -r "${S}/src/."
 }
