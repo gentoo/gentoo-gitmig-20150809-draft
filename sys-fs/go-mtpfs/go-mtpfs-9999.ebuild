@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/go-mtpfs/go-mtpfs-9999.ebuild,v 1.1 2013/10/21 00:59:06 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/go-mtpfs/go-mtpfs-9999.ebuild,v 1.2 2013/10/21 01:01:11 zerochaos Exp $
 
 EAPI=5
 
@@ -17,6 +17,7 @@ IUSE=""
 
 COMMON_DEPEND="virtual/libusb"
 DEPEND="${COMMON_DEPEND}
+	dev-libs/go-fuse
 	dev-lang/go"
 RDEPEND="${COMMON_DEPEND}"
 
