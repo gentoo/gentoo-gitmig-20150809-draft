@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-2013.2.9999.ebuild,v 1.1 2013/10/22 18:02:54 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-2013.2.9999.ebuild,v 1.2 2013/10/22 18:05:46 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -10,7 +10,7 @@ inherit distutils-r1 eutils git-2 linux-info
 DESCRIPTION="A highly available, distributed, eventually consistent object/blob store"
 HOMEPAGE="https://launchpad.net/swift"
 EGIT_REPO_URI="https://github.com/openstack/swift.git"
-EGIT_BRANCH="stable/grizzly"
+EGIT_BRANCH="stable/havana"
 
 LICENSE="Apache-2.0"
 SLOT="0"
