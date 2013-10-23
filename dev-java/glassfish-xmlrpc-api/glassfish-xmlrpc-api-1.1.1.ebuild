@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-xmlrpc-api/glassfish-xmlrpc-api-1.1.1.ebuild,v 1.1 2013/10/23 17:15:06 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-xmlrpc-api/glassfish-xmlrpc-api-1.1.1.ebuild,v 1.2 2013/10/23 17:21:57 tomwij Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ inherit java-pkg-2 java-ant-2
 
 TOMEE_PV="1.5.2"
 
-DESCRIPTION="Project GlassFish Enterprise XML RPC API"
+DESCRIPTION="Project GlassFish XML RPC API"
 HOMEPAGE="https://glassfish.java.net/"
 SRC_URI="http://dev.gentoo.org/~tomwij/files/dist/${P}.tar.xz"
 
