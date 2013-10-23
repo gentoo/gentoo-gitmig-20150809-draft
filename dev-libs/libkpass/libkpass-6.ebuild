@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libkpass/libkpass-6.ebuild,v 1.1 2013/10/23 13:17:19 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libkpass/libkpass-6.ebuild,v 1.2 2013/10/23 13:22:47 joker Exp $
 
 EAPI=5
 
@@ -11,16 +11,18 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="static"
+IUSE="static-libs"
 
-DEPEND="dev-libs/openssl"
+DEPEND=">=dev-libs/openssl-1"
 RDEPEND="${DEPEND}"
 
+DOCS=( AUTHORS ChangeLog README TODO )
+
 src_configure() {
-	econf $(use_enable static)
+	econf $(use_enable static-libs static)
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc TODO README AUTHORS ChangeLog
+	use static-libs || rm -f "${ED}"/usr/lib*/${PN}.la
 }
