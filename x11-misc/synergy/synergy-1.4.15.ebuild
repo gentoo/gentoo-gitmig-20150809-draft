@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.15.ebuild,v 1.1 2013/10/26 15:36:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.15.ebuild,v 1.2 2013/10/26 15:59:06 jer Exp $
 
 EAPI=5
 
@@ -39,7 +39,10 @@ RDEPEND="${COMMON_DEPEND}
 	qt4? ( !x11-misc/qsynergy )
 "
 
-PATCHES=( "${FILESDIR}/${P}-cryptopp.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-1.4.12-pthread.patch"
+	"${FILESDIR}/${P}-cryptopp.patch"
+)
 
 S=${WORKDIR}/${P}-Source
 
