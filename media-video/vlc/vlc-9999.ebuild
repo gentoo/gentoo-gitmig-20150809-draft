@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.196 2013/10/26 08:08:27 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.197 2013/10/26 08:29:54 tomwij Exp $
 
 EAPI="5"
 
@@ -40,9 +40,9 @@ else
 	KEYWORDS=""
 fi
 
-IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
+IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
 	+avformat bidi bluray cdda cddb chromaprint dbus dc1394 debug dirac
-	directfb directx dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode fdk
+	directfb directx dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode faad fdk
 	fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
 	growl httpd ieee1394 ios-vout jack kate kde libass libcaca libnotify
 	libsamplerate libtiger linsys libtar lirc live lua +macosx
@@ -61,7 +61,6 @@ RDEPEND="
 		>=sys-libs/zlib-1.2.5.1-r2:0[minizip]
 		a52? ( >=media-libs/a52dec-0.7.4-r3:0 )
 		aalib? ( media-libs/aalib:0 )
-		aac? ( >=media-libs/faad2-2.6.1:0 )
 		alsa? ( >=media-libs/alsa-lib-1.0.23:0 )
 		avahi? ( >=net-dns/avahi-0.6:0[dbus] )
 		avcodec? ( virtual/ffmpeg:0 )
@@ -79,6 +78,7 @@ RDEPEND="
 		dvd? ( media-libs/libdvdread:0 >=media-libs/libdvdnav-0.1.9:0 )
 		egl? ( virtual/opengl:0 )
 		elibc_glibc? ( >=sys-libs/glibc-2.8:2.2 )
+		faad? ( >=media-libs/faad2-2.6.1:0 )
 		fdk? ( media-libs/fdk-aac:0 )
 		flac? ( media-libs/libogg:0 >=media-libs/flac-1.1.2:0 )
 		fluidsynth? ( >=media-sound/fluidsynth-1.1.0:0 )
@@ -278,7 +278,6 @@ src_configure() {
 		--enable-screen \
 		$(use_enable a52) \
 		$(use_enable aalib aa) \
-		$(use_enable aac faad) \
 		$(use_enable alsa) \
 		$(use_enable altivec) \
 		$(use_enable atmo) \
@@ -303,6 +302,7 @@ src_configure() {
 		$(use_enable dxva2) \
 		$(use_enable egl) \
 		$(use_enable encode sout) \
+		$(use_enable faad) \
 		$(use_enable fdk fdkaac) \
 		$(use_enable flac) \
 		$(use_enable fluidsynth) \
