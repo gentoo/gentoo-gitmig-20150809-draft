@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.28 2013/10/26 07:39:02 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.29 2013/10/26 08:08:27 tomwij Exp $
 
 EAPI="5"
 
@@ -119,7 +119,7 @@ RDEPEND="
 		projectm? ( media-libs/libprojectm:0 media-fonts/dejavu:0 )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.22:0 )
 		qt4? ( dev-qt/qtgui:4 dev-qt/qtcore:4 )
-		samba? ( >=net-fs/samba-3.4.6:0[smbclient] )
+		samba? ( || ( >=net-fs/samba-3.4.6:0[smbclient] >=net-fs/samba-4.0.0:0[client] ) )
 		schroedinger? ( >=media-libs/schroedinger-1.0.10:0 )
 		sdl? ( >=media-libs/libsdl-1.2.8:0
 			sdl-image? ( media-libs/sdl-image:0 sys-libs/zlib:0 ) )
@@ -240,6 +240,9 @@ src_prepare() {
 }
 
 src_configure() {
+	# Compatibility fix for Samba 4.
+	use samba && append-cppflags "-I/usr/include/samba-4.0"
+
 	# Needs libresid-builder from libsidplay:2 which is in another directory...
 	# FIXME!
 	append-ldflags "-L/usr/$(get_libdir)/sidplay/builders/"
