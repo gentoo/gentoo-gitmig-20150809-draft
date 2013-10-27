@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.20 2013/10/27 13:33:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.21 2013/10/27 13:44:35 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -634,6 +634,11 @@ git-r3_checkout() {
 	# keep this *after* submodules
 	export EGIT_DIR=${GIT_DIR}
 	export EGIT_VERSION=${new_commit_id}
+
+	# create a fake '.git' directory to satisfy 'git rev-parse HEAD'
+	GIT_DIR=${GIT_WORK_TREE}/.git
+	git init || die
+	echo "${EGIT_VERSION}" > "${GIT_WORK_TREE}"/.git/HEAD || die
 }
 
 # @FUNCTION: git-r3_peek_remote_ref
