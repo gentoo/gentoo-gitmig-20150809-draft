@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libosip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.57 2013/10/27 09:41:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.58 2013/10/27 09:54:18 pacho Exp $
+
+*libosip-3.6.0 (27 Oct 2013)
+
+  27 Oct 2013; Pacho Ramos <pacho@gentoo.org> +libosip-3.6.0.ebuild:
+  Needed by net-misc/siproxd
 
   27 Oct 2013; Pacho Ramos <pacho@gentoo.org> -libosip-3.5.0.ebuild,
   -libosip-3.6.0.ebuild, metadata.xml:
