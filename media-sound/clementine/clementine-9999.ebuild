@@ -1,25 +1,29 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.1.1.ebuild,v 1.12 2013/10/29 20:12:01 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-9999.ebuild,v 1.1 2013/10/29 20:12:01 maksbotan Exp $
 
 EAPI=5
+
+EGIT_REPO_URI="https://code.google.com/p/clementine-player/"
 
 LANGS=" af ar be bg bn br bs ca cs cy da de el en_CA en_GB eo es es_AR et eu fa fi fr ga gl he hi hr hu hy ia id is it ja ka kk ko lt lv mr ms nb nl oc pa pl pt pt_BR ro ru sk sl sr sr@latin sv te tr uk uz vi zh_CN zh_TW"
 
 inherit cmake-utils flag-o-matic gnome2-utils virtualx
+[[ ${PV} == *9999* ]] && inherit git-2
 
 DESCRIPTION="A modern music player and library organizer based on Amarok 1.4 and Qt4"
-HOMEPAGE="http://www.clementine-player.org/ http://code.google.com/p/clementine-player/"
+HOMEPAGE="http://www.clementine-player.org/ https://code.google.com/p/clementine-player/"
+[[ ${PV} == *9999* ]] || \
 SRC_URI="http://clementine-player.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="ayatana cdda +dbus debug googledrive ios ipod lastfm mms moodbar mtp projectm test +udev wiimote"
+[[ ${PV} == *9999* ]] || \
+KEYWORDS="~amd64 ~x86"
+IUSE="ayatana box cdda +dbus debug dropbox googledrive ipod lastfm mms moodbar mtp projectm skydrive system-sqlite test ubuntu-one +udev wiimote"
 IUSE+="${LANGS// / linguas_}"
 
 REQUIRED_USE="
-	ios? ( ipod )
 	udev? ( dbus )
 	wiimote? ( dbus )
 "
@@ -29,13 +33,14 @@ COMMON_DEPEND="
 	dbus? ( >=dev-qt/qtdbus-4.5:4 )
 	>=dev-qt/qtopengl-4.5:4
 	>=dev-qt/qtsql-4.5:4[sqlite]
-	dev-db/sqlite[fts3(+)]
-	>=media-libs/taglib-1.7[mp4]
+	system-sqlite? ( dev-db/sqlite[fts3(+)] )
+	>=media-libs/taglib-1.8[mp4]
 	>=dev-libs/glib-2.24.1-r1
 	dev-libs/libxml2
 	dev-libs/protobuf:=
 	dev-libs/qjson
 	media-libs/libechonest:=
+	>=media-libs/libmygpo-qt-1.0.7
 	>=media-libs/chromaprint-0.6
 	media-libs/gstreamer:0.10
 	media-libs/gst-plugins-base:0.10
@@ -43,15 +48,7 @@ COMMON_DEPEND="
 	virtual/opengl
 	ayatana? ( dev-libs/libindicate-qt )
 	cdda? ( dev-libs/libcdio )
-	googledrive? ( >=media-libs/taglib-1.8[mp4] )
-	ipod? (
-		>=media-libs/libgpod-0.8.0[ios?]
-		ios? (
-			app-pda/libplist:=
-			>=app-pda/libimobiledevice-1.0:=
-			app-pda/usbmuxd
-		)
-	)
+	ipod? ( >=media-libs/libgpod-0.8.0 )
 	lastfm? ( >=media-libs/liblastfm-1 )
 	mtp? ( >=media-libs/libmtp-1.0.0 )
 	moodbar? ( sci-libs/fftw:3.0 )
@@ -76,7 +73,11 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext
 	dev-qt/qttest:4
 	dev-cpp/gmock
+	box? ( dev-cpp/sparsehash )
+	dropbox? ( dev-cpp/sparsehash )
 	googledrive? ( dev-cpp/sparsehash )
+	skydrive? ( dev-cpp/sparsehash )
+	ubuntu-one? ( dev-cpp/sparsehash )
 	test? ( gnome-base/gsettings-desktop-schemas )
 "
 DOCS="Changelog"
@@ -103,7 +104,6 @@ src_configure() {
 		$(cmake-utils_use dbus ENABLE_DBUS)
 		$(cmake-utils_use udev ENABLE_DEVICEKIT)
 		$(cmake-utils_use ipod ENABLE_LIBGPOD)
-		$(cmake-utils_use ios ENABLE_IMOBILEDEVICE)
 		$(cmake-utils_use lastfm ENABLE_LIBLASTFM)
 		$(cmake-utils_use mtp ENABLE_LIBMTP)
 		$(cmake-utils_use moodbar ENABLE_MOODBAR)
@@ -111,12 +111,17 @@ src_configure() {
 		$(cmake-utils_use wiimote ENABLE_WIIMOTEDEV)
 		$(cmake-utils_use projectm ENABLE_VISUALISATIONS)
 		$(cmake-utils_use ayatana ENABLE_SOUNDMENU)
+		$(cmake-utils_use box ENABLE_BOX)
+		$(cmake-utils_use dropbox ENABLE_DROPBOX)
 		$(cmake-utils_use googledrive ENABLE_GOOGLE_DRIVE)
-		-DENABLE_SPOTIFY=OFF
+		$(cmake-utils_use skydrive ENABLE_SKYDRIVE)
+		$(cmake-utils_use ubuntu-one ENABLE_UBUNTU_ONE)
 		-DENABLE_SPOTIFY_BLOB=OFF
-		-DENABLE_SPOTIFY_DOWNLOADER=OFF
 		-DENABLE_BREAKPAD=OFF
-		-DSTATIC_SQLITE=OFF
+		$(cmake-utils_use !system-sqlite STATIC_SQLITE)
+		$(cmake-utils_use system-sqlite I_HATE_MY_USERS)
+		$(cmake-utils_use system-sqlite MY_USERS_WILL_SUFFER_BECAUSE_OF_ME)
+		-DUSE_BUILTIN_TAGLIB=OFF
 		-DUSE_SYSTEM_GMOCK=ON
 		)
 
