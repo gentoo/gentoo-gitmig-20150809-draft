@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/python-exec-0.3.1.ebuild,v 1.13 2013/10/19 03:40:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/python-exec-10000.1.ebuild,v 1.1 2013/10/30 19:13:54 mgorny Exp $
 
 EAPI=5
 
@@ -8,28 +8,15 @@ EAPI=5
 inherit python-utils-r1
 PYTHON_COMPAT=( "${_PYTHON_ALL_IMPLS[@]}" )
 
-inherit autotools-utils python-r1
+inherit python-r1
 
-DESCRIPTION="Python script wrapper"
+DESCRIPTION="Compatibility package for dev-lang/python-exec"
 HOMEPAGE="https://bitbucket.org/mgorny/python-exec/"
-SRC_URI="mirror://bitbucket/mgorny/${PN}/downloads/${P}.tar.bz2"
+SRC_URI=""
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
-src_configure() {
-	local pyimpls i EPYTHON
-	for i in "${PYTHON_COMPAT[@]}"; do
-		python_export "${i}" EPYTHON
-		pyimpls+=" ${EPYTHON}"
-	done
-
-	local myeconfargs=(
-		--with-eprefix="${EPREFIX}"
-		--with-python-impls="${pyimpls}"
-	)
-
-	autotools-utils_src_configure
-}
+RDEPEND="dev-lang/python-exec:0[${PYTHON_USEDEP}]"
