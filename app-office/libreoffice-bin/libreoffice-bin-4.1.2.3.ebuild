@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.1.2.3.ebuild,v 1.6 2013/10/31 15:40:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.1.2.3.ebuild,v 1.7 2013/10/31 15:49:25 scarabeus Exp $
 
 EAPI=5
 
@@ -143,7 +143,7 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 PDEPEND="
-	=app-office/libreoffice-l10n-4.1*
+	=app-office/libreoffice-l10n-${PV}*
 "
 
 DEPEND=""
