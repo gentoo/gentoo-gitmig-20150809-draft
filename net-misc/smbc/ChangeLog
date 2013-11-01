@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/smbc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smbc/ChangeLog,v 1.14 2012/05/21 19:15:39 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smbc/ChangeLog,v 1.15 2013/11/01 16:39:53 jer Exp $
+
+  01 Nov 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Drop maintainership.
 
   21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> smbc-1.2.2-r2.ebuild:
   Add missing inheritance of eutils.eclass
@@ -64,4 +67,3 @@
   20 Dec 2004; Christian Andreetta <satya@gentoo.org> +metadata.xml,
   +smbc-1.0.0.ebuild:
   new package. Thanks to Vanquirius (bug #74816)
-
