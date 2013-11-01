@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.17.ebuild,v 1.2 2013/11/01 22:02:48 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.17.ebuild,v 1.3 2013/11/01 22:09:17 hasufell Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ DEPEND="dev-libs/expat
 	mysql? ( virtual/mysql )
 	pam? ( virtual/pam )
 	postgres? ( dev-db/postgresql-base )
-	ssl? ( dev-libs/openssl:0 )
+	ssl? ( >=dev-libs/openssl-1.0.1:0 )
 	sqlite? ( dev-db/sqlite:3 )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
