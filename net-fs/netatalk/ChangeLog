@@ -1,6 +1,16 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.102 2013/11/02 11:34:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.103 2013/11/02 11:59:14 jlec Exp $
+
+  02 Nov 2013; Justin Lecher <jlec@gentoo.org> +netatalk-3.1.0.ebuild,
+  +files/netatalk-3.1.0-gentoo.patch, metadata.xml:
+  Version Bump, #489756
+
+*netatalk-3.1.0 (02 Nov 2013)
+
+  02 Nov 2013; Justin Lecher <jlec@gentoo.org> +netatalk-3.1.0.ebuild,
+  +files/netatalk-3.1.0-gentoo.patch:
+  Version Bump, #489756
 
 *netatalk-3.0.5-r1 (02 Nov 2013)
 
