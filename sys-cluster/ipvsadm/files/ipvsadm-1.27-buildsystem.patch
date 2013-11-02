@@ -86,7 +86,7 @@ diff -Nuar -Nuar --exclude '*.orig' --exclude '*.rej' ipvsadm-1.27.orig/Makefile
  
  libs:
 -		make -C libipvs
-+		$(MAKE) -C libipvs
++		$(MAKE) -C libipvs CFLAGS="$(CFLAGS)" STATIC="$(STATIC)" OPTFLAGS="$(OPTFLAGS)"
 +
 +$(OBJS):	libs
  
