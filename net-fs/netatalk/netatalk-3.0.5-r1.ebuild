@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-3.0.5.ebuild,v 1.4 2013/11/01 13:50:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-3.0.5-r1.ebuild,v 1.1 2013/11/02 11:34:23 jlec Exp $
 
 EAPI=5
 
@@ -100,6 +100,7 @@ src_configure() {
 		--with-uams-path=/usr/$(get_libdir)/${PN}
 		--disable-silent-rules
 		--with-init-style=gentoo
+		--with-lockfile=/run/lock/${PN}
 		)
 	autotools-utils_src_configure
 }
@@ -119,6 +120,7 @@ src_install() {
 
 	sed \
 		-e "s|:SBINDIR:|${EPREFIX}/usr/sbin|g" \
+		-e "s|:PATH_NETATALK_LOCK:|/run/lock/netatalk|g" \
 		distrib/initscripts/service.systemd.tmpl \
 		> "${T}"/service.systemd || die
 	systemd_newunit "${T}"/service.systemd ${PN}.service
