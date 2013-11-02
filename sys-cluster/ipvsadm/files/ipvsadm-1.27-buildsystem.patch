@@ -1,6 +1,6 @@
 diff -Nuar -Nuar --exclude '*.orig' --exclude '*.rej' ipvsadm-1.27.orig/libipvs/Makefile ipvsadm-1.27/libipvs/Makefile
 --- ipvsadm-1.27.orig/libipvs/Makefile	2013-09-06 01:37:27.000000000 -0700
-+++ ipvsadm-1.27/libipvs/Makefile	2013-11-01 23:31:14.359495884 -0700
++++ ipvsadm-1.27/libipvs/Makefile	2013-11-01 23:45:21.633636401 -0700
 @@ -1,9 +1,9 @@
  # Makefile for libipvs
  
@@ -61,8 +61,8 @@ diff -Nuar -Nuar --exclude '*.orig' --exclude '*.rej' ipvsadm-1.27.orig/libipvs/
  
  distclean:	clean
 diff -Nuar -Nuar --exclude '*.orig' --exclude '*.rej' ipvsadm-1.27.orig/Makefile ipvsadm-1.27/Makefile
---- ipvsadm-1.27.orig/Makefile	2013-09-06 01:37:27.000000000 -0700
-+++ ipvsadm-1.27/Makefile	2013-11-01 23:31:44.259015958 -0700
+--- ipvsadm-1.27.orig/Makefile	2013-11-01 23:49:36.523225124 -0700
++++ ipvsadm-1.27/Makefile	2013-11-01 23:49:09.478738760 -0700
 @@ -43,14 +43,13 @@
  INIT		= $(BUILD_ROOT)/etc/rc.d/init.d
  MKDIR		= mkdir
@@ -96,19 +96,11 @@ diff -Nuar -Nuar --exclude '*.orig' --exclude '*.rej' ipvsadm-1.27.orig/Makefile
 +		$(CC) $(LDFLAGS) $(OPTFLAGS) $(CFLAGS) -o $@ $^ -Llibipvs -lipvs $(LIBS)
  
 -install:        all
-+install:
++install:	all
  		if [ ! -d $(SBIN) ]; then $(MKDIR) -p $(SBIN); fi
  		$(INSTALL) -m 0755 ipvsadm $(SBIN)
  		$(INSTALL) -m 0755 ipvsadm-save $(SBIN)
-@@ -98,15 +99,13 @@
- 		$(INSTALL) -m 0644 ipvsadm.8 $(MAN)
- 		$(INSTALL) -m 0644 ipvsadm-save.8 $(MAN)
- 		$(INSTALL) -m 0644 ipvsadm-restore.8 $(MAN)
--		[ -d $(INIT) ] || $(MKDIR) -p $(INIT)
--		$(INSTALL) -m 0755 ipvsadm.sh $(INIT)/ipvsadm
- 
- clean:
- 		rm -f ipvsadm $(NAME).spec $(NAME)-$(VERSION).tar.gz
+@@ -106,7 +107,7 @@
  		rm -rf debian/tmp
  		find . -name '*.[ao]' -o -name "*~" -o -name "*.orig" \
  		  -o -name "*.rej" -o -name core | xargs rm -f
@@ -117,7 +109,7 @@ diff -Nuar -Nuar --exclude '*.orig' --exclude '*.rej' ipvsadm-1.27.orig/Makefile
  
  distclean:	clean
  
-@@ -139,4 +138,4 @@
+@@ -139,4 +140,4 @@
  		dpkg-buildpackage
  
  %.o:	%.c
