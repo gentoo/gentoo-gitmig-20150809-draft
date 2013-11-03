@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.17-r1.ebuild,v 1.1 2013/11/03 12:37:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.17-r1.ebuild,v 1.2 2013/11/03 12:52:04 hasufell Exp $
 
 EAPI=5
 
@@ -66,6 +66,14 @@ src_prepare() {
 		-e 's/@jabberd_s2s_bin@/jabberd2-s2s/' \
 		-e 's/@jabberd_sm_bin@/jabberd2-sm/' \
 		etc/jabberd*.in || die "fixing file collisions failed!"
+
+	# rename pid files wrt #241472
+	sed -i \
+		-e '/pidfile/s/c2s\.pid/jabberd2-c2s\.pid/' \
+		-e '/pidfile/s/router\.pid/jabberd2-router\.pid/' \
+		-e '/pidfile/s/s2s\.pid/jabberd2-s2s\.pid/' \
+		-e '/pidfile/s/sm\.pid/jabberd2-sm\.pid/' \
+		etc/*.xml.dist.in || die "renaming pid files failed!"
 }
 
 src_configure() {
