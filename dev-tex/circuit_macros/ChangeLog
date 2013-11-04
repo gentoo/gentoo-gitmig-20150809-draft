@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/circuit_macros
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/circuit_macros/ChangeLog,v 1.4 2013/11/04 19:33:20 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/circuit_macros/ChangeLog,v 1.5 2013/11/04 19:38:28 calchan Exp $
+
+  04 Nov 2013; Denis Dupeyron <calchan@gentoo.org> -circuit_macros-7.5.ebuild,
+  -circuit_macros-7.6.ebuild, -circuit_macros-7.7.ebuild, -files/CM2pdf:
+  Cleanup old versions.
 
 *circuit_macros-7.7-r1 (04 Nov 2013)
 
