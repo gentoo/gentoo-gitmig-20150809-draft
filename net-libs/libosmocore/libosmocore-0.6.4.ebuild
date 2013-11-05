@@ -1,18 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosmocore/libosmocore-9999.ebuild,v 1.5 2013/11/05 13:31:39 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosmocore/libosmocore-0.6.4.ebuild,v 1.1 2013/11/05 13:31:39 chithanh Exp $
 
 EAPI=5
 
-inherit autotools eutils git-2
+inherit autotools eutils
 
 DESCRIPTION="Utility functions for OsmocomBB, OpenBSC and related projects"
 HOMEPAGE="http://bb.osmocom.org/trac/wiki/libosmocore"
-EGIT_REPO_URI="git://git.osmocom.org/${PN}.git"
+SRC_URI="http://cgit.osmocom.org/cgit/libosmocore/snapshot/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="embedded"
 
 RDEPEND=""
