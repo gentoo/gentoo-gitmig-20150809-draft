@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.141 2013/10/26 07:36:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.142 2013/11/05 19:44:37 aballier Exp $
 
 EAPI="5"
 
@@ -44,7 +44,7 @@ IUSE="
 	cpudetection debug doc +encode examples faac fdk flite fontconfig frei0r
 	gme	gnutls gsm +hardcoded-tables +iconv iec61883 ieee1394 jack jpeg2k
 	ladspa libass libcaca libsoxr libv4l modplug mp3 +network openal openssl opus
-	oss pic pulseaudio quvi rtmp schroedinger sdl speex static-libs test theora
+	oss pic pulseaudio quvi rtmp schroedinger sdl speex ssh static-libs test theora
 	threads truetype twolame v4l vaapi vdpau vorbis vpx wavpack X x264 xvid
 	+zlib zvbi
 	"
@@ -108,6 +108,7 @@ RDEPEND="
 	sdl? ( >=media-libs/libsdl-1.2.13-r1[audio,video] )
 	schroedinger? ( media-libs/schroedinger )
 	speex? ( >=media-libs/speex-1.2_beta3 )
+	ssh? ( net-libs/libssh )
 	truetype? ( media-libs/freetype:2 )
 	vaapi? ( >=x11-libs/libva-0.32 )
 	vdpau? ( x11-libs/libvdpau )
@@ -210,7 +211,7 @@ src_configure() {
 	# Decoders
 	ffuse="${ffuse} amr:libopencore-amrwb amr:libopencore-amrnb fdk:libfdk-aac jpeg2k:libopenjpeg"
 	use amr && myconf="${myconf} --enable-version3"
-	for i in bluray celt gme gsm modplug opus quvi rtmp schroedinger speex vorbis vpx zvbi; do
+	for i in bluray celt gme gsm modplug opus quvi rtmp ssh schroedinger speex vorbis vpx zvbi; do
 		ffuse="${ffuse} ${i}:lib${i}"
 	done
 	use fdk && myconf="${myconf} --enable-nonfree"
