@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libodfgen/libodfgen-0.0.3.ebuild,v 1.1 2013/11/08 09:10:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libodfgen/libodfgen-0.0.3.ebuild,v 1.2 2013/11/08 09:17:22 scarabeus Exp $
 
 EAPI=5
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
+	app-text/libetonyek
 	app-text/libwpd
 	app-text/libwpg
 "
