@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.487 2013/11/09 23:04:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.488 2013/11/09 23:08:03 radhermit Exp $
+
+  09 Nov 2013; Tim Harder <radhermit@gentoo.org> -openssh-6.4_p1.ebuild:
+  Remove insecure version due to improperly using the 6.3_p1 tarball.
 
 *openssh-6.4_p1-r1 (09 Nov 2013)
 
