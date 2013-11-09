@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1051 2013/11/09 07:49:50 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1052 2013/11/09 10:05:12 dirtyepic Exp $
+
+  09 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Revert previous and instead include the build log and some other info. Don't
+  pollute the build dir.
 
   09 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
   Rename config.log tarball in the hope that people will stop attaching it to
