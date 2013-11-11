@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20131104.ebuild,v 1.2 2013/11/11 15:45:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20131111.ebuild,v 1.1 2013/11/11 15:45:39 jlec Exp $
 
 EAPI=5
 
@@ -8,9 +8,9 @@ inherit eutils flag-o-matic linux-info linux-mod multilib toolchain-funcs
 
 AUFS_VERSION="${PV%%_p*}"
 # highest branch version
-PATCH_MAX_VER=11
+PATCH_MAX_VER=12
 # highest supported version
-KERN_MAX_VER=12
+KERN_MAX_VER=13
 
 DESCRIPTION="An entirely re-designed and re-implemented Unionfs"
 HOMEPAGE="http://aufs.sourceforge.net/"
