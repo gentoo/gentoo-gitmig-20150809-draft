@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ruby-termios-1.0.0.ebuild,v 1.1 2013/11/13 19:02:23 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ruby-termios-1.0.0.ebuild,v 1.2 2013/11/13 19:03:06 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby18 ruby19 ruby20"
@@ -42,5 +42,5 @@ all_ruby_install() {
 	dodoc ChangeLog README termios.rd
 
 	insinto /usr/share/doc/${PF}/examples
-	doins examples/* 
+	doins examples/*
 }
