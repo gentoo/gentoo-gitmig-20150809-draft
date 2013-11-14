@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/PEAR-DB_DataObject-1.11.2.ebuild,v 1.1 2013/11/14 21:34:25 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/PEAR-DB_DataObject-1.11.2.ebuild,v 1.2 2013/11/14 21:37:52 mabi Exp $
 
 EAPI="4"
 
@@ -14,10 +14,9 @@ SLOT="0"
 IUSE="minimal"
 
 DEPEND=""
-RDEPEND=">=dev-php/PEAR-DB-1.7.6-r1
+RDEPEND="|| ( >=dev-php/PEAR-DB-1.7.6-r1 >=dev-php/PEAR-MDB2-2.0.0_rc1 )
 	>=dev-php/PEAR-Date-1.4.3-r1
-	!minimal? ( >=dev-php/PEAR-Validate-0.5.0-r1
-		    >=dev-php/PEAR-MDB2-2.0.0_rc1 )"
+	!minimal? ( >=dev-php/PEAR-Validate-0.5.0-r1 )"
 
 src_prepare() {
 	# don't install windows-only stuff
