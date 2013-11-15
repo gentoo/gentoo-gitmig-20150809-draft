@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libebook/libebook-0.0.1.ebuild,v 1.1 2013/11/15 09:17:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libebook/libebook-0.0.1.ebuild,v 1.2 2013/11/15 09:18:35 scarabeus Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.sourceforge.net/projects/libebook/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="|| ( LGPL-2.1 MPL-2.0 )"
-SLOT="0.9"
+SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc test"
 
