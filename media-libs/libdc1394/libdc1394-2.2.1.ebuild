@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.2.1.ebuild,v 1.2 2013/11/17 14:49:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.2.1.ebuild,v 1.3 2013/11/17 14:58:25 aballier Exp $
 
 EAPI=5
 
-inherit multilib-minimal
+inherit autotools eutils multilib-minimal
 
 DESCRIPTION="Library to interface with IEEE 1394 cameras following the IIDC specification"
 HOMEPAGE="http://sourceforge.net/projects/libdc1394/"
@@ -22,7 +22,8 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 src_prepare() {
-	multilib_copy_sources
+	epatch "${FILESDIR}/${P}-includes.patch"
+	eautoreconf
 }
 
 multilib_src_configure() {
@@ -30,7 +31,7 @@ multilib_src_configure() {
 	multilib_is_native_abi || myconf="--disable-doxygen-html --disable-examples"
 
 	# X is only useful for examples that are not installed.
-	econf \
+	ECONF_SOURCE="${S}" econf \
 		$(use_enable static-libs static) \
 		--program-suffix=2 \
 		--without-x \
