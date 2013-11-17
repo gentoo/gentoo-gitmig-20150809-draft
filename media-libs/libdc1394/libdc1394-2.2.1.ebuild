@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.2.1.ebuild,v 1.1 2013/08/11 15:01:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.2.1.ebuild,v 1.2 2013/11/17 14:49:24 hasufell Exp $
 
 EAPI=5
 
@@ -21,12 +21,16 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
+src_prepare() {
+	multilib_copy_sources
+}
+
 multilib_src_configure() {
 	local myconf="$(use_enable doc doxygen-html)"
 	multilib_is_native_abi || myconf="--disable-doxygen-html --disable-examples"
 
 	# X is only useful for examples that are not installed.
-	ECONF_SOURCE="${S}" econf \
+	econf \
 		$(use_enable static-libs static) \
 		--program-suffix=2 \
 		--without-x \
