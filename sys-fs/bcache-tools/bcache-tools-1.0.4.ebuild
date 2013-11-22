@@ -1,21 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bcache-tools/bcache-tools-9999.ebuild,v 1.5 2013/11/22 13:51:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bcache-tools/bcache-tools-1.0.4.ebuild,v 1.1 2013/11/22 13:51:34 jlec Exp $
 
 EAPI=5
 
-EGIT_NONSHALLOW=true
-
-inherit git-r3 toolchain-funcs udev
+inherit toolchain-funcs udev
 
 DESCRIPTION="Tools for bachefs"
 HOMEPAGE="http://bcache.evilpiepirate.org/"
-SRC_URI=""
-EGIT_REPO_URI="https://github.com/g2p/bcache-tools.git"
+SRC_URI="https://github.com/g2p/bcache-tools/archive/v1.0.4.tar.gz -> ${P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=">=sys-apps/util-linux-2.24"
@@ -40,9 +37,6 @@ src_install() {
 
 	insinto /etc/initramfs-tools/hooks/bcache
 	doins initramfs/hook
-
-	insinto /etc/initcpio/install/bcache
-	doins initcpio/install
 
 	# that is what dracut does
 	insinto /usr/lib/dracut/modules.d/90bcache
