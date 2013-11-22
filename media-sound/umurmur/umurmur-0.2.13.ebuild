@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/umurmur/umurmur-0.2.13.ebuild,v 1.4 2013/11/22 15:11:06 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/umurmur/umurmur-0.2.13.ebuild,v 1.5 2013/11/22 15:11:55 hasufell Exp $
 
 EAPI=5
 
@@ -12,12 +12,12 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=dev-libs/protobuf-c-0.14
 	dev-libs/libconfig
-	dev-libs/openssl"
+	dev-libs/openssl:0"
 
 RDEPEND="${DEPEND}"
 
