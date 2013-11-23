@@ -1,13 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.1.6.ebuild,v 1.9 2013/08/29 19:53:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.1.6.ebuild,v 1.10 2013/11/23 13:40:55 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools eutils udev user toolchain-funcs
 
 if [[ ${PV} == *9999* ]]; then
-	EGIT_REPO_URI="git://${PN}.git.sourceforge.net/gitroot/${PN}/${PN}"
+	EGIT_REPO_URI="git://git.code.sf.net/p/libmtp/code"
+	EGIT_PROJECT="libmtp"
 	inherit git-2
 else
 	KEYWORDS="amd64 hppa ia64 ppc ppc64 x86 ~amd64-fbsd"
@@ -34,7 +35,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-fbsdlibusb.patch"
+	epatch "${FILESDIR}"/${P}-fbsdlibusb.patch
 	if [[ ${PV} == *9999* ]]; then
 		touch config.rpath # This is from upstream autogen.sh
 		eautoreconf
@@ -46,7 +47,7 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_enable doc doxygen) \
 		$(use_enable crypt mtpz) \
-		--with-udev="$(udev_get_udevdir)" \
+		--with-udev="$(get_udevdir)" \
 		--with-udev-group=plugdev \
 		--with-udev-mode=0660
 }
@@ -59,4 +60,6 @@ src_install() {
 		docinto examples
 		dodoc examples/*.{c,h,sh}
 	fi
+
+	sed -i -e '/^Unable to open/d' "${ED}/$(get_udevdir)"/rules.d/*-libmtp.rules || die #481666
 }
