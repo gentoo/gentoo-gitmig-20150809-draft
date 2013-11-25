@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-r1.eclass,v 1.30 2012/08/22 15:06:20 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-r1.eclass,v 1.31 2013/11/25 23:11:16 mabi Exp $
 
 # @ECLASS: php-pear-r1.eclass
 # @MAINTAINER:
@@ -44,11 +44,25 @@ fix_PEAR_PV() {
 [[ -z "${PEAR_PV}" ]] && fix_PEAR_PV
 
 PEAR_PN="${PHP_PEAR_PKG_NAME}-${PEAR_PV}"
+: ${PHP_PEAR_URI:=pear.php.net}
 
-[[ -z "${SRC_URI}" ]] && SRC_URI="http://pear.php.net/get/${PEAR_PN}.tgz"
-[[ -z "${HOMEPAGE}" ]] && HOMEPAGE="http://pear.php.net/${PHP_PEAR_PKG_NAME}"
+[[ -z "${SRC_URI}" ]] && SRC_URI="http://${PHP_PEAR_URI}/get/${PEAR_PN}.tgz"
+[[ -z "${HOMEPAGE}" ]] && HOMEPAGE="http://${PHP_PEAR_URI}/${PHP_PEAR_PKG_NAME}"
 
 S="${WORKDIR}/${PEAR_PN}"
+
+# @FUNCTION: php-pear-lib-r1_pkg_setup
+# @DESCRIPTION:
+# Adds required PEAR channel if necessary
+php-pear-r1_pkg_setup() {
+	if [[ -n $PHP_PEAR_CHANNEL ]] ; then
+		if [[ -f $PHP_PEAR_CHANNEL ]]; then
+		 	pear channel-add $PHP_PEAR_CHANNEL || einfo "Ignore any errors about existing channels"
+		else
+			die "PHP_PEAR_CHANNEL must point to a (local) channel file"
+		fi
+	fi
+}
 
 # @FUNCTION: php-pear-r1_src_install
 # @DESCRIPTION:
