@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.207 2013/11/25 20:04:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.208 2013/11/25 20:10:17 blueness Exp $
+
+  25 Nov 2013; Anthony G. Basile <blueness@gentoo.org>
+  -gradm-2.9.1.201307031629.ebuild:
+  Remove oldest stable
 
 *gradm-3.0.201311242038 (25 Nov 2013)
 
