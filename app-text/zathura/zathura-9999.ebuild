@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-9999.ebuild,v 1.2 2013/11/27 10:31:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-9999.ebuild,v 1.3 2013/11/27 10:34:17 ssuominen Exp $
 
 EAPI=5
 
@@ -24,10 +24,10 @@ KEYWORDS=""
 fi
 IUSE="+doc +deprecated magic sqlite test"
 
-RDEPEND="dev-libs/glib:2
+RDEPEND=">=dev-libs/glib-2.28:2
 	x11-libs/cairo:=
-	deprecated? ( >=dev-libs/girara-0.1.6:2 )
-	!deprecated? ( >=dev-libs/girara-0.1.6:3 )
+	deprecated? ( >=dev-libs/girara-0.1.8:2 )
+	!deprecated? ( >=dev-libs/girara-0.1.8:3 )
 	magic? ( sys-apps/file )
 	sqlite? ( dev-db/sqlite:3 )"
 DEPEND="${RDEPEND}
