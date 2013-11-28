@@ -1,6 +1,12 @@
 # ChangeLog for x11-proto/xproto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/ChangeLog,v 1.155 2013/10/08 05:10:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/ChangeLog,v 1.156 2013/11/28 16:50:41 chithanh Exp $
+
+*xproto-7.0.25 (28 Nov 2013)
+
+  28 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xproto-7.0.25.ebuild:
+  Version bump.
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xproto-7.0.24.ebuild:
   Stable for x86, wrt bug #475480
