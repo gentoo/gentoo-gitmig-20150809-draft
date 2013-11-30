@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/pysolfc-2.0-r2.ebuild,v 1.4 2013/11/30 19:47:58 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/pysolfc-2.0-r2.ebuild,v 1.5 2013/11/30 19:52:48 hasufell Exp $
 
 EAPI=5
 
@@ -24,7 +24,8 @@ IUSE="extra-cardsets minimal +sound"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 
-RDEPEND="dev-lang/python-exec:0[${PYTHON_USEDEP}]
+DEPEND="dev-lang/python-exec:0[${PYTHON_USEDEP}]"
+RDEPEND="${RDEPEND}
 	sound? ( dev-python/pygame[${PYTHON_USEDEP}] )
 	!minimal? ( dev-python/pillow[tk,${PYTHON_USEDEP}]
 		dev-tcltk/tktable )"
