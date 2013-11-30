@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/calendar_date_select
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/calendar_date_select/ChangeLog,v 1.12 2013/11/30 15:04:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/calendar_date_select/ChangeLog,v 1.13 2013/11/30 15:05:26 graaff Exp $
+
+  30 Nov 2013; Hans de Graaff <graaff@gentoo.org>
+  -calendar_date_select-1.16.4.ebuild:
+  Cleanup.
 
 *calendar_date_select-2.0.0 (30 Nov 2013)
 
