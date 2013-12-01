@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.114 2013/12/01 19:06:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.115 2013/12/01 19:11:24 robbat2 Exp $
 
 # @ECLASS: linux-mod.eclass
 # @MAINTAINER:
@@ -130,7 +130,7 @@
 inherit eutils linux-info multilib
 EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst src_install src_compile pkg_postrm
 
-IUSE="kernel_linux"
+IUSE="kernel_linux ${MODULES_OPTIONAL_USE}"
 SLOT="0"
 RDEPEND="${MODULES_OPTIONAL_USE}${MODULES_OPTIONAL_USE:+? (} kernel_linux? ( virtual/modutils ) ${MODULES_OPTIONAL_USE:+)}"
 DEPEND="${RDEPEND}
