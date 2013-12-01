@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/dont-starve/dont-starve-1.ebuild,v 1.1 2013/12/01 23:03:33 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/dont-starve/dont-starve-1.ebuild,v 1.2 2013/12/01 23:08:40 hasufell Exp $
 
 EAPI=5
 
@@ -21,10 +21,10 @@ MYGAMEDIR=${GAMES_PREFIX_OPT}/${PN}
 QA_PREBUILT="${MYGAMEDIR#/}/bin/dontstarve"
 if [[ $ARCH == amd64 ]] ; then
 	QA_PREBUILT="${QA_PREBUILT}
-		${MYGAMEDIR#/}/lib64/*"
+		${MYGAMEDIR#/}/bin/lib64/*"
 elif [[ ${ARCH} == x86 ]] ; then
 	QA_PREBUILT="${QA_PREBUILT}
-		${MYGAMEDIR#/}/lib32/*"
+		${MYGAMEDIR#/}/bin/lib32/*"
 fi
 
 RDEPEND="net-misc/curl
