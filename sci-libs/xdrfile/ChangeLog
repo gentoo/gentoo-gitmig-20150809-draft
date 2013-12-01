@@ -1,6 +1,9 @@
-# ChangeLog for sci-chemistry/xdrfile
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xdrfile/ChangeLog,v 1.1 2013/12/01 20:38:52 ottxor Exp $
+# ChangeLog for sci-libs/xdrfile
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xdrfile/ChangeLog,v 1.2 2013/12/01 20:40:05 ottxor Exp $
+
+  01 Dec 2013; Christoph Junghans <ottxor@gentoo.org> xdrfile-1.1.1.ebuild:
+  import from sci overlay (bug #270685), multilib support
 
 *xdrfile-1.1.1 (30 Dec 2012)
 
