@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/accelerator3d/accelerator3d-0.1.1-r2.ebuild,v 1.1 2013/12/01 17:02:52 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/accelerator3d/accelerator3d-0.1.1-r2.ebuild,v 1.2 2013/12/01 17:04:05 hasufell Exp $
 
 # TODO: convert dev-python/pyode wrt #493042
 
@@ -18,11 +18,11 @@ KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 REQUIRED_USE=${PYTHON_REQUIRED_USE}
 
-RDEPEND="${PYTHON_DEPS}
+DEPEND="${PYTHON_DEPS}"
+RDEPEND="${DEPEND}
 	dev-python/pyode
 	dev-python/pygame[${PYTHON_USEDEP}]
 	dev-python/pyopengl[${PYTHON_USEDEP}]"
-DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}
 
