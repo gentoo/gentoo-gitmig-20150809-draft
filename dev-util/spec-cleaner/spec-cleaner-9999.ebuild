@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spec-cleaner/spec-cleaner-9999.ebuild,v 1.1 2013/12/03 12:21:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spec-cleaner/spec-cleaner-9999.ebuild,v 1.2 2013/12/03 12:21:55 scarabeus Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ src_install() {
 		LIBEXECDIR=/usr/libexec/ \
 		LIBDIR=/usr/$(get_libdir) \
 		SITEDIR=$(python_get_sitedir)
-	
+
 	python_fix_shebang "${D}"
 }
 
