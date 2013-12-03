@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/mk-livestatus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mk-livestatus/ChangeLog,v 1.7 2013/12/03 23:16:35 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mk-livestatus/ChangeLog,v 1.8 2013/12/03 23:24:23 idl0r Exp $
+
+*mk-livestatus-1.2.2_p3 (03 Dec 2013)
+
+  03 Dec 2013; Christian Ruppert <idl0r@gentoo.org>
+  -mk-livestatus-1.2.2_p2.ebuild, +mk-livestatus-1.2.2_p3.ebuild,
+  -files/mk-livestatus-1.2.2_p2-no-strip.diff,
+  -files/mk-livestatus-1.2.2_p2-test-RequireRcsKeywords.diff,
+  +files/mk-livestatus-1.2.2_p3-no-strip.diff,
+  +files/mk-livestatus-1.2.2_p3-test-RequireRcsKeywords.diff:
+  Bump to _p3...
 
 *mk-livestatus-1.2.2_p2 (03 Dec 2013)
 
