@@ -1,3 +1,7 @@
+generate code for Boost.NumPy[1] to accelerate c 1D array handling
+
+Upstream: https://sourceforge.net/p/pygccxml/patches/2/
+
 Index: pyplusplus/code_creators/__init__.py
 ===================================================================
 --- pyplusplus/code_creators/__init__.py.orig
