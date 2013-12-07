@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/epoch/epoch-9999.ebuild,v 1.1 2013/12/07 21:15:59 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/epoch/epoch-9999.ebuild,v 1.2 2013/12/07 21:17:40 tomwij Exp $
 
 EAPI="5"
 
@@ -63,6 +63,8 @@ pkg_postinst() {
 	elog ""
 	elog "An example epoch configuration is provided at /etc/epoch/epoch.conf"
 	elog "which starts a minimal needed to use Gentoo."
+	elog ""
+	elog "To use epoch, add this kernel parameter: init=/usr/sbin/epoch-init"
 	elog ""
 	elog "Additional information about epoch is available at"
 	elog "${HOMEPAGE} and configuration documentation at"
