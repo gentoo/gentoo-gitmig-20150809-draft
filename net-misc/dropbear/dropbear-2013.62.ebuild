@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2013.62.ebuild,v 1.2 2013/12/09 01:24:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2013.62.ebuild,v 1.3 2013/12/09 01:25:30 vapier Exp $
 
 EAPI="4"
 
@@ -39,6 +39,8 @@ set_options() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.46-dbscp.patch
+	epatch "${FILESDIR}"/${PN}-2013.62-multi-install-man.patch
+	epatch "${FILESDIR}"/${PN}-2013.62-multi-no-relink.patch
 	sed -i '1i#define _GNU_SOURCE' scpmisc.c || die
 	sed -i \
 		-e '/SFTPSERVER_PATH/s:".*":"/usr/lib/misc/sftp-server":' \
