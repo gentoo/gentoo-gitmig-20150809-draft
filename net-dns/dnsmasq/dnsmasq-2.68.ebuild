@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.68.ebuild,v 1.1 2013/12/10 19:46:59 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.68.ebuild,v 1.2 2013/12/10 19:55:03 chutzpah Exp $
 
 EAPI=5
 
@@ -105,7 +105,7 @@ src_install() {
 	for lingua in ${DM_LINGUAS}; do
 		use linguas_${lingua} || rm -rf "${D}"/usr/share/locale/${lingua}
 	done
-	rmdir --ignore-fail-on-non-empty "${D}"/usr/share/locale/
+	[[ -d "${D}"/usr/share/locale/ ]] && rmdir --ignore-fail-on-non-empty "${D}"/usr/share/locale/
 
 	dodoc CHANGELOG CHANGELOG.archive FAQ
 	dodoc -r logo
@@ -129,5 +129,5 @@ src_install() {
 		doman contrib/wrt/{dhcp_release,dhcp_lease_time}.1
 	fi
 
-	systemd_dounit "${FILESDIR}"/dnsmasq.service
+	systemd_newunit "${FILESDIR}"/${PN}.service-r1 ${PN}.service
 }
