@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-runtime-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/ChangeLog,v 1.149 2013/12/10 19:48:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/ChangeLog,v 1.150 2013/12/11 20:12:12 ago Exp $
+
+  11 Dec 2013; Agostino Sarubbo <ago@gentoo.org>
+  kdebase-runtime-meta-4.11.2-r1.ebuild:
+  Stable for ppc, wrt bug #484884
 
   10 Dec 2013; Agostino Sarubbo <ago@gentoo.org>
   kdebase-runtime-meta-4.11.2-r1.ebuild:
