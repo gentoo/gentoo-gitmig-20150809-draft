@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/espresso-3.2.0.ebuild,v 1.2 2013/12/11 12:42:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/espresso-3.2.0.ebuild,v 1.3 2013/12/11 12:44:33 jlec Exp $
 
 EAPI=5
 
@@ -40,7 +40,6 @@ RDEPEND="${PYTHON_DEPS}
 	X? ( x11-libs/libX11 )"
 
 DEPEND="${RDEPEND}
-	dev-lang/python
 	doc? (
 		|| ( <app-doc/doxygen-1.7.6.1[-nodot] >=app-doc/doxygen-1.7.6.1[dot] )
 		dev-texlive/texlive-latexextra
