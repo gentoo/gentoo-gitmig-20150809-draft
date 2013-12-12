@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/iftop-1.0_pre2.ebuild,v 1.8 2013/11/27 12:25:45 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/iftop-1.0_pre2.ebuild,v 1.9 2013/12/12 17:02:26 jer Exp $
 
 EAPI=5
 
@@ -24,6 +24,11 @@ S="${WORKDIR}"/${P/_/}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-tinfo.patch
 	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.in || die
+
+	# bug 490168
+	cat "${FILESDIR}"/ax_pthread.m4 >> "${S}"/acinclude.m4 || die
+	epatch "${FILESDIR}"/${P}-pthread.patch
+
 	eautoreconf
 }
 
