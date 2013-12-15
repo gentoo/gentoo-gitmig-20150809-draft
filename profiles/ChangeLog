@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8428 2013/12/15 14:10:59 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8429 2013/12/15 14:18:36 moult Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Dec 2013; Dion Moult <moult@gentoo.org> package.mask:
+  Removed from package.mask app-emulation/qenv as package removed
 
   15 Dec 2013; Dion Moult <moult@gentoo.org> package.mask:
   Remove from package.mask as packages removed: dev-python/pytrailer
