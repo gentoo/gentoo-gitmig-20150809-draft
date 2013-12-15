@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rainbow
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rainbow/ChangeLog,v 1.4 2013/12/15 17:36:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rainbow/ChangeLog,v 1.5 2013/12/15 17:37:00 ago Exp $
+
+  15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> rainbow-1.1.4.ebuild:
+  Add ~x86, wrt bug #493006
 
   15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> rainbow-1.1.4.ebuild:
   Add ~sparc, wrt bug #493006
