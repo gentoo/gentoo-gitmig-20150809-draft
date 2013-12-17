@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/apngdis
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/apngdis/ChangeLog,v 1.5 2012/10/03 09:54:13 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/apngdis/ChangeLog,v 1.6 2013/12/17 10:18:30 radhermit Exp $
+
+*apngdis-2.6 (17 Dec 2013)
+
+  17 Dec 2013; Tim Harder <radhermit@gentoo.org> +apngdis-2.6.ebuild,
+  +files/apngdis-2.6-gcc-4.3.patch, +files/apngdis-2.6-makefile.patch:
+  Version bump.
 
 *apngdis-2.5 (03 Oct 2012)
 
