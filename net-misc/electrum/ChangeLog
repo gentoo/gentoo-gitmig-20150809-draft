@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/electrum
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/ChangeLog,v 1.17 2013/11/13 12:54:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/ChangeLog,v 1.18 2013/12/17 12:50:09 blueness Exp $
+
+*electrum-1.9.6 (17 Dec 2013)
+
+  17 Dec 2013; Anthony G. Basile <blueness@gentoo.org> +electrum-1.9.6.ebuild,
+  +files/electrum.desktop-1.9.6.patch, +files/setup.py-1.9.6.patch,
+  -electrum-1.9.3.ebuild, -electrum-1.9.4.ebuild:
+  Version bump, remove older broken 1.9.x
 
 *electrum-1.9.4 (13 Nov 2013)
 
