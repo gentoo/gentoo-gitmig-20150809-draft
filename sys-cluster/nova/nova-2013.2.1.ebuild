@@ -1,20 +1,19 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.2.9999.ebuild,v 1.9 2013/12/19 03:18:19 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.2.1.ebuild,v 1.1 2013/12/19 03:18:19 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 eutils git-2 multilib
+inherit distutils-r1 eutils multilib
 
 DESCRIPTION="A cloud computing fabric controller (main part of an IaaS system) written in Python."
 HOMEPAGE="https://launchpad.net/nova"
-EGIT_REPO_URI="https://github.com/openstack/nova.git"
-EGIT_BRANCH="stable/havana"
+SRC_URI="http://launchpad.net/${PN}/havana/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="+api +cert +compute +conductor +consoleauth +kvm +network +novncproxy +scheduler +spicehtml5proxy +xvpvncproxy sqlite mysql postgres xen"
 REQUIRED_USE="|| ( mysql postgres sqlite )
 			  || ( kvm xen )"
