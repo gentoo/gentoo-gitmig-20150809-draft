@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r8.ebuild,v 1.1 2013/12/22 12:19:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r8.ebuild,v 1.2 2013/12/22 12:46:59 pacho Exp $
 
 EAPI="2"
 
 WANT_AUTOMAKE="1.12" #493996
-inherit eutils autotools
+inherit eutils autotools systemd
 
 DESCRIPTION="LXDE Display Manager"
 HOMEPAGE="http://lxde.org"
@@ -77,6 +77,7 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS README TODO || die
+	systemd_dounit "${FILESDIR}"/${PN}.service
 }
 
 pkg_postinst() {
