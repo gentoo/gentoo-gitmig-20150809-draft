@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.53 2013/10/27 09:50:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.54 2013/12/22 19:13:21 pacho Exp $
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> dahdi-2.7.0.1.ebuild:
+  amd64 stable, bug #493206
 
   27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due voip herd removal:
