@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.129 2013/12/22 16:51:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.130 2013/12/22 20:59:02 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -223,12 +223,6 @@ _eprefix_init() {
 toolchain-binutils_src_configure() {
 	_eprefix_init
 
-	# prevent makeinfo from running in releases.  it may not always be
-	# installed, and older binutils may fail with newer texinfo.
-	# besides, we never patch the doc files anyways, so regenerating
-	# in the first place is useless. #193364
-	find . '(' -name '*.info' -o -name '*.texi' ')' -exec touch -r . {} +
-
 	# make sure we filter $LINGUAS so that only ones that
 	# actually work make it through #42033
 	strip-linguas -u */po
@@ -310,6 +304,18 @@ toolchain-binutils_src_configure() {
 	)
 	echo ./configure "${myconf[@]}"
 	"${S}"/configure "${myconf[@]}" || die
+
+	# Prevent makeinfo from running in releases.  It may not always be
+	# installed, and older binutils may fail with newer texinfo.
+	# Besides, we never patch the doc files anyways, so regenerating
+	# in the first place is useless. #193364
+	# For older versions, it means we don't get any info pages at all.
+	# Oh well, tough luck. #294617
+	if [[ -e ${S}/gas/doc/as.info ]] || ! version_is_at_least 2.24 ; then
+		sed -i \
+			-e '/^MAKEINFO/s:=.*:= true:' \
+			Makefile || die
+	fi
 }
 
 toolchain-binutils_src_compile() {
