@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/x2goserver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.32 2013/11/27 12:53:19 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.33 2013/12/22 14:57:45 pacho Exp $
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> x2goserver-4.0.1.6-r1.ebuild:
+  amd64 stable, bug #493672
 
 *x2goserver-4.0.1.8 (27 Nov 2013)
 
