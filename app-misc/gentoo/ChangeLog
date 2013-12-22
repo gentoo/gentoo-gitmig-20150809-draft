@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.135 2013/12/22 16:16:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.136 2013/12/22 16:40:28 jer Exp $
+
+  22 Dec 2013; Jeroen Roovers <jer@gentoo.org> gentoo-0.20.4.ebuild:
+  Stable for HPPA (bug #494966).
 
   22 Dec 2013; Pacho Ramos <pacho@gentoo.org> gentoo-0.20.4.ebuild:
   amd64 stable, bug #494966
