@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fastthread
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.58 2013/06/04 17:53:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.59 2013/12/22 15:00:40 jer Exp $
+
+  22 Dec 2013; Jeroen Roovers <jer@gentoo.org> fastthread-1.0.7-r2.ebuild:
+  Stable for HPPA (bug #493780).
 
   04 Jun 2013; Hans de Graaff <graaff@gentoo.org> -fastthread-1.0.7-r1.ebuild:
   Cleanup.

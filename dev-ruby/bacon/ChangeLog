@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bacon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bacon/ChangeLog,v 1.23 2013/12/22 14:06:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bacon/ChangeLog,v 1.24 2013/12/22 14:54:04 jer Exp $
+
+  22 Dec 2013; Jeroen Roovers <jer@gentoo.org> bacon-1.2.0-r1.ebuild:
+  Stable for HPPA (bug #493780).
 
   22 Dec 2013; Pacho Ramos <pacho@gentoo.org> bacon-1.2.0-r1.ebuild:
   amd64 stable, bug #490176
