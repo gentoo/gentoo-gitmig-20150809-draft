@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.17-r1.ebuild,v 1.11 2013/05/20 09:23:15 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.17-r2.ebuild,v 1.1 2013/12/22 08:29:03 pacho Exp $
 
 EAPI=5
 
@@ -46,7 +46,8 @@ pkg_postinst() {
 	einfo "Fixing permissions in /var/spool/${PN}"
 	chown -R uptimed:uptimed /var/spool/${PN}
 	echo
-	elog "Start uptimed with '/etc/init.d/uptimed start'"
+	elog "Start uptimed with '/etc/init.d/uptimed start' (for openRC)"
+	elog "or systemctl start uptimed (for systemd)"
 	elog "To view your uptime records, use the command 'uprecords'."
 	echo
 }
