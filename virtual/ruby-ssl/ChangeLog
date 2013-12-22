@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-ssl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ChangeLog,v 1.22 2013/12/03 19:53:27 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ChangeLog,v 1.23 2013/12/22 13:53:10 pacho Exp $
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> ruby-ssl-3.ebuild:
+  amd64 stable, bug #487004
 
   03 Dec 2013; Johannes Huber <johu@gentoo.org> ruby-ssl-3.ebuild:
   x86 stable, bug #487004
@@ -76,4 +79,3 @@
   +ruby-ssl-1.ebuild, +ruby-ssl-2.ebuild, +ruby-ssl-3.ebuild, +metadata.xml:
   Add virtual ebuild for the OpenSSL binding for all the Ruby
   implementations.
-
