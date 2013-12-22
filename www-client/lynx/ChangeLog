@@ -1,6 +1,9 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.138 2013/11/30 04:21:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.139 2013/12/22 19:21:10 jer Exp $
+
+  22 Dec 2013; Jeroen Roovers <jer@gentoo.org> lynx-2.8.8_rc1.ebuild:
+  Stable for HPPA (bug #441906).
 
 *lynx-2.8.8_rc1 (30 Nov 2013)
 
