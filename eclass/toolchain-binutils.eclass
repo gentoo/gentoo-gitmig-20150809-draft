@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.127 2013/11/21 04:07:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.128 2013/12/22 16:38:10 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -179,7 +179,7 @@ tc-binutils_apply_patches() {
 	# fix locale issues if possible #122216
 	if [[ -e ${FILESDIR}/binutils-configure-LANG.patch ]] ; then
 		einfo "Fixing misc issues in configure files"
-		for f in $(grep -l 'autoconf version 2.13' $(find "${S}" -name configure)) ; do
+		for f in $(find "${S}" -name configure -exec grep -l 'autoconf version 2.13' {} +) ; do
 			ebegin "  Updating ${f/${S}\/}"
 			patch "${f}" "${FILESDIR}"/binutils-configure-LANG.patch >& "${T}"/configure-patch.log \
 				|| eerror "Please file a bug about this"
@@ -212,7 +212,7 @@ toolchain-binutils_src_compile() {
 	# installed, and older binutils may fail with newer texinfo.
 	# besides, we never patch the doc files anyways, so regenerating
 	# in the first place is useless. #193364
-	find . '(' -name '*.info' -o -name '*.texi' ')' -print0 | xargs -0 touch -r .
+	find . '(' -name '*.info' -o -name '*.texi' ')' -exec touch -r . {} +
 
 	# make sure we filter $LINGUAS so that only ones that
 	# actually work make it through #42033
@@ -305,7 +305,7 @@ toolchain-binutils_src_compile() {
 	fi
 	# we nuke the manpages when we're left with junk
 	# (like when we bootstrap, no perl -> no manpages)
-	find . -name '*.1' -a -size 0 | xargs rm -f
+	find . -name '*.1' -a -size 0 -delete
 
 	# elf2flt only works on some arches / targets
 	if [[ -n ${ELF2FLT_VER} ]] && [[ ${CTARGET} == *linux* || ${CTARGET} == *-elf* ]] ; then
@@ -447,7 +447,7 @@ toolchain-binutils_src_install() {
 	# Remove shared info pages
 	rm -f "${ED}"/${DATAPATH}/info/{dir,configure.info,standards.info}
 	# Trim all empty dirs
-	find "${ED}" -type d | xargs rmdir >& /dev/null
+	find "${ED}" -depth -type d -exec rmdir {} + 2>/dev/null
 }
 
 toolchain-binutils_pkg_postinst() {
