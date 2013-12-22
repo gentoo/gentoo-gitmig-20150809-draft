@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15270 2013/12/22 15:59:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15271 2013/12/22 17:12:45 pesa Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -663,10 +663,6 @@ dev-ml/ocamlduce
 # Mask beta versions for testing
 >sci-electronics/magic-8
 
-# Markos Chandras <hwoarang@gentoo.org> (27 May 2012)
-# Mask alpha release
-=sci-electronics/qelectrotech-0.30_alpha*
-
 # Benda Xu <heroxbd@gentoo.org> (20 May 2012)
 # geant-4.9.5_p01 has a major class declaration change that renders
 # geant-python (g4py upstream) unable to compile
@@ -930,7 +926,6 @@ net-misc/netcomics-cvs
 # rdep for sci-astronomy/casacore
 sci-astronomy/casa-data
 sci-astronomy/casacore
-=sci-electronics/qelectrotech-9999
 =sys-fs/redirfs-9999
 sys-kernel/zen-sources
 =www-plugins/google-talkplugin-9999
