@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mocha
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.90 2013/12/22 18:39:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.91 2013/12/22 19:12:54 blueness Exp $
+
+  22 Dec 2013; Anthony G. Basile <blueness@gentoo.org> mocha-0.12.10.ebuild:
+  Keyword ~ppc64, bug #465948
 
   22 Dec 2013; Anthony G. Basile <blueness@gentoo.org> mocha-0.13.3-r1.ebuild:
   Keyword ~ppc64, bug #465948
