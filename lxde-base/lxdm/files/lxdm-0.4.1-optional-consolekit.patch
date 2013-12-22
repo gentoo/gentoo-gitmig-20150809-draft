@@ -1,9 +1,6 @@
 X-Gentoo-Bugzilla: https://bugs.gentoo.org/show_bug.cgi?id=443666
-X-Git-Url: http://lxde.git.sourceforge.net/git/gitweb.cgi?p=lxde%2Flxdm;a=blobdiff_plain;f=configure.ac;h=9e21a22d893b45f1564e23b12c00a0bf546d95e8;hp=3c540df5cc76aa8c3ef394bae4f0d0cf33bff993;hb=371b018474217bdff1d5108b384fbf0f45aa873d;hpb=f625fd7b1f90caac260422a6c13e0cb12ccf1f96
-
-Further changes: Move the AC_CHECK_LIB([ck-connector]) inside the 'if' block
-to avoid checking and enabling ck-connector even if --disable-consolekit was
-passed.
+X-Git-Url: http://lxde.git.sourceforge.net/git/gitweb.cgi?p=lxde/lxdm;a=patch;h=902438eb83b4ae97d774e4e5f38b46f2d826df2f
+X-Git-Url: http://lxde.git.sourceforge.net/git/gitweb.cgi?p=lxde/lxdm;a=patch;h=371b018474217bdff1d5108b384fbf0f45aa873d
 
 Signed-off-by: Markos Chandras <hwoarang@gentoo.org>
 
