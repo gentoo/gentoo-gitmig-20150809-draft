@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zmap/zmap-9999.ebuild,v 1.3 2013/11/25 11:22:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zmap/zmap-9999.ebuild,v 1.4 2013/12/22 18:02:39 jlec Exp $
 
 EAPI=5
 
@@ -24,11 +24,11 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/gengetopt
 	sys-devel/flex
-	virtual/yacc
+	dev-util/byacc
 "
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-1.1.0-out-of-src.patch
+	"${FILESDIR}"/${P}-out-of-src.patch
 )
 
 src_configure() {
