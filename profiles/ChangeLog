@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8440 2013/12/21 21:57:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8441 2013/12/22 07:58:57 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Dec 2013; Hans de Graaff <graaff@gentoo.org> thirdpartymirrors:
+  Update ruby mirrors for bug 494874, thanks to Ben Kohler for reporting.
 
   21 Dec 2013; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Remove mask on sys-libs/pam.
