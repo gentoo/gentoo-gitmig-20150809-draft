@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ruby-threads
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.24 2013/12/20 15:56:14 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.25 2013/12/22 14:32:01 jer Exp $
+
+  22 Dec 2013; Jeroen Roovers <jer@gentoo.org> ruby-threads-0.ebuild,
+  ruby-threads-1.ebuild:
+  Stable for HPPA (bug #493780).
 
   20 Dec 2013; Akinori Hattori <hattya@gentoo.org> ruby-threads-4.ebuild:
   ia64 stable wrt bug #483254
