@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.128 2013/12/22 16:38:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.129 2013/12/22 16:51:49 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -50,7 +50,13 @@ snap)
 esac
 
 inherit eutils libtool flag-o-matic gnuconfig multilib versionator unpacker ${extra_eclass}
-EXPORT_FUNCTIONS src_unpack src_compile src_test src_install pkg_postinst pkg_postrm
+case ${EAPI:-0} in
+0|1)
+	EXPORT_FUNCTIONS src_unpack src_compile src_test src_install pkg_postinst pkg_postrm ;;
+2|3|4|5)
+	EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_test src_install pkg_postinst pkg_postrm ;;
+*) die "unsupported EAPI ${EAPI}" ;;
+esac
 
 export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} == ${CHOST} ]] ; then
@@ -59,9 +65,6 @@ if [[ ${CTARGET} == ${CHOST} ]] ; then
 	fi
 fi
 is_cross() { [[ ${CHOST} != ${CTARGET} ]] ; }
-
-: ${ED:=${D}}
-: ${EROOT:=${ROOT}}
 
 DESCRIPTION="Tools necessary to build programs"
 HOMEPAGE="http://sourceware.org/binutils/"
@@ -204,10 +207,22 @@ tc-binutils_apply_patches() {
 
 toolchain-binutils_src_unpack() {
 	tc-binutils_unpack
+	case ${EAPI:-0} in
+	0|1) toolchain-binutils_src_prepare ;;
+	esac
+}
+
+toolchain-binutils_src_prepare() {
 	tc-binutils_apply_patches
 }
 
-toolchain-binutils_src_compile() {
+_eprefix_init() {
+	has "${EAPI:-0}" 0 1 2 && ED=${D} EPREFIX= EROOT=${ROOT}
+}
+
+toolchain-binutils_src_configure() {
+	_eprefix_init
+
 	# prevent makeinfo from running in releases.  it may not always be
 	# installed, and older binutils may fail with newer texinfo.
 	# besides, we never patch the doc files anyways, so regenerating
@@ -295,7 +310,15 @@ toolchain-binutils_src_compile() {
 	)
 	echo ./configure "${myconf[@]}"
 	"${S}"/configure "${myconf[@]}" || die
+}
 
+toolchain-binutils_src_compile() {
+	_eprefix_init
+	case ${EAPI:-0} in
+	0|1) toolchain-binutils_src_configure ;;
+	esac
+
+	cd "${MY_BUILDDIR}"
 	emake all || die "emake failed"
 
 	# only build info pages if we user wants them, and if
@@ -337,6 +360,7 @@ toolchain-binutils_src_test() {
 }
 
 toolchain-binutils_src_install() {
+	_eprefix_init
 	local x d
 
 	cd "${MY_BUILDDIR}"
@@ -451,12 +475,14 @@ toolchain-binutils_src_install() {
 }
 
 toolchain-binutils_pkg_postinst() {
+	_eprefix_init
 	# Make sure this ${CTARGET} has a binutils version selected
 	[[ -e ${EROOT}/etc/env.d/binutils/config-${CTARGET} ]] && return 0
 	binutils-config ${CTARGET}-${BVER}
 }
 
 toolchain-binutils_pkg_postrm() {
+	_eprefix_init
 	local current_profile=$(binutils-config -c ${CTARGET})
 
 	# If no other versions exist, then uninstall for this
