@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.9.5.ebuild,v 1.3 2013/12/22 13:35:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.8.5-r1.ebuild,v 1.1 2013/12/22 13:35:38 hwoarang Exp $
 
 EAPI=5
 inherit autotools eutils pam readme.gentoo systemd
 
-TRUNK_VERSION="1.9"
+TRUNK_VERSION="1.8"
 DESCRIPTION="A lightweight display manager"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/LightDM"
 SRC_URI="http://launchpad.net/${PN}/${TRUNK_VERSION}/${PV}/+download/${P}.tar.xz
@@ -41,8 +41,8 @@ PDEPEND="gtk? ( x11-misc/lightdm-gtk-greeter )
 	kde? ( x11-misc/lightdm-kde )
 	razor? ( razorqt-base/razorqt-lightdm-greeter )"
 
-DOCS=( NEWS )
 RESTRICT="test"
+DOCS=( NEWS )
 
 src_prepare() {
 	sed -i -e 's:getgroups:lightdm_&:' tests/src/libsystem.c || die #412369
@@ -92,7 +92,6 @@ src_install() {
 		rm -r "${D}/etc/apparmor.d" || die \
 			"Failed to remove apparmor profiles"
 	fi
-
 	insinto /etc/${PN}
 	doins data/{${PN},keys}.conf
 	doins "${FILESDIR}"/Xsession
