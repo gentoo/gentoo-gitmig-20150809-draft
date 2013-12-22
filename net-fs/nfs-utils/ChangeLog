@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.232 2013/12/21 18:18:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.233 2013/12/22 09:50:02 pacho Exp $
+
+*nfs-utils-1.2.9-r1 (22 Dec 2013)
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> +files/rpc-statd.service-r1,
+  +nfs-utils-1.2.9-r1.ebuild:
+  Wants=remote-fs-pre.target is needed (#493798 by Vitaly Kirsanov)
 
   21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> nfs-utils-1.2.9.ebuild:
   Stable for ppc, wrt bug #493422
