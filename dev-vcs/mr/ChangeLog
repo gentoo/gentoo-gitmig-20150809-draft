@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/mr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mr/ChangeLog,v 1.12 2013/03/10 08:38:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mr/ChangeLog,v 1.13 2013/12/23 15:38:54 pacho Exp $
+
+  23 Dec 2013; Pacho Ramos <pacho@gentoo.org> -mr-1.12.ebuild, -mr-1.13.ebuild,
+  metadata.xml:
+  Cleanup due bug #65652
 
 *mr-1.14 (10 Mar 2013)
 
@@ -103,4 +107,3 @@
   26 Mar 2009; Torsten Veller <tove@gentoo.org> +metadata.xml,
   +mr-0.39.ebuild:
   Initial commit
-
