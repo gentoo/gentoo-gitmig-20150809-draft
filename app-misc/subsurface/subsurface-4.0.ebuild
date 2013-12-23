@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/subsurface-9999.ebuild,v 1.4 2013/12/23 16:57:35 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/subsurface-4.0.ebuild,v 1.1 2013/12/23 16:57:35 tomwij Exp $
 
 EAPI="5"
 
