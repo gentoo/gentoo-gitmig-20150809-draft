@@ -1,22 +1,20 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.14.1_pre20130901.ebuild,v 1.2 2013/09/14 09:08:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.16.0.ebuild,v 1.1 2013/12/23 23:28:44 eva Exp $
 
 EAPI="5"
 CLUTTER_LA_PUNT="yes"
 
 # Inherit gnome2 after clutter to download sources from gnome.org
-inherit eutils clutter gnome2 multilib virtualx
+inherit clutter gnome2 multilib virtualx
 
 DESCRIPTION="A library for using 3D graphics hardware to draw pretty pictures"
 HOMEPAGE="http://www.clutter-project.org/"
 
-SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/${P}.tar.xz"
-
 LICENSE="LGPL-2.1+ FDL-1.1+"
 SLOT="1.0/12" # subslot = .so version
 # doc and profile disable for now due bugs #484750 and #483332
-IUSE="examples +introspection +opengl gles2 +pango" # doc profile
+IUSE="examples gles2 gstreamer +introspection +opengl +pango test" # doc profile
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 COMMON_DEPEND="
@@ -32,6 +30,9 @@ COMMON_DEPEND="
 	>=x11-libs/libXrandr-1.2
 	virtual/opengl
 	gles2? ( media-libs/mesa[gles2] )
+	gstreamer? (
+		media-libs/gstreamer:1.0
+		media-libs/gst-plugins-base:1.0 )
 
 	introspection? ( >=dev-libs/gobject-introspection-1.34.2 )
 	pango? ( >=x11-libs/pango-1.20.0[introspection?] )
@@ -43,13 +44,29 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/gtk-doc-am-1.13
 	sys-devel/gettext
 	virtual/pkgconfig
-	test? (	app-admin/eselect-opengl
+	test? (
+		app-admin/eselect-opengl
 		media-libs/mesa[classic] )
 "
 #	doc? ( >=dev-util/gtk-doc-1.13 )
 # Need classic mesa swrast for tests, llvmpipe causes a test failure
 
-S="${WORKDIR}/${PN}-1.14.1"
+src_prepare() {
+	# Do not build examples
+	sed -e "s/^\(SUBDIRS +=.*\)examples\(.*\)$/\1\2/" \
+		-i Makefile.am Makefile.in || die
+
+	if ! use test ; then
+		# For some reason the configure switch will not completely disable
+		# tests being built
+		sed -e "s/^\(SUBDIRS =.*\)test-fixtures\(.*\)$/\1\2/" \
+    		-e "s/^\(SUBDIRS +=.*\)tests\(.*\)$/\1\2/" \
+    		-e "s/^\(.*am__append.* \)tests\(.*\)$/\1\2/" \
+			-i Makefile.am Makefile.in || die
+	fi
+
+	gnome2_src_prepare
+}
 
 src_configure() {
 	# TODO: think about kms-egl, quartz, sdl, wayland
@@ -63,15 +80,17 @@ src_configure() {
 		--enable-deprecated        \
 		--enable-gdk-pixbuf        \
 		--enable-glib              \
-		--disable-gtk-doc	   \
+		--disable-gtk-doc          \
 		$(use_enable opengl glx)   \
 		$(use_enable opengl gl)    \
 		$(use_enable gles2)        \
 		$(use_enable gles2 cogl-gles2) \
 		$(use_enable gles2 xlib-egl-platform) \
 		$(usex gles2 --with-default-driver=$(usex opengl gl gles2)) \
+		$(use_enable gstreamer cogl-gst)    \
 		$(use_enable introspection) \
 		$(use_enable pango cogl-pango) \
+		$(use_enable test unit-tests) \
 		--disable-profile
 #		$(use_enable doc gtk-doc)  \
 #		$(use_enable profile)
