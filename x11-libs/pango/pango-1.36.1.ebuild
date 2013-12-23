@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.34.0.ebuild,v 1.3 2013/06/06 14:24:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.36.1.ebuild,v 1.1 2013/12/23 23:13:07 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -22,30 +22,36 @@ RDEPEND="
 	>=dev-libs/glib-2.33.12:2
 	>=media-libs/fontconfig-2.10.91:1.0=
 	media-libs/freetype:2=
-	>=x11-libs/cairo-1.7.6:=[X?]
+	>=x11-libs/cairo-1.12.10:=[X?]
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 	X? (
 		x11-libs/libXrender
 		x11-libs/libX11
-		>=x11-libs/libXft-2.0.0 )"
+		>=x11-libs/libXft-2.0.0 )
+"
 DEPEND="${RDEPEND}
-	>=dev-util/gtk-doc-am-1.13
+	>=dev-util/gtk-doc-am-1.15
 	virtual/pkgconfig
 	X? ( x11-proto/xproto )
-	!<=sys-devel/autoconf-2.63:2.5"
+	!<=sys-devel/autoconf-2.63:2.5
+"
 
 src_prepare() {
-	tc-export CXX
-	G2CONF="${G2CONF}
-		$(use_enable introspection)
-		$(use_with X xft)
-		"$(usex X --x-includes="${EPREFIX}/usr/include" "")"
-		"$(usex X --x-libraries="${EPREFIX}/usr/$(get_libdir)" "")
-
 	epatch "${FILESDIR}/${PN}-1.32.1-lib64.patch"
 	eautoreconf
 
 	gnome2_src_prepare
+}
+
+src_configure() {
+	tc-export CXX
+
+	gnome2_src_configure \
+		--with-cairo \
+		$(use_enable introspection) \
+		$(use_with X xft) \
+		"$(usex X --x-includes="${EPREFIX}/usr/include" "")" \
+		"$(usex X --x-libraries="${EPREFIX}/usr/$(get_libdir)" "")"
 }
 
 src_install() {
