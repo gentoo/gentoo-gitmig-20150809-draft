@@ -1,20 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.016.ebuild,v 1.1 2013/12/19 17:37:56 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.017.ebuild,v 1.1 2013/12/23 17:08:55 hasufell Exp $
 
 EAPI=5
 
 inherit check-reqs eutils gnome2-utils games
 
 ENGINE_PV=4.2.015
-FULL_P=UrbanTerror42_full012
+FULL_P=UrbanTerror42_full017
 DESCRIPTION="Hollywood tactical shooter based on the ioquake3 engine"
 HOMEPAGE="http://www.urbanterror.info/home/"
 SRC_URI="http://cdn.urbanterror.info/urt/42/zips/${FULL_P}.zip
-	http://cdn.urbanterror.info/urt/42/zips/UrbanTerror-4.2.012-to-4.2.013.zip
-	http://cdn.urbanterror.info/urt/42/zips/UrbanTerror-4.2.013-to-4.2.014.zip
-	http://cdn.urbanterror.info/urt/42/zips/UrbanTerror-4.2.014-to-4.2.015.zip
-	http://cdn.urbanterror.info/urt/42/zips/UrbanTerror-4.2.015-to-4.2.016.zip
 	https://github.com/Barbatos/ioq3-for-UrbanTerror-4/archive/release-${ENGINE_PV}.tar.gz -> ${PN}-${ENGINE_PV}.tar.gz
 	http://upload.wikimedia.org/wikipedia/en/5/56/Urbanterror.svg -> ${PN}.svg"
 
@@ -63,11 +59,13 @@ src_unpack() {
 	local i
 	default
 	# apply updates
-	for i in {2..5} ; do
-		cp -dRpf \
-			"${WORKDIR}"/UrbanTerror-4.2.01${i}-to-4.2.01$((${i} + 1))/* \
-			"${S_DATA}"/ || die
-	done
+	if [[ ${FULL_P#*full} != ${PV##*.} ]] ; then
+		for i in {2..6} ; do
+			cp -dRpf \
+				"${WORKDIR}"/UrbanTerror-4.2.01${i}-to-4.2.01$((${i} + 1))/* \
+				"${S_DATA}"/ || die
+		done
+	fi
 }
 
 src_prepare() {
