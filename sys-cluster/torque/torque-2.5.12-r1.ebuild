@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.12.ebuild,v 1.6 2013/06/01 19:49:33 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.12-r1.ebuild,v 1.1 2013/12/23 18:01:35 jsbronder Exp $
 
 EAPI=4
 
@@ -76,6 +76,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/CVE-2013-4319-2.x-root-submit-fix.patch
+
 	# Unused and causes breakage when switching from glibc to tirpc.
 	# https://github.com/adaptivecomputing/torque/pull/148
 	sed -i '/rpc\/rpc\.h/d' src/lib/Libnet/net_client.c || die

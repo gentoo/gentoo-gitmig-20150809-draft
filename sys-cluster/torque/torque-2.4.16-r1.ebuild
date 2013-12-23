@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.4.16.ebuild,v 1.14 2013/12/23 18:01:35 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.4.16-r1.ebuild,v 1.1 2013/12/23 18:01:35 jsbronder Exp $
 
 EAPI=2
 WANT_AUTOMAKE="1.12"
@@ -13,7 +13,7 @@ SRC_URI="http://www.adaptivecomputing.com/resources/downloads/${PN}/${P}.tar.gz"
 LICENSE="openpbs"
 
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="tk +crypt drmaa server +syslog doc cpusets kernel_linux"
 
 # ed is used by makedepend-sh

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-4.1.5.1.ebuild,v 1.4 2013/06/12 06:53:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-4.1.5.1-r1.ebuild,v 1.1 2013/12/23 18:01:35 jsbronder Exp $
 
-EAPI=2
+EAPI=4
 inherit flag-o-matic eutils linux-info
 
 DESCRIPTION="Resource manager and queuing system based on OpenPBS"
@@ -75,6 +75,7 @@ src_prepare() {
 	sed -i '/mk_default_ld_lib_file || return 1/d' buildutils/pbs_mkdirs.in || die
 
 	epatch "${FILESDIR}"/${P}-tcl8.6.patch
+	epatch "${FILESDIR}"/CVE-2013-4319-4.x-root-submit-fix.patch
 }
 
 src_configure() {
