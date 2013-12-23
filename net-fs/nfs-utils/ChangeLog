@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.234 2013/12/22 13:19:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.235 2013/12/23 15:59:07 ago Exp $
+
+  23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> nfs-utils-1.2.9.ebuild:
+  Stable for sparc, wrt bug #493422
 
   22 Dec 2013; Agostino Sarubbo <ago@gentoo.org> nfs-utils-1.2.9.ebuild:
   Stable for ppc64, wrt bug #493422
