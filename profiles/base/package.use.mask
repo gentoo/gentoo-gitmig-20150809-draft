@@ -1,10 +1,17 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.529 2013/12/20 19:43:18 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.530 2013/12/23 23:26:32 eva Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Gilles Dartiguelongue <eva@gentoo.org> (29 Nov 2013)
+# Gstreamer support fails to build due to libtool shortcomings when using
+# an intermediate library as a dependency of another libtool target dependency.
+# Since this is new and unused yet, keep it masked for now and check
+# with upstream if there is something that can be done to fix the issue.
+media-libs/cogl gstreamer
 
 # Rick Farina <zerochaos@gentoo.org> (20 Dec 2013)
 # masked pending rake 10 availability
