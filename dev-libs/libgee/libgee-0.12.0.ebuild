@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.10.4.ebuild,v 1.1 2013/08/25 18:37:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.12.0.ebuild,v 1.1 2013/12/23 23:00:03 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ IUSE="+introspection"
 
 # FIXME: add doc support, requires valadoc
 RDEPEND="
-	>=dev-libs/glib-2.32:2
+	>=dev-libs/glib-2.36:2
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6:= )
 "
 DEPEND="${RDEPEND}
