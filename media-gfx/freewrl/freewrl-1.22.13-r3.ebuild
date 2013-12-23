@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.13-r2.ebuild,v 1.2 2013/08/09 13:42:13 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.13-r3.ebuild,v 1.1 2013/12/23 16:20:49 axs Exp $
 
 EAPI=5
 
@@ -50,6 +50,7 @@ src_prepare() {
 		epatch "${FILESDIR}"/${P}-mozjs187-config.patch
 		eautoreconf
 	fi
+	epatch "${FILESDIR}"/${P}-desktop.patch
 }
 
 src_configure() {
