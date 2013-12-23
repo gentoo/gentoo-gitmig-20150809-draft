@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-9999.ebuild,v 1.1 2013/09/26 08:19:06 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-9999.ebuild,v 1.2 2013/12/23 19:59:12 swift Exp $
 
 EAPI=5
 
@@ -25,14 +25,19 @@ fi
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="bash-completion debug doc ldap nss perl python rpm selinux sce sql test"
-RESTRICT="test"
+IUSE="acl bash-completion caps debug doc gconf ldap nss pcre perl python rpm selinux sce sql test xattr"
+#RESTRICT="test"
 
 RDEPEND="!nss? ( dev-libs/libgcrypt )
 	nss? ( dev-libs/nss )
+	acl? ( virtual/acl )
+	caps? ( sys-libs/libcap )
+	gconf? ( gnome-base/gconf )
 	ldap? ( net-nds/openldap )
+	pcre? ( dev-libs/libpcre )
 	rpm? ( >=app-arch/rpm-4.9 )
 	sql? ( dev-db/opendbx )
+	xattr? ( sys-apps/attr )
 	dev-libs/libpcre
 	dev-libs/libxml2
 	dev-libs/libxslt
@@ -135,9 +140,9 @@ src_configure() {
 
 src_compile() {
 	emake
-	if [[ "${PV}" == "9999" ]] && use doc ; then
+	if use doc ; then
 		einfo "Building HTML documentation using Doxygen (which will take a while)"
-		cd docs && doxygen Doxyfile
+		cd docs && doxygen Doxyfile || die
 	fi
 }
 

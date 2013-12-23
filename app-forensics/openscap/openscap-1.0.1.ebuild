@@ -1,12 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-0.9.4.1.ebuild,v 1.1 2013/03/04 19:09:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-1.0.1.ebuild,v 1.1 2013/12/23 19:59:12 swift Exp $
 
-EAPI=3
+EAPI=5
 
 PYTHON_DEPEND="2"
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-inherit eutils multilib python bash-completion-r1
+inherit bash-completion-r1 eutils multilib python-r1
 
 DESCRIPTION="Framework which enables integration with the Security Content Automation Protocol (SCAP)"
 HOMEPAGE="http://www.open-scap.org/"
@@ -15,19 +16,25 @@ SRC_URI="https://fedorahosted.org/releases/o/p/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bash-completion doc ldap nss perl python rpm selinux sql test"
+IUSE="acl bash-completion caps debug doc gconf ldap nss pcre perl python rpm selinux sce sql test xattr"
 #RESTRICT="test"
 
 RDEPEND="!nss? ( dev-libs/libgcrypt )
 	nss? ( dev-libs/nss )
+	acl? ( virtual/acl )
+	caps? ( sys-libs/libcap )
+	gconf? ( gnome-base/gconf )
 	ldap? ( net-nds/openldap )
+	pcre? ( dev-libs/libpcre )
 	rpm? ( >=app-arch/rpm-4.9 )
 	sql? ( dev-db/opendbx )
+	xattr? ( sys-apps/attr )
 	dev-libs/libpcre
 	dev-libs/libxml2
 	dev-libs/libxslt
 	net-misc/curl"
 DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )
 	perl? ( dev-lang/swig )
 	python? ( dev-lang/swig )
 	test? (
@@ -36,12 +43,11 @@ DEPEND="${RDEPEND}
 		net-misc/ipcalc
 		sys-apps/grep )"
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
-
 src_prepare() {
+#	uncoment for debugging test
+#	sed -i 's,set -e,&;set -x,'	tests/API/XCCDF/unittests/test_remediate_simple.sh || die
+	sed -i 's,^    bash,    LC_ALL=C bash,'	tests/probes/process/test_probes_process.sh || die
+
 	sed -i 's/uname -p/uname -m/' tests/probes/uname/test_probes_uname.xml.sh || die
 
 	#probe runlevel for non-centos/redhat/fedora is not implemented
@@ -87,6 +93,9 @@ src_prepare() {
 
 src_configure() {
 	local myconf
+	if use debug ; then
+		myconf+=" --enable-debug"
+	fi
 	if use python ; then
 		myconf+=" --enable-python"
 	else
@@ -100,7 +109,19 @@ src_configure() {
 	else
 		myconf+=" --with-crypto=gcrypt"
 	fi
+	if use sce ; then
+		myconf+=" --enable-sce"
+	else
+		myconf+=" --enable-sce=no"
+	fi
 	econf ${myconf}
+}
+
+src_compile() {
+	emake
+	if use doc ; then
+		cd docs && doxygen Doxyfile || die
+	fi
 }
 
 src_install() {
