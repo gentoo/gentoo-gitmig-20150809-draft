@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/man/man-0.ebuild,v 1.4 2013/12/23 09:36:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/man/man-0-r1.ebuild,v 1.1 2013/12/23 17:36:24 pacho Exp $
 
 EAPI=3
 
