@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15275 2013/12/23 22:06:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15276 2013/12/23 23:19:32 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -139,7 +139,6 @@
 >=media-sound/gnome-music-3.10
 >=media-video/cheese-3.10
 >=media-video/totem-3.10
->=net-analyzer/gnome-nettool-3.8
 >=net-im/empathy-3.10
 >=net-libs/glib-networking-2.38
 >=net-libs/gnome-online-accounts-3.10
