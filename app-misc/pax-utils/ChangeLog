@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.151 2013/12/07 09:54:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.152 2013/12/23 09:23:04 vapier Exp $
+
+  23 Dec 2013; Mike Frysinger <vapier@gentoo.org> pax-utils-0.7.ebuild:
+  Stabilize for all #487676.
 
   07 Dec 2013; Pacho Ramos <pacho@gentoo.org> pax-utils-0.7.ebuild:
   x86 stable, bug #487676
