@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/man/man-0.ebuild,v 1.3 2013/02/19 02:39:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/man/man-0.ebuild,v 1.4 2013/12/23 09:36:43 pacho Exp $
 
 EAPI=3
 
@@ -14,5 +14,4 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc-
 IUSE=""
 
 DEPEND=""
-RDEPEND="|| ( sys-apps/man
-		sys-apps/man-db )"
+RDEPEND="|| ( sys-apps/man-db sys-apps/man )"
