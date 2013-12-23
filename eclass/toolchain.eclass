@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.608 2013/12/21 11:59:18 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.609 2013/12/23 21:41:19 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
 RESTRICT="strip" # cross-compilers need controlled stripping
 
-inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib fixheadtails pax-utils
+inherit eutils fixheadtails flag-o-matic gnuconfig libtool multilib pax-utils toolchain-funcs versionator
 
 if [[ ${PV} == *_pre9999* ]] ; then
 	EGIT_REPO_URI="git://gcc.gnu.org/git/gcc.git"
@@ -79,6 +79,7 @@ elif [[ ${GCC_PV} == *_rc* ]] ; then
 fi
 
 export GCC_FILESDIR=${GCC_FILESDIR:-${FILESDIR}}
+
 PREFIX=${TOOLCHAIN_PREFIX:-/usr}
 
 if tc_version_is_at_least 3.4.0 ; then
@@ -110,14 +111,13 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 	[[ -n ${HTB_VER} ]] && IUSE+=" boundschecking"
 	[[ -n ${D_VER}   ]] && IUSE+=" d"
 	[[ -n ${SPECS_VER} ]] && IUSE+=" nossp"
-	tc_version_is_at_least 3 && IUSE+=" doc gcj gtk hardened multilib objc"
+	tc_version_is_at_least 3 && IUSE+=" doc gcj awt hardened multilib objc"
 	tc_version_is_at_least 4.0 && IUSE+=" objc-gc"
 	tc_version_is_at_least 4.0 && ! tc_version_is_at_least 4.9 && IUSE+=" mudflap"
 	tc_version_is_at_least 4.1 && IUSE+=" libssp objc++"
 	tc_version_is_at_least 4.2 && IUSE+=" openmp"
 	tc_version_is_at_least 4.3 && IUSE+=" fixed-point"
 	tc_version_is_at_least 4.6 && IUSE+=" graphite"
-	tc_version_is_at_least 4.6 && IUSE+=" lto"
 	tc_version_is_at_least 4.7 && IUSE+=" go"
 fi
 
@@ -187,7 +187,7 @@ if in_iuse gcj ; then
 	"
 	tc_version_is_at_least 3.4 && GCJ_GTK_DEPS+=" x11-libs/pango"
 	tc_version_is_at_least 4.2 && GCJ_DEPS+=" app-arch/zip app-arch/unzip"
-	DEPEND+=" gcj? ( gtk? ( ${GCJ_GTK_DEPS} ) ${GCJ_DEPS} )"
+	DEPEND+=" gcj? ( awt? ( ${GCJ_GTK_DEPS} ) ${GCJ_DEPS} )"
 fi
 
 PDEPEND=">=sys-devel/gcc-config-1.7"
@@ -340,8 +340,12 @@ toolchain_pkg_setup() {
 			"in your make.conf if you want to use this version."
 	fi
 
+	[[ -z ${UCLIBC_VER} ]] && [[ ${CTARGET} == *-uclibc* ]] && \
+		die "Sorry, this version does not support uClibc"
+
 	# we dont want to use the installed compiler's specs to build gcc!
 	unset GCC_SPECS
+	unset LANGUAGES #265283
 
 	if ! use_if_iuse cxx ; then
 		use_if_iuse go && ewarn 'Go requires a C++ compiler, disabled due to USE="-cxx"'
@@ -350,16 +354,11 @@ toolchain_pkg_setup() {
 	fi
 
 	want_minispecs
-
-	unset LANGUAGES #265283
 }
 
 #----> src_unpack <----
 
 toolchain_src_unpack() {
-	[[ -z ${UCLIBC_VER} ]] && [[ ${CTARGET} == *-uclibc* ]] && \
-		die "Sorry, this version does not support uClibc"
-
 	if [[ ${PV} == *9999* ]]; then
 		git-2_src_unpack
 	else
@@ -438,7 +437,7 @@ toolchain_src_unpack() {
 
 	# disable --as-needed from being compiled into gcc specs
 	# natively when using a gcc version < 3.4.4
-	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992
+	# http://gcc.gnu.org/PR14992
 	if ! tc_version_is_at_least 3.4.4 ; then
 		sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g "${S}"/gcc/config.in
 	fi
@@ -463,8 +462,6 @@ toolchain_src_unpack() {
 	# update configure files
 	local f
 	einfo "Fixing misc issues in configure files"
-	# TODO - check if we can drop this now that we don't gen info files
-	tc_version_is_at_least 4.1 && epatch "${GCC_FILESDIR}"/gcc-configure-texinfo.patch
 	for f in $(grep -l 'autoconf version 2.13' $(find "${S}" -name configure)) ; do
 		ebegin "  Updating ${f/${S}\/} [LANG]"
 		patch "${f}" "${GCC_FILESDIR}"/gcc-configure-LANG.patch >& "${T}"/configure-patch.log \
@@ -513,7 +510,7 @@ gcc_quick_unpack() {
 		ebegin "Adding support for the D language"
 		./gcc/d/setup-gcc.sh >& "${T}"/dgcc.log
 		if ! eend $? ; then
-			eerror "The D gcc package failed to apply"
+			eerror "The D GCC package failed to apply"
 			eerror "Please include this log file when posting a bug report:"
 			eerror "  ${T}/dgcc.log"
 			die "failed to include the D language"
@@ -729,8 +726,6 @@ do_gcc_rename_java_bins() {
 gcc_do_filter_flags() {
 	strip-flags
 
-	# In general gcc does not like optimization, and adds -O2 where
-	# it is safe.  This is especially true for gcc 3.3 + 3.4
 	replace-flags -O? -O2
 
 	# dont want to funk ourselves
@@ -801,24 +796,6 @@ gcc_do_filter_flags() {
 
 	strip-unsupported-flags
 	
-	# CFLAGS logic (verified with 3.4.3):
-	# CFLAGS:
-	#	This conflicts when creating a crosscompiler, so set to a sane
-	#	  default in this case:
-	#	used in ./configure and elsewhere for the native compiler
-	#	used by gcc when creating libiberty.a
-	#	used by xgcc when creating libstdc++ (and probably others)!
-	#	  this behavior should be removed...
-	#
-	# CXXFLAGS:
-	#	used by xgcc when creating libstdc++
-	#
-	# STAGE1_CFLAGS (not used in creating a crosscompile gcc):
-	#	used by ${CHOST}-gcc for building stage1 compiler
-	#
-	# BOOT_CFLAGS (not used in creating a crosscompile gcc):
-	#	used by xgcc for building stage2/3 compiler
-
 	if is_crosscompile ; then
 		# Set this to something sane for both native and target
 		CFLAGS="-O2 -pipe"
@@ -924,7 +901,7 @@ gcc_do_configure() {
 
 	# Branding
 	tc_version_is_at_least 4.3 && confgcc+=(
-		--with-bugurl=http://bugs.gentoo.org/
+		--with-bugurl=https://bugs.gentoo.org/
 		--with-pkgversion="${BRANDING_GCC_PKGVERSION}"
 	)
 
@@ -1148,7 +1125,7 @@ gcc_do_configure() {
 
 	if ! is_gcj ; then
 		confgcc+=( --disable-libgcj )
-	elif use gtk ; then
+	elif use awt ; then
 		confgcc+=( --enable-java-awt=gtk )
 	fi
 
@@ -1195,7 +1172,7 @@ gcc_do_configure() {
 	fi
 
 	if tc_version_is_at_least 4.6 ; then
-		confgcc+=( $(use_enable lto) )
+		confgcc+=( --enable-lto )
 	elif tc_version_is_at_least 4.5 ; then
 		confgcc+=( --disable-lto )
 	fi
@@ -1302,6 +1279,7 @@ toolchain_src_compile() {
 	gcc_do_filter_flags
 	einfo "CFLAGS=\"${CFLAGS}\""
 	einfo "CXXFLAGS=\"${CXXFLAGS}\""
+	einfo "LDFLAGS=\"${LDFLAGS}\""
 
 	# Force internal zip based jar script to avoid random
 	# issues with 3rd party jar implementations.  #384291
