@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dialog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.190 2013/12/22 19:18:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.191 2013/12/23 15:31:31 ago Exp $
+
+  23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> dialog-1.2.20130928.ebuild:
+  Stable for sparc, wrt bug #493942
 
   22 Dec 2013; Pacho Ramos <pacho@gentoo.org> dialog-1.2.20130928.ebuild:
   amd64 stable, bug #493942
