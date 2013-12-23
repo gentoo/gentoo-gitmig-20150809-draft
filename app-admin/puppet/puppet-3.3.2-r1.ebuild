@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.3.1.ebuild,v 1.1 2013/10/12 10:37:36 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.3.2-r1.ebuild,v 1.1 2013/12/23 00:01:03 prometheanfire Exp $
 
 EAPI="5"
 
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 inherit elisp-common xemacs-elisp-common eutils user ruby-ng versionator
 
@@ -68,6 +68,12 @@ each_ruby_install() {
 }
 
 all_ruby_install() {
+	#systemd stuffs
+	insinto /usr/lib/systemd/system
+	doins "${WORKDIR}/all/${P}/ext/systemd/puppetagent.service"
+	insinto /usr/lib/tmpfiles.d
+	newins "${FILESDIR}/tmpfiles.d" "puppet.conf"
+
 	newinitd "${FILESDIR}"/puppet.init-r1 puppet
 
 	# Initial configuration files
@@ -80,6 +86,8 @@ all_ruby_install() {
 	if use minimal ; then
 		rm "${ED}/etc/puppet/auth.conf"
 	else
+		insinto /usr/lib/systemd/system
+		doins "${WORKDIR}/all/${P}/ext/systemd/puppetmaster.service"
 		newinitd "${FILESDIR}"/puppetmaster.init-r1 puppetmaster
 		newconfd "${FILESDIR}"/puppetmaster.confd puppetmaster
 
@@ -118,14 +126,6 @@ pkg_postinst() {
 	elog
 	elog "Please, *don't* include the --ask option in EMERGE_EXTRA_OPTS as this could"
 	elog "cause puppet to hang while installing packages."
-	elog
-	elog "Puppet uses eix to get information about currently installed packages,"
-	elog "so please keep the eix metadata cache updated so puppet is able to properly"
-	elog "handle package installations."
-	elog
-	elog "Currently puppet only supports adding and removing services to the default"
-	elog "runlevel, if you want to add/remove a service from another runlevel you may"
-	elog "do so using symlinking."
 	elog
 	elog "Portage Puppet module with Gentoo-specific resources:"
 	elog "http://forge.puppetlabs.com/gentoo/portage"
