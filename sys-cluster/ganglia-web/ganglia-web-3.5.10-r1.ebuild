@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia-web/ganglia-web-3.5.8.ebuild,v 1.1 2013/06/22 00:02:26 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia-web/ganglia-web-3.5.10-r1.ebuild,v 1.1 2013/12/23 16:54:37 jsbronder Exp $
 
 EAPI=4
 WEBAPP_MANUAL_SLOT="yes"
@@ -28,6 +28,10 @@ src_configure() {
 
 src_compile() {
 	return 0
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/CVE-2013-6395-fix-xss.patch
 }
 
 src_install() {
