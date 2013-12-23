@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.123 2013/12/23 14:56:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.124 2013/12/23 15:22:33 blueness Exp $
+
+  23 Dec 2013; Anthony G. Basile <blueness@gentoo.org> package.mask:
+  Relax masking on spidermonkey after discussion with desktop folks
 
   23 Dec 2013; Anthony G. Basile <blueness@gentoo.org> package.mask:
   Mask >dev-lang/spidermonkey-1.8.5-r4 becuase of bug #491294

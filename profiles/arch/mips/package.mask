@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.mask,v 1.20 2013/12/23 14:56:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.mask,v 1.21 2013/12/23 15:22:33 blueness Exp $
 
 # MacroAssembler is not supported on mips, bug #491294
->dev-lang/spidermonkey-1.8.5-r4
+>=dev-lang/spidermonkey-1.8.6
 
 # Broken due to not building patches that upstream slipped through.
 =sys-kernel/gentoo-sources-3.4.58
