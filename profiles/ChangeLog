@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8443 2013/12/22 17:12:45 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8444 2013/12/23 13:06:41 civil Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Dec 2013; Vladimir Smirnov <civil@gentoo.org> package.mask:
+  Remove some obsolete virtual/perl masks.
 
   22 Dec 2013; Davide Pesavento <pesa@gentoo.org> package.mask:
   Remove obsolete sci-electronics/qelectrotech masks.
