@@ -1,7 +1,5 @@
-Index: netwatch-1.3.0/Makefile.in
-===================================================================
---- netwatch-1.3.0.orig/Makefile.in
-+++ netwatch-1.3.0/Makefile.in
+--- a/Makefile.in
++++ b/Makefile.in
 @@ -16,10 +16,10 @@ INSTALLDIR=$(bindir)
  all:	$(EXEC)
  
