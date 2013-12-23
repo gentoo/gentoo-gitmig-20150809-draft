@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwatch/netwatch-1.3.0.1-r2.ebuild,v 1.1 2013/12/23 01:59:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwatch/netwatch-1.3.0.1-r2.ebuild,v 1.2 2013/12/23 02:01:36 jer Exp $
 
 EAPI=5
 
@@ -36,12 +36,12 @@ src_prepare() {
 }
 
 src_install() {
-	dosbin netresolv netwatch || die "dosbin failed"
+	dosbin netresolv netwatch
 
-	doman netwatch.1 || die "doman failed"
-	dodoc BUGS CHANGES README* TODO || die "dodoc failed"
+	doman netwatch.1
+	dodoc BUGS CHANGES README* TODO
 
 	if use doc; then
-		dohtml NetwatchKeyCommands.html || die "dohtml failed"
+		dohtml NetwatchKeyCommands.html
 	fi
 }
