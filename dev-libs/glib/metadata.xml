@@ -8,7 +8,4 @@
 	<flag name="utils">Install gtester-report utility to generate test
 		report files for your software.</flag>
   </use>
-  <upstream>
-    <remote-id type="cpe">cpe:/a:gnome:glib</remote-id>
-  </upstream>
 </pkgmetadata>
