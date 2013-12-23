@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.182 2013/12/06 17:08:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.183 2013/12/23 22:09:21 maekke Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (28 Nov 2013)
 # Missing keywords, bug #492820
@@ -88,7 +88,7 @@ dev-python/ipython mongodb
 
 # Markus Meier <maekke@gentoo.org> (09 May 2013)
 # unkeyworded deps for x11-misc/lightdm
-x11-misc/lightdm razor
+x11-misc/lightdm razor kde
 
 # Agostino Sarubbo <ago@gentoo.org> (05 May 2013)
 # dev-util/google-perftools is not keyworded for arm
