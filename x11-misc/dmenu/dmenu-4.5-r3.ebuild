@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-4.5-r3.ebuild,v 1.8 2013/12/22 12:02:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-4.5-r3.ebuild,v 1.9 2013/12/23 22:51:23 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -42,16 +42,16 @@ src_prepare() {
 
 src_compile() {
 	emake CC=$(tc-getCC) \
-		XFTINC=$( $(tc-getPKG_CONFIG) --cflags xft 2>/dev/null ) \
-		XFTLIBS=$( $(tc-getPKG_CONFIG) --libs xft 2>/dev/null ) \
-		XINERAMAFLAGS=$(
+		"XFTINC=$( $(tc-getPKG_CONFIG) --cflags xft 2>/dev/null )" \
+		"XFTLIBS=$( $(tc-getPKG_CONFIG) --libs xft 2>/dev/null )" \
+		"XINERAMAFLAGS=$(
 			usex xinerama "-DXINERAMA $(
 				$(tc-getPKG_CONFIG) --cflags xinerama 2>/dev/null
 			)" ''
-		) \
-		XINERAMALIBS=$(
+		)" \
+		"XINERAMALIBS=$(
 			usex xinerama "$( $(tc-getPKG_CONFIG) --libs xinerama 2>/dev/null)" ''
-		)
+		)"
 }
 
 src_install() {
