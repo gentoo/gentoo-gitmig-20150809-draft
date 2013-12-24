@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.265 2013/12/22 15:42:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.266 2013/12/24 15:42:54 pacho Exp $
+
+*gtkmm-3.10.1 (24 Dec 2013)
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org> +gtkmm-3.10.1.ebuild:
+  Version bump for Gnome 3.10
 
   22 Dec 2013; Jeroen Roovers <jer@gentoo.org> gtkmm-3.8.1.ebuild:
   Stable for HPPA (bug #478252).
