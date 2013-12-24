@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnome-nibbles/gnome-nibbles-3.8.0.ebuild,v 1.3 2013/11/06 20:56:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnome-nibbles/gnome-nibbles-3.10.1.ebuild,v 1.1 2013/12/24 16:09:35 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -18,8 +18,8 @@ IUSE=""
 RDEPEND="
 	dev-libs/glib:2
 	>=gnome-base/librsvg-2.32:2
-	>=media-libs/clutter-1:1.0
-	>=media-libs/clutter-gtk-0.91.6:1.0
+	>=media-libs/clutter-1.14.4:1.0
+	>=media-libs/clutter-gtk-1.2:1.0
 	>=media-libs/libcanberra-0.26[gtk3]
 	>=x11-libs/gtk+-3.4:3
 "
