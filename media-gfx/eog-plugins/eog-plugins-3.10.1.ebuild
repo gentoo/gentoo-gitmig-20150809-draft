@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/eog-plugins-3.8.0.ebuild,v 1.1 2013/03/28 17:36:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/eog-plugins-3.10.1.ebuild,v 1.1 2013/12/24 17:17:45 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,12 +16,14 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+exif +flickr map +picasa +python"
-REQUIRED_USE="map? ( exif )"
+REQUIRED_USE="
+	map? ( exif )
+	python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
 	>=dev-libs/glib-2.32:2
 	>=dev-libs/libpeas-0.7.4:=
-	>=media-gfx/eog-3.5.5
+	>=media-gfx/eog-3.9.1
 	>=x11-libs/gtk+-3.3.8:3
 	exif? ( >=media-libs/libexif-0.6.16 )
 	flickr? ( media-gfx/postr )
@@ -46,9 +48,7 @@ DEPEND="${RDEPEND}
 "
 
 pkg_setup() {
-	if use python; then
-		python-single-r1_pkg_setup
-	fi
+	use python && python-single-r1_pkg_setup
 }
 
 src_configure() {
@@ -58,8 +58,7 @@ src_configure() {
 	use map && plugins="${plugins},map"
 	use picasa && plugins="${plugins},postasa"
 	use python && plugins="${plugins},slideshowshuffle,pythonconsole,fullscreenbg,export-to-folder"
-	G2CONF="${G2CONF}
-		$(use_enable python)
-		--with-plugins=${plugins}"
-	gnome2_src_configure
+	gnome2_src_configure \
+		$(use_enable python) \
+		--with-plugins=${plugins}
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-3.6.2.ebuild,v 1.7 2013/02/02 22:44:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-3.10.2.ebuild,v 1.1 2013/12/24 17:17:43 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -9,7 +9,7 @@ GNOME2_LA_PUNT="yes"
 inherit gnome2
 
 DESCRIPTION="The Eye of GNOME image viewer"
-HOMEPAGE="http://www.gnome.org/projects/eog/"
+HOMEPAGE="http://projects.gnome.org/eog/"
 
 LICENSE="GPL-2+"
 SLOT="1"
@@ -19,7 +19,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 REQUIRED_USE="exif? ( jpeg )"
 
 RDEPEND="
-	>=x11-libs/gtk+-3.3.6:3[introspection,X]
+	>=x11-libs/gtk+-3.7.8:3[introspection,X]
 	>=dev-libs/glib-2.31:2
 	>=dev-libs/libxml2-2:2
 	>=dev-libs/libpeas-0.7.4:=[gtk]
@@ -46,14 +46,13 @@ DEPEND="${RDEPEND}
 "
 
 src_configure() {
-	G2CONF="${G2CONF}
-		$(use_enable introspection)
-		$(use_with jpeg libjpeg)
-		$(use_with exif libexif)
-		$(use_with lcms cms)
-		$(use_with xmp)
-		$(use_with svg librsvg)
-		ITSTOOL=$(type -P true)"
 	DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README THANKS TODO"
-	gnome2_src_configure
+	gnome2_src_configure \
+		$(use_enable introspection) \
+		$(use_with jpeg libjpeg) \
+		$(use_with exif libexif) \
+		$(use_with lcms cms) \
+		$(use_with xmp) \
+		$(use_with svg librsvg) \
+		ITSTOOL=$(type -P true)
 }

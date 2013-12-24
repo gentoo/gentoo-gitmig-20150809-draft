@@ -1,14 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-screenshot/gnome-screenshot-3.6.1.ebuild,v 1.1 2012/12/23 23:03:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-screenshot/gnome-screenshot-3.10.1.ebuild,v 1.1 2013/12/24 17:20:42 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-GNOME2_LA_PUNT="yes"
 
-inherit gnome2
+inherit gnome2 readme.gentoo
 
-DESCRIPTION="Screenshot utility for GNOME 3"
+DESCRIPTION="Screenshot utility for GNOME"
 HOMEPAGE="https://live.gnome.org/GnomeUtils"
 
 LICENSE="GPL-2+"
@@ -18,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-fr
 
 # libcanberra 0.26-r2 is needed for gtk+:3 fixes
 COMMON_DEPEND="
-	>=dev-libs/glib-2.33.1:2
+	>=dev-libs/glib-2.35.1:2
 	>=media-libs/libcanberra-0.26-r2[gtk3]
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
@@ -37,11 +36,16 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 "
 
+DOC_CONTENTS="${P} saves screenshots in ~/Pictures/ and defaults to
+	non-interactive mode when launched from a terminal. If you want to choose
+	where to save the screenshot, run 'gnome-screenshot --interactive'"
+
+src_install() {
+	gnome2_src_install
+	readme.gentoo_create_doc
+}
+
 pkg_postinst() {
 	gnome2_pkg_postinst
-
-	elog "${P} saves screenshots in ~/Pictures/ and defaults to"
-	elog "non-interactive mode when launched from a terminal. If you want to choose"
-	elog "where to save the screenshot, run"
-	elog " $ gnome-screenshot --interactive"
+	readme.gentoo_print_elog
 }
