@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/pyatspi-2.6.0-r1.ebuild,v 1.3 2013/01/06 09:29:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/pyatspi-2.10.0.ebuild,v 1.1 2013/12/24 16:04:57 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,11 +16,13 @@ LICENSE="LGPL-2 GPL-2+"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="" # test
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 # test suite is obsolete (at-spi-1.x era) and unpassable
 RESTRICT="test"
 
-COMMON_DEPEND="dev-python/dbus-python[${PYTHON_USEDEP}]
+COMMON_DEPEND="
+	dev-python/dbus-python[${PYTHON_USEDEP}]
 	>=dev-python/pygobject-2.90.1:3[${PYTHON_USEDEP}]
 	${PYTHON_DEPS}
 "
@@ -42,8 +44,7 @@ src_prepare() {
 }
 
 src_configure() {
-	G2CONF="${G2CONF} --disable-tests"
-	python_foreach_impl run_in_build_dir gnome2_src_configure
+	python_foreach_impl run_in_build_dir gnome2_src_configure --disable-tests
 }
 
 src_compile() {
@@ -51,15 +52,8 @@ src_compile() {
 }
 
 src_install() {
-	installing() {
-		gnome2_src_install
-		python_doscript examples/magFocusTracker.py
-	}
-	python_foreach_impl run_in_build_dir installing
-}
+	python_foreach_impl run_in_build_dir gnome2_src_install
 
-run_in_build_dir() {
-	pushd "${BUILD_DIR}" > /dev/null || die
-	"$@"
-	popd > /dev/null
+	docinto examples
+	dodoc examples/*.py
 }
