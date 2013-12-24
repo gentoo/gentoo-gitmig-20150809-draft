@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.44.2.ebuild,v 1.1 2013/12/24 15:58:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.44.2.ebuild,v 1.2 2013/12/24 16:02:33 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -10,7 +10,7 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 inherit gnome2 python-any-r1
 
 DESCRIPTION="An HTTP library implementation in C"
-HOMEPAGE="http://live.gnome.org/LibSoup"
+HOMEPAGE="https://wiki.gnome.org/LibSoup"
 
 LICENSE="LGPL-2+"
 SLOT="2.4"
