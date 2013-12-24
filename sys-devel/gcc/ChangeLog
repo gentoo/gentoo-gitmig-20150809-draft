@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.986 2013/12/24 00:59:46 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.987 2013/12/24 06:16:08 dirtyepic Exp $
 
   24 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> gcc-4.6.4.ebuild,
   gcc-4.7.3-r1.ebuild:
@@ -15,7 +15,8 @@
   gcc-4.8.0.ebuild, gcc-4.8.1-r1.ebuild, gcc-4.8.2.ebuild, metadata.xml:
   4.8.2 p1.1: Fix segfault with std::nth_element (bug #494796) and build
   failures in gcj due to freetype include dir changes (bug #494606). Rename gtk
-  USE flag to awt. Remove lto USE flag. Remove messages.
+  USE flag to awt. Remove lto USE flag - lto support is now always available.
+  Remove messages.
 
   23 Dec 2013; Mike Frysinger <vapier@gentoo.org> gcc-4.7.3-r1.ebuild:
   Mark ia64 stable #467274.
