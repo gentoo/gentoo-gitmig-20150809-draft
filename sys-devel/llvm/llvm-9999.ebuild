@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.70 2013/12/24 10:09:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.71 2013/12/24 20:07:03 mgorny Exp $
 
 EAPI=5
 
@@ -272,14 +272,21 @@ set_makeargs() {
 		use clang && tools+=( clang )
 
 		if multilib_build_binaries; then
-			use gold && tools+=( gold )
 			tools+=(
 				opt llvm-as llvm-dis llc llvm-ar llvm-nm llvm-link lli
 				llvm-extract llvm-mc llvm-bcanalyzer llvm-diff macho-dump
 				llvm-objdump llvm-readobj llvm-rtdyld llvm-dwarfdump llvm-cov
 				llvm-size llvm-stress llvm-mcmarkup llvm-symbolizer obj2yaml
-				yaml2obj lto llvm-lto
+				yaml2obj lto
 			)
+
+			# those tools require 'lto' built first, so we need to delay
+			# building them to a second run
+			if [[ ${1} != -1 ]]; then
+				tools+=( llvm-lto )
+
+				use gold && tools+=( gold )
+			fi
 		fi
 
 		MAKEARGS+=(
@@ -294,11 +301,13 @@ set_makeargs() {
 
 multilib_src_compile() {
 	local MAKEARGS
-	set_makeargs
-
+	set_makeargs -1
 	emake "${MAKEARGS[@]}"
 
 	if multilib_build_binaries; then
+		set_makeargs
+		emake -C tools "${MAKEARGS[@]}"
+
 		emake -C "${S}"/docs -f Makefile.sphinx man
 		use clang && emake -C "${S}"/tools/clang/docs/tools \
 			BUILD_FOR_WEBSITE=1 DST_MAN_DIR="${T}"/ man

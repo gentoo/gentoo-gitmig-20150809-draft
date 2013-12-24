@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.156 2013/12/24 10:09:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.157 2013/12/24 20:07:03 mgorny Exp $
+
+  24 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Fix libLTO linking parallel make issue, bug #494922.
 
   24 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
   Create the gold plugin symlink only with USE=gold.
