@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.105 2013/12/24 11:33:12 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.106 2013/12/24 12:21:31 ultrabug Exp $
+
+*rsyslog-7.4.7 (24 Dec 2013)
+
+  24 Dec 2013; Ultrabug <ultrabug@gentoo.org> rsyslog-7.2.7.ebuild,
+  rsyslog-7.4.3.ebuild, rsyslog-7.4.4.ebuild, rsyslog-7.4.6.ebuild,
+  +rsyslog-7.4.7.ebuild, metadata.xml:
+  Fix #490992, #494150 thx to Marcin Mirosław & Andrey Volkov. Fix #492442,
+  #494532 using slot operators thx to Thomas D. Add mongodb to IUSE fix #494268
+  thx to Vadim Kuznetsov. Version bump.
 
   24 Dec 2013; Ultrabug <ultrabug@gentoo.org> rsyslog-7.2.7.ebuild,
   rsyslog-7.4.3.ebuild, rsyslog-7.4.4.ebuild, rsyslog-7.4.6.ebuild:
