@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-7.4.3.ebuild,v 1.4 2013/11/18 14:19:04 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-7.4.3.ebuild,v 1.5 2013/12/24 11:33:12 ultrabug Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=yes
@@ -30,7 +30,7 @@ RDEPEND="
 	relp? ( >=dev-libs/librelp-1.0.3 )
 	snmp? ( net-analyzer/net-snmp )
 	ssl? ( net-libs/gnutls dev-libs/libgcrypt )
-	zeromq? ( net-libs/czmq )
+	zeromq? ( >=net-libs/zeromq-3 <net-libs/czmq-2 )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
