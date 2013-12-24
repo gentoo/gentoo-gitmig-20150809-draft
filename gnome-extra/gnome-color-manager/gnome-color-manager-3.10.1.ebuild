@@ -1,10 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-3.6.1.ebuild,v 1.2 2013/04/07 09:22:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-3.10.1.ebuild,v 1.1 2013/12/24 16:50:02 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-GNOME2_LA_PUNT="yes"
 
 inherit gnome2
 
@@ -29,17 +28,18 @@ COMMON_DEPEND="
 	x11-libs/libXrandr
 	>=x11-libs/gtk+-3.3.8:3
 	>=x11-libs/vte-0.25.1:2.90
+	>=x11-misc/colord-0.1.34
 	>=x11-libs/colord-gtk-0.1.20
 
 	clutter? (
-		>=media-libs/clutter-1.9.11:1.0
+		>=media-libs/clutter-1.12:1.0
 		media-libs/clutter-gtk:1.0
 		media-libs/mash:0.2 )
 	packagekit? ( app-admin/packagekit-base )
 	raw? ( media-gfx/exiv2 )
 "
-RDEPEND="${COMMON_DEPEND}
-	|| ( >=x11-misc/colord-0.1.27 media-gfx/shared-color-profiles )"
+RDEPEND="${COMMON_DEPEND}"
+
 # docbook-sgml-{utils,dtd:4.1} needed to generate man pages
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-sgml-dtd:4.1

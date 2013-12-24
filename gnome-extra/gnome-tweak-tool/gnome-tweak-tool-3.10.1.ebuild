@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/gnome-tweak-tool-3.8.1.ebuild,v 1.2 2013/10/26 18:56:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/gnome-tweak-tool-3.10.1.ebuild,v 1.1 2013/12/24 17:00:45 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -23,13 +23,14 @@ COMMON_DEPEND="
 	${PYTHON_DEPS}
 	>=gnome-base/gsettings-desktop-schemas-3.4
 	>=dev-python/pygobject-3.2.1:3[${PYTHON_USEDEP}]
-	gnome-base/gconf:2
 "
 # g-s-d, gnome-desktop, gnome-shell etc. needed at runtime for the gsettings schemas
 RDEPEND="${COMMON_DEPEND}
-	gnome-base/gconf:2[introspection]
 	>=gnome-base/gnome-desktop-3.6.0.1:3=[introspection]
-	x11-libs/gtk+:3[introspection]
+	>=x11-libs/gtk+-3.9.10:3[introspection]
+
+	net-libs/libsoup[introspection]
+	x11-libs/libnotify[introspection]
 
 	>=gnome-base/gnome-settings-daemon-3
 	gnome-base/gnome-shell
@@ -38,13 +39,15 @@ RDEPEND="${COMMON_DEPEND}
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40.0
-	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
 "
 
 src_prepare() {
 	# Add contents of Gentoo's cursor theme directory to cursor theme list
-	epatch "${FILESDIR}/${PN}-3.7.4-gentoo-cursor-themes.patch"
+	epatch "${FILESDIR}/${PN}-3.10.1-gentoo-cursor-themes.patch"
+
+	# Prevent problems setting WM preferences, upstream bug #706834
+	epatch "${FILESDIR}/${PN}-3.8.1-wm-preferences.patch"
 
 	gnome2_src_prepare
 	python_copy_sources

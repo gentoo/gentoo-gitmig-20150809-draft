@@ -1,10 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sushi/sushi-3.6.1.ebuild,v 1.7 2013/02/02 22:41:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sushi/sushi-3.10.0.ebuild,v 1.1 2013/12/24 17:14:29 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-GNOME2_LA_PUNT="yes"
 
 inherit gnome2
 
@@ -20,13 +19,13 @@ IUSE="office"
 # freetype needed for font loader
 # libX11 needed for sushi_create_foreign_window()
 COMMON_DEPEND="
-	>=x11-libs/gdk-pixbuf-2.22.1[introspection]
-	>=dev-libs/gjs-0.7.7
+	>=x11-libs/gdk-pixbuf-2.23[introspection]
+	>=dev-libs/gjs-1.34
 	>=dev-libs/glib-2.29.14:2
 	>=dev-libs/gobject-introspection-0.9.6
 	>=media-libs/clutter-1.11.4:1.0[introspection]
 	>=media-libs/clutter-gtk-1.0.1:1.0[introspection]
-	>=x11-libs/gtk+-3.0.0:3[introspection]
+	>=x11-libs/gtk+-3.4.0:3[introspection]
 
 	>=app-text/evince-3.0[introspection]
 	media-libs/freetype:2
@@ -42,7 +41,6 @@ COMMON_DEPEND="
 "
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
-	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
 "
 RDEPEND="${COMMON_DEPEND}
@@ -51,11 +49,5 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 src_configure() {
-	G2CONF="${G2CONF}
-		UNOCONV=$(type -P false)
-		--disable-static"
-	if use office; then
-		G2CONF="${G2CONF} UNOCONV=$(type -P unoconv)"
-	fi
-	gnome2_src_configure
+	gnome2_src_configure --disable-static
 }
