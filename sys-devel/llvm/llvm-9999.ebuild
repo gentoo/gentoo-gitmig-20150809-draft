@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.69 2013/12/20 21:50:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.70 2013/12/24 10:09:13 mgorny Exp $
 
 EAPI=5
 
@@ -360,9 +360,11 @@ multilib_src_install() {
 		use doc && dohtml -r "${S}"/docs/_build/html/
 
 		# Symlink the gold plugin.
-		dodir /usr/${CHOST}/binutils-bin/lib/bfd-plugins
-		dosym ../../../../$(get_libdir)/LLVMgold.so \
-			/usr/${CHOST}/binutils-bin/lib/bfd-plugins/LLVMgold.so
+		if use gold; then
+			dodir /usr/${CHOST}/binutils-bin/lib/bfd-plugins
+			dosym ../../../../$(get_libdir)/LLVMgold.so \
+				/usr/${CHOST}/binutils-bin/lib/bfd-plugins/LLVMgold.so
+		fi
 
 		# install cmake modules
 		emake -C "${S%/}"_cmake/cmake/modules DESTDIR="${D}" install

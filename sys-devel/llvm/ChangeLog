@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.155 2013/12/20 21:50:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.156 2013/12/24 10:09:13 mgorny Exp $
+
+  24 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Create the gold plugin symlink only with USE=gold.
 
   20 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
   Disable libxml2 support in non-native ABIs since it is meaningful for
