@@ -1,10 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcryptui/libcryptui-3.6.0.ebuild,v 1.1 2012/12/23 17:28:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcryptui/libcryptui-3.10.1.ebuild,v 1.1 2013/12/24 17:12:49 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
-GNOME2_LA_PUNT="yes"
 
 inherit gnome2
 
@@ -13,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/projects/seahorse/index.html"
 
 LICENSE="GPL-2+ LGPL-2.1+ FDL-1.1"
 SLOT="0"
-IUSE="+introspection libnotify test"
+IUSE="+introspection libnotify"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 
 # Pull in libnotify-0.7 because it's controlled via an automagic ifdef
@@ -31,7 +30,7 @@ COMMON_DEPEND="
 		=app-crypt/gnupg-1.4* )
 
 	introspection? ( >=dev-libs/gobject-introspection-0.6.4 )
-	libnotify? ( >=x11-libs/libnotify-0.7.0 )
+	libnotify? ( >=x11-libs/libnotify-0.7:= )
 "
 DEPEND="${COMMON_DEPEND}
 	>=app-text/scrollkeeper-0.3
@@ -55,11 +54,9 @@ src_prepare() {
 }
 
 src_configure() {
-	G2CONF="${G2CONF}
-		--disable-static
-		--disable-update-mime-database
-		$(use_enable introspection)
+	gnome2_src_configure \
+		--disable-static \
+		--disable-update-mime-database \
+		$(use_enable introspection) \
 		$(use_enable libnotify)
-		$(use_enable test tests)"
-	gnome2_src_configure
 }
