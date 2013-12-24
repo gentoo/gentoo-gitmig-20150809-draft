@@ -1,10 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.18.3.ebuild,v 1.2 2013/09/08 17:19:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.20.0.ebuild,v 1.1 2013/12/24 17:34:06 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-GNOME2_LA_PUNT="yes"
 
 inherit gnome2 virtualx
 
@@ -36,13 +35,13 @@ RDEPEND="
 		>=dev-db/sqlite-3.5:3
 		dev-libs/libunistring
 	)
-	tracker? ( >=app-misc/tracker-0.14:= )
+	tracker? ( >=app-misc/tracker-0.16:= )
 	transcode? (
 		media-libs/gst-plugins-bad:1.0
 		media-plugins/gst-plugins-twolame:1.0
 		media-plugins/gst-plugins-libav:1.0
 	)
-	X? ( >=x11-libs/gtk+-2.90.3:3 )
+	X? ( >=x11-libs/gtk+-3:3 )
 "
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
@@ -51,7 +50,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 # Maintainer only
-#	>=dev-lang/vala-0.18
+#	>=dev-lang/vala-0.20
 #   dev-libs/libxslt
 
 src_prepare() {
