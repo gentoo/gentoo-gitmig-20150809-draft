@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.1.3-r1.ebuild,v 1.5 2013/10/13 20:33:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.1.3-r1.ebuild,v 1.6 2013/12/24 07:54:32 vapier Exp $
 
 EAPI="4"
 
@@ -73,6 +73,7 @@ multilib_src_configure() {
 	tc-export CC
 	ECONF_SOURCE="${S}" econf \
 		--localstatedir=/var/state/gmp \
+		--enable-shared \
 		$(use_enable cxx) \
 		$(use_enable static-libs static)
 }
