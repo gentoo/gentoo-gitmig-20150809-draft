@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qscintilla
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.96 2013/12/23 15:31:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.97 2013/12/24 19:21:54 pesa Exp $
+
+  24 Dec 2013; Davide Pesavento <pesa@gentoo.org>
+  -files/qscintilla-2.6.2-designer.patch, -qscintilla-2.6.2.ebuild:
+  old
 
   23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> qscintilla-2.7.2.ebuild:
   Stable for sparc, wrt bug #483112
