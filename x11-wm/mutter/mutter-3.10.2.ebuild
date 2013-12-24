@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.8.3-r1.ebuild,v 1.1 2013/07/28 20:08:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.10.2.ebuild,v 1.1 2013/12/24 17:49:26 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -9,8 +9,6 @@ inherit eutils gnome2
 
 DESCRIPTION="GNOME 3 compositing window manager based on Clutter"
 HOMEPAGE="http://git.gnome.org/browse/mutter/"
-
-SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/${P}-patches.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -21,14 +19,16 @@ COMMON_DEPEND="
 	>=x11-libs/pango-1.2[X,introspection?]
 	>=x11-libs/cairo-1.10[X]
 	x11-libs/gdk-pixbuf:2[introspection?]
-	>=x11-libs/gtk+-3.3.7:3[X,introspection?]
+	>=x11-libs/gtk+-3.9.11:3[X,introspection?]
 	>=dev-libs/glib-2.36.0:2
 	>=media-libs/clutter-1.14.3:1.0[introspection?]
-	>=media-libs/cogl-1.13.3:1.0=[introspection?]
+	>=media-libs/cogl-1.15.6:1.0=[introspection?]
 	>=media-libs/libcanberra-0.26[gtk3]
 	>=x11-libs/startup-notification-0.7
 	>=x11-libs/libXcomposite-0.2
 	>=gnome-base/gsettings-desktop-schemas-3.7.3[introspection?]
+	gnome-base/gnome-desktop:3=
+	>sys-power/upower-0.9.11
 
 	x11-libs/libICE
 	x11-libs/libSM
@@ -65,9 +65,6 @@ src_prepare() {
 
 	# Compat with Ubuntu metacity themes (e.g. x11-themes/light-themes)
 	epatch "${FILESDIR}/${PN}-3.2.1-ignore-shadow-and-padding.patch"
-
-	# Apply patches from gnome-3.8 branch
-	epatch "${WORKDIR}/${P}-patches/"*.patch
 
 	gnome2_src_prepare
 }
