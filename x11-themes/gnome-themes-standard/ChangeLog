@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/gnome-themes-standard
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.48 2013/12/08 19:53:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.49 2013/12/24 17:48:11 pacho Exp $
+
+*gnome-themes-standard-3.10.0 (24 Dec 2013)
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org>
+  +gnome-themes-standard-3.10.0.ebuild, -gnome-themes-standard-3.6.5.ebuild,
+  -gnome-themes-standard-3.8.2.ebuild, -gnome-themes-standard-3.8.3.ebuild:
+  Version bump for Gnome 3.10
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org>
   gnome-themes-standard-3.8.4.ebuild:

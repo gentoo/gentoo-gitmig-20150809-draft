@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.6.5.ebuild,v 1.2 2013/10/17 20:45:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.10.0.ebuild,v 1.1 2013/12/24 17:48:11 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,13 +8,13 @@ GNOME2_LA_PUNT="yes"
 
 inherit gnome2
 
-DESCRIPTION="Adwaita theme for GNOME Shell"
-HOMEPAGE="http://www.gnome.org/"
+DESCRIPTION="Standard Themes for GNOME Applications"
+HOMEPAGE="https://git.gnome.org/browse/gnome-themes-standard/"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
 IUSE="+gtk"
-KEYWORDS="~alpha ~amd64 arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~x64-solaris ~x86-solaris"
 
 COMMON_DEPEND="
 	gnome-base/librsvg:2
@@ -22,7 +22,7 @@ COMMON_DEPEND="
 	>=x11-themes/gtk-engines-2.15.3:2
 	gtk? (
 		>=x11-libs/gtk+-2.24.15:2
-		>=x11-libs/gtk+-3.6.2:3 )
+		>=x11-libs/gtk+-3.9.12:3 )
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40
@@ -51,9 +51,8 @@ src_configure() {
 	# The icon cache needs to be generated in pkg_postinst()
 	gnome2_src_configure \
 		--disable-static \
-		--disable-placeholders \
 		$(use_enable gtk gtk2-engine) \
-		$(use_enable gtk gtk3-engines) \
+		$(use_enable gtk gtk3-engine) \
 		GTK_UPDATE_ICON_CACHE=$(type -P true)
 }
 

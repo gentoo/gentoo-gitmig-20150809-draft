@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-symbolic/gnome-icon-theme-symbolic-3.8.2.2.ebuild,v 1.1 2013/05/14 21:09:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-symbolic/gnome-icon-theme-symbolic-3.10.1.ebuild,v 1.1 2013/12/24 17:46:53 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,14 +13,16 @@ HOMEPAGE="https://git.gnome.org/browse/gnome-icon-theme-symbolic/"
 LICENSE="CC-BY-SA-3.0"
 SLOT="0"
 IUSE=""
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux"
 
 COMMON_DEPEND=">=x11-themes/hicolor-icon-theme-0.10"
 
 RDEPEND="${COMMON_DEPEND}
 	!=gnome-extra/gnome-power-manager-3.0*
-	!=gnome-extra/gnome-power-manager-3.1*
 "
+# Matches 3.10
+#	!=gnome-extra/gnome-power-manager-3.1*
+
 # keyboard-brightness icon file collision with old gnome-power-manager
 DEPEND="${COMMON_DEPEND}
 	>=x11-misc/icon-naming-utils-0.8.7
