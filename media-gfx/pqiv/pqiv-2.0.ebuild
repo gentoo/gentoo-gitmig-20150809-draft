@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/pqiv-2.0.ebuild,v 1.2 2013/12/22 19:15:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/pqiv-2.0.ebuild,v 1.3 2013/12/24 12:57:00 ago Exp $
 
 EAPI=5
 inherit linux-info toolchain-funcs eutils
@@ -11,7 +11,7 @@ SRC_URI="https://github.com/phillipberndt/pqiv/archive/${PV}.tar.gz -> ${P}.tar.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="kernel_linux"
 
 RDEPEND="dev-libs/glib:2
