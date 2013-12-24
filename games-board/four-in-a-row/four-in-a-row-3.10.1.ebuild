@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/tali/tali-3.8.1.ebuild,v 1.2 2013/11/06 21:00:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/four-in-a-row/four-in-a-row-3.10.1.ebuild,v 1.1 2013/12/24 16:11:11 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
 inherit gnome-games
 
-DESCRIPTION="Beat the odds in a poker-style dice game"
-HOMEPAGE="https://wiki.gnome.org/Tali"
+DESCRIPTION="Make lines of the same color to win"
+HOMEPAGE="https://wiki.gnome.org/Four-in-a-row"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -17,12 +17,13 @@ IUSE=""
 
 RDEPEND="
 	dev-libs/glib:2
-	>=gnome-base/librsvg-2.32:2
-	>=x11-libs/gtk+-3.4:3
+	>=gnome-base/librsvg-2.32.0
+	>=media-libs/libcanberra-0.26[gtk3]
+	sys-libs/zlib
+	>=x11-libs/gtk+-3.4.0:3
 "
 DEPEND="${RDEPEND}
 	app-text/yelp-tools
 	>=dev-util/intltool-0.35.0
-	sys-devel/gettext
 	virtual/pkgconfig
 "
