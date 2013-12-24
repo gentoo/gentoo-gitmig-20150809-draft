@@ -1,17 +1,17 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-3.6.1-r1.ebuild,v 1.1 2012/12/19 10:10:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-3.10.0.ebuild,v 1.1 2013/12/24 17:43:13 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
+# FIXME: support python3 but installs in a weird location
 PYTHON_COMPAT=( python{2_6,2_7} )
 PYTHON_REQ_USE="xml"
-SUPPORT_PYTHON_ABIS="1"
 
 inherit gnome2 python-r1
 
 DESCRIPTION="Simple GNOME menu editor"
-HOMEPAGE="http://live.gnome.org/"
+HOMEPAGE="https://git.gnome.org/browse/alacarte"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -23,9 +23,7 @@ COMMON_DEPEND="
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
 	>=gnome-base/gnome-menus-3.5.3:3[introspection]
 "
-# gnome-panel needed for gnome-desktop-item-edit
 RDEPEND="${COMMON_DEPEND}
-	gnome-base/gnome-panel
 	x11-libs/gdk-pixbuf:2[introspection]
 	x11-libs/gtk+:3[introspection]
 "
@@ -37,7 +35,6 @@ DEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	gnome2_src_prepare
-
 	python_copy_sources
 }
 
@@ -62,10 +59,4 @@ src_install() {
 			python_doscript alacarte
 		}
 	python_foreach_impl run_in_build_dir installing
-}
-
-run_in_build_dir() {
-	pushd "${BUILD_DIR}" > /dev/null || die
-	"$@"
-	popd > /dev/null
 }
