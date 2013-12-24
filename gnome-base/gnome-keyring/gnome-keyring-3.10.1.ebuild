@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.6.3.ebuild,v 1.2 2013/05/10 19:50:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.10.1.ebuild,v 1.1 2013/12/24 16:30:51 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes" # Not gnome macro but similar
@@ -17,24 +17,22 @@ IUSE="+caps debug pam selinux"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 
 RDEPEND="
-	>=app-crypt/gcr-3.5.3:=
+	>=app-crypt/gcr-3.5.3:=[gtk]
 	>=dev-libs/glib-2.32.0:2
-	>=x11-libs/gtk+-3.0:3
 	app-misc/ca-certificates
 	>=dev-libs/libgcrypt-1.2.2:=
-	>=sys-apps/dbus-1.0
+	>=sys-apps/dbus-1.1.1
 	caps? ( sys-libs/libcap-ng )
 	pam? ( virtual/pam )
 "
 DEPEND="${RDEPEND}
+	app-text/docbook-xml-dtd:4.3
+	dev-libs/libxslt
 	>=dev-util/intltool-0.35
 	sys-devel/gettext
 	virtual/pkgconfig
 "
 PDEPEND=">=gnome-base/libgnome-keyring-3.1.92"
-# eautoreconf needs:
-#	>=dev-util/gtk-doc-am-1.9
-# gtk-doc-am is not needed otherwise (no gtk-docs are installed)
 
 src_prepare() {
 	# Disable stupid CFLAGS
@@ -64,15 +62,17 @@ src_configure() {
 		$(use_enable pam) \
 		$(use_with pam pam-dir $(getpam_mod_dir)) \
 		$(use_enable selinux) \
-		--with-root-certs="${EPREFIX}"/etc/ssl/certs/ \
-		--with-ca-certificates="${EPREFIX}"/etc/ssl/certs/ca-certificates.crt \
+		--enable-doc \
 		--enable-ssh-agent \
 		--enable-gpg-agent
 }
 
 src_test() {
-	unset DBUS_SESSION_BUS_ADDRESS
-	Xemake check
+	 # FIXME: this should be handled at eclass level
+	 "${EROOT}${GLIB_COMPILE_SCHEMAS}" --allow-any-name "${S}/schema" || die
+
+	 unset DBUS_SESSION_BUS_ADDRESS
+	 GSETTINGS_SCHEMA_DIR="${S}/schema" Xemake check
 }
 
 pkg_postinst() {

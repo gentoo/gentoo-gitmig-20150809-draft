@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-3.8.0-r2.ebuild,v 1.1 2013/08/28 18:44:48 jbartosik Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-3.10.1.ebuild,v 1.1 2013/12/24 16:32:00 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -33,21 +33,15 @@ DEPEND="${COMMON_DEPEND}
 "
 
 src_prepare() {
-	DOCS="AUTHORS ChangeLog HACKING NEWS README"
-
 	# Don't show KDE standalone settings desktop files in GNOME others menu
 	epatch "${FILESDIR}/${PN}-3.8.0-ignore_kde_standalone.patch"
-
-	# Adapt for gnome-calculator -> gcalctool desktop file rename (from 'master')
-	epatch "${FILESDIR}/${PN}-3.8.0-gnome-calculator.patch"
-
-	# Fix "Others" menu
-	epatch "${FILESDIR}/${PN}-3.8.0-dont-use-OnlyUnallocated-for-sections.patch"
 
 	gnome2_src_prepare
 }
 
 src_configure() {
+	DOCS="AUTHORS ChangeLog HACKING NEWS README"
+
 	# Do NOT compile with --disable-debug/--enable-debug=no
 	# It disables api usage checks
 	gnome2_src_configure \

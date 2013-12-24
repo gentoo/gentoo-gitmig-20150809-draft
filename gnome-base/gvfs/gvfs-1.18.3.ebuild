@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.3-r1.ebuild,v 1.1 2013/10/14 19:26:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.18.3.ebuild,v 1.1 2013/12/24 16:38:26 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,13 +14,17 @@ HOMEPAGE="https://git.gnome.org/browse/gvfs"
 LICENSE="LGPL-2+"
 SLOT="0"
 
+IUSE="afp archive avahi bluetooth bluray cdda fuse gdu gnome-online-accounts gphoto2 gtk +http ios libsecret mtp samba systemd test +udev udisks"
+REQUIRED_USE="
+	cdda? ( udev )
+	udisks? ( udev )
+	systemd? ( udisks )
+"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x86-solaris"
-
-IUSE="afp archive avahi bluetooth bluray cdda fuse gdu gnome-keyring gnome-online-accounts gphoto2 gtk +http mtp ios samba systemd test +udev udisks"
 
 # Can use libgphoto-2.5.0 as well. Automagic detection.
 RDEPEND="
-	>=dev-libs/glib-2.35:2
+	>=dev-libs/glib-2.37:2
 	sys-apps/dbus
 	dev-libs/libxml2:2
 	net-misc/openssh
@@ -38,21 +42,21 @@ RDEPEND="
 		>=gnome-base/libgdu-3.0.2
 		=sys-apps/gnome-disk-utility-3.0.2-r300
 		=sys-apps/gnome-disk-utility-3.0.2-r200 ) )
-	gnome-keyring? ( app-crypt/libsecret )
+	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.7.1 )
 	gphoto2? ( >=media-libs/libgphoto2-2.4.7:= )
 	gtk? ( >=x11-libs/gtk+-3.0:3 )
-	http? ( >=net-libs/libsoup-gnome-2.34.0:2.4 )
+	http? ( >=net-libs/libsoup-gnome-2.34:2.4 )
 	ios? (
-		>=app-pda/libimobiledevice-1.1.0:=
+		>=app-pda/libimobiledevice-1.1.5:=
 		>=app-pda/libplist-1:= )
-	mtp? ( >=media-libs/libmtp-1.1.5 )
-	samba? ( >=net-fs/samba-3.4.6[smbclient] )
+	libsecret? ( app-crypt/libsecret )
+	mtp? ( >=media-libs/libmtp-1.1.6 )
+	samba? ( || ( >=net-fs/samba-3.4.6[smbclient] >=net-fs/samba-4[client] ) )
 	systemd? ( sys-apps/systemd )
 	udev? (
 		cdda? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
 		virtual/udev[gudev] )
 	udisks? ( >=sys-fs/udisks-1.97:2 )
-	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.7.1 )
 "
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
@@ -62,7 +66,9 @@ DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
 	test? (
 		>=dev-python/twisted-core-12.3.0
-		net-analyzer/netcat )
+		|| (
+			net-analyzer/netcat
+			net-analyzer/netcat6 ) )
 	!udev? ( >=dev-libs/libgcrypt-1.2.2 )
 "
 # libgcrypt.m4, provided by libgcrypt, needed for eautoreconf, bug #399043
@@ -72,17 +78,8 @@ DEPEND="${RDEPEND}
 # https://bugzilla.gnome.org/700162
 RESTRICT="test"
 
-REQUIRED_USE="
-	cdda? ( udev )
-	udisks? ( udev )
-	systemd? ( udisks )
-"
-
 src_prepare() {
 	DOCS="AUTHORS ChangeLog NEWS MAINTAINERS README TODO" # ChangeLog.pre-1.2 README.commits
-
-	# Emit signal before returning dbus value, bug #488024 (from 'master')
-	epatch "${FILESDIR}/${PN}-1.16.3-emit-signal.patch"
 
 	if ! use udev; then
 		sed -e 's/gvfsd-burn/ /' \
@@ -119,7 +116,7 @@ src_configure() {
 		$(use_enable udev) \
 		$(use_enable udev gudev) \
 		$(use_enable http) \
-		$(use_enable gnome-keyring keyring) \
+		$(use_enable libsecret keyring) \
 		$(use_enable samba) \
 		$(use_enable systemd libsystemd-login) \
 		$(use_enable udisks udisks2)
