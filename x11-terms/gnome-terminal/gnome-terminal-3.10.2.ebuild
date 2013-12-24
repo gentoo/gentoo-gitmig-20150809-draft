@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.8.3.ebuild,v 1.2 2013/06/30 21:36:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.10.2.ebuild,v 1.1 2013/12/24 17:44:09 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -20,9 +20,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~
 RDEPEND="
 	>=dev-libs/glib-2.33.2:2
 	>=x11-libs/gtk+-3.6:3[X]
-	>=x11-libs/vte-0.34.6:2.90
-	>=gnome-base/gconf-2.31.3
+	>=x11-libs/vte-0.34.9:2.90
 	>=gnome-base/dconf-0.12
+	>=gnome-base/gconf-2.31.3
 	>=gnome-base/gsettings-desktop-schemas-0.1.0
 	sys-apps/util-linux
 	x11-libs/libSM
@@ -32,7 +32,6 @@ RDEPEND="
 # gtk+:2 needed for gtk-builder-convert, bug 356239
 DEPEND="${RDEPEND}
 	|| ( dev-util/gtk-builder-convert <=x11-libs/gtk+-2.24.10:2 )
-	app-text/yelp-tools
 	>=dev-util/intltool-0.40
 	>=gnome-base/dconf-0.14.0
 	sys-devel/gettext
@@ -44,16 +43,17 @@ DOC_CONTENTS="To get previous working directory inherited in new opened
 	. /etc/profile.d/vte.sh"
 
 src_configure() {
-	DOCS="AUTHORS ChangeLog HACKING NEWS"
 	# FIXME: leave smclient configure unset until it accepts values from the
 	# switch and not from GDK_TARGET, bug #363033
 	gnome2_src_configure \
 		--disable-static \
 		--enable-migration \
-		$(use_with nautilus nautilus-extension)
+		$(use_with nautilus nautilus-extension) \
+		ITSTOOL=$(type -P true)
 }
 
 src_install() {
+	DOCS="AUTHORS ChangeLog HACKING NEWS"
 	gnome2_src_install
 	readme.gentoo_create_doc
 }
