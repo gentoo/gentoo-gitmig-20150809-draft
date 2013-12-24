@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15276 2013/12/23 23:19:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15277 2013/12/24 11:56:31 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -961,11 +961,6 @@ app-pda/multisync-gui
 # For other complaints go to bug 350785
 <dev-lang/perl-5.12.2
 <sys-devel/libperl-5.10.1
-
-# Gilles Dartiguelongue <eva@gentoo.org> (07 Dec 2010)
-# Part of GNOME 2.32 release set by breaks my machine as hell
-# Needs more testing before unleashing
->=gnome-base/libbonobo-2.32
 
 # Markos Chandras <hwoarang@gentoo.org> (01 Nov 2010)
 # Masking alpha releases
