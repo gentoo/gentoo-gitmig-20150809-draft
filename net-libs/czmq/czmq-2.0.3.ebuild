@@ -1,9 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/czmq-2.0.3.ebuild,v 1.1 2013/12/24 10:50:09 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/czmq-2.0.3.ebuild,v 1.2 2013/12/24 11:34:55 jlec Exp $
 
 EAPI=5
-inherit autotools
+
+AUTOTOOLS_AUTORECONF=true
+
+inherit autotools-utils
 
 DESCRIPTION="CZMQ - High-level C Binding for ZeroMQ"
 HOMEPAGE="http://czmq.zeromq.org"
@@ -15,31 +18,22 @@ KEYWORDS="~amd64 ~arm ~hppa ~x86"
 IUSE="doc static-libs"
 
 RDEPEND=""
-DEPEND="doc? (
-			app-text/asciidoc
-			app-text/xmlto
-		)
-		>=net-libs/zeromq-2.1"
+DEPEND="
+	>=net-libs/zeromq-2.1
+	doc? (
+		app-text/asciidoc
+		app-text/xmlto
+	)"
 
 DOCS=( NEWS README AUTHORS ChangeLog )
 
 src_prepare() {
 	sed -i -e 's|-Werror||g' configure.ac || die
-	eautoreconf
-}
-
-src_configure() {
-	econf $(use_enable static-libs static)
+	autotools-utils_src_prepare
 }
 
 src_install() {
-	default
+	autotools-utils_src_install
 
 	doman doc/*.[1-9]
-
-	# remove useless .la files
-	find "${D}" -name '*.la' -delete
-
-	# remove useless .a (only for non static compilation)
-	use static-libs || find "${D}" -name '*.a' -delete
 }
