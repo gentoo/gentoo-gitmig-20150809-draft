@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lensfun
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.56 2013/12/23 16:01:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.57 2013/12/24 12:45:10 ago Exp $
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> lensfun-0.2.7.ebuild:
+  Stable for x86, wrt bug #494692
 
   23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> lensfun-0.2.7.ebuild:
   Stable for sparc, wrt bug #494692
