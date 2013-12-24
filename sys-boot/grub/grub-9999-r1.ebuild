@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.8 2013/12/19 14:57:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.9 2013/12/24 02:41:11 floppym Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ if [[ ${PV} != 9999 ]]; then
 		S=${WORKDIR}/${P%_*}
 	fi
 	KEYWORDS="~amd64 ~x86"
-	PATCHES=()
+	PATCHES=( "${FILESDIR}/${P}-only-use-scripts-that-are-executable.patch" )
 else
 	inherit git-r3
 	EGIT_REPO_URI="git://git.sv.gnu.org/grub.git
@@ -115,8 +115,7 @@ STRIP_MASK="*/grub/*/*.{mod,img}"
 RESTRICT="test"
 
 QA_EXECSTACK="
-	usr/bin/grub*
-	usr/sbin/grub*
+	usr/bin/grub*-emu*
 	usr/lib*/grub/*/*.mod
 	usr/lib*/grub/*/*.module
 	usr/lib*/grub/*/kernel.exec
@@ -279,9 +278,6 @@ src_install() {
 
 	insinto /etc/default
 	newins "${FILESDIR}"/grub.default-3 grub
-
-	cd "${ED}" || die
-	pax-mark mpes $(scanelf -BF %F usr/{bin,sbin})
 }
 
 pkg_postinst() {
