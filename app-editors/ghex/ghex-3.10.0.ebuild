@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-3.8.0.ebuild,v 1.1 2013/03/28 15:51:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-3.10.0.ebuild,v 1.1 2013/12/24 15:31:50 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,7 +15,8 @@ SLOT="2"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND=">=dev-libs/atk-1
+RDEPEND="
+	>=dev-libs/atk-1
 	>=dev-libs/glib-2.31.10:2
 	>=x11-libs/gtk+-3.3.8:3
 "
