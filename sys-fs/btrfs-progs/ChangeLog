@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.72 2013/12/22 16:26:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.73 2013/12/25 09:40:56 maekke Exp $
+
+  25 Dec 2013; Markus Meier <maekke@gentoo.org> btrfs-progs-3.12-r1.ebuild:
+  arm stable, bug #494114
 
   22 Dec 2013; Pacho Ramos <pacho@gentoo.org> btrfs-progs-3.12-r1.ebuild:
   amd64 stable, bug #494114
