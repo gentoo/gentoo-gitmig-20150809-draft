@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.183 2013/02/17 23:40:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.184 2013/12/25 23:44:29 vapier Exp $
+
+*readline-6.2_p5 (25 Dec 2013)
+
+  25 Dec 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/readline-6.2-rlfe-tgoto.patch, +readline-6.2_p5.ebuild:
+  Version bump.  Fix tgoto test in rlfe example #385091 by Agostino Sarubbo.
+  Use pkg-config to get ncurses linking info #457558 by Travis Hansen.  Export
+  AR ourselves to use a better default #484866 by Agostino Sarubbo.
 
   17 Feb 2013; Zac Medico <zmedico@gentoo.org> readline-6.2_p4.ebuild:
   Add ~arm-linux keyword.
