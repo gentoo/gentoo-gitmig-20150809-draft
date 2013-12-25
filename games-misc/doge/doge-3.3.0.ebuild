@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/doge/doge-3.1.0.ebuild,v 1.1 2013/12/17 14:07:40 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/doge/doge-3.3.0.ebuild,v 1.1 2013/12/25 20:02:30 vikraman Exp $
 
 EAPI=5
 
@@ -18,4 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="${DEPEND} sys-process/procps"
+RDEPEND="${DEPEND}
+	sys-process/procps
+	virtual/python-argparse[${PYTHON_USEDEP}]
+"
