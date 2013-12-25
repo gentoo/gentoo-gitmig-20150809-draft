@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hub/hub-1.11.0.ebuild,v 1.1 2013/12/25 17:52:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hub/hub-1.11.0.ebuild,v 1.2 2013/12/25 20:59:14 ottxor Exp $
 
 EAPI="5"
 
@@ -13,13 +13,13 @@ inherit readme.gentoo ruby-fakegem
 ruby_add_bdepend "test? ( dev-ruby/webmock dev-util/cucumber )"
 
 DESCRIPTION="command-line wrapper for git that makes you better at GitHub"
-HOMEPAGE="http://defunkt.io/hub/"
-SRC_URI="https://github.com/defunkt/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://github.com/github/hub"
+SRC_URI="${HOMEPAGE}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-RDEPEND=">=dev-vcs/git-1.7.3"
+RDEPEND="dev-vcs/git"
 
 DOC_CONTENTS="You may want to add 'alias git=hub' to your .{csh,bash}rc"
 
