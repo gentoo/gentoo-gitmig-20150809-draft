@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.5.0.ebuild,v 1.1 2013/12/25 06:48:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.5.0-r1.ebuild,v 1.1 2013/12/25 07:04:09 radhermit Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs udev
@@ -12,12 +12,13 @@ SRC_URI="http://christophe.varoqui.free.fr/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE=""
+IUSE="systemd"
 
 RDEPEND=">=sys-fs/lvm2-2.02.45
 	>=virtual/udev-171
 	dev-libs/libaio
-	sys-libs/readline"
+	sys-libs/readline
+	systemd? ( sys-apps/systemd )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -28,7 +29,7 @@ src_prepare() {
 src_compile() {
 	# LIBDM_API_FLUSH involves grepping files in /usr/include,
 	# so force the test to go the way we want #411337.
-	emake LIBDM_API_FLUSH=1 CC="$(tc-getCC)"
+	emake LIBDM_API_FLUSH=1 CC="$(tc-getCC)" SYSTEMD=$(usex systemd 1 "")
 }
 
 src_install() {
@@ -37,6 +38,7 @@ src_install() {
 	dodir /sbin /usr/share/man/man8
 	emake \
 		DESTDIR="${D}" \
+		SYSTEMD=$(usex systemd 1 "") \
 		libudevdir='${prefix}'/"${udevdir}" \
 		install
 
