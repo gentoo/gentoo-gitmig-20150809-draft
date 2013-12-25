@@ -1,32 +1,39 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.18-r1.ebuild,v 1.6 2013/03/02 21:22:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.20.ebuild,v 1.1 2013/12/25 17:52:05 hasufell Exp $
 
-EAPI=2
+# TODO: when physfs-2.1.0 hits the tree, set
+# -DPHYSFS_SYSTEM=ON
+
+EAPI=5
 CMAKE_BUILD_TYPE=Release
 inherit cmake-utils eutils games
 
-MY_P=${PN}-src-${PV}-3
-DESCRIPTION="Free Worms-like turn based strategy game"
+MY_P=${PN}-src-${PV}
+DESCRIPTION="A turn-based strategy, artillery, action and comedy game"
 HOMEPAGE="http://hedgewars.org/"
 SRC_URI="http://download.gna.org/hedgewars/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 Apache-2.0 FDL-1.3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 QA_FLAGS_IGNORED=${GAMES_BINDIR}/hwengine # pascal sucks
 QA_PRESTRIPPED=${GAMES_BINDIR}/hwengine # pascal sucks
 
-RDEPEND="dev-qt/qtgui:4
+RDEPEND="
+	dev-lang/lua
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
 	media-libs/freeglut
-	virtual/ffmpeg
+	media-libs/libpng:0
 	media-libs/libsdl[audio,opengl,video]
-	media-libs/sdl-ttf
-	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-image[png]
+	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-net
-	dev-lang/lua"
+	media-libs/sdl-ttf
+	sys-libs/zlib
+	virtual/ffmpeg"
 DEPEND="${RDEPEND}
 	>=dev-lang/fpc-2.4"
 RDEPEND="${RDEPEND}
@@ -35,19 +42,20 @@ RDEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}-src-${PV}
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-cflags.patch \
-		"${FILESDIR}"/${P}-cmake.patch
+	epatch "${FILESDIR}"/${P}-paths.patch
 }
 
 src_configure() {
-	mycmakeargs=(
-		-DCMAKE_C_FLAGS_RELEASE='' \
-		-DCMAKE_CXX_FLAGS_RELEASE='' \
+	local mycmakeargs=(
+		-DMINIMAL_FLAGS=ON
 		-DCMAKE_INSTALL_PREFIX="${GAMES_PREFIX}"
-		-DDATA_INSTALL_DIR="${GAMES_DATADIR}"
+		-DDATA_INSTALL_DIR="${GAMES_DATADIR}/${PN}"
+		-Dtarget_binary_install_dir="${GAMES_BINDIR}"
+		-Dtarget_library_install_dir="$(games_get_libdir)"
 		-DNOSERVER=TRUE
-		-DCMAKE_VERBOSE_MAKEFILE=TRUE )
+		-DCMAKE_VERBOSE_MAKEFILE=TRUE
+		-DPHYSFS_SYSTEM=OFF
+	)
 	cmake-utils_src_configure
 }
 
