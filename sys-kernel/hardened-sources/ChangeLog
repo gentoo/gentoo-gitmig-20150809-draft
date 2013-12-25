@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.962 2013/12/21 22:47:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.963 2013/12/25 22:54:17 prometheanfire Exp $
+
+  25 Dec 2013; Matthew Thode <prometheanfire@gentoo.org>
+  hardened-sources-3.12.6.ebuild:
+  removed keywords from hardened-sources-3.12.6 because of bug 495208
 
 *hardened-sources-3.12.6 (21 Dec 2013)
 
