@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.2.1.ebuild,v 1.1 2013/11/14 00:27:21 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.2.1-r1.ebuild,v 1.1 2013/12/25 01:19:24 pesa Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
 inherit multilib cmake-utils python-r1
 
@@ -51,15 +51,16 @@ src_prepare() {
 src_configure() {
 	configuration() {
 		local mycmakeargs=(
+			$(cmake-utils_use_build test TESTS)
 			-DPYTHON_EXECUTABLE="${PYTHON}"
 			-DPYTHON_SITE_PACKAGES="$(python_get_sitedir)"
 			-DPYTHON_SUFFIX="-${EPYTHON}"
-			$(cmake-utils_use_build test TESTS)
 		)
 
 		if [[ ${EPYTHON} == python3* ]]; then
 			mycmakeargs+=(
 				-DUSE_PYTHON3=ON
+				-DPYTHON3_EXECUTABLE="${PYTHON}"
 				-DPYTHON3_INCLUDE_DIR="$(python_get_includedir)"
 				-DPYTHON3_LIBRARY="$(python_get_library_path)"
 			)
