@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-3.0.9.ebuild,v 1.1 2013/12/14 14:26:00 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-3.0.9-r1.ebuild,v 1.1 2013/12/25 21:28:55 hasufell Exp $
 
 EAPI=5
 
-inherit eutils perl-module vcs-snapshot
+inherit gnome2-utils eutils perl-module vcs-snapshot
 
 DESCRIPTION="A command line utility for viewing youtube-videos in Mplayer"
 HOMEPAGE="http://trizen.googlecode.com"
@@ -53,9 +53,20 @@ src_install() {
 	use gtk && myconf+=" --gtk-youtube-viewer"
 	perl-module_src_configure
 	perl-module_src_install
+
+	if use gtk ; then
+		domenu share/gtk-youtube-viewer.desktop
+		doicon -s 256 share/gtk-youtube-viewer.png
+	fi
+}
+
+pkg_preinst() {
+	use gtk && gnome2_icon_savelist
+	perl-module_pkg_preinst
 }
 
 pkg_postinst() {
+	use gtk && gnome2_icon_cache_update
 	perl-module_pkg_postinst
 	einfo
 	elog "optional dependencies:"
@@ -72,4 +83,9 @@ pkg_postinst() {
 	elog "    (--shuffle, -s))"
 	elog "  virtual/perl-threads (threads support)"
 	einfo
+}
+
+pkg_postrm() {
+	use gtk && gnome2_icon_cache_update
+	perl-module_pkg_postrm
 }
