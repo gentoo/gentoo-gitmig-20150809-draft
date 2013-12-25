@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.2.1-r1.ebuild,v 1.1 2013/12/25 01:19:24 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.2.1-r1.ebuild,v 1.2 2013/12/25 17:44:15 pesa Exp $
 
 EAPI=5
 
@@ -27,7 +27,6 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	test? (
-		dev-python/numpy[${PYTHON_USEDEP}]
 		>=dev-qt/qtgui-4.7.0:4
 		>=dev-qt/qttest-4.7.0:4
 	)"
@@ -41,10 +40,8 @@ src_prepare() {
 		cmake/Modules/FindPython3InterpWithDebug.cmake || die
 
 	if use prefix; then
-		cp "${FILESDIR}"/rpath.cmake .
-		sed \
-			-i '1iinclude(rpath.cmake)' \
-			CMakeLists.txt || die
+		cp "${FILESDIR}"/rpath.cmake . || die
+		sed -i -e '1iinclude(rpath.cmake)' CMakeLists.txt || die
 	fi
 }
 
