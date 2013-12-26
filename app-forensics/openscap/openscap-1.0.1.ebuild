@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-1.0.1.ebuild,v 1.1 2013/12/23 19:59:12 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-1.0.1.ebuild,v 1.2 2013/12/26 16:52:27 swift Exp $
 
 EAPI=5
 
@@ -92,6 +92,7 @@ src_prepare() {
 }
 
 src_configure() {
+	python_setup
 	local myconf
 	if use debug ; then
 		myconf+=" --enable-debug"
