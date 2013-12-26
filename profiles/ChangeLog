@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8455 2013/12/26 09:34:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8456 2013/12/26 17:11:59 polynomial-c Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> base/package.use.mask:
+  package.use.mask-ed polarssl USE flag in media-sound/umurmur for now. Should
+  settle the complaints from qa.
 
   26 Dec 2013; Hans de Graaff <graaff@gentoo.org> base/package.use.force:
   Force correct targets for ruby21 virtuals.
