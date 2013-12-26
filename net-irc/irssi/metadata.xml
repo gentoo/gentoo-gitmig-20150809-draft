@@ -6,4 +6,9 @@
 	<email>swegener@gentoo.org</email>
 	<description>Primary Maintainer</description>
 </maintainer>
+<use>
+<flag name='tinfo'>
+	Use only libtinfo from <pkg>sys-libs/ncurses</pkg>
+</flag>
+</use>
 </pkgmetadata>
