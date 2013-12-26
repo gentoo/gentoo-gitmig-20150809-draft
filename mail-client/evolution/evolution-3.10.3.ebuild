@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.10.3.ebuild,v 1.1 2013/12/24 16:44:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.10.3.ebuild,v 1.2 2013/12/26 22:39:43 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -112,8 +112,6 @@ src_prepare() {
 src_configure() {
 	# Use NSS/NSPR only if 'ssl' is enabled.
 	# image-inline plugin needs a gtk+:3 gtkimageview, which does not exist yet
-	local myconf
-	myconf="${myconf} ITSTOOL=$(type -P true)"
 	gnome2_src_configure \
 		--without-glade-catalog \
 		--disable-image-inline \
@@ -133,7 +131,7 @@ src_configure() {
 			--without-nss-libs
 			--without-nss-includes") \
 		$(use_enable weather) \
-		${myconf}
+		ITSTOOL=$(type -P true)
 }
 
 src_install() {
