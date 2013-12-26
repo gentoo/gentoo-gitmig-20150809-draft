@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.95 2013/12/26 19:40:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.96 2013/12/26 20:18:33 robbat2 Exp $
+
+*klibc-2.0.2-r1 (26 Dec 2013)
+
+  26 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> +klibc-2.0.2-r1.ebuild:
+  Bug #461982: Make it possible to build with custom-cflags, but not by default,
+  as klibc is closer to kernel ABI than userspace.
 
   26 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> klibc-2.0.2.ebuild:
   Bug #485482: Enable building on mixed 64-bit kernel + 32-bit userland; patch
