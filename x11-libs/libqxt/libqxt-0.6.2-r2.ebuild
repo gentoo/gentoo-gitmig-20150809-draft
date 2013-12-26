@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.6.2-r1.ebuild,v 1.1 2013/12/17 11:21:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.6.2-r2.ebuild,v 1.1 2013/12/26 01:18:32 pesa Exp $
 
 EAPI=5
 
@@ -16,9 +16,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE="berkdb debug doc sql web xscreensaver zeroconf"
 
 COMMON_DEPEND="
-	x11-libs/libXrandr
 	dev-qt/qtcore:4[ssl]
-	|| ( ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 ) <dev-qt/qtgui-4.8.5:4 )
+	|| (
+		( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 )
+		<dev-qt/qtgui-4.8.5:4
+	)
+	x11-libs/libXrandr
 	berkdb? ( >=sys-libs/db-4.6 )
 	sql? ( dev-qt/qtsql:4 )
 	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )
@@ -30,12 +33,14 @@ RDEPEND="${COMMON_DEPEND}
 	xscreensaver? ( x11-libs/libXScrnSaver )
 "
 
-S="${WORKDIR}/${PN}-${PN}-v${PV}"
+S=${WORKDIR}/${PN}-${PN}-v${PV}
 
 DOCS=( AUTHORS CHANGES README )
 PATCHES=(
 	"${FILESDIR}/${PN}-use-system-qdoc3.patch"
-	"${FILESDIR}/${P}-fix-event-filters.patch" # bug 494448
+	"${FILESDIR}/${PN}-invoke-prev-filter.patch"	# bug 494448
+	"${FILESDIR}/${PN}-media-keys.patch"		# bug 495984
+	"${FILESDIR}/${PN}-xrandr-missing-lib.patch"
 )
 
 src_prepare() {
@@ -69,10 +74,7 @@ src_configure() {
 src_compile() {
 	qt4-r2_src_compile
 
-	if use doc; then
-		einfo "Building documentation"
-		emake docs
-	fi
+	use doc && emake docs
 }
 
 pkg_postinst() {
