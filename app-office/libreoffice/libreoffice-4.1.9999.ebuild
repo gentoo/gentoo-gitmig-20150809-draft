@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.1.9999.ebuild,v 1.17 2013/12/07 21:03:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.1.9999.ebuild,v 1.18 2013/12/26 22:06:55 dilfridge Exp $
 
 EAPI=5
 
@@ -560,6 +560,9 @@ src_install() {
 
 	# Remove desktop files for support to old installs that can't parse mime
 	rm -rf "${ED}"/usr/share/mimelnk/
+
+	pax-mark -m "${ED}"/usr/$(get_libdir)/libreoffice/program/soffice.bin
+	pax-mark -m "${ED}"/usr/$(get_libdir)/libreoffice/program/unopkg.bin
 }
 
 pkg_preinst() {
@@ -569,9 +572,6 @@ pkg_preinst() {
 
 pkg_postinst() {
 	kde4-base_pkg_postinst
-
-	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/libreoffice/program/soffice.bin
-	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/libreoffice/program/unopkg.bin
 
 	use java || \
 		ewarn 'If you plan to use lbase application you should enable java or you will get various crashes.'
