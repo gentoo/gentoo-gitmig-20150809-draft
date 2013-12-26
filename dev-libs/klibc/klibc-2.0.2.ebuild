@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-2.0.2.ebuild,v 1.1 2013/03/16 14:55:18 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-2.0.2.ebuild,v 1.2 2013/12/26 19:33:20 robbat2 Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org>, 12 Nov 2007:
 # This still needs major work.
@@ -88,6 +88,9 @@ kernel_defconfig() {
 
 src_unpack() {
 	unpack linux-${OKV}.tar.${K_TARBALL_SUFFIX} ${P}.tar.${K_TARBALL_SUFFIX}
+}
+
+src_prepare() {
 	[[ ${PKV} ]] && EPATCH_OPTS="-d ${KS} -p1" epatch "${DISTDIR}"/patch-${PKV}.${K_TARBALL_SUFFIX}
 	cd "${S}"
 
