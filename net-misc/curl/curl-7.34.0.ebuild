@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.34.0.ebuild,v 1.1 2013/12/18 15:30:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.34.0.ebuild,v 1.2 2013/12/26 23:21:57 mgorny Exp $
 
 EAPI="5"
 
@@ -87,6 +87,7 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-fix-gnutls-nettle.patch
 	sed -i '/LD_LIBRARY_PATH=/d' configure.ac || die #382241
 
+	epatch_user
 	eprefixify curl-config.in
 	eautoreconf
 }

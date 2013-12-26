@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.314 2013/12/26 23:15:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.315 2013/12/26 23:21:57 mgorny Exp $
+
+  26 Dec 2013; Michał Górny <mgorny@gentoo.org> curl-7.34.0.ebuild:
+  Add epatch_user call to make patch testing easier.
 
   26 Dec 2013; Anthony G. Basile <blueness@gentoo.org> -curl-7.31.0.ebuild:
   Remove vulnerable version, bug #492688
