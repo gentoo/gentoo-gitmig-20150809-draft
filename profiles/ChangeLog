@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8454 2013/12/26 07:10:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8455 2013/12/26 09:34:00 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Dec 2013; Hans de Graaff <graaff@gentoo.org> base/package.use.force:
+  Force correct targets for ruby21 virtuals.
 
   26 Dec 2013; Hans de Graaff <graaff@gentoo.org> desc/ruby_targets.desc:
   Add description for Ruby 2.1.x target.
