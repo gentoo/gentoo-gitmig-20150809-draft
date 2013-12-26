@@ -1,10 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.3.2.ebuild,v 1.2 2013/11/17 12:32:05 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.4.1.ebuild,v 1.1 2013/12/26 20:31:52 prometheanfire Exp $
 
 EAPI="5"
 
-USE_RUBY="ruby18 ruby19"
+#supports ruby20, but needs deps first
+USE_RUBY="ruby19"
 
 inherit elisp-common xemacs-elisp-common eutils user ruby-ng versionator
 
@@ -68,6 +69,12 @@ each_ruby_install() {
 }
 
 all_ruby_install() {
+	#systemd stuffs
+	insinto /usr/lib/systemd/system
+	doins "${WORKDIR}/all/${P}/ext/systemd/puppet.service"
+	insinto /usr/lib/tmpfiles.d
+	newins "${FILESDIR}/tmpfiles.d" "puppet.conf"
+
 	newinitd "${FILESDIR}"/puppet.init-r1 puppet
 
 	# Initial configuration files
@@ -80,6 +87,8 @@ all_ruby_install() {
 	if use minimal ; then
 		rm "${ED}/etc/puppet/auth.conf"
 	else
+		insinto /usr/lib/systemd/system
+		doins "${WORKDIR}/all/${P}/ext/systemd/puppetmaster.service"
 		newinitd "${FILESDIR}"/puppetmaster.init-r1 puppetmaster
 		newconfd "${FILESDIR}"/puppetmaster.confd puppetmaster
 
