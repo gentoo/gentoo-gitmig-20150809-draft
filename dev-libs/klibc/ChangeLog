@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.94 2013/12/26 19:33:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.95 2013/12/26 19:40:02 robbat2 Exp $
+
+  26 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> klibc-2.0.2.ebuild:
+  Bug #485482: Enable building on mixed 64-bit kernel + 32-bit userland; patch
+  by Denis Kaganovich <mahatma@bspu.unibel.by>.
 
   26 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> klibc-2.0.2.ebuild:
   Make repoman happy.
