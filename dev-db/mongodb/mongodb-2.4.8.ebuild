@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.8.ebuild,v 1.2 2013/12/23 07:40:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.8.ebuild,v 1.3 2013/12/26 11:27:44 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
-CHECKREQS_DISK_BUILD="12G"
+CHECKREQS_DISK_BUILD="2400M"
 CHECKREQS_DISK_USR="2400M"
 
 inherit eutils flag-o-matic multilib pax-utils scons-utils systemd user versionator check-reqs
