@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0.0.ebuild,v 1.1 2013/12/26 13:37:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0.0.ebuild,v 1.2 2013/12/26 17:40:41 patrick Exp $
 
 EAPI=5
 
@@ -57,7 +57,6 @@ src_prepare() {
 	bash -x prebuild.sh || die
 	cd .. || die
 	rm -rf libraries || die
-
 
 	# Change some destination directories that cannot be adjusted via configure
 	sed \
