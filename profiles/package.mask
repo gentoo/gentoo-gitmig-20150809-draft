@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15279 2013/12/25 10:14:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15280 2013/12/27 16:46:22 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Justin Lecher <jlec@gentoo.org> (27 Dec 2013)
+# This version isn't released yet
+sys-kernel/gentoo-sources:3.12.7
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Dec 2013)
 # The required icons from faenza-xfce-icon-theme are now part of
@@ -170,7 +174,7 @@ dev-ruby/arrayfields
 >=x11-libs/gdk-pixbuf-2.30
 >=x11-libs/gtk+-3.10
 >=x11-libs/gtksourceview-3.10
->=x11-libs/libcryptui-3.10
+>=x11-libs/libcryptui-3.10+
 >=x11-libs/pango-1.36
 >=x11-misc/alacarte-3.10
 >=x11-terms/gnome-terminal-3.10
@@ -279,7 +283,6 @@ dev-ruby/postgres
 # Tom Wijsman <TomWij@gentoo.org> (30 Nov 2013)
 # Mask gentoo-sources-3.12.{0,1} as it causes sandbox violations, please note
 # that 3.12.2 is out now. aufs-sources masked by Justin Lecher <jlec@gentoo.org>
-sys-kernel/gentoo-sources:3.12.0
 sys-kernel/gentoo-sources:3.12.1
 sys-kernel/aufs-sources:3.12.0
 sys-kernel/aufs-sources:3.12.1
