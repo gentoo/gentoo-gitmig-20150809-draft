@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.96 2013/12/27 08:03:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.97 2013/12/27 14:31:19 dilfridge Exp $
+
+  27 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-l10n-4.1.4.2.ebuild:
+  Add some spaces, bug 491728, thanks to Zhang Hongjiu
 
 *libreoffice-l10n-4.1.4.2 (27 Dec 2013)
 
