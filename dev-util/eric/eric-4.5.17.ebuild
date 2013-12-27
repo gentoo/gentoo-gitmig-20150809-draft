@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.5.16.ebuild,v 1.1 2013/11/24 22:54:02 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.5.17.ebuild,v 1.1 2013/12/27 01:54:52 pesa Exp $
 
 EAPI=4
 
