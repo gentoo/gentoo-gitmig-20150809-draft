@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.610 2013/12/27 22:10:29 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.611 2013/12/27 22:54:43 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1150,6 +1150,8 @@ toolchain_src_configure() {
 	# Disable gcc info regeneration -- it ships with generated info pages
 	# already.  Our custom version/urls/etc... trigger it.  #464008
 	export gcc_cv_prog_makeinfo_modern=no
+	# Make sure we don't try to generate pages that don't even exist.  #496224
+	touch "${S}"/gcc/treelang/treelang.info 2>/dev/null
 
 	# Do not let the X detection get in our way.  We know things can be found
 	# via system paths, so no need to hardcode things that'll break multilib.
