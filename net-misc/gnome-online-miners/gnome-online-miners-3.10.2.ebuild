@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-online-miners/gnome-online-miners-3.10.2.ebuild,v 1.1 2013/12/24 16:54:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-online-miners/gnome-online-miners-3.10.2.ebuild,v 1.2 2013/12/27 10:55:56 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -30,5 +30,5 @@ DEPEND="${RDEPEND}
 src_configure() {
 	gnome2_src_configure \
 		--disable-static \
-		--docdir="${EPREFIX}"/usr/share/doc/${P}
+		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 }
