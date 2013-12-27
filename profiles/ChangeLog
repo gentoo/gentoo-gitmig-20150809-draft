@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8460 2013/12/27 18:02:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8461 2013/12/27 20:49:03 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Dec 2013; Pacho Ramos <pacho@gentoo.org> arch/ia64/package.use.force,
+  arch/ia64/package.use.mask, +arch/sparc/package.use.force,
+  arch/sparc/package.use.mask:
+  We need openrc-force for ia64 and sparc until they solve #478076 to prevent
+  bugs and security issues like bug #496166
 
   27 Dec 2013; Ulrich Müller <ulm@gentoo.org> package.mask:
   Fix invalid atom for x11-libs/libcryptui.
