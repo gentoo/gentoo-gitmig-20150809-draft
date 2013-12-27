@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.288 2013/12/27 22:42:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.289 2013/12/27 22:43:48 dilfridge Exp $
+
+  27 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  hplip-3.13.11-r1.ebuild:
+  Whitespace fix for Patrick
 
   27 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   hplip-3.13.11-r1.ebuild:
