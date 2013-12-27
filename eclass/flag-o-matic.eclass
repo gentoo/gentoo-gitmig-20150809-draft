@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.192 2013/11/02 03:20:37 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.193 2013/12/27 21:27:38 robbat2 Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -605,7 +605,12 @@ append-libs() {
 	local flag
 	for flag in "$@"; do
 		[[ ${flag} == -l* ]] && flag=${flag#-l}
-		export LIBS="${LIBS} -l${flag}"
+		if [[ ${flag} == -* ]]; then
+			eqawarn "Appending non-library to LIBS (${flag}); Other linker flags should be passed via LDFLAGS"
+			export LIBS="${LIBS} ${flag}"
+		else
+			export LIBS="${LIBS} -l${flag}"
+		fi
 	done
 
 	return 0
