@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1090 2013/12/27 21:27:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1091 2013/12/27 21:39:36 robbat2 Exp $
+
+  27 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> flag-o-matic.eclass:
+  Per discussion with Flameeyes, make -l and -L always valid, and only warn
+  about other arguments to append-libs. Also document expected arguments to
+  append-libs.
 
   27 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> flag-o-matic.eclass:
   There are usages in the tree of "append-libs $(pkg-config ...)"; if
