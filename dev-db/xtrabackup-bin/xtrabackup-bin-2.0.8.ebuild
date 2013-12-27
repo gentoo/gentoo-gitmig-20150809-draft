@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xtrabackup-bin/xtrabackup-bin-2.0.7.ebuild,v 1.1 2013/05/11 15:01:26 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xtrabackup-bin/xtrabackup-bin-2.0.8.ebuild,v 1.1 2013/12/27 00:44:11 idl0r Exp $
 
 EAPI=5
 
 MY_PN="percona-${PN/-bin}"
-MY_PVR="${PV}-552"
+MY_PVR="${PV}-587"
 MY_P="${MY_PN}-${PV}"
 MY_PF="${MY_PN}-${MY_PVR}"
 
