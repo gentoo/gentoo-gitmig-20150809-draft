@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15281 2013/12/27 18:02:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15282 2013/12/27 21:24:24 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -33,7 +33,7 @@
 
 # Justin Lecher <jlec@gentoo.org> (27 Dec 2013)
 # This version isn't released yet
-sys-kernel/gentoo-sources:3.12.7
+sys-kernel/aufs-sources:3.12.7
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Dec 2013)
 # The required icons from faenza-xfce-icon-theme are now part of
@@ -279,13 +279,6 @@ app-i18n/rskkserv
 app-office/rabbit
 # Only available for ruby18, no dependencies left
 dev-ruby/postgres
-
-# Tom Wijsman <TomWij@gentoo.org> (30 Nov 2013)
-# Mask gentoo-sources-3.12.{0,1} as it causes sandbox violations, please note
-# that 3.12.2 is out now. aufs-sources masked by Justin Lecher <jlec@gentoo.org>
-sys-kernel/gentoo-sources:3.12.1
-sys-kernel/aufs-sources:3.12.0
-sys-kernel/aufs-sources:3.12.1
 
 # Hans de Graaff <graaff@gentoo.org> (24 Nov 2013)
 # dev-ruby/id3lib-ruby only works with deprecated ruby 1.8.
