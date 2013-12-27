@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.112-r1.ebuild,v 1.2 2013/12/24 13:58:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.112-r1.ebuild,v 1.3 2013/12/27 20:12:49 blueness Exp $
 
 EAPI=5
 inherit eutils multilib pam pax-utils systemd user
@@ -16,7 +16,7 @@ IUSE="examples gtk +introspection kde nls pam selinux systemd"
 
 RDEPEND="ia64? ( =dev-lang/spidermonkey-1.8.5*[-debug] )
 	mips? ( =dev-lang/spidermonkey-1.8.5*[-debug] )
-	!ia64? ( dev-lang/spidermonkey:17[-debug] )
+	!ia64? ( !mips? ( dev-lang/spidermonkey:17[-debug] ) )
 	>=dev-libs/glib-2.32
 	>=dev-libs/expat-2:=
 	introspection? ( >=dev-libs/gobject-introspection-1 )
