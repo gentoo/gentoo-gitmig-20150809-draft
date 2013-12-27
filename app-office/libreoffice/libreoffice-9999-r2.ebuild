@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.203 2013/12/26 22:06:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.204 2013/12/27 16:48:16 dilfridge Exp $
 
 EAPI=5
 
@@ -448,7 +448,7 @@ src_configure() {
 		--enable-randr \
 		--enable-randr-link \
 		--enable-release-build \
-		--enable-hardlink-deliver \
+		--disable-hardlink-deliver \
 		--disable-ccache \
 		--disable-crashdump \
 		--disable-dependency-tracking \
