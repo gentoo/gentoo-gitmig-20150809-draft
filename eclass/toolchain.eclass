@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.609 2013/12/23 21:41:19 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.610 2013/12/27 22:10:29 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -25,7 +25,14 @@ fi
 
 FEATURES=${FEATURES/multilib-strict/}
 
-EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_test src_install pkg_postinst pkg_postrm
+EXPORTED_FUNCTIONS="pkg_setup src_unpack src_compile src_test src_install pkg_postinst pkg_postrm"
+case ${EAPI:-0} in
+	0|1)	;;
+	2|3)    EXPORTED_FUNCTIONS+=" src_prepare src_configure" ;;
+	4*|5*)  EXPORTED_FUNCTIONS+=" pkg_pretend src_prepare src_configure" ;;
+	*)      die "I don't speak EAPI ${EAPI}."
+esac
+EXPORT_FUNCTIONS ${EXPORTED_FUNCTIONS}
 
 #---->> globals <<----
 
@@ -331,21 +338,17 @@ get_gcc_src_uri() {
 
 SRC_URI=$(get_gcc_src_uri)
 
-#---->> pkg_setup <<----
+#---->> pkg_pretend <<----
 
-toolchain_pkg_setup() {
+toolchain_pkg_pretend() {
 	if [[ -n ${PRERELEASE}${SNAPSHOT} || ${PV} == *9999* ]] &&
-	   [[ -z ${I_PROMISE_TO_SUPPLY_PATCHES_WITH_BUGS} ]] ; 	then
+	   [[ -z ${I_PROMISE_TO_SUPPLY_PATCHES_WITH_BUGS} ]] ; then
 		die "Please \`export I_PROMISE_TO_SUPPLY_PATCHES_WITH_BUGS=1\` or define it" \
 			"in your make.conf if you want to use this version."
 	fi
 
 	[[ -z ${UCLIBC_VER} ]] && [[ ${CTARGET} == *-uclibc* ]] && \
 		die "Sorry, this version does not support uClibc"
-
-	# we dont want to use the installed compiler's specs to build gcc!
-	unset GCC_SPECS
-	unset LANGUAGES #265283
 
 	if ! use_if_iuse cxx ; then
 		use_if_iuse go && ewarn 'Go requires a C++ compiler, disabled due to USE="-cxx"'
@@ -356,7 +359,19 @@ toolchain_pkg_setup() {
 	want_minispecs
 }
 
-#----> src_unpack <----
+#---->> pkg_setup <<----
+
+toolchain_pkg_setup() {
+	case "${EAPI:-0}" in
+		0|1|2|3)    toolchain_pkg_pretend ;;
+	esac
+
+	# we dont want to use the installed compiler's specs to build gcc
+	unset GCC_SPECS
+	unset LANGUAGES #265283
+}
+
+#---->> src_unpack <<----
 
 toolchain_src_unpack() {
 	if [[ ${PV} == *9999* ]]; then
@@ -365,6 +380,74 @@ toolchain_src_unpack() {
 		gcc_quick_unpack
 	fi
 
+	case ${EAPI:-0} in
+		0|1)   toolchain_src_prepare ;;
+	esac
+}
+
+gcc_quick_unpack() {
+	pushd "${WORKDIR}" > /dev/null
+	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
+	export UCLIBC_GCC_VER=${UCLIBC_GCC_VER:-${PATCH_GCC_VER}}
+	export PIE_GCC_VER=${PIE_GCC_VER:-${GCC_RELEASE_VER}}
+	export HTB_GCC_VER=${HTB_GCC_VER:-${GCC_RELEASE_VER}}
+	export SPECS_GCC_VER=${SPECS_GCC_VER:-${GCC_RELEASE_VER}}
+
+	if [[ -n ${GCC_A_FAKEIT} ]] ; then
+		unpack ${GCC_A_FAKEIT}
+	elif [[ -n ${PRERELEASE} ]] ; then
+		unpack gcc-${PRERELEASE}.tar.bz2
+	elif [[ -n ${SNAPSHOT} ]] ; then
+		unpack gcc-${SNAPSHOT}.tar.bz2
+	elif [[ ${PV} != *9999* ]] ; then
+		unpack gcc-${GCC_RELEASE_VER}.tar.bz2
+		# We want branch updates to be against a release tarball
+		if [[ -n ${BRANCH_UPDATE} ]] ; then
+			pushd "${S}" > /dev/null
+			epatch "${DISTDIR}"/gcc-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
+			popd > /dev/null
+		fi
+	fi
+
+	if [[ -n ${D_VER} ]] && use d ; then
+		pushd "${S}"/gcc > /dev/null
+		unpack gdc-${D_VER}-src.tar.bz2
+		cd ..
+		ebegin "Adding support for the D language"
+		./gcc/d/setup-gcc.sh >& "${T}"/dgcc.log
+		if ! eend $? ; then
+			eerror "The D GCC package failed to apply"
+			eerror "Please include this log file when posting a bug report:"
+			eerror "  ${T}/dgcc.log"
+			die "failed to include the D language"
+		fi
+		popd > /dev/null
+	fi
+
+	[[ -n ${PATCH_VER} ]] && \
+		unpack gcc-${PATCH_GCC_VER}-patches-${PATCH_VER}.tar.bz2
+
+	[[ -n ${UCLIBC_VER} ]] && \
+		unpack gcc-${UCLIBC_GCC_VER}-uclibc-patches-${UCLIBC_VER}.tar.bz2
+
+	if want_pie ; then
+		if [[ -n ${PIE_CORE} ]] ; then
+			unpack ${PIE_CORE}
+		else
+			unpack gcc-${PIE_GCC_VER}-piepatches-v${PIE_VER}.tar.bz2
+		fi
+		[[ -n ${SPECS_VER} ]] && \
+			unpack gcc-${SPECS_GCC_VER}-specs-${SPECS_VER}.tar.bz2
+	fi
+
+	use_if_iuse boundschecking && unpack "bounds-checking-gcc-${HTB_GCC_VER}-${HTB_VER}.patch.bz2"
+
+	popd > /dev/null
+}
+
+#---->> src_prepare <<----
+
+toolchain_src_prepare() {
 	export BRANDING_GCC_PKGVERSION="Gentoo ${GCC_PVR}"
 	cd "${S}"
 
@@ -477,66 +560,6 @@ toolchain_src_unpack() {
 				einfo "  ${f%%...}"
 			done
 	fi
-}
-
-gcc_quick_unpack() {
-	pushd "${WORKDIR}" > /dev/null
-	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
-	export UCLIBC_GCC_VER=${UCLIBC_GCC_VER:-${PATCH_GCC_VER}}
-	export PIE_GCC_VER=${PIE_GCC_VER:-${GCC_RELEASE_VER}}
-	export HTB_GCC_VER=${HTB_GCC_VER:-${GCC_RELEASE_VER}}
-	export SPECS_GCC_VER=${SPECS_GCC_VER:-${GCC_RELEASE_VER}}
-
-	if [[ -n ${GCC_A_FAKEIT} ]] ; then
-		unpack ${GCC_A_FAKEIT}
-	elif [[ -n ${PRERELEASE} ]] ; then
-		unpack gcc-${PRERELEASE}.tar.bz2
-	elif [[ -n ${SNAPSHOT} ]] ; then
-		unpack gcc-${SNAPSHOT}.tar.bz2
-	elif [[ ${PV} != *9999* ]] ; then
-		unpack gcc-${GCC_RELEASE_VER}.tar.bz2
-		# We want branch updates to be against a release tarball
-		if [[ -n ${BRANCH_UPDATE} ]] ; then
-			pushd "${S}" > /dev/null
-			epatch "${DISTDIR}"/gcc-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
-			popd > /dev/null
-		fi
-	fi
-
-	if [[ -n ${D_VER} ]] && use d ; then
-		pushd "${S}"/gcc > /dev/null
-		unpack gdc-${D_VER}-src.tar.bz2
-		cd ..
-		ebegin "Adding support for the D language"
-		./gcc/d/setup-gcc.sh >& "${T}"/dgcc.log
-		if ! eend $? ; then
-			eerror "The D GCC package failed to apply"
-			eerror "Please include this log file when posting a bug report:"
-			eerror "  ${T}/dgcc.log"
-			die "failed to include the D language"
-		fi
-		popd > /dev/null
-	fi
-
-	[[ -n ${PATCH_VER} ]] && \
-		unpack gcc-${PATCH_GCC_VER}-patches-${PATCH_VER}.tar.bz2
-
-	[[ -n ${UCLIBC_VER} ]] && \
-		unpack gcc-${UCLIBC_GCC_VER}-uclibc-patches-${UCLIBC_VER}.tar.bz2
-
-	if want_pie ; then
-		if [[ -n ${PIE_CORE} ]] ; then
-			unpack ${PIE_CORE}
-		else
-			unpack gcc-${PIE_GCC_VER}-piepatches-v${PIE_VER}.tar.bz2
-		fi
-		[[ -n ${SPECS_VER} ]] && \
-			unpack gcc-${SPECS_GCC_VER}-specs-${SPECS_VER}.tar.bz2
-	fi
-
-	use_if_iuse boundschecking && unpack "bounds-checking-gcc-${HTB_GCC_VER}-${HTB_VER}.patch.bz2"
-
-	popd > /dev/null
 }
 
 guess_patch_type_in_dir() {
@@ -723,95 +746,25 @@ do_gcc_rename_java_bins() {
 	done
 }
 
-gcc_do_filter_flags() {
-	strip-flags
-
-	replace-flags -O? -O2
-
-	# dont want to funk ourselves
-	filter-flags '-mabi*' -m31 -m32 -m64
-
-	filter-flags '-frecord-gcc-switches' # 490738
-
-	case ${GCC_BRANCH_VER} in
-		3.2|3.3)
-			replace-cpu-flags k8 athlon64 opteron x86-64
-			replace-cpu-flags pentium-m pentium3m pentium3
-			replace-cpu-flags G3 750
-			replace-cpu-flags G4 7400
-			replace-cpu-flags G5 7400
-	
-			case $(tc-arch) in
-				amd64)
-					replace-cpu-flags core2 nocona
-					filter-flags '-mtune=*'
-					;;
-				x86)
-					replace-cpu-flags core2 prescott
-					filter-flags '-mtune=*'
-					;;
-			esac
-
-			# XXX: should add a sed or something to query all supported flags
-			#      from the gcc source and trim everything else ...
-			filter-flags -f{no-,}unit-at-a-time -f{no-,}web -mno-tls-direct-seg-refs
-			filter-flags -f{no-,}stack-protector{,-all}
-			filter-flags -fvisibility-inlines-hidden -fvisibility=hidden
-			;;
-		3.4|4.*)
-			case $(tc-arch) in
-				amd64|x86)
-					filter-flags '-mcpu=*'
-					;;
-				alpha)
-					# https://bugs.gentoo.org/454426
-					append-ldflags -Wl,--no-relax
-					;;
-				sparc)
-					# temporary workaround for random ICEs reproduced by multiple users
-					# https://bugs.gentoo.org/457062
-					[[ ${GCC_BRANCH_VER} == 4.6 || ${GCC_BRANCH_VER} == 4.7 ]] && \
-						MAKEOPTS+=" -j1"
-					;;
-				*-macos)
-					# http://gcc.gnu.org/PR25127
-					[[ ${GCC_BRANCH_VER} == 4.0 || ${GCC_BRANCH_VER} == 4.1 ]] && \
-						filter-flags '-mcpu=*' '-march=*' '-mtune=*'
-					;;
-			esac
-			;;
-	esac
-
-	case ${GCC_BRANCH_VER} in
-		4.6)
-			case $(tc-arch) in
-				amd64|x86)
-					# https://bugs.gentoo.org/411333
-					# https://bugs.gentoo.org/466454
-					replace-cpu-flags c3-2 pentium2 pentium3 pentium3m pentium-m i686
-					;;
-			esac
-			;;
-	esac
-
-	strip-unsupported-flags
-	
-	if is_crosscompile ; then
-		# Set this to something sane for both native and target
-		CFLAGS="-O2 -pipe"
-		FFLAGS=${CFLAGS}
-		FCFLAGS=${CFLAGS}
-
-		local VAR="CFLAGS_"${CTARGET//-/_}
-		CXXFLAGS=${!VAR}
-	fi
-
-	export GCJFLAGS=${GCJFLAGS:-${CFLAGS}}
-}
-
 #---->> src_configure <<----
 
-gcc_do_configure() {
+toolchain_src_configure() {
+	gcc_do_filter_flags
+
+	einfo "CFLAGS=\"${CFLAGS}\""
+	einfo "CXXFLAGS=\"${CXXFLAGS}\""
+	einfo "LDFLAGS=\"${LDFLAGS}\""
+
+	# Force internal zip based jar script to avoid random
+	# issues with 3rd party jar implementations.  #384291
+	export JAR=no
+
+	# For hardened gcc 4.3 piepatchset to build the hardened specs
+	# file (build.specs) to use when building gcc.
+	if ! tc_version_is_at_least 4.4 && want_minispecs ; then
+		setup_minispecs_gcc_build_specs
+	fi
+
 	local confgcc=( --host=${CHOST} )
 
 	if is_crosscompile || tc-is-cross-compiler ; then
@@ -1232,6 +1185,109 @@ gcc_do_configure() {
 	popd > /dev/null
 }
 
+gcc_do_filter_flags() {
+	strip-flags
+
+	replace-flags -O? -O2
+
+	# dont want to funk ourselves
+	filter-flags '-mabi*' -m31 -m32 -m64
+
+	filter-flags '-frecord-gcc-switches' # 490738
+
+	case ${GCC_BRANCH_VER} in
+		3.2|3.3)
+			replace-cpu-flags k8 athlon64 opteron x86-64
+			replace-cpu-flags pentium-m pentium3m pentium3
+			replace-cpu-flags G3 750
+			replace-cpu-flags G4 7400
+			replace-cpu-flags G5 7400
+	
+			case $(tc-arch) in
+				amd64)
+					replace-cpu-flags core2 nocona
+					filter-flags '-mtune=*'
+					;;
+				x86)
+					replace-cpu-flags core2 prescott
+					filter-flags '-mtune=*'
+					;;
+			esac
+
+			# XXX: should add a sed or something to query all supported flags
+			#      from the gcc source and trim everything else ...
+			filter-flags -f{no-,}unit-at-a-time -f{no-,}web -mno-tls-direct-seg-refs
+			filter-flags -f{no-,}stack-protector{,-all}
+			filter-flags -fvisibility-inlines-hidden -fvisibility=hidden
+			;;
+		3.4|4.*)
+			case $(tc-arch) in
+				amd64|x86)
+					filter-flags '-mcpu=*'
+					;;
+				alpha)
+					# https://bugs.gentoo.org/454426
+					append-ldflags -Wl,--no-relax
+					;;
+				sparc)
+					# temporary workaround for random ICEs reproduced by multiple users
+					# https://bugs.gentoo.org/457062
+					[[ ${GCC_BRANCH_VER} == 4.6 || ${GCC_BRANCH_VER} == 4.7 ]] && \
+						MAKEOPTS+=" -j1"
+					;;
+				*-macos)
+					# http://gcc.gnu.org/PR25127
+					[[ ${GCC_BRANCH_VER} == 4.0 || ${GCC_BRANCH_VER} == 4.1 ]] && \
+						filter-flags '-mcpu=*' '-march=*' '-mtune=*'
+					;;
+			esac
+			;;
+	esac
+
+	case ${GCC_BRANCH_VER} in
+		4.6)
+			case $(tc-arch) in
+				amd64|x86)
+					# https://bugs.gentoo.org/411333
+					# https://bugs.gentoo.org/466454
+					replace-cpu-flags c3-2 pentium2 pentium3 pentium3m pentium-m i686
+					;;
+			esac
+			;;
+	esac
+
+	strip-unsupported-flags
+
+	# these are set here so we have something sane at configure time
+	if is_crosscompile ; then
+		# Set this to something sane for both native and target
+		CFLAGS="-O2 -pipe"
+		FFLAGS=${CFLAGS}
+		FCFLAGS=${CFLAGS}
+
+		local VAR="CFLAGS_"${CTARGET//-/_}
+		CXXFLAGS=${!VAR}
+	fi
+
+	export GCJFLAGS=${GCJFLAGS:-${CFLAGS}}
+}
+
+setup_minispecs_gcc_build_specs() {
+	# Setup the "build.specs" file for gcc 4.3 to use when building.
+	if hardened_gcc_works pie ; then
+		cat "${WORKDIR}"/specs/pie.specs >> "${WORKDIR}"/build.specs
+	fi
+	if hardened_gcc_works ssp ; then
+		for s in ssp sspall ; do
+			cat "${WORKDIR}"/specs/${s}.specs >> "${WORKDIR}"/build.specs
+		done
+	fi
+	for s in nostrict znow ; do
+		cat "${WORKDIR}"/specs/${s}.specs >> "${WORKDIR}"/build.specs
+	done
+	export GCC_SPECS="${WORKDIR}"/build.specs
+}
+
 gcc-multilib-configure() {
 	if ! is_multilib ; then
 		confgcc+=( --disable-multilib )
@@ -1276,26 +1332,9 @@ gcc-abi-map() {
 #----> src_compile <----
 
 toolchain_src_compile() {
-	gcc_do_filter_flags
-	einfo "CFLAGS=\"${CFLAGS}\""
-	einfo "CXXFLAGS=\"${CXXFLAGS}\""
-	einfo "LDFLAGS=\"${LDFLAGS}\""
-
-	# Force internal zip based jar script to avoid random
-	# issues with 3rd party jar implementations.  #384291
-	export JAR=no
-
-	# For hardened gcc 4.3 piepatchset to build the hardened specs
-	# file (build.specs) to use when building gcc.
-	if ! tc_version_is_at_least 4.4 && want_minispecs ; then
-		setup_minispecs_gcc_build_specs
-	fi
-	# Build in a separate build tree
-	mkdir -p "${WORKDIR}"/build
-	pushd "${WORKDIR}"/build > /dev/null
-
-	einfo "Configuring ${PN} ..."
-	gcc_do_configure
+	case ${EAPI:-0} in
+		0|1)   toolchain_src_configure ;;
+	esac
 
 	touch "${S}"/gcc/c-gperf.h
 
@@ -1305,50 +1344,18 @@ toolchain_src_compile() {
 
 	einfo "Compiling ${PN} ..."
 	gcc_do_make ${GCC_MAKE_TARGET}
-
-	popd > /dev/null
 }
 
-setup_minispecs_gcc_build_specs() {
-	# Setup the "build.specs" file for gcc 4.3 to use when building.
-	if hardened_gcc_works pie ; then
-		cat "${WORKDIR}"/specs/pie.specs >> "${WORKDIR}"/build.specs
-	fi
-	if hardened_gcc_works ssp ; then
-		for s in ssp sspall ; do
-			cat "${WORKDIR}"/specs/${s}.specs >> "${WORKDIR}"/build.specs
-		done
-	fi
-	for s in nostrict znow ; do
-		cat "${WORKDIR}"/specs/${s}.specs >> "${WORKDIR}"/build.specs
-	done
-	export GCC_SPECS="${WORKDIR}"/build.specs
-}
-
-# This function accepts one optional argument, the make target to be used.
-# If ommitted, gcc_do_make will try to guess whether it should use all,
-# profiledbootstrap, or bootstrap-lean depending on CTARGET and arch. An
-# example of how to use this function:
-#
-#	gcc_do_make all-target-libstdc++-v3
-#
-# In addition to the target to be used, the following variables alter the
-# behavior of this function:
-#
-#	LDFLAGS
-#			Flags to pass to ld
-#
-#	STAGE1_CFLAGS
-#			CFLAGS to use during stage1 of a gcc bootstrap
-#
-#	BOOT_CFLAGS
-#			CFLAGS to use during stages 2+3 of a gcc bootstrap.
-#
-# Travis Tilley <lv@gentoo.org> (04 Sep 2004)
-#
 gcc_do_make() {
+	# This function accepts one optional argument, the make target to be used.
+	# If omitted, gcc_do_make will try to guess whether it should use all,
+	# profiledbootstrap, or bootstrap-lean depending on CTARGET and arch. An
+	# example of how to use this function:
+	#
+	#	gcc_do_make all-target-libstdc++-v3
+	#
 	# Set make target to $1 if passed
-	[[ -n $1 ]] && GCC_MAKE_TARGET=$1
+	[[ -n ${1} ]] && GCC_MAKE_TARGET=${1}
 	# default target
 	if is_crosscompile || tc-is-cross-compiler ; then
 		# 3 stage bootstrapping doesnt quite work when you cant run the
