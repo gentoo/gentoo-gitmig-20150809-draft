@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.55.0.ebuild,v 1.3 2013/11/30 20:32:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.55.0-r1.ebuild,v 1.1 2013/12/27 17:08:26 pinkbyte Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -18,7 +18,7 @@ LICENSE="Boost-1.0"
 SLOT="0/${PV}" # ${PV} instead ${MAJOR_V} due to bug 486122
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x86-fbsd ~x86-linux"
 
-IUSE="debug doc icu +nls mpi python static-libs +threads tools"
+IUSE="context debug doc icu +nls mpi python static-libs +threads tools"
 
 RDEPEND="icu? ( >=dev-libs/icu-3.6:= )
 	!icu? ( virtual/libiconv )
@@ -116,12 +116,12 @@ src_configure() {
 	use mpi || OPTIONS+=" --without-mpi"
 	use python || OPTIONS+=" --without-python"
 	use nls || OPTIONS+=" --without-locale"
+	use context || OPTIONS+=" --without-context --without-coroutine"
 
 	OPTIONS+=" pch=off"
 	OPTIONS+=" --boost-build=${EPREFIX}/usr/share/boost-build --prefix=\"${ED}usr\""
 	OPTIONS+=" --layout=system"
 	OPTIONS+=" threading=$(usex threads multi single) link=$(usex static-libs shared,static shared)"
-	OPTIONS+=" --without-context"
 
 	[[ ${CHOST} == *-winnt* ]] && OPTIONS+=" -sNO_BZIP2=1"
 }
@@ -252,7 +252,10 @@ EOF
 		rm -r "${ED}"/usr/include/boost/locale || die
 	fi
 
-	rm -r "${ED}"/usr/include/boost/context || die
+	if ! use context; then
+		rm -r "${ED}"/usr/include/boost/context || die
+		rm -r "${ED}"/usr/include/boost/coroutine || die
+	fi
 
 	if use doc; then
 		find libs/*/* -iname "test" -or -iname "src" | xargs rm -rf
