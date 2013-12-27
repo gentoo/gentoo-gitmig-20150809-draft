@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.71 2013/12/24 20:07:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.72 2013/12/27 14:43:50 mgorny Exp $
 
 EAPI=5
 
@@ -26,15 +26,15 @@ COMMON_DEPEND="
 	clang? (
 		python? ( ${PYTHON_DEPS} )
 		static-analyzer? (
-			dev-lang/perl
+			dev-lang/perl:*
 			${PYTHON_DEPS}
 		)
 		xml? ( dev-libs/libxml2:2= )
 	)
-	gold? ( >=sys-devel/binutils-2.22[cxx] )
+	gold? ( >=sys-devel/binutils-2.22:*[cxx] )
 	libffi? ( virtual/libffi:0=[${MULTILIB_USEDEP}] )
 	ncurses? ( sys-libs/ncurses:5=[${MULTILIB_USEDEP}] )
-	ocaml? ( dev-lang/ocaml )
+	ocaml? ( dev-lang/ocaml:0= )
 	udis86? ( dev-libs/udis86:0=[pic(+),${MULTILIB_USEDEP}] )"
 DEPEND="${COMMON_DEPEND}
 	dev-lang/perl
@@ -46,7 +46,7 @@ DEPEND="${COMMON_DEPEND}
 		( >=sys-freebsd/freebsd-lib-9.1-r10 sys-libs/libcxx )
 	)
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
-	!kernel_Darwin? ( app-admin/chrpath )
+	clang? ( xml? ( virtual/pkgconfig ) )
 	libffi? ( virtual/pkgconfig )
 	${PYTHON_DEPS}"
 RDEPEND="${COMMON_DEPEND}
@@ -196,7 +196,7 @@ multilib_src_configure() {
 		conf_flags+=( --with-clang-resource-dir=../lib/clang/3.5 )
 	fi
 	# well, it's used only by clang executable c-index-test
-	if multilib_build_binaries && use xml; then
+	if multilib_build_binaries && use clang && use xml; then
 		conf_flags+=( XML2CONFIG="$(tc-getPKG_CONFIG) libxml-2.0" )
 	else
 		conf_flags+=( ac_cv_prog_XML2CONFIG="" )
