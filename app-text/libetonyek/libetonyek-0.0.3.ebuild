@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libetonyek/libetonyek-0.0.3.ebuild,v 1.1 2013/12/27 08:53:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libetonyek/libetonyek-0.0.3.ebuild,v 1.2 2013/12/27 15:33:33 scarabeus Exp $
 
 EAPI=5
 
@@ -32,6 +32,11 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	test? ( dev-util/cppunit )
 "
+
+PATCHES=(
+	"${FILESDIR}/${P}-comma.patch"
+	"${FILESDIR}/${P}-lexical_cast.patch"
+)
 
 src_prepare() {
 	[[ -d m4 ]] || mkdir "m4"
