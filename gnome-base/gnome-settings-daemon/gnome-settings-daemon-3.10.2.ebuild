@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.10.2.ebuild,v 1.1 2013/12/24 17:53:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.10.2.ebuild,v 1.2 2013/12/27 20:52:13 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -18,7 +18,7 @@ REQUIRED_USE="
 	packagekit? ( udev )
 	smartcard? ( udev )
 "
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.37.7:2
