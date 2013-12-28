@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/multibit/multibit-0.5.15.ebuild,v 1.1 2013/12/01 13:49:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/multibit/multibit-0.5.16.ebuild,v 1.1 2013/12/28 18:41:36 blueness Exp $
 
 EAPI=5
 
@@ -33,8 +33,7 @@ src_install() {
 	exeinto /usr/bin
 	doexe "${FILESDIR}"/${PN}
 
-	make_desktop_entry "${PN}" "Multibit" "/opt/MultiBit-${PV}/multibit48.png" "GNOME;Network;P2P;Office;Finance;" "MimeType=x-scheme-handler/multibit;\nTerminal=false"
+	make_desktop_entry "${PN}" "Multibit" "/opt/MultiBit/multibit48.png" "GNOME;Network;P2P;Office;Finance;" "MimeType=x-scheme-handler/multibit;\nTerminal=false"
 
-	addpredict "$(unset HOME; echo ~)/.gconf"
 	java -jar "${DISTDIR}"/${P}-linux.jar auto-install.xml >/dev/null 2>&1
 }
