@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-034-r3.ebuild,v 1.1 2013/12/28 15:48:33 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-034-r3.ebuild,v 1.2 2013/12/28 17:41:17 aidecoe Exp $
 
 EAPI=4
 
@@ -166,7 +166,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PV}-0007-dracut.sh-also-mkdir-run-lock-which-is.patch"
 	epatch "${FILESDIR}/${PV}-0008-dracut.sh-no-need-to-make-subdirs-in-r.patch"
 	epatch "${FILESDIR}/${PV}-0009-lvm-install-thin-utils-for-non-hostonl.patch"
-	epatch "${FILESDIR}/${PV}-0010-module-setup.sh-add-comments-for-dracu.patch"
+	epatch "${FILESDIR}/${PV}-0010-module-setup.sh-add-comments.patch.bz2"
 	epatch "${FILESDIR}/${PV}-0011-lvm-fix-thin-recognition.patch"
 	epatch "${FILESDIR}/${PV}-0012-lvm-always-install-thin-utils-for-lvm.patch"
 	epatch "${FILESDIR}/${PV}-0013-usrmount-always-install.patch"

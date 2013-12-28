@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.146 2013/12/28 17:32:12 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.147 2013/12/28 17:41:17 aidecoe Exp $
+
+  28 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r3.ebuild,
+  dracut-034-r4.ebuild, +files/034-0010-module-setup.sh-add-comments.patch.bz2,
+  -files/034-0010-module-setup.sh-add-comments-for-dracu.patch:
+  Compressed patch too big.
 
 *dracut-034-r4 (28 Dec 2013)
 
