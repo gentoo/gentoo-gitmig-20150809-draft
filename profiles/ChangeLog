@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8461 2013/12/27 20:49:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8462 2013/12/28 13:43:27 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Dec 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite sys-kernel/module-rebuild wrt #410739
 
   27 Dec 2013; Pacho Ramos <pacho@gentoo.org> arch/ia64/package.use.force,
   arch/ia64/package.use.mask, +arch/sparc/package.use.force,

@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15282 2013/12/27 21:24:24 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15283 2013/12/28 13:43:27 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (28 Dec 2013)
+# Replaced by 'emerge @module-rebuild' set in Portage itself.
+# Removal in 30 days, see http://bugs.gentoo.org/410739
+sys-kernel/module-rebuild
 
 # Justin Lecher <jlec@gentoo.org> (27 Dec 2013)
 # This version isn't released yet
