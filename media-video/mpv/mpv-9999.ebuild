@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.32 2013/12/17 13:30:57 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.33 2013/12/28 20:22:12 maksbotan Exp $
 
 EAPI=5
 
@@ -136,7 +136,7 @@ DEPEND="${RDEPEND}
 	x86? ( ${ASM_DEP} )
 	x86-fbsd? ( ${ASM_DEP} )
 "
-DOCS=( Copyright README.md etc/example.conf etc/input.conf etc/encoding-example-profiles.conf )
+DOCS=( Copyright README.md etc/example.conf etc/input.conf )
 
 pkg_setup() {
 	if use !libass; then
