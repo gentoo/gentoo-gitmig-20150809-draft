@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.185 2013/12/26 14:51:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.186 2013/12/28 18:28:57 jlec Exp $
+
+  28 Dec 2013; Justin Lecher <jlec@gentoo.org> tcl-8.5.15-r1.ebuild,
+  tcl-8.6.1-r1.ebuild:
+  Exchange is_final_abi() by multilib_build_binaries(), thanks Tommy[D] telling
+  me about those things
 
 *tcl-8.6.1-r1 (26 Dec 2013)
 *tcl-8.5.15-r1 (26 Dec 2013)
