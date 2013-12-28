@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8462 2013/12/28 13:43:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8463 2013/12/28 19:08:48 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> thirdpartymirrors:
+  Apache mirrors have been moving old files to the archive tier, this will help
+  pick stuff up better.
 
   28 Dec 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Lastrite sys-kernel/module-rebuild wrt #410739
