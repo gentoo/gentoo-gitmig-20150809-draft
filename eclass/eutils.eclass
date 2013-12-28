@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.429 2013/12/27 09:28:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.430 2013/12/28 17:19:10 mgorny Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1666,7 +1666,7 @@ prune_libtool_files() {
 	fi
 }
 
-# @FUNCTION: prune_libtool_files
+# @FUNCTION: einstalldocs
 # @DESCRIPTION:
 # Install documentation using DOCS and HTML_DOCS.
 #
