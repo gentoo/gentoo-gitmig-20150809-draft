@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/wxsqlite3/wxsqlite3-3.0.6.1.ebuild,v 1.1 2013/12/28 21:14:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/wxsqlite3/wxsqlite3-3.0.6.1.ebuild,v 1.2 2013/12/28 21:25:23 jlec Exp $
 
 EAPI=5
 
 WX_GTK_VER="2.8"
 
-inherit eutils wxwidgets
+inherit eutils multilib wxwidgets
 
 DESCRIPTION="C++ wrapper around the public domain SQLite 3.x database"
 HOMEPAGE="http://wxcode.sourceforge.net/components/wxsqlite3/"
@@ -27,7 +27,11 @@ S="${WORKDIR}/${P%.1}"
 src_prepare() {
 	rm -rf sqlite3 || die
 	cp configure28 configure || die
-	cat "${FILESDIR}"/${P}.pc.in > ${PN}.pc.in || die
+	sed \
+		-e "s:@WXVERSION@:${WX_GTK_VER}:g" \
+		-e "s:@LIBDIR@:$(get_libdir):g" \
+		-e "s:@VERSION@:${PV}:g" \
+		"${FILESDIR}"/${P}.pc.in > ${PN}.pc || die
 }
 
 src_configure() {
@@ -41,6 +45,9 @@ src_configure() {
 
 src_install() {
 	default
+
+	insinto /usr/$(get_libdir)/pkgconfig
+	doins ${PN}.pc
 
 	dodoc Readme.txt
 	dohtml -r docs/html/*
