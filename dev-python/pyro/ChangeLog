@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.96 2013/12/28 18:52:02 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.97 2013/12/28 18:54:34 aidecoe Exp $
+
+  28 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -pyro-4.20.ebuild:
+  Removed testing 4.20.
 
   28 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -pyro-4.8.ebuild,
   -pyro-4.11.ebuild, -pyro-4.17.ebuild:
