@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.614 2013/12/28 08:52:36 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.615 2013/12/28 09:12:39 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -958,7 +958,7 @@ toolchain_src_configure() {
 			--disable-__cxa_atexit
 			$(use_enable nptl tls)
 		)
-		[[ ${GCCMAJOR}.${GCCMINOR} == 3.3 ]] && confgcc+=( --enable-sjlj-exceptions )
+		tc_version_is_between 3.3 3.4 && confgcc+=( --enable-sjlj-exceptions )
 		if tc_version_is_between 3.4 4.3 ; then
 			confgcc+=( --enable-clocale=uclibc )
 		fi
