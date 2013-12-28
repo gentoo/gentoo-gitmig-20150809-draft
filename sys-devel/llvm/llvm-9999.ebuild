@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.72 2013/12/27 14:43:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.73 2013/12/28 14:02:19 mgorny Exp $
 
 EAPI=5
 
@@ -277,7 +277,7 @@ set_makeargs() {
 				llvm-extract llvm-mc llvm-bcanalyzer llvm-diff macho-dump
 				llvm-objdump llvm-readobj llvm-rtdyld llvm-dwarfdump llvm-cov
 				llvm-size llvm-stress llvm-mcmarkup llvm-symbolizer obj2yaml
-				yaml2obj lto
+				yaml2obj lto bugpoint
 			)
 
 			# those tools require 'lto' built first, so we need to delay
@@ -357,11 +357,22 @@ multilib_src_install() {
 
 	emake "${MAKEARGS[@]}" DESTDIR="${D}" install
 
-	if multilib_build_binaries; then
+	# Preserve ABI-variant of llvm-config.
+	dodir /tmp
+	mv "${ED}"/usr/bin/llvm-config "${ED}"/tmp/"${CHOST}"-llvm-config || die
+
+	if ! multilib_build_binaries; then
+		# Drop all the executables since LLVM doesn't like to
+		# clobber when installing.
+		rm -r "${ED}"/usr/bin || die
+
+		# Backwards compat, will be happily removed someday.
+		dosym "${CHOST}"-llvm-config /tmp/llvm-config.${ABI}
+	else
 		# Move files back.
-		if path_exists -o "${ED}"/tmp/llvm-config.*; then
-			mv "${ED}"/tmp/llvm-config.* "${ED}"/usr/bin || die
-		fi
+		mv "${ED}"/tmp/*llvm-config* "${ED}"/usr/bin || die
+		# Create a symlink for host's llvm-config.
+		dosym "${CHOST}"-llvm-config /usr/bin/llvm-config
 
 		# Install docs.
 		doman "${S}"/docs/_build/man/*.1
@@ -377,13 +388,6 @@ multilib_src_install() {
 
 		# install cmake modules
 		emake -C "${S%/}"_cmake/cmake/modules DESTDIR="${D}" install
-	else
-		# Preserve ABI-variant of llvm-config,
-		# then drop all the executables since LLVM doesn't like to
-		# clobber when installing.
-		mkdir -p "${ED}"/tmp || die
-		mv "${ED}"/usr/bin/llvm-config "${ED}"/tmp/llvm-config.${ABI} || die
-		rm -r "${ED}"/usr/bin || die
 	fi
 
 	# Fix install_names on Darwin.  The build system is too complicated

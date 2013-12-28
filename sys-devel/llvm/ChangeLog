@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.158 2013/12/27 14:43:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.159 2013/12/28 14:02:19 mgorny Exp $
+
+  28 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Add bugpoint to built tools. Switch llvm-config wrapping to use $CHOST-llvm-
+  config.
 
   27 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
   Update/fix dependencies.
