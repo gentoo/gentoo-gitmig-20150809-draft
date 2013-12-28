@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/BerkeleyDB-0.530.0.ebuild,v 1.8 2013/12/28 20:33:49 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/BerkeleyDB-0.530.0.ebuild,v 1.9 2013/12/28 20:39:58 zlogene Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module eutils db-use
 DESCRIPTION="This module provides Berkeley DB interface for Perl."
 
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="test"
 
 # Install DB_File if you want older support. BerkleyDB no longer
