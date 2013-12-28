@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.613 2013/12/28 08:11:41 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.614 2013/12/28 08:52:36 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1195,7 +1195,6 @@ toolchain_src_configure() {
 
 gcc_do_filter_flags() {
 	strip-flags
-
 	replace-flags -O? -O2
 
 	# dont want to funk ourselves
@@ -1203,66 +1202,58 @@ gcc_do_filter_flags() {
 
 	filter-flags '-frecord-gcc-switches' # 490738
 
-	case ${GCC_BRANCH_VER} in
-		3.2|3.3)
-			replace-cpu-flags k8 athlon64 opteron x86-64
-			replace-cpu-flags pentium-m pentium3m pentium3
-			replace-cpu-flags G3 750
-			replace-cpu-flags G4 7400
-			replace-cpu-flags G5 7400
+	if tc_version_is_between 3.2 3.4 ; then
+		# XXX: this is so outdated it's barely useful, but it don't hurt...
+		replace-cpu-flags k8 athlon64 opteron x86-64
+		replace-cpu-flags pentium-m pentium3m pentium3
+		replace-cpu-flags G3 750
+		replace-cpu-flags G4 7400
+		replace-cpu-flags G5 7400
 	
-			case $(tc-arch) in
-				amd64)
-					replace-cpu-flags core2 nocona
-					filter-flags '-mtune=*'
-					;;
-				x86)
-					replace-cpu-flags core2 prescott
-					filter-flags '-mtune=*'
-					;;
-			esac
+		case $(tc-arch) in
+			amd64)
+				replace-cpu-flags core2 nocona
+				filter-flags '-mtune=*'
+				;;
+			x86)
+				replace-cpu-flags core2 prescott
+				filter-flags '-mtune=*'
+				;;
+		esac
 
-			# XXX: should add a sed or something to query all supported flags
-			#      from the gcc source and trim everything else ...
-			filter-flags -f{no-,}unit-at-a-time -f{no-,}web -mno-tls-direct-seg-refs
-			filter-flags -f{no-,}stack-protector{,-all}
-			filter-flags -fvisibility-inlines-hidden -fvisibility=hidden
-			;;
-		3.4|4.*)
-			case $(tc-arch) in
-				amd64|x86)
-					filter-flags '-mcpu=*'
-					;;
-				alpha)
-					# https://bugs.gentoo.org/454426
-					append-ldflags -Wl,--no-relax
-					;;
-				sparc)
-					# temporary workaround for random ICEs reproduced by multiple users
-					# https://bugs.gentoo.org/457062
-					[[ ${GCC_BRANCH_VER} == 4.6 || ${GCC_BRANCH_VER} == 4.7 ]] && \
-						MAKEOPTS+=" -j1"
-					;;
-				*-macos)
-					# http://gcc.gnu.org/PR25127
-					[[ ${GCC_BRANCH_VER} == 4.0 || ${GCC_BRANCH_VER} == 4.1 ]] && \
-						filter-flags '-mcpu=*' '-march=*' '-mtune=*'
-					;;
-			esac
-			;;
-	esac
+		# XXX: should add a sed or something to query all supported flags
+		#      from the gcc source and trim everything else ...
+		filter-flags -f{no-,}unit-at-a-time -f{no-,}web -mno-tls-direct-seg-refs
+		filter-flags -f{no-,}stack-protector{,-all}
+		filter-flags -fvisibility-inlines-hidden -fvisibility=hidden
+	fi
 
-	case ${GCC_BRANCH_VER} in
-		4.6)
-			case $(tc-arch) in
-				amd64|x86)
+	if tc_version_is_at_least 3.4 ; then
+		case $(tc-arch) in
+			amd64|x86)
+				filter-flags '-mcpu=*'
+				if tc_version_is_between 4.6 4.7 ; then
 					# https://bugs.gentoo.org/411333
 					# https://bugs.gentoo.org/466454
 					replace-cpu-flags c3-2 pentium2 pentium3 pentium3m pentium-m i686
-					;;
-			esac
-			;;
-	esac
+				fi
+				;;
+			alpha)
+				# https://bugs.gentoo.org/454426
+				append-ldflags -Wl,--no-relax
+				;;
+			sparc)
+				# temporary workaround for random ICEs reproduced by multiple users
+				# https://bugs.gentoo.org/457062
+				tc_version_is_between 4.6 4.8 && MAKEOPTS+=" -j1"
+				;;
+			*-macos)
+				# http://gcc.gnu.org/PR25127
+				tc_version_is_between 4.0 4.2 && \
+					filter-flags '-mcpu=*' '-march=*' '-mtune=*'
+				;;
+		esac
+	fi
 
 	strip-unsupported-flags
 
