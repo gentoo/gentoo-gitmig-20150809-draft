@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-9999.ebuild,v 1.6 2013/12/26 15:57:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-9999.ebuild,v 1.7 2013/12/28 18:04:35 jer Exp $
 
 EAPI=4
 
@@ -15,9 +15,9 @@ HOMEPAGE="http://irssi.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="ipv6 +perl ssl socks5 tinfo"
+IUSE="ipv6 +perl ssl socks5"
 
-RDEPEND="sys-libs/ncurses[tinfo=]
+RDEPEND="sys-libs/ncurses
 	>=dev-libs/glib-2.6.0
 	ssl? ( dev-libs/openssl )
 	perl? ( dev-lang/perl )
@@ -41,8 +41,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--with-proxy \
-		$(usex tinfo '--with-terminfo --without-ncurses' \
-			"--without-terminfo --with-ncurses="${EPREFIX}"/usr") \
+		--with-ncurses="${EPREFIX}"/usr \
 		--with-perl-lib=vendor \
 		$(use_with perl) \
 		$(use_with socks5 socks) \
@@ -53,7 +52,7 @@ src_configure() {
 src_install() {
 	emake \
 		DESTDIR="${D}" \
-		docdir=/usr/share/doc/${PF} \
+		docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		install
 
 	use perl && fixlocalpod
