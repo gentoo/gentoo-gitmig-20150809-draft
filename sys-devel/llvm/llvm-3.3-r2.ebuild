@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r2.ebuild,v 1.2 2013/12/28 19:13:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r2.ebuild,v 1.3 2013/12/28 22:56:42 mgorny Exp $
 
 EAPI=5
 
@@ -206,9 +206,12 @@ multilib_src_configure() {
 		targets='all'
 	else
 		targets='host,cpp'
-		use video_cards_radeon && targets+=',r600'
 	fi
 	conf_flags+=( --enable-targets=${targets} )
+
+	if use video_cards_radeon; then
+		conf_flags+=( --enable-experimental-targets=R600 )
+	fi
 
 	if multilib_build_binaries; then
 		use gold && conf_flags+=( --with-binutils-include="${EPREFIX}"/usr/include/ )
@@ -245,6 +248,10 @@ cmake_configure() {
 	# but it's fairly easy to steal this from configured autotools
 	local targets=$(sed -n -e 's/^TARGETS_TO_BUILD=//p' Makefile.config || die)
 	local libdir=$(get_libdir)
+
+	# cmake doesn't have R600 in 3.3
+	targets=${targets/R600 /}
+
 	local mycmakeargs=(
 		-DLLVM_TARGETS_TO_BUILD="${targets// /;}"
 		-DLLVM_LIBDIR_SUFFIX=${libdir#lib}
