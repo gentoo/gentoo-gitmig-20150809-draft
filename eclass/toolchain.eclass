@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.612 2013/12/28 03:48:25 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.613 2013/12/28 08:11:41 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -51,9 +51,14 @@ is_crosscompile() {
 }
 
 # General purpose version check.  Without a second arg matches up to minor version (x.x.x)
-# (ie. 4.6.0_pre9999 matches 4 or 4.6 or 4.6.0 but not 4.6.1)
 tc_version_is_at_least() { 
 	version_is_at_least "$1" "${2:-${GCC_RELEASE_VER}}"
+}
+
+# General purpose version range check
+# Note that it matches up to but NOT including the second version
+tc_version_is_between() {
+	tc_version_is_at_least "${1}" && ! tc_version_is_at_least "${2}"
 }
 
 GCC_PV=${TOOLCHAIN_GCC_PV:-${PV}}
@@ -120,7 +125,7 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 	[[ -n ${SPECS_VER} ]] && IUSE+=" nossp"
 	tc_version_is_at_least 3 && IUSE+=" doc gcj awt hardened multilib objc"
 	tc_version_is_at_least 4.0 && IUSE+=" objc-gc"
-	tc_version_is_at_least 4.0 && ! tc_version_is_at_least 4.9 && IUSE+=" mudflap"
+	tc_version_is_between 4.0 4.9 && IUSE+=" mudflap"
 	tc_version_is_at_least 4.1 && IUSE+=" libssp objc++"
 	tc_version_is_at_least 4.2 && IUSE+=" openmp"
 	tc_version_is_at_least 4.3 && IUSE+=" fixed-point"
@@ -472,7 +477,7 @@ toolchain_src_prepare() {
 
 	# install the libstdc++ python into the right location
 	# http://gcc.gnu.org/PR51368
-	if tc_version_is_at_least 4.5 && ! tc_version_is_at_least 4.7 ; then
+	if tc_version_is_between 4.5 4.7 ; then
 		sed -i \
 			'/^pythondir =/s:=.*:= $(datadir)/python:' \
 			"${S}"/libstdc++-v3/python/Makefile.in || die
@@ -527,12 +532,12 @@ toolchain_src_prepare() {
 
 	# In gcc 3.3.x and 3.4.x, rename the java bins to gcc-specific names
 	# in line with gcc-4.
-	if tc_version_is_at_least 3.3 && ! tc_version_is_at_least 4.0 ; then
+	if tc_version_is_between 3.3 4.0 ; then
 		do_gcc_rename_java_bins
 	fi
 
 	# Prevent libffi from being installed
-	if tc_version_is_at_least 3.0 && ! tc_version_is_at_least 4.8 ; then
+	if tc_version_is_between 3.0 4.8 ; then
 		sed -i -e 's/\(install.*:\) install-.*recursive/\1/' "${S}"/libffi/Makefile.in || die
 		sed -i -e 's/\(install-data-am:\).*/\1/' "${S}"/libffi/include/Makefile.in || die
 	fi
@@ -875,7 +880,7 @@ toolchain_src_configure() {
 
 	# newer gcc versions like to bootstrap themselves with C++,
 	# so we need to manually disable it ourselves
-	if tc_version_is_at_least 4.7 && ! is_cxx ; then
+	if tc_version_is_between 4.7 4.8 && ! is_cxx ; then
 		confgcc+=( --disable-build-with-cxx --disable-build-poststage1-with-cxx )
 	fi
 
@@ -954,7 +959,7 @@ toolchain_src_configure() {
 			$(use_enable nptl tls)
 		)
 		[[ ${GCCMAJOR}.${GCCMINOR} == 3.3 ]] && confgcc+=( --enable-sjlj-exceptions )
-		if tc_version_is_at_least 3.4 && ! tc_version_is_at_least 4.3 ; then
+		if tc_version_is_between 3.4 4.3 ; then
 			confgcc+=( --enable-clocale=uclibc )
 		fi
 		;;
