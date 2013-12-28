@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.611 2013/12/27 22:54:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.612 2013/12/28 03:48:25 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -552,6 +552,9 @@ toolchain_src_prepare() {
 		eend $?
 	done
 	sed -i 's|A-Za-z0-9|[:alnum:]|g' "${S}"/gcc/*.awk #215828
+
+	# Prevent new texinfo from breaking old versions (see #198182, #464008)
+	tc_version_is_at_least 4.1 && epatch "${GCC_FILESDIR}"/gcc-configure-texinfo.patch
 
 	if [[ -x contrib/gcc_update ]] ; then
 		einfo "Touching generated files"
@@ -1150,8 +1153,6 @@ toolchain_src_configure() {
 	# Disable gcc info regeneration -- it ships with generated info pages
 	# already.  Our custom version/urls/etc... trigger it.  #464008
 	export gcc_cv_prog_makeinfo_modern=no
-	# Make sure we don't try to generate pages that don't even exist.  #496224
-	touch "${S}"/gcc/treelang/treelang.info 2>/dev/null
 
 	# Do not let the X detection get in our way.  We know things can be found
 	# via system paths, so no need to hardcode things that'll break multilib.
