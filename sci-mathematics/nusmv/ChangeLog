@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/nusmv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/ChangeLog,v 1.15 2013/12/28 05:28:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/ChangeLog,v 1.16 2013/12/28 18:37:44 robbat2 Exp $
+
+  28 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> nusmv-2.5.4.ebuild:
+  Put in a note that compileWriteUdg.o will take a long time to compile.
 
 *nusmv-2.5.4 (28 Dec 2013)
 
