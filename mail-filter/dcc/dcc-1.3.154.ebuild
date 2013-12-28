@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.3.154.ebuild,v 1.1 2013/12/28 04:33:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.3.154.ebuild,v 1.2 2013/12/28 04:50:23 robbat2 Exp $
 
 EAPI=5
 
@@ -10,9 +10,9 @@ DESCRIPTION="Distributed Checksum Clearinghouse"
 HOMEPAGE="http://www.rhyolite.com/anti-spam/dcc/"
 SRC_URI="http://www.rhyolite.com/anti-spam/dcc/source/old/${P}.tar.Z"
 
-LICENSE="DCC"
+LICENSE="DCC GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd" # ~amd64-fbsd
 IUSE="cgi ipv6 rrdtool milter"
 
 RDEPEND="dev-lang/perl
@@ -29,10 +29,10 @@ dcc_libexec=/usr/sbin
 dcc_man=/usr/share/man
 dcc_rundir=/var/run/dcc
 
-PATCHES=( )
-#"${FILESDIR}"/dcc-1.3.140-configure-fix.patch # Merged upstream
+PATCHES=( "${FILESDIR}"/dcc-1.3.140-freebsd.patch )
 
 src_configure() {
+	tc-export CC AR RANLIB
 	local myconf
 	myconf="${myconf} --homedir=${dcc_homedir}"
 	myconf="${myconf} --bindir=/usr/bin"
@@ -49,6 +49,7 @@ src_configure() {
 	myconf="${myconf} --with-db-memory=64"
 	myconf="${myconf} --with-max-db-mem=128"
 	myconf="${myconf} --with-max-log-size=0"
+	myconf="${myconf} --with-make-cmd=${MAKE:-make}"
 	myconf="${myconf} $(use_enable ipv6 IPv6)"
 	myconf="${myconf} $(use_with cgi cgibin ${dcc_cgibin})"
 	myconf="${myconf} $(use_enable milter dccm)"
@@ -58,10 +59,6 @@ src_configure() {
 
 	# This is NOT a normal configure script.
 	./configure ${myconf} || die "configure failed!"
-}
-
-src_compile() {
-	emake CC="$(tc-getCC)" || die "emake failed!"
 }
 
 moveconf() {
@@ -74,7 +71,7 @@ moveconf() {
 
 src_install() {
 	# stolen from the RPM .spec and modified for gentoo
-	MANOWN=root MANGRP=root export MANOWN MANGRP
+	MANOWN=root MANGRP=$(id -g -n root) export MANOWN MANGRP
 	BINOWN="${MANOWN}" BINGRP="${MANGRP}" export BINOWN BINGRP
 	DCC_PROTO_HOMEDIR="${D}${dcc_homedir}" export DCC_PROTO_HOMEDIR
 	DCC_CGIBINDIR="${D}${dcc_cgibin}" export DCC_CGIBINDIR
@@ -88,7 +85,7 @@ src_install() {
 
 	# This package now takes "${D}" at compile-time!
 	# make DESTDIR="${D}" DCC_BINDIR="${D}"/usr/bin MANDIR="${D}"/usr/share/man/man DCC_HOMEDIR="${D}"${dcc_homedir} install || die
-	emake install || die "emake install failed"
+	emake install
 
 	# branding and setting reasonable defaults
 	sed -e "s/BRAND=\$/BRAND='Gentoo ${PF}'/;" \
