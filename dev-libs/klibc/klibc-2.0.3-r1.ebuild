@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-2.0.3-r1.ebuild,v 1.1 2013/12/26 23:15:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-2.0.3-r1.ebuild,v 1.2 2013/12/29 11:57:22 patrick Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org>, 12 Nov 2007:
 # This still needs major work.
@@ -112,7 +112,7 @@ src_prepare() {
 	# The inline definition from sys/stat.h does not seem to get used
 	# So just copy it to  make this compile for now
 	epatch "${FILESDIR}"/klibc-2.0.2-mkfifo.patch
-	
+
 	# Newer kernels have some headers in the uapi dir
 	epatch "${FILESDIR}"/klibc-2.0.3-kernel-uapi.patch
 
