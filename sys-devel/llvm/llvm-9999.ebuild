@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.73 2013/12/28 14:02:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.74 2013/12/29 22:49:49 mgorny Exp $
 
 EAPI=5
 
@@ -58,6 +58,11 @@ RDEPEND="${COMMON_DEPEND}
 # being exceeded. probably GC does not close them fast enough.
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	test? ( || ( $(python_gen_useflags 'python*') ) )"
+
+# Some people actually override that in make.conf. That sucks since
+# we need to run install per-directory, and ninja can't do that...
+# so why did it call itself ninja in the first place?
+CMAKE_MAKEFILE_GENERATOR=emake
 
 pkg_pretend() {
 	# in megs
