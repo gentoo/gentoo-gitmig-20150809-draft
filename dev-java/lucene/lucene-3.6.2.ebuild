@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-3.6.2.ebuild,v 1.1 2013/12/28 21:09:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-3.6.2.ebuild,v 1.2 2013/12/29 11:31:23 patrick Exp $
 
 EAPI="3"
 JAVA_PKG_IUSE="doc source test contrib"
@@ -30,7 +30,7 @@ RDEPEND=">=virtual/jdk-1.5
 	)"
 DEPEND="${RDEPEND}
 	dev-java/ant-nodeps:0
-	test? ( =dev-java/junit-4.10*:4 
+	test? ( =dev-java/junit-4.10*:4
 			dev-java/hamcrest-core )
 	dev-java/ant-junit:0
 	>=dev-java/ant-ivy-2.2.0:2"
