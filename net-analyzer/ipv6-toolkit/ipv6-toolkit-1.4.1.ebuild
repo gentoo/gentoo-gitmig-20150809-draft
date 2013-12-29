@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipv6-toolkit/ipv6-toolkit-1.4.1.ebuild,v 1.1 2013/12/28 18:51:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipv6-toolkit/ipv6-toolkit-1.4.1.ebuild,v 1.2 2013/12/29 08:52:33 xarthisius Exp $
 
 EAPI=4
 
@@ -10,8 +10,7 @@ DESCRIPTION="Set of IPv6 security/trouble-shooting tools, that can send arbitrar
 HOMEPAGE="http://www.si6networks.com/tools/ipv6toolkit/"
 MY_PN="ipv6toolkit"
 MY_P="${MY_PN}-v${PV}"
-# in 1.4.1, they missed compression
-SRC_URI="http://www.si6networks.com/tools/ipv6toolkit/${MY_P}.tar.gz -> ${MY_P}.tar"
+SRC_URI="http://www.si6networks.com/tools/ipv6toolkit/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
