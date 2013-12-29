@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.216 2013/12/27 01:29:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.217 2013/12/29 09:08:14 hattya Exp $
+
+  29 Dec 2013; Akinori Hattori <hattya@gentoo.org> numpy-1.7.1.ebuild:
+  ia64 stable wrt bug #487870
 
   27 Dec 2013; Sébastien Fabbro <bicatali@gentoo.org> numpy-1.8.0.ebuild:
   fixed for mkl
