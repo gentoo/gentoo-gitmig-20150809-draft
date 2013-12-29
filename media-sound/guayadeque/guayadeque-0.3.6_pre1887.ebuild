@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/guayadeque-0.3.6_pre1887.ebuild,v 1.1 2013/12/28 22:29:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/guayadeque-0.3.6_pre1887.ebuild,v 1.2 2013/12/29 13:35:47 jlec Exp $
 
 EAPI=5
 
@@ -44,7 +44,7 @@ GST_DEPS="
 	media-libs/gst-plugins-ugly:${GST_VERSION}
 "
 
-RDEPEND="${GST_DEPS}
+RDEPEND="
 	dev-db/sqlite:3
 	dev-db/wxsqlite3
 	dev-libs/glib:2
