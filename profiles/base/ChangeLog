@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.622 2013/12/27 17:03:07 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.623 2013/12/29 14:28:30 swift Exp $
+
+  29 Dec 2013; Sven Vermeulen <swift@gentoo.org> package.mask:
+  Add mask for selinux-mandb
 
   27 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
   Mask 'context' USE-flag for dev-libs/boost
