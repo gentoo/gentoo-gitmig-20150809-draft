@@ -5,7 +5,7 @@ After=syslog.target network.target
 [Service]
 Type=forking
 PIDFile=/var/run/spamd.pid
-ExecStart=/usr/sbin/spamd -d --pidfile /var/run/spamd.pid -m 5 -c -H $SPAMD_OPTS
+ExecStart=/usr/sbin/spamd -d --pidfile /var/run/spamd.pid -m 5 $SPAMD_OPTS
 StandardOutput=syslog
 StandardError=syslog
 Restart=always
