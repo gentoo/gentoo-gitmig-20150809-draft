@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15283 2013/12/28 13:43:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15284 2013/12/29 08:45:12 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michał Górny <mgorny@gentoo.org> (29 Dec 2013)
+# Mask new multilib packages waiting for emul-linux-x86-baselibs bump.
+>=sys-libs/readline-6.2_p5-r1
 
 # Samuli Suominen <ssuominen@gentoo.org> (28 Dec 2013)
 # Replaced by 'emerge @module-rebuild' set in Portage itself.
