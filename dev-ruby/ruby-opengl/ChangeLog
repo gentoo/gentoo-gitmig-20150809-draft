@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-opengl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.65 2013/12/24 12:56:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.66 2013/12/29 09:48:57 graaff Exp $
+
+  29 Dec 2013; Hans de Graaff <graaff@gentoo.org>
+  -ruby-opengl-0.60.1-r2.ebuild:
+  Remove old version that still overshadows newer version with lower version
+  number. Fixes bug 495006.
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> ruby-opengl-0.8.0.ebuild:
   Stable for x86, wrt bug #495006
