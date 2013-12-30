@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1102 2013/12/29 21:39:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1103 2013/12/30 03:24:04 dirtyepic Exp $
+
+  30 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  For 4.8+ C++ is always enabled. We should eventually drop the cxx USE flag,
+  but who knows what that would break.
 
   29 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org> perl-app.eclass:
   Do not use subslots on dev-lang/perl in perl apps (as opposed to modules)
