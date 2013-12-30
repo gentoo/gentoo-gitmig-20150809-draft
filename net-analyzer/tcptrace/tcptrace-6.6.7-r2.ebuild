@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/tcptrace-6.6.7-r1.ebuild,v 1.1 2013/06/09 14:40:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/tcptrace-6.6.7-r2.ebuild,v 1.1 2013/12/30 00:31:04 jer Exp $
 
 EAPI=5
 
@@ -24,7 +24,11 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-cross-compile.patch
 	eautoreconf
-	append-flags -D_BSD_SOURCE
+	append-cppflags -D_BSD_SOURCE
+}
+
+src_compile() {
+	emake CCOPT="${CFLAGS}"
 }
 
 src_install() {
