@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zmap/zmap-9999.ebuild,v 1.4 2013/12/22 18:02:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zmap/zmap-9999.ebuild,v 1.5 2013/12/30 09:58:06 jlec Exp $
 
 EAPI=5
 
@@ -29,6 +29,7 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}"/${P}-out-of-src.patch
+	"${FILESDIR}"/${PN}-1.1.1-json-c.patch
 )
 
 src_configure() {
