@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.187 2013/12/29 18:19:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.188 2013/12/30 08:36:38 aballier Exp $
+
+  30 Dec 2013; Alexis Ballier <aballier@gentoo.org> readline-6.2_p5-r1.ebuild:
+  update blocker on emul-linux
 
   29 Dec 2013; Mike Frysinger <vapier@gentoo.org> readline-6.2_p5-r1.ebuild:
   Update rlfe helper to use ncurses info via pkg-config #457558 by Travis
