@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r2.ebuild,v 1.4 2013/12/29 22:49:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r2.ebuild,v 1.5 2013/12/30 09:07:11 mgorny Exp $
 
 EAPI=5
 
@@ -316,7 +316,7 @@ multilib_src_compile() {
 
 		if use doc; then
 			emake -C "${S}"/docs -f Makefile.sphinx man
-			emake -C "${S}"/tools/clang/docs/tools \
+			use clang && emake -C "${S}"/tools/clang/docs/tools \
 				BUILD_FOR_WEBSITE=1 DST_MAN_DIR="${T}"/ man
 			emake -C "${S}"/docs -f Makefile.sphinx html
 		fi
