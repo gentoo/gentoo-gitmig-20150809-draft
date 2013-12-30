@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.228 2013/12/24 17:32:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.229 2013/12/30 12:33:32 pacho Exp $
+
+  30 Dec 2013; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.0.4.ebuild,
+  webkit-gtk-2.2.2.ebuild:
+  Add missing dependency on x11-libs/libXt (#496486 by Fabio Rossi)
 
 *webkit-gtk-2.2.2 (24 Dec 2013)
 
