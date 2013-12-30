@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/pms-5-r2.ebuild,v 1.9 2013/12/29 23:35:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/pms-5-r2.ebuild,v 1.10 2013/12/30 10:07:18 ulm Exp $
 
 EAPI=5
 
 DESCRIPTION="Gentoo Package Manager Specification"
-HOMEPAGE="http://www.gentoo.org/proj/en/qa/pms.xml"
-SRC_URI="!binary? ( mirror://gentoo/${P}.tar.xz )
-	binary? ( mirror://gentoo/${P}-prebuilt.tar.xz )"
+HOMEPAGE="http://wiki.gentoo.org/wiki/Project:PMS"
+SRC_URI="!binary? ( http://dev.gentoo.org/~ulm/distfiles/${P}.tar.xz )
+	binary? ( http://dev.gentoo.org/~ulm/distfiles/${P}-prebuilt.tar.xz )"
 
 LICENSE="CC-BY-SA-3.0"
 SLOT="0"
