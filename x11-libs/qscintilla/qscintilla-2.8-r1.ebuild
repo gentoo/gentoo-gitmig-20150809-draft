@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.8.ebuild,v 1.1 2013/11/14 01:33:31 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.8-r1.ebuild,v 1.1 2013/12/30 02:02:46 pesa Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/pyqt/${MY_P}.tar.gz"
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0/11"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="doc python"
+IUSE="doc"
 
 DEPEND="
 	>=dev-qt/designer-4.8.5:4
@@ -23,7 +23,6 @@ DEPEND="
 	>=dev-qt/qtgui-4.8.5:4
 "
 RDEPEND="${DEPEND}"
-PDEPEND="python? ( ~dev-python/qscintilla-python-${PV} )"
 
 S=${WORKDIR}/${MY_P}
 
