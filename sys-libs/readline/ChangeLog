@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.188 2013/12/30 08:36:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.189 2013/12/30 16:43:12 vapier Exp $
+
+  30 Dec 2013; Mike Frysinger <vapier@gentoo.org> readline-6.2_p5-r1.ebuild:
+  tweak rlfe sed a bit #457558
 
   30 Dec 2013; Alexis Ballier <aballier@gentoo.org> readline-6.2_p5-r1.ebuild:
   update blocker on emul-linux

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.2_p5-r1.ebuild,v 1.3 2013/12/30 08:36:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.2_p5-r1.ebuild,v 1.4 2013/12/30 16:43:12 vapier Exp $
 
 EAPI="4"
 
@@ -63,7 +63,7 @@ src_prepare() {
 		-e "/^SHLIB_LIBS=/s:=.*:='${ncurses_libs}':" \
 		support/shobj-conf || die
 	sed -i \
-		-e "/^LIBS=.-lncurses/s:-lncurses:${ncurses_libs}:" \
+		-e "/^[[:space:]]*LIBS=.-lncurses/s:-lncurses:${ncurses_libs}:" \
 		examples/rlfe/configure || die
 
 	# fix building under Gentoo/FreeBSD; upstream FreeBSD deprecated
