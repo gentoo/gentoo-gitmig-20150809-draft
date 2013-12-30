@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/libmilter
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/ChangeLog,v 1.29 2013/12/30 07:53:48 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/ChangeLog,v 1.30 2013/12/30 07:55:20 naota Exp $
+
+  30 Dec 2013; Naohiro Aota <naota@gentoo.org> libmilter-1.0.2.ebuild:
+  Add ~x86-fbsd.
 
   30 Dec 2013; Naohiro Aota <naota@gentoo.org> libmilter-1.0.2.ebuild:
   Change root group to 0 for compatible with BSD
