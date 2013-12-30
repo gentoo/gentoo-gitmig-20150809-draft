@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.988 2013/12/28 01:38:39 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.989 2013/12/30 01:24:06 dirtyepic Exp $
+
+  30 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> gcc-4.8.2.ebuild:
+  4.8.2 p1.2: Fixes target CXXFLAGS being used with the native host compiler
+  when building with a cross-compiler (bug #492590).
 
   28 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> gcc-4.1.2.ebuild,
   gcc-4.2.4-r1.ebuild:
