@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20131008-r6.ebuild,v 1.2 2013/12/30 05:31:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20131008-r7.ebuild,v 1.1 2013/12/30 05:31:41 tetromino Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -10,7 +10,7 @@ LICENSE="Artistic GPL-1 GPL-2 GPL-3 BSD BSD-2 BZIP2 AFL-2.1 LGPL-2.1 BSD-4 MIT
 	Sleepycat UoI-NCSA ZLIB openafs-krb5-a HPND ISC RSA IJG libmng libtiff
 	openssl tcp_wrappers_license"
 
-KEYWORDS="-* amd64"
+KEYWORDS="-* ~amd64"
 IUSE="abi_x86_32"
 
 DEPEND=""
@@ -51,6 +51,7 @@ RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
 		>=sys-apps/tcp-wrappers-7.6.22-r1[abi_x86_32(-)]
 		>=sys-libs/gdbm-1.10-r1[abi_x86_32(-)]
 		>=dev-libs/json-c-0.11-r1[abi_x86_32(-)]
+		>=dev-libs/libxml2-2.9.1-r2[abi_x86_32(-)]
 	)
 	>=sys-libs/glibc-2.15" # bug 340613
 
@@ -67,5 +68,5 @@ src_prepare() {
 	ln -s ../share/terminfo "${S}/usr/lib32/terminfo" || die
 
 	# Remove migrated stuff.
-	use abi_x86_32 && rm -f $(cat "${FILESDIR}/remove-native-20131008-r6")
+	use abi_x86_32 && rm -f $(cat "${FILESDIR}/remove-native")
 }

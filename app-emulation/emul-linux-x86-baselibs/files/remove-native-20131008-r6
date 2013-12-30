@@ -227,6 +227,3 @@ usr/lib32/python2.7/lib-dynload/dbm.so
 usr/lib32/python3.2/lib-dynload/_dbm.cpython-32.so
 usr/lib32/python2.7/lib-dynload/gdbm.so
 usr/lib32/python3.2/lib-dynload/_gdbm.cpython-32.so
-usr/lib32/libxml2.so*
-usr/lib32/pkgconfig/libxml-2.0.pc
-usr/lib32/python*/site-packages/libxml2mod.so
