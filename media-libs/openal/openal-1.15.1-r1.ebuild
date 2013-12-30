@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.15.1-r1.ebuild,v 1.3 2013/12/30 07:35:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.15.1-r1.ebuild,v 1.4 2013/12/30 07:44:35 aballier Exp $
 
 EAPI=5
 inherit cmake-multilib
@@ -22,7 +22,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
 	pulseaudio? ( media-sound/pulseaudio[${MULTILIB_USEDEP}] )
 	abi_x86_32? (
 		!<app-emulation/emul-linux-x86-sdl-20131008-r1
-		!app-emulation/emul-linux-x86-sdl[abi_x86_32(-)]
+		!app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
 	)"
 DEPEND="${RDEPEND}
 	oss? ( virtual/os-headers )"
