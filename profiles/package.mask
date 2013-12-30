@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15289 2013/12/30 10:19:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15290 2013/12/30 22:00:33 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Julian Ospald <hasufell@gentoo.org> (30 Dec 2013)
+# breaks every consumer
+=dev-games/ogre-1.9.0
 
 # Hans de Graaff <graaff@gentoo.org> (29 Dec 2013)
 # Mask for removal in 30 days. mkrf is an obsolete
