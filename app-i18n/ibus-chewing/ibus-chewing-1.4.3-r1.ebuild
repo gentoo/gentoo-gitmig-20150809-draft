@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-chewing/ibus-chewing-1.4.3.ebuild,v 1.1 2012/12/22 10:11:06 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-chewing/ibus-chewing-1.4.3-r1.ebuild,v 1.1 2013/12/30 08:17:38 naota Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -30,6 +30,7 @@ CMAKE_IN_SOURCE_BUILD=1
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.3.10-cflags.patch
+	"${FILESDIR}"/${P}-content-type.patch
 	)
 
 DOCS="AUTHORS ChangeLog ChangeLog.prev README RELEASE-NOTES.txt USER-GUIDE"
