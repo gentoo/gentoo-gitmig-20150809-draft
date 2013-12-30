@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevdev/libevdev-0.4.ebuild,v 1.6 2013/11/04 00:00:15 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevdev/libevdev-0.6.ebuild,v 1.1 2013/12/30 19:50:00 mattst88 Exp $
 
 EAPI=5
 XORG_MULTILIB=yes
