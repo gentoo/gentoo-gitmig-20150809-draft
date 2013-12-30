@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.9.0.ebuild,v 1.1 2013/12/30 21:22:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.9.0.ebuild,v 1.2 2013/12/30 21:30:16 hasufell Exp $
 
 EAPI=5
 CMAKE_REMOVE_MODULES="yes"
@@ -15,7 +15,9 @@ LICENSE="MIT public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+boost cg doc double-precision examples +freeimage gles2 ois +opengl poco profile tbb threads tools +zip"
-REQUIRED_USE="threads? ( || ( boost poco tbb ) )"
+REQUIRED_USE="threads? ( ^^ ( boost poco tbb ) )
+	poco? ( threads )
+	tbb? ( threads )"
 RESTRICT="test" #139905
 
 RDEPEND="
