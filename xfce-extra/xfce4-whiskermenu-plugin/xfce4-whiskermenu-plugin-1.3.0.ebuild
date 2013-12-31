@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-whiskermenu-plugin/xfce4-whiskermenu-plugin-1.3.0.ebuild,v 1.1 2013/12/29 15:29:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-whiskermenu-plugin/xfce4-whiskermenu-plugin-1.3.0.ebuild,v 1.2 2013/12/31 08:41:49 maekke Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://gottcode.org/xfce4-whiskermenu-plugin/${P}-src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 RDEPEND="
