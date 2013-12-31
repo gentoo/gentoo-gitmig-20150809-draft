@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.617 2013/12/31 00:32:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.618 2013/12/31 00:33:43 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1932,7 +1932,7 @@ is_ada() {
 
 is_cxx() {
 	gcc-lang-supported 'c++' || return 1
-	tc_version_is_at_least 4.8 && return 0
+	! is_crosscompile && tc_version_is_at_least 4.8 && return 0
 	use cxx
 }
 
