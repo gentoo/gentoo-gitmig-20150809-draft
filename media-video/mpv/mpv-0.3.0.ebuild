@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.3.0.ebuild,v 1.1 2013/12/29 19:11:34 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.3.0.ebuild,v 1.2 2013/12/31 11:23:39 pinkbyte Exp $
 
 EAPI=5
 
@@ -53,14 +53,14 @@ RDEPEND+="
 		x11-libs/libXxf86vm
 		opengl? ( virtual/opengl )
 		lcms? ( media-libs/lcms:2 )
-		vaapi? ( x11-libs/libva[X(+)] )
-		vdpau? ( x11-libs/libvdpau )
+		vaapi? ( >=x11-libs/libva-0.34.0[X(+)] )
+		vdpau? ( >=x11-libs/libvdpau-0.2 )
 		xinerama? ( x11-libs/libXinerama )
 		xscreensaver? ( x11-libs/libXScrnSaver )
 		xv? ( x11-libs/libXv )
 	)
 	alsa? ( media-libs/alsa-lib )
-	bluray? ( media-libs/libbluray )
+	bluray? ( >=media-libs/libbluray-0.2.1 )
 	bs2b? ( media-libs/libbs2b )
 	cdio? (
 		|| (
@@ -109,7 +109,7 @@ RDEPEND+="
 	samba? ( net-fs/samba )
 	v4l? ( media-libs/libv4l )
 	wayland? (
-		>=dev-libs/wayland-1.0.0
+		>=dev-libs/wayland-1.2.0
 		media-libs/mesa[egl,wayland]
 		>=x11-libs/libxkbcommon-0.3.0
 	)
