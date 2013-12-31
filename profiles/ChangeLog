@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8470 2013/12/30 22:00:33 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8471 2013/12/31 03:34:35 creffett Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Dec 2013; creffett <creffett@gentoo.org> prefix/linux/package.mask:
+  Remove invalid entry from prefix/linux/package.mask
 
   30 Dec 2013; Julian Ospald <hasufell@gentoo.org> package.mask:
   mask dev-games/ogre-1.9.0
