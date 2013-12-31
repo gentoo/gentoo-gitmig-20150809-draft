@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.616 2013/12/30 03:24:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.617 2013/12/31 00:32:43 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -51,7 +51,7 @@ is_crosscompile() {
 }
 
 # General purpose version check.  Without a second arg matches up to minor version (x.x.x)
-tc_version_is_at_least() { 
+tc_version_is_at_least() {
 	version_is_at_least "$1" "${2:-${GCC_RELEASE_VER}}"
 }
 
@@ -1209,7 +1209,7 @@ gcc_do_filter_flags() {
 		replace-cpu-flags G3 750
 		replace-cpu-flags G4 7400
 		replace-cpu-flags G5 7400
-	
+
 		case $(tc-arch) in
 			amd64)
 				replace-cpu-flags core2 nocona
@@ -2079,7 +2079,7 @@ want_pie() {
 
 has toolchain_death_notice ${EBUILD_DEATH_HOOKS} || EBUILD_DEATH_HOOKS+=" toolchain_death_notice"
 toolchain_death_notice() {
-	if [[ -e "${WORKDIR}"/build ]] ; then 
+	if [[ -e "${WORKDIR}"/build ]] ; then
 		pushd "${WORKDIR}"/build >/dev/null
 		(echo '' | $(tc-getCC ${CTARGET}) ${CFLAGS} -v -E - 2>&1) > gccinfo.log
 		[[ -e "${T}"/build.log ]] && cp "${T}"/build.log .
