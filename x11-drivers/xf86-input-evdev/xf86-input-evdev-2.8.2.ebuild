@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/xf86-input-evdev-2.8.2.ebuild,v 1.2 2014/01/01 20:42:54 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/xf86-input-evdev-2.8.2.ebuild,v 1.3 2014/01/01 20:43:32 mattst88 Exp $
 
 EAPI=5
 inherit linux-info xorg-2
@@ -16,8 +16,8 @@ DEPEND="${RDEPEND}
 	>=sys-kernel/linux-headers-2.6"
 
 pkg_pretend() {
-    if use kernel_linux ; then
+	if use kernel_linux ; then
 		CONFIG_CHECK="INPUT_EVDEV"
-    fi
-    check_extra_config
+	fi
+	check_extra_config
 }
