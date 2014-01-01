@@ -1,13 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.7.ebuild,v 1.1 2014/01/01 19:54:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.7.ebuild,v 1.2 2014/01/01 19:59:58 radhermit Exp $
 
 EAPI=5
-
-inherit eutils toolchain-funcs
+inherit eutils
 
 STUPID_NUM="3977"
-
 DESCRIPTION="Serial Communication Program"
 HOMEPAGE="http://alioth.debian.org/projects/minicom"
 SRC_URI="https://alioth.debian.org/frs/download.php/file/${STUPID_NUM}/${P}.tar.gz"
@@ -40,10 +38,6 @@ src_configure() {
 		$(use_enable nls)
 }
 
-src_compile() {
-	emake AR="$(tc-getAR)"
-}
-
 src_install() {
 	default
 	insinto /etc/minicom
@@ -51,6 +45,5 @@ src_install() {
 }
 
 pkg_preinst() {
-	[[ -s ${EROOT}/etc/minicom/minirc.dfl ]] \
-		&& rm -f "${ED}"/etc/minicom/minirc.dfl
+	[[ -s ${EROOT}/etc/minicom/minirc.dfl ]] && rm -f "${ED}"/etc/minicom/minirc.dfl
 }
