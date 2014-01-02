@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.6.1.ebuild,v 1.9 2012/05/17 20:47:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.6.1.ebuild,v 1.10 2014/01/02 18:06:11 vapier Exp $
 
 EAPI=4
 
@@ -75,7 +75,7 @@ src_install() {
 	newexe scripts/ispell ispell-aspell
 	newexe scripts/spell spell-aspell
 
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	find "${ED}" -name '*.la' -delete
 }
 
 pkg_postinst() {
