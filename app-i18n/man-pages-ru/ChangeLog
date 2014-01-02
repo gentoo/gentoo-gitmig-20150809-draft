@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-ru
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.47 2014/01/02 20:02:45 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.48 2014/01/02 20:05:48 zlogene Exp $
+
+  02 Jan 2014; Mikle Kolyada <zlogene@gentoo.org>
+  man-pages-ru-3.54.2171.1790.20131020.ebuild:
+  ppc stable wrt bug #495336
 
   02 Jan 2014; Mikle Kolyada <zlogene@gentoo.org>
   man-pages-ru-3.54.2171.1790.20131020.ebuild:
