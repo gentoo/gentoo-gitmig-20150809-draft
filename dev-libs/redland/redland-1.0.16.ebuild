@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.16.ebuild,v 1.9 2014/01/02 15:15:34 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.16.ebuild,v 1.10 2014/01/02 15:17:45 zerochaos Exp $
 
 EAPI=4
 inherit libtool
@@ -60,7 +60,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake
+	emake -j1
 }
 
 src_test() {
