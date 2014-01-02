@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hacking/hacking-0.8.0.ebuild,v 1.1 2014/01/02 03:05:42 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hacking/hacking-0.8.0.ebuild,v 1.2 2014/01/02 03:07:25 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -25,7 +25,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 			>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
 			>=dev-python/testrepository-0.0.17[${PYTHON_USEDEP}]
 			>=dev-python/testscenarios-0.4[${PYTHON_USEDEP}]
-			>=dev-python/testtools-0.9.32[${PYTHON_USEDEP}] 
+			>=dev-python/testtools-0.9.32[${PYTHON_USEDEP}]
 			${RDEPEND} )"
 RDEPEND="~dev-python/pep8-1.4.5[${PYTHON_USEDEP}]
 		>=dev-python/pyflakes-0.7.2[${PYTHON_USEDEP}]
