@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.6.1.ebuild,v 1.10 2014/01/02 18:06:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.6.1.ebuild,v 1.11 2014/01/02 18:06:54 vapier Exp $
 
 EAPI=4
 
@@ -52,6 +52,12 @@ src_prepare() {
 	rm m4/lt* m4/libtool.m4
 	eautoreconf
 	elibtoolize --reverse-deps
+
+	# Parallel install of libtool libraries doesn't always work.
+	# https://lists.gnu.org/archive/html/libtool/2011-03/msg00003.html
+	# This has to be after automake has run so that we don't clobber
+	# the default target that automake creates for us.
+	echo 'install-filterLTLIBRARIES: install-libLTLIBRARIES' >> Makefile.in
 }
 
 src_configure() {
