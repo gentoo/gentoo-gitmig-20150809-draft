@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8488 2014/01/03 03:26:12 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8489 2014/01/03 03:28:56 creffett Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Jan 2014; creffett <creffett@gentoo.org>
+  arch/powerpc/ppc64/package.use.mask:
+  Remove invalid entries from arch/powerpc/ppc64/package.use.mask
 
   03 Jan 2014; creffett <creffett@gentoo.org> prefix/darwin/package.use.mask:
   Remove invalid entries from prefix/darwin/package.use.mask
