@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8484 2014/01/03 03:06:28 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8485 2014/01/03 03:20:33 creffett Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Jan 2014; creffett <creffett@gentoo.org>
+  arch/amd64/no-multilib/package.mask:
+  Remove invalid entries from arch/amd64/no-multilib/package.mask
 
   03 Jan 2014; creffett <creffett@gentoo.org> arch/amd64/x32/package.use.mask:
   Remove invalid entries from arch/amd64/x32/package.use.mask
