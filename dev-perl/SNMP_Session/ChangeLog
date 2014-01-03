@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SNMP_Session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.31 2014/01/03 09:17:10 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.32 2014/01/03 09:20:29 pinkbyte Exp $
+
+  03 Jan 2014; Sergey Popov <pinkbyte@gentoo.org> SNMP_Session-1.13-r1.ebuild:
+  Stable on arm, wrt bug #495462
 
   03 Jan 2014; Sergey Popov <pinkbyte@gentoo.org> SNMP_Session-1.13-r1.ebuild:
   Stable on amd64 and x86, wrt bug #495462
