@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.186 2014/01/04 13:07:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.187 2014/01/04 13:08:03 ago Exp $
+
+  04 Jan 2014; Agostino Sarubbo <ago@gentoo.org> puppet-2.7.24.ebuild,
+  puppet-3.4.1.ebuild:
+  Stable for x86, wrt bug #494768
 
   04 Jan 2014; Agostino Sarubbo <ago@gentoo.org> puppet-2.7.24.ebuild,
   puppet-3.4.1.ebuild:
