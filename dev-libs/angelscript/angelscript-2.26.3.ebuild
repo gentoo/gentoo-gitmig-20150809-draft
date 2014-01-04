@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/angelscript/angelscript-2.26.3.ebuild,v 1.2 2014/01/04 22:46:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/angelscript/angelscript-2.26.3.ebuild,v 1.3 2014/01/04 22:49:31 mgorny Exp $
 
 EAPI=5
 
@@ -48,7 +48,7 @@ multilib_src_install() {
 	dolib.so ${PN}/lib/libangelscript-${PV}.so
 	dosym libangelscript-${PV}.so /usr/$(get_libdir)/libangelscript.so
 
-	if [[ ${ABI} == ${DEFAULT_ABI} ]] ; then
+	if multilib_build_binaries ; then
 		if use static-libs ; then
 			 dolib.a "${S2}"/${PN}/lib/libangelscript.a
 		fi
