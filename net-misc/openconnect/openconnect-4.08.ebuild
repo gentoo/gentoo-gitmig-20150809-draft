@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/openconnect-4.08.ebuild,v 1.4 2013/04/02 20:56:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/openconnect-4.08.ebuild,v 1.5 2014/01/04 01:37:06 hasufell Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.infradead.org/openconnect.html"
 SRC_URI="ftp://ftp.infradead.org/pub/${PN}/${P}.tar.gz
 	http://dev.gentoo.org/~hwoarang/distfiles/openconnect-script-20121108205904.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc64 x86"
 IUSE="doc static-libs nls -gnutls"
