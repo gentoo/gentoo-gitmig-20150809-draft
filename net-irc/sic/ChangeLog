@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/sic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/ChangeLog,v 1.10 2014/01/04 05:50:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/ChangeLog,v 1.11 2014/01/04 05:50:44 radhermit Exp $
+
+  04 Jan 2014; Tim Harder <radhermit@gentoo.org> -sic-1.0.ebuild:
+  Remove old.
 
 *sic-1.2 (04 Jan 2014)
 
