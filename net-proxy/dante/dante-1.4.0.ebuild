@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.4.0_pre1.ebuild,v 1.5 2014/01/05 23:33:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.4.0.ebuild,v 1.1 2014/01/05 23:33:03 robbat2 Exp $
 
 EAPI="5"
 
@@ -14,13 +14,14 @@ SRC_URI="ftp://ftp.inet.no/pub/socks/${MY_P}.tar.gz"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="debug kerberos pam selinux static-libs tcpd"
+IUSE="debug kerberos pam selinux static-libs tcpd upnp"
 
 RDEPEND="pam? ( virtual/pam )
 	kerberos? ( virtual/krb5 )
 	selinux? ( sec-policy/selinux-dante )
 	tcpd? ( sys-apps/tcp-wrappers )
-	userland_GNU? ( virtual/shadow )"
+	userland_GNU? ( virtual/shadow )
+	upnp? ( net-libs/miniupnpc )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	sys-devel/bison"
@@ -30,8 +31,10 @@ DOCS="BUGS CREDITS NEWS README SUPPORT doc/README* doc/*.txt doc/SOCKS4.protocol
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch	"${FILESDIR}"/${PN}-1.3.0-socksify.patch \
-		"${FILESDIR}"/${PN}-1.4.0_pre1-osdep-format-macro.patch
+	epatch	\
+		"${FILESDIR}"/${PN}-1.4.0-socksify.patch \
+		"${FILESDIR}"/${PN}-1.4.0-osdep-format-macro.patch \
+		"${FILESDIR}"/${PN}-1.4.0-cflags.patch
 
 	sed -i \
 		-e 's:/etc/socks\.conf:"${EPREFIX}"/etc/socks/socks.conf:' \
@@ -45,13 +48,20 @@ src_prepare() {
 }
 
 src_configure() {
+	# hardcoded the libc name otherwise the scan on a amd64 multilib system
+	# ends up finding /usr/lib32/libc.so.5. That cascades and causes the
+	# preload/libdsocks to not be built.
 	econf \
 		--with-socks-conf="${EPREFIX}"/etc/socks/socks.conf \
 		--with-sockd-conf="${EPREFIX}"/etc/socks/sockd.conf \
-		--without-upnp \
+		--enable-preload \
+		--enable-clientdl \
+		--enable-serverdl \
+		--with-libc=libc.so.6 \
 		$(use_enable debug) \
 		$(use_with kerberos gssapi) \
 		$(use_with pam) \
+		$(use_with upnp) \
 		$(use_enable static-libs static) \
 		$(use_enable tcpd libwrap)
 }
@@ -68,7 +78,7 @@ src_install() {
 	popd > /dev/null
 
 	# init script
-	newinitd "${FILESDIR}/dante-sockd-init" dante-sockd
+	newinitd "${FILESDIR}/${PN}-1.3.2-sockd-init" dante-sockd
 	newconfd "${FILESDIR}/dante-sockd-conf" dante-sockd
 
 	# example configuration files
