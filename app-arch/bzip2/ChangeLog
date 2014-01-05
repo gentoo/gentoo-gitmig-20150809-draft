@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/bzip2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.108 2013/07/28 14:04:19 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.109 2014/01/05 17:47:18 vapier Exp $
+
+  05 Jan 2014; Mike Frysinger <vapier@gentoo.org> bzip2-1.0.6-r4.ebuild:
+  Only set -static in LDFLAGS for prog building #485690 by Greg Turner.
 
   28 Jul 2013; Alexis Ballier <aballier@gentoo.org> bzip2-1.0.6-r4.ebuild:
   Fix blocker on emul-libs

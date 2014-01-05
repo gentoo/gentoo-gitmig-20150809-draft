@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.6-r4.ebuild,v 1.3 2013/07/28 14:04:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.6-r4.ebuild,v 1.4 2014/01/05 17:47:18 vapier Exp $
 
 # XXX: atm, libbz2.a is always PIC :(, so it is always built quickly
 #      (since we're building shared libs) ...
 
 EAPI=4
 
-inherit eutils toolchain-funcs flag-o-matic multilib multilib-minimal
+inherit eutils toolchain-funcs multilib multilib-minimal
 
 DESCRIPTION="A high-quality data compressor used extensively by Gentoo Linux"
 HOMEPAGE="http://www.bzip.org/"
@@ -54,8 +54,7 @@ bemake() {
 
 multilib_src_compile() {
 	bemake -f Makefile-libbz2_so all
-	use static && append-flags -static
-	bemake all
+	bemake all LDFLAGS="${LDFLAGS} $(usex static -static '')"
 }
 
 multilib_src_install() {
