@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-265-r2.ebuild,v 1.3 2014/01/07 22:44:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-265-r2.ebuild,v 1.4 2014/01/07 22:46:13 jer Exp $
 
 EAPI=5
 inherit fixheadtails eutils multilib autotools prefix
@@ -112,7 +112,7 @@ src_install() {
 		-e '$inss_initgroups_ignoreusers ldap,openldap,mysql,syslog,root,postgres'
 
 	dodoc ldap.conf ANNOUNCE NEWS ChangeLog AUTHORS \
-		COPYING CVSVersionInfo.txt README nsswitch.ldap certutil
+		CVSVersionInfo.txt README nsswitch.ldap certutil
 	docinto docs; dodoc doc/*
 }
 
