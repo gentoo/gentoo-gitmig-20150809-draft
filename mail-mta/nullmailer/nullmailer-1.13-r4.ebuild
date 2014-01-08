@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.13-r3.ebuild,v 1.1 2014/01/08 15:03:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.13-r4.ebuild,v 1.1 2014/01/08 15:08:13 jlec Exp $
 
 EAPI=5
 
@@ -119,7 +119,7 @@ src_install () {
 	fowners nullmail:nullmail /usr/sbin/nullmailer-queue /usr/bin/mailq
 	fperms 4711 /usr/sbin/nullmailer-queue /usr/bin/mailq
 
-	newinitd "${FILESDIR}"/init.d-nullmailer-r3 nullmailer
+	newinitd "${FILESDIR}"/init.d-nullmailer-r4 nullmailer
 	systemd_dounit "${FILESDIR}"/${PN}.service
 }
 
