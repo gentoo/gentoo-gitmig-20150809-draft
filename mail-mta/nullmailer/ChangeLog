@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/nullmailer
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.79 2013/12/21 18:56:55 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.80 2014/01/08 15:03:05 jlec Exp $
+
+*nullmailer-1.13-r3 (08 Jan 2014)
+
+  08 Jan 2014; Justin Lecher <jlec@gentoo.org> +nullmailer-1.13-r3.ebuild,
+  -files/remotes.sample-1.04, -files/remotes.sample-1.11,
+  -files/init.d-nullmailer-r1, -files/init.d-nullmailer-r2:
+  Port debian patches to 0.13 which enables syslog again, #496960
 
   21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> nullmailer-1.13-r2.ebuild:
   Stable for ppc, wrt bug #480060
