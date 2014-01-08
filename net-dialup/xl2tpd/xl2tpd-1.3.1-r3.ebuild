@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/xl2tpd-1.3.1-r3.ebuild,v 1.3 2013/08/18 13:45:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/xl2tpd-1.3.1-r3.ebuild,v 1.4 2014/01/08 16:49:13 floppym Exp $
 
 EAPI="5"
 
@@ -44,7 +44,7 @@ src_install() {
 	emake PREFIX=/usr DESTDIR="${D}" install
 	dodoc CREDITS README.xl2tpd BUGS CHANGES TODO doc/README.patents doc/rfc2661.txt
 	insinto /etc/xl2tpd
-	newins doc/l2tpd.conf.sample l2tpd.conf
+	newins doc/l2tpd.conf.sample xl2tpd.conf
 	newins doc/l2tp-secrets.sample l2tp-secrets
 	fperms 0600 /etc/xl2tpd/l2tp-secrets
 	newinitd "${FILESDIR}"/xl2tpd-init-r1 xl2tpd
