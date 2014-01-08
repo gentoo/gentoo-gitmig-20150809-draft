@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/vdr-mp3ng-0.0.1_pre5.ebuild,v 1.1 2014/01/08 14:35:12 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/vdr-mp3ng-0.0.1_pre5.ebuild,v 1.2 2014/01/08 14:40:20 hd_brummy Exp $
 
 EAPI=5
 
@@ -34,11 +34,11 @@ DEPEND=">=media-video/vdr-1.6
 src_prepare() {
 	vdr-plugin-2_src_prepare
 
-	epatch "${FILESDIR}/${P}-gentoo.diff"
-	epatch "${FILESDIR}/${P}-gcc4.diff"
-	epatch "${DISTDIR}/${P}-span-0.0.3.diff.tar.gz"
-	epatch "${FILESDIR}/${P}-vdr-1.5.1.diff"
-	epatch "${FILESDIR}/${P}-glibc-2.10.patch"
+	epatch "${FILESDIR}/${PN}-0.0.1_pre4-gentoo.diff"
+	epatch "${FILESDIR}/${PN}-0.0.1_pre4-gcc4.diff"
+	epatch "${DISTDIR}/${PN}-0.0.1_pre4-span-0.0.3.diff.tar.gz"
+	epatch "${FILESDIR}/${PN}-0.0.1_pre4-vdr-1.5.1.diff"
+	epatch "${FILESDIR}/${PN}-0.0.1_pre4-glibc-2.10.patch"
 
 	use !vorbis && sed -i "s:#WITHOUT_LIBVORBISFILE:WITHOUT_LIBVORBISFILE:" Makefile
 	use oss && sed -i "s:#WITH_OSS_OUTPUT:WITH_OSS_OUTPUT:" Makefile
