@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.16_beta2.ebuild,v 1.1 2014/01/09 07:24:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.16_beta2.ebuild,v 1.2 2014/01/09 07:28:55 jlec Exp $
 
 EAPI=5
 
@@ -42,7 +42,7 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	dev-python/pyasn1[${PYTHON_USEDEP}]
 	dev-python/pyopenssl[${PYTHON_USEDEP}]
-	dev-python/python-nbxmpp[${PYTHON_USEDEP}]
+	>=dev-python/python-nbxmpp-0.3[${PYTHON_USEDEP}]
 	crypt? (
 		app-crypt/gnupg
 		dev-python/pycrypto[${PYTHON_USEDEP}]
