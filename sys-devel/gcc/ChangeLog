@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.992 2014/01/10 16:02:18 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.993 2014/01/10 16:19:22 zorry Exp $
+
+  10 Jan 2014; Magnus Granberg <zorry@gentoo.org> gcc-4.8.2-r1.ebuild:
+  Removed the keywords from gcc-4.8.2-r1
 
 *gcc-4.8.2-r1 (10 Jan 2014)
 
