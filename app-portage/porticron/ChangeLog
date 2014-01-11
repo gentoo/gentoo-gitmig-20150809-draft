@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/porticron
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.31 2013/06/20 06:59:52 hollow Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.32 2014/01/11 11:12:52 xmw Exp $
+
+  11 Jan 2014; Michael Weber <xmw@gentoo.org> metadata.xml:
+  Taking maint.
 
   20 Jun 2013; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
   remove myself from maintainers
@@ -129,4 +132,3 @@
   28 Oct 2008; Benedikt Böhm <hollow@gentoo.org> +files/porticron-0.1,
   +metadata.xml, +porticron-0.1.ebuild:
   initial version
-
