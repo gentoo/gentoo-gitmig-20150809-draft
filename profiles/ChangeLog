@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8523 2014/01/11 08:24:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8524 2014/01/11 08:29:50 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Jan 2014; Pacho Ramos <pacho@gentoo.org>
+  arch/powerpc/ppc64/package.use.mask:
+  Drop obsolete USE maskings on ppc64 as systemd is stable there for a long
+  time
 
   11 Jan 2014; Pacho Ramos <pacho@gentoo.org> arch/ia64/package.use.mask:
   Drop unneeded use mask
