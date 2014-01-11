@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/porticron
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.32 2014/01/11 11:12:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.33 2014/01/11 11:21:47 xmw Exp $
+
+*porticron-0.7_p20131113 (11 Jan 2014)
+
+  11 Jan 2014; Michael Weber <xmw@gentoo.org> +porticron-0.7_p20131113.ebuild:
+  Version bump, add ~ppc64 (bug 459188).
 
   11 Jan 2014; Michael Weber <xmw@gentoo.org> metadata.xml:
   Taking maint.
