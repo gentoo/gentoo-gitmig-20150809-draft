@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iftop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.54 2014/01/08 03:22:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.55 2014/01/13 01:31:45 jer Exp $
+
+  13 Jan 2014; Jeroen Roovers <jer@gentoo.org> iftop-1.0_pre3.ebuild:
+  Set RDEPEND, DEPEND on virtual/pkgconfig by cyberbat (bug #497926).
 
 *iftop-1.0_pre3 (08 Jan 2014)
 
