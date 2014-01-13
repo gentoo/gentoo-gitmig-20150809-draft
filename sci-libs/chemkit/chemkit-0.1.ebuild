@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/chemkit/chemkit-0.1.ebuild,v 1.1 2014/01/13 14:26:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/chemkit/chemkit-0.1.ebuild,v 1.2 2014/01/13 14:28:56 jlec Exp $
 
 EAPI=5
 
@@ -23,7 +23,10 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}
 RDEPEND="
 	dev-libs/boost
 	dev-cpp/eigen:3
-	applications? ( dev-qt/qtcore )
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtopengl:4
+	media-libs/glu
 	examples? (
 		x11-libs/libX11
 		x11-libs/libXext
