@@ -6,6 +6,11 @@
 #layout:
 #arch		profile_directory				status
 
+# Aarch64 Profiles
+aarch64         default/linux/aarch64/13.0                      dev
+aarch64         default/linux/aarch64/13.0/desktop              dev
+aarch64         default/linux/aarch64/13.0/server               dev
+
 # Alpha Profiles
 alpha           default/linux/alpha/13.0                        stable
 alpha           default/linux/alpha/13.0/desktop                stable
