@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.143 2013/11/05 19:48:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.144 2014/01/14 19:16:44 aballier Exp $
 
 EAPI="5"
 
@@ -49,9 +49,21 @@ IUSE="
 	+zlib zvbi
 	"
 
+ARM_CPU_FEATURES="armv5te armv6 armv6t2 neon armvfp:vfp"
+MIPS_CPU_FEATURES="mips32r2 mipsdspr1 mipsdspr2 mipsfpu"
+PPC_CPU_FEATURES="altivec"
+SPARC_CPU_FEATURES="vis"
+X86_CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext avx avx2 fma4 mmx mmxext sse sse2 sse3 ssse3 sse4 sse4_2:sse42"
+
 # String for CPU features in the useflag[:configure_option] form
 # if :configure_option isn't set, it will use 'useflag' as configure option
-CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx avx2 mmx mmxext ssse3 vis neon"
+CPU_FEATURES="
+	${ARM_CPU_FEATURES}
+	${MIPS_CPU_FEATURES}
+	${PPC_CPU_FEATURES}
+	${SPARC_CPU_FEATURES}
+	${X86_CPU_FEATURES}
+"
 
 for i in ${CPU_FEATURES}; do
 	IUSE="${IUSE} ${i%:*}"
