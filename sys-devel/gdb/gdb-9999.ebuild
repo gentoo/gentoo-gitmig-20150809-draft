@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.16 2013/12/09 01:04:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.17 2014/01/14 14:49:04 vapier Exp $
 
 EAPI="3"
 
@@ -105,6 +105,8 @@ src_configure() {
 		$(is_cross && echo \
 			--with-sysroot="${sysroot}" \
 			--includedir="${sysroot}/usr/include")
+		# Disable modules that are in a combined binutils/gdb tree. #490566
+		--disable-{binutils,etc,gas,gold,gprof,ld}
 	)
 
 	if use server && ! use client ; then
