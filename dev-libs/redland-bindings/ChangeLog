@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/redland-bindings
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/ChangeLog,v 1.37 2014/01/15 12:37:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/ChangeLog,v 1.38 2014/01/15 12:37:25 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
+  redland-bindings-1.0.14.1.ebuild:
+  Stable for ppc64, wrt bug #483186
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
   redland-bindings-1.0.14.1.ebuild:
