@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libcdio-paranoia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio-paranoia/ChangeLog,v 1.15 2014/01/15 10:44:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio-paranoia/ChangeLog,v 1.16 2014/01/15 10:44:37 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
+  libcdio-paranoia-0.90_p1-r1.ebuild:
+  Stable for x86, wrt bug #497246
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
   libcdio-paranoia-0.90_p1-r1.ebuild:
