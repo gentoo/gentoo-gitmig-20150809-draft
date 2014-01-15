@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/isodate
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/isodate/ChangeLog,v 1.19 2013/12/07 13:49:55 hattya Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/isodate/ChangeLog,v 1.20 2014/01/15 12:40:10 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> isodate-0.4.9-r1.ebuild:
+  Stable for alpha, wrt bug #482056
 
   07 Dec 2013; Akinori Hattori <hattya@gentoo.org> isodate-0.4.9-r1.ebuild:
   ia64 stable wrt bug #482056
