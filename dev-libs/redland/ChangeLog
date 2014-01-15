@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.119 2014/01/15 12:37:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.120 2014/01/15 12:37:41 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> redland-1.0.16.ebuild:
+  Stable for sparc, wrt bug #483186
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> redland-1.0.16.ebuild:
   Stable for alpha, wrt bug #483186
