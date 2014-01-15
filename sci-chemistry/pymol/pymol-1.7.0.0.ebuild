@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.7.0.0.ebuild,v 1.1 2014/01/15 07:42:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.7.0.0.ebuild,v 1.2 2014/01/15 07:48:34 jlec Exp $
 
 EAPI=5
 
@@ -45,6 +45,7 @@ python_prepare_all() {
 	sed \
 		-e "s:\"/usr:\"${EPREFIX}/usr:g" \
 		-e "/ext_comp_args/s:=\[.*\]$:= \[\]:g" \
+		-e "/import/s:argparse:argparseX:g" \
 		-i setup.py || die
 
 	rm ./modules/pmg_tk/startup/apbs_tools.py || die
