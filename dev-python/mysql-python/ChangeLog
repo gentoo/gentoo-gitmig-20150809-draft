@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mysql-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.91 2014/01/15 12:40:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.92 2014/01/15 12:41:14 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> mysql-python-1.2.3-r1.ebuild:
+  Stable for ppc, wrt bug #482056
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> mysql-python-1.2.3-r1.ebuild:
   Stable for ppc64, wrt bug #482056
