@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/avogadrolibs/avogadrolibs-0.7.2.ebuild,v 1.1 2014/01/16 18:47:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/avogadrolibs/avogadrolibs-0.7.2.ebuild,v 1.2 2014/01/16 18:49:46 jlec Exp $
 
 EAPI=5
 
 inherit cmake-utils versionator
 
-DESCRIPTION="Advanced molecule editor and visualizer 2"
+DESCRIPTION="Advanced molecule editor and visualizer 2 - libraries"
 HOMEPAGE="http://www.openchemistry.org/"
 SRC_URI="mirror://sourceforge/project/avogadro/avogadro2/${PV}/${P}.tar.gz"
 
