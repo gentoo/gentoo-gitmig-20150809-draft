@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/make.defaults,v 1.5 2013/09/29 14:33:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/make.defaults,v 1.6 2014/01/16 17:33:37 vapier Exp $
 
 ARCH="s390"
-ACCEPT_KEYWORDS="s390 ~s390"
+ACCEPT_KEYWORDS="s390"
 
 MULTILIB_ABIS="s390"
 DEFAULT_ABI="s390"
