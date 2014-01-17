@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-accounts-kcm/ktp-accounts-kcm-0.7.1.ebuild,v 1.2 2014/01/17 22:27:29 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-accounts-kcm/ktp-accounts-kcm-0.7.1-r1.ebuild,v 1.1 2014/01/17 22:27:29 mrueg Exp $
 
 EAPI=5
 
