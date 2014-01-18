@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf-archive
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.66 2014/01/18 03:10:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.67 2014/01/18 03:11:58 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  autoconf-archive-2013.06.09.ebuild, autoconf-archive-2013.11.01.ebuild:
+  Add arm64 love.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org>
   autoconf-archive-2013.06.09.ebuild:
