@@ -1,9 +1,9 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.59 2014/01/18 18:45:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.60 2014/01/18 18:48:03 pacho Exp $
 
   18 Jan 2014; Pacho Ramos <pacho@gentoo.org> eiskaltdcpp-2.2.9.ebuild:
-  Ensure proper Manifest is generated (due buggy internet connection)
+  amd64 stable, bug #487658
 
   31 Dec 2013; Sven Vermeulen <swift@gentoo.org> -eiskaltdcpp-2.2.7.ebuild,
   metadata.xml:
