@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/lmdb-0.9.10.ebuild,v 1.1 2014/01/18 13:46:09 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/lmdb-0.9.10.ebuild,v 1.2 2014/01/18 13:47:38 eras Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -43,9 +43,9 @@ src_compile() {
 src_install() {
 	mkdir -p "${D}"/usr/{bin,$(get_libdir),include,share/man/man1}
 	default
-	
+
 	mv "${D}"/usr/$(get_libdir)/liblmdb.so{,.0} || die
 	dosym liblmdb.so.0 /usr/$(get_libdir)/liblmdb.so
-	
+
 	use static-libs || rm -f "${D}"/usr/$(get_libdir)/liblmdb.a
 }
