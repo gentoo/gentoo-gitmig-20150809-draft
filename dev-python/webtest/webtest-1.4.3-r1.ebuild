@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.4.3-r1.ebuild,v 1.10 2014/01/11 22:06:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.4.3-r1.ebuild,v 1.11 2014/01/18 15:52:01 floppym Exp $
 
 EAPI=5
 
@@ -31,6 +31,7 @@ DEPEND="${RDEPEND}
 		virtual/python-unittest2[${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}/${MY_P}"
+PATCHES=( "${FILESDIR}/webtest-1.4.3-doctest.patch" )
 
 python_compile_all() {
 	if use doc; then

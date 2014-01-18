@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/webtest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.76 2014/01/11 22:32:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.77 2014/01/18 15:52:01 floppym Exp $
+
+  18 Jan 2014; Mike Gilbert <floppym@gentoo.org>
+  +files/webtest-1.4.3-doctest.patch, webtest-1.4.3-r1.ebuild:
+  Remove non-deterministic doctest, reported by maekke.
 
   11 Jan 2014; Mike Gilbert <floppym@gentoo.org> webtest-2.0.11.ebuild:
   Fix tests.
