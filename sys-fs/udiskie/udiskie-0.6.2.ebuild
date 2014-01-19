@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/udiskie-0.6.2.ebuild,v 1.2 2014/01/19 12:22:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/udiskie-0.6.2.ebuild,v 1.3 2014/01/19 12:24:15 ssuominen Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -19,7 +19,7 @@ RDEPEND="dev-python/dbus-python
 	dev-python/notify-python
 	dev-python/pygobject:2
 	dev-python/pyxdg
-	sys-fs/udisks:2"
+	sys-fs/udisks"
 DEPEND="app-text/asciidoc
 	dev-python/setuptools"
 
