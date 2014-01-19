@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/udiskie-0.6.2.ebuild,v 1.1 2014/01/19 12:19:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/udiskie-0.6.2.ebuild,v 1.2 2014/01/19 12:22:13 ssuominen Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -26,6 +26,16 @@ DEPEND="app-text/asciidoc
 src_prepare() {
 	sed -i -e 's:gtk-update-icon-cache:true:' setup.py || die
 	distutils-r1_src_prepare
+}
+
+src_compile() {
+	distutils-r1_src_compile
+	emake -C doc
+}
+
+src_install() {
+	distutils-r1_src_install
+	doman doc/${PN}.8
 }
 
 pkg_preinst() {
