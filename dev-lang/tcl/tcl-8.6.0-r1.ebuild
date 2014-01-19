@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.6.0-r1.ebuild,v 1.5 2013/02/25 21:39:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.6.0-r1.ebuild,v 1.6 2014/01/19 09:50:48 vapier Exp $
 
 EAPI=5
 
@@ -47,6 +47,14 @@ src_prepare() {
 }
 
 src_configure() {
+	# We went ahead and deleted the whole compat/ subdir which means
+	# the configure tests to detect broken versions need to pass (else
+	# we'll fail to build).  This comes up when cross-compiling, but
+	# might as well get a minor configure speed up normally.
+	export ac_cv_func_memcmp_working="yes"
+	export tcl_cv_str{str,toul,tod}_unbroken="ok"
+	export tcl_cv_strtod_buggy="no"
+
 	econf \
 		$(use_enable threads) \
 		$(use_enable debug symbols)
