@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.12.12-r6.ebuild,v 1.3 2014/01/19 10:21:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.12.12-r6.ebuild,v 1.4 2014/01/19 10:30:16 vapier Exp $
 
-inherit eutils pam
+inherit eutils pam toolchain-funcs
 
 DESCRIPTION="Concurrent Versions System - source code revision control tools"
 HOMEPAGE="http://www.nongnu.org/cvs/"
@@ -36,6 +36,11 @@ src_unpack() {
 }
 
 src_compile() {
+	if tc-is-cross-compiler ; then
+		# Sane defaults when cross-compiling (as these tests want to
+		# try and execute code).
+		export cvs_cv_func_printf_ptr="yes"
+	fi
 	econf \
 		--with-external-zlib \
 		--with-tmpdir=/tmp \
