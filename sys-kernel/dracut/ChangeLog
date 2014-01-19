@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.150 2014/01/19 11:27:02 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.151 2014/01/19 11:29:56 aidecoe Exp $
+
+  19 Jan 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> metadata.xml:
+  Removed desc. of no longer existing 'optimization' flag.
 
   19 Jan 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r4.ebuild,
   -files/034-0010-module-setup.sh-add-comments.patch.bz2:
