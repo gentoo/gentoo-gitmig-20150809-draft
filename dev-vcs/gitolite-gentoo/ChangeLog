@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/gitolite-gentoo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/ChangeLog,v 1.34 2014/01/19 17:48:01 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/ChangeLog,v 1.35 2014/01/19 17:48:59 idl0r Exp $
+
+  19 Jan 2014; Christian Ruppert <idl0r@gentoo.org>
+  gitolite-gentoo-3.5.3.1.ebuild:
+  Drop ~arm for now
 
 *gitolite-gentoo-3.5.3.1 (19 Jan 2014)
 
