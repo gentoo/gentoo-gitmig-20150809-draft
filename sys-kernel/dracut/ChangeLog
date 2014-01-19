@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.149 2014/01/19 11:06:14 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.150 2014/01/19 11:27:02 aidecoe Exp $
+
+  19 Jan 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r4.ebuild,
+  -files/034-0010-module-setup.sh-add-comments.patch.bz2:
+  Moved compressed patch out of portdir, fixes bug #498062.
 
   19 Jan 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-026-r2.ebuild,
   -dracut-027-r3.ebuild, -dracut-029.ebuild, -dracut-030.ebuild,
