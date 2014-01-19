@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udiskie
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/ChangeLog,v 1.24 2013/09/26 05:38:38 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/ChangeLog,v 1.25 2014/01/19 12:19:43 ssuominen Exp $
+
+*udiskie-0.6.2 (19 Jan 2014)
+
+  19 Jan 2014; Samuli Suominen <ssuominen@gentoo.org> +udiskie-0.6.2.ebuild:
+  Version bump; with switch to UDisks2 wrt #439648, thanks to upstream adding
+  support for it.
 
 *udiskie-0.5.0 (26 Sep 2013)
 
