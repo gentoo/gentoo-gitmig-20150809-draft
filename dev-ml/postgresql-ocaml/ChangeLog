@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/postgresql-ocaml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/ChangeLog,v 1.35 2014/01/19 13:11:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/ChangeLog,v 1.36 2014/01/19 13:12:04 aballier Exp $
+
+  19 Jan 2014; Alexis Ballier <aballier@gentoo.org>
+  -postgresql-ocaml-2.0.2.ebuild:
+  remove old
 
 *postgresql-ocaml-2.0.5 (19 Jan 2014)
 
