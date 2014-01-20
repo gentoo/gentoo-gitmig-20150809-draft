@@ -5,4 +5,8 @@
  <email>vapier@gentoo.org</email>
  <description>feel free to update</description>
 </maintainer>
+<maintainer>
+	<email>alexxy@gentoo.org</email>
+	<name>Alexey Shvetsov</name>
+</maintainer>
 </pkgmetadata>
