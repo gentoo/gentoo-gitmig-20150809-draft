@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.2.ebuild,v 1.3 2014/01/20 20:13:31 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.2.ebuild,v 1.4 2014/01/20 20:27:23 swift Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 python3_2 )
@@ -34,6 +34,7 @@ DEPEND="${RDEPEND}
 	ruby? ( >=dev-lang/swig-2.0.4-r1 )
 	python? (
 		>=dev-lang/swig-2.0.4-r1
+		virtual/pkgconfig
 		${PYTHON_DEPS}
 	)"
 
