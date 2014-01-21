@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-9999.ebuild,v 1.7 2014/01/21 19:49:03 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-9999.ebuild,v 1.8 2014/01/21 19:50:01 zx2c4 Exp $
 
 EAPI="4"
 
@@ -9,8 +9,6 @@ WEBAPP_MANUAL_SLOT="yes"
 inherit webapp eutils multilib user git-2
 
 [[ -z "${CGIT_CACHEDIR}" ]] && CGIT_CACHEDIR="/var/cache/${PN}/"
-
-GIT_V="1.8.5"
 
 DESCRIPTION="a fast web-interface for git repositories"
 HOMEPAGE="http://git.zx2c4.com/cgit/about"
