@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.92.ebuild,v 1.4 2014/01/23 14:14:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.92.ebuild,v 1.5 2014/01/23 14:20:25 jer Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE=""
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PN}-9999-toolchain.patch
+		"${FILESDIR}"/${PN}-1.92-toolchain.patch
 	sed -i palo/Makefile -e '/^LDFLAGS=/d' || die
 }
 
