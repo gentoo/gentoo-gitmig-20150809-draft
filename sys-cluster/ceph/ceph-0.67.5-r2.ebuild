@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-9999.ebuild,v 1.7 2014/01/23 16:12:10 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.67.5-r2.ebuild,v 1.1 2014/01/23 16:12:10 dlan Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -84,6 +84,7 @@ src_prepare() {
 	fi
 	sed -e "/bin=/ s:lib:$(get_libdir):" "${FILESDIR}"/${PN}.initd \
 		> "${T}"/${PN}.initd || die
+	sed -e '/^ceph_sbindir =/s:$(exec_prefix)::' -i src/Makefile.am || die
 
 	epatch_user
 	eautoreconf
