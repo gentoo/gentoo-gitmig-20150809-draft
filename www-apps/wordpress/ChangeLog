@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.154 2014/01/24 09:10:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.155 2014/01/24 09:12:07 radhermit Exp $
+
+  24 Jan 2014; Tim Harder <radhermit@gentoo.org> -wordpress-3.6.ebuild:
+  Remove insecure version (bug #484700).
 
 *wordpress-3.8.1 (24 Jan 2014)
 
