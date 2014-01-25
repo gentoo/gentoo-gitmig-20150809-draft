@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/u-boot-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/ChangeLog,v 1.33 2014/01/25 10:33:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/ChangeLog,v 1.34 2014/01/25 10:33:51 radhermit Exp $
+
+  25 Jan 2014; Tim Harder <radhermit@gentoo.org> -u-boot-tools-2011.12.ebuild,
+  -u-boot-tools-2012.10.ebuild:
+  Remove old.
 
 *u-boot-tools-2014.01 (25 Jan 2014)
 
