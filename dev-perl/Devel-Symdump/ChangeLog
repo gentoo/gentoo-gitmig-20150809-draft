@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Devel-Symdump
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.77 2014/01/25 10:52:46 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.78 2014/01/25 10:58:15 zlogene Exp $
+
+  25 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> Devel-Symdump-2.100.0.ebuild:
+  amd64 stable wrt bug #492128
 
   25 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> Devel-Symdump-2.100.0.ebuild:
   alpha stable wrt bug #492128
