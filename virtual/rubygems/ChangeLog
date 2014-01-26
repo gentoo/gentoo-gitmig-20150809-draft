@@ -1,6 +1,9 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.57 2014/01/26 13:05:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.58 2014/01/26 13:06:23 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> rubygems-6.ebuild:
+  Stable for alpha, wrt bug #483254
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> rubygems-6.ebuild:
   Stable for sparc, wrt bug #483254
