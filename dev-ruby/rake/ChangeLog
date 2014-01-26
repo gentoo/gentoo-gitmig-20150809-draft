@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.149 2014/01/26 13:05:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.150 2014/01/26 13:06:26 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> rake-0.9.6.ebuild:
+  Stable for alpha, wrt bug #483254
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> rake-0.9.6.ebuild:
   Stable for sparc, wrt bug #483254
