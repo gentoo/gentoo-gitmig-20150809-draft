@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Attachment-Stripper/Email-MIME-Attachment-Stripper-1.317.0.ebuild,v 1.1 2013/09/03 04:40:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Attachment-Stripper/Email-MIME-Attachment-Stripper-1.317.0.ebuild,v 1.2 2014/01/27 20:37:12 zlogene Exp $
 
 EAPI=4
 
@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
 	test? (
 		dev-perl/Test-Pod
 		dev-perl/Test-Pod-Coverage
+		dev-perl/Capture-Tiny
 	)"
 
 SRC_TEST="do"
