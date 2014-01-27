@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15365 2014/01/27 15:52:19 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15366 2014/01/27 15:55:14 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -384,6 +384,7 @@ x11-themes/faenza-xfce-icon-theme
 >=x11-themes/gnome-icon-theme-3.10
 >=x11-themes/gnome-icon-theme-symbolic-3.10
 >=x11-themes/gnome-themes-standard-3.10
+>=x11-themes/oxygen-gtk-1.3.3:3
 >=x11-wm/mutter-3.10
 
 # Sergey Popov <pinkbyte@gentoo.org> (23 Dec 2013)
