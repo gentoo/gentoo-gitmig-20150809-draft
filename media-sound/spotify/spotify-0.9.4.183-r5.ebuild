@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.4.183-r5.ebuild,v 1.1 2014/01/28 04:11:42 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.4.183-r5.ebuild,v 1.2 2014/01/28 04:24:21 prometheanfire Exp $
 
 EAPI=5
 inherit eutils fdo-mime gnome2-utils pax-utils unpacker
@@ -66,7 +66,7 @@ S=${WORKDIR}
 
 QA_PREBUILT="/opt/spotify/spotify-client/spotify
 			/opt/spotify/spotify-client/Data/SpotifyHelper
-			/opt/spotify/spotify-client/libcef.so"
+			/opt/spotify/spotify-client/Data/libcef.so"
 
 src_prepare() {
 	# link against openssl-1.0.0 as it crashes with 0.9.8
@@ -115,7 +115,7 @@ src_install() {
 	dodir /usr/bin
 	cat <<-EOF >"${D}"/usr/bin/spotify
 		#! /bin/sh
-		LD_PRELOAD="\${LD_PRELOAD} ${SPOTIFY_HOME}/libcef.so ${SPOTIFY_HOME}/libnspr4.so.9 ${SPOTIFY_HOME}/libplc4.so.9"
+		LD_PRELOAD="\${LD_PRELOAD} ${SPOTIFY_HOME}/libnspr4.so.9 ${SPOTIFY_HOME}/libplc4.so.9"
 		LD_LIBRARY_PATH="${SPOTIFY_HOME}/Data/"
 		export LD_PRELOAD
 		export LD_LIBRARY_PATH
