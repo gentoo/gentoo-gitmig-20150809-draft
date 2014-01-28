@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/idlastro/idlastro-20140125.ebuild,v 1.1 2014/01/28 18:13:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/idlastro/idlastro-20140125.ebuild,v 1.2 2014/01/28 18:15:35 bicatali Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ DEPEND=""
 RDEPEND="dev-lang/gdl"
 
 S="${WORKDIR}"
-RESTRICT=mirror
+
 src_install() {
 	insinto /usr/share/gnudatalanguage/${PN}
 	doins -r pro/*
