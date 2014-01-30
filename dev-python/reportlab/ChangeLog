@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.100 2014/01/29 17:30:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.101 2014/01/30 15:10:19 jlec Exp $
+
+  30 Jan 2014; Justin Lecher <jlec@gentoo.org> reportlab-2.7.ebuild:
+  Add Python 3 support
 
 *reportlab-2.7 (29 Jan 2014)
 
