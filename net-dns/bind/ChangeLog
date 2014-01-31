@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.486 2014/01/31 21:09:09 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.487 2014/01/31 21:14:24 idl0r Exp $
+
+  31 Jan 2014; Christian Ruppert <idl0r@gentoo.org> bind-9.9.5.ebuild:
+  Fix static-libs
 
 *bind-9.9.5 (31 Jan 2014)
 
