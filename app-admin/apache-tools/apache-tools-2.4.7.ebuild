@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.7.ebuild,v 1.4 2014/01/23 05:08:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.7.ebuild,v 1.5 2014/01/31 08:15:11 vapier Exp $
 
 EAPI=5
 inherit flag-o-matic eutils multilib
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/httpd-${PV}"
 
 src_configure() {
-	local myconf=""
+	local myconf=()
 
 	# Brain dead check.
 	tc-is-cross-compiler && export ap_cv_void_ptr_lt_long="no"
@@ -34,7 +34,7 @@ src_configure() {
 	# Instead of filtering --as-needed (bug #128505), append --no-as-needed
 	append-ldflags $(no-as-needed)
 
-	use ssl && myconf+=" --with-ssl=\"${EPREFIX}\"/usr --enable-ssl"
+	use ssl && myconf+=( --with-ssl="${EPREFIX}"/usr --enable-ssl )
 
 	# econf overwrites the stuff from config.layout, so we have to put them into
 	# our myconf line too
@@ -47,7 +47,7 @@ src_configure() {
 		--with-apr="${EPREFIX}"/usr \
 		--with-apr-util="${EPREFIX}"/usr \
 		--with-pcre="${EPREFIX}"/usr \
-		${myconf}
+		"${myconf[@]}"
 }
 
 src_compile() {
