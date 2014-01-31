@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.5.3.ebuild,v 1.5 2014/01/31 08:05:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.5.3.ebuild,v 1.6 2014/01/31 08:07:39 vapier Exp $
 
 EAPI="4"
 
@@ -81,25 +81,17 @@ src_configure() {
 
 src_compile() {
 	emake CPPFLAGS="${CPPFLAGS}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
-
-	if use doc; then
-		emake dox
-	fi
+	use doc && emake dox
 }
 
 src_install() {
 	default
 
-	find "${ED}" -name "*.la" -exec rm -f {} +
-	find "${ED}usr/$(get_libdir)/apr-util-${SLOT}" -name "*.a" -exec rm -f {} +
+	find "${ED}" -name "*.la" -delete
+	find "${ED}usr/$(get_libdir)/apr-util-${SLOT}" -name "*.a" -delete
+	use static-libs || find "${ED}" -name "*.a" -delete
 
-	if use doc; then
-		dohtml -r docs/dox/html/*
-	fi
-
-	if ! use static-libs; then
-		find "${ED}" -name "*.a" -exec rm -f {} +
-	fi
+	use doc && dohtml -r docs/dox/html/*
 
 	# This file is only used on AIX systems, which Gentoo is not,
 	# and causes collisions between the SLOTs, so remove it.
