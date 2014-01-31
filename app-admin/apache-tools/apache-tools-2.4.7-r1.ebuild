@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.7-r1.ebuild,v 1.1 2014/01/31 08:19:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.7-r1.ebuild,v 1.2 2014/01/31 08:22:32 vapier Exp $
 
 EAPI=5
-inherit flag-o-matic eutils multilib
+inherit flag-o-matic eutils multilib toolchain-funcs
 
 DESCRIPTION="Useful Apache tools - htdigest, htpasswd, ab, htdbm"
 HOMEPAGE="http://httpd.apache.org/"
@@ -27,6 +27,14 @@ S="${WORKDIR}/httpd-${PV}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.4.7-Makefile.patch #459446
+
+	# This package really should upgrade to using pcre's .pc file.
+	cat <<-\EOF >"${T}"/pcre-config
+	#!/bin/sh
+	[ "${flag}" = "--version" ] && set -- --modversion
+	exec ${PKG_CONFIG} libpcre "$@"
+	EOF
+	chmod a+x "${T}"/pcre-config
 }
 
 src_configure() {
@@ -35,6 +43,8 @@ src_configure() {
 	# Brain dead check.
 	tc-is-cross-compiler && export ap_cv_void_ptr_lt_long="no"
 
+	tc-export PKG_CONFIG
+
 	# Instead of filtering --as-needed (bug #128505), append --no-as-needed
 	append-ldflags $(no-as-needed)
 
@@ -42,16 +52,20 @@ src_configure() {
 
 	# econf overwrites the stuff from config.layout, so we have to put them into
 	# our myconf line too
+	ac_cv_path_PKGCONFIG=${PKG_CONFIG} \
 	econf \
 		--libexecdir="${EPREFIX}"/usr/$(get_libdir)/apache2/modules \
 		--sbindir="${EPREFIX}"/usr/sbin \
 		--with-perl="${EPREFIX}"/usr/bin/perl \
 		--with-expat="${EPREFIX}"/usr \
 		--with-z="${EPREFIX}"/usr \
-		--with-apr="${EPREFIX}"/usr \
-		--with-apr-util="${EPREFIX}"/usr \
-		--with-pcre="${EPREFIX}"/usr \
+		--with-apr="${SYSROOT}${EPREFIX}"/usr \
+		--with-apr-util="${SYSROOT}${EPREFIX}"/usr \
+		--with-pcre="${T}"/pcre-config \
 		"${myconf[@]}"
+	sed -i \
+		-e '/^LTFLAGS/s:--silent::' \
+		build/rules.mk build/config_vars.mk || die
 }
 
 src_compile() {
