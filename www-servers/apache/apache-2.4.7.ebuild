@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.7.ebuild,v 1.6 2014/01/31 08:32:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.7.ebuild,v 1.7 2014/01/31 08:48:40 vapier Exp $
 
 EAPI=5
 
@@ -66,6 +66,7 @@ MODULE_DEPENDS="
 	mime_magic:mime
 	proxy_ajp:proxy
 	proxy_balancer:proxy
+	proxy_balancer:slotmem_shm
 	proxy_connect:proxy
 	proxy_ftp:proxy
 	proxy_http:proxy
