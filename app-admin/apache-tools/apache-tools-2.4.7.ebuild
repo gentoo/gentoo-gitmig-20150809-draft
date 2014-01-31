@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.7.ebuild,v 1.5 2014/01/31 08:15:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.7.ebuild,v 1.6 2014/01/31 08:17:39 vapier Exp $
 
 EAPI=5
 inherit flag-o-matic eutils multilib
@@ -51,32 +51,27 @@ src_configure() {
 }
 
 src_compile() {
-	cd support || die
-	emake
+	emake -C support
 }
 
 src_install() {
-	cd support || die
-
-	make DESTDIR="${D}" install
-
-	# install manpages
-	doman "${S}"/docs/man/{dbmmanage,htdigest,htpasswd,htdbm,ab,logresolve}.1 \
-		"${S}"/docs/man/{htcacheclean,rotatelogs}.8
+	make -C support DESTDIR="${D}" install
+	dodoc CHANGES
+	doman docs/man/{dbmmanage,htdigest,htpasswd,htdbm,ab,logresolve}.1 \
+		docs/man/{htcacheclean,rotatelogs}.8
 
 	# Providing compatiblity symlinks for #177697 (which we'll stop to install
 	# at some point).
-	pushd "${ED}"/usr/sbin/ >/dev/null
+	pushd "${ED}"/usr/sbin >/dev/null
+	local i
 	for i in *; do
-		dosym /usr/sbin/${i} /usr/sbin/${i}2
+		dosym ${i} /usr/sbin/${i}2
 	done
-	popd "${ED}"/usr/sbin/ >/dev/null
+	popd >/dev/null
 
 	# Provide a symlink for ab-ssl
 	if use ssl; then
-		dosym /usr/bin/ab /usr/bin/ab-ssl
-		dosym /usr/bin/ab /usr/bin/ab2-ssl
+		dosym ab /usr/bin/ab-ssl
+		dosym ab /usr/bin/ab2-ssl
 	fi
-
-	dodoc "${S}"/CHANGES
 }
