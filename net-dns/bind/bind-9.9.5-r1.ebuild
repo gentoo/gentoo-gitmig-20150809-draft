@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.5.ebuild,v 1.2 2014/01/31 21:14:24 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.5-r1.ebuild,v 1.1 2014/01/31 21:24:49 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -244,7 +244,7 @@ src_install() {
 	use geoip && dodoc "${DISTDIR}"/${GEOIP_DOC_A}
 
 	insinto /etc/bind
-	newins "${FILESDIR}"/named.conf-r6 named.conf
+	newins "${FILESDIR}"/named.conf-r7 named.conf
 
 	# ftp://ftp.rs.internic.net/domain/named.cache:
 	insinto /var/bind
@@ -254,7 +254,7 @@ src_install() {
 	newins "${FILESDIR}"/127.zone-r1 127.zone
 	newins "${FILESDIR}"/localhost.zone-r3 localhost.zone
 
-	newinitd "${FILESDIR}"/named.init-r12 named
+	newinitd "${FILESDIR}"/named.init-r13 named
 	newconfd "${FILESDIR}"/named.confd-r6 named
 
 	if use gost; then
@@ -362,11 +362,11 @@ pkg_postinst() {
 	ewarn
 	ewarn "NOTE: If you upgrade from <net-dns/bind-9.4.3_p5-r1, you may encounter permission problems"
 	ewarn "To fix the permissions do:"
-	ewarn "chown root:named /{etc,var}/bind /var/{run,log}/named /var/bind/{sec,pri,dyn}"
+	ewarn "chown root:named /{etc,var}/bind /run/named/ /var/log/named /var/bind/{sec,pri,dyn}"
 	ewarn "chown root:named /var/bind/named.cache /var/bind/pri/{127,localhost}.zone /etc/bind/{bind.keys,named.conf}"
 	ewarn "chmod 0640 /var/bind/named.cache /var/bind/pri/{127,localhost}.zone /etc/bind/{bind.keys,named.conf}"
 	ewarn "chmod 0750 /etc/bind /var/bind/pri"
-	ewarn "chmod 0770 /var/{run,log}/named /var/bind/{,sec,dyn}"
+	ewarn "chmod 0770 /run/named/ /var/log/named /var/bind/{,sec,dyn}"
 	ewarn
 }
 
@@ -394,9 +394,9 @@ pkg_config() {
 	echo; einfo "Setting up the chroot directory..."
 
 	mkdir -m 0750 -p ${CHROOT}
-	mkdir -m 0755 -p ${CHROOT}/{dev,etc,var/{run,log}}
+	mkdir -m 0755 -p ${CHROOT}/{dev,etc,var/log,run}
 	mkdir -m 0750 -p ${CHROOT}/etc/bind
-	mkdir -m 0770 -p ${CHROOT}/var/{bind,{run,log}/named}
+	mkdir -m 0770 -p ${CHROOT}/var/{bind,log/named} ${CHROOT}/run/named/
 	# As of bind 9.8.0
 	if has_version net-dns/bind[gost]; then
 		if [ "$(get_libdir)" = "lib64" ]; then
@@ -406,7 +406,7 @@ pkg_config() {
 			mkdir -m 0755 -p ${CHROOT}/usr/lib/engines
 		fi
 	fi
-	chown root:named ${CHROOT} ${CHROOT}/var/{bind,{run,log}/named} ${CHROOT}/etc/bind
+	chown root:named ${CHROOT} ${CHROOT}/var/{bind,log/named} ${CHROOT}/run/named/ ${CHROOT}/etc/bind
 
 	mknod ${CHROOT}/dev/null c 1 3
 	chmod 0666 ${CHROOT}/dev/null
