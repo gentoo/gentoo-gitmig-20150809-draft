@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.335 2014/02/02 05:52:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.336 2014/02/02 05:56:20 robbat2 Exp $
+
+  02 Feb 2014; Robin H. Johnson <robbat2@gentoo.org> files/lvm.rc-2.02.105:
+  Bug #334125: Ignore an error shutting down last LVs, if they are /usr or / we
+  will not be able to shut them down as we are running from them.
 
 *lvm2-2.02.105 (02 Feb 2014)
 
