@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/media-player-info
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.37 2014/02/02 16:22:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.38 2014/02/02 16:23:16 ssuominen Exp $
+
+  02 Feb 2014; Samuli Suominen <ssuominen@gentoo.org>
+  media-player-info-21-r1.ebuild:
+  Drop obsolete reference to virtual/udev's USE="hwdb"
 
   02 Feb 2014; Samuli Suominen <ssuominen@gentoo.org>
   -media-player-info-17.ebuild, -media-player-info-21.ebuild:
