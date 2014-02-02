@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-C3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3/ChangeLog,v 1.32 2014/02/02 16:24:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3/ChangeLog,v 1.33 2014/02/02 16:26:22 zlogene Exp $
+
+  02 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> Class-C3-0.250.0.ebuild:
+  ppc64 stable wrt bug #492086
 
   02 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> Class-C3-0.250.0.ebuild:
   alpha stable wrt bug #492086
