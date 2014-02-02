@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.105-r2.ebuild,v 1.1 2014/02/02 19:52:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.105-r2.ebuild,v 1.2 2014/02/02 19:56:52 robbat2 Exp $
 
 EAPI=5
 inherit autotools eutils linux-info multilib systemd toolchain-funcs udev flag-o-matic
@@ -202,7 +202,7 @@ src_install() {
 		newconfd "${FILESDIR}"/lvm.confd-2.02.28-r2 lvm
 
 		newinitd "${FILESDIR}"/lvm-monitoring.initd-2.02.105-r2 lvm-monitoring
-		newinitd "${FILESDIR}"/lvmetad.initd-2.02.105 lvmetad
+		newinitd "${FILESDIR}"/lvmetad.initd-2.02.105-r2 lvmetad
 	fi
 
 	if use clvm; then
