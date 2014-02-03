@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/python-gflags-2.0.ebuild,v 1.9 2014/02/03 15:19:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/python-gflags-2.0.ebuild,v 1.10 2014/02/03 15:21:23 vapier Exp $
 
 EAPI="5"
 
@@ -24,6 +24,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-scripts-install.patch
 	"${FILESDIR}"/${P}-tests-respect-tmpdir.patch
 	"${FILESDIR}"/${P}-skip-test-as-root.patch #475134
+	"${FILESDIR}"/${P}-tests-python-2.7.patch #447482
 )
 
 python_test() {
