@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-mp/coinor-mp-1.7.6.ebuild,v 1.3 2014/02/04 08:49:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-mp/coinor-mp-1.7.6.ebuild,v 1.4 2014/02/04 08:50:46 jlec Exp $
 
 EAPI=5
 
@@ -27,6 +27,7 @@ src_prepare() {
 	sed -i \
 		-e '/addlibsdir/s/$(DESTDIR)//' \
 		Makefile.in || die
+	sed -i \
 		-e "s:lib/pkgconfig:$(get_libdir)/pkgconfig:g" \
 		configure || die
 	autotools-utils_src_prepare
