@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.8.3.ebuild,v 1.1 2014/02/04 08:19:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.8.3.ebuild,v 1.2 2014/02/04 08:21:45 ssuominen Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 
-inherit eutils mono python-single-r1 udev
+inherit eutils mono-env python-single-r1 udev
 
 DESCRIPTION="Shared library to access the contents of an iPod"
 HOMEPAGE="http://www.gtkpod.org/libgpod/"
@@ -46,6 +46,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS NEWS README* TROUBLESHOOTING"
 
 pkg_setup() {
+	use mono && mono-env_pkg_setup
 	use python && python-single-r1_pkg_setup
 }
 
