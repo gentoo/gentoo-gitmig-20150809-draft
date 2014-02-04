@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.200 2014/02/03 18:22:10 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.201 2014/02/04 02:38:52 radhermit Exp $
+
+*libgcrypt-1.6.1 (04 Feb 2014)
+
+  04 Feb 2014; Tim Harder <radhermit@gentoo.org> +libgcrypt-1.6.1.ebuild,
+  +files/libgcrypt-1.6.1-uscore.patch:
+  Version bump, re-add arm keyword since bug #494668 should be fixed according
+  to upstream.
 
 *libgcrypt-1.6.0-r1 (03 Feb 2014)
 
