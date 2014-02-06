@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20120707.ebuild,v 1.8 2014/02/06 08:18:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20120707.ebuild,v 1.9 2014/02/06 08:20:19 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils multilib flag-o-matic
@@ -37,7 +37,7 @@ RDEPEND="media-libs/a52dec:=
 	x11-libs/libXvMC:=
 	x11-libs/libXxf86vm:=
 	virtual/ffmpeg
-	|| ( media-video/ffmpeg media-libs/libpostproc )
+	|| ( media-video/ffmpeg:0 media-libs/libpostproc )
 	virtual/jpeg:0
 	alsa? ( media-libs/alsa-lib:= )
 	ieee1394? (
