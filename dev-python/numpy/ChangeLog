@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.219 2014/02/06 09:44:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.220 2014/02/06 09:47:45 jlec Exp $
+
+  06 Feb 2014; Justin Lecher <jlec@gentoo.org> numpy-1.6.2-r2.ebuild:
+  Drop testing arches back to testing
 
 *numpy-1.8.0-r1 (06 Feb 2014)
 
