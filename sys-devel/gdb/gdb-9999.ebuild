@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.20 2014/01/18 05:24:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.21 2014/02/06 07:44:40 vapier Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit flag-o-matic eutils
 
@@ -147,13 +147,13 @@ src_configure() {
 }
 
 src_test() {
-	emake check || ewarn "tests failed"
+	nonfatal emake check || ewarn "tests failed"
 }
 
 src_install() {
 	use server && ! use client && cd gdb/gdbserver
-	emake DESTDIR="${D}" install || die
-	use client && { find "${ED}"/usr -name libiberty.a -delete || die ; }
+	default
+	use client && find "${ED}"/usr -name libiberty.a -delete
 	cd "${S}"
 
 	# Don't install docs when building a cross-gdb
@@ -165,9 +165,8 @@ src_install() {
 	# http://sourceware.org/ml/gdb-patches/2011-12/msg00915.html
 	# Only install if it exists due to the twisted behavior (see
 	# notes in src_configure above).
-	[[ -e gdb/gdbserver/gdbreplay ]] && { dobin gdb/gdbserver/gdbreplay || die ; }
+	[[ -e gdb/gdbserver/gdbreplay ]] && dobin gdb/gdbserver/gdbreplay
 
-	dodoc README
 	if use client ; then
 		docinto gdb
 		dodoc gdb/CONTRIBUTE gdb/README gdb/MAINTAINERS \
