@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.6.1.ebuild,v 1.1 2014/02/09 11:18:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.6.1.ebuild,v 1.2 2014/02/09 12:41:19 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="chipcard debug +doc hbci mysql ofx postgres python quotes sqlite"
 
 # FIXME: rdepend on dev-libs/qof when upstream fix their mess (see configure.ac)
@@ -62,7 +62,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Prevent linking against installed libs, bug #371264
 	eautoreconf
 	gnome2_src_prepare
 }
@@ -78,18 +77,6 @@ src_configure() {
 		myconf+=" --disable-dbi"
 	fi
 
-	myconf+="
-		$(use_enable debug)
-		$(use_enable ofx)
-		$(use_enable hbci aqbanking)
-		$(use_enable python)
-		--disable-doxygen
-		--enable-locale-specific-tax
-		--disable-error-on-warning"
-
-	# gtkmm is experimental and shouldn't be enabled, upstream bug #684166
-	myconf+=" --disable-gtkmm"
-
 	# guile wrongly exports LDFLAGS as LIBS which breaks modules
 	# Filter until a better ebuild is available, bug #202205
 	local GUILE_LIBS=""
@@ -100,7 +87,17 @@ src_configure() {
 		fi
 	done
 
-	gnome2_src_configure GUILE_LIBS="${GUILE_LIBS}" ${myconf}
+	# gtkmm is experimental and shouldn't be enabled, upstream bug #684166
+	gnome2_src_configure \
+		$(use_enable debug) \
+		$(use_enable ofx) \
+		$(use_enable hbci aqbanking) \
+		$(use_enable python) \
+		--disable-doxygen \
+		--disable-gtkmm \
+		--enable-locale-specific-tax \
+		--disable-error-on-warning \
+		 GUILE_LIBS="${GUILE_LIBS}" ${myconf}
 }
 
 src_test() {
