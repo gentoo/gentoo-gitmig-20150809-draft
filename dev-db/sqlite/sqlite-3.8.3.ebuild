@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.8.3.ebuild,v 1.1 2014/02/09 17:46:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.8.3.ebuild,v 1.2 2014/02/09 17:50:50 floppym Exp $
 
 EAPI="5"
 
@@ -28,7 +28,7 @@ RDEPEND="icu? ( dev-libs/icu:=[${MULTILIB_USEDEP}] )
 	readline? ( sys-libs/readline[${MULTILIB_USEDEP}] )
 	tcl? ( dev-lang/tcl:=[${MULTILIB_USEDEP}] )
 	abi_x86_32? (
-		!<=app-emulation/emul-linux-x86-baselibs-20131008-r15
+		!<=app-emulation/emul-linux-x86-baselibs-20131008-r14
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
 DEPEND="${RDEPEND}
