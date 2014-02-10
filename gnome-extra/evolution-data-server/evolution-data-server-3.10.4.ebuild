@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.10.4.ebuild,v 1.1 2014/02/10 19:53:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.10.4.ebuild,v 1.2 2014/02/10 19:57:05 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ VALA_USE_DEPEND="vapigen"
 inherit db-use flag-o-matic gnome2 python-any-r1 vala virtualx
 
 DESCRIPTION="Evolution groupware backend"
-HOMEPAGE="http://projects.gnome.org/evolution/arch.shtml"
+HOMEPAGE="https://wiki.gnome.org/Apps/Evolution"
 
 # Note: explicitly "|| ( LGPL-2 LGPL-3 )", not "LGPL-2+".
 LICENSE="|| ( LGPL-2 LGPL-3 ) BSD Sleepycat"
