@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.8.0.ebuild,v 1.1 2014/02/12 16:38:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.8.0.ebuild,v 1.2 2014/02/12 16:51:55 ssuominen Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -62,6 +62,8 @@ src_prepare() {
 		-e 's/.*bus_dispatch_test.*/printf ("Disabled due to excess noise\\n");/' \
 		-e '/"dispatch"/d' \
 		bus/test-main.c || die
+
+	epatch_user
 
 	# required for asneeded patch but also for bug 263909, cross-compile so
 	# don't remove eautoreconf
