@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.102.ebuild,v 1.1 2014/02/12 16:44:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.102.ebuild,v 1.2 2014/02/12 16:48:27 ssuominen Exp $
 
 EAPI=5
 inherit bash-completion-r1 eutils multilib-minimal
@@ -32,6 +32,10 @@ DOCS=( AUTHORS ChangeLog HACKING README )
 set_TBD() {
 	# out of sources build dir for make check
 	export TBD="${BUILD_DIR}-tests"
+}
+
+src_prepare() {
+	epatch_user
 }
 
 multilib_src_configure() {
