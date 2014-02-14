@@ -4,10 +4,10 @@
 
 checkconfig() {
 	# Set sane defaults
-	if [[ -z ${CONMUX_REGISTRY_PORT} ]]; then
+	if [ -z ${CONMUX_REGISTRY_PORT} ]; then
 		CONMUX_REGISTRY_PORT="63000"
 	fi
-	if [[ -z ${CONMUX_REGISTRY_LOG} ]]; then
+	if [ -z ${CONMUX_REGISTRY_LOG} ]; then
 		CONMUX_REGISTRY_LOG="/var/log/conmux-registry.log"
 	fi
 }
