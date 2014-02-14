@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ushare
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ChangeLog,v 1.28 2014/02/14 21:06:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ChangeLog,v 1.29 2014/02/14 21:07:28 hwoarang Exp $
+
+  14 Feb 2014; Markos Chandras <hwoarang@gentoo.org> files/ushare.init.d.ng:
+  Fix typo
 
   14 Feb 2014; Markos Chandras <hwoarang@gentoo.org> files/ushare.init.d.ng:
   Remove bashisms
