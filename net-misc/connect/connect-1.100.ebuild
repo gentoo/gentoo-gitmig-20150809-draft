@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connect/connect-1.100.ebuild,v 1.2 2014/02/15 09:12:16 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connect/connect-1.100.ebuild,v 1.3 2014/02/15 09:22:15 wschlich Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ HG_COMMIT_ID="7c036cbffb61" # bitbucket commit id
 SRC_URI="http://bitbucket.org/gotoh/connect/get/${HG_COMMIT_ID}.tar.bz2 -> ${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND=""
 RDEPEND=""
 S="${WORKDIR}/gotoh-connect-${HG_COMMIT_ID}"
