@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/gst-plugins-flac-1.0.7.ebuild,v 1.1 2013/06/08 19:02:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/gst-plugins-flac-1.2.3.ebuild,v 1.1 2014/02/16 23:28:46 eva Exp $
 
 EAPI="5"
 
