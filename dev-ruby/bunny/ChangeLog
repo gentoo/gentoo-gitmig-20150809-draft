@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/bunny
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bunny/ChangeLog,v 1.22 2014/02/05 07:16:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bunny/ChangeLog,v 1.23 2014/02/17 06:47:14 graaff Exp $
+
+  17 Feb 2014; Hans de Graaff <graaff@gentoo.org> -bunny-1.0.0.ebuild,
+  -bunny-1.0.5.ebuild, -bunny-1.1.0.ebuild:
+  Cleanup.
 
 *bunny-1.1.2 (05 Feb 2014)
 
