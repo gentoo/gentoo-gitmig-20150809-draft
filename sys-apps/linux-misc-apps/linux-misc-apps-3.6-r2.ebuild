@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux-misc-apps/linux-misc-apps-3.6-r2.ebuild,v 1.1 2014/02/18 07:42:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux-misc-apps/linux-misc-apps-3.6-r2.ebuild,v 1.2 2014/02/18 07:59:11 ssuominen Exp $
 
 EAPI=5
 
@@ -177,4 +177,9 @@ src_install() {
 	newconfd "${FILESDIR}"/hpfall.confd hpfall
 	newinitd "${FILESDIR}"/hpfall.initd hpfall
 	prune_libtool_files
+}
+
+pkg_postinst() {
+	echo
+	elog "The cpupower utility is maintained separately at sys-power/cpupower"
 }
