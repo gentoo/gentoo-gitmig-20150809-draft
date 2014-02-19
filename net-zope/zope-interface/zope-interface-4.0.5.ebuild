@@ -1,10 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/zope-interface-4.0.5.ebuild,v 1.5 2013/11/01 00:29:15 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/zope-interface-4.0.5.ebuild,v 1.6 2014/02/19 09:30:50 radhermit Exp $
 
 EAPI=5
-
-# Tests fail with py3.1
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
 
 inherit distutils-r1 flag-o-matic
@@ -28,6 +26,9 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
+
+# until all deps are in the tree (bug #442794)
+RESTRICT="test"
 
 python_compile() {
 	if [[ ${EPYTHON} != python3* ]]; then
