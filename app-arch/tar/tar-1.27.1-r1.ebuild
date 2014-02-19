@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.27.1-r1.ebuild,v 1.5 2014/02/19 12:33:49 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.27.1-r1.ebuild,v 1.6 2014/02/19 12:50:01 polynomial-c Exp $
 
 EAPI="3"
 
@@ -68,8 +68,8 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog* NEWS README* THANKS
 	newman "${FILESDIR}"/tar.1-1.27 ${p}tar.1
-	mv "${ED}"/usr/sbin/${p}backup{,-tar}
-	mv "${ED}"/usr/sbin/${p}restore{,-tar}
+	mv "${ED}"/usr/sbin/${p}backup{,-tar} || die
+	mv "${ED}"/usr/sbin/${p}restore{,-tar} || die
 
 	if use minimal ; then
 		find "${ED}"/etc "${ED}"/*bin/ "${ED}"/usr/*bin/ \
