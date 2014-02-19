@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/lammps-20140214.ebuild,v 1.3 2014/02/19 19:01:43 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/lammps-20140214.ebuild,v 1.4 2014/02/19 19:05:49 nicolasbock Exp $
 
 EAPI=5
 
@@ -132,14 +132,14 @@ src_install() {
 	# packages.
 	doheader -r src/*.h lib/meam/*.mod
 
-	local LAMMPS_POTENTIALS="/usr/share/${PF}/potentials"
+	local LAMMPS_POTENTIALS="/usr/share/${PN}/potentials"
 	insinto "${LAMMPS_POTENTIALS}"
 	doins potentials/*
 	echo "LAMMPS_POTENTIALS=${LAMMPS_POTENTIALS}" > 99lammps
 	doenvd 99lammps
 
 	if use examples; then
-		local LAMMPS_EXAMPLES="/usr/share/${PF}/examples"
+		local LAMMPS_EXAMPLES="/usr/share/${PN}/examples"
 		insinto "${LAMMPS_EXAMPLES}"
 		doins -r examples/*
 	fi
