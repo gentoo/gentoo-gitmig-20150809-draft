@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-Twofish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Twofish/ChangeLog,v 1.22 2014/02/19 12:42:02 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Twofish/ChangeLog,v 1.23 2014/02/19 12:43:21 zlogene Exp $
+
+  19 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> Crypt-Twofish-2.170.0.ebuild:
+  x86 stable wrt bug #492108
 
   19 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> Crypt-Twofish-2.170.0.ebuild:
   amd64 stable wrt bug #492108
