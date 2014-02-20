@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.224 2014/02/20 10:24:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.225 2014/02/20 10:24:16 ago Exp $
+
+  20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> xen-tools-4.2.3-r1.ebuild:
+  Stable for x86, wrt bug #500530
 
   20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> xen-tools-4.2.3-r1.ebuild:
   Stable for amd64, wrt bug #500530
