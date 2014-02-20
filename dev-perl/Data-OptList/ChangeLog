@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-OptList
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-OptList/ChangeLog,v 1.33 2014/02/20 18:54:35 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-OptList/ChangeLog,v 1.34 2014/02/20 18:55:59 zlogene Exp $
+
+  20 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> Data-OptList-0.108.0.ebuild:
+  amd64 stable wrt bug #492114
 
   20 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> Data-OptList-0.108.0.ebuild:
   alpha stable wrt bug #492114
