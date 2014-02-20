@@ -1,6 +1,10 @@
 # ChangeLog for virtual/jpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/ChangeLog,v 1.26 2014/02/20 14:13:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/ChangeLog,v 1.27 2014/02/20 14:16:45 ago Exp $
+
+  20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> jpeg-0-r2.ebuild,
+  jpeg-62.ebuild:
+  Stable for sparc, wrt bug #491150
 
   20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> jpeg-0-r2.ebuild,
   jpeg-62.ebuild:
