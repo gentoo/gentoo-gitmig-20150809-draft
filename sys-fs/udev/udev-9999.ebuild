@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.263 2014/02/21 12:03:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.264 2014/02/21 12:18:06 ssuominen Exp $
 
 EAPI=5
 
@@ -199,6 +199,7 @@ multilib_src_configure() {
 		--disable-libcryptsetup
 		--disable-qrencode
 		--disable-microhttpd
+		--disable-readahead
 		--disable-quotacheck
 		--disable-polkit
 		--disable-myhostname
@@ -375,7 +376,7 @@ multilib_src_install_all() {
 	prune_libtool_files --all
 	rm -f \
 		"${D}"/lib/udev/rules.d/99-systemd.rules \
-		"${D}"/usr/share/doc/${PF}/LICENSE.*
+		"${D}"/usr/share/doc/${PF}/{LICENSE.*,sd-shutdown.h}
 
 	# see src_prepare() for content of these files
 	insinto /lib/udev/rules.d
