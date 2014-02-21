@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.262 2014/02/21 12:00:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.263 2014/02/21 12:03:40 ssuominen Exp $
 
 EAPI=5
 
@@ -74,7 +74,7 @@ multilib_check_headers() { :; }
 check_default_rules() {
 	# Make sure there are no sudden changes to upstream rules file
 	# (more for my own needs than anything else ...)
-	local udev_rules_md5=7d3733faee4203fd7c75c3f3c0d55741
+	local udev_rules_md5=dcbc152236a7d009e6ce6f2369c509ea
 	MD5=$(md5sum < "${S}"/rules/50-udev-default.rules)
 	MD5=${MD5/  -/}
 	if [[ ${MD5} != ${udev_rules_md5} ]]; then
@@ -105,7 +105,7 @@ pkg_setup() {
 src_prepare() {
 	if ! [[ ${PV} = 9999* ]]; then
 		# secure_getenv() disable for non-glibc systems wrt bug #443030
-		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 26 ]]; then
+		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 22 ]]; then
 			eerror "The line count for secure_getenv() failed, see bug #443030"
 			die
 		fi
