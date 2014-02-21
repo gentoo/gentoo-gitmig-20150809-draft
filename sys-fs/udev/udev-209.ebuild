@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-209.ebuild,v 1.2 2014/02/21 13:42:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-209.ebuild,v 1.3 2014/02/21 13:53:38 ssuominen Exp $
 
 EAPI=5
 
@@ -202,6 +202,7 @@ multilib_src_configure() {
 		--disable-microhttpd
 		--disable-readahead
 		--disable-quotacheck
+		--disable-logind
 		--disable-polkit
 		--disable-myhostname
 		--enable-split-usr
@@ -332,7 +333,8 @@ multilib_src_install() {
 			lib_LTLIBRARIES="${lib_LTLIBRARIES}"
 			pkgconfiglib_DATA="${pkgconfiglib_DATA}"
 			INSTALL_DIRS='$(sysconfdir)/udev/rules.d \
-					$(sysconfdir)/udev/hwdb.d'
+					$(sysconfdir)/udev/hwdb.d \
+					$(sysconfdir)/systemd/network'
 			dist_bashcompletion_DATA="shell-completion/bash/udevadm"
 			networkdir=/lib/systemd/network
 		)
