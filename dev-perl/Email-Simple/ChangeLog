@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Simple
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple/ChangeLog,v 1.73 2014/02/21 19:36:18 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple/ChangeLog,v 1.74 2014/02/21 19:37:30 zlogene Exp $
+
+  21 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> Email-Simple-2.202.ebuild:
+  x86 stable wrt bug #492142
 
   21 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> Email-Simple-2.202.ebuild:
   amd64 stable wrt bug #492142
