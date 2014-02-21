@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.84 2014/02/21 03:05:17 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.85 2014/02/21 03:19:33 zx2c4 Exp $
 
 EAPI=5
 
@@ -173,6 +173,8 @@ multilib_src_configure() {
 		# no deps
 		--enable-efi
 		--enable-ima
+		# we enable compat libs, for now. hopefully we can drop this flag later
+		--enable-compat-libs
 		# optional components/dependencies
 		$(use_enable acl)
 		$(use_enable audit)
@@ -219,6 +221,7 @@ multilib_src_configure() {
 			DBUS_CFLAGS=' '
 			DBUS_LIBS=' '
 
+			--enable-compat-libs
 			--disable-acl
 			--disable-audit
 			--disable-gcrypt
