@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03-r7.ebuild,v 1.10 2014/02/21 18:39:02 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03-r7.ebuild,v 1.11 2014/02/21 18:40:09 zlogene Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~a
 IUSE=""
 
 src_prepare() {
-	cp "${FILESDIR}"/Makefile.PL "${S}"/Makefile.PL
+	cp "${FILESDIR}"/Makefile.PL "${S}"/Makefile.PL || die
 	epatch "${FILESDIR}"/sgmlspl.patch
-	mv sgmlspl{.pl,}
+	mv sgmlspl{.pl,} || die
 }
