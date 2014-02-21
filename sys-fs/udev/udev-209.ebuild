@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-209.ebuild,v 1.1 2014/02/21 12:20:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-209.ebuild,v 1.2 2014/02/21 13:42:13 ssuominen Exp $
 
 EAPI=5
 
@@ -450,7 +450,9 @@ pkg_postinst() {
 	elog "(replace <ifname> with, for example, eth0):"
 	elog "# udevadm test-builtin net_id /sys/class/net/<ifname> 2> /dev/null"
 	elog
-	elog "You can disable the feature with kernel parameter \"net.ifnames=0\""
+	elog "You can use either kernel parameter \"net.ifnames=0\", create empty"
+	elog "file /etc/systemd/network/99-default.link, or symlink it to /dev/null"
+	elog "to disable the feature."
 
 	if has_version sys-apps/biosdevname; then
 		ewarn
