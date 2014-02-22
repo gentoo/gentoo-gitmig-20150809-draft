@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/Graph-0.960.0.ebuild,v 1.3 2014/02/22 13:07:21 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/Graph-0.960.0.ebuild,v 1.4 2014/02/22 13:11:20 zlogene Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Data structure and ops for directed graphs"
 
 SLOT="0"
-KEYWORDS="alpha ~amd64 ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="virtual/perl-Scalar-List-Utils
