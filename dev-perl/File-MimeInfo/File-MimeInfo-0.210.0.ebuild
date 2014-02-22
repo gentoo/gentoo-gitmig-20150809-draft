@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/File-MimeInfo-0.210.0.ebuild,v 1.1 2014/02/22 08:09:42 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/File-MimeInfo-0.210.0.ebuild,v 1.2 2014/02/22 08:11:41 zlogene Exp $
 
 EAPI=5
 
 MODULE_AUTHOR=MICHIELB
-MODULE_VERSION=0.17
+MODULE_VERSION=0.21
 inherit perl-module
 
 DESCRIPTION="Determine file type"
