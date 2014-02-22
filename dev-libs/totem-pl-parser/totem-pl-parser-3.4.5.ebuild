@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-3.4.5.ebuild,v 1.5 2014/02/10 18:56:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-3.4.5.ebuild,v 1.6 2014/02/22 21:20:21 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://projects.gnome.org/totem/ http://developer.gnome.org/totem-pl-p
 
 LICENSE="LGPL-2+"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="archive crypt +introspection +quvi test"
 
 RDEPEND="
