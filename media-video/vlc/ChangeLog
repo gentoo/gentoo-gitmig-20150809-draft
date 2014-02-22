@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.886 2014/02/21 17:25:34 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.887 2014/02/22 13:49:03 tomwij Exp $
+
+  22 Feb 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Clarify USE flag upnp; fixes bug #447252, reported by mgorny.
 
   21 Feb 2014; Tom Wijsman <TomWij@gentoo.org> vlc-2.1.9999.ebuild,
   vlc-9999.ebuild:
