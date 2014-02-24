@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.90 2014/02/24 22:34:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.91 2014/02/24 22:40:20 floppym Exp $
 
 EAPI=5
 
@@ -76,10 +76,6 @@ PDEPEND=">=sys-apps/dbus-1.6.8-r1:0
 # Newer linux-headers needed by ia64, bug #480218
 DEPEND="${COMMON_DEPEND}
 	app-arch/xz-utils:0
-	app-text/docbook-xml-dtd:4.2
-	app-text/docbook-xml-dtd:4.5
-	app-text/docbook-xsl-stylesheets
-	dev-libs/libxslt:0
 	dev-util/gperf
 	>=dev-util/intltool-0.50
 	>=sys-devel/binutils-2.23.1
@@ -92,6 +88,10 @@ DEPEND="${COMMON_DEPEND}
 
 #if LIVE
 DEPEND="${DEPEND}
+	app-text/docbook-xml-dtd:4.2
+	app-text/docbook-xml-dtd:4.5
+	app-text/docbook-xsl-stylesheets
+	dev-libs/libxslt:0
 	dev-libs/gobject-introspection
 	>=dev-libs/libgcrypt-1.4.5:0"
 
