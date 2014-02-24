@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.89 2014/02/24 02:29:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.90 2014/02/24 22:34:44 mgorny Exp $
 
 EAPI=5
 
@@ -63,7 +63,7 @@ RDEPEND="${COMMON_DEPEND}
 		<sys-apps/sysvinit-2.88-r4
 	)
 	!sys-auth/nss-myhostname
-	!<sys-libs/glibc-2.10
+	!<sys-libs/glibc-2.14
 	!sys-fs/udev"
 
 # sys-apps/daemon: the daemon only (+ build-time lib dep for tests)
@@ -226,7 +226,6 @@ multilib_src_configure() {
 			DBUS_CFLAGS=' '
 			DBUS_LIBS=' '
 
-			--enable-compat-libs
 			--disable-acl
 			--disable-audit
 			--disable-gcrypt
