@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dnetstats
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/ChangeLog,v 1.13 2014/02/24 17:36:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/ChangeLog,v 1.14 2014/02/24 17:38:57 pinkbyte Exp $
+
+  24 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> dnetstats-1.2.6-r3.ebuild:
+  Stable on amd64 and x86, wrt bug #499410
 
 *dnetstats-1.2.6-r3 (24 Feb 2014)
 
