@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.4.0.ebuild,v 1.7 2014/02/27 17:53:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.4.0.ebuild,v 1.8 2014/02/27 17:59:48 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 GCONF_DEBUG=no
 GNOME2_LA_PUNT=yes
 PYTHON_COMPAT=( python2_7 )
-VALA_MIN_API_VERSION="0.10"
-VALA_USE_DEPEND="vapigen"
+VALA_MIN_API_VERSION=0.10
+VALA_USE_DEPEND=vapigen
 
 inherit autotools eutils gnome2 python-single-r1 vala
 
@@ -56,6 +56,7 @@ pkg_setup() {
 		--disable-pymod-checks
 		$(use_enable doc gtk-doc)
 		$(use_enable gconf schemas-install)
+		--disable-shave
 		$(use_with vala)
 		--with-html-dir=/usr/share/doc/${PF}/html"
 
