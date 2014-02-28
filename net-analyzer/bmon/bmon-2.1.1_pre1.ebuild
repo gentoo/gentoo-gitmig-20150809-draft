@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-2.1.1_pre1.ebuild,v 1.7 2014/02/28 11:07:26 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-2.1.1_pre1.ebuild,v 1.8 2014/02/28 11:12:41 pinkbyte Exp $
 
 EAPI=5
 
@@ -18,13 +18,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="dbi rrdtool"
 
-DEPEND="
+RDEPEND="
 	>=sys-libs/ncurses-5.3-r2
 	dev-libs/libnl:1.1
 	dbi? ( >=dev-db/libdbi-0.7.2-r1 )
 	rrdtool? ( >=net-analyzer/rrdtool-1.2.6-r1 )
 "
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig
+"
 
 DOCS=( ChangeLog )
 
