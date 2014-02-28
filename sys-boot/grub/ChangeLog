@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.305 2014/02/28 18:07:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.306 2014/02/28 18:10:11 floppym Exp $
+
+  28 Feb 2014; Mike Gilbert <floppym@gentoo.org> -grub-0.97-r10.ebuild,
+  -grub-0.97-r11.ebuild, -grub-1.99-r2.ebuild, -grub-2.00-r4.ebuild,
+  -grub-2.00_p5107.ebuild, -grub-2.02_beta1-r1.ebuild:
+  Remove old ebuilds.
 
   28 Feb 2014; Mike Gilbert <floppym@gentoo.org> files/grub.default-3:
   Add a couple of examples for GRUB_CMDLINE_LINUX.
