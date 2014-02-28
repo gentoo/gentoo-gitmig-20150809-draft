@@ -1,8 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-2.1.1_pre1.ebuild,v 1.6 2013/02/01 15:34:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-2.1.1_pre1.ebuild,v 1.7 2014/02/28 11:07:26 pinkbyte Exp $
 
 EAPI=5
+
 inherit eutils toolchain-funcs
 
 MY_PV="${PV/_pre/-pre}"
@@ -38,6 +39,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.1.0-sysfs-symlink.patch
 	# verbose build
 	epatch "${FILESDIR}"/${PN}-2.1.1-verbose.patch
+	# fix linking with ncurses[tinfo]
+	sed -i "/LIBCURSES=\"-l\$LCURSES\"/s/-l\$LCURSES/$($(tc-getPKG_CONFIG) --libs ncurses)/" configure || die 'sed on configure failed'
+
+	epatch_user
 }
 
 src_configure() {
