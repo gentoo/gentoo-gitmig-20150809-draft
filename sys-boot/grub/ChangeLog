@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.304 2014/02/13 02:29:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.305 2014/02/28 18:07:13 floppym Exp $
+
+  28 Feb 2014; Mike Gilbert <floppym@gentoo.org> files/grub.default-3:
+  Add a couple of examples for GRUB_CMDLINE_LINUX.
 
   13 Feb 2014; Mike Gilbert <floppym@gentoo.org> grub-2.02_beta2.ebuild,
   grub-9999-r1.ebuild:
