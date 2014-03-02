@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.26 2014/02/25 13:01:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.27 2014/03/02 11:44:19 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -35,6 +35,9 @@ fi
 # @ECLASS-VARIABLE: EGIT3_STORE_DIR
 # @DESCRIPTION:
 # Storage directory for git sources.
+#
+# This is intended to be set by user in make.conf. Ebuilds must not set
+# it.
 #
 # EGIT3_STORE_DIR=${DISTDIR}/git3-src
 
