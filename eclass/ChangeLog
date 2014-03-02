@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1154 2014/03/02 11:46:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1155 2014/03/02 11:46:42 mgorny Exp $
+
+  02 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Support using a local git mirror.
 
   02 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
   Fix support for non-master default branch.

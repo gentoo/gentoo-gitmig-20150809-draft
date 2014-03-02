@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.29 2014/03/02 11:46:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.30 2014/03/02 11:46:42 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -40,6 +40,20 @@ fi
 # it.
 #
 # EGIT3_STORE_DIR=${DISTDIR}/git3-src
+
+# @ECLASS-VARIABLE: EGIT_MIRROR_URI
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# 'Top' URI to a local git mirror. If specified, the eclass will try
+# to fetch from the local mirror instead of using the remote repository.
+#
+# The mirror needs to follow EGIT3_STORE_DIR structure. The directory
+# created by eclass can be used for that purpose.
+#
+# Example:
+# @CODE
+# EGIT_MIRROR_URI="git://mirror.lan/"
+# @CODE
 
 # @ECLASS-VARIABLE: EGIT_REPO_URI
 # @REQUIRED
@@ -357,6 +371,14 @@ git-r3_fetch() {
 
 	local -x GIT_DIR
 	_git-r3_set_gitdir "${repos[0]}"
+
+	# prepend the local mirror if applicable
+	if [[ ${EGIT_MIRROR_URI} ]]; then
+		repos=(
+			"${EGIT_MIRROR_URI%/}/${GIT_DIR##*/}"
+			"${repos[@]}"
+		)
+	fi
 
 	# try to fetch from the remote
 	local r success
