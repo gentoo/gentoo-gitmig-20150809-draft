@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.37 2014/03/02 11:50:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.38 2014/03/02 11:50:48 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -37,6 +37,9 @@ fi
 # Type of clone that should be used against the remote repository.
 # This can be either of: 'mirror', 'single', 'shallow'.
 #
+# This is intended to be set by user in make.conf. Ebuilds are supposed
+# to set EGIT_MIN_CLONE_TYPE if necessary instead.
+#
 # The 'mirror' type clones all remote branches and tags with complete
 # history and all notes. EGIT_COMMIT can specify any commit hash.
 # Upstream-removed branches and tags are purged from the local clone
@@ -64,6 +67,9 @@ fi
 # as EGIT_CLONE_TYPE. When user sets a type that's 'lower' (that is,
 # later on the list) than EGIT_MIN_CLONE_TYPE, the eclass uses
 # EGIT_MIN_CLONE_TYPE instead.
+#
+# This variable is intended to be used by ebuilds only. Users are
+# supposed to set EGIT_CLONE_TYPE instead.
 #
 # A common case is to use 'single' whenever the build system requires
 # access to full branch history or the remote (Google Code) does not
