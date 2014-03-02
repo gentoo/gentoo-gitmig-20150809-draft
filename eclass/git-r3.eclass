@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.28 2014/03/02 11:45:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.29 2014/03/02 11:46:15 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -270,6 +270,42 @@ _git-r3_is_local_repo() {
 	[[ ${uri} == file://* || ${uri} == /* ]]
 }
 
+# @FUNCTION: _git-r3_update_head
+# @USAGE: <remote-head-ref>
+# @INTERNAL
+# @DESCRIPTION:
+# Given a ref to which remote HEAD was fetched, try to match
+# a local branch and update symbolic HEAD appropriately.
+_git-r3_update_head()
+{
+	debug-print-function ${FUNCNAME} "$@"
+
+	local head_ref=${1}
+	local head_hash=$(git rev-parse --verify "${1}" || die)
+	local matching_ref
+
+	# TODO: some transports support peeking at symbolic remote refs
+	# find a way to use that rather than guessing
+
+	# (based on guess_remote_head() in git-1.9.0/remote.c)
+	local h ref
+	while read h ref; do
+		# look for matching head
+		if [[ ${h} == ${head_hash} ]]; then
+			# either take the first matching ref, or master if it is there
+			if [[ ! ${matching_ref} || ${ref} == refs/heads/master ]]; then
+				matching_ref=${ref}
+			fi
+		fi
+	done < <(git show-ref --heads || die)
+
+	if [[ ! ${matching_ref} ]]; then
+		die "Unable to find a matching branch for remote HEAD (${head_hash})"
+	fi
+
+	git symbolic-ref HEAD "${matching_ref}" || die
+}
+
 # @FUNCTION: git-r3_fetch
 # @USAGE: [<repo-uri> [<remote-ref> [<local-id>]]]
 # @DESCRIPTION:
@@ -335,11 +371,17 @@ git-r3_fetch() {
 			"refs/tags/*:refs/tags/*"
 			# notes in case something needs them
 			"refs/notes/*:refs/notes/*"
+			# and HEAD in case we need the default branch
+			# (we keep it in refs/git-r3 since otherwise --prune interferes)
+			HEAD:refs/git-r3/HEAD
 		)
 
 		set -- "${fetch_command[@]}"
 		echo "${@}" >&2
 		if "${@}"; then
+			# find remote HEAD and update our HEAD properly
+			_git-r3_update_head refs/git-r3/HEAD
+
 			# now let's see what the user wants from us
 			local full_remote_ref=$(
 				git rev-parse --verify --symbolic-full-name "${remote_ref}"
