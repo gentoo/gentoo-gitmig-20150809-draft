@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.31 2014/03/02 11:47:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.32 2014/03/02 11:47:41 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -35,7 +35,7 @@ fi
 # @ECLASS-VARIABLE: EGIT_CLONE_TYPE
 # @DESCRIPTION:
 # Type of clone that should be used against the remote repository.
-# This can be either of: 'mirror'.
+# This can be either of: 'mirror', 'single'.
 #
 # The 'mirror' type clones all remote branches and tags with complete
 # history and all notes. EGIT_COMMIT can specify any commit hash.
@@ -43,7 +43,14 @@ fi
 # while fetching. This mode is suitable for cloning the local copy
 # for development or hosting a local git mirror. However, clones
 # of repositories with large diverged branches may quickly grow large.
-: ${EGIT_CLONE_TYPE:=mirror}
+#
+# The 'single' type clones only the requested branch or tag. Tags
+# referencing commits throughout the branch history are fetched as well,
+# and all notes. EGIT_COMMIT can safely specify only hashes
+# in the current branch. No purging of old references is done (if you
+# often switch branches, you may need to remove stale branches
+# yourself). This mode is suitable for general use.
+: ${EGIT_CLONE_TYPE:=single}
 
 # @ECLASS-VARIABLE: EGIT3_STORE_DIR
 # @DESCRIPTION:
@@ -122,7 +129,7 @@ _git-r3_env_setup() {
 
 	# check the clone type
 	case "${EGIT_CLONE_TYPE}" in
-		mirror)
+		mirror|single)
 			;;
 		*)
 			die "Invalid EGIT_CLONE_TYPE=${EGIT_CLONE_TYPE}"
@@ -305,14 +312,14 @@ _git-r3_is_local_repo() {
 	[[ ${uri} == file://* || ${uri} == /* ]]
 }
 
-# @FUNCTION: _git-r3_update_head
-# @USAGE: <remote-head-ref>
+# @FUNCTION: _git-r3_find_head
+# @USAGE: <head-ref>
 # @INTERNAL
 # @DESCRIPTION:
-# Given a ref to which remote HEAD was fetched, try to match
-# a local branch and update symbolic HEAD appropriately.
-_git-r3_update_head()
-{
+# Given a ref to which remote HEAD was fetched, try to find
+# a branch matching the commit. Expects 'git show-ref'
+# or 'git ls-remote' output on stdin.
+_git-r3_find_head() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	local head_ref=${1}
@@ -332,13 +339,13 @@ _git-r3_update_head()
 				matching_ref=${ref}
 			fi
 		fi
-	done < <(git show-ref --heads || die)
+	done
 
 	if [[ ! ${matching_ref} ]]; then
 		die "Unable to find a matching branch for remote HEAD (${head_hash})"
 	fi
 
-	git symbolic-ref HEAD "${matching_ref}" || die
+	echo "${matching_ref}"
 }
 
 # @FUNCTION: git-r3_fetch
@@ -406,24 +413,85 @@ git-r3_fetch() {
 	for r in "${repos[@]}"; do
 		einfo "Fetching ${r} ..."
 
-		local fetch_command=(
-			git fetch --prune "${r}"
-			# mirror the remote branches as local branches
-			"refs/heads/*:refs/heads/*"
-			# pull tags explicitly in order to prune them properly
-			"refs/tags/*:refs/tags/*"
-			# notes in case something needs them
-			"refs/notes/*:refs/notes/*"
-			# and HEAD in case we need the default branch
-			# (we keep it in refs/git-r3 since otherwise --prune interferes)
-			HEAD:refs/git-r3/HEAD
-		)
+		local fetch_command=( git fetch "${r}" )
+
+		if [[ ${EGIT_CLONE_TYPE} == mirror ]]; then
+			fetch_command+=(
+				--prune
+				# mirror the remote branches as local branches
+				"refs/heads/*:refs/heads/*"
+				# pull tags explicitly in order to prune them properly
+				"refs/tags/*:refs/tags/*"
+				# notes in case something needs them
+				"refs/notes/*:refs/notes/*"
+				# and HEAD in case we need the default branch
+				# (we keep it in refs/git-r3 since otherwise --prune interferes)
+				HEAD:refs/git-r3/HEAD
+			)
+		else # single
+			local fetch_l fetch_r
+
+			if [[ ${remote_ref} == HEAD ]]; then
+				# HEAD
+				fetch_l=HEAD
+			elif [[ ${remote_ref} == refs/heads/* ]]; then
+				# regular branch
+				fetch_l=${remote_ref}
+			else
+				# tag or commit...
+				# let ls-remote figure it out
+				local tagref=$(git ls-remote "${r}" "refs/tags/${remote_ref}")
+
+				# if it was a tag, ls-remote obtained a hash
+				if [[ ${tagref} ]]; then
+					# tag
+					fetch_l=refs/tags/${remote_ref}
+				else
+					# commit, so we need to fetch the branch
+					# and guess where it takes us...
+					if [[ ${branch} ]]; then
+						fetch_l=${branch}
+					else
+						fetch_l=HEAD
+					fi
+				fi
+			fi
+
+			if [[ ${fetch_l} == HEAD ]]; then
+				fetch_r=refs/git-r3/HEAD
+			else
+				fetch_r=${fetch_l}
+			fi
+
+			fetch_command+=(
+				"${fetch_l}:${fetch_r}"
+			)
+		fi
 
 		set -- "${fetch_command[@]}"
 		echo "${@}" >&2
 		if "${@}"; then
-			# find remote HEAD and update our HEAD properly
-			_git-r3_update_head refs/git-r3/HEAD
+			if [[ ${EGIT_CLONE_TYPE} == mirror ]]; then
+				# find remote HEAD and update our HEAD properly
+				git symbolic-ref HEAD \
+					"$(_git-r3_find_head refs/git-r3/HEAD \
+						< <(git show-ref --heads || die))" \
+						|| die "Unable to update HEAD"
+			else # single
+				if [[ ${fetch_l} == HEAD ]]; then
+					# find out what branch we fetched as HEAD
+					local head_branch=$(_git-r3_find_head \
+						refs/git-r3/HEAD \
+						< <(git ls-remote --heads "${r}" || die))
+
+					# and move it to its regular place
+					git update-ref --no-deref "${head_branch}" \
+						refs/git-r3/HEAD \
+						|| die "Unable to sync HEAD branch ${head_branch}"
+					git symbolic-ref HEAD "${head_branch}" \
+						|| die "Unable to update HEAD"
+				fi
+			fi
 
 			# now let's see what the user wants from us
 			local full_remote_ref=$(
