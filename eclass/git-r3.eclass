@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.32 2014/03/02 11:47:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.33 2014/03/02 11:48:05 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -29,13 +29,13 @@ EXPORT_FUNCTIONS src_unpack
 if [[ ! ${_GIT_R3} ]]; then
 
 if [[ ! ${_INHERITED_BY_GIT_2} ]]; then
-	DEPEND="dev-vcs/git"
+	DEPEND=">=dev-vcs/git-1.8.2.1"
 fi
 
 # @ECLASS-VARIABLE: EGIT_CLONE_TYPE
 # @DESCRIPTION:
 # Type of clone that should be used against the remote repository.
-# This can be either of: 'mirror', 'single'.
+# This can be either of: 'mirror', 'single', 'shallow'.
 #
 # The 'mirror' type clones all remote branches and tags with complete
 # history and all notes. EGIT_COMMIT can specify any commit hash.
@@ -50,6 +50,12 @@ fi
 # in the current branch. No purging of old references is done (if you
 # often switch branches, you may need to remove stale branches
 # yourself). This mode is suitable for general use.
+#
+# The 'shallow' type clones only the newest commit on requested branch
+# or tag. EGIT_COMMIT can only specify tags, and since the history is
+# unavailable calls like 'git describe' will not reference prior tags.
+# No purging of old references is done. This mode is intended mostly for
+# embedded systems with limited disk space.
 : ${EGIT_CLONE_TYPE:=single}
 
 # @ECLASS-VARIABLE: EGIT3_STORE_DIR
@@ -129,7 +135,7 @@ _git-r3_env_setup() {
 
 	# check the clone type
 	case "${EGIT_CLONE_TYPE}" in
-		mirror|single)
+		mirror|single|shallow)
 			;;
 		*)
 			die "Invalid EGIT_CLONE_TYPE=${EGIT_CLONE_TYPE}"
@@ -249,10 +255,6 @@ _git-r3_set_gitdir() {
 	fi
 
 	addwrite "${EGIT3_STORE_DIR}"
-	if [[ -e ${GIT_DIR}/shallow ]]; then
-		einfo "${GIT_DIR} was a shallow clone, recreating..."
-		rm -r "${GIT_DIR}" || die
-	fi
 	if [[ ! -d ${GIT_DIR} ]]; then
 		mkdir "${GIT_DIR}" || die
 		git init --bare || die
@@ -428,7 +430,7 @@ git-r3_fetch() {
 				# (we keep it in refs/git-r3 since otherwise --prune interferes)
 				HEAD:refs/git-r3/HEAD
 			)
-		else # single
+		else # single or shallow
 			local fetch_l fetch_r
 
 			if [[ ${remote_ref} == HEAD ]]; then
@@ -468,6 +470,18 @@ git-r3_fetch() {
 			)
 		fi
 
+		if [[ ${EGIT_CLONE_TYPE} == shallow ]]; then
+			# use '--depth 1' when fetching a new branch
+			if [[ ! $(git rev-parse --quiet --verify "${fetch_r}") ]]
+			then
+				fetch_command+=( --depth 1 )
+			fi
+		else # non-shallow mode
+			if [[ -f ${GIT_DIR}/shallow ]]; then
+				fetch_command+=( --unshallow )
+			fi
+		fi
+
 		set -- "${fetch_command[@]}"
 		echo "${@}" >&2
 		if "${@}"; then
@@ -477,7 +491,7 @@ git-r3_fetch() {
 					"$(_git-r3_find_head refs/git-r3/HEAD \
 						< <(git show-ref --heads || die))" \
 						|| die "Unable to update HEAD"
-			else # single
+			else # single or shallow
 				if [[ ${fetch_l} == HEAD ]]; then
 					# find out what branch we fetched as HEAD
 					local head_branch=$(_git-r3_find_head \
@@ -619,6 +633,10 @@ git-r3_checkout() {
 		cp -R "${orig_repo}"/refs/[htn]* "${GIT_DIR}"/refs/ || die
 
 		# (no need to copy HEAD, we will set it via checkout)
+
+		if [[ -f ${orig_repo}/shallow ]]; then
+			cp "${orig_repo}"/shallow "${GIT_DIR}"/ || die
+		fi
 
 		set -- git checkout --quiet
 		if [[ ${remote_ref} ]]; then
