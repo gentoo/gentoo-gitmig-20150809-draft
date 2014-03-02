@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-210.9999.ebuild,v 1.1 2014/03/02 16:37:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-210.9999.ebuild,v 1.2 2014/03/02 16:42:00 mgorny Exp $
 
 EAPI=5
 
@@ -99,12 +99,14 @@ KEYWORDS=
 #endif
 
 src_prepare() {
+#if LIVE
 	if use doc; then
 		gtkdocize --docdir docs/ || die
 	else
 		echo 'EXTRA_DIST =' > docs/gtk-doc.make
 	fi
 
+#endif
 	# Bug 463376
 	sed -i -e 's/GROUP="dialout"/GROUP="uucp"/' rules/*.rules || die
 
