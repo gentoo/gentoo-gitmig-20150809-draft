@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.34 2014/03/02 11:48:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.35 2014/03/02 11:49:05 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -57,6 +57,19 @@ fi
 # No purging of old references is done. This mode is intended mostly for
 # embedded systems with limited disk space.
 : ${EGIT_CLONE_TYPE:=single}
+
+# @ECLASS-VARIABLE: EGIT_MIN_CLONE_TYPE
+# @DESCRIPTION:
+# 'Minimum' clone type supported by the ebuild. Takes same values
+# as EGIT_CLONE_TYPE. When user sets a type that's 'lower' (that is,
+# later on the list) than EGIT_MIN_CLONE_TYPE, the eclass uses
+# EGIT_MIN_CLONE_TYPE instead.
+#
+# A common case is to use 'single' whenever the build system requires
+# access to full branch history or the remote (Google Code) does not
+# support shallow clones. Please use sparingly, and to fix fatal errors
+# rather than 'non-pretty versions'.
+: ${EGIT_MIN_CLONE_TYPE:=shallow}
 
 # @ECLASS-VARIABLE: EGIT3_STORE_DIR
 # @DESCRIPTION:
@@ -139,6 +152,24 @@ _git-r3_env_setup() {
 			;;
 		*)
 			die "Invalid EGIT_CLONE_TYPE=${EGIT_CLONE_TYPE}"
+	esac
+	case "${EGIT_MIN_CLONE_TYPE}" in
+		shallow)
+			;;
+		single)
+			if [[ ${EGIT_CLONE_TYPE} == shallow ]]; then
+				einfo "git-r3: ebuild needs to be cloned in 'single' mode, adjusting"
+				EGIT_CLONE_TYPE=single
+			fi
+			;;
+		mirror)
+			if [[ ${EGIT_CLONE_TYPE} != mirror ]]; then
+				einfo "git-r3: ebuild needs to be cloned in 'mirror' mode, adjusting"
+				EGIT_CLONE_TYPE=mirror
+			fi
+			;;
+		*)
+			die "Invalid EGIT_MIN_CLONE_TYPE=${EGIT_MIN_CLONE_TYPE}"
 	esac
 
 	local esc_pn livevar
