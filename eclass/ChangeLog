@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1161 2014/03/02 11:49:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1162 2014/03/02 11:50:23 mgorny Exp $
+
+  02 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Do not try shallow clones on local repositories.
 
   02 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
   Force non-forward updates on git refs.

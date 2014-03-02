@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.36 2014/03/02 11:49:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.37 2014/03/02 11:50:23 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -507,9 +507,13 @@ git-r3_fetch() {
 		fi
 
 		if [[ ${EGIT_CLONE_TYPE} == shallow ]]; then
-			# use '--depth 1' when fetching a new branch
-			if [[ ! $(git rev-parse --quiet --verify "${fetch_r}") ]]
+			if _git-r3_is_local_repo; then
+				# '--depth 1' causes sandbox violations with local repos
+				# bug #491260
+				local EGIT_CLONE_TYPE=single
+			elif [[ ! $(git rev-parse --quiet --verify "${fetch_r}") ]]
 			then
+				# use '--depth 1' when fetching a new branch
 				fetch_command+=( --depth 1 )
 			fi
 		else # non-shallow mode
