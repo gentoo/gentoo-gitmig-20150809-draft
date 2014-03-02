@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.27 2014/03/02 11:44:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.28 2014/03/02 11:45:41 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -458,13 +458,14 @@ git-r3_checkout() {
 		# non-empty directories.
 
 		git init --quiet || die
-		set -- git fetch --update-head-ok "${orig_repo}" \
-			"refs/heads/*:refs/heads/*" \
-			"refs/tags/*:refs/tags/*" \
-			"refs/notes/*:refs/notes/*"
+		# setup 'alternates' to avoid copying objects
+		echo "${orig_repo}/objects" > "${GIT_DIR}"/objects/info/alternates || die
+		# now copy the refs
+		# [htn]* safely catches heads, tags, notes without complaining
+		# on non-existing ones, and omits internal 'git-r3' ref
+		cp -R "${orig_repo}"/refs/[htn]* "${GIT_DIR}"/refs/ || die
 
-		echo "${@}" >&2
-		"${@}" || die "git fetch into checkout dir failed"
+		# (no need to copy HEAD, we will set it via checkout)
 
 		set -- git checkout --quiet
 		if [[ ${remote_ref} ]]; then
