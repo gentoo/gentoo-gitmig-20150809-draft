@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-210.ebuild,v 1.4 2014/03/02 16:12:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-210.ebuild,v 1.5 2014/03/02 16:15:46 floppym Exp $
 
 EAPI=5
 
@@ -403,7 +403,7 @@ pkg_postinst() {
 	# between OpenRC & systemd
 	migrate_locale
 
-	# Migrage 80-net-name-slot.rules -> 80-net-setup-link.rules
+	# Migrate 80-net-name-slot.rules -> 80-net-setup-link.rules
 	migrate_net_name_slot
 
 	if [[ ${FAIL} ]]; then
