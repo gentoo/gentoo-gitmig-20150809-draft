@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.35 2014/03/02 11:49:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.36 2014/03/02 11:49:49 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -452,14 +452,14 @@ git-r3_fetch() {
 			fetch_command+=(
 				--prune
 				# mirror the remote branches as local branches
-				"refs/heads/*:refs/heads/*"
+				"+refs/heads/*:refs/heads/*"
 				# pull tags explicitly in order to prune them properly
-				"refs/tags/*:refs/tags/*"
+				"+refs/tags/*:refs/tags/*"
 				# notes in case something needs them
-				"refs/notes/*:refs/notes/*"
+				"+refs/notes/*:refs/notes/*"
 				# and HEAD in case we need the default branch
 				# (we keep it in refs/git-r3 since otherwise --prune interferes)
-				HEAD:refs/git-r3/HEAD
+				"+HEAD:refs/git-r3/HEAD"
 			)
 		else # single or shallow
 			local fetch_l fetch_r
@@ -502,7 +502,7 @@ git-r3_fetch() {
 			fi
 
 			fetch_command+=(
-				"${fetch_l}:${fetch_r}"
+				"+${fetch_l}:${fetch_r}"
 			)
 		fi
 
