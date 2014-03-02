@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.33 2014/03/02 11:48:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.34 2014/03/02 11:48:28 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -449,12 +449,17 @@ git-r3_fetch() {
 					# tag
 					fetch_l=refs/tags/${remote_ref}
 				else
-					# commit, so we need to fetch the branch
-					# and guess where it takes us...
+					# commit
+					# so we need to fetch the branch
 					if [[ ${branch} ]]; then
 						fetch_l=${branch}
 					else
 						fetch_l=HEAD
+					fi
+
+					# fetching by commit in shallow mode? can't do.
+					if [[ ${EGIT_CLONE_TYPE} == shallow ]]; then
+						local EGIT_CLONE_TYPE=single
 					fi
 				fi
 			fi
