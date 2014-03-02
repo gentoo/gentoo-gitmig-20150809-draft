@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.30 2014/03/02 11:46:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.31 2014/03/02 11:47:10 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -31,6 +31,19 @@ if [[ ! ${_GIT_R3} ]]; then
 if [[ ! ${_INHERITED_BY_GIT_2} ]]; then
 	DEPEND="dev-vcs/git"
 fi
+
+# @ECLASS-VARIABLE: EGIT_CLONE_TYPE
+# @DESCRIPTION:
+# Type of clone that should be used against the remote repository.
+# This can be either of: 'mirror'.
+#
+# The 'mirror' type clones all remote branches and tags with complete
+# history and all notes. EGIT_COMMIT can specify any commit hash.
+# Upstream-removed branches and tags are purged from the local clone
+# while fetching. This mode is suitable for cloning the local copy
+# for development or hosting a local git mirror. However, clones
+# of repositories with large diverged branches may quickly grow large.
+: ${EGIT_CLONE_TYPE:=mirror}
 
 # @ECLASS-VARIABLE: EGIT3_STORE_DIR
 # @DESCRIPTION:
@@ -106,6 +119,14 @@ fi
 # setting EGIT_* to defaults or ${PN}_LIVE_* variables.
 _git-r3_env_setup() {
 	debug-print-function ${FUNCNAME} "$@"
+
+	# check the clone type
+	case "${EGIT_CLONE_TYPE}" in
+		mirror)
+			;;
+		*)
+			die "Invalid EGIT_CLONE_TYPE=${EGIT_CLONE_TYPE}"
+	esac
 
 	local esc_pn livevar
 	esc_pn=${PN//[-+]/_}
