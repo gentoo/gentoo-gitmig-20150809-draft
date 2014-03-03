@@ -1,11 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/files/siproxd.rc8,v 1.1 2014/03/03 13:47:10 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/files/siproxd.rc8,v 1.2 2014/03/03 13:51:58 polynomial-c Exp $
 
 config_file="/etc/siproxd.conf"
 
-pidfile="/run/siproxd/siproxd.pid"
+pidfile="/var/run/siproxd/siproxd.pid"
 command="/usr/sbin/siproxd"
 command_args="-p ${pidfile} -c ${config_file}"
 
