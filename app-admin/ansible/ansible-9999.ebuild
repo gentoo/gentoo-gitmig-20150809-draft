@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-9999.ebuild,v 1.14 2014/03/03 11:42:24 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-9999.ebuild,v 1.15 2014/03/03 12:18:57 pinkbyte Exp $
 
 EAPI="5"
 
@@ -21,13 +21,13 @@ SLOT="0"
 IUSE="test"
 
 DEPEND="test? (
-		dev-python/nose
+		dev-python/nose[${PYTHON_USEDEP}]
 		dev-vcs/git
 	)"
 RDEPEND="
-	dev-python/jinja
-	dev-python/pyyaml
-	dev-python/paramiko
+	dev-python/jinja[${PYTHON_USEDEP}]
+	dev-python/pyyaml[${PYTHON_USEDEP}]
+	dev-python/paramiko[${PYTHON_USEDEP}]
 	net-misc/sshpass
 	virtual/ssh
 "
