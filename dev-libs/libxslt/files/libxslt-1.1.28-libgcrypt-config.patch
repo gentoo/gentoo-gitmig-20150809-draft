@@ -1,8 +1,13 @@
-From 02dcd7d89b231af6ebe7704690de6ae7f8b31a84 Mon Sep 17 00:00:00 2001
+From 4eeed7de3fa90e27658c48cb06f034da43b4f057 Mon Sep 17 00:00:00 2001
 From: Alexandre Rostovtsev <tetromino@gentoo.org>
 Date: Tue, 4 Mar 2014 00:10:37 -0500
 Subject: [PATCH] configure: use AC_PATH_TOOL to find libgcrypt-config
 
+Since libgcrypt-config is used to find host system libraries, we should
+be using AC_PATH_TOOL, not AC_PATH_PROG, for proper cross-compiling and
+multilib support.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=725635
 ---
  configure.in | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
