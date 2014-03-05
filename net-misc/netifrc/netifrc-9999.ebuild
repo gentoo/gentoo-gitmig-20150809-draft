@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-9999.ebuild,v 1.6 2014/01/18 09:10:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-9999.ebuild,v 1.7 2014/03/05 18:46:39 robbat2 Exp $
 
 EAPI=5
 
@@ -21,14 +21,11 @@ LICENSE="BSD-2"
 SLOT="0"
 IUSE=""
 
-DEPEND=""
+DEPEND="kernel_linux? ( virtual/pkgconfig )"
 RDEPEND=">=sys-apps/openrc-0.12
 	!<sys-apps/openrc-0.12"
 
 src_prepare() {
-	sed -i 's:0444:0644:' mk/sys.mk || die
-	sed -i "/^DIR/s:/${PN}:/${PF}:" doc/Makefile || die #241342
-
 	if [[ ${PV} == "9999" ]] ; then
 		local ver="git-${EGIT_VERSION:0:6}"
 		sed -i "/^GITVER[[:space:]]*=/s:=.*:=${ver}:" mk/git.mk || die
@@ -42,7 +39,7 @@ src_prepare() {
 
 src_compile() {
 	MAKE_ARGS="${MAKE_ARGS}
-		LIBEXECDIR=${EPREFIX}/lib/${PN}"
+		LIBEXECDIR=${EPREFIX}/lib/${PN} PF=${PF}"
 
 	use prefix && MAKE_ARGS="${MAKE_ARGS} MKPREFIX=yes PREFIX=${EPREFIX}"
 
