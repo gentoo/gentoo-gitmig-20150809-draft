@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.10.1-r1.ebuild,v 1.1 2014/03/05 11:50:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.10.1-r1.ebuild,v 1.2 2014/03/05 11:52:51 ssuominen Exp $
 
 EAPI=5
 inherit xfconf
@@ -33,7 +33,7 @@ RDEPEND="${COMMON_DEPEND}
 		gnome-extra/gnome-screensaver
 		>=x11-misc/xlockmore-5.43
 		x11-misc/slock
-		x11-misc/alock
+		x11-misc/alock[pam]
 		) )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
