@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/openconnect-5.99.ebuild,v 1.1 2014/03/06 00:21:08 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/openconnect-5.99.ebuild,v 1.2 2014/03/06 00:23:40 hasufell Exp $
 
 EAPI="5"
 
@@ -20,10 +20,7 @@ LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="doc +gnutls java libproxy nls static-libs"
-ILINGUAS="ar as ast bg bg_BG bn bn_IN bs ca ca@valencia cs da de el en_GB en_US eo es es_CR
-	es_MX et eu fa fi fr gd gl gu he hi hi_IN hu id it ja km kn ko ku lo lt lv ml mr
-	ms nb nl nn no or pa pl pt pt_BR pt_PT ro ru sk sl sq sr sr@latin sv ta te
-	tg th tl tr ug uk ur_PK vi vi_VN wa zh_CN zh_HK zh_TW"
+ILINGUAS="ar cs de el en_GB en_US es fi fr gl id lt nl pa pl pt pt_BR sk sl ug uk zh_CN zh_TW"
 for lang in $ILINGUAS; do
 	IUSE="${IUSE} linguas_${lang}"
 done
