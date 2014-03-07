@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/ganeti
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.82 2014/03/07 03:50:02 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.83 2014/03/07 03:51:14 chutzpah Exp $
+
+  07 Mar 2014; Patrick McLean <chutzpah@gentoo.org> ganeti-2.10.1.ebuild:
+  Fix minor typo
 
   07 Mar 2014; Patrick McLean <chutzpah@gentoo.org> -ganeti-2.10.0.ebuild,
   ganeti-2.10.1.ebuild, +files/ganeti-2.10-rundir.patch:

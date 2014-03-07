@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.10.1.ebuild,v 1.2 2014/03/07 03:50:02 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.10.1.ebuild,v 1.3 2014/03/07 03:51:14 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_{6,7})
@@ -128,7 +128,7 @@ src_configure () {
 		--with-ssh-initscript=/etc/init.d/sshd \
 		--with-export-dir=/var/lib/ganeti-storage/export \
 		--with-os-search-path=/usr/share/ganeti/os \
-		$(use_enable syslog) 
+		$(use_enable syslog) \
 		$(usex kvm '--with-kvm-path=' '' '/usr/bin/qemu-kvm' '') \
 		$(usex haskell-daemons "--enable-confd=haskell" '' '' '')
 }
