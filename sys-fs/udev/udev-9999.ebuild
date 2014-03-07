@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.282 2014/03/07 11:09:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.283 2014/03/07 11:11:01 ssuominen Exp $
 
 EAPI=5
 
@@ -135,7 +135,7 @@ src_prepare() {
 		eval export INTLTOOL_{EXTRACT,MERGE,UPDATE}=/bin/true
 		eval export {MSG{FMT,MERGE},XGETTEXT}=/bin/true
 	fi
-	
+
 	# compile with older versions of gcc #451110
 	version_is_at_least 4.6 $(gcc-version) || \
 		sed -i 's:static_assert:alsdjflkasjdfa:' src/shared/macro.h
@@ -143,8 +143,8 @@ src_prepare() {
 	# change rules back to group uucp instead of dialout for now wrt #454556
 	sed -i -e 's/GROUP="dialout"/GROUP="uucp"/' rules/*.rules || die
 
-    # apply user patches
-    epatch_user
+	# apply user patches
+	epatch_user
 
 	if [[ ! -e configure ]]; then
 		if use doc; then
