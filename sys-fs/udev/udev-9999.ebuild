@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.283 2014/03/07 11:11:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.284 2014/03/07 11:12:17 ssuominen Exp $
 
 EAPI=5
 
@@ -344,7 +344,7 @@ multilib_src_install() {
 			doman "${S}"/man/{systemd.link.5,udev.7,udevadm.8,systemd-udevd.service.8}
 		fi
 
-		# Use of --relative doesn't work with $(DESTDIR). The broken commit is:
+		# Use of --relative doesn't work with $(DESTDIR) and --with-rootlibdir=/lib. The broken commit is:
 		# http://cgit.freedesktop.org/systemd/systemd/commit/Makefile.am?id=e2438b7a321de8050f5db6793599a1668c91ccf5
 		ln -s -f "${D}"/usr/$(get_libdir)/libudev.so ../../$(readlink "${D}"/$(get_libdir)/libudev.so.1)
 	else
