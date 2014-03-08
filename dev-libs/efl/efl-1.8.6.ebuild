@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.8.5.ebuild,v 1.4 2014/03/08 16:49:26 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.8.6.ebuild,v 1.1 2014/03/08 16:49:26 tommy Exp $
 
 EAPI="5"
 
@@ -27,7 +27,7 @@ REQUIRED_USE="
 	X?		( !xcb )
 	pulseaudio?	( audio )
 	opengl?		( || ( X xcb sdl wayland ) )
-	gles?		( || ( X xcb sdl wayland ) )
+	gles?		( || ( X xcb wayland ) )
 	gles?		( !sdl )
 	gles?		( egl )
 	xcb?		( pixman )
