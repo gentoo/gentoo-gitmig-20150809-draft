@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.18 2014/03/09 09:54:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.19 2014/03/09 09:56:53 aballier Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ else
 	S="${WORKDIR}/${MY_P}"
 fi
 
-SONAME="138"
+SONAME="142"
 SLOT="0/${SONAME}"
 
 LICENSE="GPL-2"
