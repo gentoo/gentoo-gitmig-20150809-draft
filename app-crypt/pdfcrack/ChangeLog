@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pdfcrack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pdfcrack/ChangeLog,v 1.6 2014/03/09 02:39:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pdfcrack/ChangeLog,v 1.7 2014/03/09 02:40:40 radhermit Exp $
+
+  09 Mar 2014; Tim Harder <radhermit@gentoo.org> -pdfcrack-0.10.ebuild:
+  Remove old.
 
 *pdfcrack-0.13 (09 Mar 2014)
 
