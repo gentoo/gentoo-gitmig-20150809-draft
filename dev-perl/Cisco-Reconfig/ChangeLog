@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Cisco-Reconfig
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cisco-Reconfig/ChangeLog,v 1.16 2014/03/09 03:26:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cisco-Reconfig/ChangeLog,v 1.17 2014/03/09 03:27:31 radhermit Exp $
+
+  09 Mar 2014; Tim Harder <radhermit@gentoo.org>
+  -Cisco-Reconfig-0.900.0.ebuild:
+  Remove old.
 
 *Cisco-Reconfig-0.911.0 (09 Mar 2014)
 
