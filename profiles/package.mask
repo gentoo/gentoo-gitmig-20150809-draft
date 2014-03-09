@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15459 2014/03/09 12:37:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15460 2014/03/09 12:58:21 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -687,11 +687,6 @@ dev-java/sun-jce-bin
 # Patrick Lauer <patrick@gentoo.org> (21 May 2013)
 # broken dependencies -> uninstallable #470712
 app-portage/g-ctan
-
-# Alexis Ballier <aballier@gentoo.org> (08 May 2013)
-# Breaks it sole rev. dep: vlc
-# Keep it masked until fixed.
->=media-libs/libdvbpsi-1.1.0
 
 # Markos Chandras <hwoarang@gentoo.org> (28 Apr 2013)
 # Early release of pcmanfm Qt4 port
