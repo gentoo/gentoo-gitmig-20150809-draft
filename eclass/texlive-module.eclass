@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.68 2014/03/09 18:54:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.69 2014/03/09 18:56:00 ulm Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -356,7 +356,7 @@ texlive-module_src_install() {
 	if [ -n "${TEXLIVE_MODULE_BINLINKS}" ] ; then
 		for i in ${TEXLIVE_MODULE_BINLINKS} ; do
 			[ -f "${ED}/usr/bin/${i%:*}" ] || die "Trying to install an invalid	BINLINK. This should not happen. Please file a bug."
-			dosym ${i%:*} /usr/bin/${i#*:} 
+			dosym ${i%:*} /usr/bin/${i#*:}
 		done
 	fi
 
