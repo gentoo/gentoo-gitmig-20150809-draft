@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.14_p6.ebuild,v 1.1 2014/01/24 23:55:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.14_p6.ebuild,v 1.2 2014/03/09 06:52:57 vapier Exp $
 
 EAPI="4"
 
@@ -64,6 +64,10 @@ src_prepare() {
 	sed -i \
 		-e "s:@INSTALL@:${S}/_install:" \
 		*/Makefile.in
+
+	sed -i \
+		-e 's:CPPFunction:rl_completion_func_t:' \
+		c3270-*/c3270.c || die #503364
 }
 
 src_configure() {
