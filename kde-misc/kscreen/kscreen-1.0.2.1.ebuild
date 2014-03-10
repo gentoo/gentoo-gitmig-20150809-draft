@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/kscreen-1.0.2.1.ebuild,v 1.3 2014/03/10 13:04:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/kscreen-1.0.2.1.ebuild,v 1.4 2014/03/10 13:05:39 johu Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.xz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 DEPEND="
