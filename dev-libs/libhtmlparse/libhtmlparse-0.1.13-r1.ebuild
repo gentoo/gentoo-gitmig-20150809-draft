@@ -1,8 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhtmlparse/libhtmlparse-0.1.13-r1.ebuild,v 1.2 2014/03/10 10:47:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhtmlparse/libhtmlparse-0.1.13-r1.ebuild,v 1.3 2014/03/10 10:50:41 ssuominen Exp $
 
 EAPI=5
+inherit eutils
 
 DESCRIPTION="HTML parsing library. It takes HTML tags, text, and calls callbacks for each type of token"
 HOMEPAGE="http://msalem.translator.cx/libhtmlparse.html"
@@ -10,7 +11,7 @@ SRC_URI="http://msalem.translator.cx/dist/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="static-libs"
 
 DOCS=( AUTHORS BUGS INSTALL ChangeLog NEWS README TODO )
@@ -26,4 +27,9 @@ src_unpack() {
 src_configure() {
 	econf \
 		$(use_enable static-libs static)
+}
+
+src_install() {
+	default
+	prune_libtool_files
 }
