@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-9999.ebuild,v 1.11 2014/03/10 19:10:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.4.193.ebuild,v 1.1 2014/03/10 19:10:16 radhermit Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -82,6 +82,8 @@ src_prepare() {
 			epatch "${WORKDIR}"/${VIM_ORG_PATCHES%.bz2}
 		fi
 	fi
+
+	epatch "${FILESDIR}"/${P}-fix-tests.patch
 
 	# Fixup a script to use awk instead of nawk
 	sed -i '1s|.*|#!'"${EPREFIX}"'/usr/bin/awk -f|' "${S}"/runtime/tools/mve.awk \
