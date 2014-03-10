@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-sensors-applet/mate-sensors-applet-1.6.1.ebuild,v 1.3 2014/03/10 22:31:35 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-sensors-applet/mate-sensors-applet-1.6.1.ebuild,v 1.4 2014/03/10 22:36:29 tomwij Exp $
 
 EAPI="5"
 
@@ -61,7 +61,6 @@ src_configure() {
 	fi
 
 	gnome2_src_configure \
-		--disable-scrollkeeper \
 		--disable-static \
 		$(use_enable libnotify) \
 		$(use_with lm_sensors libsensors) \
