@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/qt-gstreamer-0.10.3.ebuild,v 1.2 2014/02/24 01:30:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/qt-gstreamer-0.10.3.ebuild,v 1.3 2014/03/10 13:18:04 johu Exp $
 
 EAPI=5
 
@@ -39,6 +39,9 @@ DEPEND="
 	${RDEPEND}
 	test? ( >=dev-qt/qttest-${QT_MINIMAL}:4 )
 "
+
+# bug 497880
+RESTRICT="test"
 
 src_configure() {
 	local mycmakeargs=(
