@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.3.ebuild,v 1.1 2014/02/18 15:01:58 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.3.ebuild,v 1.2 2014/03/11 20:41:04 eras Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="caps ipv6 pam ldap samba sasl kerberos nis radius ssl snmp selinux logrota
 	ecap icap-client ssl-crtd \
 	mysql postgres sqlite \
 	qos tproxy \
-	+htcp +wccp +wccp2 \
+	+htcp +wccp +wccpv2 \
 	pf-transparent ipf-transparent kqueue \
 	elibc_uclibc kernel_linux"
 
@@ -190,7 +190,7 @@ src_configure() {
 		$(use_enable ecap) \
 		$(use_enable htcp) \
 		$(use_enable wccp) \
-		$(use_enable wccp2) \
+		$(use_enable wccpv2) \
 		${transparent}
 }
 
