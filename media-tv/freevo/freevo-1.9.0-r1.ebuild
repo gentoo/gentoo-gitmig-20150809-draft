@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0-r1.ebuild,v 1.1 2014/03/12 18:17:09 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0-r1.ebuild,v 1.2 2014/03/12 18:27:33 hasufell Exp $
 
 EAPI=5
 
@@ -53,7 +53,7 @@ RDEPEND="dev-python/beautifulsoup:python-2[${PYTHON_USEDEP}]
 	xine? ( media-video/xine-ui )
 	vorbis? ( media-sound/vorbis-tools )"
 
-PATCHES=( "${FILESDIR}"/${P}-PIL.patch )
+PATCHES=( "${FILESDIR}"/${P}-{PIL,distutils-r1}.patch )
 
 pkg_setup() {
 	if ! { use X || use directfb || use fbcon || use matrox ; } ; then
@@ -65,6 +65,14 @@ pkg_setup() {
 	fi
 
 	python-single-r1_pkg_setup
+}
+
+src_prepare() {
+	distutils-r1_src_prepare
+
+	sed -i \
+		-e "s/@EPYTHON@/${EPYTHON}/" \
+		freevo || die
 }
 
 src_install() {
