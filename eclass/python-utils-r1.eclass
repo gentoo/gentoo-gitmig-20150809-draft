@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.50 2014/03/12 09:23:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.51 2014/03/12 09:29:39 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -71,6 +71,11 @@ _python_impl_supported() {
 			;;
 		pypy1_[89]|python2_5|python3_1)
 			return 1
+			;;
+		pypy)
+			if [[ ${EAPI:-0} == [01234] ]]; then
+				die "PyPy is supported in EAPI 5 and newer only."
+			fi
 			;;
 		*)
 			die "Invalid implementation in PYTHON_COMPAT: ${impl}"
@@ -366,7 +371,7 @@ python_export() {
 					pypy-c2.0)
 						PYTHON_PKG_DEP='>=virtual/pypy-2.0.2:2.0';;
 					pypy)
-						PYTHON_PKG_DEP='virtual/pypy:0';;
+						PYTHON_PKG_DEP='virtual/pypy:0=';;
 					jython2.5)
 						PYTHON_PKG_DEP='>=dev-java/jython-2.5.3-r2:2.5';;
 					jython2.7)
