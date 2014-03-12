@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.49 2014/03/12 09:06:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.50 2014/03/12 09:23:39 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -41,7 +41,7 @@ inherit eutils multilib toolchain-funcs
 # All supported Python implementations, most preferred last.
 _PYTHON_ALL_IMPLS=(
 	jython2_5 jython2_7
-	pypy2_0
+	pypy2_0 pypy
 	python3_2 python3_3 python3_4
 	python2_6 python2_7
 )
@@ -230,6 +230,10 @@ python_export() {
 			impl=${1/_/.}
 			shift
 			;;
+		pypy)
+			impl=${1}
+			shift
+			;;
 		pypy-c*)
 			impl=${1}
 			shift
@@ -361,6 +365,8 @@ python_export() {
 						PYTHON_PKG_DEP="dev-lang/python:${impl#python}";;
 					pypy-c2.0)
 						PYTHON_PKG_DEP='>=virtual/pypy-2.0.2:2.0';;
+					pypy)
+						PYTHON_PKG_DEP='virtual/pypy:0';;
 					jython2.5)
 						PYTHON_PKG_DEP='>=dev-java/jython-2.5.3-r2:2.5';;
 					jython2.7)
