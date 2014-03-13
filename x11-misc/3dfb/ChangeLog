@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/3dfb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfb/ChangeLog,v 1.12 2014/03/13 09:01:46 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfb/ChangeLog,v 1.13 2014/03/13 09:04:35 pinkbyte Exp $
+
+  13 Mar 2014; Sergey Popov <pinkbyte@gentoo.org> -3dfb-0.6.1.ebuild,
+  3dfb-0.6.1-r1.ebuild:
+  Transfer stable keywords from previous revision and drop it, cause it's
+  broken. First-time stabilization on amd64
 
 *3dfb-0.6.1-r1 (13 Mar 2014)
 
