@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.137 2014/03/13 14:29:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.138 2014/03/13 14:31:20 ssuominen Exp $
+
+  13 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -pambase-20120417-r1.ebuild, -pambase-20120417-r2.ebuild,
+  -pambase-20120417.ebuild:
+  old
 
 *pambase-20140313 (13 Mar 2014)
 
