@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-screensaver/mate-screensaver-1.6.1-r1.ebuild,v 1.1 2014/03/13 17:12:56 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-screensaver/mate-screensaver-1.6.1-r2.ebuild,v 1.1 2014/03/13 17:15:33 tomwij Exp $
 
 EAPI="5"
 
@@ -23,12 +23,10 @@ IUSE="X consolekit kernel_linux libnotify opengl pam systemd"
 RDEPEND="
 	>=dev-libs/dbus-glib-0.71:0
 	>=dev-libs/glib-2.15:2
-	gnome-base/gnome-keyring:0
 	>=mate-base/libmatekbd-1.6:0
 	>=mate-base/mate-desktop-1.6:0
 	>=mate-base/mate-menus-1.6:0
 	>=sys-apps/dbus-0.30:0
-	sys-libs/pam:0
 	>=x11-libs/gdk-pixbuf-2.14:2
 	>=x11-libs/gtk+-2.11.5:2
 	>=x11-libs/libX11-1:0
@@ -43,7 +41,7 @@ RDEPEND="
 	virtual/libintl:0
 	libnotify? ( >=x11-libs/libnotify-0.7:0 )
 	opengl? ( virtual/opengl:0 )
-	pam? ( virtual/pam:0 )
+	pam? ( gnome-base/gnome-keyring:0 virtual/pam:0 )
 	!pam? ( kernel_linux? ( sys-apps/shadow:0 ) )
 	!!<gnome-extra/gnome-screensaver-3:0"
 
