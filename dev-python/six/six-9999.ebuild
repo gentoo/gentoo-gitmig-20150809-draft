@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/six/six-9999.ebuild,v 1.7 2013/10/21 12:03:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/six/six-9999.ebuild,v 1.8 2014/03/15 06:30:42 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
@@ -30,23 +30,15 @@ SRC_URI=
 KEYWORDS=
 #endif
 
-python_prepare_all() {
-	# disable tests that require tkinter
-	sed -i -e "s/test_move_items/_&/" test_six.py || die
-
-	distutils-r1_python_prepare_all
-}
-
 python_compile_all() {
 	use doc && emake -C documentation html
 }
 
 python_test() {
-	py.test || die
+	py.test -v || die "Testing failed with ${EPYTHON}"
 }
 
 python_install_all() {
 	use doc && local HTML_DOCS=( documentation/_build/html/ )
-
 	distutils-r1_python_install_all
 }
