@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15478 2014/03/15 20:02:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15479 2014/03/15 23:40:09 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -376,13 +376,6 @@ net-analyzer/ethstatus
 # Mask further ruby18-only packages
 # Removal in 30 days
 www-servers/mongrel_cluster
-
-# Manuel Rüger <mrueg@gentoo.org> (13 Feb 2014)
-# Mask further ruby18-only packages
-# Acked by a3li.
-# Removal in 30 days
-dev-ruby/ruby-bdb
-=net-irc/rbot-0.9.15
 
 # Bernard Cafarelli <voyageur@gentoo.org> (13 Feb 2014)
 # Dead original upstream (last release in 2003)
