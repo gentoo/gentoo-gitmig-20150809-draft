@@ -1,8 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/xdg-user-dirs-0.15.ebuild,v 1.11 2014/03/15 19:37:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/xdg-user-dirs-0.15.ebuild,v 1.12 2014/03/15 19:47:38 ssuominen Exp $
 
 EAPI=5
+inherit autotools eutils
 
 DESCRIPTION="A tool to help manage 'well known' user directories"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/xdg-user-dirs"
@@ -22,3 +23,9 @@ DEPEND="app-text/docbook-xml-dtd:4.3
 PDEPEND="gtk? ( x11-misc/xdg-user-dirs-gtk )"
 
 DOCS=( AUTHORS ChangeLog NEWS )
+
+src_prepare() {
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die #467032
+	epatch "${FILESDIR}"/${P}-libiconv.patch
+	eautoreconf # for the above patch
+}
