@@ -1,6 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.189 2014/03/03 18:36:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.190 2014/03/16 08:04:46 patrick Exp $
+
+# on the way out
+ruby_targets_ruby18
 
 # masking here and unmasking in default/linux/
 kmod
