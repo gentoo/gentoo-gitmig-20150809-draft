@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/testscenarios
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testscenarios/ChangeLog,v 1.6 2014/03/17 03:34:29 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testscenarios/ChangeLog,v 1.7 2014/03/17 03:39:59 prometheanfire Exp $
+
+  17 Mar 2014; Matthew Thode <prometheanfire@gentoo.org>
+  testscenarios-0.4-r4.ebuild:
+  removing unused iuse
 
 *testscenarios-0.4-r4 (17 Mar 2014)
 
