@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3-r1.ebuild,v 1.2 2014/03/19 03:32:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3-r1.ebuild,v 1.3 2014/03/19 03:37:33 vapier Exp $
 
 EAPI="4"
 
@@ -83,8 +83,6 @@ src_prepare() {
 	sed -i -r '/^(HS|RL)USER/s:=.*:=:' doc/Makefile.in || die
 	touch -r . doc/*
 
-	epatch "${FILESDIR}"/${PN}-4.2-execute-job-control.patch #383237
-	epatch "${FILESDIR}"/${PN}-4.2-no-readline.patch
 	epatch "${FILESDIR}"/${P}-debug-trap.patch
 	epatch "${FILESDIR}"/${P}-jobs-exit.patch
 	epatch "${FILESDIR}"/${P}-parse-ansi-expand.patch
