@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdirstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/ChangeLog,v 1.29 2014/03/18 17:09:07 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/ChangeLog,v 1.30 2014/03/19 13:39:31 ago Exp $
+
+  19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> kdirstat-2.7.5.ebuild:
+  Stable for amd64, wrt bug #504994
 
 *kdirstat-2.7.5 (18 Mar 2014)
 
