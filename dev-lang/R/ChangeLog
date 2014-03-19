@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.232 2014/03/19 16:38:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.233 2014/03/19 16:41:47 bicatali Exp $
+
+  19 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> R-3.0.3.ebuild:
+  Re-added the autoconf since we modify the configure.ac
 
 *R-3.0.3 (19 Mar 2014)
 

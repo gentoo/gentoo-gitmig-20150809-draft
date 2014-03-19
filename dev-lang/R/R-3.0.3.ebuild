@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.0.3.ebuild,v 1.1 2014/03/19 16:38:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.0.3.ebuild,v 1.2 2014/03/19 16:41:47 bicatali Exp $
 
 EAPI=5
 
-inherit bash-completion-r1 eutils flag-o-matic fortran-2 multilib versionator toolchain-funcs
+inherit bash-completion-r1 autotools eutils flag-o-matic fortran-2 multilib versionator toolchain-funcs
 
 BCP=${PN}-20130129.bash_completion
 DESCRIPTION="Language and environment for statistical computing and graphics"
@@ -120,6 +120,8 @@ src_prepare() {
 			append-ldflags -Wl,-rpath="${EROOT%/}/usr/$(get_libdir)/R/lib"
 		fi
 	fi
+	AT_M4DIR=m4 eaclocal
+	eautoconf
 }
 
 src_configure() {
