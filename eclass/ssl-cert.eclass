@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.22 2014/03/20 19:30:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.23 2014/03/20 19:32:09 vapier Exp $
 
 # @ECLASS: ssl-cert.eclass
 # @MAINTAINER:
@@ -192,9 +192,9 @@ install_cert() {
 	fi
 
 	case ${EBUILD_PHASE} in
-		unpack|compile|test|install)
-			eerror "install_cert cannot be called in ${EBUILD_PHASE}"
-			return 1 ;;
+	unpack|prepare|configure|compile|test|install)
+		die "install_cert cannot be called in ${EBUILD_PHASE}"
+		;;
 	esac
 
 	# Generate a CA environment #164601
