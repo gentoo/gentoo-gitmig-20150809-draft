@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.21 2014/03/20 19:30:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.22 2014/03/20 19:30:56 vapier Exp $
 
 # @ECLASS: ssl-cert.eclass
 # @MAINTAINER:
@@ -173,13 +173,6 @@ gen_pem() {
 	eend $?
 
 	return $?
-}
-
-# Removed due to bug 174759
-docert() {
-	eerror "Function \"docert\" has been removed for security reasons."
-	eerror "\"install_cert\" should be used instead. See bug 174759."
-	die
 }
 
 # @FUNCTION: install_cert
