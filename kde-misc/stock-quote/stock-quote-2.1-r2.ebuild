@@ -1,8 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/stock-quote/stock-quote-2.1-r1.ebuild,v 1.5 2014/03/21 19:12:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/stock-quote/stock-quote-2.1-r2.ebuild,v 1.1 2014/03/21 19:12:04 johu Exp $
 
-EAPI=4
+EAPI=5
+
 inherit kde4-base
 
 MY_P=plasma_${PN/-/_}-${PV}
@@ -13,8 +14,8 @@ SRC_URI="http://www.kde-look.org/CONTENT/content-files/90695-${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="amd64 x86"
-IUSE=""
+KEYWORDS="~amd64 ~x86"
+IUSE="debug"
 
 RDEPEND="
 	$(add_kdebase_dep plasma-workspace)
