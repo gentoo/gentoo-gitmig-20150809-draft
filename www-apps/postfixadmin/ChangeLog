@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/postfixadmin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.33 2014/03/22 20:16:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.34 2014/03/22 20:17:39 ago Exp $
+
+  22 Mar 2014; Agostino Sarubbo <ago@gentoo.org> postfixadmin-2.3.7.ebuild:
+  Stable for x86, wrt bug #502270
 
   22 Mar 2014; Agostino Sarubbo <ago@gentoo.org> postfixadmin-2.3.7.ebuild:
   Stable for amd64, wrt bug #502270
