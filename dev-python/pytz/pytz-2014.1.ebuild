@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/pytz-2014.1.ebuild,v 1.1 2014/03/15 10:50:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/pytz-2014.1.ebuild,v 1.2 2014/03/22 21:16:03 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
@@ -26,6 +26,8 @@ PATCHES=(
 	"${FILESDIR}/${PN}-2009j-zoneinfo.patch"
 	# ...and do not install a copy of it.
 	"${FILESDIR}/${PN}-2009h-zoneinfo-noinstall.patch"
+
+	"${FILESDIR}/${PN}-2014.1-setup.py.patch"
 )
 
 python_test() {
