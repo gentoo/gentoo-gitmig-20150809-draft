@@ -1,12 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.12 2014/03/20 03:52:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.13 2014/03/23 01:35:50 williamh Exp $
 
 EAPI=5
 
 if [[ ${PV} == "9999" ]]; then
-	EGIT_REPO_URI="git://roy.marples.name/${PN}.git"
-	inherit git-r3
+	FOSSIL_URI="http://roy.marples.name/projects/dhcpcd"
 else
 	MY_P="${P/_alpha/-alpha}"
 	MY_P="${MY_P/_beta/-beta}"
@@ -27,6 +26,29 @@ IUSE="elibc_glibc ipv6 kernel_linux +udev"
 COMMON_DEPEND="udev? ( virtual/udev )"
 DEPEND="${COMMON_DEPEND}"
 RDEPEND="${COMMON_DEPEND}"
+
+if [[ ${PV} == "9999" ]]; then
+	DEPEND+=" dev-vcs/fossil"
+
+	src_unpack()
+	{
+		local distdir=${PORTAGE_ACTUAL_DISTDIR:-${DISTDIR}}
+		local repo=${distdir}/fossil/${PN}.fossil
+
+		addwrite "${distdir}"
+
+		if [[ -e "${repo}" ]]; then
+			fossil pull "${FOSSIL_URI}" -R "${repo}" || die
+		else
+			mkdir -p "${distdir}/fossil" || die
+			fossil clone "${FOSSIL_URI}" "${repo}" || die
+		fi
+
+		mkdir -p "${S}" || die
+		cd "${S}" || die
+		fossil open "${repo}" || die
+	}
+fi
 
 src_prepare()
 {
