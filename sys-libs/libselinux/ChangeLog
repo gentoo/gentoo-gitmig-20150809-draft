@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.113 2014/03/08 22:11:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.114 2014/03/23 19:19:17 swift Exp $
+
+*libselinux-2.2.2-r4 (23 Mar 2014)
+
+  23 Mar 2014; Sven Vermeulen <swift@gentoo.org> +libselinux-2.2.2-r4.ebuild:
+  Fix bug #504832 - audit2why.so failures due to dynamic linking
 
 *libselinux-2.2.2-r3 (08 Mar 2014)
 
