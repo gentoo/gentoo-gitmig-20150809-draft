@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/wxhaskell
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.36 2014/03/23 15:06:55 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.37 2014/03/23 15:14:36 gienah Exp $
+
+  23 Mar 2014; Mark Wright <gienah@gentoo.org> -wxhaskell-0.12.1.6.ebuild:
+  Remove obsolete wxhaskell-0.12.1.6.ebuild
 
 *wxhaskell-0.90.1.0 (23 Mar 2014)
 *wxhaskell-0.13.2.3 (23 Mar 2014)
