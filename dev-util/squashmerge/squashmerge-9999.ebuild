@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/squashmerge/squashmerge-9999.ebuild,v 1.3 2014/03/24 17:45:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/squashmerge/squashmerge-9999.ebuild,v 1.4 2014/03/24 17:48:09 mgorny Exp $
 
 EAPI=5
 
@@ -36,6 +36,8 @@ DEPEND=${COMMON_DEPEND}
 
 # SquashDelta does not make much sense without a compression algo.
 REQUIRED_USE="|| ( lz4 lzo )"
+
+DOCS=( FORMAT )
 
 src_configure() {
 	local myeconfargs=(
