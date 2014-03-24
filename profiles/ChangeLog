@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8738 2014/03/24 17:42:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8739 2014/03/24 17:58:31 tomwij Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Mar 2014; Tom Wijsman <TomWij@gentoo.org> updates/1Q-2014:
+  SLOT move =mate-base/mate-control-center-1.6.2 from 2 to 0.
 
   24 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> updates/1Q-2014:
   Move dev-libs/libusbx to dev-libs/libusb since the usbx project is now in
