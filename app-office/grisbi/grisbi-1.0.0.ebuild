@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-1.0.0.ebuild,v 1.1 2014/03/26 21:25:01 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-1.0.0.ebuild,v 1.2 2014/03/26 21:30:37 remi Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -28,8 +28,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
-	G2CONF+="--with-plugins
-		--with-libxml2
+	G2CONF+="--with-libxml2
 		--without-cunit
 		--disable-static
 		$(use_with ssl openssl)
