@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/portspoof
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/portspoof/ChangeLog,v 1.1 2014/03/22 22:51:32 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portspoof/ChangeLog,v 1.2 2014/03/26 14:21:15 zerochaos Exp $
+
+  26 Mar 2014; Rick Farina <zerochaos@gentoo.org> portspoof-1.1.ebuild:
+  tested on x86
 
 *portspoof-9999 (22 Mar 2014)
 *portspoof-1.1 (22 Mar 2014)
