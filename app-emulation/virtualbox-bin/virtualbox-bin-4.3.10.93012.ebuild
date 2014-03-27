@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.3.10.93012.ebuild,v 1.1 2014/03/27 12:10:14 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.3.10.93012.ebuild,v 1.2 2014/03/27 12:14:29 polynomial-c Exp $
 
 EAPI=5
 
@@ -8,14 +8,13 @@ inherit eutils fdo-mime gnome2 pax-utils udev unpacker versionator
 
 MAIN_PV="$(get_version_component_range 1-3)"
 if [[ ${PV} = *_beta* ]] || [[ ${PV} = *_rc* ]] ; then
-	MY_PV="${MAIN_PV}_$(get_version_component_range 4)"
+	MY_PV="${MAIN_PV}_$(get_version_component_range 5)"
 	MY_PV="${MY_PV/beta/BETA}"
 	MY_PV="${MY_PV/rc/RC}"
-	VBOX_BUILD_ID="$(get_version_component_range 5)"
 else
 	MY_PV="${MAIN_PV}"
-	VBOX_BUILD_ID="$(get_version_component_range 4)"
 fi
+VBOX_BUILD_ID="$(get_version_component_range 4)"
 VBOX_PV="${MY_PV}-${VBOX_BUILD_ID}"
 MY_P="VirtualBox-${VBOX_PV}-Linux"
 # needed as sometimes the extpack gets another build ID
