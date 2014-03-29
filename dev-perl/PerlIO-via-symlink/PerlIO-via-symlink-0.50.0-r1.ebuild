@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-symlink/PerlIO-via-symlink-0.50.0-r1.ebuild,v 1.1 2014/03/29 16:11:16 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-symlink/PerlIO-via-symlink-0.50.0-r1.ebuild,v 1.2 2014/03/29 16:13:15 zlogene Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ DEPEND="dev-perl/Module-Install
 
 src_prepare() {
 
-	rm  -fr "${S}"/inc || die # bug 483812 
+	rm  -fr "${S}"/inc || die # bug 483812
 }
 
 SRC_TEST="do"
