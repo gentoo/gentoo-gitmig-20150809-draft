@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.5.7.ebuild,v 1.1 2014/03/29 13:22:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.5.7.ebuild,v 1.2 2014/03/29 13:23:33 ssuominen Exp $
 
 EAPI=5
 
@@ -101,7 +101,6 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-
 
 	local jit_is_enabled
 	if use deprecated; then
