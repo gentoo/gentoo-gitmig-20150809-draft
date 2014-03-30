@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.75 2014/03/30 20:36:48 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.76 2014/03/30 20:38:17 djc Exp $
+
+  30 Mar 2014; Dirkjan Ochtman <djc@gentoo.org> -dulwich-0.8.7-r1.ebuild,
+  -dulwich-0.8.7.ebuild, -dulwich-0.9.0-r1.ebuild, -dulwich-0.9.1.ebuild,
+  -dulwich-0.9.3.ebuild:
+  Remove old versions.
 
   30 Mar 2014; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   Remove myself as a maintainer.
