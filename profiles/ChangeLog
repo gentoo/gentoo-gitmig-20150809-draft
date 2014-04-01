@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8770 2014/04/01 15:42:58 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8771 2014/04/01 15:43:43 tomwij Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Apr 2014; Tom Wijsman <TomWij@gentoo.org>
+  features/64bit-native/package.mask:
+  [QA] Remove obsolete googleearth mask from 64bit-native feature.
 
   01 Apr 2014; Tom Wijsman <TomWij@gentoo.org>
   arch/amd64/no-multilib/package.mask:
