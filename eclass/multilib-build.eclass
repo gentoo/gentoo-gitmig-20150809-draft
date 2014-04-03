@@ -1,10 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.33 2014/04/03 21:38:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.34 2014/04/03 22:09:36 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
-# Michał Górny <mgorny@gentoo.org>
+# gx86-multilib team <multilib@gentoo.org>
+# @AUTHOR:
+# Author: Michał Górny <mgorny@gentoo.org>
 # @BLURB: flags and utility functions for building multilib packages
 # @DESCRIPTION:
 # The multilib-build.eclass exports USE flags and utility functions
