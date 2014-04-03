@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.32 2014/04/03 21:32:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.33 2014/04/03 21:38:08 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -31,6 +31,10 @@ inherit multibuild multilib
 # The list of multilib flags and corresponding ABI values. If the same
 # flag is reused for multiple ABIs (e.g. x86 on Linux&FreeBSD), multiple
 # ABIs may be separated by commas.
+#
+# Please contact multilib before modifying this list. This way we can
+# ensure that every *preliminary* work is done and the multilib can be
+# extended safely.
 _MULTILIB_FLAGS=(
 	abi_x86_32:x86,x86_fbsd
 	abi_x86_64:amd64,amd64_fbsd
