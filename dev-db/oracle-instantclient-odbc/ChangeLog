@@ -1,12 +1,12 @@
 # ChangeLog for dev-db/oracle-instantclient-odbc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-odbc/ChangeLog,v 1.14 2014/04/04 08:24:25 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-odbc/ChangeLog,v 1.15 2014/04/04 08:29:33 haubi Exp $
 
 *oracle-instantclient-odbc-11.2.0.4 (04 Apr 2014)
 
   04 Apr 2014; Michael Haubenwallner <haubi@gentoo.org>
   +oracle-instantclient-odbc-11.2.0.4.ebuild:
-  Revbump. Convert to USE abi_x86_*, bug#506228.
+  Revbump. Add RESTRICT=splitdebug. Convert to USE abi_x86_*, bug#506228.
 
   15 Nov 2012; Michael Haubenwallner <haubi@gentoo.org>
   oracle-instantclient-odbc-11.2.0.3.ebuild:
