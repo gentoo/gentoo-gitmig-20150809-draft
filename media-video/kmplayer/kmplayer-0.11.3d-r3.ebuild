@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.3d-r3.ebuild,v 1.1 2014/04/04 11:10:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.3d-r3.ebuild,v 1.2 2014/04/04 11:21:19 johu Exp $
 
 EAPI=5
 
@@ -52,7 +52,6 @@ src_configure() {
 		$(cmake-utils_use expat KMPLAYER_BUILT_WITH_EXPAT)
 		$(cmake-utils_use npp KMPLAYER_BUILT_WITH_NPP)
 	)
-
 	kde4-base_src_configure
 }
 
