@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-9999.ebuild,v 1.4 2014/04/04 20:44:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.2.7.ebuild,v 1.1 2014/04/04 20:44:40 ssuominen Exp $
 
 EAPI=5
 
