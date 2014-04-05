@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/mime-types-1.19.ebuild,v 1.6 2013/01/16 00:17:40 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/mime-types-1.19.ebuild,v 1.7 2014/04/05 14:05:16 mrueg Exp $
 
 EAPI=4
 
-USE_RUBY="ruby18 ruby19 jruby ree18"
+USE_RUBY="ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"
