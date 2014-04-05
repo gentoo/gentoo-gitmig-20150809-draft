@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-16.3.1.ebuild,v 1.1 2014/04/05 15:35:32 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-16.3.1.ebuild,v 1.2 2014/04/05 15:39:42 djc Exp $
 
-EAPI=3
+EAPI=4
 WX_GTK_VER="2.8"
 
 inherit autotools elisp-common eutils java-pkg-opt-2 multilib systemd versionator wxwidgets
@@ -51,10 +51,10 @@ src_prepare() {
 	use odbc || sed -i 's: odbc : :' lib/Makefile
 
 	# bug 263129, don't ignore LDFLAGS, reported upstream
-	sed -e 's:LDFLAGS = \$(DED_LDFLAGS):LDFLAGS += \$(DED_LDFLAGS):' -i "${S}"/lib/megaco/src/flex/Makefile.in || die
+	sed -e 's:LDFLAGS = \$(DED_LDFLAGS):LDFLAGS += \$(DED_LDFLAGS):' -i "${S}"/lib/megaco/src/flex/Makefile.in
 
 	# don't ignore LDFLAGS, reported upstream
-	sed -e 's:LDFLAGS =  \$(ODBC_LIB) \$(EI_LDFLAGS):LDFLAGS += \$(ODBC_LIB) \$(EI_LDFLAGS):' -i "${S}"/lib/odbc/c_src/Makefile.in || die
+	sed -e 's:LDFLAGS =  \$(ODBC_LIB) \$(EI_LDFLAGS):LDFLAGS += \$(ODBC_LIB) \$(EI_LDFLAGS):' -i "${S}"/lib/odbc/c_src/Makefile.in
 
 	if ! use wxwidgets; then
 		sed -i 's: wx : :' lib/Makefile
@@ -62,12 +62,12 @@ src_prepare() {
 	fi
 
 	# Nasty workaround, reported upstream
-	cp "${S}"/lib/configure.in.src "${S}"/lib/configure.in || die
+	cp "${S}"/lib/configure.in.src "${S}"/lib/configure.in
 
 	# bug 383697
-	sed -i '1i#define OF(x) x' erts/emulator/drivers/common/gzio.c || die
-	epatch "${FILESDIR}/16.2-tinfo.patch" || die
-	cd erts && eautoreconf || die
+	sed -i '1i#define OF(x) x' erts/emulator/drivers/common/gzio.c
+	epatch "${FILESDIR}/16.2-tinfo.patch"
+	cd erts && eautoreconf
 }
 
 src_configure() {
@@ -84,17 +84,16 @@ src_configure() {
 		$(use_enable kpoll kernel-poll) \
 		$(use_enable smp smp-support) \
 		$(use compat-ethread && echo "--enable-ethread-pre-pentium4-compatibility") \
-		$(use x64-macos && echo "--enable-darwin-64bit") \
-		|| die
+		$(use x64-macos && echo "--enable-darwin-64bit")
 }
 
 src_compile() {
 	use java || export JAVAC=false
-	emake || die
+	emake
 
 	if use emacs ; then
 		pushd lib/tools/emacs
-		elisp-compile *.el || die
+		elisp-compile *.el
 		popd
 	fi
 }
@@ -108,7 +107,7 @@ src_install() {
 	local ERL_INTERFACE_VER=$(extract_version lib/erl_interface EI_VSN)
 	local ERL_ERTS_VER=$(extract_version erts VSN)
 
-	emake INSTALL_PREFIX="${D}" install || die
+	emake INSTALL_PREFIX="${D}" install
 	dodoc AUTHORS README.md
 
 	dosym "${ERL_LIBDIR}/bin/erl" /usr/bin/erl
@@ -121,12 +120,12 @@ src_install() {
 	use smp && dosym "${ERL_LIBDIR}/erts-${ERL_ERTS_VER}/bin/beam.smp" /usr/bin/beam.smp
 
 	## Remove ${D} from the following files
-	sed -e "s:${D}::g" -i "${ED}${ERL_LIBDIR}/bin/erl" || die
-	sed -e "s:${D}::g" -i "${ED}${ERL_LIBDIR}/bin/start" || die
+	sed -e "s:${D}::g" -i "${ED}${ERL_LIBDIR}/bin/erl"
+	sed -e "s:${D}::g" -i "${ED}${ERL_LIBDIR}/bin/start"
 	grep -rle "${D}" "${ED}/${ERL_LIBDIR}/erts-${ERL_ERTS_VER}" | xargs sed -i -e "s:${D}::g"
 
 	## Clean up the no longer needed files
-	rm "${ED}/${ERL_LIBDIR}/Install"||die
+	rm "${ED}/${ERL_LIBDIR}/Install"
 
 	for i in "${WORKDIR}"/man/man* ; do
 		dodir "${ERL_LIBDIR}/${i##${WORKDIR}}"
@@ -154,8 +153,8 @@ src_install() {
 		popd
 	fi
 
-	newinitd "${FILESDIR}"/epmd.init epmd || die
-	systemd_dounit "${FILESDIR}"/epmd.service ||die
+	newinitd "${FILESDIR}"/epmd.init epmd
+	systemd_dounit "${FILESDIR}"/epmd.service
 }
 
 pkg_postinst() {
