@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fslint/fslint-2.44-r2.ebuild,v 1.1 2014/04/05 15:03:44 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fslint/fslint-2.44-r2.ebuild,v 1.2 2014/04/05 15:09:12 tomwij Exp $
 
 EAPI="5"
 
@@ -66,9 +66,9 @@ src_install() {
 	fi
 
 	# Fix Python shebangs.
-	python_replace_script "${ED}"${share}/${PN}/fstool/dupwaste
-	python_replace_script "${ED}"${share}/${PN}/supprt/md5sum_approx
-	python_replace_script "${ED}"${share}/${PN}/supprt/rmlint/merge_hardlinks
-	python_replace_script "${ED}"${share}/${PN}/supprt/rmlint/fixdup
-	python_replace_script "${ED}"/usr/bin/${PN}-gui
+	python_replicate_script "${ED}"${share}/${PN}/fstool/dupwaste
+	python_replicate_script "${ED}"${share}/${PN}/supprt/md5sum_approx
+	python_replicate_script "${ED}"${share}/${PN}/supprt/rmlint/merge_hardlinks
+	python_replicate_script "${ED}"${share}/${PN}/supprt/rmlint/fixdup
+	python_replicate_script "${ED}"/usr/bin/${PN}-gui
 }
