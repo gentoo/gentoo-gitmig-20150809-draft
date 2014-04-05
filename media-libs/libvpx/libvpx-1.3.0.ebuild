@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.3.0.ebuild,v 1.10 2014/03/02 09:18:54 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.3.0.ebuild,v 1.11 2014/04/05 11:08:58 pacho Exp $
 
 EAPI=4
 inherit eutils multilib toolchain-funcs multilib-minimal
@@ -49,6 +49,7 @@ REQUIRED_USE="
 
 src_prepare() {
 	epatch "${FILESDIR}/libvpx-1.3.0-dash.patch"
+	epatch "${FILESDIR}/libvpx-1.3.0-sparc-configure.patch" # 501010
 }
 
 multilib_src_configure() {
