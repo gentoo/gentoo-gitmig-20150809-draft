@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.93.ebuild,v 1.1 2014/04/06 15:25:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.93.ebuild,v 1.2 2014/04/06 15:28:01 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,9 +17,6 @@ KEYWORDS="~amd64"
 IUSE="v4l test"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-# Test fails by not finding audiosink ?
-#RESTRICT="test"
-
 COMMON_DEPEND="
 	${PYTHON_DEPS}
 	>=dev-python/pycairo-1.10[${PYTHON_USEDEP}]
@@ -30,7 +27,7 @@ RDEPEND="${COMMON_DEPEND}
 
 	>=dev-libs/gobject-introspection-1.34
 	dev-python/dbus-python[${PYTHON_USEDEP}]
-	>=dev-python/gst-python-1.1.90:1.0
+	>=dev-python/gst-python-1.1.90:1.0[${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]
 	>=dev-python/pygobject-3.8:3[${PYTHON_USEDEP}]
 	dev-python/pyxdg[${PYTHON_USEDEP}]
@@ -48,7 +45,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=media-plugins/gst-plugins-libav-1.2:1.0
 
 	x11-libs/libnotify[introspection]
-	>=x11-libs/gtk+-3.8:3
+	>=x11-libs/gtk+-3.8:3[introspection]
 
 	v4l? ( media-plugins/gst-plugins-v4l2:0.10 )
 "
