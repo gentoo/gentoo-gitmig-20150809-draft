@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-3.1.5.ebuild,v 1.1 2014/04/07 14:10:31 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-3.1.5.ebuild,v 1.2 2014/04/07 14:20:32 heroxbd Exp $
 
-EAPI="2"
+EAPI="5"
 WANT_AUTOCONF=2.5
 
 inherit flag-o-matic eutils autotools toolchain-funcs user
@@ -98,10 +98,10 @@ src_configure() {
 
 src_compile() {
 	export OCAMLRUNPARAM="l=256M"
-	emake || die "emake failed"
+	emake
 
 	if ! use guionly; then
-		emake utils || die "emake utils failed"
+		emake utils
 	fi;
 }
 
@@ -111,7 +111,7 @@ src_install() {
 	use ocamlopt || export STRIP_MASK="*/bin/*"
 	if ! use guionly; then
 		for i in mlnet mld_hash get_range copysources subconv; do
-			newbin $i$myext $i || die "failed to install $i"
+			newbin $i$myext $i
 		done
 		use bittorrent && newbin make_torrent$myext make_torrent
 
@@ -122,7 +122,7 @@ src_install() {
 
 	if use gtk; then
 		for i in mlgui mlguistarter; do
-			newbin $i$myext $i || die "failed to install $i"
+			newbin $i$myext $i
 		done
 		make_desktop_entry mlgui "MLDonkey GUI" mldonkey "Network;P2P"
 		newicon "${S}"/packages/rpm/mldonkey-icon-48.png ${PN}.png
