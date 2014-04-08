@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.70 2014/04/08 08:37:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.71 2014/04/08 09:05:24 ssuominen Exp $
 
 EAPI=5
 inherit bash-completion-r1 eutils multilib
@@ -33,13 +33,10 @@ RDEPEND="!sys-apps/module-init-tools
 	openrc? ( !<sys-apps/openrc-0.12 )
 	zlib? ( >=sys-libs/zlib-1.2.6 )" #427130
 DEPEND="${RDEPEND}
+	dev-libs/libxslt
 	doc? ( dev-util/gtk-doc )
 	lzma? ( virtual/pkgconfig )
 	zlib? ( virtual/pkgconfig )"
-if [[ ${PV} == 9999* ]]; then
-	DEPEND="${DEPEND}
-		dev-libs/libxslt"
-fi
 
 src_prepare() {
 	if [ ! -e configure ]; then
@@ -61,6 +58,8 @@ src_prepare() {
 }
 
 src_configure() {
+	# TODO: --disable-python is only because the ebuild hasn't been ported over to
+	# python-r1.eclass yet
 	econf \
 		--bindir=/bin \
 		--with-rootlibdir="/$(get_libdir)" \
@@ -68,6 +67,7 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_enable tools) \
 		$(use_enable debug) \
+		--disable-python \
 		$(use_enable doc gtk-doc) \
 		$(use_with lzma xz) \
 		$(use_with zlib) \
