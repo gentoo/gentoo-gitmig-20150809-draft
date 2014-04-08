@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/cpupower-3.13.ebuild,v 1.2 2014/02/18 07:33:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/cpupower-3.13.ebuild,v 1.3 2014/04/08 11:11:47 ssuominen Exp $
 
 EAPI=5
 inherit multilib toolchain-funcs
@@ -16,7 +16,7 @@ IUSE="cpufreq_bench debug nls"
 
 # File collision w/ headers of the deprecated cpufrequtils
 RDEPEND="sys-apps/pciutils
-	!sys-apps/linux-misc-apps
+	!<sys-apps/linux-misc-apps-3.6-r2
 	!sys-power/cpufrequtils"
 DEPEND="${RDEPEND}
 	virtual/os-headers
