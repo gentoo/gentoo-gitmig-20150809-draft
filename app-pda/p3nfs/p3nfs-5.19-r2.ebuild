@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/p3nfs-5.19-r2.ebuild,v 1.1 2009/12/12 10:09:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/p3nfs-5.19-r2.ebuild,v 1.2 2014/04/09 10:19:59 pinkbyte Exp $
 
 EAPI="2"
 
@@ -19,12 +19,14 @@ DEPEND=""
 RDEPEND="|| ( net-nds/portmap net-nds/rpcbind )"
 
 src_prepare() {
-	sed -i "s:.*cd client/epoc32.*:#&:" "${S}/Makefile.in"
+	sed -i "s:.*cd client/epoc32.*:#&:" "${S}/Makefile.in" || die
+	# bug #314971
+	epatch "${FILESDIR}/${P}-set-default-tty.patch"
 }
 
 src_configure() {
 	append-flags -fno-strict-aliasing # fix QA issues
-	sed -i "s:\$(LDFLAGS):${LDFLAGS}:" "${S}/server/Makefile.in"
+	sed -i "s:\$(LDFLAGS):${LDFLAGS}:" "${S}/server/Makefile.in" || die
 
 	econf || die "econf failed"
 }
