@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.10-r1.ebuild,v 1.1 2014/04/09 15:40:20 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.10-r1.ebuild,v 1.2 2014/04/09 15:42:11 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -142,7 +142,7 @@ pkg_postinst() {
 	fi
 	elog "Journaling is now enabled by default, see /etc/conf.d/${PN}"
 	if use mms-agent; then
-		elog "You have to configure MMM Agent yourself :"
+		elog "You have to configure MMS Agent yourself :"
 		elog "Edit the settings.py file in the /opt/mms-agent/ folder."
 	fi
 }
