@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/rex-client/rex-client-9999.ebuild,v 1.1 2014/04/11 05:16:54 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/rex-client/rex-client-9999.ebuild,v 1.2 2014/04/11 05:27:35 mduft Exp $
 
 EAPI="4"
 
@@ -30,6 +30,7 @@ src_prepare() {
 
 src_install() {
 	cd ${S}
+	exeinto /usr/bin
 	for x in ${REX_EXE[@]}; do
 		doexe ${S}/${x}
 	done
