@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.82 2014/04/11 02:36:58 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.83 2014/04/11 02:42:07 zerochaos Exp $
+
+  11 Apr 2014; Rick Farina <zerochaos@gentoo.org> metasploit-9999.ebuild:
+  dep should have been = not >=
 
   11 Apr 2014; Rick Farina <zerochaos@gentoo.org> metasploit-9999.ebuild:
   update live for new dep
