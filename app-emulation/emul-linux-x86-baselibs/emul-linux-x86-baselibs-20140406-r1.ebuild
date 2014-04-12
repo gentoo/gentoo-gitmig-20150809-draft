@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20140406-r1.ebuild,v 1.1 2014/04/12 08:32:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20140406-r1.ebuild,v 1.2 2014/04/12 08:34:06 pacho Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -88,14 +88,4 @@ src_prepare() {
 src_install() {
 	emul-linux-x86_src_install
 	rm -rf "${ED}"/usr/include # needed for openssl tbz2
-
-	if use abi_x86_32; then
-		local x86_libdir=$(get_abi_LIBDIR x86)
-		LIBDIR=${EPREFIX}/usr/${x86_libdir}/emul-linux
-		echo "LDPATH=${LIBDIR}" > 99emul-linux-x86-baselibs
-		doenvd 99emul-linux-x86-baselibs
-
-		mkdir -p "${ED}${LIBDIR}"
-		mv "${ED}"/usr/${x86_libdir}/{libjpeg.so.8*,libturbojpeg.so.0*} "${D}${LIBDIR}"/
-	fi
 }

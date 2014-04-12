@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.191 2014/04/12 08:32:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.192 2014/04/12 08:34:06 pacho Exp $
+
+  12 Apr 2014; Pacho Ramos <pacho@gentoo.org>
+  emul-linux-x86-baselibs-20140406-r1.ebuild:
+  libjpeg.8 hacks shouldn't be needed anymore
 
 *emul-linux-x86-baselibs-20140406-r1 (12 Apr 2014)
 
