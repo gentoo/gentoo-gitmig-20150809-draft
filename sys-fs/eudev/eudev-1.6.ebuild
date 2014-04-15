@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.6.ebuild,v 1.1 2014/04/15 23:10:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.6.ebuild,v 1.2 2014/04/15 23:15:18 blueness Exp $
 
 EAPI="5"
 
@@ -231,15 +231,6 @@ pkg_postinst() {
 	if [[ -d ${EROOT}dev/loop ]]; then
 		ewarn "Please make sure your remove /dev/loop,"
 		ewarn "else losetup may be confused when looking for unused devices."
-	fi
-
-	# 64-device-mapper.rules now gets installed by sys-fs/device-mapper
-	# remove it if user don't has sys-fs/device-mapper installed, 27 Jun 2007
-	if [[ -f ${EROOT}etc/udev/rules.d/64-device-mapper.rules ]] &&
-		! has_version sys-fs/device-mapper
-	then
-		rm -f "${EROOT}"etc/udev/rules.d/64-device-mapper.rules
-		einfo "Removed unneeded file 64-device-mapper.rules"
 	fi
 
 	if use hwdb && has_version 'sys-apps/hwids[udev]'; then
