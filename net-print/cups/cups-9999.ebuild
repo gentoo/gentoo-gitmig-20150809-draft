@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.53 2014/04/15 21:05:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.54 2014/04/15 21:26:13 dilfridge Exp $
 
 EAPI=5
 
@@ -172,7 +172,7 @@ src_configure() {
 		"
 	fi
 
-	if use systemd; then 
+	if use systemd; then
 		myconf+="
 			--with-systemdsystemunitdir="$(systemd_get_unitdir)"
 		"
