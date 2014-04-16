@@ -1,12 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libmlx4/libmlx4-1.0.1-r1.ebuild,v 1.1 2012/04/18 16:42:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libmlx4/libmlx4-1.0.5.ebuild,v 1.1 2014/04/16 08:22:25 alexxy Exp $
 
-EAPI="4"
+EAPI="5"
 
-OFED_VER="1.5.4.1"
-OFED_SUFFIX="1.20.g6771d22"
-OFED_SNAPSHOT="1"
+OFED_VER="3.12"
+OFED_RC="1"
+OFED_RC_VER="1"
+OFED_SUFFIX="1.gdc6ef69"
+OFED_SRC_SNAPSHOT="1"
 
 inherit openib
 

@@ -1,10 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ibacm/ibacm-1.0.5.ebuild,v 1.1 2012/04/18 18:51:23 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ibacm/ibacm-1.0.8.ebuild,v 1.1 2014/04/16 08:22:23 alexxy Exp $
 
-EAPI="4"
+EAPI="5"
 
-OFED_VER="1.5.4.1"
+OFED_VER="3.12"
+OFED_RC="1"
+OFED_RC_VER="1"
 OFED_SUFFIX="1"
 
 inherit openib

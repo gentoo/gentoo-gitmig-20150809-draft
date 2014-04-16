@@ -1,11 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ofed/ofed-1.5.4.1-r1.ebuild,v 1.2 2012/12/11 19:19:44 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ofed/ofed-3.12_rc1.ebuild,v 1.1 2014/04/16 08:22:24 alexxy Exp $
 
-EAPI="4"
+EAPI="5"
 
-OFED_VER="1.5.4.1"
-OFED_SUFFIX="OFED.1.5.4.1"
+OFED_VER="3.12"
+OFED_RC="1"
+OFED_RC_VER="1"
+OFED_SUFFIX="1.gd250ad6"
+OFED_SNAPSHOT="1"
 
 IUSE_OFED_DRIVERS="
 		ofed_drivers_cxgb3
@@ -13,8 +16,10 @@ IUSE_OFED_DRIVERS="
 		ofed_drivers_ehca
 		ofed_drivers_ipath
 		ofed_drivers_mlx4
+		ofed_drivers_mlx5
 		ofed_drivers_mthca
 		ofed_drivers_nes
+		ofed_drivers_ocrdma
 		ofed_drivers_psm"
 
 inherit openib udev toolchain-funcs
@@ -22,7 +27,7 @@ inherit openib udev toolchain-funcs
 DESCRIPTION="OpenIB system files"
 SCRIPTDIR="${S}/ofed_scripts"
 KEYWORDS="~amd64 ~x86 ~amd64-linux"
-IUSE="compat-dapl dapl +diags ibacm mstflint +opensm perftest rds sdp srp ${IUSE_OFED_DRIVERS}"
+IUSE="dapl +diags ibacm mstflint +opensm perftest qperf rds srp ${IUSE_OFED_DRIVERS}"
 
 RDEPEND="!sys-infiniband/openib
 		!sys-infiniband/openib-files
@@ -30,22 +35,24 @@ RDEPEND="!sys-infiniband/openib
 		sys-infiniband/libibmad:${SLOT}
 		sys-infiniband/libibumad:${SLOT}
 		sys-infiniband/librdmacm:${SLOT}
-		compat-dapl? ( sys-infiniband/compat-dapl:${SLOT} )
 		dapl? ( sys-infiniband/dapl:${SLOT} )
 		diags? ( sys-infiniband/infiniband-diags:${SLOT} )
 		ibacm? ( sys-infiniband/ibacm:${SLOT} )
 		mstflint? ( sys-infiniband/mstflint:${SLOT} )
 		opensm? ( sys-infiniband/opensm:${SLOT} )
 		perftest? ( sys-infiniband/perftest:${SLOT} )
-		sdp? ( sys-infiniband/libsdp:${SLOT} )
+		qperf? ( sys-infiniband/qperf:${SLOT} )
 		srp? ( sys-infiniband/srptools:${SLOT} )
+		rds? ( sys-infiniband/rds-tools:${SLOT} )
 		ofed_drivers_cxgb3? ( sys-infiniband/libcxgb3:${SLOT} )
 		ofed_drivers_cxgb4? ( sys-infiniband/libcxgb4:${SLOT} )
 		ofed_drivers_ehca? ( sys-infiniband/libehca:${SLOT} )
 		ofed_drivers_ipath? ( sys-infiniband/libipathverbs:${SLOT} )
 		ofed_drivers_mlx4? ( sys-infiniband/libmlx4:${SLOT} )
+		ofed_drivers_mlx5? ( sys-infiniband/libmlx5:${SLOT} )
 		ofed_drivers_mthca? ( sys-infiniband/libmthca:${SLOT} )
 		ofed_drivers_nes? ( sys-infiniband/libnes:${SLOT} )
+		ofed_drivers_ocrdma? ( sys-infiniband/libocrdma:${SLOT} )
 		ofed_drivers_psm? ( sys-infiniband/infinipath-psm:${SLOT} )
 		"
 DEPEND="${RDEPEND}
@@ -66,7 +73,6 @@ src_install() {
 
 	# build openib.conf based on ofed_scripts/ofa_kernel.spec
 	build_ipoib=1
-	build_sdp=1
 	cp "${SCRIPTDIR}/openib.conf" "${T}"
 	IB_CONF_DIR=${T}
 	echo >> ${IB_CONF_DIR}/openib.conf
@@ -113,11 +119,6 @@ src_install() {
 		echo "#IPOIBHA_ENABLE=no" >> ${IB_CONF_DIR}/openib.conf
 		echo "# PRIMARY_IPOIB_DEV=ib0" >> ${IB_CONF_DIR}/openib.conf
 		echo "# SECONDARY_IPOIB_DEV=ib1" >> ${IB_CONF_DIR}/openib.conf
-	fi
-	if (( build_sdp )); then
-		 echo >> ${IB_CONF_DIR}/openib.conf
-		 echo "# Load SDP module" >> ${IB_CONF_DIR}/openib.conf
-		 echo "#SDP_LOAD=yes" >> ${IB_CONF_DIR}/openib.conf
 	fi
 	if use srp; then
 		echo >> ${IB_CONF_DIR}/openib.conf

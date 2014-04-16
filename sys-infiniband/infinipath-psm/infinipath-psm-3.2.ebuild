@@ -1,11 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/infinipath-psm/infinipath-psm-2.9-r1.ebuild,v 1.2 2012/12/11 15:37:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/infinipath-psm/infinipath-psm-3.2.ebuild,v 1.1 2014/04/16 08:22:27 alexxy Exp $
 
-EAPI="4"
+EAPI="5"
 
-OFED_VER="1.5.4.1"
-OFED_SUFFIX="926.1005_open"
+OFED_VER="3.12"
+OFED_RC="1"
+OFED_RC_VER="1"
+OFED_SUFFIX="2_ga8c3e3e_open"
 OFED_SNAPSHOT="1"
 OFED_SRC_SNAPSHOT="1"
 
@@ -25,7 +27,6 @@ src_prepare() {
 	sed -e 's:uname -p:uname -m:g' \
 		-e 's:-Werror::g' \
 		-i buildflags.mak || die
-	epatch "${FILESDIR}"/${PN}-include.patch
 }
 
 src_install() {
