@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-sysv-utils/systemd-sysv-utils-211.ebuild,v 1.1 2014/03/16 08:10:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-sysv-utils/systemd-sysv-utils-212.ebuild,v 1.1 2014/04/16 02:07:10 floppym Exp $
 
 EAPI=5
 
@@ -24,11 +24,12 @@ RDEPEND="!sys-apps/sysvinit
 S=${WORKDIR}/${MY_P}/man
 
 src_install() {
+	: ${ROOTPREFIX=/usr}
 	for app in halt poweroff reboot runlevel shutdown telinit; do
 		doman ${app}.8
-		dosym ../usr/bin/systemctl /sbin/${app}
+		dosym "..${ROOTPREFIX}/bin/systemctl" /sbin/${app}
 	done
 
 	newman init.1 init.8
-	dosym ../usr/lib/systemd/systemd /sbin/init
+	dosym "..${ROOTPREFIX}/lib/systemd/systemd" /sbin/init
 }
