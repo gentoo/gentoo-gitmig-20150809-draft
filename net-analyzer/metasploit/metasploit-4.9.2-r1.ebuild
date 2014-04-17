@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.9.2-r1.ebuild,v 1.1 2014/04/17 18:09:16 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.9.2-r1.ebuild,v 1.2 2014/04/17 18:14:15 zerochaos Exp $
 
 EAPI="5"
 
@@ -240,6 +240,9 @@ all_ruby_install() {
 }
 
 pkg_postinst() {
+	elog "Before use you should run 'env-update' and '. /etc/profile'"
+	elog "otherwise you may be missing important environmental variables."
+
 	elog "You need to prepare the database by running:"
 	elog "emerge --config postgresql-server"
 	elog "/etc/init.d/postgresql-<version> start"
