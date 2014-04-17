@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ntdb/ntdb-1.0.ebuild,v 1.1 2014/04/17 12:48:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ntdb/ntdb-1.0.ebuild,v 1.2 2014/04/17 13:01:02 polynomial-c Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE="python"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="python? ( ${PYTHON_DEPS} )"
-DEPEND="!!<net-fs/samba-4.1.7
+DEPEND="!<net-fs/samba-4.1.7
 	${RDEPEND}
 	app-text/docbook-xml-dtd:4.2"
 
