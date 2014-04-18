@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.2-r1.ebuild,v 1.1 2014/04/18 17:05:02 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.2-r1.ebuild,v 1.2 2014/04/18 17:08:23 hasufell Exp $
 
 # TODO: convert FusionSound #484250
 
@@ -29,7 +29,7 @@ REQUIRED_USE="
 
 RDEPEND="
 	alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
-	dbus? ( sys-apps/dbus )
+	dbus? ( sys-apps/dbus[${MULTILIB_USEDEP}] )
 	fusionsound? ( || ( >=media-libs/FusionSound-1.1.1 >=dev-libs/DirectFB-1.7.1[fusionsound] ) )
 	gles? ( media-libs/mesa[${MULTILIB_USEDEP},gles2] )
 	nas? ( media-libs/nas[${MULTILIB_USEDEP}] )
