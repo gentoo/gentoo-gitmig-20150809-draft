@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20140406.ebuild,v 1.1 2014/04/06 09:07:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20140406.ebuild,v 1.2 2014/04/18 21:41:18 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -13,10 +13,16 @@ DEPEND=""
 RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 	~app-emulation/emul-linux-x86-xlibs-${PV}
 	~app-emulation/emul-linux-x86-opengl-${PV}
+	!abi_x86_32? (
+		!>=media-gfx/graphite2-1.2.4-r1[abi_x86_32(-)]
+		!>=media-libs/harfbuzz-0.9.26-r1[abi_x86_32(-)]
+	)
 	abi_x86_32? (
 		>=x11-libs/pixman-0.30.2-r1[abi_x86_32(-)]
 		>=x11-libs/cairo-1.12.16-r1[abi_x86_32(-)]
 		>=x11-libs/gdk-pixbuf-2.30.5-r1[abi_x86_32(-)]
+		>=media-gfx/graphite2-1.2.4-r1[abi_x86_32(-)]
+		>=media-libs/harfbuzz-0.9.26-r1[abi_x86_32(-)]
 		>=x11-libs/pango-1.36.2-r1[abi_x86_32(-)]
 		>=x11-libs/pangox-compat-0.0.2-r1[abi_x86_32(-)]
 	)"
