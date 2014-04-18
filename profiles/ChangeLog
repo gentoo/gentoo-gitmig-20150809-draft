@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8838 2014/04/18 17:03:39 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8839 2014/04/18 17:07:54 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Apr 2014; Julian Ospald <hasufell@gentoo.org> package.mask:
+  remove obsolete mask on >=media-libs/libsdl2-2.0.2-r1, it does not depend on
+  masked libs
 
   18 Apr 2014; Julian Ospald <hasufell@gentoo.org> package.mask:
   mask >=media-libs/libsdl2-2.0.2-r1 for multilib migration wrt #484130
