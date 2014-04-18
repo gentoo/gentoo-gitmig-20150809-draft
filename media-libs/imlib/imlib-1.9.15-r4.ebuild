@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15-r4.ebuild,v 1.1 2014/04/18 14:49:42 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15-r4.ebuild,v 1.2 2014/04/18 14:58:35 hasufell Exp $
 
 EAPI=4
 inherit autotools eutils multilib-minimal
@@ -22,7 +22,11 @@ RDEPEND=">=media-libs/tiff-3.5.5[${MULTILIB_USEDEP}]
 	virtual/jpeg[${MULTILIB_USEDEP}]
 	x11-libs/libICE[${MULTILIB_USEDEP}]
 	x11-libs/libSM[${MULTILIB_USEDEP}]
-	x11-libs/libXext[${MULTILIB_USEDEP}]"
+	x11-libs/libXext[${MULTILIB_USEDEP}]
+	abi_x86_32? (
+		!app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
+		!<=app-emulation/emul-linux-x86-gtklibs-20140406
+	)"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
