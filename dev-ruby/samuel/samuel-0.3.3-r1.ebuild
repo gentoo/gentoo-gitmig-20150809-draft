@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/samuel-0.3.3-r1.ebuild,v 1.3 2014/04/19 07:35:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/samuel-0.3.3-r1.ebuild,v 1.4 2014/04/19 07:38:35 graaff Exp $
 
 EAPI=5
 
@@ -26,6 +26,8 @@ ruby_add_bdepend "
 		dev-ruby/mocha:0.13
 		dev-ruby/test-unit:2
 	)"
+
+USE_RUBY=jruby ruby_add_bdepend "test? ( dev-ruby/bouncy-castle-java )"
 
 all_ruby_prepare() {
 	# Remove references to bundler
