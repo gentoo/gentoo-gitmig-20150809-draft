@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.371 2014/04/20 17:55:37 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.372 2014/04/20 18:00:01 tetromino Exp $
+
+  20 Apr 2014; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
+  Move myself to primary maintainer in light of Ben's email
 
 *cairo-1.12.16-r2 (20 Apr 2014)
 
