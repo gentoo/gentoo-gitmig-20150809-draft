@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1215 2014/04/21 07:17:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1216 2014/04/21 07:22:17 mgorny Exp $
+
+  21 Apr 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Make multilib_is_native_abi equivalent to multilib_build_binaries, until all
+  ebuilds are fixed.
 
   21 Apr 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
   Introduce extra multilib_native_use* wrappers encapulsating

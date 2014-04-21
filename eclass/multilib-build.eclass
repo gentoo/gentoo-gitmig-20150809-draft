@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.35 2014/04/21 07:17:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.36 2014/04/21 07:22:17 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -439,9 +439,7 @@ multilib_install_wrappers() {
 multilib_is_native_abi() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	[[ ${#} -eq 0 ]] || die "${FUNCNAME}: too many arguments"
-
-	[[ ${ABI} == ${DEFAULT_ABI} ]]
+	multilib_build_binaries "${@}"
 }
 
 # @FUNCTION: multilib_build_binaries
