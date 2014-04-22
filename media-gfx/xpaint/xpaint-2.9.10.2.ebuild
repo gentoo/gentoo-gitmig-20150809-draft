@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.9.10.2.ebuild,v 1.1 2014/04/22 13:09:39 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.9.10.2.ebuild,v 1.2 2014/04/22 13:14:39 hasufell Exp $
 
 EAPI=5
 
@@ -31,7 +31,10 @@ RDEPEND="
 	virtual/jpeg
 	jpeg2k? ( media-libs/openjpeg:0 )
 	pgf? ( media-libs/libpgf )
-	tiff? ( media-libs/tiff:0 )"
+	tiff? (
+		media-libs/jbigkit:0
+		media-libs/tiff:0
+	)"
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	sys-devel/bison
