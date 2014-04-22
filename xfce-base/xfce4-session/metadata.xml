@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>xfce</herd>
-  <use>
-    <flag name="consolekit">Enable authentication support using <pkg>sys-auth/consolekit</pkg></flag>
-  </use>
 </pkgmetadata>
