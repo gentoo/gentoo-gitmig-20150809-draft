@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-power-manager/mate-power-manager-1.8.0.ebuild,v 1.1 2014/04/23 12:25:29 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-power-manager/mate-power-manager-1.8.0.ebuild,v 1.2 2014/04/23 12:26:20 tomwij Exp $
 
 EAPI="5"
 
 GCONF_DEBUG="no"
 
-inherit autotools gnome2 versionator
+inherit gnome2 versionator
 
 MATE_BRANCH="$(get_version_component_range 1-2)"
 
