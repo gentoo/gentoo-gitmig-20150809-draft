@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<herd>qt</herd>
 	<use>
+	<flag name="webkit">Build the WebView import for QtQuick1 (requires QtWebKit)</flag>
 	<flag name="xml">Build the XmlListModel import for QtQuick1 (requires QtXmlPatterns)</flag>
 	</use>
 	<upstream>

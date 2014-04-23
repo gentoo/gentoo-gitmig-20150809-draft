@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtquick1/qtquick1-5.2.1.ebuild,v 1.1 2014/04/23 07:11:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtquick1/qtquick1-5.2.1.ebuild,v 1.2 2014/04/23 07:24:33 patrick Exp $
 
 EAPI=5
 
@@ -15,9 +15,8 @@ else
 fi
 
 # FIXME: qdeclarativeview designer plugin is automagic
-# FIXME: webkit useflag removed until qtwebkit builds
 
-IUSE="+opengl +xml"
+IUSE="+opengl webkit +xml"
 
 DEPEND="
 	>=dev-qt/qtcore-${PV}:5[debug=]
@@ -27,9 +26,9 @@ DEPEND="
 	>=dev-qt/qtsql-${PV}:5[debug=]
 	>=dev-qt/qtwidgets-${PV}:5[debug=]
 	opengl? ( >=dev-qt/qtopengl-${PV}:5[debug=] )
+	webkit? ( >=dev-qt/qtwebkit-${PV}:5[debug=,widgets] )
 	xml? ( >=dev-qt/qtxmlpatterns-${PV}:5[debug=] )
 "
-# webkit? ( >=dev-qt/qtwebkit-${PV}:5[debug=,widgets] )
 
 RDEPEND="${DEPEND}"
 
