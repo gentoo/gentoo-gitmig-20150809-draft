@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/sxiv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sxiv/ChangeLog,v 1.19 2014/04/25 08:40:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sxiv/ChangeLog,v 1.20 2014/04/25 08:41:19 radhermit Exp $
+
+  25 Apr 2014; Tim Harder <radhermit@gentoo.org> -sxiv-1.1-r1.ebuild,
+  -files/sxiv-1.1-fix-segfault.patch:
+  Remove old.
 
 *sxiv-1.2 (25 Apr 2014)
 
