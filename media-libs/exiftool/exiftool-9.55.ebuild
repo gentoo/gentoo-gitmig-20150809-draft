@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/exiftool-9.55.ebuild,v 1.1 2014/04/25 05:41:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/exiftool-9.55.ebuild,v 1.2 2014/04/25 05:45:04 radhermit Exp $
 
 EAPI=5
 
@@ -17,8 +17,6 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x64-macos"
 IUSE=""
 
 SRC_TEST="do"
-
-S=${WORKDIR}/${MY_P}
 
 src_install() {
 	perl-module_src_install
