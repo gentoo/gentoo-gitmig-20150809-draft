@@ -38,8 +38,6 @@ remove_symlink() {
 	do
 		if [ -L /usr/bin/$(echo ${i} | awk -F'/' '{print $5}') ]; then
 			unlink /usr/bin/$(echo ${i} | awk -F'/' '{print $5}') || die -q "failed to unlink ${i}"
-		else
-			echo ${i} is not a symlink, it lives
 		fi
 	done
 	if [ -L ${EROOT}${MSFPATH} ]; then
