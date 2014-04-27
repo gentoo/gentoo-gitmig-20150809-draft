@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15618 2014/04/27 16:33:57 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15619 2014/04/27 22:51:13 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -426,20 +426,6 @@ www-apache/mod_ruby
 # to fix the build if the end result is just constantly crashing.
 # Removal in 30 days, use alternative panels like x11-misc/fbpanel
 x11-misc/suxpanel
-
-# Manuel Rüger <mrueg@gentoo.org> (16 Mar 2014)
-# Ruby 1.8 has no longer been supported upstream since July 2013 and
-# has known security issues (bug #492282). Ruby packages in general
-# are no longer compatible with ruby 1.8. Removal is tracked in bug
-# 434064.
-#
-# This mask also includes all packages still depending in ruby 1.8.
-# Removal in 30 days
-dev-lang/ruby:1.8
-virtual/rubygems:ruby18
-virtual/ruby-rdoc:ruby18
-virtual/ruby-ssl:ruby18
-virtual/ruby-threads:ruby18
 
 # Lars Wendler <polynomial-c@gentoo.org> (14 Mar 2014)
 # Masked for security reasons.
