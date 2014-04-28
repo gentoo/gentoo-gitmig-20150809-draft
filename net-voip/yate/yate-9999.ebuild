@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-9999.ebuild,v 1.2 2014/04/28 02:39:02 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-9999.ebuild,v 1.3 2014/04/28 02:40:27 zx2c4 Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ RDEPEND="
 	ilbc? ( dev-libs/ilbc-rfc3951 )
 	spandsp? ( >=media-libs/spandsp-0.0.3 )
 	dahdi? ( net-misc/dahdi )
-	virtual/libusb:1"
+"
 DEPEND="app-doc/doxygen virtual/pkgconfig ${RDEPEND}"
 
 src_prepare() {
