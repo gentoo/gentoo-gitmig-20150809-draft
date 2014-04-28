@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-9999.ebuild,v 1.1 2014/04/28 02:35:33 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-9999.ebuild,v 1.2 2014/04/28 02:39:02 zx2c4 Exp $
 
 EAPI=5
 
 inherit subversion autotools
 
-DESCRIPTION="The Yate GSM base station"
-HOMEPAGE="http://www.yatebts.com/"
+DESCRIPTION="The Yate AV Suite"
+HOMEPAGE="http://yate.null.ro/"
 ESVN_REPO_URI="http://voip.null.ro/svn/yate/trunk"
 
 LICENSE="GPL-2"
