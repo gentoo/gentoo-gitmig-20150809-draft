@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.14.0-r1.ebuild,v 1.2 2013/05/03 12:03:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.14.0-r1.ebuild,v 1.3 2014/04/29 01:34:45 vapier Exp $
 
 EAPI=5
-inherit autotools eutils elisp-common user systemd
+inherit autotools eutils elisp-common user systemd toolchain-funcs
 
 MY_PV=${PV/_/-}
 MY_P=TiMidity++-${MY_PV}
@@ -57,31 +57,30 @@ src_prepare() {
 src_configure() {
 	export EXTRACFLAGS="${CFLAGS}" #385817
 
-	local myconf
+	local myconf=()
 	local audios
 
-	use flac && audios="${audios},flac"
-	use speex && audios="${audios},speex"
-	use vorbis && audios="${audios},vorbis"
-
-	use oss && audios="${audios},oss"
-	use jack && audios="${audios},jack"
-	use ao && audios="${audios},ao"
+	use flac && audios+=",flac"
+	use speex && audios+=",speex"
+	use vorbis && audios+=",vorbis"
+	use oss && audios+=",oss"
+	use jack && audios+=",jack"
+	use ao && audios+=",ao"
 
 	if use nas; then
-		audios="${audios},nas"
-		myconf="${myconf} --with-nas-library=/usr/$(get_libdir)/libaudio.so --with-x"
+		audios+=",nas"
+		myconf+=( --with-nas-library="/usr/$(get_libdir)/libaudio.so" --with-x )
 		use X || ewarn "Basic X11 support will be enabled because required by nas."
 	fi
 
 	if use alsa; then
-		audios="${audios},alsa"
-		myconf="${myconf} --with-default-output=alsa --enable-alsaseq"
+		audios+=",alsa"
+		myconf+=( --with-default-output=alsa --enable-alsaseq )
 	fi
 
 	# We disable motif by default and then only enable it if it's requested.
 	if use motif; then
-		myconf="${myconf} --enable-motif --with-x"
+		myconf+=( --enable-motif --with-x )
 		use X || ewarn "Basic X11 support will be enabled because required by motif."
 	fi
 
@@ -106,7 +105,7 @@ src_configure() {
 		$(use_enable gtk) \
 		$(use_enable tk tcltk) \
 		--disable-motif \
-		${myconf}
+		"${myconf[@]}"
 }
 
 src_install() {
