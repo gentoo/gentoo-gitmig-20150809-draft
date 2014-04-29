@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.43 2014/04/29 20:57:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.44 2014/04/29 20:59:00 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -315,6 +315,33 @@ multilib_prepare_wrappers() {
 		return
 	fi
 
+	for f in "${MULTILIB_CHOST_TOOLS[@]}"; do
+		# drop leading slash if it's there
+		f=${f#/}
+
+		local dir=${f%/*}
+		local fn=${f##*/}
+
+		if [[ -L ${root}/${f} ]]; then
+			# rewrite the symlink target
+			local target=$(readlink "${root}/${f}")
+			local target_dir
+			local target_fn=${target##*/}
+
+			[[ ${target} == */* ]] && target_dir=${target%/*}
+
+			ln -f -s "${target_dir+${target_dir}/}${CHOST}-${target_fn}" \
+				"${root}/${f}" || die
+		fi
+
+		mv "${root}/${f}" "${root}/${dir}/${CHOST}-${fn}" || die
+
+		# symlink the native one back
+		if multilib_is_native_abi; then
+			ln -s "${CHOST}-${fn}" "${root}/${f}" || die
+		fi
+	done
+
 	for f in "${MULTILIB_WRAPPED_HEADERS[@]}"; do
 		# drop leading slash if it's there
 		f=${f#/}
@@ -386,33 +413,6 @@ _EOF_
 			# Note: match a space afterwards to avoid collision potential.
 			sed -e "/${abi_flag} /s&error.*&include <${CHOST}${f}>&" \
 				-i "${ED}/tmp/multilib-include${f}" || die
-		fi
-	done
-
-	for f in "${MULTILIB_CHOST_TOOLS[@]}"; do
-		# drop leading slash if it's there
-		f=${f#/}
-
-		local dir=${f%/*}
-		local fn=${f##*/}
-
-		if [[ -L ${root}/${f} ]]; then
-			# rewrite the symlink target
-			local target=$(readlink "${root}/${f}")
-			local target_dir
-			local target_fn=${target##*/}
-
-			[[ ${target} == */* ]] && target_dir=${target%/*}
-
-			ln -f -s "${target_dir+${target_dir}/}${CHOST}-${target_fn}" \
-				"${root}/${f}" || die
-		fi
-
-		mv "${root}/${f}" "${root}/${dir}/${CHOST}-${fn}" || die
-
-		# symlink the native one back
-		if multilib_is_native_abi; then
-			ln -s "${CHOST}-${fn}" "${root}/${f}" || die
 		fi
 	done
 }
