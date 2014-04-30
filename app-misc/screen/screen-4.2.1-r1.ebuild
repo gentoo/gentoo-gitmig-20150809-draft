@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.2.1.ebuild,v 1.2 2014/04/28 20:43:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.2.1-r1.ebuild,v 1.1 2014/04/30 15:05:17 polynomial-c Exp $
 
 EAPI=5
 
@@ -39,10 +39,10 @@ src_prepare() {
 	# Fix manpage.
 	sed -i \
 		-e "s:/usr/local/etc/screenrc:${EPREFIX}/etc/screenrc:g" \
-		-e "s:/usr/local/screens:${EPREFIX}/run/screen:g" \
+		-e "s:/usr/local/screens:${EPREFIX}/var/run/screen:g" \
 		-e "s:/local/etc/screenrc:${EPREFIX}/etc/screenrc:g" \
 		-e "s:/etc/utmp:${EPREFIX}/var/run/utmp:g" \
-		-e "s:/local/screens/S-:${EPREFIX}/run/screen/S-:g" \
+		-e "s:/local/screens/S-:${EPREFIX}/var/run/screen/S-:g" \
 		doc/screen.1 \
 		|| die "sed doc/screen.1 failed"
 
@@ -59,7 +59,7 @@ src_configure() {
 	use debug && append-cppflags "-DDEBUG"
 
 	econf \
-		--with-socket-dir="${EPREFIX}/run/screen" \
+		--with-socket-dir="${EPREFIX}/var/run/screen" \
 		--with-sys-screenrc="${EPREFIX}/etc/screenrc" \
 		--with-pty-mode=0620 \
 		--with-pty-group=5 \
@@ -92,7 +92,7 @@ src_install() {
 	fi
 
 	dodir /etc/tmpfiles.d
-	echo "d /run/screen ${tmpfiles_perms} root ${tmpfiles_group}" >"${ED}"/etc/tmpfiles.d/screen.conf
+	echo "d /var/run/screen ${tmpfiles_perms} root ${tmpfiles_group}" >"${ED}"/etc/tmpfiles.d/screen.conf
 
 	insinto /usr/share/screen
 	doins terminfo/{screencap,screeninfo.src}
@@ -120,4 +120,17 @@ pkg_postinst() {
 	fi
 
 	ewarn "This revision changes the screen socket location to /run/screen."
+
+	# add /var/run/screen in case it doesn't exist yet. This should solve
+	# problems like bug #508634 where tmpfiles.d isn't in effect.
+	local rundir="${EROOT%/}/var/run/screen"
+	if [[ ! -d ${rundir} ]] ; then
+		if use multiuser || use prefix ; then
+			tmpfiles_group="root"
+		else
+			tmpfiles_group="utmp"
+		fi
+		mkdir -m 0775 "${rundir}"
+		chgrp ${tmpfiles_group} "${rundir}"
+	fi
 }
