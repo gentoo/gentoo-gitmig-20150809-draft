@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.147 2014/05/01 01:21:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.148 2014/05/01 01:22:44 vapier Exp $
+
+  01 May 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/hostapd-2.1-Fix-nt_password_hash-build.patch, hostapd-2.1-r1.ebuild:
+  Add fix from upstream for missing -lrt linkage.
 
   01 May 2014; Mike Frysinger <vapier@gentoo.org> hostapd-2.0-r1.ebuild,
   hostapd-2.1-r1.ebuild:
