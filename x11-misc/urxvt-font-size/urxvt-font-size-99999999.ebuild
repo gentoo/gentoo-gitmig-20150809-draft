@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/urxvt-font-size/urxvt-font-size-9999.ebuild,v 1.1 2014/05/02 04:57:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/urxvt-font-size/urxvt-font-size-99999999.ebuild,v 1.1 2014/05/02 05:00:30 radhermit Exp $
 
 EAPI=5
 inherit multilib
