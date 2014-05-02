@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.16-r2.ebuild,v 1.2 2014/04/28 17:50:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.16-r2.ebuild,v 1.3 2014/05/02 09:46:46 tommy Exp $
 
 EAPI=5
 
@@ -113,12 +113,12 @@ multilib_src_configure() {
 
 	# TODO: remove this (and add USE-dep) when DirectFB is converted,
 	# bug #484248 -- but beware of the circular dep.
-	if ! multilib_is_native_abi; then
+	if ! multilib_build_binaries; then
 		myopts+=" --disable-directfb"
 	fi
 
 	# TODO: remove this (and add USE-dep) when qtgui is converted, bug #498010
-	if ! multilib_is_native_abi; then
+	if ! multilib_build_binaries; then
 		myopts+=" --disable-qt"
 	fi
 
