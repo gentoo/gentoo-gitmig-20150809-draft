@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.2.5.ebuild,v 1.1 2014/05/03 15:47:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.2.5.ebuild,v 1.2 2014/05/03 15:56:28 jer Exp $
 
 EAPI=5
 
@@ -184,13 +184,9 @@ pkg_config() {
 	fi
 }
 
-pkg_postinst() {
-	elog "Users are no longer read from /etc/raddb/radiusd.conf. Please"
-	elog "configure them in /etc/conf.d/radius instead."
-	elog "Also make sure that if you change the pidfile in /etc/raddb/radiusd.conf"
-	elog "you change the pidfile definition in /etc/conf.d/radius as well."
-	if use ssl; then
-		ewarn "You have to run \`emerge --config =${CATEGORY}/${PF}\` to be able"
-		ewarn "to start the radiusd service."
+pkg_preinst() {
+	if ! has_version ${CATEGORY}/${PN} && use ssl; then
+		elog "You have to run \`emerge --config =${CATEGORY}/${PF}\` to be able"
+		elog "to start the radiusd service."
 	fi
 }
