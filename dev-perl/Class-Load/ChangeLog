@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Load
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/ChangeLog,v 1.43 2014/05/07 10:55:43 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/ChangeLog,v 1.44 2014/05/07 10:56:54 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> -Class-Load-0.06.ebuild,
+  -Class-Load-0.170.0.ebuild, -Class-Load-0.190.0.ebuild:
+  Drop old.
 
   07 May 2014; Mikle Kolyada <zlogene@gentoo.org> Class-Load-0.200.0.ebuild:
   ppc64 stable
