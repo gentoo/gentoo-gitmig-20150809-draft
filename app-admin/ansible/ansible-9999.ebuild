@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-9999.ebuild,v 1.18 2014/05/08 07:47:40 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-9999.ebuild,v 1.19 2014/05/08 07:55:42 pinkbyte Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python2_7 )
 EGIT_REPO_URI="git://github.com/ansible/ansible.git"
 EGIT_BRANCH="devel"
 
-inherit distutils-r1 git-2 readme.gentoo
+inherit distutils-r1 git-r3 readme.gentoo
 
 DESCRIPTION="Radically simple deployment, model-driven configuration management, and command execution framework"
 HOMEPAGE="http://ansible.com/"
