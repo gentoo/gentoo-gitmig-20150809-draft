@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.201 2014/05/08 20:05:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.202 2014/05/08 20:07:57 vapier Exp $
+
+  08 May 2014; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Update path to desktop icon #509588 by Anthony Ryan.
 
   08 May 2014; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Drop USE=neon now that upstream has dropped it #509590 by Anthony Ryan.

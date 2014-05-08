@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.153 2014/05/08 20:05:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.154 2014/05/08 20:07:57 vapier Exp $
 
 EAPI="5"
 
@@ -257,7 +257,7 @@ src_install() {
 	rm "${ED}"/usr/share/doc/*/{LICENSE.GPL,copying.txt}*
 
 	domenu tools/Linux/xbmc.desktop
-	newicon tools/Linux/xbmc-48x48.png xbmc.png
+	newicon media/icon48x48.png xbmc.png
 
 	# Remove optional addons (platform specific and disabled by USE flag).
 	local disabled_addons=(
