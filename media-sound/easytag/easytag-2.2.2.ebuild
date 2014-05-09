@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.2.2.ebuild,v 1.2 2014/05/09 19:15:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.2.2.ebuild,v 1.3 2014/05/09 19:21:20 ssuominen Exp $
 
 EAPI=5
 inherit fdo-mime gnome.org gnome2-utils
@@ -48,14 +48,14 @@ DEPEND="${RDEPEND}
 REQUIRED_USE="opus? ( vorbis )
 	speex? ( vorbis )"
 
+DOCS=( AUTHORS ChangeLog HACKING NEWS README THANKS TODO )
+
 src_prepare() {
 	sed -i \
 		-e '/^DEPRECATED_CPPFLAGS="/d' \
 		-e '/warning_flags/s: -Werror=.*:":' \
 		configure || die
 }
-
-DOCS=( AUTHORS ChangeLog HACKING NEWS README THANKS TODO )
 
 src_configure() {
 	# Kludge to make easytag find its locales (bug #503698)
