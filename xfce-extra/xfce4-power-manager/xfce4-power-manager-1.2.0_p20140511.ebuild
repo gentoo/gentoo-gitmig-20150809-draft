@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.2.0_p20140511.ebuild,v 1.1 2014/05/11 17:02:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.2.0_p20140511.ebuild,v 1.2 2014/05/11 17:05:03 ssuominen Exp $
 
 EAPI=5
 [[ ${PV} == *_p* ]] && EAUTORECONF=1
@@ -52,7 +52,7 @@ pkg_setup() {
 		$(use_enable xfce_plugins_brightness panel-plugins)
 		$(xfconf_use_debug)
 		)
-	
+
 	[[ ${PV} == *_p* ]] && XFCONF+=( --enable-maintainer-mode )
 
 	DOCS=( AUTHORS NEWS README TODO )
