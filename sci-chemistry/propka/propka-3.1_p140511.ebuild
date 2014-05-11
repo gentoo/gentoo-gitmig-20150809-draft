@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/propka/propka-3.1_p140511.ebuild,v 1.1 2014/05/11 10:44:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/propka/propka-3.1_p140511.ebuild,v 1.2 2014/05/11 10:48:00 jlec Exp $
 
 EAPI=5
 
@@ -26,4 +26,9 @@ python_prepare_all() {
 python_test() {
 	cd Tests || die
 	${PYTHON} runtest.py || die
+}
+
+python_install_all() {
+	dosym ${PN}31 /usr/bin/${PN}
+	distutils-r1_python_install_all
 }
