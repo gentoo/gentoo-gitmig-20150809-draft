@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20140508-r1.ebuild,v 1.1 2014/05/12 21:32:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20140406-r4.ebuild,v 1.1 2014/05/13 17:49:00 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -12,6 +12,8 @@ LICENSE="Artistic GPL-1 GPL-2 GPL-3 BSD BSD-2 BZIP2 AFL-2.1 LGPL-2.1 BSD-4 MIT
 
 KEYWORDS="-* ~amd64"
 IUSE="abi_x86_32"
+
+SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/emul/openssl-1.0.1g.tbz2"
 
 DEPEND=""
 RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
@@ -74,7 +76,6 @@ RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
 		>=sys-apps/util-linux-2.24.1-r3[abi_x86_32(-)]
 		>=sys-devel/libtool-2.4.2-r1[abi_x86_32(-)]
 		>=virtual/acl-0-r2[abi_x86_32(-)]
-		>=dev-libs/openssl-1.0.2_beta1-r3[abi_x86_32(-)]
 	)
 	>=sys-libs/glibc-2.16" # bug 340613
 
@@ -92,4 +93,9 @@ src_prepare() {
 
 	# Remove migrated stuff.
 	use abi_x86_32 && rm -f $(sed "${FILESDIR}/remove-native-${PVR}" -e '/^#/d')
+}
+
+src_install() {
+	emul-linux-x86_src_install
+	rm -rf "${ED}"/usr/include # needed for openssl tbz2
 }

@@ -13,7 +13,7 @@ usr/lib32/libbz2.so
 usr/lib32/libpng.so
 usr/lib32/libpng16.so
 usr/lib32/libpng16.so.16
-usr/lib32/libpng16.so.16.10.0
+usr/lib32/libpng16.so.16.8.0
 usr/lib32/pkgconfig/libpng.pc
 usr/lib32/pkgconfig/libpng16.pc
 usr/lib32/libudis86.so
@@ -198,10 +198,10 @@ lib32/libgpm.so.1.20.0
 usr/lib32/libgpm.so
 usr/lib32/libgmp.so
 usr/lib32/libgmp.so.10
-usr/lib32/libgmp.so.10.1.3
+usr/lib32/libgmp.so.10.1.2
 usr/lib32/libgmpxx.so
 usr/lib32/libgmpxx.so.4
-usr/lib32/libgmpxx.so.4.3.3
+usr/lib32/libgmpxx.so.4.3.2
 lib32/libpcre.so.1
 lib32/libpcre.so.1.2.1
 usr/lib32/libpcre.so
@@ -326,9 +326,9 @@ usr/lib32/pkgconfig/blkid.pc
 usr/lib32/pkgconfig/mount.pc
 usr/lib32/pkgconfig/uuid.pc
 usr/lib32/libcrypto.so
-usr/lib32/libcrypto.so.1.0.0
+usr/lib32/libcrypto.so.0.9.8
 usr/lib32/libssl.so
-usr/lib32/libssl.so.1.0.0
+usr/lib32/libssl.so.0.9.8
 usr/lib32/pkgconfig/libcrypto.pc
 usr/lib32/pkgconfig/libssl.pc
 usr/lib32/pkgconfig/openssl.pc
