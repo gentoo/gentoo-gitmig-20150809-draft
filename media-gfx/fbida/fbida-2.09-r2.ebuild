@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09-r1.ebuild,v 1.4 2014/05/15 22:18:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09-r2.ebuild,v 1.1 2014/05/15 22:29:12 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -80,7 +80,7 @@ src_configure() {
 		use ${useflag} && option="yes"
 
 		sed -i \
-			-e "s|${config}.*|${config} := HAVE_${option}|" \
+			-e "s|HAVE_${config}.*|HAVE_${config} := ${option}|" \
 			"${S}/Make.config" || die
 	}
 
