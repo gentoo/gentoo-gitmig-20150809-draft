@@ -1,16 +1,5 @@
 --- a/configure.in
 +++ b/configure.in
-@@ -35,8 +35,8 @@
- MYPCFILES="kyotocabinet.pc"
- 
- # Building flags
--MYCFLAGS="-Wall -ansi -pedantic -fPIC -fsigned-char -g0"
--MYCXXFLAGS="-Wall -fPIC -fsigned-char -g0"
-+MYCFLAGS="-Wall -ansi -pedantic -fPIC -fsigned-char"
-+MYCXXFLAGS="-Wall -fPIC -fsigned-char"
- MYCPPFLAGS="-I. -I\$(INCLUDEDIR)"
- MYCPPFLAGS="$MYCPPFLAGS -DNDEBUG -D_GNU_SOURCE=1"
- MYCPPFLAGS="$MYCPPFLAGS -D_FILE_OFFSET_BITS=64 -D_REENTRANT -D__EXTENSIONS__"
 @@ -193,28 +193,6 @@
  # Byte order
  AC_C_BIGENDIAN(MYCPPFLAGS="$MYCPPFLAGS -D_MYBIGEND")
