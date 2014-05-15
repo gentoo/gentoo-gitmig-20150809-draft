@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.3.ebuild,v 1.4 2014/05/11 15:21:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.3.ebuild,v 1.5 2014/05/15 02:06:59 cardoe Exp $
 
 EAPI=5
 
@@ -158,7 +158,7 @@ VIRTNET_CONFIG_CHECK="
 "
 
 BWLMT_CONFIG_CHECK="
-	~BRIDGE_EBT_NAT
+	~BRIDGE_EBT_T_NAT
 	~NET_SCH_HTB
 	~NET_SCH_SFQ
 	~NET_SCH_INGRESS
