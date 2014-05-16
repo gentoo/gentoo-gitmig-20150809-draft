@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15697 2014/05/16 21:52:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15698 2014/05/16 22:01:14 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -391,10 +391,10 @@ sys-fs/rdiff-backup-fs
 <net-fs/samba-3.6
 
 # Michał Górny <mgorny@gentoo.org> (12 Mar 2014)
-# Masked for testing.
->=dev-python/pypy-2.2
->=dev-python/pypy-bin-2.2
->=virtual/pypy-2.2
+# Masked for testing and binary package built.
+>=dev-python/pypy-2.3
+>=dev-python/pypy-bin-2.3
+>=virtual/pypy-2.3
 
 # Samuli Suominen <ssuominen@gentoo.org> (11 Mar 2014)
 # Xfce 4.12 unannounced prerelease, use at your own risk
