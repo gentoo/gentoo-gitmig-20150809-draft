@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/balde/balde-0.1.ebuild,v 1.1 2014/05/18 21:34:24 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/balde/balde-0.1.1.ebuild,v 1.1 2014/05/18 21:52:47 rafaelmartins Exp $
 
 EAPI=5
 
