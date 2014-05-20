@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.2.2.ebuild,v 1.5 2014/05/20 18:26:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.2.2.ebuild,v 1.6 2014/05/20 18:30:09 aballier Exp $
 
 EAPI="5"
 
@@ -91,7 +91,7 @@ RDEPEND="
 		wavpack? ( media-sound/wavpack )
 		webp? ( media-libs/libwebp )
 		x264? ( >=media-libs/x264-0.0.20111017:= )
-		x265? ( <media-libs/x265-0.9:= )
+		x265? ( media-libs/x265:= )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
 	fdk? ( >=media-libs/fdk-aac-0.1.3 )
