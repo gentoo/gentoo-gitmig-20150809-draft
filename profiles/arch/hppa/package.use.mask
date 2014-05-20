@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.139 2014/05/20 10:04:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.140 2014/05/20 10:23:30 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -42,11 +42,6 @@ dev-python/pyquery test
 # Jeroen Roovers <jer@gentoo.org> (2 Jan 2013)
 # Mask non-keyworded sci-libs/hdf5 for sci-mathematics/octave
 sci-mathematics/octave hdf5 qhull
-
-# Robin H Johnson <robbat2@gentoo.org> (01 Nov 2012)
-# MySQL 5.5 wants systemtap, tcmalloc & jemalloc
->=dev-db/mysql-5.5 systemtap
->=dev-db/mariadb-5.5 systemtap
 
 # Jeroen Roovers <jer@gentoo.org> (10 Jul 2012)
 # USE=clang needs sys-devel/llvm which has not been ported
