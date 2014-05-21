@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-transport/netty-transport-4.0.19.ebuild,v 1.1 2014/05/21 10:38:11 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-transport/netty-transport-4.0.19.ebuild,v 1.2 2014/05/21 10:48:24 tomwij Exp $
 
 EAPI="5"
 
@@ -53,8 +53,6 @@ java_prepare() {
 }
 
 src_test() {
-	# EANT_EXTRA_ARGS="${EANT_EXTRA_ARGS}:$(java-pkg_getjars --build-only ant-core,easymock-3.2,junit-4)"
-
 	ANT_TASKS="ant-junit" java-pkg-2_src_test
 }
 
