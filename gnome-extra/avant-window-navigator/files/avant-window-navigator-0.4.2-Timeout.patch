@@ -1,5 +1,5 @@
---- applets/quick-prefs/applet.vala.orig	2013-11-27 09:40:25.000000000 +0100
-+++ applets/quick-prefs/applet.vala	2014-05-21 16:09:36.318740677 +0200
+--- a/applets/quick-prefs/applet.vala
++++ b/applets/quick-prefs/applet.vala
 @@ -288,7 +288,7 @@
  
      if (this.timer_id == 0)
