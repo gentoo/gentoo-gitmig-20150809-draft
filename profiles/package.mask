@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15707 2014/05/21 06:41:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15708 2014/05/21 10:44:13 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -482,6 +482,8 @@ lxde-base/lxpolkit
 >=app-crypt/heimdal-1.5.3-r2
 >=virtual/krb5-0-r1
 >=app-emulation/emul-linux-x86-baselibs-20140508-r3
+>=net-nds/openldap-2.4.38-r2
+>=app-emulation/emul-linux-x86-baselibs-20140508-r4
 
 # Luca Barbato <lu_zero@gentoo.org> (20 Feb 2014)
 # Beta ebuild, unmask to test the tree.
