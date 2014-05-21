@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tweepy/tweepy-2.1.ebuild,v 1.1 2014/05/21 01:47:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tweepy/tweepy-2.1.ebuild,v 1.2 2014/05/21 01:51:04 idella4 Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE="doc examples test"
 RESTRICT="test" #fails all
 
 python_prepare_all() {
-	# Required to avoid fgile collisions at install
+	# Required to avoid file collisions at install
 	sed -e s":find_packages():find_packages(exclude=['tests','tests.*']):" -i setup.py || die
 	distutils-r1_python_prepare_all
 }
