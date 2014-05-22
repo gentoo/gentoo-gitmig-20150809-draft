@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/hiawatha/hiawatha-9.5.ebuild,v 1.1 2014/05/22 13:16:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/hiawatha/hiawatha-9.5.ebuild,v 1.2 2014/05/22 13:19:10 hasufell Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.hiawatha-webserver.org/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug +cache ipv6 monitor +rewrite rproxy ssl tomahawk +xslt"
 
 RDEPEND="
