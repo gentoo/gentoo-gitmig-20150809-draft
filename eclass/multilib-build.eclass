@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.50 2014/05/23 07:38:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.51 2014/05/23 07:39:26 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -227,6 +227,9 @@ multilib_parallel_foreach_abi() {
 # Runs the given command with setup for the 'best' (usually native) ABI.
 multilib_for_best_abi() {
 	debug-print-function ${FUNCNAME} "${@}"
+
+	eqawarn "QA warning: multilib_for_best_abi() function is deprecated and should"
+	eqawarn "not be used. The multilib_is_native_abi() check may be used instead."
 
 	local MULTIBUILD_VARIANTS=( $(multilib_get_enabled_abi_pairs) )
 
