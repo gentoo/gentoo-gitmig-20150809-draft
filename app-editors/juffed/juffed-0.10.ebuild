@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.10.ebuild,v 1.1 2014/05/23 06:38:43 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.10.ebuild,v 1.2 2014/05/23 06:39:45 kensington Exp $
 
 EAPI=5
 
@@ -37,4 +37,3 @@ src_configure() {
 
 	cmake-utils_src_configure
 }
-
