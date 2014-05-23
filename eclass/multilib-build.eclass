@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.52 2014/05/23 07:47:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.53 2014/05/23 07:53:22 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -458,6 +458,24 @@ multilib_prepare_wrappers() {
 #   elif(_MIPS_SIM == _ABIO32) /* o32 */
 #       error "abi_mips_o32 not supported by the package."
 #   endif
+#elif defined(__sparc__)
+#	if defined(__arch64__)
+#       error "abi_sparc_64 not supported by the package."
+#	else
+#       error "abi_sparc_32 not supported by the package."
+#	endif
+#elif defined(__s390__)
+#	if defined(__s390x__)
+#       error "abi_s390_64 not supported by the package."
+#	else
+#       error "abi_s390_32 not supported by the package."
+#	endif
+#elif defined(__powerpc__)
+#	if defined(__powerpc64__)
+#       error "abi_ppc_64 not supported by the package."
+#	else
+#       error "abi_ppc_32 not supported by the package."
+#	endif
 #else
 #	error "No ABI matched, please report a bug to bugs.gentoo.org"
 #endif
