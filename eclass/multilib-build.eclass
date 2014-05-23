@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.49 2014/05/23 07:11:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.50 2014/05/23 07:38:36 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -72,6 +72,24 @@ _MULTILIB_FLAGS=(
 # @CODE
 # RDEPEND="dev-libs/libfoo[${MULTILIB_USEDEP}]
 #	net-libs/libbar[ssl,${MULTILIB_USEDEP}]"
+# @CODE
+
+# @ECLASS-VARIABLE: MULTILIB_ABI_FLAG
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# The complete ABI name. Resembles the USE flag name.
+#
+# This is set within multilib_foreach_abi(),
+# multilib_parallel_foreach_abi() and multilib-minimal sub-phase
+# functions.
+#
+# It may be null (empty) when the build is done on ABI not controlled
+# by a USE flag (e.g. on non-multilib arch or when using multilib
+# portage). The build will always be done for a single ABI then.
+#
+# Example value:
+# @CODE
+# abi_x86_64
 # @CODE
 
 _multilib_build_set_globals() {
@@ -161,7 +179,9 @@ multilib_get_enabled_abi_pairs() {
 _multilib_multibuild_wrapper() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	local ABI=${MULTIBUILD_VARIANT}
+	local ABI=${MULTIBUILD_VARIANT#*:}
+	local MULTILIB_ABI_FLAG=${MULTIBUILD_VARIANT%:*}
+
 	multilib_toolchain_setup "${ABI}"
 	"${@}"
 }
@@ -178,7 +198,7 @@ _multilib_multibuild_wrapper() {
 multilib_foreach_abi() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	local MULTIBUILD_VARIANTS=( $(multilib_get_enabled_abis) )
+	local MULTIBUILD_VARIANTS=( $(multilib_get_enabled_abi_pairs) )
 	multibuild_foreach_variant _multilib_multibuild_wrapper "${@}"
 }
 
@@ -197,7 +217,7 @@ multilib_foreach_abi() {
 multilib_parallel_foreach_abi() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	local MULTIBUILD_VARIANTS=( $(multilib_get_enabled_abis) )
+	local MULTIBUILD_VARIANTS=( $(multilib_get_enabled_abi_pairs) )
 	multibuild_parallel_foreach_variant _multilib_multibuild_wrapper "${@}"
 }
 
@@ -208,7 +228,7 @@ multilib_parallel_foreach_abi() {
 multilib_for_best_abi() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	local MULTIBUILD_VARIANTS=( $(multilib_get_enabled_abis) )
+	local MULTIBUILD_VARIANTS=( $(multilib_get_enabled_abi_pairs) )
 
 	multibuild_for_best_variant _multilib_multibuild_wrapper "${@}"
 }
@@ -262,7 +282,7 @@ multilib_check_headers() {
 multilib_copy_sources() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	local MULTIBUILD_VARIANTS=( $(multilib_get_enabled_abis) )
+	local MULTIBUILD_VARIANTS=( $(multilib_get_enabled_abi_pairs) )
 	multibuild_copy_sources
 }
 
