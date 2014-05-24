@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.88 2014/05/24 08:47:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.89 2014/05/24 08:48:40 ulm Exp $
 #
 # @ECLASS: elisp-common.eclass
 # @MAINTAINER:
@@ -345,23 +345,19 @@ elisp-site-file-install() {
 
 elisp-site-regen() {
 	local sitelisp=${ROOT}${EPREFIX}${SITELISP}
-	local sf i null="" page=$'\f'
+	local sf i ret=0 null="" page=$'\f'
 	local -a sflist
-
-	if [[ ! -d ${sitelisp} ]]; then
-		eerror "elisp-site-regen: Directory ${sitelisp} does not exist"
-		return 1
-	fi
-
-	if [[ ! -d ${T} ]]; then
-		eerror "elisp-site-regen: Temporary directory ${T} does not exist"
-		return 1
-	fi
 
 	if [[ ${EBUILD_PHASE} = *rm && ! -e ${sitelisp}/site-gentoo.el ]]; then
 		ewarn "Refusing to create site-gentoo.el in ${EBUILD_PHASE} phase."
 		return 0
 	fi
+
+	[[ -d ${sitelisp} ]] \
+		|| die "elisp-site-regen: Directory ${sitelisp} does not exist"
+
+	[[ -d ${T} ]] \
+		|| die "elisp-site-regen: Temporary directory ${T} does not exist"
 
 	ebegin "Regenerating site-gentoo.el for GNU Emacs (${EBUILD_PHASE})"
 
@@ -369,7 +365,7 @@ elisp-site-regen() {
 		[[ -r ${sf} ]] && sflist+=("${sf}")
 	done
 
-	cat <<-EOF >"${T}"/site-gentoo.el
+	cat <<-EOF >"${T}"/site-gentoo.el || ret=$?
 	;;; site-gentoo.el --- site initialisation for Gentoo-installed packages
 
 	;;; Commentary:
@@ -379,8 +375,8 @@ elisp-site-regen() {
 	;;; Code:
 	EOF
 	# Use sed instead of cat here, since files may miss a trailing newline.
-	sed '$q' "${sflist[@]}" </dev/null >>"${T}"/site-gentoo.el
-	cat <<-EOF >>"${T}"/site-gentoo.el
+	sed '$q' "${sflist[@]}" </dev/null >>"${T}"/site-gentoo.el || ret=$?
+	cat <<-EOF >>"${T}"/site-gentoo.el || ret=$?
 
 	${page}
 	(provide 'site-gentoo)
@@ -393,7 +389,10 @@ elisp-site-regen() {
 	;;; site-gentoo.el ends here
 	EOF
 
-	if cmp -s "${sitelisp}"/site-gentoo.el "${T}"/site-gentoo.el; then
+	if [[ ${ret} -ne 0 ]]; then
+		eend ${ret} "elisp-site-regen: Writing site-gentoo.el failed."
+		die
+	elif cmp -s "${sitelisp}"/site-gentoo.el "${T}"/site-gentoo.el; then
 		# This prevents outputting unnecessary text when there
 		# was actually no change.
 		# A case is a remerge where we have doubled output.
@@ -402,7 +401,7 @@ elisp-site-regen() {
 		einfo "... no changes."
 	else
 		mv "${T}"/site-gentoo.el "${sitelisp}"/site-gentoo.el
-		eend
+		eend $? "elisp-site-regen: Replacing site-gentoo.el failed" || die
 		case ${#sflist[@]} in
 			0) [[ ${PN} = emacs-common-gentoo ]] \
 				|| ewarn "... Huh? No site initialisation files found." ;;
