@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.87 2013/11/04 21:36:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.88 2014/05/24 08:47:29 ulm Exp $
 #
 # @ECLASS: elisp-common.eclass
 # @MAINTAINER:
@@ -342,10 +342,6 @@ elisp-site-file-install() {
 # Regenerate the site-gentoo.el file, based on packages' site
 # initialisation files in the /usr/share/emacs/site-lisp/site-gentoo.d/
 # directory.
-#
-# Note: Before December 2007, site initialisation files were installed
-# in /usr/share/emacs/site-lisp/.  For backwards compatibility, this
-# location is still supported when generating site-gentoo.el.
 
 elisp-site-regen() {
 	local sitelisp=${ROOT}${EPREFIX}${SITELISP}
@@ -369,16 +365,8 @@ elisp-site-regen() {
 
 	ebegin "Regenerating site-gentoo.el for GNU Emacs (${EBUILD_PHASE})"
 
-	for sf in "${sitelisp}"/[0-9][0-9]*-gentoo.el \
-		"${sitelisp}"/site-gentoo.d/[0-9][0-9]*.el
-	do
-		[[ -r ${sf} ]] || continue
-		# sort files by their basename. straight insertion sort.
-		for ((i=${#sflist[@]}; i>0; i--)); do
-			[[ ${sf##*/} < ${sflist[i-1]##*/} ]] || break
-			sflist[i]=${sflist[i-1]}
-		done
-		sflist[i]=${sf}
+	for sf in "${sitelisp}"/site-gentoo.d/[0-9][0-9]*.el; do
+		[[ -r ${sf} ]] && sflist+=("${sf}")
 	done
 
 	cat <<-EOF >"${T}"/site-gentoo.el
