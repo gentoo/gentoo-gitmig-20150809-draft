@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1081 2014/05/24 08:10:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1082 2014/05/24 08:15:55 phajdan.jr Exp $
+
+  24 May 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-ffmpeg-r0.patch, chromium-36.0.1985.18.ebuild:
+  Fix build on hardened x86, bug #507080 by Anthoine Bourgeois.
 
   24 May 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   -chromium-34.0.1847.137.ebuild, -chromium-35.0.1916.114.ebuild,
