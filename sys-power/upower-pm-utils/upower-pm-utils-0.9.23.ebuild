@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower-pm-utils/upower-pm-utils-0.9.23.ebuild,v 1.1 2014/05/26 19:37:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower-pm-utils/upower-pm-utils-0.9.23.ebuild,v 1.2 2014/05/26 19:38:36 ssuominen Exp $
 
 EAPI=5
 inherit eutils systemd
 
-DESCRIPTION="The upstream upower 0.9 git branch for use with sys-power/pm-utils, see sys-power/upower DESCRIPTION for more"
+DESCRIPTION="The upstream upower 0.9 git branch for use with sys-power/pm-utils"
 HOMEPAGE="http://upower.freedesktop.org/"
 SRC_URI="http://upower.freedesktop.org/releases/upower-${PV}.tar.xz"
 
