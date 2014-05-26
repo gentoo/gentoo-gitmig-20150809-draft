@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.415 2014/05/26 13:03:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.416 2014/05/26 13:05:12 blueness Exp $
+
+  26 May 2014; Anthony G. Basile <blueness@gentoo.org>
+  -tor-0.2.5.4_alpha.ebuild:
+  Remove older alpha
 
   26 May 2014; Anthony G. Basile <blueness@gentoo.org> tor-0.2.4.22.ebuild:
   stable on ppc and ppc64, bug #510564
