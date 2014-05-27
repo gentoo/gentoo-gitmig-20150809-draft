@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.1.ebuild,v 1.1 2014/05/27 17:11:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.1.ebuild,v 1.2 2014/05/27 17:12:55 ssuominen Exp $
 
 EAPI=5
 inherit eutils libtool multilib multilib-minimal toolchain-funcs
@@ -53,12 +53,4 @@ multilib_src_configure() {
 multilib_src_install_all() {
 	prune_libtool_files
 	einstalldocs
-}
-
-pkg_preinst() {
-	preserve_old_lib /usr/$(get_libdir)/${PN}$(get_libname 5)
-}
-
-pkg_postinst() {
-	preserve_old_lib_notify /usr/$(get_libdir)/${PN}$(get_libname 5)
 }
