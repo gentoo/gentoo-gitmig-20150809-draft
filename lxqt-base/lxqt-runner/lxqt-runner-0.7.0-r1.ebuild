@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-runner/lxqt-runner-0.7.0.ebuild,v 1.1 2014/05/27 15:37:56 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-runner/lxqt-runner-0.7.0-r1.ebuild,v 1.1 2014/05/27 16:24:59 jauhien Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -31,3 +31,8 @@ RDEPEND="dev-qt/qtcore:4
 	x11-libs/libX11"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+src_install(){
+	cmake-utils_src_install
+	doman man/*.1
+}
