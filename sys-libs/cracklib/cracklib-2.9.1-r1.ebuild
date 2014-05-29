@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.9.1-r1.ebuild,v 1.2 2014/05/29 21:21:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.9.1-r1.ebuild,v 1.3 2014/05/29 22:00:54 mgorny Exp $
 
 EAPI="4"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -51,10 +51,7 @@ pkg_setup() {
 
 src_prepare() {
 	elibtoolize #269003
-	sed -i \
-		-e 's:_cracklib.c:@srcdir@/&:' \
-		-e '/include/s:builddir:srcdir:' \
-		python/setup.py.in || die
+	epatch "${FILESDIR}"/cracklib-2.9.1-setup.py-srcdir.patch
 	do_python
 }
 
