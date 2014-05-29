@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15738 2014/05/29 18:39:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15739 2014/05/29 22:18:40 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,6 +36,7 @@
 >=media-libs/libart_lgpl-2.3.21-r2
 >=sys-libs/cracklib-2.9.1-r1
 >=app-emulation/emul-linux-x86-baselibs-20140508-r7
+>=sys-process/audit-2.2.2-r2
 
 # Vladimir Smirnov <civil@gentoo.org> (27 May 2014)
 # Masked for testing, will defenitely cause major breakage
