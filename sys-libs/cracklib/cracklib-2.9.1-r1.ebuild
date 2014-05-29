@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.9.1-r1.ebuild,v 1.1 2014/05/29 18:42:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.9.1-r1.ebuild,v 1.2 2014/05/29 21:21:18 mgorny Exp $
 
 EAPI="4"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -80,7 +80,7 @@ multilib_src_test() {
 }
 
 python_test() {
-	nosetests || die "Tests fail with ${EPYTHON}"
+	nosetests -w "${S}"/python || die "Tests fail with ${EPYTHON}"
 }
 
 multilib_src_install() {
