@@ -1,11 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.16.7.ebuild,v 1.6 2014/02/22 22:35:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.18.3.ebuild,v 1.1 2014/05/29 20:02:38 pacho Exp $
 
 EAPI="5"
+GCONF_DEBUG="no"
 PYTHON_COMPAT=( python2_{6,7} )
 
-inherit eutils python-any-r1
+inherit gnome2 eutils python-any-r1
 
 DESCRIPTION="A Jabber/XMPP connection manager, with handling of single and multi user chats and voice calls"
 HOMEPAGE="http://telepathy.freedesktop.org"
@@ -13,19 +14,20 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-linux"
-IUSE="gnutls +jingle test"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"
+IUSE="gnutls +jingle plugins test"
 
 # Prevent false positives due nested configure
 QA_CONFIGURE_OPTIONS=".*"
 
 # FIXME: missing sasl-2 for tests ? (automagic)
 # missing libiphb for wocky ?
+# x11-libs/gtksourceview:3.0 needed by telepathy-gabble-xmpp-console, bug #495184
 RDEPEND="
-	>=dev-libs/glib-2.30:2
+	>=dev-libs/glib-2.32:2
 	>=sys-apps/dbus-1.1.0
 	>=dev-libs/dbus-glib-0.82
-	>=net-libs/telepathy-glib-0.18
+	>=net-libs/telepathy-glib-0.19.9
 
 	dev-db/sqlite:3
 	dev-libs/libxml2
@@ -35,6 +37,7 @@ RDEPEND="
 	jingle? ( || ( net-libs/libsoup:2.4[ssl]
 		>=net-libs/libsoup-2.33.1 )
 		>=net-libs/libnice-0.0.11 )
+	plugins? ( x11-libs/gtksourceview:3.0[introspection] )
 
 	!<net-im/telepathy-mission-control-5.5.0
 "
@@ -52,23 +55,18 @@ pkg_setup() {
 }
 
 src_configure() {
-	econf \
+	gnome2_src_configure \
 		--disable-coding-style-checks \
 		--disable-static \
 		--disable-Werror \
-		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--enable-file-transfer \
 		$(use_enable jingle voip) \
 		$(use_enable jingle google-relay) \
+		$(use_enable plugins) \
 		--with-tls=$(usex gnutls gnutls openssl)
 }
 
 src_test() {
 	# Twisted tests fail, upstream bug #30565
 	emake -C tests check-TESTS
-}
-
-src_install() {
-	default
-	prune_libtool_files
 }
