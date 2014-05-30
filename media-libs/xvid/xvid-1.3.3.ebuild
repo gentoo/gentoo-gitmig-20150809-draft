@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.3.3.ebuild,v 1.1 2014/05/30 12:19:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.3.3.ebuild,v 1.2 2014/05/30 12:23:21 ssuominen Exp $
 
 EAPI=5
 inherit flag-o-matic multilib multilib-minimal
@@ -20,7 +20,8 @@ IUSE="examples elibc_FreeBSD +threads pic"
 NASM=">=dev-lang/nasm-2"
 YASM=">=dev-lang/yasm-1"
 
-DEPEND="amd64? ( || ( ${YASM} ${NASM} ) )
+DEPEND="sys-apps/grep
+	amd64? ( || ( ${YASM} ${NASM} ) )
 	amd64-fbsd? ( ${NASM} )
 	x86? ( || ( ${YASM} ${NASM} ) )
 	x86-fbsd? ( ${NASM} )"
