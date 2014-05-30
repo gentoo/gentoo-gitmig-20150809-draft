@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-212-r4.ebuild,v 1.2 2014/05/03 17:35:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-212-r5.ebuild,v 1.1 2014/05/30 02:29:14 floppym Exp $
 
 EAPI=5
 
@@ -313,6 +313,12 @@ multilib_src_install() {
 	local pcfiles=( src/compat-libs/libsystemd-{daemon,id128,journal,login}.pc )
 	emake "${mymakeopts[@]}" install-pkgconfiglibDATA \
 		pkgconfiglib_DATA="${pcfiles[*]}"
+
+	# Create symlinks for old libs
+	dosym libsystemd.so "/usr/$(get_libdir)/libsystemd-daemon.so"
+	dosym libsystemd.so "/usr/$(get_libdir)/libsystemd-id128.so"
+	dosym libsystemd.so "/usr/$(get_libdir)/libsystemd-journal.so"
+	dosym libsystemd.so "/usr/$(get_libdir)/libsystemd-login.so"
 }
 
 multilib_src_install_all() {
