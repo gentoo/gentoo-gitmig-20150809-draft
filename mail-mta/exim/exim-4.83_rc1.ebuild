@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.83_rc1.ebuild,v 1.3 2014/05/30 02:18:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.83_rc1.ebuild,v 1.4 2014/05/30 05:36:07 grobian Exp $
 
 EAPI="5"
 
@@ -135,6 +135,7 @@ src_configure() {
 		EOC
 	fi
 
+	#
 	# mail storage formats
 
 	# mailstore is Exim's traditional storage format
@@ -156,6 +157,7 @@ src_configure() {
 		EOC
 	fi
 
+	#
 	# lookup methods
 
 	# use the "native" interface to the DBM library, support passwd
@@ -218,6 +220,7 @@ src_configure() {
 		EOC
 	fi
 
+	#
 	# Exim monitor, enabled by default, controlled via X USE-flag,
 	# disable if not requested, bug #46778
 	if use X; then
@@ -226,6 +229,7 @@ src_configure() {
 		sed -i -e '/^EXIM_MONITOR=/s/^/# /' Makefile
 	fi
 
+	#
 	# features
 
 	# content scanning support
@@ -305,6 +309,7 @@ src_configure() {
 		EOC
 	fi
 
+	#
 	# experimental features
 
 	# Distributed Checksum Clearinghouse
@@ -357,6 +362,7 @@ src_configure() {
 		EOC
 	fi
 
+	#
 	# authentication (SMTP AUTH)
 
 	# standard bits
