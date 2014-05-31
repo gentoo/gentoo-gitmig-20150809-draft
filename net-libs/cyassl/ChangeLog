@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/cyassl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/ChangeLog,v 1.50 2014/05/31 13:12:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/ChangeLog,v 1.51 2014/05/31 13:20:34 blueness Exp $
+
+*cyassl-3.0.0 (31 May 2014)
+
+  31 May 2014; Anthony G. Basile <blueness@gentoo.org> +cyassl-3.0.0.ebuild:
+  Version bump
 
   31 May 2014; Anthony G. Basile <blueness@gentoo.org> cyassl-2.9.4.ebuild,
   metadata.xml:
