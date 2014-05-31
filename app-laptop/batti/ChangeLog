@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/batti
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/ChangeLog,v 1.19 2014/05/31 18:06:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/ChangeLog,v 1.20 2014/05/31 18:19:54 pacho Exp $
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> -batti-0.3.8-r2.ebuild,
+  -files/batti-0.3.8-upower-0.99.patch, batti-0.3.8-r1.ebuild:
+  Revert as ssuominen reported breakage with upower-pm-utils. This is only
+  compatible with old upower then
 
 *batti-0.3.8-r2 (31 May 2014)
 
