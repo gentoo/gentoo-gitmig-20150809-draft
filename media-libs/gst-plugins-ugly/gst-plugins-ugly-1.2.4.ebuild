@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/gst-plugins-ugly-1.0.8.ebuild,v 1.1 2013/08/26 22:42:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/gst-plugins-ugly-1.2.4.ebuild,v 1.1 2014/05/31 14:11:40 pacho Exp $
 
 EAPI="5"
 
@@ -16,8 +16,8 @@ IUSE="+orc"
 
 RDEPEND="
 	>=dev-libs/glib-2.32:2
-	>=media-libs/gstreamer-1:${SLOT}
-	>=media-libs/gst-plugins-base-1:${SLOT}
+	>=media-libs/gstreamer-1.2.4:${SLOT}
+	>=media-libs/gst-plugins-base-1.2:${SLOT}
 	orc? ( >=dev-lang/orc-0.4.16 )
 "
 DEPEND="${RDEPEND}
