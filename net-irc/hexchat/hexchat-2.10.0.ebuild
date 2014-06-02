@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.10.0.ebuild,v 1.1 2014/06/02 18:06:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.10.0.ebuild,v 1.2 2014/06/02 18:09:33 hasufell Exp $
 
 EAPI=5
 
@@ -58,10 +58,12 @@ pkg_setup() {
 		use plugin-fishlim && myplugins+="plugin-fishlim\n"
 		use plugin-sysinfo && myplugins+="plugin-sysinfo\n"
 
-		ewarn "The following plugins/interfaces have been disabled, because"
-		ewarn "\"plugins\" USE flag is disabled. Check metadata.xml"
-		ewarn "to get more information or run \"equery u hexchat\"."
-		ewarn "\n${myplugins}"
+		if [[ ${myplugins} ]] ; then
+			ewarn "The following plugins/interfaces have been disabled, because"
+			ewarn "\"plugins\" USE flag is disabled. Check metadata.xml"
+			ewarn "to get more information or run \"equery u hexchat\"."
+			ewarn "\n${myplugins}"
+		fi
 	fi
 }
 
