@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gtk-splitter/gtk-splitter-2.2.1-r1.ebuild,v 1.1 2014/04/02 09:49:55 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gtk-splitter/gtk-splitter-2.2.1-r1.ebuild,v 1.2 2014/06/02 08:07:41 tomwij Exp $
 
 EAPI="5"
 
 inherit eutils
 
-DESCRIPTION="Split files into smaller pieces and combine them back together."
+DESCRIPTION="Split files into smaller pieces and combine them back together"
 HOMEPAGE="http://gtk-splitter.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
