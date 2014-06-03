@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.15 2014/06/03 12:19:02 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.16 2014/06/03 12:25:22 hasufell Exp $
 
 EAPI=5
 
@@ -17,7 +17,6 @@ SLOT="0"
 KEYWORDS=""
 IUSE="dbus +gtk ipv6 libcanberra libnotify libproxy nls ntlm perl +plugins plugin-checksum plugin-doat plugin-fishlim plugin-sysinfo python spell ssl theme-manager"
 REQUIRED_USE="plugins? ( python? ( ${PYTHON_REQUIRED_USE} ) )"
-RESTRICT="test"
 
 DEPEND="dev-libs/glib:2
 	dbus? ( >=dev-libs/dbus-glib-0.98 )
