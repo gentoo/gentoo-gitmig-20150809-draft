@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.153 2014/05/15 17:11:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.154 2014/06/03 06:20:53 aballier Exp $
 
 EAPI="5"
 
@@ -320,7 +320,7 @@ src_install() {
 	done
 
 	cd "${S}"
-	dodoc Changelog README CREDITS doc/*.txt doc/APIchanges doc/RELEASE_NOTES
+	dodoc Changelog README.md CREDITS doc/*.txt doc/APIchanges doc/RELEASE_NOTES
 	use doc && dohtml -r doc/*
 	if use examples ; then
 		dodoc -r doc/examples
