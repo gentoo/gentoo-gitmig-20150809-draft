@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/accel-ppp-1.7.9999.ebuild,v 1.2 2014/06/03 07:34:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/accel-ppp-1.7.9999.ebuild,v 1.3 2014/06/03 07:49:17 pinkbyte Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://accel-ppp.git.sourceforge.net/gitroot/accel-ppp/accel-ppp"
 EGIT_BRANCH="1.7"
-inherit cmake-utils git-2 linux-info
+inherit cmake-utils git-r3 linux-info
 
 DESCRIPTION="High performance PPTP, PPPoE and L2TP server"
 HOMEPAGE="http://accel-ppp.sourceforge.net/"
