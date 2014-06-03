@@ -21,8 +21,7 @@ index 87d610c..8fc02a0 100644
  Gladeui_2_0_gir_INCLUDES = Gtk-3.0
  Gladeui_2_0_gir_CFLAGS = $(INCLUDES)
 -Gladeui_2_0_gir_LIBS = libgladeui-2.la
-+Gladeui_2_0_gir_LIBS = libgladeui-2.la
-+Gladeui_2_0_gir_LIBADD = -lm
++Gladeui_2_0_gir_LIBS = libgladeui-2.la m
  Gladeui_2_0_gir_FILES = $(introspection_sources)
  INTROSPECTION_GIRS += Gladeui-2.0.gir
  
