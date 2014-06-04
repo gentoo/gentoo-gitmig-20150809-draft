@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/funcsigs/funcsigs-0.ebuild,v 1.1 2014/06/04 09:36:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/funcsigs/funcsigs-0.ebuild,v 1.2 2014/06/04 09:36:38 jlec Exp $
 
 EAPI=5
 
@@ -21,4 +21,4 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
 	${PYTHON_DEPS}
-    $(python_gen_cond_dep 'dev-python/funcsigs' python2_7)"
+	$(python_gen_cond_dep 'dev-python/funcsigs' python2_7)"
