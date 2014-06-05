@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-1.3.ebuild,v 1.1 2014/06/05 00:44:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-1.3.ebuild,v 1.2 2014/06/05 00:45:56 ssuominen Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -64,7 +64,7 @@ src_prepare() {
 		-e '/^ax_create_pkgconfig_ldflags=/s:$LDFLAGS ::' \
 		-e 's:tidy/tidy.h:tidy.h:' \
 		configure src/plugins/html_extractor.c || die
-	
+
 	use tidy || { sed -i -e 's:tidy.h:dIsAbLe&:' configure || die; }
 }
 
