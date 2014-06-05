@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.542 2014/06/05 18:14:56 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.543 2014/06/05 18:16:45 chainsaw Exp $
+
+  05 Jun 2014; Tony Vroon <chainsaw@gentoo.org> openssl-1.0.1h-r1.ebuild:
+  Stabilising 1.0.1H on AMD64 based on infra field testing by Jorge Manuel B.
+  S. Vicetto and additional testing by Kristian Fiskerstrand. For security bug
+  #512506; expedited due to operational needs.
 
 *openssl-1.0.1h-r2 (05 Jun 2014)
 *openssl-1.0.1h-r1 (05 Jun 2014)
