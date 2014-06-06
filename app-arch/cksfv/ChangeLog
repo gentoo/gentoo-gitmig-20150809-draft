@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cksfv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cksfv/ChangeLog,v 1.44 2014/06/06 05:15:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cksfv/ChangeLog,v 1.45 2014/06/06 05:17:54 vapier Exp $
+
+  06 Jun 2014; Mike Frysinger <vapier@gentoo.org> cksfv-1.3.14.ebuild:
+  Stabilize for all #512536 by Nikoli.
 
   06 Jun 2014; Mike Frysinger <vapier@gentoo.org> cksfv-1.3.14.ebuild:
   Update to EAPI=4.
