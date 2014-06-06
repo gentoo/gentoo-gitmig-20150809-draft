@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/bfgminer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.58 2014/06/06 11:17:52 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.59 2014/06/06 11:23:47 blueness Exp $
+
+  06 Jun 2014; Anthony G. Basile <blueness@gentoo.org> bfgminer-3.10.2.ebuild,
+  bfgminer-3.5.9.ebuild, bfgminer-4.1.0.ebuild:
+  Switch all ebuilds to EAPI=5
 
 *bfgminer-3.10.2 (06 Jun 2014)
 *bfgminer-3.5.9 (06 Jun 2014)
