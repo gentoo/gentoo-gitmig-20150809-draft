@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.47 2014/06/06 22:43:10 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.54.ebuild,v 1.1 2014/06/06 22:43:10 dilfridge Exp $
 
 EAPI=5
 
