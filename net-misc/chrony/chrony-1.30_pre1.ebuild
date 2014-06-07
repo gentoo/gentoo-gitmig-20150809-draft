@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.30_pre1.ebuild,v 1.1 2014/06/07 12:36:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.30_pre1.ebuild,v 1.2 2014/06/07 12:42:55 jer Exp $
 
 EAPI=5
 inherit eutils systemd toolchain-funcs
@@ -23,6 +23,8 @@ DEPEND="
 	${RDEPEND}
 	sys-apps/texinfo
 "
+
+RESTRICT=test
 
 S="${WORKDIR}/${P/_/-}"
 
