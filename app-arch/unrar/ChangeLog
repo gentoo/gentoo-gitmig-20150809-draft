@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/unrar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.226 2014/06/10 00:08:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.227 2014/06/10 00:08:31 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> unrar-5.0.14.ebuild,
+  unrar-5.1.5.ebuild:
+  Mark s390/sh stable.
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> unrar-5.0.14.ebuild,
   unrar-5.1.5.ebuild:
