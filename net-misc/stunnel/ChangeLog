@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.168 2014/06/11 14:31:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.169 2014/06/11 14:41:33 blueness Exp $
+
+  11 Jun 2014; Anthony G. Basile <blueness@gentoo.org>
+  +files/stunnel-3.26-gentoo.diff:
+  Restore patch for 3.26
 
   11 Jun 2014; Anthony G. Basile <blueness@gentoo.org>
   -files/stunnel-3.26-gentoo.diff, -files/stunnel-4.54-listen-queue.patch,
