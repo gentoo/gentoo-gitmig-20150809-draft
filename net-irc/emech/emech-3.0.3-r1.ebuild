@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/emech-3.0.3-r1.ebuild,v 1.2 2014/06/06 11:45:27 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/emech-3.0.3-r1.ebuild,v 1.3 2014/06/11 08:55:32 pinkbyte Exp $
 
 EAPI=5
 
@@ -23,8 +23,12 @@ src_prepare() {
 		-e 's: "help/":"/usr/share/energymech/help/":' \
 		-e 's: "messages/":"/usr/share/energymech/messages/":' \
 		src/config.h.in || die
-	# Respect LDFLAGS
-	sed -i -e '/LFLAGS/s/\$(PIPEFLAG)/\0 \$(OPTIMIZE) \$(LDFLAGS)/' src/Makefile.in || die
+	# Respect CFLAGS and LDFLAGS
+	sed -i \
+		-e '/^LFLAGS/s/\$(PIPEFLAG)/\0 \$(OPTIMIZE) \$(LDFLAGS)/' \
+		-e '/^GDBFLAG/d' \
+		-e '/^PIPEFLAG/d' \
+		src/Makefile.in || die
 
 	epatch_user
 }
