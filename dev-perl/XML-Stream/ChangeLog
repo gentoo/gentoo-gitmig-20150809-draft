@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Stream
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/ChangeLog,v 1.35 2014/06/11 10:57:46 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/ChangeLog,v 1.36 2014/06/11 10:59:02 zlogene Exp $
+
+  11 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> -XML-Stream-1.22.ebuild,
+  XML-Stream-1.230.0.ebuild:
+  sparc stable wrt bug #511732; Drop old.
 
   11 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> XML-Stream-1.230.0.ebuild:
   ppc stable wrt bug #511732
