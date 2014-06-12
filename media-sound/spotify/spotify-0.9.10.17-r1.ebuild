@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.10.17.ebuild,v 1.1 2014/05/20 15:36:48 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.10.17-r1.ebuild,v 1.1 2014/06/12 01:21:48 floppym Exp $
 
 EAPI=5
 inherit eutils fdo-mime gnome2-utils pax-utils unpacker
@@ -44,7 +44,7 @@ RDEPEND="${DEPEND}
 		media-libs/freetype
 		dev-libs/openssl:0
 		dev-libs/glib:2
-		dev-libs/libgcrypt:11/11
+		|| ( dev-libs/libgcrypt:11/11 dev-libs/libgcrypt:0/11 )
 		media-libs/libpng:1.2
 		dev-db/sqlite:3
 		sys-libs/zlib
