@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ctdb-9999.ebuild,v 1.4 2012/03/23 10:55:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ctdb-9999.ebuild,v 1.5 2014/06/12 20:14:28 mgorny Exp $
 
-EAPI=4
+EAPI=5
 
 EGIT_REPO_URI="git://git.samba.org/ctdb.git"
-inherit autotools eutils git-2
+inherit autotools eutils git-2 multilib-minimal
 
 DESCRIPTION="A cluster implementation of the TDB database used to store temporary data."
 HOMEPAGE="http://ctdb.samba.org/"
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="dev-libs/popt"
+DEPEND="dev-libs/popt[${MULTILIB_USEDEP}]"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
@@ -31,15 +31,22 @@ src_prepare() {
 	eautoconf ${AT_M4DIR}
 }
 
-src_configure() {
+src_prepare() {
+	epatch "${PATCHES[@]}"
+	epatch_user
+
+	# custom, broken Makefile
+	multilib_copy_sources
+}
+
+multilib_src_configure() {
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--localstatedir="${EPREFIX}/var/lib" \
 		--with-logdir="${EPREFIX}/var/log/${PN}"
 }
 
-src_install() {
-	default
-
+multilib_src_install_all() {
+	einstalldocs
 	dohtml web/* doc/*.html
 }
