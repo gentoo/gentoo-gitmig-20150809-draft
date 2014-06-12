@@ -1,6 +1,6 @@
 #!/bin/sh
 
-GEOIP_MIRROR="http://geolite.maxmind.com/download/geoip/database"
+GEOIP_MIRROR="https://geolite.maxmind.com/download/geoip/database"
 GEOIPDIR=/usr/share/GeoIP
 TMPDIR=
 
