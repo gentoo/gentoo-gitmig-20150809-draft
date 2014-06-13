@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15787 2014/06/13 06:57:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15788 2014/06/13 09:12:08 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Gilbert <floppym@gentoo.org> (13 Jun 2013)
+# Masked due to security bug 499870.
+# Please migrate to net-misc/libreswan.
+# If you are a Gentoo developer, feel free to pick up maintenence of openswan
+# and remove this mask after resolving the security issue.
+net-misc/openswan
 
 # Mike Gilbert <floppym@gentoo.org> (10 Jun 2014)
 # Masked due to pending dev-python/imaging removal, bug 471488.
