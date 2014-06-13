@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.15.ebuild,v 1.1 2014/06/13 12:38:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.15.ebuild,v 1.2 2014/06/13 12:46:23 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -215,4 +215,7 @@ pkg_postinst() {
 	ewarn "NOTE: To run wireshark as normal user you have to add yourself to"
 	ewarn "the wireshark group. This security measure ensures that only trusted"
 	ewarn "users are allowed to sniff your traffic."
+
+	ewarn "DEPRECATED: ${CATEGORY}/${P} is the last release in the 1.8 branch."
+	ewarn "If you have not prepared your migration to 1.10 yet, now is the time to do so."
 }
