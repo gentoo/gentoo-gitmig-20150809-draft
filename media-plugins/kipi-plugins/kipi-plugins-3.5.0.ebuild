@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-3.5.0.ebuild,v 1.4 2014/01/26 11:39:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-3.5.0.ebuild,v 1.5 2014/06/14 19:10:05 dilfridge Exp $
 
 EAPI=5
 
@@ -119,7 +119,7 @@ src_configure() {
 		$(cmake-utils_use_with ipod Gpod)
 		$(cmake-utils_use_with calendar KdepimLibs)
 		$(cmake-utils_use_with gpssync KGeoMap)
-		$(cmake-utils_use_with mediawiki MEDIAWIKI)
+		$(cmake-utils_use_with mediawiki Mediawiki)
 		$(cmake-utils_use_with redeyes OpenCV)
 		$(cmake-utils_use_with opengl OpenGL)
 		$(cmake-utils_use_with crypt QCA2)

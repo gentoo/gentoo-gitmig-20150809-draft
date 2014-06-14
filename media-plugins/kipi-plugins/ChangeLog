@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.164 2014/06/14 19:01:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.165 2014/06/14 19:10:05 dilfridge Exp $
+
+  14 Jun 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  kipi-plugins-3.5.0.ebuild, kipi-plugins-4.0.0.ebuild:
+  Fix automagic dependency on libmediawiki, bug 490508
 
 *kipi-plugins-4.0.0 (14 Jun 2014)
 
