@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r4.ebuild,v 1.1 2014/05/21 18:39:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r4.ebuild,v 1.2 2014/06/15 00:59:17 vapier Exp $
 
 EAPI="5"
 
@@ -44,7 +44,7 @@ src_prepare() {
 	sed -i 's/AM_PROG_CC_STDC/AC_PROG_CC/' configure.ac || die
 
 	cat <<-EOF > acinclude.m4
-	m4_ifndef([AM_ICONV],[m4_define([AM_ICONV],[:])])
+	m4_ifndef([AM_ICONV],[m4_define([AM_ICONV],[AC_SUBST(LIBICONV)])])
 	EOF
 
 	eautoreconf
