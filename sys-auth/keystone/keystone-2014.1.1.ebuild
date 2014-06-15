@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.1-r2.ebuild,v 1.1 2014/06/01 02:19:16 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.1.1.ebuild,v 1.1 2014/06/15 17:01:02 prometheanfire Exp $
 
 EAPI=5
 
@@ -55,7 +55,7 @@ RDEPEND=">=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
 	>=dev-python/pastedeploy-1.5.0[${PYTHON_USEDEP}]
 	dev-python/paste[${PYTHON_USEDEP}]
 	>=dev-python/routes-1.12.3[${PYTHON_USEDEP}]
-	>=dev-python/six-1.5.2[${PYTHON_USEDEP}]
+	>=dev-python/six-1.6.0[${PYTHON_USEDEP}]
 	>=dev-python/sqlalchemy-0.7.8[${PYTHON_USEDEP}]
 	<dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
 	mysql? ( dev-python/mysql-python[${PYTHON_USEDEP}] )
@@ -77,7 +77,7 @@ RDEPEND=">=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )"
 
 PATCHES=(
-	"${FILESDIR}/2014.1-CVE-2014-0204.patch"
+	"${FILESDIR}/2014.1.1-CVE-2014-3476.patch"
 )
 
 pkg_setup() {
