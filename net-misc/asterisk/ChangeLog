@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.484 2014/06/14 12:20:31 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.485 2014/06/16 10:46:13 chainsaw Exp $
+
+*asterisk-11.10.2 (16 Jun 2014)
+*asterisk-1.8.28.2 (16 Jun 2014)
+
+  16 Jun 2014; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.28.1.ebuild,
+  +asterisk-1.8.28.2.ebuild, -asterisk-11.10.1.ebuild,
+  +asterisk-11.10.2.ebuild:
+  Upstream distributed a broken release that did not carry traffic for SIP over
+  TCP or SIP over TLS.
 
 *asterisk-11.10.1 (14 Jun 2014)
 *asterisk-1.8.28.1 (14 Jun 2014)
