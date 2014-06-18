@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-9999.ebuild,v 1.8 2014/06/18 20:42:56 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-2011.08.1_p20140618.ebuild,v 1.1 2014/06/18 20:42:56 zerochaos Exp $
 
 EAPI=5
 inherit udev toolchain-funcs
@@ -16,7 +16,7 @@ if [[ ${PV} == "9999" ]] ; then
 		inherit git-r3
 		KEYWORDS=""
 else
-		SRC_URI="http://www.kismetwireless.net/code/${MY_P}.tar.gz"
+		SRC_URI="https://dev.gentoo.org/~zerochaos/distfiles/${MY_P}.tar.xz"
 		KEYWORDS="~amd64 ~arm ~ppc ~x86"
 fi
 
