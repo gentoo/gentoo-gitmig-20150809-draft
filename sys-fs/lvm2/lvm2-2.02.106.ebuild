@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.106.ebuild,v 1.4 2014/06/20 16:51:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.106.ebuild,v 1.5 2014/06/20 16:55:47 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils linux-info multilib systemd toolchain-funcs udev flag-o-matic
@@ -104,6 +104,7 @@ src_configure() {
 	myconf="${myconf} $(use_enable !device-mapper-only applib)"
 	myconf="${myconf} $(use_enable !device-mapper-only fsadm)"
 	myconf="${myconf} $(use_enable !device-mapper-only lvmetad)"
+	use device-mapper-only && myconf="${myconf} --disable-udev-systemd-background-jobs"
 
 	# Most of this package does weird stuff.
 	# The build options are tristate, and --without is NOT supported
