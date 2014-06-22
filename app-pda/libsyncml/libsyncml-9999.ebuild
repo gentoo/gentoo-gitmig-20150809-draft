@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-9999.ebuild,v 1.7 2012/05/03 20:20:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-9999.ebuild,v 1.8 2014/06/22 11:44:01 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=5
 inherit cmake-utils subversion
 
 DESCRIPTION="Implementation of the SyncML protocol"
@@ -32,25 +31,27 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	test? ( >=dev-libs/check-0.9.7 )"
 
-pkg_setup() {
-	if ! use obex && ! use http; then
-		eerror "${CATEGORY}/${P} without support for obex nor http is unusable."
-		eerror "Please enable \"obex\" or/and \"http\" USE flags."
-		die "Please enable \"obex\" or/and \"http\" USE flags."
-	fi
+REQUIRED_USE="|| ( http obex )"
 
-	DOCS="AUTHORS CODING ChangeLog RELEASE"
+DOCS="AUTHORS CODING ChangeLog RELEASE"
+
+src_prepare() {
+	# http://bugs.gentoo.org/425738
+	sed -i \
+		-e '/include/s:wbxml.h:wbxml/&:' \
+		libsyncml/parser/sml_wbxml_internals.h tests/mobiles/obex_mobile_ds_client.c || die
 }
 
 src_configure() {
-	local mycmakeargs="
+	local mycmakeargs=(
 		-DHAVE_LIBSOUP22=OFF
 		$(cmake-utils_use_build doc DOCUMENTATION)
 		$(cmake-utils_use_enable debug TRACE)
 		$(cmake-utils_use_enable http HTTP)
 		$(cmake-utils_use_enable obex OBEX)
 		$(cmake-utils_use_enable obex BLUETOOTH)
-		$(cmake-utils_use_enable test UNIT_TEST)"
+		$(cmake-utils_use_enable test UNIT_TEST)
+	)
 
 	cmake-utils_src_configure
 }
