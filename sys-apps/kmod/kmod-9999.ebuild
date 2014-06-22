@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.77 2014/05/14 21:30:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.78 2014/06/22 08:03:54 ssuominen Exp $
 
 EAPI=5
 
@@ -50,6 +50,8 @@ if [[ ${PV} == 9999* ]]; then
 fi
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+
+DOCS="NEWS README TODO"
 
 src_prepare() {
 	if [ ! -e configure ]; then
@@ -125,6 +127,7 @@ src_compile() {
 
 src_install() {
 	emake -C "${BUILD_DIR}" DESTDIR="${D}" install
+	einstalldocs
 
 	if use python; then
 		local native_builddir=${BUILD_DIR}
