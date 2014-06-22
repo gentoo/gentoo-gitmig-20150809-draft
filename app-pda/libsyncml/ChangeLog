@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/libsyncml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/ChangeLog,v 1.21 2014/06/22 11:44:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/ChangeLog,v 1.22 2014/06/22 11:44:58 ssuominen Exp $
+
+  22 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> libsyncml-0.5.4.ebuild,
+  libsyncml-9999.ebuild:
+  Raise libwbxml dependency to ensure everyone has the headers in the same
+  place.
 
   22 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> libsyncml-0.5.4.ebuild,
   libsyncml-9999.ebuild:

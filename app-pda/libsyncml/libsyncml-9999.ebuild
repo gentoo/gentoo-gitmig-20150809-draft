@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-9999.ebuild,v 1.8 2014/06/22 11:44:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-9999.ebuild,v 1.9 2014/06/22 11:44:58 ssuominen Exp $
 
 EAPI=5
 inherit cmake-utils subversion
@@ -20,7 +20,7 @@ IUSE="+debug doc http +obex test"
 # automagic, bug #285040
 # libsoup:2.2 is forced off to avoid automagic
 RDEPEND=">=dev-libs/glib-2.12
-	>=dev-libs/libwbxml-0.10
+	>=dev-libs/libwbxml-0.11.0
 	dev-libs/libxml2
 	http? ( net-libs/libsoup:2.4 )
 	obex? (
