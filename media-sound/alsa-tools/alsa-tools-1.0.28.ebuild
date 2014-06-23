@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.28.ebuild,v 1.1 2014/06/23 23:05:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.28.ebuild,v 1.2 2014/06/23 23:10:04 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic
@@ -18,7 +18,7 @@ alsa_cards_vx222 alsa_cards_usb-usx2y alsa_cards_sb16 alsa_cards_sbawe
 alsa_cards_emu10k1 alsa_cards_emu10k1x alsa_cards_ice1712
 alsa_cards_rme32 alsa_cards_rme96 alsa_cards_sscape alsa_cards_pcxhr"
 
-RDEPEND=">=media-libs/alsa-lib-${PV}
+COMMON_DEPEND=">=media-libs/alsa-lib-${PV}
 	>=dev-python/pyalsa-1.0.26
 	fltk? ( >=x11-libs/fltk-1.3.0:1 )
 	gtk? (
@@ -26,7 +26,9 @@ RDEPEND=">=media-libs/alsa-lib-${PV}
 		x11-libs/gtk+:2
 		x11-libs/gtk+:3
 		)" #468294
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	gtk? ( media-fonts/font-misc-misc )" #456114
+DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
