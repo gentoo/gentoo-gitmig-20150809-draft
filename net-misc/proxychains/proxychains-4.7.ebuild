@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/proxychains-4.7.ebuild,v 1.1 2014/06/23 17:38:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/proxychains-4.7.ebuild,v 1.2 2014/06/23 17:39:32 radhermit Exp $
 
 EAPI=5
 
-inherit flag-o-matic toolchain-funcs eutils multilib
+inherit toolchain-funcs eutils multilib
 
 MY_PN=${PN}-ng
 MY_P=${MY_PN}-${PV}
