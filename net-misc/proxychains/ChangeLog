@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/proxychains
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/ChangeLog,v 1.28 2014/06/23 17:39:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/ChangeLog,v 1.29 2014/06/23 17:40:15 radhermit Exp $
+
+  23 Jun 2014; Tim Harder <radhermit@gentoo.org>
+  -proxychains-3.1_p20110225-r1.ebuild,
+  -files/proxychains-3.1_p20110225-glibc214.patch,
+  -files/proxychains-3.1_p20110225-sysconf.patch:
+  Remove old.
 
   23 Jun 2014; Tim Harder <radhermit@gentoo.org> proxychains-4.7.ebuild:
   Remove unused flag-o-matic eclass.
