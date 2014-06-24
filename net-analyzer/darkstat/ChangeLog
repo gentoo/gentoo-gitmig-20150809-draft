@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/darkstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.59 2014/05/04 14:10:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.60 2014/06/24 12:50:40 jer Exp $
+
+  24 Jun 2014; Jeroen Roovers <jer@gentoo.org> files/darkstat-init.new:
+  Use /run not /var/run.
 
 *darkstat-3.0.718 (04 May 2014)
 
