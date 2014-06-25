@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/savage-bin-2.00e-r1.ebuild,v 1.1 2014/06/25 17:10:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/savage-bin-2.00e-r1.ebuild,v 1.2 2014/06/25 17:28:07 mgorny Exp $
 
 EAPI=5
 inherit eutils games
@@ -25,10 +25,10 @@ RESTRICT="mirror bindist strip"
 RDEPEND="
 	|| (
 		(
-			>=media-libs/freetype-2[abi_x86_32(-)]
-			media-libs/libsdl[abi_x86_32(-)]
-			virtual/jpeg:62[abi_x86_32(-)]
-			virtual/opengl[abi_x86_32(-)]
+			>=media-libs/freetype-2.5.0.1[abi_x86_32(-)]
+			>=media-libs/libsdl-1.2.15-r4[abi_x86_32(-)]
+			>=virtual/jpeg-62:62[abi_x86_32(-)]
+			>=virtual/opengl-7.0-r1[abi_x86_32(-)]
 		)
 		amd64? (
 			(

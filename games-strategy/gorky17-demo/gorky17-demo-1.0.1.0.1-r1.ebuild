@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/gorky17-demo-1.0.1.0.1-r1.ebuild,v 1.1 2014/06/25 17:18:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/gorky17-demo-1.0.1.0.1-r1.ebuild,v 1.2 2014/06/25 17:27:49 mgorny Exp $
 
 EAPI=5
 
@@ -23,13 +23,13 @@ RESTRICT="mirror bindist strip"
 RDEPEND="
 	|| (
 		(
-			media-libs/alsa-lib[abi_x86_32(-)]
-			media-libs/libsdl[abi_x86_32(-)]
-			sys-libs/zlib[abi_x86_32(-)]
-			x11-libs/libX11[abi_x86_32(-)]
-			x11-libs/libXau[abi_x86_32(-)]
-			x11-libs/libXdmcp[abi_x86_32(-)]
-			x11-libs/libXext[abi_x86_32(-)]
+			>=media-libs/alsa-lib-1.0.27.2[abi_x86_32(-)]
+			>=media-libs/libsdl-1.2.15-r4[abi_x86_32(-)]
+			>=sys-libs/zlib-1.2.8-r1[abi_x86_32(-)]
+			>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+			>=x11-libs/libXau-1.0.7-r1[abi_x86_32(-)]
+			>=x11-libs/libXdmcp-1.1.1-r1[abi_x86_32(-)]
+			>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
 		)
 		amd64? (
 			(

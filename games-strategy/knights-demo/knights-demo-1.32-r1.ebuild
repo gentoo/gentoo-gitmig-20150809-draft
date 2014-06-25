@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/knights-demo/knights-demo-1.32-r1.ebuild,v 1.1 2014/06/25 17:13:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/knights-demo/knights-demo-1.32-r1.ebuild,v 1.2 2014/06/25 17:27:49 mgorny Exp $
 
 EAPI=5
 
@@ -20,11 +20,11 @@ RESTRICT="strip"
 RDEPEND="sys-libs/glibc
 	|| (
 		(
-			x11-libs/libX11[abi_x86_32(-)]
-			x11-libs/libXau[abi_x86_32(-)]
-			x11-libs/libXdmcp[abi_x86_32(-)]
-			x11-libs/libXext[abi_x86_32(-)]
-			x11-libs/libXi[abi_x86_32(-)]
+			>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+			>=x11-libs/libXau-1.0.7-r1[abi_x86_32(-)]
+			>=x11-libs/libXdmcp-1.1.1-r1[abi_x86_32(-)]
+			>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
+			>=x11-libs/libXi-1.7.2[abi_x86_32(-)]
 		)
 		amd64? (
 			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]

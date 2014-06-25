@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/spaz/spaz-1.605.ebuild,v 1.3 2014/06/25 17:02:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/spaz/spaz-1.605.ebuild,v 1.4 2014/06/25 17:28:06 mgorny Exp $
 
 EAPI=4
 
@@ -19,8 +19,8 @@ DEPEND="app-arch/unzip"
 RDEPEND="
 	|| (
 		(
-			media-libs/openal[alsa?,pulseaudio?,abi_x86_32(-)]
-			media-libs/libsdl[abi_x86_32(-)]
+			>=media-libs/openal-1.15.1[alsa?,pulseaudio?,abi_x86_32(-)]
+			>=media-libs/libsdl-1.2.15-r4[abi_x86_32(-)]
 		)
 		amd64? (
 			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
