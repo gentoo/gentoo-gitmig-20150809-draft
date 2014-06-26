@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tracebox/tracebox-0.2.ebuild,v 1.2 2014/06/26 22:18:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tracebox/tracebox-0.2.ebuild,v 1.3 2014/06/26 22:31:25 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -30,15 +30,19 @@ src_prepare() {
 
 	sed -i -e '/SUBDIRS/s|noinst||g' Makefile.am || die
 	sed -i -e '/DIST_SUBDIRS.*libcrafter/d' noinst/Makefile.am || die
+
 	sed -i \
 		-e '/[[:graph:]]*libcrafter[[:graph:]]*/d' \
-		src/${PN}//Makefile.am || die
+		-e '/dist_bin_SCRIPTS/d' \
+		src/${PN}/Makefile.am \
+		|| die
+
 	sed -i \
 		-e 's|"crafter.h"|<crafter.h>|g' \
-		src/tracebox/PacketModification.h \
-		src/tracebox/PartialHeader.h \
-		src/tracebox/script.h \
-		src/tracebox/tracebox.h \
+		src/${PN}/PacketModification.h \
+		src/${PN}/PartialHeader.h \
+		src/${PN}/script.h \
+		src/${PN}/${PN}.h \
 		|| die
 
 	rm README.md || die
