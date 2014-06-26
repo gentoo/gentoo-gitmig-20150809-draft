@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tracebox/tracebox-0.2.ebuild,v 1.1 2014/06/26 22:09:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tracebox/tracebox-0.2.ebuild,v 1.2 2014/06/26 22:18:08 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -40,6 +40,8 @@ src_prepare() {
 		src/tracebox/script.h \
 		src/tracebox/tracebox.h \
 		|| die
+
+	rm README.md || die
 
 	eautoreconf
 }
