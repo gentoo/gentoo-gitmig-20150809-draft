@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.36.5.ebuild,v 1.1 2014/06/26 09:50:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.36.5.ebuild,v 1.2 2014/06/26 10:00:39 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -35,7 +35,7 @@ RDEPEND="
 	)
 "
 DEPEND="${RDEPEND}
-	>=dev-util/gtk-doc-am-1.15
+	>=dev-util/gtk-doc-am-1.20
 	virtual/pkgconfig
 	X? ( >=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}] )
 	!<=sys-devel/autoconf-2.63:2.5
@@ -85,7 +85,7 @@ pkg_postinst() {
 		if "${CHOST}-pango-querymodules" --system \
 			"${EROOT}"usr/$(get_libdir)/pango/1.8.0/modules/*$(get_modname) \
 				> "${tmp_file}"; then
-			cat "${tmp_file}" > "${pango_conf}" || {
+			sed "s:^${ROOT}:/:" "${tmp_file}" > "${pango_conf}" || {
 				rm "${tmp_file}"; die; }
 		else
 			ewarn "Cannot update pango.modules, file generation failed"
