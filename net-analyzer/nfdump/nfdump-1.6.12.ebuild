@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.6.12.ebuild,v 1.1 2014/06/27 03:14:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.6.12.ebuild,v 1.2 2014/06/27 03:25:08 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -39,6 +39,8 @@ DOCS=( AUTHORS ChangeLog NEWS README )
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-test-dep.patch
+
 	# bug #515278
 	cp "${WORKDIR}"/minilzo-2.07/*.{c,h} "${S}"/bin || die
 
@@ -63,8 +65,4 @@ src_configure() {
 		$(use_enable debug devel) \
 		$(use_enable readpcap) \
 		$(use_enable sflow)
-}
-
-src_test() {
-	emake -j1 check
 }
