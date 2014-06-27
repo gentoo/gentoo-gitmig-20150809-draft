@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-RsyncP/File-RsyncP-0.700.0.ebuild,v 1.2 2014/06/27 17:18:30 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-RsyncP/File-RsyncP-0.700.0.ebuild,v 1.3 2014/06/27 17:20:27 zlogene Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://perlrsync.sourceforge.net/ ${HOMEPAGE}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ia64 ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="net-misc/rsync"
