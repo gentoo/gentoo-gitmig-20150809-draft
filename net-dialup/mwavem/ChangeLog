@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/mwavem
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/ChangeLog,v 1.18 2012/04/06 21:55:45 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/ChangeLog,v 1.19 2014/06/27 07:20:27 pinkbyte Exp $
+
+  27 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> mwavem-2.0-r1.ebuild:
+  Set additional M4 dir explicitly, this fixes bug #514576, thanks to Patrick
+  Lauer for discovering this issue
 
   06 Apr 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #63588
