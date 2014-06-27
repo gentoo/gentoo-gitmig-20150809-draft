@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exconsole/python-exconsole-0.1.5.ebuild,v 1.1 2014/06/27 06:54:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exconsole/python-exconsole-0.1.5.ebuild,v 1.2 2014/06/27 06:57:58 jlec Exp $
 
 EAPI=5
 
@@ -16,9 +16,3 @@ SLOT="0"
 LICENSE="LGPL-3"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
-
-RDEPEND=""
-DEPEND="${RDEPEND}
-"
-
-
