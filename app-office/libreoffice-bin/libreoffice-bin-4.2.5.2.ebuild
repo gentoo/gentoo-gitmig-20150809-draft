@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.2.5.2.ebuild,v 1.1 2014/06/28 12:38:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.2.5.2.ebuild,v 1.2 2014/06/28 12:40:23 dilfridge Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ BASE_PACKAGENAME="bin"
 BASE_AMD64_URI="http://packages.gentooexperimental.org/packages/amd64-libreoffice/amd64-${BASE_PACKAGENAME}-"
 BASE_X86_URI="http://packages.gentooexperimental.org/packages/x86-libreoffice/x86-${BASE_PACKAGENAME}-"
 
-PYTHON_COMPAT=( python2_7 python3_3 )
+PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
 PYTHON_REQ_USE="threads,xml"
 
 inherit kde4-base java-pkg-opt-2 python-single-r1 pax-utils prefix versionator
