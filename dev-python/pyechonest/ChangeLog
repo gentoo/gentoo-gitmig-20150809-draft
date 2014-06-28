@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyechonest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyechonest/ChangeLog,v 1.7 2014/06/28 03:55:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyechonest/ChangeLog,v 1.8 2014/06/28 03:57:39 idella4 Exp $
+
+  28 Jun 2014; Ian Delaney <idella4@gentoo.org> pyechonest-7.2.1.ebuild:
+  whitepsace
 
   28 Jun 2014; Ian Delaney <idella4@gentoo.org> pyechonest-7.2.1.ebuild:
   drop py2.6, add missing dep, tidy doc build/install, patch by submitted by

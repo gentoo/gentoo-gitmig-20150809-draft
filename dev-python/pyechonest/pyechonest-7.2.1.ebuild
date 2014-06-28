@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyechonest/pyechonest-7.2.1.ebuild,v 1.4 2014/06/28 03:55:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyechonest/pyechonest-7.2.1.ebuild,v 1.5 2014/06/28 03:57:39 idella4 Exp $
 
 EAPI=5
 
@@ -20,7 +20,6 @@ IUSE="doc examples"
 RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
-
 
 python_prepare_all() {
 	# Prevent un-needed download during build
