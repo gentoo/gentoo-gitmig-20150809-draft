@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.27 2014/06/28 01:08:41 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.28 2014/06/28 01:15:56 zerochaos Exp $
 
 EAPI="5"
 
@@ -180,7 +180,12 @@ all_ruby_prepare() {
 	echo "echo \"[*]\"" >> msfupdate
 	echo "echo \"\"" >> msfupdate
 	if [[ ${PV} == "9999" ]] ; then
+		echo "if [ -x /usr/bin/smart-live-rebuild ]; then" >> msfupdate
+		echo "	smart-live-rebuild -f net-analyzer/metasploit" >> msfupdate
+		echo "else" >> msfupdate
+		echo "	echo \"Please install app-portage/smart-live-rebuild for a better experience.\"" >> msfupdate
 		echo "emerge --oneshot \"=${CATEGORY}/${PF}\"" >> msfupdate
+		echo "fi" >> msfupdate
 	else
 		echo "echo \"Unable to update tagged version of metasploit.\"" >> msfupdate
 		echo "echo \"If you want the latest please install and eselect the live version (metasploit9999)\"" >> msfupdate
