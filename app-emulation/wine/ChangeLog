@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.516 2014/06/18 19:08:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.517 2014/06/29 00:42:47 tetromino Exp $
+
+*wine-1.7.21 (29 Jun 2014)
+
+  29 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.7.21.ebuild,
+  wine-9999.ebuild:
+  Version bump, see http://www.winehq.org/announce/1.7.21 for the announcement.
+  Apply experimental gstreamer fix only when USE=gstreamer because it has been
+  reported to cause crashes in Bioshock (thanks to David Heidelberger).
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> wine-1.6.1.ebuild,
   wine-1.6.2.ebuild, wine-1.6.ebuild, wine-1.7.0.ebuild, wine-1.7.10.ebuild,
