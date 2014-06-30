@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/aufs-util-3.15_p20140630.ebuild,v 1.1 2014/06/30 06:57:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/aufs-util-3.15_p20140630.ebuild,v 1.2 2014/06/30 07:01:19 jlec Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ RDEPEND="
 	!sys-fs/aufs2
 	!<sys-fs/aufs3-3_p20130318"
 DEPEND="${RDEPEND}
-	>=sys-fs/aufs-headers-3.13_p20130826"
+	>=sys-fs/aufs-headers-3.15_p20140630"
 
 src_prepare() {
 	sed \
