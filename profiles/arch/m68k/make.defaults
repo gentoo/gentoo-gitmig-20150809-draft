@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/make.defaults,v 1.4 2014/07/01 08:33:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/make.defaults,v 1.5 2014/07/01 08:35:58 mgorny Exp $
 
 ARCH="m68k"
 ACCEPT_KEYWORDS="m68k ~m68k"
@@ -16,6 +16,7 @@ FCFLAGS="${CFLAGS}"
 # checks simpler.
 ABI="m68k"
 DEFAULT_ABI="m68k"
+MULTILIB_ABIS="m68k"
 
 # Disable sandbox on this architecture
 FEATURES="-sandbox"
