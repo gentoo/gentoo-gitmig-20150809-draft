@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.1.1-r1.ebuild,v 1.1 2014/06/30 01:30:42 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.1.1-r2.ebuild,v 1.1 2014/07/02 17:12:34 prometheanfire Exp $
 
 EAPI=5
 
@@ -79,6 +79,7 @@ RDEPEND=">=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
 
 PATCHES=(
 	"${FILESDIR}/2014.1.1-CVE-2014-3476.patch"
+	"${FILESDIR}/2014.1.1-CVE-2014-3250.patch"
 )
 
 pkg_setup() {
