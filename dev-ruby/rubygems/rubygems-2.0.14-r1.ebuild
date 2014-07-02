@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-2.0.14-r1.ebuild,v 1.1 2014/04/28 18:24:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-2.0.14-r1.ebuild,v 1.2 2014/07/02 10:04:52 mrueg Exp $
 
 EAPI=5
 
@@ -131,7 +131,7 @@ pkg_postinst() {
 
 	ewarn
 	ewarn "To switch between available Ruby profiles, execute as root:"
-	ewarn "\teselect ruby set ruby(18|19|...)"
+	ewarn "\teselect ruby set ruby(19|20|...)"
 	ewarn
 }
 
