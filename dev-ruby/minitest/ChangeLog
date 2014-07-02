@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.154 2014/07/02 09:44:53 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.155 2014/07/02 10:09:09 mrueg Exp $
+
+  02 Jul 2014; Manuel Rüger <mrueg@gentoo.org> minitest-4.7.5.ebuild:
+  Stable on amd64. Bug #508996
 
   02 Jul 2014; Tobias Klausmann <klausman@gentoo.org> minitest-4.7.5.ebuild:
   Stable on alpha, bug #508996
