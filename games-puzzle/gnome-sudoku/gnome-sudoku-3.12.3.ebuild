@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/gnome-sudoku-3.12.2.ebuild,v 1.1 2014/05/31 09:06:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/gnome-sudoku-3.12.3.ebuild,v 1.1 2014/07/02 08:17:25 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
