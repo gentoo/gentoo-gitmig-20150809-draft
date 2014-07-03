@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1304-r1.ebuild,v 1.1 2014/07/03 21:32:08 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1304-r1.ebuild,v 1.2 2014/07/03 21:53:21 axs Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -58,20 +58,12 @@ src_unpack() {
 }
 
 src_install() {
-	insinto "${dir}"
-	doins License.txt CHANGES README version.info ${PN}.png || die
-
 	exeinto "${dir}"
-	# skip these, they are on the system -- doexe *.so.? || die "doexe libs"
-	doexe openurl.sh || die "openurl.sh"
+	doexe openurl.sh bin/Linux/x86/doom{,ded}.x86
 
-	if use amd64 ; then
-		doexe bin/Linux/amd64/doom{,ded}.x86 || die "doexe amd64"
-	else
-		doexe bin/Linux/x86/doom{,ded}.x86 || die "doexe x86"
-	fi
-
-	doins -r base d3xp pb || die "doins base d3xp pb"
+	insinto "${dir}"
+	doins License.txt CHANGES README version.info ${PN}.png
+	doins -r base d3xp pb
 
 	games_make_wrapper ${PN} ./doom.x86 "${dir}" "${dir}"
 	if use dedicated ; then
