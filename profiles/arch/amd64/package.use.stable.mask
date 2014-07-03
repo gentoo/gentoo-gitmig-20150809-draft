@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.31 2014/07/03 16:50:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.32 2014/07/03 16:52:31 pacho Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -434,6 +434,7 @@ x11-libs/libXxf86dga abi_x86_32
 x11-libs/libXxf86vm abi_x86_32
 x11-libs/motif abi_x86_32
 x11-libs/pango abi_x86_32
+x11-libs/pangox-compat abi_x86_32
 x11-libs/pixman abi_x86_32
 x11-proto/compositeproto abi_x86_32
 x11-proto/damageproto abi_x86_32
