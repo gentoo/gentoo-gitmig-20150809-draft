@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.260 2014/07/03 05:37:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.261 2014/07/03 05:57:03 graaff Exp $
+
+*activesupport-4.0.8 (03 Jul 2014)
+
+  03 Jul 2014; Hans de Graaff <graaff@gentoo.org> +activesupport-4.0.8.ebuild:
+  Version bump to Rails 4.0.8 for security bug 516084.
 
 *activesupport-3.2.19 (03 Jul 2014)
 
