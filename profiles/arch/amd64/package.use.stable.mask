@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.24 2014/07/03 16:19:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.25 2014/07/03 16:26:20 pacho Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -314,6 +314,7 @@ media-video/vcdimager abi_x86_32
 net-dialup/capi4k-utils abi_x86_32
 net-dns/libidn abi_x86_32
 net-fs/samba abi_x86_32
+net-libs/glib-networking abi_x86_32
 net-libs/gnutls abi_x86_32
 net-libs/libdom abi_x86_32
 net-libs/libgssglue abi_x86_32
