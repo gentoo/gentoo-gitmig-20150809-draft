@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.176 2014/06/23 04:32:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.177 2014/07/04 19:38:33 ago Exp $
+
+  04 Jul 2014; Agostino Sarubbo <ago@gentoo.org> lcms-1.19-r1.ebuild:
+  Stable for ppc64, wrt bug #504214
 
   23 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> lcms-1.19-r2.ebuild:
   x86 stable wrt bug #504214
