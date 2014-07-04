@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.118 2014/07/03 20:46:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.119 2014/07/04 03:11:19 floppym Exp $
 
 EAPI=5
 
@@ -433,6 +433,7 @@ pkg_postinst() {
 		enewuser "$1" -1 -1 -1 "$1"
 	}
 
+	enewgroup input
 	enewgroup systemd-journal
 	newusergroup systemd-bus-proxy
 	newusergroup systemd-network
