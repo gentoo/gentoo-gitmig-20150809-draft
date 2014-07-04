@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.42 2014/07/04 07:44:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.43 2014/07/04 07:51:44 pacho Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -265,6 +265,7 @@ media-plugins/gst-plugins-faac abi_x86_32
 media-plugins/gst-plugins-faad abi_x86_32
 media-plugins/gst-plugins-ffmpeg abi_x86_32
 media-plugins/gst-plugins-flac abi_x86_32
+media-plugins/gst-plugins-gdkpixbuf abi_x86_32
 media-plugins/gst-plugins-gconf abi_x86_32
 media-plugins/gst-plugins-gio abi_x86_32
 media-plugins/gst-plugins-gnomevfs abi_x86_32
