@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.282 2014/07/04 19:48:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.283 2014/07/04 19:49:16 ago Exp $
+
+  04 Jul 2014; Agostino Sarubbo <ago@gentoo.org> cmake-2.8.12.2.ebuild:
+  Stable for ppc, wrt bug #504794
 
   04 Jul 2014; Agostino Sarubbo <ago@gentoo.org> cmake-2.8.12.2.ebuild:
   Stable for alpha, wrt bug #504794
