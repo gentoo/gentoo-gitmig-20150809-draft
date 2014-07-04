@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.41 2014/07/04 07:28:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.42 2014/07/04 07:44:31 pacho Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -412,6 +412,9 @@ x11-libs/libdrm abi_x86_32
 x11-libs/libICE abi_x86_32
 x11-libs/libnotify abi_x86_32
 x11-libs/libpciaccess abi_x86_32
+x11-libs/libva abi_x86_32
+x11-libs/libva-intel-driver abi_x86_32
+x11-libs/libva-vdpau-driver abi_x86_32
 x11-libs/libSM abi_x86_32
 x11-libs/libvdpau abi_x86_32
 x11-libs/libX11 abi_x86_32
