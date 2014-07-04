@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Format-ISO8601
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-ISO8601/ChangeLog,v 1.21 2014/07/04 14:50:09 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-ISO8601/ChangeLog,v 1.22 2014/07/04 14:52:09 klausman Exp $
+
+  04 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  DateTime-Format-ISO8601-0.80.0.ebuild:
+  Keyworded on alpha, bug #497068
 
   04 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   DateTime-Format-ISO8601-0.80.0.ebuild:
