@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.286 2014/07/05 12:46:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.287 2014/07/05 12:47:22 ago Exp $
+
+  05 Jul 2014; Agostino Sarubbo <ago@gentoo.org> thunderbird-24.6.0.ebuild:
+  Stable for ppc64, wrt bug #512896
 
   05 Jul 2014; Agostino Sarubbo <ago@gentoo.org> thunderbird-24.6.0.ebuild:
   Stable for ppc, wrt bug #512896
