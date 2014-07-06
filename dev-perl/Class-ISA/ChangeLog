@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-ISA
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ISA/ChangeLog,v 1.22 2014/07/06 09:11:57 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ISA/ChangeLog,v 1.23 2014/07/06 09:12:59 zlogene Exp $
+
+  06 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> -Class-ISA-0.36.ebuild,
+  Class-ISA-0.36-r1.ebuild:
+  Merge stable keywords
 
 *Class-ISA-0.36-r1 (06 Jul 2014)
 
