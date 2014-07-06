@@ -1,0 +1,12 @@
+--- a/src/Logging.cpp
++++ b/src/Logging.cpp
+@@ -94,6 +94,9 @@
+  if(fp!=NULL)
+   vfprintf(fp, fmt, va);
+ 
++ va_end(va);
++ va_start(va, fmt);
++
+  if((pi.Foreground) && (out!=NULL))
+   vfprintf(stdout, fmt, va);
+ 
