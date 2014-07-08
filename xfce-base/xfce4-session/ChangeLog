@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.215 2014/07/08 13:58:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.216 2014/07/08 13:59:22 ssuominen Exp $
+
+  08 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -files/xfce4-session-4.11.0-upower-0.99.patch,
+  -xfce4-session-4.11.0-r1.ebuild:
+  old
 
 *xfce4-session-4.11.0-r2 (08 Jul 2014)
 
