@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metasploit_data_models/metasploit_data_models-0.17.0.ebuild,v 1.2 2014/07/09 21:03:05 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metasploit_data_models/metasploit_data_models-0.17.0.ebuild,v 1.3 2014/07/09 21:13:54 zerochaos Exp $
 
 EAPI=5
 
@@ -24,4 +24,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
-ruby_add_rdepend ">=dev-ruby/activerecord-3.2.10[postgres]"
+ruby_add_rdepend "
+		>=dev-ruby/activerecord-3.2.10[postgres]
+		dev-ruby/activesupport"
