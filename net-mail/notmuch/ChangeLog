@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.95 2014/07/09 11:38:34 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.96 2014/07/09 11:41:28 aidecoe Exp $
+
+  09 Jul 2014; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  -notmuch-0.18-r1.ebuild,
+  -files/0.18-0001-emacs-install-make-sure-all-components.patch,
+  -files/0.18-0002-doc-conf.py-Remove-_static-from-html_s.patch,
+  -files/0.18-0003-Unset-html_static_path-in-Python-bindi.patch:
+  0.18.1 comes with important fixes for 0.18, thus removing 0.18.
 
   09 Jul 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.18.1.ebuild:
   Include database upgrade test.
