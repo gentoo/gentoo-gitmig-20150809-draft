@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/rts5229
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/rts5229/ChangeLog,v 1.4 2014/07/10 13:05:14 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/rts5229/ChangeLog,v 1.5 2014/07/10 13:07:25 vikraman Exp $
+
+  10 Jul 2014; Vikraman Choudhury (vikraman) <vikraman@gentoo.org>
+  -rts5229-1.07-r1.ebuild, -rts5229-1.07-r2.ebuild, -rts5229-1.07.ebuild:
+  Cleanup old versions
 
 *rts5229-1.07-r3 (10 Jul 2014)
 
