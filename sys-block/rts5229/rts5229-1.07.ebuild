@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/rts5229/rts5229-1.07.ebuild,v 1.1 2013/02/28 17:39:19 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/rts5229/rts5229-1.07.ebuild,v 1.2 2014/07/10 13:05:14 vikraman Exp $
 
 EAPI=4
 
