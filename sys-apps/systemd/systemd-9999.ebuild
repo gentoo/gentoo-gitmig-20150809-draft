@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.123 2014/07/10 00:08:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.124 2014/07/10 00:20:25 floppym Exp $
 
 EAPI=5
 
@@ -331,6 +331,8 @@ multilib_src_install() {
 		# Even with --enable-networkd, it's not right to have this running by default
 		# when it's unconfigured.
 		rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-networkd.service
+		rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-resolved.service
+		rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-timesyncd.service
 	else
 		mymakeopts+=(
 			install-libLTLIBRARIES
