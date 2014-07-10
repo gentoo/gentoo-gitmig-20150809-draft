@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmodbus/libmodbus-3.0.6.ebuild,v 1.2 2014/07/10 15:59:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmodbus/libmodbus-3.1.1.ebuild,v 1.1 2014/07/10 15:59:24 xmw Exp $
 
 EAPI=4
 
@@ -21,6 +21,6 @@ src_configure() {
 
 src_install() {
 	emake install DESTDIR="${D}"
-	dodoc AUTHORS MIGRATION NEWS README.rst
+	dodoc AUTHORS MIGRATION NEWS README.md
 	use static-libs || rm "${D}"/usr/*/libmodbus.la
 }
