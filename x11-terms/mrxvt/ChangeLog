@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/mrxvt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/ChangeLog,v 1.80 2014/07/11 22:14:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/ChangeLog,v 1.81 2014/07/11 22:25:43 blueness Exp $
+
+  11 Jul 2014; Anthony G. Basile <blueness@gentoo.org> mrxvt-0.5.4.ebuild:
+  Fix on uclibc, bug #497742
 
   11 Jul 2014; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Not much to take care of here, but I'll adopt it
