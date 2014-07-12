@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-3.2.ebuild,v 1.2 2014/06/16 14:23:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-3.2.ebuild,v 1.3 2014/07/12 12:51:38 jer Exp $
 
 EAPI=5
 inherit autotools eutils linux-info toolchain-funcs
@@ -28,6 +28,10 @@ DEPEND="
 DOCS=( ChangeLog )
 
 CONFIG_CHECK="~NET_SCHED"
+ERROR_NET_SCHED="
+	CONFIG_NET_SCHED is not set when it should be.
+	Run ${PN} -i proc to use the deprecated proc interface instead.
+"
 
 src_prepare() {
 	epatch_user
