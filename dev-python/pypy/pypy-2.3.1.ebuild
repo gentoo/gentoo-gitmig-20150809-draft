@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.3.1.ebuild,v 1.1 2014/06/18 23:37:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.3.1.ebuild,v 1.2 2014/07/12 21:31:08 mgorny Exp $
 
 EAPI=5
 
@@ -133,7 +133,6 @@ src_install() {
 	pax-mark m "${ED%/}${INSDESTTREE}/pypy-c" "${ED%/}${INSDESTTREE}/libpypy-c.so"
 	dosym ../$(get_libdir)/pypy/pypy-c /usr/bin/pypy
 	dosym ../$(get_libdir)/pypy/libpypy-c.so /usr/$(get_libdir)/libpypy-c.so
-	einfo "pax-mark 2 done"
 	dodoc README.rst
 
 	if ! use sqlite; then
@@ -154,7 +153,7 @@ src_install() {
 
 	python_export pypy EPYTHON PYTHON PYTHON_SITEDIR
 	local PYTHON=${ED%/}${INSDESTTREE}/pypy-c
-	export LD_LIBRARY_PATH="${ED%/}${INSDESTTREE}"
+	local -x LD_LIBRARY_PATH="${ED%/}${INSDESTTREE}"
 
 	echo "EPYTHON='${EPYTHON}'" > epython.py
 	python_domodule epython.py
