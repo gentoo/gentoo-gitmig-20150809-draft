@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.1094 2014/07/13 13:50:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.1095 2014/07/13 13:54:12 blueness Exp $
+
+  13 Jul 2014; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Resign manifest
 
 *hardened-sources-3.2.61 (13 Jul 2014)
 
