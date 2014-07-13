@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.7.0.60.ebuild,v 1.3 2014/07/13 14:10:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.7.0.60.ebuild,v 1.4 2014/07/13 14:12:42 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="${ORIG_NAME}"
 
 LICENSE="oracle-java-documentation-7"
 SLOT="1.7"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="app-arch/unzip"
