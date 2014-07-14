@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/ndoutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ChangeLog,v 1.14 2014/07/14 15:17:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ChangeLog,v 1.15 2014/07/14 15:23:40 jer Exp $
+
+*ndoutils-1.5.2 (14 Jul 2014)
+
+  14 Jul 2014; Jeroen Roovers <jer@gentoo.org> -ndoutils-1.4_beta9-r1.ebuild,
+  +ndoutils-1.5.2.ebuild:
+  Version bump.
 
 *ndoutils-2.0.0 (14 Jul 2014)
 *ndoutils-1.4_beta9-r1 (14 Jul 2014)
