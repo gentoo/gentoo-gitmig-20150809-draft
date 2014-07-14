@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ehcache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.16 2014/07/14 10:36:25 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.17 2014/07/14 10:44:09 ercpe Exp $
+
+*ehcache-1.2.4-r3 (14 Jul 2014)
+
+  14 Jul 2014; Johann Schmitz <ercpe@gentoo.org> +ehcache-1.2.4-r3.ebuild:
+  Bump to EAPI=5; use java-pkg-simple
 
 *ehcache-1.1-r2 (14 Jul 2014)
 
