@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Version-Requirements/Version-Requirements-0.101.21.ebuild,v 1.2 2013/01/07 17:24:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Version-Requirements/Version-Requirements-0.101.22.ebuild,v 1.1 2014/07/15 18:26:50 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=RJBS
 MODULE_VERSION=0.101021
