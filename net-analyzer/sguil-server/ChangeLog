@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sguil-server
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/ChangeLog,v 1.14 2012/11/21 04:33:40 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/ChangeLog,v 1.15 2014/07/16 23:44:12 jer Exp $
+
+  16 Jul 2014; Jeroen Roovers <jer@gentoo.org> sguil-server-0.8.0.ebuild,
+  files/sguild.initd:
+  EAPI bump. Migrate from /var/run to /run. Remove outdated sed script.
 
   21 Nov 2012; Jeroen Roovers <jer@gentoo.org> sguil-server-0.8.0.ebuild,
   files/sguild.confd:

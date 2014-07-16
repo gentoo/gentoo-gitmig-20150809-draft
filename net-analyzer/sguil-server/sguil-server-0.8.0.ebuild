@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/sguil-server-0.8.0.ebuild,v 1.4 2012/11/21 04:33:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/sguil-server-0.8.0.ebuild,v 1.5 2014/07/16 23:44:12 jer Exp $
 
-EAPI=4
+EAPI=5
 
 inherit multilib ssl-cert user
 
@@ -33,16 +33,13 @@ pkg_setup() {
 }
 
 src_prepare(){
-	sed -i server/sguild.conf \
+	sed -i \
 		-e 's:DEBUG 2:DEBUG 1:' -e 's:DAEMON 0:DAEMON 1:' \
 		-e 's:SGUILD_LIB_PATH ./lib:SGUILD_LIB_PATH /usr/lib/sguild:g' \
 		-e 's:/sguild_data/rules:/var/lib/sguil/rules:g' \
 		-e 's:/sguild_data/archive:/var/lib/sguil/archive:g' \
 		-e 's:/usr/lib/sguild:/usr/'$(get_libdir)'/sguild:g' \
-		|| die "sed failed"
-	sed -i server/sguild \
-		-e 's:set VERSION "SGUIL-0.6.0":set VERSION "SGUIL-0.6.0p1":' \
-		|| die "sed failed"
+		server/sguild.conf || die
 }
 
 src_install(){
@@ -65,7 +62,7 @@ src_install(){
 	fi
 
 	diropts -g sguil -o sguil
-	keepdir /var/run/sguil \
+	keepdir \
 		/var/lib/sguil \
 		/var/lib/sguil/archive \
 		/var/lib/sguil/rules
