@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sguil-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/ChangeLog,v 1.15 2014/07/16 23:44:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/ChangeLog,v 1.16 2014/07/16 23:52:00 jer Exp $
+
+  16 Jul 2014; Jeroen Roovers <jer@gentoo.org> files/sguild.initd:
+  Do not use a /run/ subdir.
 
   16 Jul 2014; Jeroen Roovers <jer@gentoo.org> sguil-server-0.8.0.ebuild,
   files/sguild.initd:
