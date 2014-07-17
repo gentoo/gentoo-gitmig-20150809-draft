@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/quazip-0.6.2.ebuild,v 1.1 2014/07/15 14:26:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/quazip-0.6.2-r1.ebuild,v 1.1 2014/07/17 12:37:30 jlec Exp $
 
 EAPI=5
 
@@ -34,6 +34,9 @@ src_prepare() {
 	sed \
 		-e "s:\/lib$:\/$(get_libdir):g" \
 		-i ${PN}/${PN}.pro || die
+
+	echo "PREFIX=${EPREFIX}/usr" >> ${PN}/${PN}.pri || die
+
 	use test || sed -e 's:qztest::g' -i ${PN}.pro || die
 	qt4-r2_src_prepare
 }
