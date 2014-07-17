@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/tcpflow-1.4.4_p2.ebuild,v 1.2 2014/06/24 19:24:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/tcpflow-1.4.4_p3.ebuild,v 1.1 2014/07/17 16:15:14 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -9,7 +9,7 @@ DESCRIPTION="A tool for monitoring, capturing and storing TCP connections flows"
 HOMEPAGE="https://github.com/simsong/tcpflow http://packages.qa.debian.org/t/tcpflow.html"
 SRC_URI="
 	mirror://debian/pool/main/t/${PN}/${PN}_${PV/_p*}+repack1.orig.tar.gz
-	mirror://debian/pool/main/t/${PN}/${PN}_${PV/_p*}+repack1-${PV/*_p}.debian.tar.gz
+	mirror://debian/pool/main/t/${PN}/${PN}_${PV/_p*}+repack1-${PV/*_p}.debian.tar.xz
 "
 
 LICENSE="GPL-3"
@@ -35,7 +35,6 @@ S=${WORKDIR}/${PN}
 
 src_prepare() {
 	epatch "${WORKDIR}"/debian/patches/*.patch
-	epatch "${FILESDIR}"/${P}-deps.patch
 
 	mv -f README{.md,} || die
 
