@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15908 2014/07/17 05:44:26 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15909 2014/07/17 10:30:04 kensington Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -413,11 +413,6 @@ sys-fs/rdiff-backup-fs
 # Alexander Vershilov <qnikst@gentoo.org> (02 Apr 2014)
 # Multiple vulnerabilities, see #504724, #505860
 <sys-kernel/openvz-sources-2.6.32.85.17
-
-# Patrick Lauer <patrick@gentoo.org> (02 Apr 2014)
-# Broken release, see #506452
->=dev-python/sip-4.15.5
->=dev-python/PyQt4-4.11
 
 # Tom Wijsman <TomWij@gentoo.org> (31 Mar 2014)
 # Prevent users from switching JDK / JRE implementation.
