@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snortsam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.35 2014/07/17 14:28:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.36 2014/07/17 14:31:53 jer Exp $
+
+  17 Jul 2014; Jeroen Roovers <jer@gentoo.org> snortsam-2.70.ebuild:
+  Set CC in src_configure().
 
   17 Jul 2014; Jeroen Roovers <jer@gentoo.org> snortsam-2.50-r1.ebuild,
   snortsam-2.70.ebuild, -files/snortsam-2.29-no-ugly----lines.diff,

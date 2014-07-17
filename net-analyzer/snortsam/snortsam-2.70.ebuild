@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/snortsam-2.70.ebuild,v 1.5 2014/07/17 14:28:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/snortsam-2.70.ebuild,v 1.6 2014/07/17 14:31:53 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs
@@ -20,12 +20,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 
 	find "${S}" -depth -type d -name CVS -exec rm -rf \{\} \;
-
-	tc-export CC
 }
 
 src_configure() {
 	use debug && append-cflags -DFWSAMDEBUG
+	tc-export CC
 }
 
 src_compile() {
