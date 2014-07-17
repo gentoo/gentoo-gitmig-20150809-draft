@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.12.2.ebuild,v 1.1 2014/05/31 07:32:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.12.4.ebuild,v 1.1 2014/07/17 08:17:21 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
