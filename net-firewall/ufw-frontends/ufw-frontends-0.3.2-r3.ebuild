@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw-frontends/ufw-frontends-0.3.2-r1.ebuild,v 1.1 2014/02/15 10:34:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw-frontends/ufw-frontends-0.3.2-r3.ebuild,v 1.1 2014/07/17 07:06:41 dlan Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -21,7 +21,7 @@ RDEPEND="${DEPEND}
 	dev-python/pygobject:2[${PYTHON_USEDEP}]
 	dev-python/pygtk[${PYTHON_USEDEP}]
 	dev-python/pyinotify[${PYTHON_USEDEP}]
-	net-firewall/ufw
+	net-firewall/ufw[${PYTHON_USEDEP}]
 	!policykit? (
 		kde? ( kde-base/kdesu ) )
 	policykit? ( sys-auth/polkit )
@@ -44,6 +44,10 @@ python_prepare_all() {
 	# Qt version is unusable
 	rm gfw/frontend_qt.py || die
 	distutils-r1_python_prepare_all
+
+	# fix crash when no ufw logs in supported locations can
+	# be found
+	epatch "${FILESDIR}/${P}-no-log-crash.patch"
 }
 
 python_install() {
