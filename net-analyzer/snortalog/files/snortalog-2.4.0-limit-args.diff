@@ -1,5 +1,5 @@
---- snortalog.pl.orig	2005-04-13 04:42:06.000000000 -0400
-+++ snortalog.pl	2005-04-14 00:36:20.000000000 -0400
+--- a/snortalog.pl
++++ b/snortalog.pl
 @@ -397,6 +397,12 @@
  	$val_opt_p = $opt{p} if ( $opt_p == 1 ); 
  	$val_opt_g = $opt{g} if ( $opt_g == 1 ); 

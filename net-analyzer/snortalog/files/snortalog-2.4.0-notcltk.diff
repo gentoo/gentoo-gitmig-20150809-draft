@@ -1,5 +1,5 @@
---- ./snortalog.pl.orig	2006-11-27 23:55:00.000000000 +0100
-+++ ./snortalog.pl	2006-11-27 23:58:24.000000000 +0100
+--- a/snortalog.pl
++++ b/snortalog.pl
 @@ -92,18 +92,18 @@
  # Graphical Tool Kit Librairies
  #
