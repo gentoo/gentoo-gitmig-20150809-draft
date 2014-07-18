@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libfaketime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfaketime/ChangeLog,v 1.8 2014/06/18 23:31:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfaketime/ChangeLog,v 1.9 2014/07/18 16:35:45 radhermit Exp $
+
+*libfaketime-0.9.6-r1 (18 Jul 2014)
+
+  18 Jul 2014; Tim Harder <radhermit@gentoo.org> +libfaketime-0.9.6-r1.ebuild:
+  Fix library install (bug #517426).
 
 *libfaketime-0.9.6 (18 Jun 2014)
 
