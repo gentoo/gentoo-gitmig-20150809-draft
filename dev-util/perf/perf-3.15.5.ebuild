@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-3.4.ebuild,v 1.1 2012/06/28 08:23:07 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-3.15.5.ebuild,v 1.1 2014/07/18 02:23:34 naota Exp $
 
-EAPI="4"
+EAPI="5"
 
-PYTHON_DEPEND="python? 2"
-inherit versionator eutils toolchain-funcs python linux-info
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+inherit versionator eutils toolchain-funcs python-single-r1 linux-info
 
 MY_PV="${PV/_/-}"
 MY_PV="${MY_PV/-pre/-git}"
@@ -13,35 +13,41 @@ MY_PV="${MY_PV/-pre/-git}"
 DESCRIPTION="Userland tools for Linux Performance Counters"
 HOMEPAGE="http://perf.wiki.kernel.org/"
 
-LINUX_V=$(get_version_component_range 1-2)
-
-if [[ ${PV/_rc} != ${PV} ]] ; then
+LINUX_V="${PV:0:1}.x"
+if [[ ${PV} == *_rc* ]] ; then
 	LINUX_VER=$(get_version_component_range 1-2).$(($(get_version_component_range 3)-1))
 	PATCH_VERSION=$(get_version_component_range 1-3)
-	LINUX_PATCH=patch-${PV//_/-}.bz2
+	LINUX_PATCH=patch-${PV//_/-}.xz
 	SRC_URI="mirror://kernel/linux/kernel/v${LINUX_V}/testing/${LINUX_PATCH}
 		mirror://kernel/linux/kernel/v${LINUX_V}/testing/v${PATCH_VERSION}/${LINUX_PATCH}"
-elif [[ $(get_version_component_count) == 4 ]] ; then
-	# stable-release series
-	LINUX_VER=$(get_version_component_range 1-3)
-	LINUX_PATCH=patch-${PV}.bz2
-	SRC_URI="mirror://kernel/linux/kernel/v${LINUX_V}/${LINUX_PATCH}"
 else
-	LINUX_VER=${PV}
-	SRC_URI=""
+	VER_COUNT=$(get_version_component_count)
+	if [[ ${VER_COUNT} -gt 2 ]] ; then
+		# stable-release series
+		LINUX_VER=$(get_version_component_range 1-2)
+		LINUX_PATCH=patch-${PV}.xz
+		SRC_URI="mirror://kernel/linux/kernel/v${LINUX_V}/${LINUX_PATCH}"
+	else
+		LINUX_VER=${PV}
+		SRC_URI=""
+	fi
 fi
 
-LINUX_SOURCES="linux-${LINUX_VER}.tar.bz2"
+LINUX_SOURCES="linux-${LINUX_VER}.tar.xz"
 SRC_URI+=" mirror://kernel/linux/kernel/v${LINUX_V}/${LINUX_SOURCES}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="+demangle +doc perl python slang"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
+IUSE="audit debug +demangle +doc gtk perl python slang unwind"
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
-RDEPEND="demangle? ( sys-devel/binutils )
+RDEPEND="audit? ( sys-process/audit )
+	demangle? ( sys-devel/binutils )
+	gtk? ( x11-libs/gtk+:2 )
 	perl? ( || ( >=dev-lang/perl-5.10 sys-devel/libperl ) )
 	slang? ( dev-libs/newt )
+	unwind? ( sys-libs/libunwind )
 	dev-libs/elfutils"
 DEPEND="${RDEPEND}
 	${LINUX_PATCH+dev-util/patchutils}
@@ -51,7 +57,9 @@ DEPEND="${RDEPEND}
 		app-text/asciidoc
 		app-text/sgml-common
 		app-text/xmlto
-		sys-process/time )"
+		sys-process/time
+	)
+	python? ( ${PYTHON_DEPS} )"
 
 S_K="${WORKDIR}/linux-${LINUX_VER}"
 S="${S_K}/tools/perf"
@@ -59,11 +67,12 @@ S="${S_K}/tools/perf"
 CONFIG_CHECK="~PERF_EVENTS ~KALLSYMS"
 
 pkg_setup() {
-	use python && python_set_active_version 2
+	linux-info_pkg_setup
+	use python && python-single-r1_pkg_setup
 }
 
 src_unpack() {
-	local paths=( tools/perf include lib "arch/*/include" "arch/*/lib" )
+	local paths=( tools/perf tools/scripts tools/include tools/lib include lib "arch/*/include" "arch/*/lib" )
 
 	# We expect the tar implementation to support the -j option (both
 	# GNU tar and libarchive's tar support that).
@@ -104,11 +113,16 @@ src_prepare() {
 		-e '/-x c - /s:\$(ALL_LDFLAGS):\0 $(EXTLIBS):' \
 		-e '/^ALL_CFLAGS =/s:$: $(CFLAGS_OPTIMIZE):' \
 		-e '/^ALL_LDFLAGS =/s:$: $(LDFLAGS_OPTIMIZE):' \
+		-e 's:$(sysconfdir_SQ)/bash_completion.d:/usr/share/bash-completion:' \
+		"${S}"/Makefile || die
+	sed -i -e 's:-Werror::' "${S_K}"/tools/lib/api/Makefile || die
+	sed -i \
 		-e '/.FORCE-PERF-VERSION-FILE/s,.FORCE-PERF-VERSION-FILE,,g' \
-		"${S}"/Makefile
+		"${S}"/Makefile \
+		"${S}"/Documentation/Makefile || die
 
 	# Avoid the call to make kernelversion
-	echo "PERF_VERSION = ${MY_PV}" > PERF-VERSION-FILE
+	echo "#define PERF_VERSION \"${MY_PV}\"" > PERF-VERSION-FILE
 
 	# The code likes to compile local assembly files which lack ELF markings.
 	find -name '*.S' -exec sed -i '$a.section .note.GNU-stack,"",%progbits' {} +
@@ -116,27 +130,32 @@ src_prepare() {
 
 puse() { usex $1 "" no; }
 perf_make() {
+	# The arch parsing is a bit funky.  The perf tools package is integrated
+	# into the kernel, so it wants an ARCH that looks like the kernel arch,
+	# but it also wants to know about the split value -- i386/x86_64 vs just
+	# x86.  We can get that by telling the func to use an older linux version.
+	# It's kind of a hack, but not that bad ...
+	local arch=$(KV=2.6.23 tc-arch-kernel)
 	emake V=1 \
 		CC="$(tc-getCC)" AR="$(tc-getAR)" \
-		prefix="/usr" bindir_relative="sbin" \
+		prefix="/usr" bindir_relative="bin" \
 		CFLAGS_OPTIMIZE="${CFLAGS}" \
 		LDFLAGS_OPTIMIZE="${LDFLAGS}" \
-		ARCH="$(tc-arch-kernel)" \
+		ARCH="${arch}" \
 		NO_DEMANGLE=$(puse demangle) \
+		NO_GTK2=$(puse gtk) \
+		NO_LIBAUDIT=$(puse audit) \
 		NO_LIBPERL=$(puse perl) \
 		NO_LIBPYTHON=$(puse python) \
+		NO_LIBUNWIND=$(puse unwind) \
 		NO_NEWT=$(puse slang) \
+		WERROR=0 \
 		"$@"
 }
 
 src_compile() {
-	perf_make
-
-	if use doc ; then
-		pushd Documentation
-		emake ${makeargs}
-		popd
-	fi
+	perf_make -f Makefile.perf
+	use doc && perf_make -C Documentation
 }
 
 src_test() {
@@ -144,7 +163,7 @@ src_test() {
 }
 
 src_install() {
-	perf_make install DESTDIR="${D}"
+	perf_make -f Makefile.perf install DESTDIR="${D}"
 
 	dodoc CREDITS
 
