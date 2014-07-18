@@ -1,10 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.2_beta3.ebuild,v 1.1 2014/04/17 19:14:33 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.2_beta3-r2.ebuild,v 1.1 2014/07/18 03:41:02 zerochaos Exp $
 
 EAPI="5"
 
-inherit toolchain-funcs versionator
+PYTHON_COMPAT=( python2_7 )
+DISTUTILS_OPTIONAL=1
+
+inherit toolchain-funcs versionator distutils-r1 flag-o-matic
 
 DESCRIPTION="WLAN tools for breaking 802.11 WEP/WPA keys"
 HOMEPAGE="http://www.aircrack-ng.org"
@@ -30,6 +33,8 @@ IUSE="+airdrop-ng +airgraph-ng kernel_linux kernel_FreeBSD +netlink +pcre +sqlit
 DEPEND="dev-libs/openssl
 	netlink? ( dev-libs/libnl:3 )
 	pcre? ( dev-libs/libpcre )
+	airdrop-ng? ( ${PYTHON_DEPS} )
+	airgraph-ng? ( ${PYTHON_DEPS} )
 	sqlite? ( >=dev-db/sqlite-3.4 )"
 RDEPEND="${DEPEND}
 	kernel_linux? (
@@ -39,13 +44,21 @@ RDEPEND="${DEPEND}
 		sys-apps/usbutils
 		sys-apps/pciutils )
 	sys-apps/hwids
-	airdrop-ng? ( net-wireless/lorcon[python] )"
+	airdrop-ng? ( net-wireless/lorcon[python,${PYTHON_USEDEP}] )"
+
+REQUIRED_USE="airdrop-ng? ( ${PYTHON_REQUIRED_USE} )
+		airgraph-ng? ( ${PYTHON_REQUIRED_USE} )"
 
 src_compile() {
+	if [[ $($(tc-getCC) --version) == clang* ]] ; then
+		die "Please use gcc, upstream bug http://trac.aircrack-ng.org/ticket/1144"
+	fi
+
 	if [[ ${PV} == "9999" ]] ; then
 		liveflags=REVFLAGS=-D_REVISION="${ESVN_WC_REVISION}"
 	fi
 
+	replace-flags -Os -O2
 	emake \
 	CC="$(tc-getCC)" \
 	AR="$(tc-getAR)" \
@@ -56,6 +69,15 @@ src_compile() {
 	sqlite=$(usex sqlite true false) \
 	unstable=$(usex unstable true false) \
 	${liveflags}
+
+	if use airgraph-ng; then
+		cd "${S}/scripts/airgraph-ng"
+		distutils-r1_src_compile
+	fi
+	if use airdrop-ng; then
+		cd "${S}/scripts/airdrop-ng"
+		distutils-r1_src_compile
+	fi
 }
 
 src_test() {
@@ -89,11 +111,11 @@ src_install() {
 
 	if use airgraph-ng; then
 		cd "${S}/scripts/airgraph-ng"
-		emake prefix="${ED}/usr" install
+		distutils-r1_src_install
 	fi
 	if use airdrop-ng; then
 		cd "${S}/scripts/airdrop-ng"
-		emake prefix="${ED}/usr" install
+		distutils-r1_src_install
 	fi
 
 	#we don't need aircrack-ng's oui updater, we have our own
