@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/airtraf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/ChangeLog,v 1.19 2014/07/18 21:54:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/ChangeLog,v 1.20 2014/07/19 12:26:37 jer Exp $
+
+*airtraf-1.1-r2 (19 Jul 2014)
+
+  19 Jul 2014; Jeroen Roovers <jer@gentoo.org> -airtraf-1.1-r1.ebuild,
+  +airtraf-1.1-r2.ebuild, +files/airtraf-1.1-off-by-one.patch,
+  files/airtraf-1.1.patch:
+  Fix an off-by-one.
 
   18 Jul 2014; Jeroen Roovers <jer@gentoo.org> airtraf-1.1-r1.ebuild,
   metadata.xml:
