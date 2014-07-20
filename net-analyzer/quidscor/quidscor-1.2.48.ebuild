@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/quidscor-1.2.48.ebuild,v 1.9 2014/07/20 13:27:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/quidscor-1.2.48.ebuild,v 1.10 2014/07/20 13:29:14 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
 
-DESCRIPTION="IDS/VA Correlation engine"
+DESCRIPTION="Qualys IDS Correlation Daemon"
 HOMEPAGE="http://quidscor.sourceforge.net/"
 SRC_URI="mirror://sourceforge/quidscor/${P}-src.tar.gz"
 
