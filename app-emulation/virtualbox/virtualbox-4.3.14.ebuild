@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.14.ebuild,v 1.2 2014/07/20 02:23:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.14.ebuild,v 1.3 2014/07/20 02:27:54 polynomial-c Exp $
 
 EAPI=5
 
@@ -168,7 +168,7 @@ src_prepare() {
 	fi
 
 	if ! gcc-specs-pie ; then
-		EPATCH_EXCLUDE="050_${PN}-4.3.4-nopie.patch"
+		EPATCH_EXCLUDE="050_${PN}-4.3.14-nopie.patch"
 	fi
 
 	EPATCH_SUFFIX="patch" \
