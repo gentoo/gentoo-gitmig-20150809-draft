@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.510.0.ebuild,v 1.1 2013/08/17 13:17:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.510.0.ebuild,v 1.2 2014/07/21 15:13:14 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=JSWARTZ
 MODULE_VERSION=1.51
