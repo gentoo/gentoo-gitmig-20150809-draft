@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.173 2014/07/21 19:13:50 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.174 2014/07/21 19:18:24 aidecoe Exp $
+
+  21 Jul 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-038-r1.ebuild,
+  -files/038-0006-inst_simple-doesn-t-take-H-parameter.patch:
+  Removed old revision of 038.
 
 *dracut-038-r2 (21 Jul 2014)
 
