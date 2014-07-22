@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1069 2014/07/22 02:03:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1070 2014/07/22 09:25:00 klausman Exp $
+
+  22 Jul 2014; Tobias Klausmann <klausman@gentoo.org> udev-215.ebuild:
+  Stable on alpha, bug #517106
 
   22 Jul 2014; Jeroen Roovers <jer@gentoo.org> udev-215.ebuild:
   Stable for HPPA (bug #517106).
