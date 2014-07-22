@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-1.3.4.ebuild,v 1.2 2013/06/22 13:56:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-1.5.1.ebuild,v 1.1 2014/07/22 16:20:56 phajdan.jr Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ if [ "${PV}" = "999999" ]; then
 	KEYWORDS=""
 else
 	SRC_URI="https://github.com/martine/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~m68k ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 fi
 
 DESCRIPTION="A small build system similar to make."
@@ -46,14 +46,34 @@ RDEPEND="
 	zsh-completion? ( app-shells/zsh )
 	!<net-irc/ninja-1.5.9_pre14-r1" #436804
 
+run_for_build() {
+	if tc-is-cross-compiler; then
+		local -x AR=$(tc-getBUILD_AR)
+		local -x CXX=$(tc-getBUILD_CXX)
+		local -x CFLAGS=${BUILD_CXXFLAGS}
+		local -x LDFLAGS=${BUILD_LDFLAGS}
+	fi
+	"$@"
+}
+
 src_compile() {
-	# If somebody wants to cross-compile, we will probably need to do 2 builds.
 	tc-export AR CXX
 
-	"${PYTHON}" bootstrap.py --verbose || die
+	# configure.py uses CFLAGS instead of CXXFLAGS 
+	export CFLAGS=${CXXFLAGS}
+
+	run_for_build "${PYTHON}" bootstrap.py --verbose || die
+
+	if tc-is-cross-compiler; then
+		mv ninja ninja-build || die
+		"${PYTHON}" configure.py || die
+		./ninja-build -v ninja || die
+	else
+		ln ninja ninja-build || die
+	fi
 
 	if use doc; then
-		./ninja -v doxygen manual || die
+		./ninja-build -v doxygen manual || die
 	fi
 
 	if use emacs; then
@@ -62,8 +82,12 @@ src_compile() {
 }
 
 src_test() {
-	./ninja -v ninja_test || die
-	./ninja_test || die
+	if ! tc-is-cross-compiler; then
+		# Bug 485772
+		ulimit -n 2048
+		./ninja-build -v ninja_test || die
+		./ninja_test || die
+	fi
 }
 
 src_install() {
