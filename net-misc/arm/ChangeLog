@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/arm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/ChangeLog,v 1.24 2014/07/22 20:58:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/ChangeLog,v 1.25 2014/07/22 20:59:00 mrueg Exp $
+
+  22 Jul 2014; Manuel Rüger <mrueg@gentoo.org> -arm-1.4.3.0.ebuild,
+  -arm-1.4.4.1.ebuild:
+  Cleanup old.
 
   22 Jul 2014; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
   Add myself as a maintainer.
