@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.194 2014/07/20 15:08:29 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.195 2014/07/22 10:23:58 jer Exp $
+
+*libpcap-1.6.1 (22 Jul 2014)
+
+  22 Jul 2014; Jeroen Roovers <jer@gentoo.org> +libpcap-1.6.1.ebuild:
+  Version bump. Temporarily require lower net-wireless/bluez to satisfy
+  expectations of certain features not present in later versions.
 
   20 Jul 2014; Tobias Klausmann <klausman@gentoo.org> libpcap-1.5.3.ebuild:
   Stable on alpha, bug #511502
