@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-5.0_rc1.ebuild,v 1.2 2014/07/14 19:35:11 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-5.0_rc1-r1.ebuild,v 1.1 2014/07/22 00:16:43 ottxor Exp $
 
 EAPI=5
 
@@ -18,15 +18,17 @@ if [[ -z ${PV%%*9999} ]]; then
 	ECVS_CVS_OPTIONS="-dP"
 	MY_P="${PN}"
 	SRC_URI=""
+	KEYWORDS=""
 else
 	MY_P="${P/_/.}"
 	SRC_URI="mirror://sourceforge/gnuplot/${MY_P}.tar.gz"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+	inherit autotools
 fi
 
 LICENSE="gnuplot bitmap? ( free-noncomm )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
-IUSE="aqua bitmap cairo doc examples +gd ggi latex libcaca lua qt4 readline svga wxwidgets X"
+IUSE="aqua bitmap cairo doc examples +gd ggi latex libcaca libcerf lua qt4 readline svga wxwidgets X"
 
 RDEPEND="
 	cairo? (
@@ -45,6 +47,7 @@ RDEPEND="
 		>=dev-qt/qtgui-4.5:4
 		>=dev-qt/qtsvg-4.5:4 )
 	readline? ( sys-libs/readline )
+	libcerf? ( sci-libs/libcerf )
 	svga? ( media-libs/svgalib )
 	wxwidgets? (
 		x11-libs/wxGTK:2.8[X]
@@ -71,6 +74,9 @@ src_prepare() {
 		for dir in config demo m4 term tutorial; do
 			emake -C "$dir" -f Makefile.am.in Makefile.am
 		done
+		eautoreconf
+	else
+		epatch "${FILESDIR}/${P}-libcerf.patch"
 		eautoreconf
 	fi
 
@@ -120,6 +126,7 @@ src_configure() {
 		"$(use_with ggi ggi "${EPREFIX}/usr/$(get_libdir)")" \
 		"$(use_with ggi xmi "${EPREFIX}/usr/$(get_libdir)")" \
 		"$(use_with libcaca caca "${EPREFIX}/usr/$(get_libdir)")" \
+		$(use_with libcerf) \
 		$(use_with lua) \
 		$(use_with svga linux-vga) \
 		$(use_with X x) \
