@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.195 2014/07/22 10:23:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.196 2014/07/22 11:11:54 jer Exp $
+
+  22 Jul 2014; Jeroen Roovers <jer@gentoo.org> libpcap-1.6.1.ebuild,
+  +files/libpcap-1.6.1-configure.patch,
+  +files/libpcap-1.6.1-prefix-solaris.patch:
+  Check for bluetooth/mgmt.h (net-wireless/bluez-4) before use (bug #517772).
+  Convert sed scripts to patches.
 
 *libpcap-1.6.1 (22 Jul 2014)
 
