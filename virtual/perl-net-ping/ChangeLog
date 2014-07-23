@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-net-ping
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-net-ping/ChangeLog,v 1.25 2014/07/16 18:41:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-net-ping/ChangeLog,v 1.26 2014/07/23 00:16:40 dilfridge Exp $
+
+  23 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  perl-net-ping-2.38.ebuild, perl-net-ping-2.41-r1.ebuild,
+  perl-net-ping-2.430.0.ebuild:
+  net-ping becomes Net-Ping
 
 *perl-net-ping-2.430.0 (16 Jul 2014)
 *perl-net-ping-2.41-r1 (16 Jul 2014)
