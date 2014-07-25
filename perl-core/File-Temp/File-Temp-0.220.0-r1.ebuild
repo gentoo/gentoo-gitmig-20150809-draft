@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/File-Temp-0.220.0.ebuild,v 1.4 2014/02/02 00:00:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/File-Temp-0.220.0-r1.ebuild,v 1.1 2014/07/25 21:31:05 dilfridge Exp $
 
-EAPI=3
+EAPI=5
 
 MODULE_AUTHOR=TJENNESS
 MODULE_VERSION=0.22
