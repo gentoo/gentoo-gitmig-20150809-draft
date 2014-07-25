@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/CGI-3.630.0.ebuild,v 1.14 2014/01/20 23:33:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/CGI-3.630.0-r1.ebuild,v 1.1 2014/07/25 21:15:57 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 MY_PN=${PN}.pm
 MODULE_AUTHOR=MARKSTOS

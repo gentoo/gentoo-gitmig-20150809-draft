@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta/CPAN-Meta-2.120.921.ebuild,v 1.17 2014/01/19 21:07:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta/CPAN-Meta-2.120.921-r1.ebuild,v 1.1 2014/07/25 21:18:59 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=DAGOLDEN
 MODULE_VERSION=2.120921
