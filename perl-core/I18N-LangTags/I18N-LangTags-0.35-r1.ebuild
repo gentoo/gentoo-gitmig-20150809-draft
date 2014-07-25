@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/I18N-LangTags/I18N-LangTags-0.35.ebuild,v 1.1 2014/07/22 22:29:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/I18N-LangTags/I18N-LangTags-0.35-r1.ebuild,v 1.1 2014/07/25 21:05:57 dilfridge Exp $
 
-EAPI=3
+EAPI=5
 
 MODULE_AUTHOR=SBURKE
 MY_PN=I18N-LangTags

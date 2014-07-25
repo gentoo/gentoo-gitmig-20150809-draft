@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Piece/Time-Piece-1.20.ebuild,v 1.7 2014/01/20 20:47:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Piece/Time-Piece-1.20-r1.ebuild,v 1.1 2014/07/25 21:09:50 dilfridge Exp $
 
-EAPI=2
+EAPI=5
 
 MODULE_AUTHOR=MSERGEANT
 inherit perl-module

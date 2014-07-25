@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/XSLoader/XSLoader-0.160.0.ebuild,v 1.13 2014/02/16 14:12:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/XSLoader/XSLoader-0.160.0-r1.ebuild,v 1.1 2014/07/25 21:02:09 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=SAPER
 MODULE_VERSION=0.16

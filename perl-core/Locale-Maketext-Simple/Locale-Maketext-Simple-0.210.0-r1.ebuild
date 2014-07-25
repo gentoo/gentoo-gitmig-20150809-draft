@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Locale-Maketext-Simple/Locale-Maketext-Simple-0.210.0.ebuild,v 1.4 2013/02/19 19:35:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Locale-Maketext-Simple/Locale-Maketext-Simple-0.210.0-r1.ebuild,v 1.1 2014/07/25 21:10:52 dilfridge Exp $
 
-EAPI=2
+EAPI=5
 
 MODULE_AUTHOR=JESSE
 MODULE_VERSION=0.21
