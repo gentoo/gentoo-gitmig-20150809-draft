@@ -1,6 +1,9 @@
 # ChangeLog for virtual/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.84 2014/07/25 19:39:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.85 2014/07/25 19:40:54 ssuominen Exp $
+
+  25 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Remove unused USE description and add systemd@g.o to maintainers.
 
   25 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> udev-208-r2.ebuild:
   Punt compability flags USE="gudev introspection" because gentoo-x86 has been
