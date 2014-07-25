@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.11.26-r1.ebuild,v 1.1 2014/07/14 04:44:35 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.11.27.ebuild,v 1.1 2014/07/25 21:15:19 prometheanfire Exp $
 
 EAPI=5
 inherit eutils fdo-mime gnome2-utils pax-utils unpacker
 
 DESCRIPTION="Spotify is a social music platform"
 HOMEPAGE="https://www.spotify.com/ch-de/download/previews/"
-MY_PV="${PV}.g995ec04.78-1"
+MY_PV="${PV}.g2b1a638.81-1"
 MY_P="${PN}-client_${MY_PV}"
 SRC_BASE="http://repository.spotify.com/pool/non-free/${PN:0:1}/${PN}/"
 SRC_URI="
