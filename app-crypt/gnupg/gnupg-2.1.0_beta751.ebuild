@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0_beta751.ebuild,v 1.1 2014/07/25 03:35:18 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0_beta751.ebuild,v 1.2 2014/07/25 03:53:22 zx2c4 Exp $
 
 EAPI="5"
 
@@ -9,8 +9,8 @@ inherit eutils flag-o-matic toolchain-funcs
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
 MY_P="${P/_/-}"
-SRC_URI="mirror://gnupg/gnupg/${PN}/unstable/${MY_P}.tar.bz2"
-#SRC_URI="ftp://ftp.gnupg.org/gcrypt/${PN}/unstable/${MY_P}.tar.bz2"
+#SRC_URI="mirror://gnupg/gnupg/${PN}/unstable/${MY_P}.tar.bz2"
+SRC_URI="ftp://ftp.gnupg.org/gcrypt/${PN}/unstable/${MY_P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
