@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pry/pry-0.9.12.6-r1.ebuild,v 1.1 2014/07/25 13:57:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pry/pry-0.9.12.6-r1.ebuild,v 1.2 2014/07/25 13:58:49 mrueg Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ ruby_add_bdepend "
 		>=dev-ruby/rake-0.9
 		>=dev-ruby/mocha-0.13.1
 	)"
-	
+
 all_ruby_prepare() {
 	# Avoid unneeded dependency on git.
 	# Loosen coderay dependency.
@@ -40,6 +40,7 @@ all_ruby_prepare() {
 		-e '/coderay/s/~>/>=/' \
 		-i ${RUBY_FAKEGEM_GEMSPEC} || die
 }
+
 each_ruby_test() {
 	${RUBY} -S bacon -Ispec -q spec/*_spec.rb spec/*/*_spec.rb || die
 }
