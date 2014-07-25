@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-9999.ebuild,v 1.8 2014/07/25 00:19:07 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-9999.ebuild,v 1.9 2014/07/25 00:23:41 zlogene Exp $
 
 EAPI=5
 
@@ -70,7 +70,7 @@ src_install() {
 	newenvd "${FILESDIR}"/qpsmtpd.envd 99qpsmtpd
 
 	newconfd "${FILESDIR}"/qpsmtpd.confd qpsmtpd
-	newinitd "${FILESDIR}"/qpsmtpd.initd-r1 qpsmtpd 
+	newinitd "${FILESDIR}"/qpsmtpd.initd-r1 qpsmtpd
 
 	dodoc CREDITS Changes README README.plugins STATUS
 }
