@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.147 2014/07/26 05:55:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.148 2014/07/26 05:56:25 graaff Exp $
+
+  26 Jul 2014; Hans de Graaff <graaff@gentoo.org> json-1.8.1.ebuild:
+  Undo accidental rbx commit.
 
   26 Jul 2014; Hans de Graaff <graaff@gentoo.org> +json-1.7.7.ebuild:
   Add back json-1.7.7 because app-admin/chef has dependencies that violate our
