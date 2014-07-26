@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.9.8-r1.ebuild,v 1.1 2014/07/26 18:06:26 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.9.8-r1.ebuild,v 1.2 2014/07/26 18:07:29 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://sourceforge.net/projects/lxr"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE="cvs freetext mysql postgres"
 WEBAPP_MANUAL_SLOT="yes"
 SLOT="0"
