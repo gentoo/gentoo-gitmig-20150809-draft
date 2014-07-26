@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/haml-3.1.8-r2.ebuild,v 1.2 2014/04/05 14:31:19 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/haml-3.1.8-r2.ebuild,v 1.3 2014/07/26 18:35:11 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_TASK_TEST="test"
 RUBY_FAKEGEM_TASK_DOC="-Ilib doc"
@@ -28,7 +28,7 @@ KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-ma
 # TODO: haml has some emacs modes that it could be installing, in case
 IUSE=""
 
-RESTRICT="test"
+#RESTRICT="test"
 
 ruby_add_rdepend "dev-ruby/sass"
 
