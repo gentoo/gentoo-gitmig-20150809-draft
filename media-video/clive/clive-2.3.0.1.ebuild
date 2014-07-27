@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/clive/clive-2.3.0.1.ebuild,v 1.2 2014/07/27 16:58:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/clive/clive-2.3.0.1.ebuild,v 1.3 2014/07/27 17:00:13 ssuominen Exp $
 
 EAPI=5
 inherit perl-app
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PV:0:3}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="clipboard pager password test"
 
 RDEPEND=">=dev-perl/BerkeleyDB-0.34
