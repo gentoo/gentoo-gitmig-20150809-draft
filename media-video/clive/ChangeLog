@@ -1,6 +1,10 @@
 # ChangeLog for media-video/clive
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/clive/ChangeLog,v 1.75 2014/07/27 17:00:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/clive/ChangeLog,v 1.76 2014/07/27 17:01:03 ssuominen Exp $
+
+  27 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> -clive-2.2.26.ebuild,
+  -clive-2.2.28.ebuild, -clive-2.2.6.ebuild:
+  old
 
   27 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> clive-2.3.0.1.ebuild:
   amd64/x86 stable
