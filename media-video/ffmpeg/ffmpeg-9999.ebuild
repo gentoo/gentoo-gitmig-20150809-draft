@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.160 2014/07/06 10:09:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.161 2014/07/27 08:06:12 aballier Exp $
 
 EAPI="5"
 
@@ -363,6 +363,7 @@ multilib_src_install() {
 
 multilib_src_install_all() {
 	dodoc Changelog README.md CREDITS doc/*.txt doc/APIchanges
+	[ -f "doc/RELEASE_NOTES" ] && dodoc "doc/RELEASE_NOTES"
 	use doc && dohtml -r doc/*
 	if use examples ; then
 		dodoc -r doc/examples
