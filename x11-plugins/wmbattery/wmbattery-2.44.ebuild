@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/wmbattery-2.44.ebuild,v 1.1 2014/07/29 18:10:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/wmbattery-2.44.ebuild,v 1.2 2014/07/29 18:11:19 ssuominen Exp $
 
 EAPI=5
 inherit autotools
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/w/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc -sparc ~x86"
+KEYWORDS="amd64 ~ppc -sparc x86"
 IUSE="upower"
 
 RDEPEND="sys-apps/apmd
