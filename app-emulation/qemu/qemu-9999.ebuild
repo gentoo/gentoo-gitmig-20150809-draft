@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.76 2014/07/29 09:50:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.77 2014/07/29 10:09:28 vapier Exp $
 
 EAPI=5
 
@@ -527,8 +527,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	local virtfs_caps=
-
 	if qemu_support_kvm; then
 		readme.gentoo_print_elog
 		ewarn "Migration from qemu-kvm instances and loading qemu-kvm created"
@@ -548,11 +546,11 @@ pkg_postinst() {
 		fi
 	fi
 
-	virtfs_caps+="cap_chown,cap_dac_override,cap_fowner,cap_fsetid,"
-	virtfs_caps+="cap_setgid,cap_mknod,cap_setuid"
-
 	fcaps cap_net_admin /usr/libexec/qemu-bridge-helper
-	use virtfs && fcaps ${virtfs_caps} /usr/bin/virtfs-proxy-helper
+	if use virtfs && [ -n "${softmmu_targets}" ]; then
+		local virtfs_caps="cap_chown,cap_dac_override,cap_fowner,cap_fsetid,cap_setgid,cap_mknod,cap_setuid"
+		fcaps ${virtfs_caps} /usr/bin/virtfs-proxy-helper
+	fi
 }
 
 pkg_info() {
