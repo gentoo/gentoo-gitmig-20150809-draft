@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.77 2014/07/29 10:09:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.78 2014/07/29 10:17:23 vapier Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
 IUSE="accessibility +aio alsa bluetooth +caps +curl debug +fdt glusterfs \
 gtk iscsi +jpeg \
-kernel_linux kernel_FreeBSD ncurses opengl +png pulseaudio python \
+kernel_linux kernel_FreeBSD ncurses nls opengl +png pulseaudio python \
 rbd sasl +seccomp sdl selinux smartcard spice ssh static static-softmmu \
 static-user systemtap tci test +threads tls usb usbredir +uuid vde +vhost-net \
 virtfs +vnc xattr xen xfs"
@@ -125,6 +125,7 @@ DEPEND="${RDEPEND}
 	sys-apps/texinfo
 	virtual/pkgconfig
 	kernel_linux? ( >=sys-kernel/linux-headers-2.6.35 )
+	gtk? ( nls? ( sys-devel/gettext ) )
 	static-softmmu? ( ${SOFTMMU_LIB_DEPEND} )
 	static-user? ( ${USER_LIB_DEPEND} )
 	test? (
@@ -235,6 +236,9 @@ src_prepare() {
 	sed -i -r \
 		-e 's/^(C|OP_C|HELPER_C)FLAGS=/\1FLAGS+=/' \
 		Makefile Makefile.target || die
+
+	# Cheap hack to disable gettext .mo generation.
+	use nls || rm -f po/*.po
 
 	epatch "${FILESDIR}"/qemu-1.7.0-cflags.patch
 	[[ -n ${BACKPORTS} ]] && \
