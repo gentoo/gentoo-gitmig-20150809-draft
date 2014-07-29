@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/AnyEvent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/ChangeLog,v 1.115 2014/07/29 21:28:30 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/ChangeLog,v 1.116 2014/07/29 21:31:09 zlogene Exp $
+
+*AnyEvent-7.80.0 (29 Jul 2014)
+
+  29 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> +AnyEvent-7.80.0.ebuild:
+  Version bump
 
   29 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> AnyEvent-7.40.0.ebuild:
   Stable on more arches
