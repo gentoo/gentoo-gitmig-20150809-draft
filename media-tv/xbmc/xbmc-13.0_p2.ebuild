@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-13.0_p2.ebuild,v 1.6 2014/07/29 08:07:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-13.0_p2.ebuild,v 1.7 2014/07/29 08:13:30 vapier Exp $
 
 EAPI="5"
 
@@ -119,7 +119,10 @@ COMMON_DEPEND="${PYTHON_DEPS}
 		virtual/glu
 		virtual/opengl
 	)
-	gles? ( virtual/opengl )
+	gles? (
+		virtual/opengl
+		media-libs/mesa[gles2]
+	)
 	vaapi? ( x11-libs/libva[opengl] )
 	vdpau? (
 		|| ( x11-libs/libvdpau >=x11-drivers/nvidia-drivers-180.51 )
