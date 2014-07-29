@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.0.0-r1.ebuild,v 1.8 2014/07/29 10:17:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.0.0-r1.ebuild,v 1.9 2014/07/29 10:23:00 vapier Exp $
 
 EAPI=5
 
@@ -503,34 +503,36 @@ src_install() {
 	fi
 
 	# Remove vgabios since we're using the vgabios packaged one
-	rm "${ED}/usr/share/qemu/vgabios.bin"
-	rm "${ED}/usr/share/qemu/vgabios-cirrus.bin"
-	rm "${ED}/usr/share/qemu/vgabios-qxl.bin"
-	rm "${ED}/usr/share/qemu/vgabios-stdvga.bin"
-	rm "${ED}/usr/share/qemu/vgabios-vmware.bin"
-	if use qemu_softmmu_targets_x86_64 || use qemu_softmmu_targets_i386; then
-		dosym ../vgabios/vgabios.bin /usr/share/qemu/vgabios.bin
-		dosym ../vgabios/vgabios-cirrus.bin /usr/share/qemu/vgabios-cirrus.bin
-		dosym ../vgabios/vgabios-qxl.bin /usr/share/qemu/vgabios-qxl.bin
-		dosym ../vgabios/vgabios-stdvga.bin /usr/share/qemu/vgabios-stdvga.bin
-		dosym ../vgabios/vgabios-vmware.bin /usr/share/qemu/vgabios-vmware.bin
-	fi
+	if [[ -n ${softmmu_targets} ]]; then
+		rm "${ED}/usr/share/qemu/vgabios.bin"
+		rm "${ED}/usr/share/qemu/vgabios-cirrus.bin"
+		rm "${ED}/usr/share/qemu/vgabios-qxl.bin"
+		rm "${ED}/usr/share/qemu/vgabios-stdvga.bin"
+		rm "${ED}/usr/share/qemu/vgabios-vmware.bin"
+		if use qemu_softmmu_targets_x86_64 || use qemu_softmmu_targets_i386; then
+			dosym ../vgabios/vgabios.bin /usr/share/qemu/vgabios.bin
+			dosym ../vgabios/vgabios-cirrus.bin /usr/share/qemu/vgabios-cirrus.bin
+			dosym ../vgabios/vgabios-qxl.bin /usr/share/qemu/vgabios-qxl.bin
+			dosym ../vgabios/vgabios-stdvga.bin /usr/share/qemu/vgabios-stdvga.bin
+			dosym ../vgabios/vgabios-vmware.bin /usr/share/qemu/vgabios-vmware.bin
+		fi
 
-	# Remove sgabios since we're using the sgabios packaged one
-	rm "${ED}/usr/share/qemu/sgabios.bin"
-	if use qemu_softmmu_targets_x86_64 || use qemu_softmmu_targets_i386; then
-		dosym ../sgabios/sgabios.bin /usr/share/qemu/sgabios.bin
-	fi
+		# Remove sgabios since we're using the sgabios packaged one
+		rm "${ED}/usr/share/qemu/sgabios.bin"
+		if use qemu_softmmu_targets_x86_64 || use qemu_softmmu_targets_i386; then
+			dosym ../sgabios/sgabios.bin /usr/share/qemu/sgabios.bin
+		fi
 
-	# Remove iPXE since we're using the iPXE packaged one
-	rm "${ED}"/usr/share/qemu/pxe-*.rom
-	if use qemu_softmmu_targets_x86_64 || use qemu_softmmu_targets_i386; then
-		dosym ../ipxe/8086100e.rom /usr/share/qemu/pxe-e1000.rom
-		dosym ../ipxe/80861209.rom /usr/share/qemu/pxe-eepro100.rom
-		dosym ../ipxe/10500940.rom /usr/share/qemu/pxe-ne2k_pci.rom
-		dosym ../ipxe/10222000.rom /usr/share/qemu/pxe-pcnet.rom
-		dosym ../ipxe/10ec8139.rom /usr/share/qemu/pxe-rtl8139.rom
-		dosym ../ipxe/1af41000.rom /usr/share/qemu/pxe-virtio.rom
+		# Remove iPXE since we're using the iPXE packaged one
+		rm "${ED}"/usr/share/qemu/pxe-*.rom
+		if use qemu_softmmu_targets_x86_64 || use qemu_softmmu_targets_i386; then
+			dosym ../ipxe/8086100e.rom /usr/share/qemu/pxe-e1000.rom
+			dosym ../ipxe/80861209.rom /usr/share/qemu/pxe-eepro100.rom
+			dosym ../ipxe/10500940.rom /usr/share/qemu/pxe-ne2k_pci.rom
+			dosym ../ipxe/10222000.rom /usr/share/qemu/pxe-pcnet.rom
+			dosym ../ipxe/10ec8139.rom /usr/share/qemu/pxe-rtl8139.rom
+			dosym ../ipxe/1af41000.rom /usr/share/qemu/pxe-virtio.rom
+		fi
 	fi
 
 	qemu_support_kvm && readme.gentoo_create_doc
