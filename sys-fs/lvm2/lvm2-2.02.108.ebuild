@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.108.ebuild,v 1.1 2014/07/30 17:11:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.108.ebuild,v 1.2 2014/07/30 17:23:37 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils linux-info multilib systemd toolchain-funcs udev flag-o-matic
@@ -78,6 +78,12 @@ src_prepare() {
 
 	sed -i -e '/FLAG/s:-O2::' configure{.in,} || die #480212
 
+	if use systemd && use lvmetad && ! use device-mapper-only; then
+		sed -i -e '/use_lvmetad =/s:0:1:' conf/example.conf.in || die #514196
+	fi
+
+	sed -i -e 's:/usr/bin/true:/bin/true:' scripts/blk_availability_systemd_red_hat.service.in || die #517514
+
 	# For upstream -- review and forward:
 	epatch "${FILESDIR}"/${PN}-2.02.63-always-make-static-libdm.patch
 	epatch "${FILESDIR}"/${PN}-2.02.56-lvm2create_initrd.patch
@@ -87,8 +93,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.02.92-dynamic-static-ldflags.patch #332905
 	epatch "${FILESDIR}"/${PN}-2.02.108-static-pkgconfig-libs.patch #370217, #439414 + blkid
 	epatch "${FILESDIR}"/${PN}-2.02.106-pthread-pkgconfig.patch #492450
-	# Upstream never tested with USE="-thin" wrt #510202
-	sed -i -e 's|_man7: $(MAN8)|_man7: $(MAN7)|' man/Makefile.in || die
+
+	# Without thin-privision-tools, there is nothing to install for target install_man7:
 	use thin || { sed -i -e '/^install_lvm2/s:install_man7::' man/Makefile.in || die; }
 
 	eautoreconf
