@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/udev.eclass,v 1.12 2014/07/13 19:33:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/udev.eclass,v 1.13 2014/07/30 19:49:46 ssuominen Exp $
 
 # @ECLASS: udev.eclass
 # @MAINTAINER:
@@ -56,7 +56,8 @@ _udev_get_udevdir() {
 udev_get_udevdir() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	echo "$(_udev_get_udevdir)"
+	eerror "Use the shorter get_udevdir() instead of longer udev_get_udevdir()"
+	die "Deprecated function call: udev_get_udevdir()"
 }
 
 # @FUNCTION: get_udevdir
