@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.78 2014/07/24 16:58:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.79 2014/07/30 04:03:43 ssuominen Exp $
+
+*colord-1.2.1-r1 (30 Jul 2014)
+
+  30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> +colord-1.2.1-r1.ebuild:
+  Revision bump x11-misc/colord because dynamic deps doesn't catch
+  virtual/udev[gudev] -> virtual/libgudev upgrade for this package.
 
   24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> colord-1.0.3.ebuild,
   colord-1.2.0.ebuild, colord-1.2.1.ebuild:
