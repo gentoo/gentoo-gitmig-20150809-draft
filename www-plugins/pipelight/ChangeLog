@@ -1,0 +1,9 @@
+# ChangeLog for www-plugins/pipelight
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/pipelight/ChangeLog,v 1.1 2014/07/31 21:12:29 ryao Exp $
+
+*pipelight-9999 (31 Jul 2014)
+
+  31 Jul 2014; Richard Yao <ryao@gentoo.org> +metadata.xml,
+  +pipelight-9999.ebuild:
+  New package www-plugins/pipelight, bug #481596
