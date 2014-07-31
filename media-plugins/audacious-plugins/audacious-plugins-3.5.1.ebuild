@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.5.1.ebuild,v 1.1 2014/07/31 21:32:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.5.1.ebuild,v 1.2 2014/07/31 21:44:25 chainsaw Exp $
 
 EAPI=5
 inherit eutils
@@ -24,7 +24,7 @@ RDEPEND="app-arch/unzip
 	~media-sound/audacious-3.5.1
 	>=net-libs/neon-0.26.4
 	x11-libs/gtk+:3
-	( || ( >=dev-libs/glib-2.32.2 dev-util/gdbus-codegen ) )
+	( || ( >=dev-libs/glib-2.32.2[utils] dev-util/gdbus-codegen ) )
 	aac? ( >=media-libs/faad2-2.7 )
 	adplug? ( >=dev-cpp/libbinio-1.4 )
 	alsa? ( >=media-libs/alsa-lib-1.0.16 )
