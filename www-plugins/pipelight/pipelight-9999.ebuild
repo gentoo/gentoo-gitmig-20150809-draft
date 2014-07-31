@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/pipelight/pipelight-9999.ebuild,v 1.1 2014/07/31 21:12:29 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/pipelight/pipelight-9999.ebuild,v 1.2 2014/07/31 21:19:24 ryao Exp $
 
 EAPI=5
 
@@ -19,8 +19,7 @@ IUSE=""
 DEPEND="app-emulation/wine[X,abi_x86_32,pipelight]"
 RDEPEND="${DEPEND}
 	app-arch/cabextract
-	gnome-extra/zenity
-	x11-apps/mesa-progs"
+	gnome-extra/zenity"
 
 QA_FLAGS_IGNORED="usr/share/pipelight/pluginloader.exe
 	usr/share/pipelight/winecheck.exe"
