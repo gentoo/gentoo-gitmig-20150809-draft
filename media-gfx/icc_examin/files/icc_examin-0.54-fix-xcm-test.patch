@@ -1,3 +1,7 @@
+Fix https://bugs.gentoo.org/492374
+
+Michael Weber
+
 --- icc_examin-0.54/configure_tests.sh
 +++ icc_examin-0.54/configure_tests.sh
 @@ -543,7 +543,7 @@

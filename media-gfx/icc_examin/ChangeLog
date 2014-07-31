@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/icc_examin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/icc_examin/ChangeLog,v 1.6 2014/07/31 06:39:45 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/icc_examin/ChangeLog,v 1.7 2014/07/31 06:50:09 xmw Exp $
+
+  31 Jul 2014; Michael Weber <xmw@gentoo.org>
+  files/icc_examin-0.54-fix-xcm-test.patch,
+  files/icc_examin-0.55-fix-xrandr-test.patch:
+  Add refrences to patch files
 
 *icc_examin-0.55 (31 Jul 2014)
 
