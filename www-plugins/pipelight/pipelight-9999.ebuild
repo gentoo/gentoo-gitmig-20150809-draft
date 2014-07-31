@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/pipelight/pipelight-9999.ebuild,v 1.2 2014/07/31 21:19:24 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/pipelight/pipelight-9999.ebuild,v 1.3 2014/07/31 21:24:35 ryao Exp $
 
 EAPI=5
 
@@ -61,9 +61,9 @@ postinst() {
 
 	# Helpful information for those willing to live dangerously
 	einfo "Using Windows plugins on certain websites might require a useragent"
-	einfo "switcher. See the upstream FAQ for more details."
+	einfo "switcher. See the upstream tutorial for more details."
 	einfo
-	einfo "https://answers.launchpad.net/pipelight/+faq/2351"
+	einfo "http://www.pipelight.net/cms/installation-user-agent.html"
 	einfo
 	einfo "End users should use the pipelight-plugin utility to install and"
 	einfo "manage plugins. Updates are done at plugin initialization whenever"
