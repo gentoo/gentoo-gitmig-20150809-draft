@@ -1,0 +1,7 @@
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.stable.mask,v 1.1 2014/07/31 22:13:03 ssuominen Exp $
+
+# Samuli Suominen <ssuominen@gentoo.org> (01 Aug 2014)
+# Untested dev-lang/ruby based dependencies wrt #493780
+sys-block/thin-provisioning-tools test
