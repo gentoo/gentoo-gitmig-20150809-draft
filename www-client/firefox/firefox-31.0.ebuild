@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-31.0.ebuild,v 1.2 2014/07/31 15:14:40 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-31.0.ebuild,v 1.3 2014/08/01 16:34:58 axs Exp $
 
 EAPI="5"
 VIRTUALX_REQUIRED="pgo"
@@ -30,6 +30,8 @@ PATCH="${PN}-31.0-patches-0.2"
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
 MOZ_HTTP_URI="http://ftp.mozilla.org/pub/${PN}/releases/"
+
+MOZCONFIG_OPTIONAL_WIFI=1
 
 inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-v4 multilib pax-utils fdo-mime autotools virtualx mozlinguas
 
