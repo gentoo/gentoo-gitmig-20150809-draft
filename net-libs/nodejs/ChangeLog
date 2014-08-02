@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/nodejs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.126 2014/08/02 13:44:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.127 2014/08/02 13:47:53 ago Exp $
+
+  02 Aug 2014; Agostino Sarubbo <ago@gentoo.org> nodejs-0.10.30.ebuild:
+  Stable for x86, wrt bug #518710
 
   02 Aug 2014; Agostino Sarubbo <ago@gentoo.org> nodejs-0.10.30.ebuild:
   Stable for amd64, wrt bug #518710
