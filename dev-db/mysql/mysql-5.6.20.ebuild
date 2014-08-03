@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.6.20.ebuild,v 1.2 2014/08/03 20:54:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.6.20.ebuild,v 1.3 2014/08/03 21:01:05 robbat2 Exp $
 
 EAPI="5"
 
@@ -87,6 +87,9 @@ src_test() {
 		# main.mysql_tzinfo_to_sql_symlink
 		# fails due to missing mysql_test/std_data/zoneinfo/GMT file from archive
 		#
+		# rpl.rpl_plugin_load
+		# fails due to included file not listed in expected result
+		# appears to be poor planning
 		for t in \
 			binlog.binlog_mysqlbinlog_filter \
 			binlog.binlog_statement_insert_delayed \
@@ -94,12 +97,13 @@ src_test() {
 			funcs_1.is_tables_mysql \
 			funcs_1.is_triggers \
 			main.information_schema \
-			main.mysqld--help-notwinfuncs_1.is_triggers \
 			main.mysql_client_test \
+			main.mysqld--help-notwinfuncs_1.is_triggers \
 			main.mysql_tzinfo_to_sql_symlink \
 			mysqld--help-notwin \
 			perfschema.binlog_edge_mix \
 			perfschema.binlog_edge_stmt \
+			rpl.rpl_plugin_load \
 		; do
 				mysql-v2_disable_test  "$t" "False positives in Gentoo"
 		done
