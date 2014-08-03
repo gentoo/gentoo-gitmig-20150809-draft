@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-6.1.0.ebuild,v 1.4 2014/08/03 19:20:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-6.1.0.ebuild,v 1.5 2014/08/03 23:10:41 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
@@ -34,9 +34,11 @@ DISTUTILS_IN_SOURCE_BUILD=1
 
 src_prepare() {
 	# This list should be kept in sync with setup.py.
-	for DB_VER in 6.1 6.0 5.3 5.2 5.1 5.0 4.8; do
-		has_version "sys-libs/db:${DB_VER}" && break
-	done
+	if [[ -z ${DB_VER} ]]; then
+		for DB_VER in 6.1 6.0 5.3 5.2 5.1 5.0 4.8; do
+			has_version "sys-libs/db:${DB_VER}" && break
+		done
+	fi
 
 	# Force version.
 	sed -e "s/db_ver = None/db_ver = (${DB_VER%.*}, ${DB_VER#*.})/" \
