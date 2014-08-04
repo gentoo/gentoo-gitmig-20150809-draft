@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9280 2014/08/04 20:36:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9281 2014/08/04 20:42:17 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  db-5.2 fails testsuites and there are no more releases from upstream, punt
+  it.
 
   04 Aug 2014; Alexis Ballier <aballier@gentoo.org> package.mask:
   mask ffmpeg-2.3+
