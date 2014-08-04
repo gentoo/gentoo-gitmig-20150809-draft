@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9279 2014/08/04 20:17:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9280 2014/08/04 20:36:14 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -16,6 +16,9 @@
 
   04 Aug 2014; Tim Harder <radhermit@gentoo.org> package.mask:
   Unmask =media-libs/libsfml-2*.
+
+  04 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  Remove dev-vcs/gitosis and dev-vcs/gitosis-gentoo from the tree.
 
   04 Aug 2014; Robin H. Johnson <robbat2@gentoo.org> package.mask:
   old mysql ebuilds now live in the overlay only. if you need them for
