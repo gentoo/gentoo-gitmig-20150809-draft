@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.17 2014/06/19 13:08:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.18 2014/08/05 09:57:51 polynomial-c Exp $
 
 EAPI=5
 
@@ -80,7 +80,7 @@ multilib_src_install() {
 	fi
 
 	if multilib_is_native_abi && use java; then
-		java-pkg_dojar "${BUILD_DIR}"/src/.libs/${PN}.jar
+		java-pkg_dojar "${BUILD_DIR}"/src/.libs/${PN}-j2se-${PV}.jar
 		doenvd "${FILESDIR}"/90${PN}
 	fi
 }
