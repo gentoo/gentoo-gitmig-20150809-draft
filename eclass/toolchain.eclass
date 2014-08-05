@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.634 2014/08/05 01:04:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.635 2014/08/05 01:41:01 floppym Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1133,7 +1133,7 @@ toolchain_src_configure() {
 		if use_if_iuse libssp ; then
 			confgcc+=( --enable-libssp )
 		else
-			if hardened_gcc_is_stable ssp: then
+			if hardened_gcc_is_stable ssp; then
 				export gcc_cv_libc_provides_ssp=yes
 			fi
 			confgcc+=( --disable-libssp )
