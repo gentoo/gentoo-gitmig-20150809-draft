@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.80 2014/08/05 08:10:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.81 2014/08/05 08:16:57 vapier Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
 IUSE="accessibility +aio alsa bluetooth +caps +curl debug +fdt glusterfs \
 gtk iscsi +jpeg \
-kernel_linux kernel_FreeBSD ncurses nls opengl +png pulseaudio python \
+kernel_linux kernel_FreeBSD ncurses nfs nls opengl +png pulseaudio python \
 rbd sasl +seccomp sdl selinux smartcard spice ssh static static-softmmu \
 static-user systemtap tci test +threads tls usb usbredir +uuid vde +vhost-net \
 virtfs +vnc xattr xen xfs"
@@ -72,6 +72,7 @@ SOFTMMU_LIB_DEPEND="${COMMON_LIB_DEPEND}
 	glusterfs? ( >=sys-cluster/glusterfs-3.4.0[static-libs(+)] )
 	jpeg? ( virtual/jpeg[static-libs(+)] )
 	ncurses? ( sys-libs/ncurses[static-libs(+)] )
+	nfs? ( net-fs/libnfs[static-libs(+)] )
 	png? ( media-libs/libpng[static-libs(+)] )
 	rbd? ( sys-cluster/ceph[static-libs(+)] )
 	sasl? ( dev-libs/cyrus-sasl[static-libs(+)] )
@@ -330,6 +331,7 @@ qemu_src_configure() {
 			$(use_enable jpeg vnc-jpeg)
 			$(use_enable kernel_linux kvm)
 			$(use_enable ncurses curses)
+			$(use_enable nfs libnfs)
 			$(use_enable opengl glx)
 			$(use_enable png vnc-png)
 			$(use_enable rbd)
