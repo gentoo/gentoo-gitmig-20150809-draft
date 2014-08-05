@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.79 2014/07/29 10:23:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.80 2014/08/05 08:10:07 vapier Exp $
 
 EAPI=5
 
@@ -338,6 +338,7 @@ qemu_src_configure() {
 			$(use_enable smartcard smartcard-nss)
 			$(use_enable spice)
 			$(use_enable ssh libssh2)
+			$(use_enable tls quorum)
 			$(use_enable tls vnc-tls)
 			$(use_enable tls vnc-ws)
 			$(use_enable usb libusb)
