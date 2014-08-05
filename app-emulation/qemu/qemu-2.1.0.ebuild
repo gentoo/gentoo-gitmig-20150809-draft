@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.1.0.ebuild,v 1.4 2014/08/05 08:21:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.1.0.ebuild,v 1.5 2014/08/05 08:24:32 vapier Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
 IUSE="accessibility +aio alsa bluetooth +caps +curl debug +fdt glusterfs \
 gtk iscsi +jpeg \
-kernel_linux kernel_FreeBSD lzo ncurses nfs nls opengl +png pulseaudio python \
+kernel_linux kernel_FreeBSD lzo ncurses nfs nls numa opengl +png pulseaudio python \
 rbd sasl +seccomp sdl selinux smartcard snappy spice ssh static static-softmmu \
 static-user systemtap tci test +threads tls usb usbredir +uuid vde +vhost-net \
 virtfs +vnc xattr xen xfs"
@@ -74,6 +74,7 @@ SOFTMMU_LIB_DEPEND="${COMMON_LIB_DEPEND}
 	lzo? ( dev-libs/lzo:2[static-libs(+)] )
 	ncurses? ( sys-libs/ncurses[static-libs(+)] )
 	nfs? ( net-fs/libnfs[static-libs(+)] )
+	numa? ( sys-process/numactl[static-libs(+)] )
 	png? ( media-libs/libpng[static-libs(+)] )
 	rbd? ( sys-cluster/ceph[static-libs(+)] )
 	sasl? ( dev-libs/cyrus-sasl[static-libs(+)] )
@@ -335,6 +336,7 @@ qemu_src_configure() {
 			$(use_enable lzo)
 			$(use_enable ncurses curses)
 			$(use_enable nfs libnfs)
+			$(use_enable numa)
 			$(use_enable opengl glx)
 			$(use_enable png vnc-png)
 			$(use_enable rbd)
