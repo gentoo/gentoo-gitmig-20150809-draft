@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.633 2014/08/04 23:03:28 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.634 2014/08/05 01:04:21 robbat2 Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -2163,7 +2163,7 @@ hardened_gcc_is_stable() {
 	elif [[ $1 == "ssp" ]] ; then
 		if [[ ${CTARGET} == *-uclibc* ]] ; then
 			tocheck=${SSP_UCLIBC_STABLE}
-		elfi  [[ ${CTARGET} == *-gnu* ]] ; then
+		elif  [[ ${CTARGET} == *-gnu* ]] ; then
 			tocheck=${SSP_STABLE}
 		fi
 	else
