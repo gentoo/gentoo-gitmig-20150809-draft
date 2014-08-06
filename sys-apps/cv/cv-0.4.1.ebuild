@@ -1,8 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cv/cv-0.4.1.ebuild,v 1.2 2014/08/06 20:09:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cv/cv-0.4.1.ebuild,v 1.3 2014/08/06 20:14:48 jer Exp $
 
 EAPI=5
+inherit toolchain-funcs
 
 DESCRIPTION="Coreutils Viewer: show progress for cp, rm, dd, and so forth"
 HOMEPAGE="https://github.com/Xfennec/cv"
@@ -12,11 +13,19 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="sys-libs/ncurses"
-RDEPEND="${DEPEND}"
+RDEPEND="sys-libs/ncurses"
+DEPEND="
+	${RDEPEND}
+	virtual/pkgconfig
+"
 
 src_prepare() {
-	sed -i 's/CFLAGS=-g/CFLAGS+=/' Makefile || die
+	sed -i \
+		-e '/LFLAGS/s:-lncurses:$(LDFLAGS) $(shell $(PKG_CONFIG) --libs ncurses):' \
+		-e 's:CFLAGS=-g:CFLAGS+=:' \
+		-e 's:gcc:$(CC):g' \
+		Makefile || die
+	tc-export CC PKG_CONFIG
 }
 
 src_install() {
