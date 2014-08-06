@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.1.ebuild,v 1.18 2014/07/20 04:59:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.1.ebuild,v 1.19 2014/08/06 00:49:04 floppym Exp $
 
 EAPI="5"
 
@@ -23,8 +23,8 @@ HOMEPAGE="http://www.freerdp.com/"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE="alsa +channels +client cups debug directfb doc ffmpeg gstreamer jpeg
-	pulseaudio server smartcard sse2 test X xinerama xv"
+IUSE="alsa +client cups debug directfb doc ffmpeg gstreamer jpeg
+	pulseaudio server smartcard sse2 test usb X xinerama xv"
 
 RDEPEND="
 	dev-libs/openssl
@@ -32,6 +32,12 @@ RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	cups? ( net-print/cups )
 	client? (
+		usb? (
+			virtual/libudev:0=
+			sys-apps/util-linux:0=
+			dev-libs/dbus-glib:0=
+			virtual/libusb:1=
+		)
 		X? (
 			x11-libs/libXcursor
 			x11-libs/libXext
@@ -66,6 +72,7 @@ RDEPEND="
 	)
 "
 DEPEND="${RDEPEND}
+	virtual/pkgconfig
 	client? ( X? ( doc? (
 		app-text/docbook-xml-dtd:4.1.2
 		app-text/xmlto
@@ -77,7 +84,6 @@ DOCS=( README )
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_with alsa ALSA)
-		$(cmake-utils_use_with channels CHANNELS)
 		$(cmake-utils_use_with client CLIENT)
 		$(cmake-utils_use_with cups CUPS)
 		$(cmake-utils_use_with debug DEBUG_ALL)
@@ -90,6 +96,7 @@ src_configure() {
 		$(cmake-utils_use_with server SERVER)
 		$(cmake-utils_use_with smartcard PCSC)
 		$(cmake-utils_use_with sse2 SSE2)
+		$(cmake-utils_use usb CHANNEL_URBDRC)
 		$(cmake-utils_use_with X X11)
 		$(cmake-utils_use_with xinerama XINERAMA)
 		$(cmake-utils_use_with xv XV)
