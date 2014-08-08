@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.8-r1.ebuild,v 1.4 2014/08/08 08:07:29 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.8-r1.ebuild,v 1.5 2014/08/08 08:13:07 alonbl Exp $
 
 EAPI="4"
 inherit eutils autotools
 
 DESCRIPTION="A library implementing a layer on top of PKCS#11 API to make using PKCS#11 implementations easier."
 HOMEPAGE="https://github.com/opensc/libp11/wiki"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/opensc/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

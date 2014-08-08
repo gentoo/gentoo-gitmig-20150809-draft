@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.65 2014/08/08 08:07:29 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.66 2014/08/08 08:13:07 alonbl Exp $
+
+  08 Aug 2014; Alon Bar-Lev <alonbl@gentoo.org> libp11-0.2.8-r1.ebuild,
+  libp11-0.2.8.ebuild:
+  Update urls, cleanup
 
   08 Aug 2014; Alon Bar-Lev <alonbl@gentoo.org> -libp11-0.2.7.ebuild,
   libp11-0.2.8-r1.ebuild, libp11-0.2.8.ebuild:
