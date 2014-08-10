@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.83 2014/08/10 09:20:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.84 2014/08/10 09:30:29 ago Exp $
+
+  10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libdc1394-2.2.1.ebuild:
+  Stable for sparc, wrt bug #515234
 
   10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libdc1394-2.2.1.ebuild:
   Stable for ia64, wrt bug #515234
