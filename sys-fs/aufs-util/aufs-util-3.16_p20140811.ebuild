@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/aufs-util-3.16_p20140811.ebuild,v 1.1 2014/08/10 21:23:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/aufs-util-3.16_p20140811.ebuild,v 1.2 2014/08/10 21:30:48 jlec Exp $
 
 EAPI=5
 
@@ -28,11 +28,16 @@ src_prepare() {
 		-e "/LDFLAGS += -static -s/d" \
 		-e "/CFLAGS/s:-O::g" \
 		-i Makefile || die
+
 	sed \
 		-e '/LDFLAGS/s: -s::g' \
 		-e "s:m 644 -s:m 644:g" \
 		-e "s:/usr/lib:/usr/$(get_libdir):g" \
 		-i libau/Makefile || die
+
+	sed \
+		-e '/LDFLAGS/s: -s::g' \
+		-i fhsm/Makefile || die
 
 	tc-export CC AR
 	export HOSTCC=$(tc-getCC)
