@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.127 2014/08/10 17:25:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.128 2014/08/10 17:25:30 ago Exp $
+
+  10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> e2fsprogs-libs-1.42.10.ebuild:
+  Stable for sparc, wrt bug #517936
 
   10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> e2fsprogs-libs-1.42.10.ebuild:
   Stable for ia64, wrt bug #517936
