@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/niecza-bin/niecza-bin-20.ebuild,v 1.2 2014/08/10 20:47:18 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/niecza-bin/niecza-bin-20.ebuild,v 1.3 2014/08/10 20:47:32 slyfox Exp $
 
 EAPI=4
 
 inherit eutils multilib
 
-DESCRIPTION="A Perl 6 compiler targetting the CLR with an experimental focus on optimizations."
+DESCRIPTION="A Perl 6 compiler targetting the CLR with an experimental focus on optimizations"
 HOMEPAGE="https://github.com/sorear/niecza"
 
 MY_PN="niecza"
