@@ -1,0 +1,13 @@
+--- a/configure.ac
++++ b/configure.ac
+@@ -88,8 +87,8 @@
+ if test "${ac_cv_enable_swig}" = "no" ; then
+   AM_CONDITIONAL(HAVE_SWIG, false)
+ else
+-  AC_PROG_SWIG(1.3)
+-  AM_CONDITIONAL(HAVE_SWIG, "$SWIG" -version)
++  AC_CHECK_PROG(SWIG,swig,swig,false)
++  AM_CONDITIONAL(HAVE_SWIG, "$ac_cv_prog_SWIG" -version)
+   if test -z "${HAVE_SWIG_TRUE}" ; then
+     AM_PATH_PYTHON
+     SWIG_PYTHON
