@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/criu-1.2.ebuild,v 1.1 2014/03/01 05:40:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/criu-1.2-r1.ebuild,v 1.1 2014/08/13 02:40:02 radhermit Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND="dev-libs/protobuf-c"
+RDEPEND="<dev-libs/protobuf-c-1"
 DEPEND="${RDEPEND}
 	app-text/asciidoc
 	app-text/xmlto"
