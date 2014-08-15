@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/p11-kit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.69 2014/08/10 19:26:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.70 2014/08/15 06:22:39 radhermit Exp $
+
+*p11-kit-0.20.4 (15 Aug 2014)
+
+  15 Aug 2014; Tim Harder <radhermit@gentoo.org> +p11-kit-0.20.4.ebuild:
+  Version bump.
 
   10 Aug 2014; Fabian Groffen <grobian@gentoo.org> p11-kit-0.20.3-r1.ebuild:
   Fix for Prefix, fix dependencies for USE=trust, marked *-macos, bug #383453
