@@ -6,6 +6,10 @@
 		<email>dolsen@gentoo.org</email>
 		<name>Brian Dolbec</name>
 	</maintainer>
+	<maintainer>
+		<email>twitch153@gentoo.org</email>
+		<name>Devan Franchini</name>
+	</maintainer>
 	<use>
 		<flag name="bazaar">Support <pkg>dev-vcs/bzr</pkg> based overlays</flag>
 		<flag name="cvs">Support <pkg>dev-vcs/cvs</pkg> based overlays</flag>

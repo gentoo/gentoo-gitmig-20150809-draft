@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.203 2014/08/17 02:07:02 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.204 2014/08/17 02:10:22 twitch153 Exp $
+
+  17 Aug 2014; Devan Franchini <twitch153@gentoo.org> metadata.xml:
+  Adds twitch153 to maintainers
 
   17 Aug 2014; Devan Franchini <twitch153@gentoo.org> layman-9999.ebuild,
   metadata.xml:
