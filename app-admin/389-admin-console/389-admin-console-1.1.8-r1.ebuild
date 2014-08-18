@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/389-admin-console/389-admin-console-1.1.8.ebuild,v 1.1 2011/08/14 09:26:40 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/389-admin-console/389-admin-console-1.1.8-r1.ebuild,v 1.1 2014/08/18 19:54:09 creffett Exp $
 
-EAPI="2"
+EAPI=5
 
 JAVA_PKG_IUSE="doc source"
 
