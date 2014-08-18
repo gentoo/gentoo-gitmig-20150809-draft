@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/hg-git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.56 2014/08/18 20:09:47 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.57 2014/08/18 20:10:22 djc Exp $
+
+  18 Aug 2014; Dirkjan Ochtman <djc@gentoo.org> -hg-git-0.4.0.ebuild:
+  Remove old version
 
 *hg-git-0.6.1 (18 Aug 2014)
 
