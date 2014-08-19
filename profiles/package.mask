@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15973 2014/08/19 19:01:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15974 2014/08/19 19:04:54 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -221,7 +221,6 @@ games-emulation/handy
 games-fps/rtcw
 games-fps/unreal
 games-server/mtavc
-games-sports/racer-bin
 games-strategy/heroes3
 games-strategy/heroes3-demo
 games-strategy/smac
