@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/pktstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.28 2014/08/20 08:02:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.29 2014/08/20 08:07:57 jer Exp $
+
+  20 Aug 2014; Jeroen Roovers <jer@gentoo.org> pktstat-1.8.5-r1.ebuild,
+  files/pktstat-1.8.5-smtp_line.patch:
+  Just remove the offending lines instead.
 
 *pktstat-1.8.5-r1 (20 Aug 2014)
 
