@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.26-r3.ebuild,v 1.13 2014/08/10 20:33:25 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.26-r3.ebuild,v 1.14 2014/08/20 15:45:47 eras Exp $
 
 EAPI=5
 
@@ -134,7 +134,7 @@ src_configure() {
 		$(use_enable kerberos gssapi) \
 		$(use_enable java) \
 		$(use_with java javahome ${JAVA_HOME}) \
-		$(use_with mysql) \
+		$(use_with mysql mysql /usr) \
 		$(use_with postgres pgsql) \
 		$(use_with sqlite sqlite3 /usr/$(get_libdir)) \
 		$(use_enable srp) \
