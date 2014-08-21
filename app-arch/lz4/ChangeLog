@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lz4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.27 2014/08/13 18:45:21 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.28 2014/08/21 09:53:39 ago Exp $
+
+  21 Aug 2014; Agostino Sarubbo <ago@gentoo.org> lz4-0_p106-r1.ebuild:
+  Stable for ppc, wrt bug #509954
 
   13 Aug 2014; Anthony G. Basile <blueness@gentoo.org> lz4-0_p106-r1.ebuild,
   lz4-0_p120.ebuild, lz4-9999.ebuild:
