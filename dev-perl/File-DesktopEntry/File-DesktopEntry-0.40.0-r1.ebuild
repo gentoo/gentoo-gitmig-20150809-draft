@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DesktopEntry/File-DesktopEntry-0.40.0.ebuild,v 1.5 2012/05/06 00:35:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DesktopEntry/File-DesktopEntry-0.40.0-r1.ebuild,v 1.1 2014/08/21 16:30:53 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=PARDUS
 MODULE_VERSION=0.04
