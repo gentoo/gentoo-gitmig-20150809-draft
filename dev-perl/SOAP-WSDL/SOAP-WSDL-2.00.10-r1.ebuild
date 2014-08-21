@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-WSDL/SOAP-WSDL-2.00.10.ebuild,v 1.2 2012/04/22 11:07:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-WSDL/SOAP-WSDL-2.00.10-r1.ebuild,v 1.1 2014/08/21 19:29:44 axs Exp $
 
-EAPI="4"
+EAPI=5
 
 MODULE_AUTHOR="MKUTTER"
 inherit perl-module
