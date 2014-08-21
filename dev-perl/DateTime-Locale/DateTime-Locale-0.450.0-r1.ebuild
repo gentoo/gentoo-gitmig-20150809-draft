@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Locale/DateTime-Locale-0.450.0.ebuild,v 1.4 2014/06/09 23:46:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Locale/DateTime-Locale-0.450.0-r1.ebuild,v 1.1 2014/08/21 19:35:32 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=DROLSKY
 MODULE_VERSION=0.45

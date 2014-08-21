@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/MLDBM-2.40.0.ebuild,v 1.9 2013/04/02 13:21:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/MLDBM-2.40.0-r1.ebuild,v 1.1 2014/08/21 19:44:36 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=CHORNY
 MODULE_VERSION=2.04
