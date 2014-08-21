@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.715.0.ebuild,v 1.6 2012/10/17 03:14:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.715.0-r1.ebuild,v 1.1 2014/08/21 19:02:22 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=MKUTTER
 MODULE_VERSION=0.715
