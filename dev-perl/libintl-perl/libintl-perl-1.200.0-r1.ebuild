@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/libintl-perl-1.200.0.ebuild,v 1.19 2014/01/19 20:28:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/libintl-perl-1.200.0-r1.ebuild,v 1.1 2014/08/22 18:05:45 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=GUIDO
 MODULE_VERSION=1.20
