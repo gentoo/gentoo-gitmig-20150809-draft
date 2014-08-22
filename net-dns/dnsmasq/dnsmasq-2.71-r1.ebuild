@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.68.ebuild,v 1.2 2013/12/10 19:55:03 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.71-r1.ebuild,v 1.1 2014/08/22 18:38:14 chutzpah Exp $
 
 EAPI=5
 
@@ -12,45 +12,73 @@ SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${P}.tar.xz"
 
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="auth-dns conntrack dbus +dhcp dhcp-tools idn ipv6 lua nls script selinux tftp"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+IUSE="auth-dns conntrack dbus +dhcp dhcp-tools dnssec idn ipv6 lua nls script selinux static tftp"
 DM_LINGUAS="de es fi fr id it no pl pt_BR ro"
 for dm_lingua in ${DM_LINGUAS}; do
 	IUSE+=" linguas_${dm_lingua}"
 done
 
-RDEPEND="dbus? ( sys-apps/dbus )
-		idn? ( net-dns/libidn )
-		lua? ( dev-lang/lua )
-		conntrack? ( !s390? ( net-libs/libnetfilter_conntrack ) )
-		nls? (
-			sys-devel/gettext
-			net-dns/libidn
-		)
-		selinux? ( sec-policy/selinux-dnsmasq )"
+CDEPEND="dbus? ( sys-apps/dbus )
+	idn? ( net-dns/libidn )
+	lua? ( dev-lang/lua )
+	conntrack? ( !s390? ( net-libs/libnetfilter_conntrack ) )
+	nls? (
+		sys-devel/gettext
+		net-dns/libidn
+	)
+	selinux? ( sec-policy/selinux-dnsmasq )"
 
-DEPEND="${RDEPEND}
-		virtual/pkgconfig
-		app-arch/xz-utils"
+DEPEND="${CDEPEND}
+	app-arch/xz-utils
+	dnssec? (
+		dev-libs/nettle[gmp]
+		static? (
+			dev-libs/nettle[static-libs(+)]
+		)
+	)
+	virtual/pkgconfig"
+
+RDEPEND="${CDEPEND}
+	dnssec? (
+		!static? (
+			dev-libs/nettle[gmp]
+		)
+	)"
 
 REQUIRED_USE="dhcp-tools? ( dhcp )
-			  lua? ( script )
-			  s390? ( !conntrack )"
+	lua? ( script )
+	s390? ( !conntrack )"
 
 use_have() {
-	local NO_ONLY=""
-	if [ $1 == '-n' ]; then
-		NO_ONLY=1
+	local useflag no_only uword
+	if [[ $1 == '-n' ]]; then
+		no_only=1
 		shift
 	fi
+	useflag="${1}"
+	shift
 
-	local UWORD=${2:-$1}
-	UWORD=${UWORD^^*}
+	uword="${1:-${useflag}}"
+	shift
 
-	if ! use ${1}; then
-		echo " -DNO_${UWORD}"
-	elif [ -z "${NO_ONLY}" ]; then
-		echo " -DHAVE_${UWORD}"
+	while [[ ${uword} ]]; do
+		uword=${uword^^*}
+
+		if ! use "${useflag}"; then
+			echo -n " -DNO_${uword}"
+		elif [[ -z "${no_only}" ]]; then
+			echo -n " -DHAVE_${uword}"
+		fi
+		uword="${1}"
+		shift
+	done
+}
+
+pkg_pretend() {
+	if use static; then
+		einfo "Only sys-libs/gmp and dev-libs/nettle are statically linked."
+		use dnssec || einfo "Thus, ${P}[!dnssec,static] makes no sense; the static USE flag is ignored."
 	fi
 }
 
@@ -61,19 +89,21 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i -r 's:lua5.[0-9]+:lua:' Makefile
+	sed -i "s:%%PREFIX%%:${EPREFIX}/usr:" dnsmasq.conf.example
 }
 
 src_configure() {
 	COPTS="$(use_have -n auth-dns auth)"
 	COPTS+="$(use_have conntrack)"
 	COPTS+="$(use_have dbus)"
-	COPTS+="$(use_have -n dhcp)"
 	COPTS+="$(use_have idn)"
-	COPTS+="$(use_have -n ipv6)"
+	COPTS+="$(use_have -n dhcp dhcp dhcp6)"
+	COPTS+="$(use_have -n ipv6 ipv6 dhcp6)"
 	COPTS+="$(use_have lua luascript)"
 	COPTS+="$(use_have -n script)"
 	COPTS+="$(use_have -n tftp)"
-	COPTS+="$(use ipv6 && use dhcp || echo " -DNO_DHCP6")"
+	COPTS+="$(use_have dnssec)"
+	COPTS+="$(use_have static dnssec_static)"
 }
 
 src_compile() {
@@ -95,19 +125,19 @@ src_compile() {
 }
 
 src_install() {
+	local lingua puid
 	emake \
 		PREFIX=/usr \
 		MANDIR=/usr/share/man \
 		DESTDIR="${D}" \
 		install$(use nls && echo "-i18n")
 
-	local lingua
 	for lingua in ${DM_LINGUAS}; do
 		use linguas_${lingua} || rm -rf "${D}"/usr/share/locale/${lingua}
 	done
 	[[ -d "${D}"/usr/share/locale/ ]] && rmdir --ignore-fail-on-non-empty "${D}"/usr/share/locale/
 
-	dodoc CHANGELOG CHANGELOG.archive FAQ
+	dodoc CHANGELOG CHANGELOG.archive FAQ dnsmasq.conf.example
 	dodoc -r logo
 
 	dodoc CHANGELOG FAQ
@@ -118,6 +148,15 @@ src_install() {
 
 	insinto /etc
 	newins dnsmasq.conf.example dnsmasq.conf
+
+	insinto /usr/share/dnsmasq
+	doins trust-anchors.conf
+
+	if use dhcp; then
+		dodir /var/lib/misc
+		touch "${D}"/var/lib/misc/${PN}.leases
+		fowners dnsmasq:dnsmasq /var/lib/misc/${PN}.leases
+	fi
 
 	if use dbus; then
 		insinto /etc/dbus-1/system.d
