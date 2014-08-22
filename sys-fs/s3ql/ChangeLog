@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/s3ql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/ChangeLog,v 1.35 2014/07/06 13:23:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/ChangeLog,v 1.36 2014/08/22 20:57:16 radhermit Exp $
+
+*s3ql-2.10.1 (22 Aug 2014)
+
+  22 Aug 2014; Tim Harder <radhermit@gentoo.org> +s3ql-2.10.1.ebuild:
+  Version bump.
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> s3ql-1.18.1.ebuild,
   s3ql-2.8.1.ebuild, s3ql-2.8.ebuild, s3ql-2.9.ebuild:
