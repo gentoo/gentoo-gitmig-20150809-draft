@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RadiusPerl/RadiusPerl-0.220.0.ebuild,v 1.3 2013/07/10 05:18:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RadiusPerl/RadiusPerl-0.220.0-r1.ebuild,v 1.1 2014/08/23 00:22:04 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=MANOWAR
 MODULE_VERSION=0.22

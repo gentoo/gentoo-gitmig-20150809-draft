@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-lexicon/locale-maketext-lexicon-0.960.0.ebuild,v 1.8 2014/07/23 00:06:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-lexicon/locale-maketext-lexicon-0.960.0-r1.ebuild,v 1.1 2014/08/23 00:15:20 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MY_PN=Locale-Maketext-Lexicon
 MODULE_AUTHOR=DRTECH
