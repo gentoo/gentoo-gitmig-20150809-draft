@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-LinkExtractor/HTML-LinkExtractor-0.130.0.ebuild,v 1.3 2014/08/05 17:42:20 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-LinkExtractor/HTML-LinkExtractor-0.130.0-r1.ebuild,v 1.1 2014/08/23 02:02:58 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=PODMASTER
 MODULE_VERSION=0.13

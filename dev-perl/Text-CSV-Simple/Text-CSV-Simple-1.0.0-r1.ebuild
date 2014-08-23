@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV-Simple/Text-CSV-Simple-1.0.0.ebuild,v 1.4 2013/11/04 19:08:05 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV-Simple/Text-CSV-Simple-1.0.0-r1.ebuild,v 1.1 2014/08/23 02:18:49 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=TMTM
 MODULE_VERSION=1.00
