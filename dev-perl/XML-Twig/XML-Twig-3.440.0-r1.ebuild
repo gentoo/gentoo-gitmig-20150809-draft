@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/XML-Twig-3.440.0.ebuild,v 1.8 2014/03/16 12:12:08 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/XML-Twig-3.440.0-r1.ebuild,v 1.1 2014/08/24 02:49:29 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=MIROD
 MODULE_VERSION=3.44
