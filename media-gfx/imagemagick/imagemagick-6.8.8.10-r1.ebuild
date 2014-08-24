@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.8.10-r1.ebuild,v 1.5 2014/06/03 06:43:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.8.10-r1.ebuild,v 1.6 2014/08/24 15:41:26 ssuominen Exp $
 
 EAPI=5
 inherit eutils flag-o-matic libtool multilib toolchain-funcs versionator
@@ -29,7 +29,7 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 	graphviz? ( media-gfx/graphviz )
 	jbig? ( >=media-libs/jbigkit-2:= )
 	jpeg? ( virtual/jpeg:0 )
-	jpeg2k? ( >=media-libs/openjpeg-2.0.0:2 )
+	jpeg2k? ( <media-libs/openjpeg-2.1.0:2 )
 	lcms? ( media-libs/lcms:2= )
 	lqr? ( media-libs/liblqr )
 	opencl? ( virtual/opencl )
