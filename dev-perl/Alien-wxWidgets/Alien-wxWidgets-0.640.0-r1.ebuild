@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.640.0.ebuild,v 1.4 2013/12/30 07:53:26 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.640.0-r1.ebuild,v 1.1 2014/08/25 02:20:49 axs Exp $
 
-EAPI=4
+EAPI=5
 
 WX_GTK_VER="2.8"
 MODULE_AUTHOR=MDOOTSON

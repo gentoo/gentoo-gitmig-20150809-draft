@@ -1,17 +1,17 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-SizeLimit/Apache-SizeLimit-0.960.0.ebuild,v 1.8 2012/11/13 15:56:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-SizeLimit/Apache-SizeLimit-0.970.0-r1.ebuild,v 1.1 2014/08/25 02:16:45 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=PHRED
-MODULE_VERSION=0.96
+MODULE_VERSION=0.97
 inherit perl-module
 
 DESCRIPTION="Graceful exit for large children"
 
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="test"
 
 # mod_perl < 2.0.5 bundles Apache-SizeLimit
