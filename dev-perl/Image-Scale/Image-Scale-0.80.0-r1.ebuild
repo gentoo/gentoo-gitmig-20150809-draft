@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Image-Scale/Image-Scale-0.80.0.ebuild,v 1.2 2013/07/10 10:30:02 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Image-Scale/Image-Scale-0.80.0-r1.ebuild,v 1.1 2014/08/26 17:01:28 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=AGRUNDMA
 MODULE_VERSION=0.08
@@ -13,7 +13,7 @@ DESCRIPTION="Fast, high-quality fixed-point image resizing"
 LICENSE="|| ( GPL-2 GPL-3 )" # GPL2+
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+gif jpeg png test"
+IUSE="+gif jpeg +png test"
 
 REQUIRED_USE="|| ( jpeg png )"
 
@@ -22,7 +22,7 @@ RDEPEND="
 		media-libs/libpng:0
 	)
 	jpeg? (
-		media-libs/libjpeg-turbo
+		virtual/jpeg
 	)
 	gif? (
 		media-libs/giflib
@@ -40,12 +40,11 @@ PATCHES=(
 	"${FILESDIR}"/libpng-1.5-memcpy.patch
 	"${FILESDIR}"/0.80.0-disable_autodetect.patch
 )
-disable_use() {
-	use $1 || echo "--disable-$useflag"
-}
+
 src_configure() {
+	local myconf
 	for useflag in png jpeg gif; do
-		myconf+=( $(disable_use $useflag ) )
+		myconf+=( $(usex $useflag "" --disable-${useflag}) )
 	done
 	perl-module_src_configure
 }
