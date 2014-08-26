@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dump-Streamer/Data-Dump-Streamer-2.360.0.ebuild,v 1.1 2013/08/15 06:59:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dump-Streamer/Data-Dump-Streamer-2.360.0-r1.ebuild,v 1.1 2014/08/26 18:10:51 axs Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=YVES
 MODULE_VERSION=2.36
