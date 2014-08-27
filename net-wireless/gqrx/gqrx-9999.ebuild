@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gqrx/gqrx-9999.ebuild,v 1.4 2014/08/27 17:41:22 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gqrx/gqrx-9999.ebuild,v 1.5 2014/08/27 17:50:06 zerochaos Exp $
 
 EAPI=5
 
@@ -28,7 +28,8 @@ DEPEND=">=net-wireless/gnuradio-3.7_rc:=
 	dev-qt/qtgui:=
 	dev-qt/qtcore:=
 	pulseaudio? ( media-sound/pulseaudio:= )"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	dev-qt/qtsvg"
 
 src_prepare() {
 	if use !pulseaudio; then
