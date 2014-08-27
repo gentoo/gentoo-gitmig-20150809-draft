@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/tiptop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/tiptop/ChangeLog,v 1.1 2014/07/16 07:18:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/tiptop/ChangeLog,v 1.2 2014/08/27 17:14:30 ryao Exp $
+
+  27 Aug 2014; Richard Yao <ryao@gentoo.org> tiptop-2.2.ebuild:
+  Stabilize sys-process/tiptop-2.2 on amd64: Last year, Patrick said it was okay
+  to touch his stuff and hworang said it is okay to keyword stuff as long as it
+  is tested.
 
 *tiptop-2.2 (16 Jul 2014)
 
