@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.18.1.ebuild,v 1.6 2014/08/28 14:07:54 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.18.1.ebuild,v 1.7 2014/08/28 14:14:21 aidecoe Exp $
 
 EAPI=5
 
@@ -88,7 +88,6 @@ pkg_setup() {
 src_prepare() {
 	[[ "${MY_PATCHES[@]}" ]] && epatch "${MY_PATCHES[@]}"
 
-	default
 	bindings python distutils-r1_src_prepare
 	bindings python mv README README-python || die
 	mv contrib/notmuch-mutt/README contrib/notmuch-mutt/README-mutt || die
