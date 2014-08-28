@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.18.1.ebuild,v 1.5 2014/08/28 11:39:27 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.18.1.ebuild,v 1.6 2014/08/28 14:07:54 aidecoe Exp $
 
 EAPI=5
 
@@ -148,7 +148,6 @@ src_install() {
 	fi
 
 	if use mutt; then
-		[[ -e /etc/mutt/notmuch-mutt.rc ]] && NOTMUCH_MUTT_RC_EXISTS=1
 		pushd contrib/notmuch-mutt || die
 		dobin notmuch-mutt
 		doman notmuch-mutt.1
@@ -162,15 +161,17 @@ src_install() {
 	use doc && bindings python dohtml -r python
 }
 
-pkg_postinst() {
-	use emacs && elisp-site-regen
-
-	if use mutt && [[ ! ${NOTMUCH_MUTT_RC_EXISTS} ]]; then
+pkg_preinst() {
+	if use mutt && ! [[ -e ${ROOT}/etc/mutt/notmuch-mutt.rc ]]; then
 		elog "To enable notmuch support in mutt, add the following line into"
 		elog "your mutt config file, please:"
 		elog ""
 		elog "  source /etc/mutt/notmuch-mutt.rc"
 	fi
+}
+
+pkg_postinst() {
+	use emacs && elisp-site-regen
 }
 
 pkg_postrm() {
