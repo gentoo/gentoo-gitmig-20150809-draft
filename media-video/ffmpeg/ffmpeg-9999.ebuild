@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.170 2014/08/29 18:14:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.171 2014/08/29 19:00:58 aballier Exp $
 
 EAPI="5"
 
@@ -43,10 +43,10 @@ IUSE="
 	aac aacplus alsa amr amrenc bindist bluray bs2b +bzip2 cdio celt
 	cpudetection debug doc +encode examples faac fdk flite fontconfig frei0r
 	fribidi gme	gnutls gsm +hardcoded-tables +iconv iec61883 ieee1394 jack
-	jpeg2k ladspa libass libcaca libsoxr libv4l modplug mp3 +network openal
-	opengl openssl opus oss pic pulseaudio quvi rtmp samba schroedinger sdl
-	speex ssh static-libs test theora threads truetype twolame v4l vaapi vdpau
-	vorbis vpx wavpack webp X x264 x265 xvid +zlib zvbi
+	jpeg2k ladspa libass libcaca libsoxr libv4l lzma modplug mp3 +network
+	openal opengl openssl opus oss pic pulseaudio quvi rtmp samba schroedinger
+	sdl speex ssh static-libs test theora threads truetype twolame v4l vaapi
+	vdpau vorbis vpx wavpack webp X x264 x265 xvid +zlib zvbi
 	"
 
 ARM_CPU_FEATURES="armv5te armv6 armv6t2 neon armvfp:vfp"
@@ -122,6 +122,7 @@ RDEPEND="
 	libcaca? ( >=media-libs/libcaca-0.99_beta18-r1[${MULTILIB_USEDEP}] )
 	libsoxr? ( >=media-libs/soxr-0.1.0[${MULTILIB_USEDEP}] )
 	libv4l? ( >=media-libs/libv4l-0.9.5[${MULTILIB_USEDEP}] )
+	lzma? ( >=app-arch/xz-utils-5.0.5-r1[${MULTILIB_USEDEP}] )
 	modplug? ( >=media-libs/libmodplug-0.8.8.4-r1[${MULTILIB_USEDEP}] )
 	openal? ( >=media-libs/openal-1.15.1[${MULTILIB_USEDEP}] )
 	opengl? ( >=virtual/opengl-7.0-r1[${MULTILIB_USEDEP}] )
@@ -201,7 +202,7 @@ multilib_src_configure() {
 	# or $(use_enable foo foo) if no :bar is set.
 	local ffuse=(
 		bzip2:bzlib cpudetection:runtime-cpudetect debug doc
-		gnutls hardcoded-tables iconv network openssl samba:libsmbclient
+		gnutls hardcoded-tables iconv lzma network openssl samba:libsmbclient
 		sdl:ffplay vaapi vdpau X:xlib zlib
 	)
 	use openssl && myconf+=( --enable-nonfree )
