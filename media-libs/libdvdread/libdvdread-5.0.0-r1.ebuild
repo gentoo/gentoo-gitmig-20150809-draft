@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-5.0.0.ebuild,v 1.1 2014/08/04 16:52:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-5.0.0-r1.ebuild,v 1.1 2014/08/29 17:39:45 beandog Exp $
 
 EAPI=5
 
@@ -32,8 +32,8 @@ else
 fi
 IUSE="+css"
 
-RDEPEND="!<media-libs/libdvdnav-4.2.1
-	css? ( >=media-libs/libdvdcss-1.2.13[${MULTILIB_USEDEP}] )
+RDEPEND=">=media-libs/libdvdnav-5.0.0
+	css? ( >=media-libs/libdvdcss-1.3.0[${MULTILIB_USEDEP}] )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r4
 		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}"
