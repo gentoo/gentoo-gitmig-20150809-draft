@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0_beta783.ebuild,v 1.1 2014/08/18 22:43:34 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0_beta783.ebuild,v 1.2 2014/08/29 21:14:37 alonbl Exp $
 
 EAPI="5"
 
@@ -91,6 +91,7 @@ src_configure() {
 		--enable-gpg \
 		--enable-gpgsm \
 		--enable-agent \
+		--without-adns \
 		"${myconf[@]}" \
 		$(use_enable bzip2) \
 		$(use_enable nls) \
