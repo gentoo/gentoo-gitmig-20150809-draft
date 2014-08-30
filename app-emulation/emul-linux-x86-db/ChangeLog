@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-db
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-db/ChangeLog,v 1.21 2014/08/30 01:05:25 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-db/ChangeLog,v 1.22 2014/08/30 01:09:53 grknight Exp $
+
+  30 Aug 2014; Brian Evans <grknight@gentoo.org>
+  emul-linux-x86-db-20140508-r3.ebuild:
+  Fix revision number on install
 
 *emul-linux-x86-db-20140508-r3 (30 Aug 2014)
 
