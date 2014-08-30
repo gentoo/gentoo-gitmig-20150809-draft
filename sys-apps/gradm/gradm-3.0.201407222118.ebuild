@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-3.0.201407222118.ebuild,v 1.2 2014/08/30 13:33:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-3.0.201407222118.ebuild,v 1.3 2014/08/30 13:38:50 blueness Exp $
 
 EAPI="5"
 inherit flag-o-matic toolchain-funcs versionator eutils udev
@@ -43,7 +43,6 @@ src_install() {
 
 pkg_postinst() {
 	ewarn
-	ewarn "Be sure to set a password with 'gradm -P' before enabling learning mode"
-	ewarn "This version of gradm is only supported with hardened-sources >= 2.6.32-r10"
+	ewarn "Be sure to set a password with 'gradm -P' before enabling learning mode."
 	ewarn
 }
