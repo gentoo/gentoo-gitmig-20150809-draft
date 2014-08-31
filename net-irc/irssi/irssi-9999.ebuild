@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-9999.ebuild,v 1.11 2014/08/09 20:11:44 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-9999.ebuild,v 1.12 2014/08/31 14:54:08 swegener Exp $
 
 EAPI=5
 
 inherit autotools perl-module git-r3
 
-EGIT_REPO_URI="git://git.irssi.org/irssi"
+EGIT_REPO_URI="git://github.com/irssi/irssi.git"
 
 DESCRIPTION="A modular textUI IRC client with IPv6 support"
 HOMEPAGE="http://irssi.org/"
@@ -33,7 +33,6 @@ RDEPEND="${RDEPEND}
 	perl? ( !net-im/silc-client )"
 
 src_prepare() {
-	TZ=UTC git log > "${S}"/ChangeLog || die
 	sed -i -e /^autoreconf/d autogen.sh || die
 	NOCONFIGURE=1 ./autogen.sh || die
 
@@ -62,5 +61,5 @@ src_install() {
 
 	prune_libtool_files --modules
 
-	dodoc AUTHORS ChangeLog README TODO NEWS
+	dodoc AUTHORS ChangeLog README.md TODO NEWS
 }
