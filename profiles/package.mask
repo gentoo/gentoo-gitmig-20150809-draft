@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16000 2014/09/02 05:30:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16001 2014/09/02 10:56:24 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -211,7 +211,8 @@ sys-power/gtk-cpuspeedy
 
 # Pacho Ramos <pacho@gentoo.org> (27 Jul 2014)
 # Doesn't build on non-selinux setups (#498032)
-# Removal in a month.
+# Give some time before removal as looks some people
+# is willing to proxy-maintain it.
 dev-lang/gforth
 
 # Pacho Ramos <pacho@gentoo.org> (27 Jul 2014)
