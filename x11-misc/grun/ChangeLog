@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/grun
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/ChangeLog,v 1.40 2014/09/03 08:23:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/ChangeLog,v 1.41 2014/09/03 08:27:09 jer Exp $
+
+  03 Sep 2014; Jeroen Roovers <jer@gentoo.org> files/grun-0.9.3-no_nls.patch:
+  Clean up patch.
 
   03 Sep 2014; Jeroen Roovers <jer@gentoo.org> grun-0.9.3-r1.ebuild:
   einstall -> EAPI 5 default (bug #521670).
