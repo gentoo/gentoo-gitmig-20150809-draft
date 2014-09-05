@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.190 2014/09/04 19:25:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.191 2014/09/05 09:46:33 jer Exp $
+
+  05 Sep 2014; Jeroen Roovers <jer@gentoo.org> -tcpdump-4.6.1.ebuild,
+  tcpdump-4.6.2.ebuild:
+  Drop USE=samba warning. Drop ineffectual sed script.
 
 *tcpdump-4.6.2 (04 Sep 2014)
 
