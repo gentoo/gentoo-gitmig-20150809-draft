@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.87 2014/08/08 14:22:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.88 2014/09/06 10:13:19 vapier Exp $
 
 EAPI=5
 
@@ -148,7 +148,9 @@ QA_PREBUILT="
 	usr/share/qemu/openbios-sparc64
 	usr/share/qemu/openbios-sparc32
 	usr/share/qemu/palcode-clipper
-	usr/share/qemu/s390-ccw.img"
+	usr/share/qemu/s390-ccw.img
+	usr/share/qemu/u-boot.e500
+"
 
 QA_WX_LOAD="usr/bin/qemu-i386
 	usr/bin/qemu-x86_64
