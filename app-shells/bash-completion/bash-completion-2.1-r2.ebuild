@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r1.ebuild,v 1.9 2014/08/27 08:13:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r2.ebuild,v 1.1 2014/09/06 07:37:55 mgorny Exp $
 
 EAPI=5
 inherit bash-completion-r1 prefix toolchain-funcs
@@ -29,6 +29,7 @@ src_prepare() {
 	sed -i \
 		-e "/completionsdir/s@=.*\$@=$(get_bashcompdir)@" \
 		-e "/helpersdir/s@=.*\$@=$(get_bashhelpersdir)@" \
+		-e "/Version/s@1.3@${PV}@" \
 		"${T}"/bash-completion.pc || die
 
 	find completions -name 'Makefile*' -exec rm -f {} +
