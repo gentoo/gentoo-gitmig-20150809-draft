@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r2.ebuild,v 1.1 2014/09/06 07:37:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r2.ebuild,v 1.2 2014/09/06 07:45:11 mgorny Exp $
 
 EAPI=5
 inherit bash-completion-r1 prefix toolchain-funcs
@@ -32,7 +32,7 @@ src_prepare() {
 		-e "/Version/s@1.3@${PV}@" \
 		"${T}"/bash-completion.pc || die
 
-	find completions -name 'Makefile*' -exec rm -f {} +
+	find -name 'Makefile*' -exec rm -f {} +
 
 	# Part of >=sys-apps/util-linux-2.23 wrt #468544
 	local file
@@ -71,6 +71,10 @@ src_install() {
 	/^unset -f have/ { out=".post" }
 	out != "" { print > D"/usr/share/bash-completion/"out }' \
 	bash_completion || die "failed to split bash_completion"
+
+	# Note: private eclass stuff, don't use it anywhere else!
+	insinto "$(_bash-completion-r1_get_bashhelpersdir)"
+	doins "${S}"/helpers/*
 
 	dodoc AUTHORS CHANGES README
 
