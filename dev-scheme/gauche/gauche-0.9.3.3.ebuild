@@ -1,16 +1,16 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/gauche-0.9.3.3.ebuild,v 1.5 2012/07/10 12:45:30 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/gauche-0.9.3.3.ebuild,v 1.6 2014/09/07 03:29:55 hattya Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit autotools eutils
 
-MY_P="${P/g/G}"
+MY_P="${P^g}"
 
 DESCRIPTION="A Unix system friendly Scheme Interpreter"
 HOMEPAGE="http://practical-scheme.net/gauche/"
-SRC_URI="mirror://sourceforge/gauche/${MY_P}.tgz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
