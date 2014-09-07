@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.16.2.ebuild,v 1.6 2014/09/07 07:11:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.19.13.ebuild,v 1.1 2014/09/07 07:11:13 radhermit Exp $
 
-EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7} )
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
 inherit elisp-common autotools eutils python-single-r1
 
@@ -11,10 +11,10 @@ DESCRIPTION="GNU Music Typesetter"
 SRC_URI="http://download.linuxaudio.org/lilypond/sources/v${PV:0:4}/${P}.tar.gz"
 HOMEPAGE="http://lilypond.org/"
 
-SLOT="0"
 LICENSE="GPL-3 FDL-1.3"
-KEYWORDS="amd64 ~hppa x86"
-LANGS=" cs da de el eo es fi fr it ja nl ru sv tr uk vi zh_TW"
+SLOT="0"
+KEYWORDS="~amd64 ~hppa ~x86"
+LANGS=" ca cs da de el eo es fi fr it ja nl ru sv tr uk vi zh_TW"
 IUSE="debug emacs profile vim-syntax ${LANGS// / linguas_}"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
@@ -29,7 +29,10 @@ RDEPEND=">=app-text/ghostscript-gpl-8.15
 DEPEND="${RDEPEND}
 	app-text/t1utils
 	dev-lang/perl
-	dev-texlive/texlive-metapost
+	|| (
+		( >=dev-texlive/texlive-metapost-2013 >=dev-tex/metapost-1.803 )
+		<dev-texlive/texlive-metapost-2013
+	)
 	virtual/pkgconfig
 	media-gfx/fontforge
 	>=sys-apps/texinfo-4.11
@@ -41,18 +44,34 @@ DEPEND="${RDEPEND}
 # Correct output data for tests isn't bundled with releases
 RESTRICT="test"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.16.0-tex-docs.patch
-
-	if ! use vim-syntax ; then
-		sed -i -e "s/vim//" GNUmakefile.in || die
+pkg_setup() {
+	# make sure >=metapost-1.803 is selected if it's installed, bug 498704
+	if [[ ${MERGE_TYPE} != binary ]] && has_version ">=dev-tex/metapost-1.803" ; then
+		if [[ $(readlink "${EROOT}"/usr/bin/mpost) =~ mpost-texlive-* ]] ; then
+			einfo "Updating metapost symlink"
+			eselect mpost update || die
+		fi
 	fi
 
-	sed -i -e "s/OPTIMIZE -g/OPTIMIZE/" aclocal.m4 || die
+	python-single-r1_pkg_setup
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.17.2-tex-docs.patch
+
+	if ! use vim-syntax ; then
+		sed -i 's/vim//' GNUmakefile.in || die
+	fi
+
+	# respect CFLAGS
+	sed -i 's/OPTIMIZE -g/OPTIMIZE/' aclocal.m4 || die
 
 	for lang in ${LANGS}; do
 		use linguas_${lang} || rm po/${lang}.po || die
 	done
+
+	# respect AR
+	sed -i "s/^AR=ar/AR=$(tc-getAR)/" stepmake/stepmake/library-vars.make || die
 
 	# remove bundled texinfo file (fixes bug #448560)
 	rm tex/texinfo.tex || die
@@ -94,9 +113,7 @@ src_install () {
 		elisp-site-file-install "${FILESDIR}"/50${PN}-gentoo.el
 	fi
 
-	python_fix_shebang "${ED}"
-
-	dodoc AUTHORS.txt HACKING NEWS.txt README.txt THANKS
+	dodoc AUTHORS.txt HACKING NEWS.txt README.txt
 }
 
 pkg_postinst() {
