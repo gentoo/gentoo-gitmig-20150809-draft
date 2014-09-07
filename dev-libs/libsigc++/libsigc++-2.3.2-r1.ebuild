@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.3.2.ebuild,v 1.1 2014/09/04 10:20:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.3.2-r1.ebuild,v 1.1 2014/09/07 12:41:18 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
-inherit gnome2 flag-o-matic
+inherit eutils gnome2 flag-o-matic
 
 DESCRIPTION="Typesafe callback system for standard C++"
 HOMEPAGE="http://libsigc.sourceforge.net/"
@@ -29,6 +29,9 @@ src_prepare() {
 		sed -i 's|^\(SUBDIRS =.*\)tests\(.*\)$|\1\2|' \
 			Makefile.am Makefile.in || die "sed tests failed"
 	fi
+
+	# Add an include in limit_reference.h (from 'master'), bug #522166
+	epatch "${FILESDIR}/${P}-missing-include.patch"
 
 	gnome2_src_prepare
 }
