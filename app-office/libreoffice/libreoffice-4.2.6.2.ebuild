@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.6.2.ebuild,v 1.3 2014/09/07 12:33:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.6.2.ebuild,v 1.4 2014/09/07 12:37:30 scarabeus Exp $
 
 EAPI=5
 
@@ -99,7 +99,7 @@ COMMON_DEPEND="
 	app-text/mythes
 	=app-text/libabw-0.0*
 	>=app-text/libexttextcat-3.2
-	app-text/libebook
+	=app-text/libebook-0.0*
 	app-text/libetonyek
 	app-text/liblangtag
 	app-text/libmspub
