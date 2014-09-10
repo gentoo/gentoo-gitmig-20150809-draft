@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1013 2014/09/10 05:43:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1014 2014/09/10 05:49:03 vapier Exp $
+
+*glibc-2.20 (10 Sep 2014)
+
+  10 Sep 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/2.20/glibc-2.20-gentoo-chk_fail.c,
+  +files/2.20/glibc-2.20-gentoo-stack_chk_fail.c, +glibc-2.20.ebuild,
+  files/eblits/src_compile.eblit, metadata.xml:
+  Version bump.
 
   10 Sep 2014; Mike Frysinger <vapier@gentoo.org> glibc-2.19-r1.ebuild:
   Mark sparc stable.
