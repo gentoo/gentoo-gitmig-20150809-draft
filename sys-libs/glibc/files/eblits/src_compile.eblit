@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.42 2014/09/10 07:41:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.43 2014/09/10 07:46:43 vapier Exp $
 
 dump_toolchain_settings() {
 	echo
@@ -174,6 +174,8 @@ toolchain-glibc_src_compile() {
 }
 
 toolchain-glibc_headers_compile() {
+	export ABI=default
+
 	local builddir=$(builddir "headers")
 	mkdir -p "${builddir}"
 	cd "${builddir}"
@@ -186,6 +188,8 @@ toolchain-glibc_headers_compile() {
 		libc_cv_{386,390,alpha,arm,hppa,ia64,mips,{powerpc,sparc}{,32,64},sh,x86_64}_tls=yes
 		libc_cv_asm_cfi_directives=yes
 		libc_cv_broken_visibility_attribute=no
+		libc_cv_c_cleanup=yes
+		libc_cv_forced_unwind=yes
 		libc_cv_gcc___thread=yes
 		libc_cv_mlong_double_128=yes
 		libc_cv_mlong_double_128ibm=yes
@@ -225,10 +229,9 @@ toolchain-glibc_headers_compile() {
 	)
 
 	# Nothing is compiled here which would affect the headers for the target.
-	# so forcing CC/CFLAGS is sane.  unless you dont have `gcc`.  then i
-	# dont care :p.
+	# So forcing CC/CFLAGS is sane.
 	set -- "${S}"/configure "${myconf[@]}"
-	CC=gcc \
+	CC="$(tc-getBUILD_CC)" \
 	CFLAGS="-O1 -pipe" \
 	CPPFLAGS="-U_FORTIFY_SOURCE" \
 	LDFLAGS="" \
@@ -236,16 +239,15 @@ toolchain-glibc_headers_compile() {
 }
 
 eblit-glibc-src_compile() {
+	if just_headers ; then
+		toolchain-glibc_headers_compile
+		return
+	fi
+
 	if is_crosscompile ; then
 		export \
 			libc_cv_c_cleanup=yes \
 			libc_cv_forced_unwind=yes
-	fi
-
-	if just_headers ; then
-		export ABI=default
-		toolchain-glibc_headers_compile
-		return
 	fi
 
 	setup_env
