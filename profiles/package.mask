@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16025 2014/09/11 02:51:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16026 2014/09/11 02:57:32 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -32,8 +32,9 @@
 
 # Patrick Lauer <patrick@gentoo.org> (11 Sep 2014)
 # Unsatisfiable dependencies after firebird removal
-# Should be treecleaned
+# Should be treecleaned #522344 #522348
 dev-python/kinterbasdb
+dev-libs/ibpp
 
 # Davide Pesavento <pesa@gentoo.org> (11 Sep 2014)
 # Mask Qt 5.3.x for wider testing to ensure that it does
