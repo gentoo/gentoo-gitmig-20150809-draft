@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.30.ebuild,v 1.1 2014/09/11 18:08:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.30.ebuild,v 1.2 2014/09/11 18:28:06 jer Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib pam
@@ -9,7 +9,6 @@ DESCRIPTION="A modular screen saver and locker for the X Window System"
 HOMEPAGE="http://www.jwz.org/xscreensaver/"
 SRC_URI="
 	http://www.jwz.org/xscreensaver/${P}.tar.gz
-	https://dev.gentoo.org/~jer/${P}-demo.glade2.in.gz
 "
 
 LICENSE="BSD"
@@ -75,9 +74,6 @@ src_prepare() {
 			-e "/default_l.*1/s:gdmflexiserver -ls:${EPREFIX}/usr/libexec/lightdm/&:" \
 			configure{,.in} || die
 	fi
-
-	# the next version should include this file, so remove this when that is fixed
-	mv "${WORKDIR}"/${P}-demo.glade2.in driver/xscreensaver-demo.glade2.in || die
 
 	epatch \
 		"${FILESDIR}"/${PN}-5.21-gentoo.patch \
