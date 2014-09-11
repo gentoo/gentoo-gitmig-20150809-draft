@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsql/qtsql-5.3.1-r3.ebuild,v 1.1 2014/09/11 01:46:33 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsql/qtsql-5.3.1-r3.ebuild,v 1.2 2014/09/11 02:14:01 pesa Exp $
 
 EAPI=5
 
@@ -38,7 +38,9 @@ QT5_TARGET_SUBDIRS=(
 	src/plugins/sqldrivers
 )
 
-PATCHES=( "${FILESDIR}/${PN}-pathfiltering.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-5.3.1-path-filtering.patch"
+)
 
 src_configure() {
 	local myconf=(

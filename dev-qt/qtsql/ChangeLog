@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtsql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsql/ChangeLog,v 1.16 2014/09/11 01:46:33 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsql/ChangeLog,v 1.17 2014/09/11 02:14:01 pesa Exp $
+
+  11 Sep 2014; Davide Pesavento <pesa@gentoo.org>
+  +files/qtsql-5.3.1-path-filtering.patch, qtsql-5.3.1-r3.ebuild:
+  Add missing patch file.
 
 *qtsql-5.3.1-r3 (11 Sep 2014)
 
