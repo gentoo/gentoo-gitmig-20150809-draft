@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.5.ebuild,v 1.1 2014/09/12 06:46:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.5.ebuild,v 1.2 2014/09/12 06:48:35 ssuominen Exp $
 
 EAPI=5
 
@@ -97,7 +97,7 @@ src_install() {
 			${PN}2txt ${PN}-verify fest2dict i2e2dict downloadwiki
 			ooo2dict myspell2dic exc2i2e dictbuilder tabfile2sql KangXi Unihan
 			xiaoxuetang-ja wubi ydp2dict wordnet lingvosound2resdb
-			resdatabase2dir dir2resdatabase ${PN}-index ${PN}-text2bin
+			resdatabase2dir dir2resdatabase ${PN}-index sd2foldoc ${PN}-text2bin
 			${PN}-bin2text ${PN}-repair"
 
 		for app in ${apps}; do
