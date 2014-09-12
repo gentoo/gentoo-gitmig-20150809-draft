@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/x265
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/ChangeLog,v 1.13 2014/09/12 07:06:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/ChangeLog,v 1.14 2014/09/12 07:07:56 jer Exp $
+
+  12 Sep 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Extraneous dot....
 
   12 Sep 2014; Samuli Suominen <ssuominen@gentoo.org> -files/x265-libdir.patch,
   -files/x265-libdir_pkgconfig.patch, -x265-0.8.ebuild, -x265-1.0.ebuild,
