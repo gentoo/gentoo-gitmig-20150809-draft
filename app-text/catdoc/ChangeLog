@@ -1,6 +1,9 @@
 # ChangeLog for app-text/catdoc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/ChangeLog,v 1.29 2014/09/11 20:33:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/ChangeLog,v 1.30 2014/09/13 17:06:25 ago Exp $
+
+  13 Sep 2014; Agostino Sarubbo <ago@gentoo.org> catdoc-0.94.4.ebuild:
+  Stable for amd64, wrt bug #440942
 
 *catdoc-0.94.4 (11 Sep 2014)
 
@@ -104,4 +107,3 @@
   30 Dec 2003; Mike Gardiner <obz@gentoo.org> catdoc-0.93.3.ebuild,
   metadata.xml:
   First import into cvs, as requested on bug #18320
-
