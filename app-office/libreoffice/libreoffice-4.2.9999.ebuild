@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.9999.ebuild,v 1.23 2014/09/14 08:37:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.9999.ebuild,v 1.24 2014/09/14 08:56:46 dilfridge Exp $
 
 EAPI=5
 
@@ -130,7 +130,7 @@ COMMON_DEPEND="
 	media-libs/lcms:2
 	>=media-libs/libpng-1.4
 	=media-libs/libcdr-0.0*
-	media-libs/libfreehand
+	=media-libs/libfreehand-0.0*
 	media-libs/libvisio
 	>=net-misc/curl-7.21.4
 	net-nds/openldap
