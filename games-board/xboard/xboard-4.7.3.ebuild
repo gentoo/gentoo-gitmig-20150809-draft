@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.7.3.ebuild,v 1.1 2014/09/15 16:38:11 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.7.3.ebuild,v 1.2 2014/09/15 17:00:12 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils games
@@ -40,11 +40,11 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PN}-4.7.2-paths.patch \
-		"${FILESDIR}"/${PN}-4.7.2-gettext.patch \
-		"${FILESDIR}"/${PN}-4.7.2-configure-switches.patch \
-		"${FILESDIR}"/${PN}-4.7.2-gnuchess-default.patch \
-		"${FILESDIR}"/${PN}-4.7.2-Xaw3d.patch
+		"${FILESDIR}"/${P}-paths.patch \
+		"${FILESDIR}"/${P}-gettext.patch \
+		"${FILESDIR}"/${P}-configure-switches.patch \
+		"${FILESDIR}"/${P}-gnuchess-default.patch \
+		"${FILESDIR}"/${P}-Xaw3d.patch
 	eautoreconf
 }
 
