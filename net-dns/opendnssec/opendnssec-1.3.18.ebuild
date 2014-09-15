@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.16.ebuild,v 1.1 2014/02/03 00:05:16 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.18.ebuild,v 1.1 2014/09/15 20:55:34 mschiff Exp $
 
 EAPI=5
 
@@ -15,14 +15,13 @@ SRC_URI="http://www.${PN}.org/files/source/${MY_P}.tar.gz"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+auditor +curl debug doc eppclient mysql +signer +sqlite test ${PKCS11_IUSE}"
+IUSE="-auditor +curl debug doc eppclient mysql +signer +sqlite test ${PKCS11_IUSE}"
 
 RDEPEND="
 	dev-lang/perl
 	dev-libs/libxml2
 	dev-libs/libxslt
 	net-libs/ldns
-	auditor? ( dev-lang/ruby[ssl] dev-ruby/dnsruby )
 	curl? ( net-misc/curl )
 	mysql? (
 		virtual/mysql
@@ -58,7 +57,7 @@ PATCHES=(
 
 S="${WORKDIR}/${MY_P}"
 
-DOCS=( MIGRATION NEWS README )
+DOCS=( MIGRATION NEWS )
 
 check_pkcs11_setup() {
 	# PKCS#11 HSM's are often only available with proprietary drivers not
@@ -112,8 +111,10 @@ pkg_pretend() {
 
 	for i in eppclient mysql; do
 		if use ${i}; then
+			ewarn
 			ewarn "Usage of ${i} is considered experimental."
 			ewarn "Do not report bugs against this feature."
+			ewarn
 		fi
 	done
 
@@ -141,8 +142,8 @@ src_configure() {
 		--disable-static \
 		--with-database-backend=$(use mysql && echo "mysql")$(use sqlite && echo "sqlite3") \
 		--with-pkcs11-${PKCS11_LIB}=${PKCS11_PATH} \
+		--disable-auditor \
 		$(use_with curl) \
-		$(use_enable auditor) \
 		$(use_enable debug timeshift) \
 		$(use_enable eppclient) \
 		$(use_enable signer)
@@ -190,5 +191,13 @@ pkg_postinst() {
 		elog "    echo \"0:/var/lib/opendnssec/softhsm_slot0.db\" >> /etc/softhsm.conf"
 		elog "    softhsm --init-token --slot 0 --label OpenDNSSEC"
 		elog "    chown opendnssec:opendnssec /var/lib/opendnssec/softhsm_slot0.db"
+	fi
+	if use auditor; then
+		ewarn
+		ewarn "Please note that auditor support has been disabled in this version since it"
+		ewarn "it depends on ruby 1.8 which has been removed from the portage tree."
+		ewarn "USE=auditor is only provided for this warning but will not install the"
+		ewarn "auditor anymore."
+		ewarn
 	fi
 }
