@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96-r5.ebuild,v 1.3 2014/09/15 08:48:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96-r5.ebuild,v 1.4 2014/09/15 08:56:17 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -13,7 +13,7 @@ SRC_URI="capi? ( ftp://ftp.melware.net/capi4yaps/${P}.c4.tgz )
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
-IUSE="+capi lua slang unicode"
+IUSE="+capi lua slang"
 
 RDEPEND="
 	capi? ( net-dialup/capi4k-utils )
@@ -38,14 +38,6 @@ src_prepare() {
 	# fix compile warning
 	if ! use capi; then
 		epatch "${FILESDIR}"/${P}-string.patch
-	fi
-
-	# if specified, convert all relevant files from latin1 to UTF-8
-	if use unicode; then
-		for i in yaps.doc; do
-			einfo "Converting '${i}' to UTF-8"
-			iconv -f latin1 -t utf8 -o "${i}~" "${i}" && mv -f "${i}~" "${i}" || rm -f "${i}~"
-		done
 	fi
 }
 
