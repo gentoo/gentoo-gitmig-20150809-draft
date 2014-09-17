@@ -1,13 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.73 2014/09/13 09:34:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.74 2014/09/17 00:11:43 lu_zero Exp $
 
 EAPI=5
 
 if [[ ${PV} == *9999 ]] ; then
 	SCM="git-2"
-	EGIT_REPO_URI="git://git.libav.org/libav.git"
-	[[ ${PV%9999} != "" ]] && EGIT_BRANCH="release/${PV%.9999}"
+	: ${EGIT_REPO_URI:="git://git.libav.org/libav.git"}
+	if [[ ${PV%9999} != "" ]] ; then
+		: ${EGIT_BRANCH:="release/${PV%.9999}"}
+	fi
 fi
 
 inherit eutils flag-o-matic multilib multilib-minimal toolchain-funcs ${SCM}
@@ -28,8 +30,8 @@ SLOT="0/10"
 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 ~x64-solaris ~x86-solaris"
 IUSE="aac alsa amr bindist +bzip2 cdio cpudetection custom-cflags debug doc
-	+encode faac fdk frei0r +gpl gsm +hardcoded-tables ieee1394 jack jpeg2k mp3
-	+network openssl opus oss pic pulseaudio rtmp schroedinger sdl speex ssl
+	+encode faac fdk frei0r fontconfig +gpl gsm +hardcoded-tables ieee1394 jack jpeg2k
+	mp3 +network openssl opus oss pic pulseaudio rtmp schroedinger sdl speex ssl
 	static-libs test theora threads tools truetype v4l vaapi vdpau vorbis vpx X
 	wavpack webp x264 x265 xvid +zlib"
 
@@ -68,7 +70,7 @@ RDEPEND="
 		webp? ( >=media-libs/libwebp-0.3.0[${MULTILIB_USEDEP}] )
 		wavpack? ( >=media-sound/wavpack-4.60.1-r1[${MULTILIB_USEDEP}] )
 		x264? ( >=media-libs/x264-0.0.20130506:=[${MULTILIB_USEDEP}] )
-		x265? ( >=media-libs/x265-1.0:=[${MULTILIB_USEDEP}] )
+		x265? ( >=media-libs/x265-1.2:=[${MULTILIB_USEDEP}] )
 		xvid? ( >=media-libs/xvid-1.3.2-r1[${MULTILIB_USEDEP}] )
 	)
 	frei0r? ( media-plugins/frei0r-plugins )
@@ -89,7 +91,8 @@ RDEPEND="
 	sdl? ( >=media-libs/libsdl-1.2.15-r4[sound,video,${MULTILIB_USEDEP}] )
 	schroedinger? ( >=media-libs/schroedinger-1.0.11-r1[${MULTILIB_USEDEP}] )
 	speex? ( >=media-libs/speex-1.2_rc1-r1[${MULTILIB_USEDEP}] )
-	truetype? ( >=media-libs/freetype-2.5.0.1:2[${MULTILIB_USEDEP}] )
+	truetype? (	>=media-libs/freetype-2.5.0.1:2[${MULTILIB_USEDEP}] )
+	fontconfig? ( >=media-libs/fontconfig-2.10[${MULTILIB_USEDEP}] )
 	vaapi? ( >=x11-libs/libva-1.2.1-r1[${MULTILIB_USEDEP}] )
 	vdpau? ( >=x11-libs/libvdpau-0.7[${MULTILIB_USEDEP}] )
 	vpx? ( >=media-libs/libvpx-1.2.0_pre20130625[${MULTILIB_USEDEP}] )
@@ -111,6 +114,7 @@ DEPEND="${RDEPEND}
 	ssl? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
 	test? ( sys-devel/bc )
 	truetype? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
+	fontconfig? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
 	v4l? ( sys-kernel/linux-headers )
 "
 
@@ -127,6 +131,7 @@ REQUIRED_USE="bindist? ( !faac !openssl !fdk )
 	rtmp? ( network )
 	amr? ( gpl ) aac? ( gpl ) x264? ( gpl ) X? ( gpl ) cdio? ( gpl ) x265? ( gpl )
 	test? ( encode zlib )
+	fontconfig? ( truetype )
 "
 
 # Test on live ebuild are not possible as they require trunk fate
@@ -215,6 +220,7 @@ multilib_src_configure() {
 	# libavfilter options
 	multilib_is_native_abi && use frei0r && myconf+=( --enable-frei0r )
 	use truetype && myconf+=( --enable-libfreetype )
+	use fontconfig && myconf+=( --enable-libfontconfig )
 
 	# Threads; we only support pthread for now
 	use threads && myconf+=( --enable-pthreads )
