@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-2012.1-r2.ebuild,v 1.1 2014/09/17 08:33:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-2012.1-r3.ebuild,v 1.1 2014/09/17 08:52:05 jlec Exp $
 
 EAPI=5
 
@@ -19,16 +19,7 @@ IUSE="doc static-libs"
 
 DOCS=( Announce.txt File_id.diz README.txt REGISTER.txt )
 
-PATCHES=(
-	"${FILESDIR}"/${P}-64bit.patch
-	"${FILESDIR}"/${P}-pc.patch
-	)
-
-src_prepare() {
-	# From fedora, matplotlib depends on it
-	cp "${FILESDIR}"/${PN}.pc.in . || die
-	cmake-utils_src_prepare
-}
+PATCHES=( "${FILESDIR}"/${P}-64bit.patch )
 
 src_configure() {
 	append-flags -fno-strict-aliasing

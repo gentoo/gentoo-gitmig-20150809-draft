@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/qhull
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.57 2014/09/17 08:33:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.58 2014/09/17 08:52:05 jlec Exp $
+
+*qhull-2012.1-r3 (17 Sep 2014)
+
+  17 Sep 2014; Justin Lecher <jlec@gentoo.org> -qhull-2012.1-r2.ebuild,
+  +qhull-2012.1-r3.ebuild, -files/qhull-2012.1-pc.patch, -files/qhull.pc.in:
+  Drop pc support again as matplotlib works better without
 
 *qhull-2012.1-r2 (17 Sep 2014)
 
