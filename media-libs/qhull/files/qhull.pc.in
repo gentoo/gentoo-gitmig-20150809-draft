@@ -1,0 +1,11 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+includedir=${exec_prefix}/include
+libdir=${exec_prefix}/@CMAKE_INSTALL_LIBDIR@
+
+Name: qhull
+Description: General dimension convex hull library
+Version: @VERSION@
+Requires:
+Libs: -L${libdir} -lqhull -lm
+Cflags: -I${includedir}
