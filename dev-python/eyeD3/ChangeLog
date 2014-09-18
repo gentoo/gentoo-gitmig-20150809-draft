@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/eyeD3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.76 2014/09/18 15:02:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.77 2014/09/18 15:10:32 idella4 Exp $
+
+*eyeD3-0.7.5 (18 Sep 2014)
+
+  18 Sep 2014; Ian Delaney <idella4@gentoo.org> +eyeD3-0.7.5.ebuild:
+  bump
 
   18 Sep 2014; Samuli Suominen <ssuominen@gentoo.org> eyeD3-0.7.4-r2.ebuild:
   Keyword ~ppc/~ppc64 wrt #454638
