@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.7.ebuild,v 1.9 2014/09/19 16:36:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.7-r1.ebuild,v 1.1 2014/09/19 18:09:48 dilfridge Exp $
 
-EAPI="3"
+EAPI=5
 
 inherit apache-module perl-module eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://apache/perl/${P}.tar.gz"
 HOMEPAGE="http://perl.apache.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~hppa"
 IUSE="debug"
 SLOT="1"
 
@@ -119,7 +119,7 @@ src_test() {
 src_install() {
 	apache-module_src_install
 
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 
 	# TODO: add some stuff from docs/ back?
 
@@ -130,7 +130,7 @@ src_install() {
 	perl_delete_packlist
 
 	insinto "${APACHE_MODULES_CONFDIR}"
-	doins "${FILESDIR}"/2.0.3/apache2-mod_perl-startup.pl || die
+	doins "${FILESDIR}"/2.0.3/apache2-mod_perl-startup.pl
 
 	# this is an attempt to get @INC in line with /usr/bin/perl.
 	# there is blib garbage in the mainstream one that can only be
