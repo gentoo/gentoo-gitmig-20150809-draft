@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/allison
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.35 2014/08/15 17:53:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.36 2014/09/19 09:22:00 ago Exp $
+
+  19 Sep 2014; Agostino Sarubbo <ago@gentoo.org> allison-2.0.3-r2.ebuild:
+  Stable for ppc, wrt bug #503564
 
   15 Aug 2014; Raúl Porcel <armin76@gentoo.org> allison-2.0.3-r2.ebuild:
   sparc stable, bug #503564
