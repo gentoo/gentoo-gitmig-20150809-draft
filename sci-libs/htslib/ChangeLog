@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/htslib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/htslib/ChangeLog,v 1.2 2014/09/20 19:09:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/htslib/ChangeLog,v 1.3 2014/09/20 19:12:51 jlec Exp $
+
+  20 Sep 2014; Justin Lecher <jlec@gentoo.org> htslib-1.0.ebuild:
+  Fix static-libs handling
 
   20 Sep 2014; Justin Lecher <jlec@gentoo.org> htslib-1.0.ebuild:
   Handle static-libs
