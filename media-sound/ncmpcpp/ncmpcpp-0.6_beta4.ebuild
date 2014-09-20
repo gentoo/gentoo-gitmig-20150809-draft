@@ -1,10 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.6_beta4.ebuild,v 1.1 2014/09/20 08:32:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.6_beta4.ebuild,v 1.2 2014/09/20 09:39:01 jer Exp $
 
 EAPI=5
-
-inherit autotools bash-completion-r1 eutils
+inherit bash-completion-r1 eutils
 
 DESCRIPTION="featureful ncurses based MPD client inspired by ncmpc"
 HOMEPAGE="http://ncmpcpp.rybczak.net/"
@@ -30,9 +29,8 @@ DEPEND="
 "
 
 src_prepare() {
-	sed -i -e '/^docdir/d' {,doc/}Makefile.am || die
-	sed -i -e 's|COPYING||g' Makefile.am || die
-	eautomake
+	sed -i -e '/^docdir/d' {,doc/}Makefile{.am,.in} || die
+	sed -i -e 's|COPYING||g' Makefile{.am,.in} || die
 }
 
 src_configure() {
