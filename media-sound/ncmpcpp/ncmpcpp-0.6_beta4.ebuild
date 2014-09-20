@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.6_beta3.ebuild,v 1.1 2014/09/16 05:35:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.6_beta4.ebuild,v 1.1 2014/09/20 08:32:46 jer Exp $
 
 EAPI=5
 
