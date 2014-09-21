@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.3-r2.ebuild,v 1.4 2014/09/21 10:20:09 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.4_rc2.ebuild,v 1.1 2014/09/21 10:20:09 swift Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 python3_2 python3_3 )
@@ -9,16 +9,16 @@ inherit multilib python-r1 toolchain-funcs eutils multilib-minimal
 
 MY_P="${P//_/-}"
 
-SEPOL_VER="2.3"
-SELNX_VER="2.3"
+SEPOL_VER="2.4_rc2"
+SELNX_VER="2.4_rc2"
 
 DESCRIPTION="SELinux kernel and policy management library"
-HOMEPAGE="http://userspace.selinuxproject.org"
-SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20140506/${MY_P}.tar.gz"
+HOMEPAGE="https://github.com/SELinuxProject/selinux/wiki"
+SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20140826/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="python"
 
 RDEPEND=">=sys-libs/libsepol-${SEPOL_VER}[${MULTILIB_USEDEP}]
@@ -91,11 +91,12 @@ multilib_src_install() {
 	emake \
 		LIBDIR="${ED}/usr/$(get_libdir)" \
 		SHLIBDIR="${ED}/usr/$(get_libdir)" \
-		DESTDIR="${D}" install
+		DESTDIR="${ED}" install
 
 	if multilib_is_native_abi && use python; then
 		installation_py() {
-			emake DESTDIR="${D}" install-pywrap
+			emake DESTDIR="${ED}" LIBDIR="${ED}/usr/$(get_libdir)" \
+				SHLIBDIR="${ED}/usr/$(get_libdir)" install-pywrap
 		}
 		python_foreach_impl installation_py
 	fi

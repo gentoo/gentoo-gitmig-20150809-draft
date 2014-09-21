@@ -1,28 +1,27 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.3-r1.ebuild,v 1.4 2014/09/21 10:17:04 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.4_rc2.ebuild,v 1.1 2014/09/21 10:17:04 swift Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python2_7 python3_2 python3_3 python3_4 )
+PYTHON_COMPAT=( python2_7 python3_2 python3_3 )
 USE_RUBY="ruby19 ruby20"
 
-PATCHBUNDLE="4"
+PATCHBUNDLE="5"
 
 # No, I am not calling ruby-ng
 inherit multilib python-r1 toolchain-funcs eutils multilib-minimal
 
 MY_P="${P//_/-}"
 
-SEPOL_VER="2.3"
+SEPOL_VER="2.4_rc2"
 
 DESCRIPTION="SELinux userland library"
-HOMEPAGE="http://userspace.selinuxproject.org"
-SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20140506/${MY_P}.tar.gz
-	http://dev.gentoo.org/~swift/patches/${PN}/patchbundle-${PN}-${PATCHBUNDLE}.tar.gz"
+HOMEPAGE="https://github.com/SELinuxProject/selinux/wiki"
+SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20140826/${MY_P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="python ruby static-libs ruby_targets_ruby19 ruby_targets_ruby20"
 
@@ -40,11 +39,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	EPATCH_MULTI_MSG="Applying libselinux patches ... " \
-	EPATCH_SUFFIX="patch" \
-	EPATCH_SOURCE="${WORKDIR}/gentoo-patches" \
-	EPATCH_FORCE="yes" \
-	epatch
+	epatch "${FILESDIR}/0005-use-ruby-include-with-rubylibver.patch"
+	epatch "${FILESDIR}/0006-build-related-fixes-bug-500674.patch"
 
 	epatch_user
 
