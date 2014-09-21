@@ -1,20 +1,23 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.2.1.ebuild,v 1.3 2014/09/21 10:25:53 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.2.2_rc2.ebuild,v 1.1 2014/09/21 10:25:53 swift Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
 
 inherit python-r1 eutils
 
+MY_P="${P//_/-}"
+
+PATCHBUNDLE="1"
+
 DESCRIPTION="SELinux policy generation library"
-HOMEPAGE="http://userspace.selinuxproject.org"
-SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20140506/${P}.tar.gz
-	http://dev.gentoo.org/~swift/patches/sepolgen/patchbundle-${P}-r1.tar.gz"
+HOMEPAGE="https://github.com/SELinuxProject/selinux/wiki"
+SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20140826/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=sys-libs/libselinux-2.0[python]
@@ -22,12 +25,11 @@ DEPEND=">=sys-libs/libselinux-2.0[python]
 		${PYTHON_DEPS}"
 RDEPEND="${DEPEND}"
 
+S="${WORKDIR}/${MY_P}"
+
 src_prepare() {
-	EPATCH_MULTI_MSG="Applying sepolgen patches ... " \
-	EPATCH_SUFFIX="patch" \
-	EPATCH_SOURCE="${WORKDIR}/gentoo-patches" \
-	EPATCH_FORCE="yes" \
-	epatch
+	epatch "${FILESDIR}/0030-default-path-for-tests-also-needed-bug-467264.patch"
+	epatch "${FILESDIR}/0040-have-test-run-with-PYTHON-variable-python-bug-467264.patch"
 
 	epatch_user
 
