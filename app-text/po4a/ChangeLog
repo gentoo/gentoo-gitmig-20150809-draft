@@ -1,6 +1,9 @@
 # ChangeLog for app-text/po4a
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.76 2014/09/13 11:58:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.77 2014/09/21 10:00:22 ago Exp $
+
+  21 Sep 2014; Agostino Sarubbo <ago@gentoo.org> po4a-0.45.ebuild:
+  Stable for ppc, wrt bug #520014
 
   13 Sep 2014; Markus Meier <maekke@gentoo.org> po4a-0.45.ebuild:
   arm stable, bug #520014
