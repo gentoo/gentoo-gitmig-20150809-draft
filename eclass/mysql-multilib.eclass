@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.8 2014/09/26 17:49:11 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.9 2014/09/26 17:56:29 grknight Exp $
 
 # @ECLASS: mysql-multilib.eclass
 # @MAINTAINER:
@@ -208,7 +208,7 @@ if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]]; then
 fi
 
 if [[ ${PN} == "mariadb-galera" ]]; then
-	IUSE="${IUSE} +sst_rsync sst_xtrabackup"
+	IUSE="${IUSE} +sst-rsync sst-xtrabackup"
 fi
 
 if [[ ${PN} == "percona-server" ]]; then
@@ -317,8 +317,8 @@ if [[ ${PN} == "mariadb-galera" ]] ; then
 	RDEPEND="${RDEPEND}
 		sys-apps/iproute2
 		=sys-cluster/galera-${WSREP_REVISION}*
-		sst_rsync? ( sys-process/lsof )
-		sst_xtrabackup? (
+		sst-rsync? ( sys-process/lsof )
+		sst-xtrabackup? (
 			dev-db/xtrabackup-bin
 			net-misc/socat[ssl]
 		)
