@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.22.ebuild,v 1.5 2014/08/21 14:23:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.22-r1.ebuild,v 1.1 2014/09/27 00:13:03 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -25,7 +25,6 @@ REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 RDEPEND=">=dev-libs/expat-2.1.0-r3[${MULTILIB_USEDEP}]
 	>=dev-libs/libevent-2.0.21[${MULTILIB_USEDEP}]
 	>=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}]
-	>=net-libs/ldns-1.6.16-r1[ecdsa,ssl,gost?,${MULTILIB_USEDEP}]
 	python? ( ${PYTHON_DEPS} )
 	selinux? ( sec-policy/selinux-bind )"
 
@@ -74,7 +73,6 @@ multilib_src_configure() {
 		$(use_with threads pthreads) \
 		--disable-rpath \
 		--enable-ecdsa \
-		--with-ldns="${EPREFIX}"/usr \
 		--with-libevent="${EPREFIX}"/usr \
 		--with-pidfile="${EPREFIX}"/var/run/unbound.pid \
 		--with-rootkey-file="${EPREFIX}"/etc/dnssec/root-anchors.txt \
