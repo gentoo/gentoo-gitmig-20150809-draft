@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.3.0.ebuild,v 1.3 2014/09/27 23:05:43 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.3.0.ebuild,v 1.4 2014/09/27 23:07:39 mattst88 Exp $
 
 EAPI=5
 
@@ -150,8 +150,8 @@ DEPEND="${RDEPEND}
 		video_cards_radeonsi? ( sys-devel/llvm[video_cards_radeon] )
 	)
 	opencl? (
-				>=sys-devel/llvm-3.3-r3:=[${MULTILIB_USEDEP}]
-				>=sys-devel/clang-3.3:=[${MULTILIB_USEDEP}]
+				>=sys-devel/llvm-3.4.2:=[${MULTILIB_USEDEP}]
+				>=sys-devel/clang-3.4.2:=[${MULTILIB_USEDEP}]
 				>=sys-devel/gcc-4.6
 	)
 	sys-devel/bison
