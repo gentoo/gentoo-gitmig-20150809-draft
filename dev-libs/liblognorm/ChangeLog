@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liblognorm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/ChangeLog,v 1.27 2014/09/30 12:36:50 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/ChangeLog,v 1.28 2014/09/30 12:46:59 polynomial-c Exp $
+
+  30 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> liblognorm-1.0.1.ebuild:
+  Readded CFLAGS patch.
 
 *liblognorm-1.0.1 (30 Sep 2014)
 
