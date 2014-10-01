@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-eio/pecl-eio-1.2.3-r1.ebuild,v 1.1 2014/10/01 13:51:24 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-eio/pecl-eio-1.2.5.ebuild,v 1.1 2014/10/01 13:53:40 grknight Exp $
 
 EAPI=5
 PHP_EXT_NAME="eio"
