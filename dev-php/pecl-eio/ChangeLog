@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/pecl-eio
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-eio/ChangeLog,v 1.1 2013/09/22 10:13:13 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-eio/ChangeLog,v 1.2 2014/10/01 13:51:24 grknight Exp $
+
+*pecl-eio-1.2.3-r1 (01 Oct 2014)
+
+  01 Oct 2014;  <grknight@gentoo.org> +pecl-eio-1.2.3-r1.ebuild,
+  -pecl-eio-1.2.3.ebuild:
+  Revbump to drop 5.3 support wrt bug 524122 on behalf of Ruslan Osmanov
+  <rrosmanov@gmail.com>
 
 *pecl-eio-1.2.3 (22 Sep 2013)
 
