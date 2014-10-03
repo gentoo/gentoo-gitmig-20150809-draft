@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.1.ebuild,v 1.1 2014/10/03 09:58:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.1.ebuild,v 1.2 2014/10/03 10:00:46 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -30,6 +30,10 @@ REQUIRED_USE="
 	webkit? ( python )
 	python? ( ${PYTHON_REQUIRED_USE} )
 "
+
+# Tests failing for years without upstream caring at all
+# upstream bug #688745
+RESTRICT="test"
 
 # FIXME: double check what to do with fm-radio plugin
 # webkit-gtk-1.10 is needed because it uses gstreamer-1.0
