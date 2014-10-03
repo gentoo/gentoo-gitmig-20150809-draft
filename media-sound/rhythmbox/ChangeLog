@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.261 2014/07/24 18:47:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.262 2014/10/03 09:58:41 pacho Exp $
+
+*rhythmbox-3.1 (03 Oct 2014)
+
+  03 Oct 2014; Pacho Ramos <pacho@gentoo.org> +rhythmbox-3.1.ebuild,
+  -files/rhythmbox-0.12-python-initialization.patch,
+  -files/rhythmbox-0.12.8-libnotify-0.7.patch,
+  -files/rhythmbox-0.12.8-namespace-conflict.patch, -rhythmbox-3.0.2.ebuild:
+  Version bump, drop old
 
   24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> rhythmbox-3.0.2.ebuild,
   rhythmbox-3.0.3.ebuild:
