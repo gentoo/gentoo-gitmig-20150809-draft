@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.135 2014/10/03 09:39:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.136 2014/10/03 09:42:02 pacho Exp $
+
+  03 Oct 2014; Pacho Ramos <pacho@gentoo.org> orca-3.12.3.ebuild:
+  Require at least the brltty version that finally worked for me
 
 *orca-3.12.3 (03 Oct 2014)
 
