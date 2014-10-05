@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.122 2014/10/05 22:16:38 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.123 2014/10/05 22:38:45 caster Exp $
+
+  05 Oct 2014; Vlastimil Babka <caster@gentoo.org> icedtea-6.1.13.3.ebuild,
+  icedtea-7.2.4.7.ebuild:
+  Depend on >=ant-core-1.8.2 as it needs no extra tasks
 
   05 Oct 2014; Vlastimil Babka <caster@gentoo.org> -icedtea-6.1.13.1.ebuild,
   -icedtea-6.1.13.2.ebuild, icedtea-6.1.13.3.ebuild, -icedtea-7.2.4.5.ebuild,
