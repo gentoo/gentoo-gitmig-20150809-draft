@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb-galera/mariadb-galera-10.0.13.ebuild,v 1.3 2014/10/06 17:31:06 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb-galera/mariadb-galera-10.0.13.ebuild,v 1.4 2014/10/06 17:44:30 grknight Exp $
 
 EAPI="5"
 MY_EXTRAS_VER="20140903-1928Z"
@@ -114,6 +114,8 @@ multilib_src_test() {
 		[[ $retstatus_tests -eq 0 ]] || failures="${failures} tests"
 		has usersandbox $FEATURES && eerror "Some tests may fail with FEATURES=usersandbox"
 
+		[[ -z "$failures" ]] || die "Test failures: $failures"
+		einfo "Tests successfully completed"
 	else
 
 		einfo "Skipping server tests due to minimal build."
