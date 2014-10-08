@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/byacc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.95 2014/06/25 05:00:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.96 2014/10/08 02:41:30 radhermit Exp $
+
+*byacc-20141006 (08 Oct 2014)
+
+  08 Oct 2014; Tim Harder <radhermit@gentoo.org> +byacc-20141006.ebuild:
+  Version bump.
 
 *byacc-20140527 (25 Jun 2014)
 
