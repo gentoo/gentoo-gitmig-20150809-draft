@@ -7,13 +7,13 @@
  download         |  2 +-
  expanddeps       |  2 +-
  getbinaryid      |  2 +-
- init_buildsystem |  0
+ init_buildsystem |  2 +-
  initvm.c         | 13 +++++++++----
  mkdrpms          |  2 +-
  order            |  2 +-
  spectool         |  2 +-
  substitutedeps   |  2 +-
- 15 files changed, 22 insertions(+), 17 deletions(-)
+ 15 files changed, 23 insertions(+), 18 deletions(-)
 
 diff --git a/build b/build
 old mode 100755
@@ -153,6 +153,18 @@ index 55c57f6..8f06579
 diff --git a/init_buildsystem b/init_buildsystem
 old mode 100755
 new mode 100644
+index 9fec7aa..21c5d4f
+--- a/init_buildsystem
++++ b/init_buildsystem
+@@ -13,7 +13,7 @@
+ # needed globals variables
+ #
+ export SRC
+-export BUILD_DIR=${BUILD_DIR:-/usr/lib/build}
++export BUILD_DIR=${BUILD_DIR:-/usr/libexec/suse-build}
+ 
+ export YAST_IS_RUNNING=instsys
+ 
 diff --git a/initvm.c b/initvm.c
 index 55686ea..17ce70c 100644
 --- a/initvm.c
