@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda-context/shoulda-context-1.1.6.ebuild,v 1.5 2014/10/10 22:46:37 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda-context/shoulda-context-1.1.6.ebuild,v 1.6 2014/10/10 22:47:28 mrueg Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64"
 IUSE="doc test"
 
-ruby_add_bdepend "test? ( dev-ruby/test-unit:2 
+ruby_add_bdepend "test? ( dev-ruby/test-unit:2
 	<dev-ruby/mocha-1 )"
 
 all_ruby_prepare() {
