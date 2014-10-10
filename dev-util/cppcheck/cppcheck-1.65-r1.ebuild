@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/cppcheck-1.65-r1.ebuild,v 1.2 2014/10/10 06:31:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/cppcheck-1.65-r1.ebuild,v 1.3 2014/10/10 13:23:54 xmw Exp $
 
 EAPI=5
 
@@ -10,35 +10,38 @@ inherit distutils-r1 eutils flag-o-matic qt4-r2 toolchain-funcs
 
 DESCRIPTION="static analyzer of C/C++ code"
 HOMEPAGE="http://cppcheck.sourceforge.net"
-SRC_URI="mirror://sourceforge/cppcheck/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="htmlreport qt4"
+IUSE="htmlreport pcre qt4"
 
 RDEPEND="htmlreport? ( ${PYTHON_DEPS} )
 	>=dev-libs/tinyxml2-2
-	qt4? ( dev-qt/qtgui:4 )"
+	qt4? ( dev-qt/qtgui:4 )
+	pcre? ( dev-libs/libpcre )"
 DEPEND="${RDEPEND}
+	app-text/docbook-xsl-stylesheets
+	dev-libs/libxslt
 	virtual/pkgconfig"
 
 src_prepare() {
 	# Drop bundled libs, patch Makefile generator and re-run it
 	rm -r externals || die
 	epatch "${FILESDIR}"/${P}-tinyxml2.patch
-	emake dmake \
-		CPPFLAGS="${CPPFLAGS}" \
-		CXX="$(tc-getCXX)" \
-		CXXFLAGS="${CXXFLAGS}" \
-		LDFLAGS="${LDFLAGS}" \
+	tc-export CXX
+	emake dmake
 	./dmake || die
 
 	epatch "${FILESDIR}"/${P}-c++0x.patch
 }
 
 src_configure() {
-	tc-export CXX
+	if use pcre ; then
+		sed -e '/HAVE_RULES=/s:=no:=yes:' \
+			-i Makefile
+	fi
 	if use qt4 ; then
 		pushd gui
 		qt4-r2_src_configure
@@ -47,16 +50,10 @@ src_configure() {
 }
 
 src_compile() {
-	local my_inc=$(pkg-config --cflags-only-I tinyxml2)
-	emake CFGDIR="/usr/share/${PN}/cfg" \
-		CPPFLAGS="${CPPFLAGS}" \
-		CXX="$(tc-getCXX)" \
-		CXXFLAGS="${CXXFLAGS}" \
-		LDFLAGS="${LDFLAGS}" \
-		INCLUDE_FOR_LIB="-Ilib ${my_inc}" \
-		INCLUDE_FOR_CLI="-Ilib ${my_inc}" \
-		INCLUDE_FOR_TEST="-Ilib -Icli ${my_inc}" \
-		LIBS="$(pkg-config --libs tinyxml2)"
+	export LIBS="$(pkg-config --libs tinyxml2)"
+	emake ${PN} man \
+		CFGDIR="${EROOT}usr/share/${PN}/cfg" \
+		DB2MAN="${EROOT}usr/share/sgml/docbook/xsl-stylesheets/manpages/docbook.xsl"
 
 	if use qt4 ; then
 		pushd gui
@@ -71,18 +68,25 @@ src_compile() {
 }
 
 src_test() {
-	emake check \
-		LIBS="$(pkg-config --libs tinyxml2)"
+	# safe final version
+	mv -v ${PN}{,.final}
+	mv -v lib/library.o{,.final}
+	mv -v cli/cppcheckexecutor.o{,.final}
+	#trigger recompile with CFGDIR inside ${S}
+	emake check CFGDIR="${S}/cfg"
+	# restore 
+	mv -v ${PN}{.final,}
+	mv -v lib/library.o{.final,}
+	mv -v cli/cppcheckexecutor.o{.final,}
 }
 
 src_install() {
 	emake install DESTDIR="${D}"
-	dodoc readme.txt
 	insinto "/usr/share/${PN}/cfg"
 	doins cfg/*.cfg
 	if use qt4 ; then
 		dobin gui/${PN}-gui
-		dodoc readme_gui.txt gui/{projectfile.txt,gui.cppcheck}
+		dodoc readme_gui.txt gui/{projectfile.txt,gui.${PN}}
 	fi
 	if use htmlreport ; then
 		pushd htmlreport
@@ -90,4 +94,6 @@ src_install() {
 		popd
 		find "${D}" -name "*.egg-info" -delete
 	fi
+	doman ${PN}.1
+	dodoc readme.txt
 }
