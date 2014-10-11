@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.1.9999.ebuild,v 1.8 2014/10/11 23:04:45 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.1.9999.ebuild,v 1.9 2014/10/11 23:14:35 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -95,7 +95,7 @@ pkg_setup() {
 	NF_NAT_IPV4 NF_NAT NF_CONNTRACK IPTABLE_FILTER IP_TABLES X_TABLES"
 	if linux_config_exists; then
 		for module in ${CONFIG_CHECK_MODULES}; do
-			linux_chkconfig_module ${module} || ewarn "${module} needs to be built as module (builtin doesn't work)"
+			linux_chkconfig_present ${module} || ewarn "${module} needs to be built as module (builtin doesn't work)"
 		done
 	fi
 	enewgroup neutron
