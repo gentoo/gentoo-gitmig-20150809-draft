@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/outwiker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/outwiker/ChangeLog,v 1.6 2014/10/12 10:41:40 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/outwiker/ChangeLog,v 1.7 2014/10/12 10:42:53 pinkbyte Exp $
+
+*outwiker-1.8.0 (12 Oct 2014)
+
+  12 Oct 2014; Sergey Popov <pinkbyte@gentoo.org> -outwiker-1.6.0-r1.ebuild,
+  +outwiker-1.8.0.ebuild:
+  Version bump: epatch_user, migrate to python-r1 eclass
 
   12 Oct 2014; Sergey Popov <pinkbyte@gentoo.org> outwiker-1.7.0.ebuild:
   Remove unneeded dependency on app-arch/p7zip
