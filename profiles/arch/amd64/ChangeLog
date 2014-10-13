@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.280 2014/10/13 18:41:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.281 2014/10/13 18:52:35 klausman Exp $
+
+  13 Oct 2014; Tobias Klausmann <klausman@gentoo.org> package.use.stable.mask:
+  Stable-mask abi_x86_32 on dev-lua/luaexpat, bug #520864
 
   13 Oct 2014; Michał Górny <mgorny@gentoo.org> package.use.stable.mask:
   Stable-mask abi_x86_32 on dev-lang/lua, bug #520864.
