@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.106 2014/10/13 08:02:28 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.107 2014/10/13 08:05:53 pinkbyte Exp $
+
+  13 Oct 2014; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Add new maintainer and proxy maintainers herd
 
   13 Oct 2014; Sergey Popov <pinkbyte@gentoo.org> -tora-2.1.1.ebuild,
   -tora-2.1.3-r2.ebuild, -files/tora-2.1.2-qt47.patch:
