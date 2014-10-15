@@ -1,27 +1,21 @@
-From a0b8fba42dc5ef7663f48a584e63b07a6d6597d6 Mon Sep 17 00:00:00 2001
+From 9e366c19179b9e103b0775463dd2e16c62e9c0b5 Mon Sep 17 00:00:00 2001
 From: Matthias Maier <tamiko@kyomu.43-1.org>
-Date: Wed, 15 Oct 2014 17:32:40 +0200
-Subject: [PATCH] rename systemd unit files to gentoo default
+Date: Thu, 16 Oct 2014 00:52:06 +0200
+Subject: [PATCH] change service files to gentoo naming scheme
 
 ---
- configure.ac                        |  6 +++---
- scheduler/Makefile                  | 14 +++++++-------
- scheduler/cups.path.in              |  8 ++++++++
- scheduler/cups.service.in           | 10 ++++++++++
- scheduler/cups.socket.in            | 12 ++++++++++++
- scheduler/org.cups.cupsd.path.in    |  8 --------
- scheduler/org.cups.cupsd.service.in | 10 ----------
- scheduler/org.cups.cupsd.socket.in  | 12 ------------
- 8 files changed, 40 insertions(+), 40 deletions(-)
- create mode 100644 scheduler/cups.path.in
- create mode 100644 scheduler/cups.service.in
- create mode 100644 scheduler/cups.socket.in
- delete mode 100644 scheduler/org.cups.cupsd.path.in
- delete mode 100644 scheduler/org.cups.cupsd.service.in
- delete mode 100644 scheduler/org.cups.cupsd.socket.in
+ configure.ac                                             |  6 +++---
+ scheduler/Makefile                                       | 14 +++++++-------
+ scheduler/{org.cups.cupsd.path.in => cups.path.in}       |  2 +-
+ scheduler/{org.cups.cupsd.service.in => cups.service.in} |  2 +-
+ scheduler/{org.cups.cupsd.socket.in => cups.socket.in}   |  0
+ 5 files changed, 12 insertions(+), 12 deletions(-)
+ rename scheduler/{org.cups.cupsd.path.in => cups.path.in} (65%)
+ rename scheduler/{org.cups.cupsd.service.in => cups.service.in} (72%)
+ rename scheduler/{org.cups.cupsd.socket.in => cups.socket.in} (100%)
 
 diff --git a/configure.ac b/configure.ac
-index 944a105..2299492 100644
+index 21d7f93..cb5db92 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -81,9 +81,9 @@ AC_OUTPUT(Makedefs
@@ -38,7 +32,7 @@ index 944a105..2299492 100644
            packaging/cups.list
  	  $LANGFILES)
 diff --git a/scheduler/Makefile b/scheduler/Makefile
-index ce1606b..0cce938 100644
+index c0c54a4..bf1ae32 100644
 --- a/scheduler/Makefile
 +++ b/scheduler/Makefile
 @@ -192,7 +192,7 @@ install-data:
@@ -76,102 +70,40 @@ index ce1606b..0cce938 100644
  	fi
  	if test "x$(SMFMANIFESTDIR)" != x; then \
  		echo Uninstalling SMF manifest file...;\
-diff --git a/scheduler/cups.path.in b/scheduler/cups.path.in
-new file mode 100644
-index 0000000..1bccc6f
---- /dev/null
-+++ b/scheduler/cups.path.in
-@@ -0,0 +1,8 @@
-+[Unit]
-+Description=CUPS Scheduler
-+
-+[Path]
-+PathExists=@CUPS_CACHEDIR@/org.cups.cupsd
-+
-+[Install]
-+WantedBy=multi-user.target
-diff --git a/scheduler/cups.service.in b/scheduler/cups.service.in
-new file mode 100644
-index 0000000..4390016
---- /dev/null
-+++ b/scheduler/cups.service.in
-@@ -0,0 +1,10 @@
-+[Unit]
-+Description=CUPS Scheduler
-+
-+[Service]
-+ExecStart=@sbindir@/cupsd -l
-+Type=simple
-+
-+[Install]
-+Also=org.cups.cupsd.socket org.cups.cupsd.path
-+WantedBy=printer.target
-diff --git a/scheduler/cups.socket.in b/scheduler/cups.socket.in
-new file mode 100644
-index 0000000..cd98aa5
---- /dev/null
-+++ b/scheduler/cups.socket.in
-@@ -0,0 +1,12 @@
-+[Unit]
-+Description=CUPS Scheduler
-+
-+[Socket]
-+ListenStream=@CUPS_DEFAULT_DOMAINSOCKET@
-+ListenStream=[::1]:631
-+ListenStream=127.0.0.1:631
-+BindIPv6Only=ipv6-only
-+ReusePort=true
-+
-+[Install]
-+WantedBy=sockets.target
-diff --git a/scheduler/org.cups.cupsd.path.in b/scheduler/org.cups.cupsd.path.in
-deleted file mode 100644
-index 1bccc6f..0000000
+diff --git a/scheduler/org.cups.cupsd.path.in b/scheduler/cups.path.in
+similarity index 65%
+rename from scheduler/org.cups.cupsd.path.in
+rename to scheduler/cups.path.in
+index 1bccc6f..4281d6a 100644
 --- a/scheduler/org.cups.cupsd.path.in
-+++ /dev/null
-@@ -1,8 +0,0 @@
--[Unit]
--Description=CUPS Scheduler
--
--[Path]
++++ b/scheduler/cups.path.in
+@@ -2,7 +2,7 @@
+ Description=CUPS Scheduler
+ 
+ [Path]
 -PathExists=@CUPS_CACHEDIR@/org.cups.cupsd
--
--[Install]
--WantedBy=multi-user.target
-diff --git a/scheduler/org.cups.cupsd.service.in b/scheduler/org.cups.cupsd.service.in
-deleted file mode 100644
-index 4390016..0000000
++PathExistsGlob=@CUPS_CACHEDIR@/d*
+ 
+ [Install]
+ WantedBy=multi-user.target
+diff --git a/scheduler/org.cups.cupsd.service.in b/scheduler/cups.service.in
+similarity index 72%
+rename from scheduler/org.cups.cupsd.service.in
+rename to scheduler/cups.service.in
+index 4390016..f8912eb 100644
 --- a/scheduler/org.cups.cupsd.service.in
-+++ /dev/null
-@@ -1,10 +0,0 @@
--[Unit]
--Description=CUPS Scheduler
--
--[Service]
--ExecStart=@sbindir@/cupsd -l
--Type=simple
--
--[Install]
++++ b/scheduler/cups.service.in
+@@ -6,5 +6,5 @@ ExecStart=@sbindir@/cupsd -l
+ Type=simple
+ 
+ [Install]
 -Also=org.cups.cupsd.socket org.cups.cupsd.path
--WantedBy=printer.target
-diff --git a/scheduler/org.cups.cupsd.socket.in b/scheduler/org.cups.cupsd.socket.in
-deleted file mode 100644
-index cd98aa5..0000000
---- a/scheduler/org.cups.cupsd.socket.in
-+++ /dev/null
-@@ -1,12 +0,0 @@
--[Unit]
--Description=CUPS Scheduler
--
--[Socket]
--ListenStream=@CUPS_DEFAULT_DOMAINSOCKET@
--ListenStream=[::1]:631
--ListenStream=127.0.0.1:631
--BindIPv6Only=ipv6-only
--ReusePort=true
--
--[Install]
--WantedBy=sockets.target
++Also=cups.socket cups.path
+ WantedBy=printer.target
+diff --git a/scheduler/org.cups.cupsd.socket.in b/scheduler/cups.socket.in
+similarity index 100%
+rename from scheduler/org.cups.cupsd.socket.in
+rename to scheduler/cups.socket.in
 -- 
 2.0.4
 
