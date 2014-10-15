@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.9.5-r1.ebuild,v 1.1 2014/10/14 10:53:36 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.9.5-r2.ebuild,v 1.1 2014/10/15 08:07:58 klausman Exp $
 
 EAPI=5
 
