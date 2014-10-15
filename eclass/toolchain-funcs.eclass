@@ -1,6 +1,6 @@
 n Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.128 2014/10/15 22:27:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.129 2014/10/15 22:30:56 blueness Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -609,6 +609,12 @@ gcc-specs-nostrict() {
 	local directive
 	directive=$(gcc-specs-directive cc1)
 	[[ "${directive/\{!fstrict-overflow:}" != "${directive}" ]]
+}
+# Returns true if gcc builds with fstack-check
+gcc-specs-stack-check() {
+	local directive
+	directive=$(gcc-specs-directive cc1)
+	[[ "${directive/\{!fno-stack-check:}" != "${directive}" ]]
 }
 
 
