@@ -1,6 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.20 2014/09/07 09:48:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.21 2014/10/15 11:50:38 pacho Exp $
+
+EAPI=5
 
 inherit eutils unpacker cdrom games
 
@@ -17,17 +19,25 @@ IUSE="X opengl"
 RESTRICT="mirror bindist"
 
 DEPEND="sys-libs/lib-compat
-	app-arch/unzip"
-RDEPEND="!amd64? (
-	x11-libs/libXext
-	x11-libs/libX11
-	x11-libs/libXau
-	x11-libs/libXdmcp
-	=media-libs/libsdl-1.2*
-	opengl? ( virtual/opengl ) )
-	amd64? ( app-emulation/emul-linux-x86-sdl
-		app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-xlibs )"
+	app-arch/unzip
+"
+RDEPEND="
+	|| (
+		(
+			>=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)]
+			x11-libs/libX11[abi_x86_32(-)]
+			x11-libs/libXau[abi_x86_32(-)]
+			x11-libs/libXdmcp[abi_x86_32(-)]
+			x11-libs/libXext[abi_x86_32(-)]
+			opengl? ( virtual/opengl[abi_x86_32(-)] )
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+			opengl? ( app-emulation/emul-linux-x86-opengl[abi_x86_32(-)] )
+		)
+	)
+"
 
 S=${WORKDIR}
 
