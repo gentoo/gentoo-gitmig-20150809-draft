@@ -1,9 +1,9 @@
 # ChangeLog for games-fps/unreal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/ChangeLog,v 1.19 2014/10/15 11:53:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/ChangeLog,v 1.20 2014/10/15 11:53:40 pacho Exp $
 
   15 Oct 2014; Pacho Ramos <pacho@gentoo.org> unreal-226.ebuild:
-  The package had amd64 dependencies while not keyword repoman commit -m Support
+  The package had amd64 dependencies while not keyword
 
   15 Oct 2014; Pacho Ramos <pacho@gentoo.org> unreal-226.ebuild:
   Support multilib providers for deps. Bump to EAPI=5.
