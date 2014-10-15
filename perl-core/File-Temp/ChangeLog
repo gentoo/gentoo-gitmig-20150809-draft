@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/File-Temp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/ChangeLog,v 1.70 2014/10/15 22:06:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/ChangeLog,v 1.71 2014/10/15 22:16:22 dilfridge Exp $
+
+  15 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  File-Temp-0.230.0.ebuild:
+  Arrgh. Drop stable keywords.
 
   15 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   File-Temp-0.230.0.ebuild:
