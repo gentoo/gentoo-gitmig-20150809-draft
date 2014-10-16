@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16100 2014/10/16 12:43:37 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16101 2014/10/16 12:57:22 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,6 +36,7 @@
 # See Bug #525548.
 =sys-kernel/vanilla-sources-3.17.0
 =sys-kernel/gentoo-sources-3.17.0
+=sys-kernel/aufs-sources-3.17.0
 
 # Michael Palimaka <kensington@gentoo.org> (15 Oct 2014)
 # No longer compatible with online service it depends on.
