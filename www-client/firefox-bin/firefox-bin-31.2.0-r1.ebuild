@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-31.2.0-r1.ebuild,v 1.1 2014/10/17 21:35:04 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-31.2.0-r1.ebuild,v 1.2 2014/10/17 21:40:15 axs Exp $
 
 EAPI="5"
 MOZ_ESR="1"
@@ -50,7 +50,7 @@ RDEPEND="dev-libs/atk
 	media-libs/fontconfig
 	>=media-libs/freetype-2.4.10:2
 	>=sys-apps/dbus-0.60
-	>=x11-libs/cairo-1.12[X]
+	>=x11-libs/cairo-1.10[X]
 	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-2.14:2
 	x11-libs/libX11
