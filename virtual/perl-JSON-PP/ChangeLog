@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-JSON-PP
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-JSON-PP/ChangeLog,v 1.37 2014/10/18 19:31:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-JSON-PP/ChangeLog,v 1.38 2014/10/18 19:32:00 vapier Exp $
+
+  18 Oct 2014; Mike Frysinger <vapier@gentoo.org>
+  perl-JSON-PP-2.272.0-r2.ebuild, perl-JSON-PP-2.272.20-r1.ebuild,
+  perl-JSON-PP-2.272.30.ebuild:
+  Mark arm64/s390/sh stable.
 
   18 Oct 2014; Mike Frysinger <vapier@gentoo.org>
   perl-JSON-PP-2.272.0-r2.ebuild, perl-JSON-PP-2.272.20-r1.ebuild,
