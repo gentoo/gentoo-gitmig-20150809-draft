@@ -6,7 +6,6 @@
 		<name>Gentoo systemd team</name>
 	</maintainer>
 	<use>
-		<!-- XXX: describe those two better -->
 		<flag name='apparmor'>Enable AppArmor support</flag>
 		<flag name='audit'>Enable support for <pkg>sys-process/audit</pkg></flag>
 		<flag name='cryptsetup'>Use libcryptsetup</flag>
