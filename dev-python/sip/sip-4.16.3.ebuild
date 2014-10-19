@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.16.3.ebuild,v 1.2 2014/10/19 23:09:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.16.3.ebuild,v 1.3 2014/10/19 23:28:02 pesa Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -72,10 +72,8 @@ src_configure() {
 	configuration() {
 		local myconf=(
 			"${PYTHON}" configure.py
-			--bindir="${EPREFIX}/usr/bin"
 			--destdir="$(python_get_sitedir)"
 			--incdir="$(python_get_includedir)"
-			--sipdir="${EPREFIX}/usr/share/sip"
 			$(use debug && echo --debug)
 			AR="$(tc-getAR) cqs"
 			CC="$(tc-getCC)"
