@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p23.ebuild,v 1.6 2014/10/19 20:31:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0_p22.ebuild,v 1.1 2014/10/19 20:31:56 vapier Exp $
 
 EAPI="4"
 
 inherit eutils flag-o-matic toolchain-funcs
 
 # Official patchlevel
-# See ftp://ftp.cwru.edu/pub/bash/bash-3.1-patches/
+# See ftp://ftp.cwru.edu/pub/bash/bash-3.0-patches/
 PLEVEL=${PV##*_p}
 MY_PV=${PV/_p*}
 MY_PV=${MY_PV/_/-}
@@ -66,13 +66,22 @@ src_prepare() {
 	sed -ri -e 's:\$[(](RL|HIST)_LIBSRC[)]/[[:alpha:]]*.h::g' Makefile.in || die
 
 	epatch "${FILESDIR}"/autoconf-mktime-2.53.patch #220040
+	epatch "${FILESDIR}"/${PN}-3.0-protos.patch
+	epatch "${FILESDIR}"/${PN}-3.0-rbash.patch #26854
 	epatch "${FILESDIR}"/${PN}-2.05b-parallel-build.patch #41002
-	epatch "${FILESDIR}"/${PN}-3.1-protos.patch
-	epatch "${FILESDIR}"/${PN}-3.1-ulimit.patch
-	epatch "${FILESDIR}"/${PN}-3.0-read-memleak.patch
+	epatch "${FILESDIR}"/${PN}-3.0-darwin-conn.patch #79124
+	# read patch headers for more info ... many ripped from Fedora/Debian[17]/SuSe/upstream
+	for i in afs crash jobs manpage pwd ulimit histtimeformat \
+	         locale multibyteifs subshell \
+	         volatile-command
+	do
+		epatch "${FILESDIR}"/${PN}-3.0-${i}.patch
+	done
+	epatch "${FILESDIR}"/${PN}-3.0-read-builtin-pipe.patch #87093
 	epatch "${FILESDIR}"/${PN}-3.0-trap-fg-signals.patch
-	epatch "${FILESDIR}"/${PN}-3.1-fix-dash-login-shell.patch #118257
-	epatch "${FILESDIR}"/${PN}-3.1-dev-fd-test-as-user.patch #131875
+	epatch "${FILESDIR}"/${PN}-3.0-pgrp-pipe-fix.patch #92349
+	epatch "${FILESDIR}"/${PN}-3.0-configs.patch
+	epatch "${FILESDIR}"/${PN}-3.0-strnlen.patch
 
 	epatch_user
 }
