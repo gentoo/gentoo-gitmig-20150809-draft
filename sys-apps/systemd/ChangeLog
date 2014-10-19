@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.312 2014/10/15 15:08:14 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.313 2014/10/19 20:13:19 floppym Exp $
+
+  19 Oct 2014; Mike Gilbert <floppym@gentoo.org> metadata.xml,
+  systemd-216-r1.ebuild, systemd-9999.ebuild:
+  Add use flag to control apparmor support, bug 525894 by Dainius Masiliūnas.
 
   15 Oct 2014; Tobias Klausmann <klausman@gentoo.org> systemd-215-r3.ebuild:
   Stable on alpha, bug 517120
