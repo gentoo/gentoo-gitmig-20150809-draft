@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r14.ebuild,v 1.1 2014/10/20 17:22:05 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r14.ebuild,v 1.2 2014/10/20 17:29:22 axs Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -115,7 +115,7 @@ src_configure() {
 			eerror "is specifically intended for building the tarballs for the"
 			eerror "grub-static package via USE='static -ncurses'."
 			eerror "All bets are now off."
-		elif ! has_package ">=sys-libs/ncurses-5.9-r3[abi_x86_32(-),static-libs]"; then
+		elif use ncurses && ! has_version ">=sys-libs/ncurses-5.9-r3[abi_x86_32,static-libs]"; then
 			die "You must use the grub-static package if you want a static Grub on amd64!"
 		fi
 	fi
