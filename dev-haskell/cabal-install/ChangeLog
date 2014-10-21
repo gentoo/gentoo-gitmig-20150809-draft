@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/cabal-install
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/ChangeLog,v 1.21 2014/10/21 22:28:24 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/ChangeLog,v 1.22 2014/10/21 22:30:15 slyfox Exp $
+
+  21 Oct 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  -cabal-install-0.10.2-r2.ebuild, -cabal-install-0.14.0.ebuild,
+  -cabal-install-1.16.0.2.ebuild, -files/cabal-install-0.10-ghc-7.2.patch,
+  -files/cabal-install-0.8-nopref.patch:
+  Drop old.
 
 *cabal-install-1.18.0.3-r1 (21 Oct 2014)
 
