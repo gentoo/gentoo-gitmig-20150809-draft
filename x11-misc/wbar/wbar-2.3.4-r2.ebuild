@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.3.4-r2.ebuild,v 1.1 2014/10/22 07:01:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.3.4-r2.ebuild,v 1.2 2014/10/22 07:18:13 jer Exp $
 
 EAPI=5
 
@@ -30,7 +30,9 @@ src_prepare() {
 	use gtk || epatch "${FILESDIR}"/${PN}-2.3.3-cfg.patch
 
 	epatch \
-		"${FILESDIR}"/${PN}-2.3.3-{desktopfile,nowerror,test}.patch \
+		"${FILESDIR}"/${PN}-2.3.3-desktopfile.patch \
+		"${FILESDIR}"/${PN}-2.3.3-nowerror.patch \
+		"${FILESDIR}"/${PN}-2.3.3-test.patch \
 		"${FILESDIR}"/${P}-automake-1.13.patch \
 		"${FILESDIR}"/${P}-completion.patch
 
