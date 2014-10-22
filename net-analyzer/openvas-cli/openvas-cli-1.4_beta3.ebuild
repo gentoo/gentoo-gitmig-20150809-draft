@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-cli/openvas-cli-1.4_beta3.ebuild,v 1.1 2014/10/22 08:11:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-cli/openvas-cli-1.4_beta3.ebuild,v 1.2 2014/10/22 08:20:59 jlec Exp $
 
 EAPI=5
 
@@ -21,6 +21,8 @@ RDEPEND="
 	!net-analyzer/openvas-client"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+S="${WORKDIR}"/${P/_beta/+beta}
 
 src_configure() {
 	local mycmakeargs=(
