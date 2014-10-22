@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-manager/openvas-manager-5.0.4-r2.ebuild,v 1.1 2014/10/01 11:12:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-manager/openvas-manager-5.0.4-r2.ebuild,v 1.2 2014/10/22 08:05:09 jlec Exp $
 
 EAPI=5
 
@@ -8,9 +8,11 @@ inherit cmake-utils systemd
 
 MY_PN=openvasmd
 
+DL_ID=1730
+
 DESCRIPTION="A remote security scanner for Linux (openvas-manager)"
 HOMEPAGE="http://www.openvas.org/"
-SRC_URI="http://wald.intevation.org/frs/download.php/1730/${P}.tar.gz"
+SRC_URI="http://wald.intevation.org/frs/download.php/${DL_ID}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -22,8 +24,7 @@ RDEPEND="
 	>=dev-db/sqlite-3
 	!net-analyzer/openvas-administrator"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	dev-util/cmake"
+	virtual/pkgconfig"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-gpgerror.patch
