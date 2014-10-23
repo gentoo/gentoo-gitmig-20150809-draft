@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.10 2014/10/23 13:39:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.11 2014/10/23 13:50:40 pacho Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -30,6 +30,7 @@ app-emulation/emul-linux-x86-soundlibs -abi_x86_32 pulseaudio
 app-emulation/emul-linux-x86-xlibs -abi_x86_32
 app-misc/lirc -abi_x86_32
 app-text/libpaper -abi_x86_32
+dev-db/libiodbc -abi_x86_32
 dev-cpp/atkmm -abi_x86_32
 dev-cpp/cairomm -abi_x86_32
 dev-cpp/glibmm -abi_x86_32
