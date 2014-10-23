@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.9 2014/10/23 10:51:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.10 2014/10/23 13:39:11 pacho Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -98,6 +98,7 @@ dev-libs/nspr -abi_x86_32
 dev-libs/nss -abi_x86_32
 dev-libs/openssl -abi_x86_32
 dev-lua/luaexpat -abi_x86_32
+dev-lua/luasocket -abi_x86_32
 dev-util/pkgconfig -abi_x86_32
 dev-libs/re2 -abi_x86_32
 dev-libs/udis86 -abi_x86_32
