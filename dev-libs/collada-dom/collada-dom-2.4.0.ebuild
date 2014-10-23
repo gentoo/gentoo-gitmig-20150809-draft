@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/collada-dom/collada-dom-2.4.0.ebuild,v 1.1 2014/10/23 15:39:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/collada-dom/collada-dom-2.4.0.ebuild,v 1.2 2014/10/23 15:40:35 aballier Exp $
 
 EAPI=5
 
@@ -21,4 +21,5 @@ RDEPEND="
 	dev-libs/libxml2
 	dev-libs/libpcre[cxx]
 "
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
