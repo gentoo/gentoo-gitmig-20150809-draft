@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.12 2014/10/23 13:52:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.13 2014/10/23 13:54:04 pacho Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -34,6 +34,7 @@ dev-db/libiodbc -abi_x86_32
 dev-cpp/atkmm -abi_x86_32
 dev-cpp/cairomm -abi_x86_32
 dev-cpp/glibmm -abi_x86_32
+dev-cpp/glog -abi_x86_32
 dev-cpp/gmock -abi_x86_32
 dev-cpp/gtest -abi_x86_32
 dev-cpp/gtkmm -abi_x86_32
