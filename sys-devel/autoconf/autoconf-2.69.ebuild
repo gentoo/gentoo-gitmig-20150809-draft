@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.69.ebuild,v 1.20 2014/10/24 21:14:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.69.ebuild,v 1.21 2014/10/24 21:20:38 vapier Exp $
 
 EAPI="3"
 
@@ -34,7 +34,7 @@ src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then
 		autoreconf -f -i || die
 	fi
-	use multislot && find -name Makefile.in -exec sed -i '/^pkgdatadir/s:$:-@VERSION@:' {} +
+	find -name Makefile.in -exec sed -i '/^pkgdatadir/s:$:-@VERSION@:' {} +
 }
 
 src_configure() {
@@ -51,10 +51,8 @@ src_install() {
 	dodoc AUTHORS BUGS NEWS README TODO THANKS \
 		ChangeLog ChangeLog.0 ChangeLog.1 ChangeLog.2
 
-	if use multislot ; then
-		local f
-		for f in "${D}"/usr/share/info/*.info* ; do
-			mv "${f}" "${f/.info/-${SLOT}.info}" || die
-		done
-	fi
+	local f
+	for f in "${D}"/usr/share/info/*.info* ; do
+		mv "${f}" "${f/.info/-${SLOT}.info}" || die
+	done
 }
