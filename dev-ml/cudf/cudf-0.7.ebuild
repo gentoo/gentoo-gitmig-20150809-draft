@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/cudf/cudf-0.7.ebuild,v 1.1 2014/10/24 08:34:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/cudf/cudf-0.7.ebuild,v 1.2 2014/10/24 08:35:05 aballier Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.mancoosi.org/cudf/"
 SRC_URI="https://gforge.inria.fr/frs/download.php/file/33593/${P}.tar.gz"
 
 LICENSE="LGPL-3"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64"
 IUSE="+ocamlopt test"
 
