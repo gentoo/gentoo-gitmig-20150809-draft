@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.61 2014/10/24 06:54:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.62 2014/10/24 07:00:48 aballier Exp $
+
+*libva-1.4.0 (24 Oct 2014)
+
+  24 Oct 2014; Alexis Ballier <aballier@gentoo.org> +libva-1.4.0.ebuild:
+  version bump, bug #524734
 
   24 Oct 2014; Alexis Ballier <aballier@gentoo.org> -libva-1.0.15.ebuild,
   -libva-1.0.16.ebuild, -libva-1.1.0.ebuild, -libva-1.1.1.ebuild,
