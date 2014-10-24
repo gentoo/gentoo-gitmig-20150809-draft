@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.641 2014/10/24 00:21:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.642 2014/10/24 00:29:34 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1968,6 +1968,12 @@ toolchain_pkg_postinst() {
 	if use regression-test ; then
 		elog "Testsuite results have been installed into /usr/share/doc/${PF}/testsuite"
 		echo
+	fi
+
+	if [[ -n ${PRERELEASE}${SNAPSHOT} ]] ; then
+		einfo "This GCC ebuild is provided for your convenience, and the use"
+		einfo "of this compiler is not supported by the Gentoo Developers."
+		einfo "Please report bugs to upstream at http://gcc.gnu.org/bugzilla/"
 	fi
 }
 
