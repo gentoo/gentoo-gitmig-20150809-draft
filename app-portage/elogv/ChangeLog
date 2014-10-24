@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/elogv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.79 2014/03/13 20:10:58 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.80 2014/10/24 23:05:18 sping Exp $
+
+*elogv-0.7.6.2 (24 Oct 2014)
+
+  24 Oct 2014; Sebastian Pipping <sping@gentoo.org> +elogv-0.7.6.2.ebuild:
+  Bump to 0.7.6.2 (bug #503904, #468442)
 
   13 Mar 2014; Christoph Junghans <ottxor@gentoo.org> elogv-0.7.6.1-r1.ebuild:
   added ~x64-macos (tested by me)
