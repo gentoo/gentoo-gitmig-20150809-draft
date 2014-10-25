@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.182 2014/10/18 14:41:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.183 2014/10/25 22:02:07 radhermit Exp $
+
+*py-1.4.26 (25 Oct 2014)
+
+  25 Oct 2014; Tim Harder <radhermit@gentoo.org> +py-1.4.26.ebuild:
+  Version bump, drop python3_2 support.
 
   18 Oct 2014; Agostino Sarubbo <ago@gentoo.org> py-1.4.25.ebuild:
   Stable for x86, wrt bug #524416
