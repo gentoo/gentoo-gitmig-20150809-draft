@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/kanatest-0.4.8.ebuild,v 1.11 2014/10/25 08:51:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/kanatest-0.4.8.ebuild,v 1.12 2014/10/25 08:52:54 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils gnome2-utils
@@ -9,7 +9,7 @@ DESCRIPTION="Visual flashcard tool for memorizing the Japanese Hiragana and Kata
 HOMEPAGE="http://www.clayo.org/kanatest"
 SRC_URI="http://www.clayo.org/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 GPL-2+"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
