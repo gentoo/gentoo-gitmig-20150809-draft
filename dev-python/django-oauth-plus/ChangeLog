@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/django-oauth-plus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-oauth-plus/ChangeLog,v 1.10 2014/10/25 08:42:10 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-oauth-plus/ChangeLog,v 1.11 2014/10/25 08:45:09 idella4 Exp $
 
 *django-oauth-plus-2.2.5 (25 Oct 2014)
 
@@ -38,7 +38,7 @@
 
   31 May 2013; Ian Delaney <idella4@gentoo.org>
   django-oauth-plus-2.1.0-r1.ebuild:
-  fix to test phase, switch to muse of manage.py
+  fix to test phase, switch to use of manage.py
 
 *django-oauth-plus-2.1.0-r1 (23 May 2013)
 
