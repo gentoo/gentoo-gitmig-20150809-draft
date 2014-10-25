@@ -4,7 +4,6 @@
   <herd>crypto</herd>
   <maintainer>
     <email>flameeyes@gentoo.org</email>
-    <description>Proxying maintainer.</description>
   </maintainer>
   <upstream>
     <remote-id type="github">Yubico/libu2f-host</remote-id>
