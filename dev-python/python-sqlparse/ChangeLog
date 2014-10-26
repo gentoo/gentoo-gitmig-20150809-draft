@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-sqlparse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-sqlparse/ChangeLog,v 1.36 2014/10/26 07:11:28 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-sqlparse/ChangeLog,v 1.37 2014/10/26 07:29:34 idella4 Exp $
+
+*python-sqlparse-0.1.13 (26 Oct 2014)
+
+  26 Oct 2014; Ian Delaney <idella4@gentoo.org> +python-sqlparse-0.1.13.ebuild:
+  bump
 
   24 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
   python-sqlparse-0.1.12.ebuild:
