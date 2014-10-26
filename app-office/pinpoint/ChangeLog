@@ -1,6 +1,9 @@
 # ChangeLog for app-office/pinpoint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/pinpoint/ChangeLog,v 1.10 2014/10/26 11:23:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/pinpoint/ChangeLog,v 1.11 2014/10/26 11:24:18 pacho Exp $
+
+  26 Oct 2014; Pacho Ramos <pacho@gentoo.org> pinpoint-0.1.5_pre20141026.ebuild:
+  Drop obsolete line
 
 *pinpoint-0.1.5_pre20141026 (26 Oct 2014)
 
