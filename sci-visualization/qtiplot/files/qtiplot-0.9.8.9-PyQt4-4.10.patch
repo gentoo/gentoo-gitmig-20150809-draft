@@ -1,25 +1,20 @@
- qtiplot/python-sipcmd.py | 26 +++++++++++++++++++++++---
- 1 file changed, 23 insertions(+), 3 deletions(-)
+ qtiplot/python-sipcmd.py | 21 ++++++++++++++++++---
+ 1 file changed, 18 insertions(+), 3 deletions(-)
 
 diff --git a/qtiplot/python-sipcmd.py b/qtiplot/python-sipcmd.py
-index f643194..00edb6f 100755
+index f643194..d8d1ef2 100755
 --- a/qtiplot/python-sipcmd.py
 +++ b/qtiplot/python-sipcmd.py
-@@ -27,6 +27,26 @@
+@@ -27,6 +27,21 @@
  #                                                                          #
  ############################################################################
  
 -from PyQt4 import pyqtconfig
 -config = pyqtconfig.Configuration()
 -print " ".join([config.sip_bin, "-I", config.pyqt_sip_dir, config.pyqt_sip_flags])
-+#from PyQt4 import pyqtconfig
-+#config = pyqtconfig.Configuration()
-+#print " ".join([config.sip_bin, "-I", config.pyqt_sip_dir, config.pyqt_sip_flags])
 +from __future__ import print_function
-+#import sipconfig
++
 +import os
-+#config = sipconfig.Configuration()
-+#print("sip -I %s -t WS_X11 -t Q_WS_X11" % (os.path.join(config.default_sip_dir, "PyQt4")))
 +import sipconfig
 +import PyQt4.QtCore
 +
