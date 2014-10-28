@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-2.5.ebuild,v 1.2 2014/10/28 22:43:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-2.5.ebuild,v 1.3 2014/10/28 22:49:52 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -14,11 +14,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=tinfo
 
-RDEPEND="
+DEPEND="
 	>=sys-libs/ncurses-5.2[tinfo?]
 "
-DEPEND="
-	${RDEPEND}
+RDEPEND="
+	${DEPEND}
 	dev-lang/perl
 "
 
