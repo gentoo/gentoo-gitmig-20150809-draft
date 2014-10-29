@@ -1,11 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/lwt-2.4.6.ebuild,v 1.1 2014/10/29 09:24:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/lwt-2.4.6.ebuild,v 1.2 2014/10/29 09:27:30 aballier Exp $
 
 EAPI=5
 
 OASIS_BUILD_TESTS=1
-OASIS_BUILD_DOCS=1
+# fails to build
+#OASIS_BUILD_DOCS=1
 
 inherit oasis
 
