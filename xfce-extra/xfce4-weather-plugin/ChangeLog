@@ -1,6 +1,6 @@
 # ChangeLog for xfce-extra/xfce4-weather-plugin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/ChangeLog,v 1.39 2014/10/29 17:06:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/ChangeLog,v 1.40 2014/10/29 17:07:44 ssuominen Exp $
 
 *xfce4-weather-plugin-0.8.3-r2 (29 Oct 2014)
 
@@ -9,7 +9,7 @@
   -plugin-0.8.3-Make-plugin-ready-for-met.no-locationforecast-1.2-AP.patch, +fil
   es/xfce4-weather-plugin-0.8.3-Switch-to-met.no-locationforecastLTS-1.2-API-bug
   -109.patch, +xfce4-weather-plugin-0.8.3-r2.ebuild:
-  Import upstream patches for fetching weather  information wrt #524850 by
+  Import upstream patches for fetching weather information wrt #524850 by
   Christian Tietz, David W. Noon, "Yarda" and others. Commit to stable because
   current stable is useless if it can't fetch the data.
 
