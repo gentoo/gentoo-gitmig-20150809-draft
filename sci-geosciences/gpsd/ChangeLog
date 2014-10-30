@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.122 2014/10/30 21:16:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.123 2014/10/30 21:20:36 vapier Exp $
+
+  30 Oct 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/gpsd-3.11-hotplug-config.patch, files/gpsd.init-2, gpsd-9999.ebuild:
+  Source /etc/conf.d/gpsd in hotplug rules #511584 by Mark Wagner.
 
   30 Oct 2014; Mike Frysinger <vapier@gentoo.org> +files/gpsd-3.11-rpath.patch,
   gpsd-9999.ebuild:

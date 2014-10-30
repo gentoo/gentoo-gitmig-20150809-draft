@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-9999.ebuild,v 1.17 2014/10/30 21:16:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-9999.ebuild,v 1.18 2014/10/30 21:20:36 vapier Exp $
 
 EAPI="5"
 
@@ -71,6 +71,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${PN}-3.8-ldflags.patch
 	epatch "${FILESDIR}"/${PN}-3.11-rpath.patch
+	epatch "${FILESDIR}"/${PN}-3.11-hotplug-config.patch #511584
 
 	# Avoid useless -L paths to the install dir
 	sed -i \
