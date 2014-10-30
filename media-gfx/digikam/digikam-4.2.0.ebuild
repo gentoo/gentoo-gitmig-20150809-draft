@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.2.0.ebuild,v 1.2 2014/10/30 20:06:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.2.0.ebuild,v 1.3 2014/10/30 20:08:53 dilfridge Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ CDEPEND="
 	kde-base/marble:4=[plasma]
 	media-libs/jasper
 	media-libs/lcms:2
-	media-libs/lensfun
+	<media-libs/lensfun-0.3.0
 	>=media-libs/libkface-3.3.0
 	media-libs/libkgeomap
 	media-libs/liblqr
