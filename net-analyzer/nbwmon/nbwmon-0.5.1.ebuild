@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbwmon/nbwmon-0.5.1.ebuild,v 1.1 2014/10/30 15:21:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbwmon/nbwmon-0.5.1.ebuild,v 1.2 2014/10/30 15:26:02 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="ncurses bandwidth monitor"
-HOMEPAGE="https://github.com/defer-/nbwmon"
-SRC_URI="https://github.com/defer-/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="http://causes.host.funtoo.org/?p=nbwmon https://github.com/causes-/nbwmon"
+SRC_URI="https://github.com/causes-/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
