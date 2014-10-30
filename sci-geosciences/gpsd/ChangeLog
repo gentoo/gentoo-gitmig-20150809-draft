@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.121 2014/08/10 20:27:43 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.122 2014/10/30 21:16:11 vapier Exp $
+
+  30 Oct 2014; Mike Frysinger <vapier@gentoo.org> +files/gpsd-3.11-rpath.patch,
+  gpsd-9999.ebuild:
+  Update ebuild to match latest git source #527000 by Michal Privoznik.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> gpsd-2.95-r1.ebuild,
   gpsd-2.96-r1.ebuild:
