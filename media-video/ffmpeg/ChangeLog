@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.798 2014/10/11 13:09:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.799 2014/10/31 10:53:44 aballier Exp $
+
+  31 Oct 2014; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  add xcb useflag
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> ffmpeg-1.2.6-r1.ebuild:
   arm stable, bug #512012
