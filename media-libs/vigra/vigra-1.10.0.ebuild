@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.10.0.ebuild,v 1.1 2014/10/31 00:06:54 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.10.0.ebuild,v 1.2 2014/10/31 00:26:30 tamiko Exp $
 
 EAPI=5
 MY_P=${P}-src-with-docu
@@ -72,7 +72,7 @@ src_configure() {
 		local mycmakeargs=(
 			-DAUTOEXEC_TESTS=OFF
 			-DDOCDIR="${BUILD_DIR}/doc"
-			-DDOCINSTALL="share/doc/${PV}"
+			-DDOCINSTALL="share/doc/${P}"
 			-DLIBDIR_SUFFIX="${libdir/lib}"
 			-DWITH_VALGRIND=OFF
 			$(cmake-utils_use_enable doc DOC)
