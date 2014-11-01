@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4.3-r1.ebuild,v 1.3 2014/11/01 01:42:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4.3-r1.ebuild,v 1.4 2014/11/01 01:44:36 vapier Exp $
 
 EAPI="4"
 
@@ -52,6 +52,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${PN}-2.4.3-use-linux-version-in-fbsd.patch #109105
 	epatch "${FILESDIR}"/${PN}-2.4.3-no-clean-gnulib.patch #527200
+	epatch "${FILESDIR}"/${PN}-2.4.3-test-cmdline_wrap.patch #384731
 	pushd libltdl >/dev/null
 	AT_NOELIBTOOLIZE=yes eautoreconf
 	popd >/dev/null
