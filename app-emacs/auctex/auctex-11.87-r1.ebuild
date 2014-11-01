@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.87-r1.ebuild,v 1.6 2014/09/13 11:43:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.87-r1.ebuild,v 1.7 2014/11/01 16:33:18 ulm Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ src_prepare() {
 }
 
 src_configure() {
-	EMACS_NAME=emacs EMACS_FLAVOUR=emacs econf --disable-build-dir-test \
+	EMACS_NAME=emacs EMACS_FLAVOR=emacs econf --disable-build-dir-test \
 		--with-auto-dir="${EPREFIX}/var/lib/auctex" \
 		--with-lispdir="${EPREFIX}${SITELISP}/${PN}" \
 		--with-packagelispdir="${EPREFIX}${SITELISP}/${PN}" \
