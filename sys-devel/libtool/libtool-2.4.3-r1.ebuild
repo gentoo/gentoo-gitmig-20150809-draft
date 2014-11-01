@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4.3-r1.ebuild,v 1.4 2014/11/01 01:44:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4.3-r1.ebuild,v 1.5 2014/11/01 02:44:02 vapier Exp $
 
 EAPI="4"
 
@@ -68,6 +68,12 @@ multilib_src_configure() {
 	export CONFIG_SHELL=/bin/bash
 	ECONF_SOURCE="${S}" \
 	econf $(use_enable static-libs static)
+
+	# Building libtool with --disable-static will cause the installed
+	# helper to not build static objects by default.  This is undesirable
+	# for crappy packages that utilize the system libtool, so undo that.
+	# It also breaks some unittests. #384731
+	sed -i -e '1,/^build_old_libs=/{/^build_old_libs=/{s:=.*:=yes:}}' libtool || die
 }
 
 multilib_src_test() {
@@ -80,11 +86,6 @@ multilib_src_install_all() {
 	# While the libltdl.la file is not used directly, the m4 ltdl logic
 	# keys off of its existence when searching for ltdl support. #293921
 	#use static-libs || find "${ED}" -name libltdl.la -delete
-
-	# Building libtool with --disable-static will cause the installed
-	# helper to not build static objects by default.  This is undesirable
-	# for crappy packages that utilize the system libtool, so undo that.
-	sed -i -e '1,/^build_old_libs=/{/^build_old_libs=/{s:=.*:=yes:}}' "${ED}"/usr/bin/libtool || die
 
 	local x
 	for x in $(find "${ED}" -name config.guess -o -name config.sub) ; do
