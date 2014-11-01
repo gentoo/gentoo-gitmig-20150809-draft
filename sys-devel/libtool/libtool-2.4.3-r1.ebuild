@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4.3-r1.ebuild,v 1.1 2014/10/31 21:08:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4.3-r1.ebuild,v 1.2 2014/11/01 01:41:51 vapier Exp $
 
 EAPI="4"
 
@@ -67,6 +67,10 @@ multilib_src_configure() {
 	export CONFIG_SHELL=/bin/bash
 	ECONF_SOURCE="${S}" \
 	econf $(use_enable static-libs static)
+}
+
+multilib_src_test() {
+	emake check
 }
 
 multilib_src_install_all() {
