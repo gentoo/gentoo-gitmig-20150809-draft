@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-table/prawn-table-0.1.1.ebuild,v 1.1 2014/08/30 10:14:22 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-table/prawn-table-0.2.1.ebuild,v 1.1 2014/11/02 18:47:35 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -20,7 +20,7 @@ IUSE=""
 ruby_add_bdepend "test? ( dev-ruby/mocha
 	>=dev-ruby/pdf-inspector-1.1.0
 	>=dev-ruby/pdf-reader-1.2
-	>=dev-ruby/prawn-1.2.1
+	>=dev-ruby/prawn-1.3.0
 	)"
 
 all_ruby_prepare() {
