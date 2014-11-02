@@ -1,24 +1,23 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/httpclient-2.3.4.1.ebuild,v 1.2 2014/04/05 13:56:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/httpclient-2.5.2.ebuild,v 1.1 2014/11/02 18:51:28 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 jruby"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_TEST="-Ilib test"
 RUBY_FAKEGEM_TASK_DOC="doc"
 
 RUBY_FAKEGEM_DOCDIR="doc"
 
-RUBY_FAKEGEM_EXTRADOC="README.txt"
+RUBY_FAKEGEM_EXTRADOC="README.md"
 
 inherit ruby-fakegem
 
 DESCRIPTION="'httpclient' gives something like the functionality of libwww-perl (LWP) in Ruby"
 HOMEPAGE="https://github.com/nahi/httpclient"
-SRC_URI="https://github.com/nahi/httpclient/tarball/v${PV} -> ${P}.tgz"
-RUBY_S="nahi-httpclient-*"
+SRC_URI="https://github.com/nahi/httpclient/archive/v${PV}.tar.gz -> ${P}.tgz"
 
 LICENSE="Ruby"
 SLOT="0"
@@ -33,9 +32,12 @@ ruby_add_rdepend "virtual/ruby-ssl"
 
 ruby_add_bdepend "doc? ( dev-ruby/rdoc )"
 
-all_ruby_prepare () {
+all_ruby_prepare() {
 	rm Gemfile || die
 	sed -i -e '/[bB]undler/s:^:#:' Rakefile || die
+
+	# Fix documentation task
+	sed -i -e 's/README.txt/README.md/' Rakefile || die
 
 	# Remove mandatory CI reports since we don't need this for testing.
 	sed -i -e '/reporter/s:^:#:' Rakefile || die
@@ -46,6 +48,10 @@ all_ruby_prepare () {
 	# Comment out test requiring network access that makes assumptions
 	# about the environment, bug 395155
 	sed -i -e '/test_async_error/,/^  end/ s:^:#:' test/test_httpclient.rb || die
+
+	# Skip tests using rack-ntlm which is not packaged. Weirdly these
+	# only fail on jruby.
+	rm test/test_auth.rb || die
 }
 
 each_ruby_test() {
