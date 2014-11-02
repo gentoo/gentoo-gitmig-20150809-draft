@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.8.1-r1.ebuild,v 1.1 2014/11/02 03:45:05 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.8.1-r1.ebuild,v 1.2 2014/11/02 03:46:45 zerochaos Exp $
 
 EAPI=5
 
@@ -59,6 +59,9 @@ src_configure() {
 		-DSYSTEM_LIBS=ON
 		-DINSTALL_SYSCONFDIR="${EROOT}"etc
 	)
+		#right now we only support gtk2, but ettercap also supports gtk3
+		#do we care? do we want to support both?
+
 		#we can build the pdf docs, but they don't actually get installed
 		#plus, does anyone need this at all???
 		#$(cmake-utils_use_enable doc PDF_DOCS)
