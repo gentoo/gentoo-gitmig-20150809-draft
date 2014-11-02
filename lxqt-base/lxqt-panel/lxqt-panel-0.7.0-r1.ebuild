@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-panel/lxqt-panel-0.7.0-r1.ebuild,v 1.4 2014/11/02 21:36:18 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-panel/lxqt-panel-0.7.0-r1.ebuild,v 1.5 2014/11/02 21:53:23 jauhien Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -30,7 +30,6 @@ DEPEND="dev-qt/qtcore:4
 	>=lxde-base/menu-cache-0.3.3
 	~lxqt-base/liblxqt-${PV}
 	~lxqt-base/liblxqt-mount-${PV}
-	~lxqt-base/libsysstat-0.1.0
 	~lxqt-base/lxqt-globalkeys-${PV}
 	~razorqt-base/libqtxdg-0.5.3
 	x11-libs/libX11
