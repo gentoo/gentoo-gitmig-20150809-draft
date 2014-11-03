@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/cinnamon-control-center-2.2.10.ebuild,v 1.4 2014/09/26 20:39:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/cinnamon-control-center-2.2.10.ebuild,v 1.5 2014/11/03 16:11:04 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -56,6 +56,7 @@ COMMON_DEPEND="
 # libgnomekbd needed only for gkbd-keyboard-display tool
 RDEPEND="${COMMON_DEPEND}
 	|| ( ( app-admin/openrc-settingsd sys-auth/consolekit ) >=sys-apps/systemd-31 )
+	x11-themes/gnome-icon-theme
 	x11-themes/gnome-icon-theme-symbolic
 	colord? ( >=gnome-extra/gnome-color-manager-3 )
 	cups? (
