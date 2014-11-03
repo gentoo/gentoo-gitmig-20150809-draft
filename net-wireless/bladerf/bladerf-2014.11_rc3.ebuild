@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bladerf/bladerf-2014.11_rc3.ebuild,v 1.1 2014/11/03 15:05:30 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bladerf/bladerf-2014.11_rc3.ebuild,v 1.2 2014/11/03 15:26:43 zerochaos Exp $
 
 EAPI=5
 
@@ -28,18 +28,18 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 else
 	MY_PV=${PV/\_/-}
-	S="${WORKDIR}/${MY_PN}-${MY_PN}-${MY_PV}"
+	S="${WORKDIR}/${MY_PN}-${MY_PV}"
 	SRC_URI="https://github.com/Nuand/${MY_PN}/archive/${MY_PV}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
-CDEPEND=">=dev-libs/libusb-1.0.16"
-DEPEND="${CDEPEND}
-	virtual/pkgconfig
+CDEPEND=">=dev-libs/libusb-1.0.16
 	tecla? ( dev-libs/libtecla )"
+DEPEND="${CDEPEND}
+	virtual/pkgconfig"
 RDEPEND="${CDEPEND}"
 PDEPEND=">=net-wireless/bladerf-firmware-1.7.1
-	>=net-wireless/bladerf-fpga-0.0.6"
+	>=net-wireless/bladerf-fpga-0.1.1"
 
 src_configure() {
 	mycmakeargs=(
