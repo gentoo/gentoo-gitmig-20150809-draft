@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.183 2014/11/03 11:19:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.184 2014/11/03 11:20:45 ago Exp $
+
+  03 Nov 2014; Agostino Sarubbo <ago@gentoo.org> psycopg-2.5.3.ebuild:
+  Stable for x86, wrt bug #525508
 
   03 Nov 2014; Agostino Sarubbo <ago@gentoo.org> psycopg-2.5.3.ebuild:
   Stable for amd64, wrt bug #525508
