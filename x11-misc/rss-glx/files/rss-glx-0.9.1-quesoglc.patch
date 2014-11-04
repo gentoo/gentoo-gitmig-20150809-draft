@@ -10,7 +10,7 @@ http://bugs.gentoo.org/313837
  
 -PKG_CHECK_MODULES(quesoglc, quesoglc >= 0.7, AC_DEFINE([HAVE_GLC], , [QuesoGLC is available for use.]), AC_DEFINE([MISSING_GLC], , [QuesoGLC not available.]))
 +AC_ARG_WITH([quesoglc], AS_HELP_STRING([--with-quesoglc], [Build with QuusoGLC library (default: disabled)]))
-+if test "x$with_quesoglc" == "xyes"; then
++if test "x$with_quesoglc" = "xyes"; then
 +	PKG_CHECK_MODULES(quesoglc, quesoglc >= 0.7, AC_DEFINE([HAVE_GLC], , [QuesoGLC is available for use.]), AC_DEFINE([MISSING_GLC], , [QuesoGLC not available.]))
 +fi
  
