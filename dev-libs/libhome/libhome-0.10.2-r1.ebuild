@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/libhome-0.10.2-r1.ebuild,v 1.1 2014/11/04 02:56:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/libhome-0.10.2-r1.ebuild,v 1.2 2014/11/04 02:58:51 patrick Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ src_prepare() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf --without-db3 \
 		$(use_with berkdb db4 $(db_includedir)) \
 		$(use_with ldap) \
@@ -45,6 +45,9 @@ src_compile() {
 		$(use_with pam) \
 		$(use_with postgres pgsql) \
 	|| die "econf failed"
+}
+
+src_compile() {
 	emake || die "emake failed"
 }
 
