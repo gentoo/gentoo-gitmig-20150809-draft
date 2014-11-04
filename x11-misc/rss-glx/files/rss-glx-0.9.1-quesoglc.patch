@@ -2,8 +2,8 @@ Removing automagic dependency on media-libs/quesoglc
 
 http://bugs.gentoo.org/313837
 
---- configure.in
-+++ configure.in
+--- a/configure.in
++++ b/configure.in
 @@ -200,7 +200,10 @@
  
  AM_CONDITIONAL(INSTALL_KDE_CONFIG_FILES, test "$INSTALL_KDE_CONFIG_FILES" = "yes")
