@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.806 2014/11/04 09:18:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.807 2014/11/04 09:20:04 aballier Exp $
+
+  04 Nov 2014; Alexis Ballier <aballier@gentoo.org> ffmpeg-2.2.10.ebuild,
+  ffmpeg-2.4.3.ebuild, ffmpeg-9999.ebuild:
+  add missing bc dep for tests
 
   04 Nov 2014; Alexis Ballier <aballier@gentoo.org> -ffmpeg-2.2.9.ebuild,
   -ffmpeg-2.4.2.ebuild:
