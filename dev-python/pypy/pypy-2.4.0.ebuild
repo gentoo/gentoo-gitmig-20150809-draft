@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.4.0.ebuild,v 1.6 2014/11/05 22:12:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.4.0.ebuild,v 1.7 2014/11/05 22:18:02 mgorny Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 pypy )
 inherit check-reqs eutils multilib multiprocessing pax-utils \
-	python-any-r1 toolchain-funcs vcs-snapshot versionator
+	python-any-r1 toolchain-funcs versionator
 
 DESCRIPTION="A fast, compliant alternative implementation of the Python language"
 HOMEPAGE="http://pypy.org/"
