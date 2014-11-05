@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/plasma-nm-0.9.3.5.ebuild,v 1.1 2014/11/05 15:25:39 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/plasma-nm-0.9.3.5.ebuild,v 1.2 2014/11/05 15:27:47 mrueg Exp $
 
 EAPI=5
 
 KDE_LINGUAS="ar bg bs ca ca@valencia cs da de el en_GB eo es et fa fi fr ga gl
-hr hu is it ja km ko lt lv mai mr ms nb nds nl nn pa pl pt pt_BR ro ru sk 
+hr hu is it ja km ko lt lv mai mr ms nb nds nl nn pa pl pt pt_BR ro ru sk
 sl sr sr@ijekavian sr@ijekavianlatin sr@latin sv th tr ug uk zh_CN zh_TW"
 DECLARATIVE_REQUIRED="always"
 inherit kde4-base
