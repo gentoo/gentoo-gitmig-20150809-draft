@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r2.ebuild,v 1.11 2014/07/30 19:29:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r4.ebuild,v 1.1 2014/11/06 19:22:25 axs Exp $
 
 EAPI="5"
 inherit autotools bash-completion-r1 eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -70,7 +70,10 @@ RDEPEND="
 	dev-libs/json-c[${MULTILIB_USEDEP}]
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20131008-r1
 		!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )
-	>=sys-devel/libtool-2.4.2
+	|| (
+		dev-libs/libltdl:0[${MULTILIB_USEDEP}]
+		>=sys-devel/libtool-2.4.2[${MULTILIB_USEDEP}]
+	)
 "
 # it's a valid RDEPEND, libltdl.so is used
 
