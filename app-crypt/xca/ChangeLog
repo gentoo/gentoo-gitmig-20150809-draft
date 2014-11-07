@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/xca
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.44 2014/11/07 07:15:28 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.45 2014/11/07 07:16:53 alonbl Exp $
+
+  07 Nov 2014; Alon Bar-Lev <alonbl@gentoo.org> -xca-0.9.0.ebuild,
+  -xca-0.9.1.ebuild, -xca-0.9.3.ebuild:
+  Cleanup
 
 *xca-1.0.0 (07 Nov 2014)
 
