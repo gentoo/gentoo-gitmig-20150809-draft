@@ -1,6 +1,19 @@
-diff -uNr acct-6.6.1.ORIG/configure.ac acct-6.6.1/configure.ac
---- acct-6.6.1.ORIG/configure.ac	2013-10-10 20:00:31.581225736 +0100
-+++ acct-6.6.1/configure.ac	2013-10-10 20:03:42.393231583 +0100
+https://savannah.gnu.org/patch/?7473
+
+From 8958c3cb7b77ec50d8dae0490d8c80dee798e20d Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Diego=20Elio=20Petten=C3=B2?= <flameeyes@gmail.com>
+Date: Fri, 18 Feb 2011 06:13:20 +0100
+Subject: [PATCH] Don't generate files.h at build-time using an execution test.
+
+The *_LOC variables are never used in the build itself, but only in the
+built code; this means that they don't need to be known to ./configure at
+all.
+
+Since the previous method made acct not cross-compilable at all, this is
+much preferred.
+
+--- acct-6.6.1/configure.ac
++++ acct-6.6.1/configure.ac
 @@ -228,102 +228,6 @@
  		AC_EGREP_HEADER([comp_t],[sys/acct.h],[AC_DEFINE(HAVE_COMP_T, 1, Define if <sys/acct.h> uses the COMP_T type.)])
    ) ]
@@ -118,9 +131,8 @@ diff -uNr acct-6.6.1.ORIG/configure.ac acct-6.6.1/configure.ac
 -AC_CONFIG_FILES([Makefile lib/Makefile files.h version.h])
 +AC_CONFIG_FILES([Makefile lib/Makefile version.h])
  AC_OUTPUT
-diff -uNr acct-6.6.1.ORIG/files.h acct-6.6.1/files.h
---- acct-6.6.1.ORIG/files.h	1970-01-01 01:00:00.000000000 +0100
-+++ acct-6.6.1/files.h	2013-10-10 20:01:36.314227720 +0100
+--- acct-6.6.1/files.h
++++ acct-6.6.1/files.h
 @@ -0,0 +1,123 @@
 +/* files.h
 + *
@@ -245,9 +257,8 @@ diff -uNr acct-6.6.1.ORIG/files.h acct-6.6.1/files.h
 +#endif
 +
 +#endif /* ! FILES_H */
-diff -uNr acct-6.6.1.ORIG/files.h.in acct-6.6.1/files.h.in
---- acct-6.6.1.ORIG/files.h.in	2013-10-10 20:00:31.584225736 +0100
-+++ acct-6.6.1/files.h.in	1970-01-01 01:00:00.000000000 +0100
+--- acct-6.6.1/files.h.in
++++ acct-6.6.1/files.h.in
 @@ -1,48 +0,0 @@
 -/* files.h.in
 - *
@@ -297,9 +308,8 @@ diff -uNr acct-6.6.1.ORIG/files.h.in acct-6.6.1/files.h.in
 -#endif
 -
 -#endif /* ! FILES_H */
-diff -uNr acct-6.6.1.ORIG/Makefile.am acct-6.6.1/Makefile.am
---- acct-6.6.1.ORIG/Makefile.am	2013-10-10 20:00:31.585225736 +0100
-+++ acct-6.6.1/Makefile.am	2013-10-10 20:01:36.313227720 +0100
+--- acct-6.6.1/Makefile.am
++++ acct-6.6.1/Makefile.am
 @@ -66,11 +66,6 @@
  SYS_AC = @SYS_AC@
  SYS_SA = @SYS_SA@
