@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-3.0.4.ebuild,v 1.10 2014/11/08 19:15:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-3.0.4.ebuild,v 1.11 2014/11/08 19:20:21 ssuominen Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs
@@ -18,7 +18,7 @@ IUSE="doc +gif ipv6 +jpeg +png ssl"
 RDEPEND="
 	>=x11-libs/fltk-1.3
 	sys-libs/zlib
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	png? ( >=media-libs/libpng-1.2:0 )
 	ssl? ( dev-libs/openssl:0 )
 "
