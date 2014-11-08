@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9524 2014/11/08 00:32:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9525 2014/11/08 00:46:48 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Remove obsolete mask of dev-perl/Lucene
 
   08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Remove obsolete mask of sys-devel/libperl

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16146 2014/11/08 00:32:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16147 2014/11/08 00:46:48 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -191,11 +191,6 @@ net-misc/ieee-oui
 # No longer compatible with online service it depends on.
 # Dead upstream. Masked for removal in 30 days. Bug #451868.
 app-dicts/gnuvd
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (13 Oct 2014)
-# Does not build with current CLucene (bug 420195); dead upstream.
-# No consumers in the tree. Masked for removal in 30 days.
-dev-perl/Lucene
 
 # Pacho Ramos <pacho@gentoo.org> (11 Oct 2014)
 # Masked for removal in a month.
