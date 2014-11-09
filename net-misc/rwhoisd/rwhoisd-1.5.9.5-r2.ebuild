@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rwhoisd/rwhoisd-1.5.9.5-r2.ebuild,v 1.2 2014/11/09 10:35:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rwhoisd/rwhoisd-1.5.9.5-r2.ebuild,v 1.3 2014/11/09 10:43:38 jer Exp $
 
 EAPI=5
-inherit eutils user
+inherit eutils flag-o-matic user
 
 DESCRIPTION="ARIN rwhois daemon"
 HOMEPAGE="http://projects.arin.net/rwhois/"
@@ -24,7 +24,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/rwhoisd-destdir-${PV}.patch
+	epatch "${FILESDIR}"/${PN}-destdir-${PV}.patch
+	append-cflags -DNEW_STYLE_BIN_SORT
 }
 
 src_compile() {
