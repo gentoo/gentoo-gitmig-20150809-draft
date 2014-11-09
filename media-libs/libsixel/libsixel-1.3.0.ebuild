@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsixel/libsixel-1.3.0.ebuild,v 1.1 2014/10/31 12:08:52 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsixel/libsixel-1.3.0.ebuild,v 1.2 2014/11/09 06:07:00 hattya Exp $
 
 EAPI="5"
 
@@ -32,6 +32,10 @@ src_configure() {
 		$(use_with gtk gdk-pixbuf2) \
 		$(use_with jpeg) \
 		$(use_with png)
+}
+
+src_test() {
+	emake test
 }
 
 src_install() {
