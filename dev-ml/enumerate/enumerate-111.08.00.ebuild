@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/enumerate/enumerate-111.08.00.ebuild,v 1.1 2014/11/10 07:41:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/enumerate/enumerate-111.08.00.ebuild,v 1.2 2014/11/10 07:43:35 aballier Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.janestreet.com/ocaml"
 SRC_URI="http://ocaml.janestreet.com/ocaml-core/${PV%.*}.00/individual/${MY_P}.tar.gz
 	http://dev.gentoo.org/~aballier/distfiles/${MY_P}.tar.gz"
 
-LICENSE="LGPL-2.1-with-linking-exception"
+LICENSE="Apache-2.0"
 SLOT="0/${PV}"
 KEYWORDS="~amd64"
 IUSE=""
