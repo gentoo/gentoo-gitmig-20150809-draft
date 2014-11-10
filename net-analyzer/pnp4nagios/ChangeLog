@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/pnp4nagios
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.61 2014/11/10 13:51:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.62 2014/11/10 13:54:40 jlec Exp $
+
+  10 Nov 2014; Justin Lecher <jlec@gentoo.org> -pnp4nagios-0.6.19-r1.ebuild,
+  -pnp4nagios-0.6.21.ebuild:
+  Drop old
 
   10 Nov 2014; Agostino Sarubbo <ago@gentoo.org> pnp4nagios-0.6.24.ebuild:
   Stable for ppc64, wrt bug #516140
