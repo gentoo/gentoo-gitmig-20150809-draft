@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.47.ebuild,v 1.2 2014/11/11 21:56:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.47.ebuild,v 1.3 2014/11/11 21:58:32 floppym Exp $
 
 EAPI=5
 
@@ -50,6 +50,12 @@ DEPEND="
 "
 
 S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	if use ndiff || use zenmap; then
+		python-single-r1_pkg_setup
+	fi
+}
 
 src_unpack() {
 	# prevent unpacking the logo
