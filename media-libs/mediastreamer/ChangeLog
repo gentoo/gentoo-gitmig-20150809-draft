@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mediastreamer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.76 2014/11/12 13:53:01 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.77 2014/11/12 13:59:03 bircoph Exp $
+
+  12 Nov 2014; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
+  Update e-mail :/.
 
   12 Nov 2014; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
   Package is now directly maintained instead of proxy-maintaining.
