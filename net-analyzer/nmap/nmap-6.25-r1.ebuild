@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.25-r1.ebuild,v 1.1 2014/11/11 22:23:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.25-r1.ebuild,v 1.2 2014/11/12 16:20:10 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -37,7 +37,7 @@ RDEPEND="
 	net-libs/libpcap[ipv6?]
 	gtk? (
 		>=x11-libs/gtk+-2.6:2
-		>=dev-python/pygtk-2.6
+		>=dev-python/pygtk-2.6:2[${PYTHON_USEDEP}]
 		${PYTHON_DEPS}
 	)
 	lua? ( >=dev-lang/lua-5.1.4-r1[deprecated] )
