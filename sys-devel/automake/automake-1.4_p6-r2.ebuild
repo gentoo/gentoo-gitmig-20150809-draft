@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.4_p6-r1.ebuild,v 1.13 2014/11/15 06:21:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.4_p6-r2.ebuild,v 1.1 2014/11/15 06:42:33 vapier Exp $
 
 EAPI="4"
 
@@ -33,6 +33,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.4-ansi2knr-stdlib.patch
 	epatch "${FILESDIR}"/${PN}-1.4-CVE-2009-4029.patch #295357
 	epatch "${FILESDIR}"/${PN}-1.4-perl-5.11.patch
+	epatch "${FILESDIR}"/${PN}-1.4-perl-dyn-call.patch
 	sed -i 's:error\.test::' tests/Makefile.in #79529
 }
 
