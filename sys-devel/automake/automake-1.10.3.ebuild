@@ -1,6 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.10.3.ebuild,v 1.12 2014/01/17 04:23:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.10.3.ebuild,v 1.13 2014/11/15 06:07:49 vapier Exp $
+
+EAPI="4"
 
 inherit eutils
 
@@ -9,27 +11,25 @@ HOMEPAGE="http://www.gnu.org/software/automake/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
+# Use Gentoo versioning for slotting.
 SLOT="${PV:0:4}"
 KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
 RDEPEND="dev-lang/perl
 	>=sys-devel/automake-wrapper-9
-	>=sys-devel/autoconf-2.60
+	>=sys-devel/autoconf-2.69
 	sys-devel/gnuconfig"
 DEPEND="${RDEPEND}
 	sys-apps/help2man"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	chmod a+rx tests/*.test
+src_prepare() {
 	export WANT_AUTOCONF=2.5
+	chmod a+rx tests/*.test
 }
 
-src_compile() {
-	econf --docdir=/usr/share/doc/${PF} || die
-	emake || die
+src_configure() {
+	econf --docdir=/usr/share/doc/${PF}
 }
 
 # slot the info pages.  do this w/out munging the source so we don't have
@@ -62,9 +62,8 @@ slot_info_pages() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 	slot_info_pages
-	dodoc NEWS README THANKS TODO AUTHORS ChangeLog
 
 	# SLOT the docs and junk
 	local x

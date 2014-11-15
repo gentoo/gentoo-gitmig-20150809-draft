@@ -1,6 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.4_p6-r1.ebuild,v 1.11 2014/01/17 04:23:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.4_p6-r1.ebuild,v 1.12 2014/11/15 06:07:49 vapier Exp $
+
+EAPI="4"
 
 inherit eutils
 
@@ -10,28 +12,27 @@ HOMEPAGE="http://www.gnu.org/software/automake/"
 SRC_URI="mirror://gnu/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
+# Use Gentoo versioning for slotting.
 SLOT="${PV:0:3}"
 KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
-DEPEND="dev-lang/perl
-	sys-devel/automake-wrapper-9
-	>=sys-devel/autoconf-2.59-r6
+RDEPEND="dev-lang/perl
+	>=sys-devel/automake-wrapper-9
+	>=sys-devel/autoconf-2.69
 	sys-devel/gnuconfig"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	export WANT_AUTOCONF=2.5
 	epatch "${FILESDIR}"/${PN}-1.4-nls-nuisances.patch #121151
 	epatch "${FILESDIR}"/${PN}-1.4-libtoolize.patch
 	epatch "${FILESDIR}"/${PN}-1.4-subdirs-89656.patch
 	epatch "${FILESDIR}"/${PN}-1.4-ansi2knr-stdlib.patch
 	epatch "${FILESDIR}"/${PN}-1.4-CVE-2009-4029.patch #295357
 	sed -i 's:error\.test::' tests/Makefile.in #79529
-	export WANT_AUTOCONF=2.5
 }
 
 # slot the info pages.  do this w/out munging the source so we don't have
@@ -66,8 +67,7 @@ slot_info_pages() {
 src_install() {
 	emake install DESTDIR="${D}" \
 		pkgdatadir=/usr/share/automake-${SLOT} \
-		m4datadir=/usr/share/aclocal-${SLOT} \
-		|| die
+		m4datadir=/usr/share/aclocal-${SLOT}
 	slot_info_pages
 	rm -f "${D}"/usr/bin/{aclocal,automake}
 	dosym automake-${SLOT} /usr/share/automake
