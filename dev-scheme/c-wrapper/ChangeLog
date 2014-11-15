@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/c-wrapper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/c-wrapper/ChangeLog,v 1.6 2014/11/15 13:45:54 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/c-wrapper/ChangeLog,v 1.7 2014/11/15 13:47:42 hattya Exp $
+
+  15 Nov 2014; Akinori Hattori <hattya@gentoo.org> c-wrapper-0.6.1.ebuild:
+  update to EAPI 5
 
   15 Nov 2014; Akinori Hattori <hattya@gentoo.org> c-wrapper-0.6.1.ebuild:
   update HOMEPAGE and SRC_URI

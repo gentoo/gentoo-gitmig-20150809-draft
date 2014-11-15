@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/c-wrapper/c-wrapper-0.6.1.ebuild,v 1.5 2014/11/15 13:45:54 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/c-wrapper/c-wrapper-0.6.1.ebuild,v 1.6 2014/11/15 13:47:42 hattya Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit autotools eutils
 
@@ -29,8 +29,7 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc ChangeLog README
+	default
 	dohtml doc/*
 
 	if use examples; then
