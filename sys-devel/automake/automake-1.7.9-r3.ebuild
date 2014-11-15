@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.6.3-r1.ebuild,v 1.12 2014/11/15 06:07:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.7.9-r3.ebuild,v 1.1 2014/11/15 06:21:57 vapier Exp $
 
 EAPI="4"
 
@@ -24,9 +24,13 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	export WANT_AUTOCONF=2.5
-	epatch "${FILESDIR}"/${P}-test-fixes.patch #159557
+	epatch "${FILESDIR}"/${P}-infopage-namechange.patch
+	epatch "${FILESDIR}"/${P}-test-fixes.patch
+	epatch "${FILESDIR}"/${PN}-1.9.6-subst-test.patch #222225
+	epatch "${FILESDIR}"/${P}-libtool-2.patch #257544
 	epatch "${FILESDIR}"/${PN}-1.10-ccnoco-ldflags.patch #203914
 	epatch "${FILESDIR}"/${PN}-1.5-CVE-2009-4029.patch #295357
+	epatch "${FILESDIR}"/${PN}-1.5-perl-5.11.patch
 }
 
 # slot the info pages.  do this w/out munging the source so we don't have
