@@ -1,14 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/actionscript-mode/actionscript-mode-7.2.2_p20120405.ebuild,v 1.2 2014/11/15 10:15:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/actionscript-mode/actionscript-mode-7.2.2_p20140605.ebuild,v 1.1 2014/11/15 10:15:39 ulm Exp $
 
-EAPI=4
+EAPI=5
 
 inherit elisp
 
 GITHUB_USER="austinhaas"
 GITHUB_PROJECT="${PN}"
-GITHUB_TAG="aa7e63d566a815152e7e652010becd46a406abb2"
+GITHUB_TAG="6822d0bfd5d7ff2c0b246ca90ef9480d3c528b97"
 
 DESCRIPTION="A major mode for GNU Emacs for editing Actionscript 3 files"
 HOMEPAGE="https://github.com/austinhaas/actionscript-mode"
