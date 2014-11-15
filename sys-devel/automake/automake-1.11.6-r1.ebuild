@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.10.3.ebuild,v 1.13 2014/11/15 06:07:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.11.6-r1.ebuild,v 1.1 2014/11/15 06:30:36 vapier Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="Used to generate Makefile.in from Makefile.am"
 HOMEPAGE="http://www.gnu.org/software/automake/"
-SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 # Use Gentoo versioning for slotting.
@@ -25,11 +25,21 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	export WANT_AUTOCONF=2.5
+	epatch "${FILESDIR}"/${PN}-1.10-perl-5.16.patch #424453
 	chmod a+rx tests/*.test
 }
 
 src_configure() {
-	econf --docdir=/usr/share/doc/${PF}
+	econf --docdir=/usr/share/doc/${PF} HELP2MAN=true
+}
+
+src_compile() {
+	emake APIVERSION="${SLOT}" pkgvdatadir="/usr/share/${PN}-${SLOT}"
+
+	local x
+	for x in aclocal automake; do
+		help2man "perl -Ilib ${x}" > doc/${x}-${SLOT}.1
+	done
 }
 
 # slot the info pages.  do this w/out munging the source so we don't have
@@ -62,19 +72,18 @@ slot_info_pages() {
 }
 
 src_install() {
-	default
+	emake DESTDIR="${D}" install \
+		APIVERSION="${SLOT}" pkgvdatadir="/usr/share/${PN}-${SLOT}"
 	slot_info_pages
+	dodoc NEWS README THANKS TODO AUTHORS ChangeLog
 
-	# SLOT the docs and junk
-	local x
-	for x in aclocal automake ; do
-		help2man "perl -Ilib ${x}" > ${x}-${SLOT}.1
-		doman ${x}-${SLOT}.1
-		rm -f "${D}"/usr/bin/${x}
-	done
+	rm \
+		"${D}"/usr/bin/{aclocal,automake} \
+		"${D}"/usr/share/man/man1/{aclocal,automake}.1 || die
 
 	# remove all config.guess and config.sub files replacing them
 	# w/a symlink to a specific gnuconfig version
+	local x
 	for x in guess sub ; do
 		dosym ../gnuconfig/config.${x} /usr/share/${PN}-${SLOT}/config.${x}
 	done

@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/automake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.215 2014/11/15 06:21:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.216 2014/11/15 06:30:36 vapier Exp $
+
+*automake-1.10.3-r1 (15 Nov 2014)
+*automake-1.11.6-r1 (15 Nov 2014)
+
+  15 Nov 2014; Mike Frysinger <vapier@gentoo.org> +automake-1.10.3-r1.ebuild,
+  +automake-1.11.6-r1.ebuild, +files/automake-1.10-perl-5.16.patch,
+  -automake-1.10.3.ebuild, -automake-1.11.6.ebuild:
+  Backport fix from upstream for warnings with perl-5.16+ #424453 by Alexander
+  Huemer.
 
 *automake-1.8.5-r5 (15 Nov 2014)
 *automake-1.5-r2 (15 Nov 2014)
