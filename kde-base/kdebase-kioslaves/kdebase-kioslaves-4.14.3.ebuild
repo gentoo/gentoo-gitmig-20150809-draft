@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.14.2.ebuild,v 1.1 2014/10/25 19:58:28 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.14.3.ebuild,v 1.1 2014/11/16 12:21:27 alexxy Exp $
 
 EAPI=5
 
@@ -36,6 +36,8 @@ KMEXTRA="
 	kioexec
 	kdeeject
 "
+
+PATCHES=( "${FILESDIR}/${PN}-CVE-2014-8600.patch" )
 
 src_configure() {
 	local mycmakeargs=(
