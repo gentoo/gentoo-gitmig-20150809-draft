@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/libnsfb-0.1.2.ebuild,v 1.1 2014/11/17 03:35:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/libnsfb-0.1.2.ebuild,v 1.2 2014/11/17 03:44:00 patrick Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.netsurf-browser.org/projects/libnsfb/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm"
+KEYWORDS=""
 IUSE="sdl test vnc wayland xcb"
 
 RDEPEND="sdl? ( >=media-libs/libsdl-1.2.15-r4[static-libs?,${MULTILIB_USEDEP}] )
