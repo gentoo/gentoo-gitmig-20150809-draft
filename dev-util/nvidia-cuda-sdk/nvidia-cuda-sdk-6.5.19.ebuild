@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-6.5.19.ebuild,v 1.1 2014/11/17 09:18:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-6.5.19.ebuild,v 1.2 2014/11/17 09:20:48 jlec Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="amd64? ( ${CURI}/cuda_${PV}_linux_64.run )"
 
 LICENSE="CUDPP"
 SLOT="0"
-KEYWORDS="~amd64 ~amd64-linux"
+KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug +doc +examples opencl +cuda"
 
 RDEPEND="
