@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-unit-rr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit-rr/ChangeLog,v 1.32 2014/11/10 15:56:55 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit-rr/ChangeLog,v 1.33 2014/11/18 11:44:16 ago Exp $
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> test-unit-rr-1.0.3.ebuild:
+  Stable for ppc, wrt bug #505920
 
   10 Nov 2014; Manuel Rüger <mrueg@gentoo.org> test-unit-rr-1.0.2.ebuild,
   test-unit-rr-1.0.3-r1.ebuild, test-unit-rr-1.0.3.ebuild:

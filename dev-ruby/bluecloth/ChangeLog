@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bluecloth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.85 2014/08/25 15:58:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.86 2014/11/18 11:43:56 ago Exp $
+
+  18 Nov 2014; Agostino Sarubbo <ago@gentoo.org> bluecloth-2.2.0-r1.ebuild:
+  Stable for ppc, wrt bug #505920
 
   25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> bluecloth-2.2.0-r1.ebuild:
   Mark amd64 stable. Bug #505920.
