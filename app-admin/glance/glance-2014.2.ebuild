@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2014.2.ebuild,v 1.1 2014/11/18 22:17:25 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2014.2.ebuild,v 1.2 2014/11/18 22:27:02 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -56,14 +56,14 @@ RDEPEND=">=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
 		)
 		mysql? (
 			dev-python/mysql-python
-			>=dev-python/sqlalchemy-0.8.0[${PYTHON_USEDEP}]
+			>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
 			<=dev-python/sqlalchemy-0.8.99[${PYTHON_USEDEP}]
 			>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
 			<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
 		)
 		postgres? (
 		dev-python/psycopg:2
-			>=dev-python/sqlalchemy-0.8.0[${PYTHON_USEDEP}]
+			>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
 			<=dev-python/sqlalchemy-0.8.99[${PYTHON_USEDEP}]
 			>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
 			<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
