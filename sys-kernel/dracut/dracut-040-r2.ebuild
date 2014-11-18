@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-040-r2.ebuild,v 1.1 2014/11/18 20:08:58 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-040-r2.ebuild,v 1.2 2014/11/18 20:12:34 aidecoe Exp $
 
 EAPI=4
 
@@ -52,9 +52,9 @@ PATCHES=(
 	"${FILESDIR}/${PV}-0006-Don-t-pass-rsyncable-option-to-gzip-Ge.patch"
 	)
 QA_MULTILIB_PATHS="
-    usr/lib/dracut/dracut-install
-    usr/lib/dracut/skipcpio
-    "
+	usr/lib/dracut/dracut-install
+	usr/lib/dracut/skipcpio
+	"
 
 #
 # Helper functions
