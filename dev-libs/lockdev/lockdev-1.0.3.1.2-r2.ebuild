@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/lockdev-1.0.3.1.2-r2.ebuild,v 1.10 2014/11/19 19:35:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/lockdev-1.0.3.1.2-r2.ebuild,v 1.11 2014/11/19 19:49:24 dilfridge Exp $
 
 EAPI=5
 
@@ -96,5 +96,5 @@ src_install() {
 }
 
 pkg_preinst() {
-	use perl && perl-module_pkg_preinst
+	use perl && perl_set_version
 }
