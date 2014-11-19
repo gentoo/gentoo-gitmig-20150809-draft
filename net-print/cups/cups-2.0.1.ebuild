@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-2.0.0-r2.ebuild,v 1.5 2014/11/19 19:41:40 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-2.0.1.ebuild,v 1.1 2014/11/19 19:41:40 tamiko Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ MY_PV=${PV/_rc/rc}
 MY_PV=${MY_PV/_beta/b}
 
 if [[ ${PV} == *9999 ]]; then
-	inherit git-2
+	inherit git-r3
 	EGIT_REPO_URI="http://www.cups.org/cups.git"
 	if [[ ${PV} != 9999 ]]; then
 		EGIT_BRANCH=branch-${PV/.9999}
@@ -98,6 +98,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.6.0-fix-install-perms.patch"
 	"${FILESDIR}/${PN}-1.4.4-nostrip.patch"
 	"${FILESDIR}/${P}-rename-systemd-service-files.patch"
+	"${FILESDIR}/${P}-fix-compilation.patch"
 )
 
 MULTILIB_CHOST_TOOLS=(
