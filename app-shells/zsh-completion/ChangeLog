@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/zsh-completion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/ChangeLog,v 1.56 2014/11/21 08:28:32 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/ChangeLog,v 1.57 2014/11/21 08:30:50 pinkbyte Exp $
+
+  21 Nov 2014; Sergey Popov <pinkbyte@gentoo.org>
+  -zsh-completion-20130808.ebuild, zsh-completion-20130808-r1.ebuild:
+  QA commit: transfer stable keywords from old revision and drop that revision
 
 *zsh-completion-20130808-r1 (21 Nov 2014)
 
