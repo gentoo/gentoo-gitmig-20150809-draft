@@ -1,6 +1,14 @@
-# ChangeLog for app-shells/zsh-completion
+# ChangeLog for app-shells/gentoo-zsh-completions
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-zsh-completions/ChangeLog,v 1.1 2014/11/21 09:48:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-zsh-completions/ChangeLog,v 1.2 2014/11/21 09:50:20 radhermit Exp $
+
+*gentoo-zsh-completions-20141115 (21 Nov 2014)
+
+  21 Nov 2014; Tim Harder <radhermit@gentoo.org>
+  +gentoo-zsh-completions-20141115.ebuild,
+  -gentoo-zsh-completions-20130808-r1.ebuild,
+  gentoo-zsh-completions-99999999.ebuild:
+  Version bump to stable to fix bug #491430.
 
   21 Nov 2014; Sergey Popov <pinkbyte@gentoo.org>
   -zsh-completion-20130808.ebuild, zsh-completion-20130808-r1.ebuild:
