@@ -1,6 +1,6 @@
 # Copyright 2010-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbitcoinconsensus/libbitcoinconsensus-9999.ebuild,v 1.1 2014/11/21 11:55:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbitcoinconsensus/libbitcoinconsensus-9999.ebuild,v 1.2 2014/11/21 12:00:07 blueness Exp $
 
 EAPI=5
 
@@ -22,12 +22,12 @@ SLOT="0"
 KEYWORDS=""
 IUSE="test"
 
-RDEPEND="
+DEPEND="
 	>=dev-libs/boost-1.52.0[threads(+)]
 	dev-libs/openssl:0[-bindist]
-"
-DEPEND="${RDEPEND}
 	dev-libs/libsecp256k1
+"
+RDEPEND="${DEPEND}
 "
 
 src_prepare() {
