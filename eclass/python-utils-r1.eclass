@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.64 2014/11/09 22:27:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.65 2014/11/23 16:02:56 floppym Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -42,7 +42,7 @@ inherit eutils multilib toolchain-funcs
 _PYTHON_ALL_IMPLS=(
 	jython2_5 jython2_7
 	pypy pypy3
-	python3_2 python3_3 python3_4
+	python3_3 python3_4
 	python2_7
 )
 
