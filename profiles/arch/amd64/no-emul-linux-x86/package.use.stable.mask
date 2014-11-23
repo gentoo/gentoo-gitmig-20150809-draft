@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.20 2014/10/24 18:37:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.21 2014/11/23 14:41:23 pacho Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -89,6 +89,7 @@ dev-libs/libparserutils -abi_x86_32
 dev-libs/libpcre -abi_x86_32
 dev-libs/libpthread-stubs -abi_x86_32
 dev-libs/libsigc++ -abi_x86_32
+net-libs/libssh -abi_x86_32
 dev-libs/libtasn1 -abi_x86_32
 dev-libs/libusb -abi_x86_32
 dev-libs/libusb-compat -abi_x86_32
