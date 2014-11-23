@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pyicq-t/pyicq-t-0.8.1.5-r4.ebuild,v 1.3 2014/11/23 16:46:54 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pyicq-t/pyicq-t-0.8.1.5-r4.ebuild,v 1.4 2014/11/23 16:48:33 mrueg Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -43,7 +43,7 @@ src_install() {
 	sed -i \
 		-e "s:<spooldir>[^\<]*</spooldir>:<spooldir>/var/spool/jabber</spooldir>:" \
 		-e "s:<pid>[^\<]*</pid>:<pid>/var/run/jabber/${PN}.pid</pid>:" \
-		"${ED}/etc/jabber/${PN}.xml"
+		"${ED}/etc/jabber/${PN}.xml" || die
 
 	newinitd "${FILESDIR}/${PN}-0.8-initd-r1" ${PN}
 	systemd_dounit "${FILESDIR}/${PN}.service"
