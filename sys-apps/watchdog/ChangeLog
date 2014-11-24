@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/watchdog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.40 2014/01/17 06:16:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.41 2014/11/24 02:16:00 radhermit Exp $
+
+*watchdog-5.14 (24 Nov 2014)
+
+  24 Nov 2014; Tim Harder <radhermit@gentoo.org> +watchdog-5.14.ebuild:
+  Version bump.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org> watchdog-5.13-r1.ebuild:
   Mark m68k/s390/sh stable.
