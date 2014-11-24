@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.6.1-r1.ebuild,v 1.1 2014/11/24 16:07:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.6.1-r1.ebuild,v 1.2 2014/11/24 16:08:33 jer Exp $
 
 EAPI=5
 inherit bash-completion-r1 eutils
@@ -48,7 +48,7 @@ src_configure() {
 src_install() {
 	default
 
-	dodoc {doc/bindings,config}
+	dodoc doc/{bindings,config}
 
 	newbashcomp doc/${PN}-completion.bash ${PN}
 }
