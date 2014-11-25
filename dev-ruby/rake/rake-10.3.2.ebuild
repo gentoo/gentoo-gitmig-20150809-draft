@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-10.3.2.ebuild,v 1.2 2014/08/28 02:51:28 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-10.3.2.ebuild,v 1.3 2014/11/25 11:39:21 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="CHANGES README.rdoc TODO"
@@ -22,21 +22,11 @@ IUSE="doc"
 
 DEPEND+=" app-arch/gzip"
 
-ruby_add_bdepend "test? ( >=dev-ruby/minitest-4:0	)"
+ruby_add_bdepend "test? ( >=dev-ruby/minitest-4:0 )"
 
 all_ruby_prepare() {
 	# Decompress the file. The compressed version has errors, ignore them.
 	zcat doc/rake.1.gz > doc/rake.1
-}
-
-each_ruby_prepare() {
-	case ${RUBY} in
-		*jruby)
-			# Remove failing test. This works on jruby 1.7, is a
-			# known bug on 1.6 and also fails on rake-0.9.6.
-			sed -i -e '/test_signal_propagation_in_tests/,/^  end/ s:^:#:' test/test_rake_functional.rb || die
-			;;
-	esac
 }
 
 all_ruby_compile() {
