@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Flask-KVSession/Flask-KVSession-0.6.1.ebuild,v 1.1 2014/11/27 14:38:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Flask-KVSession/Flask-KVSession-0.6.1.ebuild,v 1.2 2014/11/27 14:39:18 aballier Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -21,6 +21,7 @@ RDEPEND="
 	>=dev-python/simplekv-0.9.1[${PYTHON_USEDEP}]
 	dev-python/werkzeug[${PYTHON_USEDEP}]
 	>=dev-python/itsdangerous-0.20[${PYTHON_USEDEP}]
+	dev-python/six[${PYTHON_USEDEP}]
 "
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
