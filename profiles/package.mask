@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16187 2014/11/28 16:46:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16188 2014/11/28 16:48:37 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +31,7 @@
 #--- END OF EXAMPLES ---
 
 # Alexis Ballier <aballier@gentoo.org> (28 Nov 2014)
-# Pending addition of split packages and rev. deps check
+# Pending rev. deps check and porting
 >=dev-lang/ocaml-4.02.1
 dev-ml/labltk
 >=dev-ml/findlib-1.5.5-r1
