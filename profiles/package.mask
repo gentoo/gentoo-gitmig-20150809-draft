@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16185 2014/11/28 16:03:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16186 2014/11/28 16:38:37 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,6 +34,7 @@
 # Pending addition of split packages and rev. deps check
 >=dev-lang/ocaml-4.02.1
 dev-ml/labltk
+>=dev-ml/findlib-1.5.5-r1
 
 # Aaron W. Swenson <titanofold@gentoo.org> (26 Nov 2014)
 # Masked for removal in 30 days. dev-perl/pgperl hasn't been updated
