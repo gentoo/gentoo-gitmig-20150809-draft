@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/labltk/labltk-8.06.0.ebuild,v 1.1 2014/11/28 16:07:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/labltk/labltk-8.06.0.ebuild,v 1.2 2014/11/28 16:41:47 aballier Exp $
 
 EAPI=5
 
@@ -17,7 +17,8 @@ IUSE="+ocamlopt"
 
 RDEPEND=">=dev-lang/tk-8.0.3
 	>=dev-lang/ocaml-4.02:=[ocamlopt?]"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	>=dev-ml/findlib-1.5.5-r1"
 
 src_prepare() {
 	epatch "${FILESDIR}/findlib.patch"
