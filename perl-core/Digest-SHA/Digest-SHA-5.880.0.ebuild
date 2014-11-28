@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/Digest-SHA-5.850.0.ebuild,v 1.2 2014/01/20 20:45:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/Digest-SHA-5.880.0.ebuild,v 1.1 2014/11/28 23:59:42 dilfridge Exp $
 
 EAPI=5
 
 MODULE_AUTHOR=MSHELOR
-MODULE_VERSION=5.85
+MODULE_VERSION=5.88
 inherit perl-module
 
 DESCRIPTION="Perl extension for SHA-1/224/256/384/512"
@@ -18,5 +18,7 @@ DEPEND="test? (
 	dev-perl/Test-Pod
 	dev-perl/Test-Pod-Coverage
 )"
+
+PATCHES=( "${FILESDIR}/${P}-CFLAGS.patch" )
 
 SRC_TEST="do"
