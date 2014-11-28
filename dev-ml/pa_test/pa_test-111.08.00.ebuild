@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pa_test/pa_test-111.08.00.ebuild,v 1.1 2014/10/30 16:15:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pa_test/pa_test-111.08.00.ebuild,v 1.2 2014/11/28 09:55:00 aballier Exp $
 
 EAPI="5"
 
@@ -18,7 +18,6 @@ IUSE=""
 
 DEPEND=">=dev-ml/type-conv-109.60.00:=
 	dev-ml/sexplib:=
-	>=dev-ml/core_kernel-109.60.00:=
 	dev-ml/comparelib:=
 	"
 RDEPEND="${DEPEND}"
