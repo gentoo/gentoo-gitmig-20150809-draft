@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.3.1.ebuild,v 1.2 2014/11/27 14:54:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.3.1-r1.ebuild,v 1.1 2014/11/28 14:01:35 radhermit Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	local PATCHES=(
+		"${FILESDIR}"/${P}-cflags.patch
 		"${FILESDIR}"/${PN}-1.3.0-asneeded.patch
 		"${FILESDIR}"/${PN}-1.3.0-dontbuild-tests.patch
 		"${FILESDIR}"/${PN}-1.3.0-dontbuild-examples.patch
