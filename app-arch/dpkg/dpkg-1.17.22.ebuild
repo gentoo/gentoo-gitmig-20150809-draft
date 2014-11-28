@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.17.21.ebuild,v 1.1 2014/10/25 10:20:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.17.22.ebuild,v 1.1 2014/11/28 10:17:43 jer Exp $
 
 EAPI=5
 inherit eutils multilib autotools toolchain-funcs
