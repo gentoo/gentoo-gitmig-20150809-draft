@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cbatticon/cbatticon-1.4.0.ebuild,v 1.2 2014/08/19 12:53:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cbatticon/cbatticon-1.4.2.ebuild,v 1.1 2014/11/28 10:32:34 jer Exp $
 
 EAPI=5
 
@@ -13,15 +13,25 @@ SRC_URI="https://github.com/ColinJones/cbatticon/archive/${PV}.tar.gz -> ${P}.ta
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE="libnotify"
 
-RDEPEND="x11-libs/gtk+:3
-	x11-libs/libnotify"
-DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+RDEPEND="
+	dev-libs/glib:2
+	x11-libs/gtk+:3
+	libnotify? ( x11-libs/libnotify )
+"
+DEPEND="
+	${RDEPEND}
+	virtual/pkgconfig
+"
 
 src_compile() {
 	tc-export CC
-	emake WITH_GTK3=1 V=1 VERSION="${PF}"
+	emake \
+		$(usex libnotify WITH_NOTIFY=1 WITH_NOTIFY=0) \
+		V=1 \
+		VERSION="${PF}" \
+		WITH_GTK3=1
 }
 
 src_install() {
