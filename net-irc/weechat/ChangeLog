@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/weechat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.147 2014/11/29 00:41:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.148 2014/11/29 01:19:50 radhermit Exp $
+
+  29 Nov 2014; Tim Harder <radhermit@gentoo.org> weechat-1.0.1.ebuild,
+  weechat-9999.ebuild:
+  Add test support and drop keywords missing from new test dep
+  (dev-util/cpputest).
 
   29 Nov 2014; Tim Harder <radhermit@gentoo.org> weechat-1.0.1.ebuild,
   weechat-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.36 2014/11/29 00:41:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.37 2014/11/29 01:19:50 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -25,7 +25,7 @@ PLUGINS="+alias +charset +exec +fifo +logger +relay +scripts +spell +trigger +xf
 #INTERFACES="+ncurses gtk"
 SCRIPT_LANGS="guile lua +perl +python ruby tcl"
 LANGS=" cs de es fr hu it ja pl pt_BR ru tr"
-IUSE="doc nls +ssl ${LANGS// / linguas_} ${SCRIPT_LANGS} ${PLUGINS} ${INTERFACES} ${NETWORKS}"
+IUSE="doc nls +ssl test ${LANGS// / linguas_} ${SCRIPT_LANGS} ${PLUGINS} ${INTERFACES} ${NETWORKS}"
 #REQUIRED_USE=" || ( ncurses gtk )"
 
 RDEPEND="
@@ -52,6 +52,7 @@ DEPEND="${RDEPEND}
 		dev-util/source-highlight
 	)
 	nls? ( >=sys-devel/gettext-0.15 )
+	test? ( dev-util/cpputest )
 "
 
 DOCS="AUTHORS.asciidoc ChangeLog.asciidoc ReleaseNotes.asciidoc README.asciidoc"
@@ -117,6 +118,7 @@ src_configure() {
 		$(cmake-utils_use_enable spell ASPELL)
 		$(cmake-utils_use_enable ssl GNUTLS)
 		$(cmake-utils_use_enable tcl)
+		$(cmake-utils_use_enable test TESTS)
 		$(cmake-utils_use_enable trigger)
 		$(cmake-utils_use_enable xfer)
 	)
