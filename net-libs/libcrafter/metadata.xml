@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<use>
-<flag name='pcap'>Use <pkg>net-libs/libpcap</pkg> for packet capturing</flag>
-</use>
 <longdescription lang='en'>
 Libcrafter is a high level library for C++ designed to facilitate the creation
 and decoding of network packets. It is able to craft or decode packets of most
