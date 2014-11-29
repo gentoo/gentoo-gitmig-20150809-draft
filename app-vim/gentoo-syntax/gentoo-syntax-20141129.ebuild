@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20141102.ebuild,v 1.1 2014/11/02 22:08:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20141129.ebuild,v 1.1 2014/11/29 04:47:38 radhermit Exp $
 
 EAPI=5
 
