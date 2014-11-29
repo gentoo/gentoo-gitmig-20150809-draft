@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libcrafter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libcrafter/ChangeLog,v 1.5 2014/11/29 12:08:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libcrafter/ChangeLog,v 1.6 2014/11/29 12:13:02 jer Exp $
+
+  29 Nov 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Update blurb.
 
 *libcrafter-0.3 (29 Nov 2014)
 
