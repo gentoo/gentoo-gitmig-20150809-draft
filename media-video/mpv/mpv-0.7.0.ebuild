@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.60 2014/11/29 11:51:06 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.7.0.ebuild,v 1.1 2014/11/29 11:51:06 zlogene Exp $
 
 EAPI=5
 
@@ -234,6 +234,7 @@ src_configure() {
 		$(use_enable v4l tv-v4l2)
 		$(use_enable v4l libv4l2)
 		$(use_enable pvr)
+		$(use_enable dvb)
 		$(use_enable dvb dvbin)
 	)
 	waf-utils_src_configure "${mywafargs[@]}"
