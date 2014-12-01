@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/openvas-7.0.5.ebuild,v 1.1 2014/11/04 12:36:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/openvas-8_beta4.ebuild,v 1.1 2014/12/01 17:01:06 jlec Exp $
 
 EAPI=5
 
@@ -11,16 +11,16 @@ HOMEPAGE="http://www.openvas.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="+pdf"
 
 DEPEND="
-	~net-analyzer/openvas-libraries-7.0.5
-	~net-analyzer/openvas-scanner-4.0.4
-	~net-analyzer/openvas-manager-5.0.5
-	~net-analyzer/openvas-cli-1.3.1
+	>=net-analyzer/openvas-libraries-8_beta4
+	>=net-analyzer/openvas-scanner-5_beta4
+	>=net-analyzer/openvas-manager-6_beta4
+	>=net-analyzer/openvas-cli-1.4_beta4
 	net-analyzer/openvas-tools
-	~net-analyzer/greenbone-security-assistant-5.0.4
+	>=net-analyzer/greenbone-security-assistant-6_beta4
 	pdf? (
 		app-text/htmldoc
 		dev-texlive/texlive-latexextra
