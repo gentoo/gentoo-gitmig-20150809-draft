@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-manager/openvas-manager-5.0.4-r2.ebuild,v 1.2 2014/10/22 08:05:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-manager/openvas-manager-5.0.7.ebuild,v 1.1 2014/12/01 16:44:28 jlec Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit cmake-utils systemd
 
 MY_PN=openvasmd
 
-DL_ID=1730
+DL_ID=1849
 
 DESCRIPTION="A remote security scanner for Linux (openvas-manager)"
 HOMEPAGE="http://www.openvas.org/"
@@ -20,16 +20,16 @@ KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE=""
 
 RDEPEND="
-	>=net-analyzer/openvas-libraries-7.0.4
+	~net-analyzer/openvas-libraries-7.0.6
 	>=dev-db/sqlite-3
 	!net-analyzer/openvas-administrator"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 PATCHES=(
-	"${FILESDIR}"/${P}-gpgerror.patch
-	"${FILESDIR}"/${P}-bsdsource.patch
-	"${FILESDIR}"/${P}-run.patch
+	"${FILESDIR}"/${PN}-5.0.4-gpgerror.patch
+	"${FILESDIR}"/${PN}-5.0.4-bsdsource.patch
+	"${FILESDIR}"/${PN}-5.0.4-run.patch
 	)
 
 src_prepare() {
