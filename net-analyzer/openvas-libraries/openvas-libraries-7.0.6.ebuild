@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-7.0.4-r1.ebuild,v 1.4 2014/10/22 07:54:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-7.0.6.ebuild,v 1.1 2014/12/01 16:38:03 jlec Exp $
 
 EAPI=5
 
 inherit cmake-utils
 
-DL_ID=1722
+DL_ID=1833
 
 DESCRIPTION="A remote security scanner for Linux (openvas-libraries)"
 HOMEPAGE="http://www.openvas.org/"
@@ -34,9 +34,9 @@ DEPEND="${RDEPEND}
 DOCS="ChangeLog CHANGES README"
 
 PATCHES=(
-	"${FILESDIR}"/${P}-libssh.patch
-	"${FILESDIR}"/${P}-bsdsource.patch
-	"${FILESDIR}"/${P}-run.patch
+	"${FILESDIR}"/${PN}-7.0.4-libssh.patch
+	"${FILESDIR}"/${PN}-7.0.4-bsdsource.patch
+	"${FILESDIR}"/${PN}-7.0.4-run.patch
 	)
 
 src_prepare() {
