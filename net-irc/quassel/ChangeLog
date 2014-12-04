@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.179 2014/10/20 02:53:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.180 2014/12/04 12:38:57 mrueg Exp $
+
+  04 Dec 2014; Manuel Rüger <mrueg@gentoo.org> quassel-0.11.0.ebuild,
+  quassel-9999.ebuild:
+  Update dependency on oxygen-icons.
 
   20 Oct 2014; Patrick Lauer <patrick@gentoo.org> quassel-0.11.0.ebuild:
   Add phonon to kde required use to fix build failure #523668
