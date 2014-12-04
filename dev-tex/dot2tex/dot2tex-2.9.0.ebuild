@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/dot2tex-2.9.0.ebuild,v 1.1 2014/12/04 10:43:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/dot2tex-2.9.0.ebuild,v 1.2 2014/12/04 10:46:06 aballier Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RDEPEND="
 	media-gfx/pydot[${PYTHON_USEDEP}]
 	media-gfx/graphviz"
 DEPEND="${DEPEND}
-	dev-python/sphinx"
+	doc? ( dev-python/sphinx )"
 
 python_compile_all() {
 	if use doc ; then
