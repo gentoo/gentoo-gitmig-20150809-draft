@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.4_rc6-r2.ebuild,v 1.2 2014/12/04 11:00:43 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.3-r4.ebuild,v 1.1 2014/12/04 11:00:43 perfinion Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 python3_2 python3_3 python3_4 )
@@ -9,12 +9,12 @@ inherit multilib python-r1 toolchain-funcs eutils multilib-minimal
 
 MY_P="${P//_/-}"
 
-SEPOL_VER="2.4_rc6"
-SELNX_VER="2.4_rc6"
+SEPOL_VER="2.3"
+SELNX_VER="2.3"
 
 DESCRIPTION="SELinux kernel and policy management library"
-HOMEPAGE="https://github.com/SELinuxProject/selinux/wiki"
-SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20140826/${MY_P}.tar.gz"
+HOMEPAGE="http://userspace.selinuxproject.org"
+SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20140506/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -65,8 +65,6 @@ src_prepare() {
 	echo "# decompression of modules in the module store." >> "${S}/src/semanage.conf"
 	echo "bzip-small=true" >> "${S}/src/semanage.conf"
 
-	epatch "${FILESDIR}/0002-semanage_migrate_store-Python3-support.patch" # bug 529252
-
 	epatch_user
 
 	multilib_copy_sources
@@ -83,6 +81,7 @@ multilib_src_compile() {
 		building_py() {
 			python_export PYTHON_INCLUDEDIR PYTHON_LIBPATH
 			emake CC="$(tc-getCC)" PYINC="-I${PYTHON_INCLUDEDIR}" PYTHONLBIDIR="${PYTHON_LIBPATH}" PYPREFIX="${EPYTHON##*/}" "$@"
+			python_optimize # bug 531638
 		}
 		python_foreach_impl building_py swigify
 		python_foreach_impl building_py pywrap
@@ -99,18 +98,7 @@ multilib_src_install() {
 		installation_py() {
 			emake DESTDIR="${ED}" LIBDIR="${ED}/usr/$(get_libdir)" \
 				SHLIBDIR="${ED}/usr/$(get_libdir)" install-pywrap
-			python_optimize # bug 531638
 		}
 		python_foreach_impl installation_py
 	fi
-}
-
-pkg_postinst() {
-	# Run the store migration without rebuilds
-	for POLICY_TYPE in ${POLICY_TYPES} ; do
-		if [ ! -d "${ROOT}/var/lib/selinux/${POLICY_TYPE}/active" ] ; then
-			einfo "Migrating store ${POLICY_TYPE} (without policy rebuild)."
-			/usr/libexec/selinux/semanage_migrate_store -n -s "${POLICY_TYPE}" || die "Failed to migrate store ${POLICY_TYPE}"
-		fi
-	done
 }
