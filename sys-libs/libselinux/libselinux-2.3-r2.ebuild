@@ -1,23 +1,24 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.4_rc6.ebuild,v 1.2 2014/12/04 10:50:14 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.3-r2.ebuild,v 1.1 2014/12/04 10:50:14 perfinion Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 python3_2 python3_3 python3_4 )
 USE_RUBY="ruby19 ruby20"
 
-PATCHBUNDLE="5"
+PATCHBUNDLE="4"
 
 # No, I am not calling ruby-ng
 inherit multilib python-r1 toolchain-funcs eutils multilib-minimal
 
 MY_P="${P//_/-}"
 
-SEPOL_VER="2.4_rc6"
+SEPOL_VER="2.3"
 
 DESCRIPTION="SELinux userland library"
-HOMEPAGE="https://github.com/SELinuxProject/selinux/wiki"
-SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20140826/${MY_P}.tar.gz"
+HOMEPAGE="http://userspace.selinuxproject.org"
+SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20140506/${MY_P}.tar.gz
+	http://dev.gentoo.org/~swift/patches/${PN}/patchbundle-${PN}-${PATCHBUNDLE}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
@@ -39,8 +40,11 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}/0005-use-ruby-include-with-rubylibver.patch"
-	epatch "${FILESDIR}/0006-build-related-fixes-bug-500674.patch"
+	EPATCH_MULTI_MSG="Applying libselinux patches ... " \
+	EPATCH_SUFFIX="patch" \
+	EPATCH_SOURCE="${WORKDIR}/gentoo-patches" \
+	EPATCH_FORCE="yes" \
+	epatch
 
 	epatch_user
 
