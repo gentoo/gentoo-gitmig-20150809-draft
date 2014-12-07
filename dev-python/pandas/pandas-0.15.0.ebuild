@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.15.0.ebuild,v 1.2 2014/12/07 16:57:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.15.0.ebuild,v 1.3 2014/12/07 19:04:50 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 python3_{3,4} )
 
-inherit distutils-r1 flag-o-matic virtualx
+inherit distutils-r1 eutils flag-o-matic virtualx
 
 DESCRIPTION="Powerful data structures for data analysis and statistics"
 HOMEPAGE="http://pandas.sourceforge.net/"
