@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-9999.ebuild,v 1.14 2014/12/07 23:33:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-9999.ebuild,v 1.15 2014/12/07 23:54:31 radhermit Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ LICENSE="GPL-3 CC-BY-3.0"
 SLOT="0"
 LANGS=" cs da de el es fr it ja nl pl pt_BR pt_PT ru sq sv uk"
 # TODO add lua once dev-lang/lua-5.2 is unmasked
-IUSE="colord doc flickr geo gnome-keyring gphoto2 graphicsmagick jpeg2k kde libsecret
+IUSE="colord doc flickr geo gphoto2 graphicsmagick jpeg2k kde libsecret
 nls opencl openmp openexr pax_kernel +rawspeed +slideshow +squish web-services webp
 ${LANGS// / linguas_}"
 
@@ -38,7 +38,6 @@ CDEPEND="
 	colord? ( x11-misc/colord:0= )
 	flickr? ( media-libs/flickcurl )
 	geo? ( net-libs/libsoup:2.4 )
-	gnome-keyring? ( gnome-base/gnome-keyring )
 	gphoto2? ( media-libs/libgphoto2:= )
 	graphicsmagick? ( media-gfx/graphicsmagick )
 	jpeg2k? ( media-libs/openjpeg:0 )
@@ -81,7 +80,6 @@ src_configure() {
 		$(cmake-utils_use_use colord COLORD)
 		$(cmake-utils_use_use flickr FLICKR)
 		$(cmake-utils_use_use geo GEO)
-		$(cmake-utils_use_use gnome-keyring GNOME_KEYRING)
 		$(cmake-utils_use_use gphoto2 CAMERA_SUPPORT)
 		$(cmake-utils_use_use graphicsmagick GRAPHICSMAGICK)
 		$(cmake-utils_use_use jpeg2k OPENJPEG)
