@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-9999.ebuild,v 1.2 2014/12/07 19:04:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-9999.ebuild,v 1.3 2014/12/07 19:23:57 jlec Exp $
 
 EAPI=5
 
@@ -18,11 +18,11 @@ LICENSE="BSD"
 KEYWORDS=""
 IUSE="doc examples excel html test R"
 
-_EXTRA_DEPEND="
-	>=dev-python/google-api-python-client-1.2.0[${PYTHON_USEDEP}]
-	<dev-python/openpyxl-2[${PYTHON_USEDEP}]
+EXTRA_DEPEND="
+	>=dev-python/google-api-python-client-1.2.0[$(python_gen_usedep python2_7 pypy)]
+	dev-python/openpyxl[${PYTHON_USEDEP}]
 	dev-python/pymysql[${PYTHON_USEDEP}]
-	>=dev-python/python-gflags[${PYTHON_USEDEP}]
+	dev-python/python-gflags[$(python_gen_usedep python2_7 pypy)]
 	dev-python/psycopg:2[${PYTHON_USEDEP}]
 	dev-python/statsmodels[${PYTHON_USEDEP}]
 	dev-python/sqlalchemy[${PYTHON_USEDEP}]
