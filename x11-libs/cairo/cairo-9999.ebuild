@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.50 2014/11/20 09:29:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.51 2014/12/08 19:19:48 mattst88 Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ DESCRIPTION="A vector graphics library with cross-device output support"
 HOMEPAGE="http://cairographics.org/"
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-IUSE="X aqua debug directfb drm gallium gles2 +glib legacy-drivers opengl openvg qt4 static-libs +svg valgrind xcb xlib-xcb"
+IUSE="X aqua debug directfb drm gallium gles2 +glib opengl openvg qt4 static-libs +svg valgrind xcb xlib-xcb"
 # gtk-doc regeneration doesn't seem to work with out-of-source builds
 #[[ ${PV} == *9999* ]] && IUSE="${IUSE} doc" # API docs are provided in tarball, no need to regenerate
 
@@ -87,7 +87,6 @@ MULTILIB_WRAPPED_HEADERS=(
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.8.8-interix.patch
-	use legacy-drivers && epatch "${FILESDIR}"/${PN}-1.10.0-buggy_gradients.patch
 	epatch "${FILESDIR}"/${PN}-respect-fontconfig.patch
 
 	# tests and perf tools require X, bug #483574
@@ -158,11 +157,6 @@ multilib_src_configure() {
 		--enable-png \
 		--enable-ps \
 		${myopts}
-}
-
-multilib_src_install() {
-	# parallel make install fails
-	emake -j1 DESTDIR="${D}" install
 }
 
 multilib_src_install_all() {
