@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/kombu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.41 2014/12/08 07:22:18 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.42 2014/12/08 07:26:38 idella4 Exp $
+
+  08 Dec 2014; Ian Delaney <idella4@gentoo.org> -kombu-3.0.16.ebuild,
+  -kombu-3.0.18.ebuild, -kombu-3.0.19.ebuild, -kombu-3.0.21.ebuild:
+  rm old
 
 *kombu-3.0.24 (08 Dec 2014)
 
