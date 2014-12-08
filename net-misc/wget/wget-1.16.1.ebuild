@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.16.1.ebuild,v 1.1 2014/12/08 17:47:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.16.1.ebuild,v 1.2 2014/12/08 17:55:39 polynomial-c Exp $
 
 EAPI="4"
 PYTHON_COMPAT=( python{3_3,3_4} )
@@ -63,6 +63,7 @@ src_configure() {
 		PKG_CONFIG+=" --static"
 	fi
 	econf \
+		--disable-assert \
 		--disable-rpath \
 		$(use_with ssl ssl $(usex gnutls gnutls openssl)) \
 		$(use_enable ssl opie) \

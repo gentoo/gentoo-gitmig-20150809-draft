@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.199 2014/12/08 17:47:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.200 2014/12/08 17:55:39 polynomial-c Exp $
+
+  08 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> wget-1.16.1.ebuild:
+  Disable progress bar assertion as recommended by upstream.
 
 *wget-1.16.1 (08 Dec 2014)
 
