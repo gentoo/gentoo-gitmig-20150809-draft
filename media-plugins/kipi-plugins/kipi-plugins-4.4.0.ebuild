@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-4.4.0.ebuild,v 1.2 2014/12/09 21:26:37 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-4.4.0.ebuild,v 1.3 2014/12/09 21:30:10 mrueg Exp $
 
 EAPI=5
 
@@ -32,8 +32,8 @@ IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod mediawiki 
 
 COMMONDEPEND="
 	|| ( kde-apps/libkipi:4 $(add_kdebase_dep libkipi) )
-	kde-base/libkdcraw:4=
-	kde-base/libkexiv2:4=
+	|| ( kde-apps/libkdcraw:4= kde-base/libkdcraw:4= )
+	|| ( kde-apps/libkexiv2:4= kde-base/libkexiv2:4= )
 	dev-libs/expat
 	dev-libs/kqoauth
 	dev-libs/libxml2
