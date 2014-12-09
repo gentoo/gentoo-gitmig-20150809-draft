@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.4.0-r1.ebuild,v 1.1 2014/12/09 19:30:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.4.0-r1.ebuild,v 1.2 2014/12/09 19:57:16 swegener Exp $
 
 EAPI=5
 
@@ -56,7 +56,7 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 src_configure() {
-	local dynmodules="pipe geo" # the default backends, always enabled
+	local dynmodules="pipe geo bind" # the default backends, always enabled
 	local modules=""
 
 	#use db2 && dynmodules+=" db2"
