@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-Timeout/PerlIO-via-Timeout-0.290.0.ebuild,v 1.1 2014/12/11 23:54:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-Timeout/PerlIO-via-Timeout-0.290.0.ebuild,v 1.2 2014/12/11 23:57:59 dilfridge Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="PerlIO layer that adds read & write timeout to a handle"
 
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 RDEPEND="
