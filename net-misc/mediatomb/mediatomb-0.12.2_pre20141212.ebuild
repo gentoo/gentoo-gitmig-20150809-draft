@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.2_pre20140810.ebuild,v 1.3 2014/12/12 12:07:08 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.2_pre20141212.ebuild,v 1.1 2014/12/12 14:08:03 thev00d00 Exp $
 
 EAPI=5
-inherit autotools eutils linux-info user vcs-snapshot
+inherit autotools eutils linux-info systemd user vcs-snapshot
 
 DESCRIPTION="MediaTomb is an open source UPnP MediaServer"
 HOMEPAGE="http://www.mediatomb.cc/"
@@ -86,6 +86,9 @@ src_configure() {
 
 src_install() {
 	default
+
+	systemd_dounit "${S}"/scripts/systemd/"${PN}".service
+	use mysql && systemd_dounit "${S}"/scripts/systemd/"${PN}"-mysql.service
 
 	newinitd "${FILESDIR}"/${PN}-0.12.1.initd ${PN}
 	use mysql || sed -i -e "/use mysql/d" "${ED}"/etc/init.d/${PN}
