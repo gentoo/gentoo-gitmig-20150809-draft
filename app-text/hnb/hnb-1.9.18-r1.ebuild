@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/hnb-1.9.18-r1.ebuild,v 1.9 2014/12/14 13:20:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/hnb-1.9.18-r1.ebuild,v 1.10 2014/12/14 13:25:17 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -25,7 +25,8 @@ src_prepare() {
 
 	epatch \
 		"${FILESDIR}"/${P}-flags.patch \
-		"${FILESDIR}"/${P}-include.patch
+		"${FILESDIR}"/${P}-include.patch \
+		"${FILESDIR}"/${P}-printf.patch
 
 	tc-export AR CC PKG_CONFIG
 
