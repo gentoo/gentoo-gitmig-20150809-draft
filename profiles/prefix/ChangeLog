@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.439 2014/12/15 18:34:40 redlizard Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.440 2014/12/15 20:52:04 redlizard Exp $
+
+  15 Dec 2014; Ruud Koolen <redlizard@gentoo.org> package.use.mask, packages,
+  linux/package.use.mask, linux/packages, linux/use.force, linux/use.mask:
+  Moved several nonlinux-specific clauses from /profiles/features/prefix
+  to /profiles/prefix.
 
   15 Dec 2014; Ruud Koolen <redlizard@gentoo.org> linux/amd64/package.use.mask,
   linux/amd64/use.force, linux/x86/package.use.mask, linux/x86/use.force:
