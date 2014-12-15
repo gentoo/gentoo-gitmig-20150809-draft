@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/phototonic/phototonic-1.5.ebuild,v 1.1 2014/12/15 14:07:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/phototonic/phototonic-1.5.ebuild,v 1.2 2014/12/15 14:08:30 yngwin Exp $
 
 EAPI=5
 inherit qmake-utils
@@ -29,7 +29,7 @@ RDEPEND="dev-qt/qtwidgets:5
 DEPEND="${RDEPEND}"
 
 src_configure() {
-    eqmake5
+	eqmake5
 }
 
 src_install() {
