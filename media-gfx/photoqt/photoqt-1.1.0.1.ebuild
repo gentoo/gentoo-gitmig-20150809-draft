@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photoqt/photoqt-1.1.0.1.ebuild,v 1.1 2014/12/15 13:02:21 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photoqt/photoqt-1.1.0.1.ebuild,v 1.2 2014/12/17 18:10:19 kensington Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="graphicsmagick exiv2"
 
-DEPEND="dev-qt/linguist-tools
+DEPEND="dev-qt/linguist-tools:5
 	dev-qt/qtmultimedia:5
 	dev-qt/qtimageformats:5
 	dev-qt/qtgui:5
