@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photoqt/photoqt-1.1.0.1.ebuild,v 1.2 2014/12/17 18:10:19 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photoqt/photoqt-1.1.0.1.ebuild,v 1.3 2014/12/17 18:11:14 kensington Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -27,6 +27,6 @@ src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use graphicsmagick GM)
 		$(cmake-utils_use exiv2 EXIV2)
-		)
+	)
 	cmake-utils_src_configure
 }
