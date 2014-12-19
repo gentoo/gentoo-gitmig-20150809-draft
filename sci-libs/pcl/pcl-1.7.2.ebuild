@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pcl/pcl-1.7.2.ebuild,v 1.3 2014/12/19 14:26:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pcl/pcl-1.7.2.ebuild,v 1.4 2014/12/19 14:29:32 aballier Exp $
 
 EAPI=5
 
@@ -50,6 +50,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 REQUIRED_USE="
+	openni? ( usb )
+	openni2? ( usb )
 	tutorials? ( doc )
 "
 
