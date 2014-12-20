@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/halibut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/halibut/ChangeLog,v 1.15 2014/12/20 11:40:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/halibut/ChangeLog,v 1.16 2014/12/20 11:42:50 blueness Exp $
+
+  20 Dec 2014; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Fix gpg signature
 
 *halibut-1.1 (20 Dec 2014)
 
