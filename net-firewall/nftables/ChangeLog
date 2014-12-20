@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/nftables
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nftables/ChangeLog,v 1.8 2014/12/18 17:13:48 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nftables/ChangeLog,v 1.9 2014/12/20 14:48:44 mrueg Exp $
+
+  20 Dec 2014; Manuel Rüger <mrueg@gentoo.org> nftables-0.4.ebuild:
+  Add readline USE flag. Ebuild patch by Polynomial-C.
 
 *nftables-0.4 (18 Dec 2014)
 
