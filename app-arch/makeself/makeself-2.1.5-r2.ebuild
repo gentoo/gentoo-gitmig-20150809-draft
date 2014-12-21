@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/makeself/makeself-2.1.5-r2.ebuild,v 1.1 2014/12/21 14:25:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/makeself/makeself-2.1.5-r2.ebuild,v 1.2 2014/12/21 14:26:40 mgorny Exp $
 
 inherit unpacker
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.megastep.org/makeself/${P}.run"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 hppa ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="sys-apps/gentoo-functions"
