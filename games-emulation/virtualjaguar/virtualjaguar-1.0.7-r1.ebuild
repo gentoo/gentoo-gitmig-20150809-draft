@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-1.0.7-r1.ebuild,v 1.1 2014/12/21 14:20:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-1.0.7-r1.ebuild,v 1.2 2014/12/21 14:22:14 mgorny Exp $
 
 EAPI=2
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="http://www.icculus.org/virtualjaguar/tarballs/${P}-src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 IUSE=""
 
 DEPEND="virtual/opengl
