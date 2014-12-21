@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1470 2014/12/21 14:29:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1471 2014/12/21 14:30:08 mgorny Exp $
+
+  21 Dec 2014; Michał Górny <mgorny@gentoo.org> tests/python-utils-r1.sh:
+  Update tests for unsupported python3.2.
 
   21 Dec 2014; Michał Górny <mgorny@gentoo.org> tests/tests-common.sh:
   Use gentoo-functions for tests, bug #504378.
