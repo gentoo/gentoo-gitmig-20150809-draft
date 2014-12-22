@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shadow/ruby-shadow-2.3.4.ebuild,v 1.6 2014/12/22 13:45:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shadow/ruby-shadow-2.3.4.ebuild,v 1.7 2014/12/22 13:46:11 ago Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -17,7 +17,7 @@ HOMEPAGE="https://github.com/apalmblad/ruby-shadow http://ttsky.net"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ~sparc x86"
+KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE=""
 
 each_ruby_configure() {
