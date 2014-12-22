@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.8-r1.ebuild,v 1.1 2014/12/22 03:15:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.8-r1.ebuild,v 1.2 2014/12/22 03:26:28 floppym Exp $
 
 EAPI="4"
 
@@ -75,17 +75,6 @@ src_install() {
 	doman "${WORKDIR}"/man/*.[58]
 	dohtml -r html/*
 
-	insinto /usr/share/ntp
-	doins "${FILESDIR}"/ntp.conf
-	use prefix || fperms -R go-w /usr/share/ntp
-	find "${ED}"/usr/share/ntp \
-		'(' \
-		-name '*.in' -o \
-		-name 'Makefile*' -o \
-		-name support \
-		')' \
-		-exec rm -r {} \;
-
 	insinto /etc
 	doins "${FILESDIR}"/ntp.conf
 	newinitd "${FILESDIR}"/ntpd.rc ntpd
@@ -121,7 +110,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "You can find an example /etc/ntp.conf in /usr/share/ntp/"
 	ewarn "Review /etc/ntp.conf to setup server info."
 	ewarn "Review /etc/conf.d/ntpd to setup init.d info."
 	echo
