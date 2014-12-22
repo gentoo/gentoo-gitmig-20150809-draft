@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.8.ebuild,v 1.1 2014/12/21 19:28:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.8-r1.ebuild,v 1.1 2014/12/22 03:15:36 floppym Exp $
 
 EAPI="4"
 
@@ -77,7 +77,6 @@ src_install() {
 
 	insinto /usr/share/ntp
 	doins "${FILESDIR}"/ntp.conf
-	cp -r scripts/* "${ED}"/usr/share/ntp/ || die
 	use prefix || fperms -R go-w /usr/share/ntp
 	find "${ED}"/usr/share/ntp \
 		'(' \
