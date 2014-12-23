@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.481 2014/12/23 08:20:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.482 2014/12/23 08:25:59 grobian Exp $
+
+  23 Dec 2014; Fabian Groffen <grobian@gentoo.org> vim-7.4.542.ebuild,
+  vim-9999.ebuild:
+  Fix lua detection for Prefix, bug #533362
 
   23 Dec 2014; Tim Harder <radhermit@gentoo.org> vim-9999.ebuild:
   Use array for configure options.
