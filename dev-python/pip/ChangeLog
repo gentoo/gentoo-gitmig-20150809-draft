@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.45 2014/12/22 20:24:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.46 2014/12/23 16:44:26 radhermit Exp $
+
+*pip-6.0.2 (23 Dec 2014)
+
+  23 Dec 2014; Tim Harder <radhermit@gentoo.org> +pip-6.0.2.ebuild,
+  +files/pip-6.0.2-disable-version-check.patch:
+  Version bump and disable default version checks.
 
 *pip-6.0 (22 Dec 2014)
 
