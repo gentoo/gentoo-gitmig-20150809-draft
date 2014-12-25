@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyscard/pyscard-1.6.12-r1.ebuild,v 1.1 2014/12/25 23:35:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyscard/pyscard-1.6.16.ebuild,v 1.1 2014/12/25 23:44:26 alonbl Exp $
 
 EAPI=5
 
