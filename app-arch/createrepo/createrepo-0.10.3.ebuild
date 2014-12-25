@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/createrepo/createrepo-0.10.3.ebuild,v 1.1 2014/12/25 11:03:49 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/createrepo/createrepo-0.10.3.ebuild,v 1.2 2014/12/25 11:12:05 alonbl Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE='xml'
 
-inherit python-single-r1 bash-completion-r1
+inherit python-single-r1 bash-completion-r1 eutils
 
 DESCRIPTION="Creates a common rpm-metadata repository"
 HOMEPAGE="http://createrepo.baseurl.org/"
@@ -33,6 +33,11 @@ REQUIRED_USE=${PYTHON_REQUIRED_USE}
 pkg_setup() {
 	python-single-r1_pkg_setup
 	python_export PYTHON_SITEDIR
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-ten-changelog-limit.patch"
+	epatch "${FILESDIR}/${P}-pkglist.patch"
 }
 
 src_compile() {
