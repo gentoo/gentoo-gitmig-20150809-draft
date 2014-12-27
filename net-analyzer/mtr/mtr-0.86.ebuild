@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.86.ebuild,v 1.1 2014/12/27 11:48:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.86.ebuild,v 1.2 2014/12/27 12:00:51 jer Exp $
 
 EAPI=5
-inherit eutils flag-o-matic
+inherit eutils fcaps flag-o-matic
 
 DESCRIPTION="My TraceRoute, an Excellent network diagnostic tool"
 HOMEPAGE="http://www.bitwizard.nl/mtr/"
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.bitwizard.nl/mtr/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-IUSE="gtk ipv6 suid"
+IUSE="gtk ipv6"
 
 RDEPEND="
 	sys-libs/ncurses
@@ -27,6 +27,7 @@ DEPEND="
 "
 
 DOCS=( AUTHORS FORMATS NEWS README SECURITY TODO )
+FILECAPS=( cap_net_raw /usr/sbin/mtr )
 
 src_configure() {
 	# In the source's configure script -lresolv is commented out. Apparently it
@@ -34,20 +35,7 @@ src_configure() {
 	[[ ${CHOST} == *-darwin* ]] && append-libs -lresolv
 
 	econf \
-		--disable-gtktest \
 		$(use_enable ipv6) \
-		$(use_with gtk)
-}
-
-src_install() {
-	default
-
-	if use !prefix ; then
-		fowners root:0 /usr/sbin/mtr
-		if use suid; then
-			fperms 4711 /usr/sbin/mtr
-		else
-			fperms 0710 /usr/sbin/mtr
-		fi
-	fi
+		$(use_with gtk) \
+		--disable-gtktest
 }
