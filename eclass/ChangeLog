@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1487 2014/12/28 22:45:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1488 2014/12/28 22:50:20 mgorny Exp $
+
+  28 Dec 2014; Michał Górny <mgorny@gentoo.org> python-single-r1.eclass:
+  Add python_gen_usedep, python_gen_useflags and python_gen_cond_dep to
+  python-single-r1.
 
   28 Dec 2014; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
   Spelling, pointed out by floppym.
