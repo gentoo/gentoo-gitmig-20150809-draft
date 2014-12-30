@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/guppy-0.1.10-r1.ebuild,v 1.1 2014/12/30 12:31:18 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/guppy-0.1.10-r1.ebuild,v 1.2 2014/12/30 12:34:00 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -35,7 +35,7 @@ python_test() {
 	"${PYTHON}" setup.py build install --home="${T}/test-${EPYTHON}" \
 		|| die "Installation of tests failed"
 	pushd "${T}/test-${EPYTHON}/lib/python" > /dev/null
-	"${PYTHON}" guppy/heapy/test/test_all.py ||  die "tests failed"
+	"${PYTHON}" guppy/heapy/test/test_all.py || die "tests failed"
 	popd > /dev/null
 }
 
