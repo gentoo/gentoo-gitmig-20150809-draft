@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16250 2014/12/29 14:14:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16251 2014/12/30 14:55:00 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (30 Dec 2014)
+# Upstream dead since 2005, does not build, bug 515780
+# Masked for removal in 30 days
+app-office/imposter
 
 # Ulrich Müller <ulm@gentoo.org> (29 Dec 2014)
 # Does not compile with Emacs 24.4 or later.
