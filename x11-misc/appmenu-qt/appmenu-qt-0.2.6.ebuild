@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/appmenu-qt/appmenu-qt-0.2.6.ebuild,v 1.4 2014/12/31 12:28:59 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/appmenu-qt/appmenu-qt-0.2.6.ebuild,v 1.5 2014/12/31 12:29:54 kensington Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND=">=dev-qt/qtcore-4.8:4
 	>=dev-qt/qtdbus-4.8:4
 	>=dev-qt/qtgui-4.8:4
-	>=dev-libs/libdbusmenu-qt-0.9.0[qt4]"
+	>=dev-libs/libdbusmenu-qt-0.9.0[qt4(+)]"
 RDEPEND="${DEPEND}"
 
 DOCS=( NEWS README )
