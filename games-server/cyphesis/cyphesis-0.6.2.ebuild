@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.6.2.ebuild,v 1.5 2015/01/02 08:08:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.6.2.ebuild,v 1.6 2015/01/02 08:09:51 mr_bones_ Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 inherit toolchain-funcs autotools python-single-r1 eutils games
 
 DESCRIPTION="WorldForge server running small games"
-HOMEPAGE="http://worldforge.org/dev/eng/servers/cyphesis"
+HOMEPAGE="http://worldforge.org/index.php/components/cyphesis/"
 SRC_URI="mirror://sourceforge/worldforge/${P}.tar.bz2"
 
 LICENSE="GPL-2"
