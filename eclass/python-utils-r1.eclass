@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.73 2014/12/28 18:35:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.74 2015/01/02 00:14:25 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -1206,6 +1206,16 @@ _python_check_dead_variables() {
 	if [[ ${DISTUTILS_DISABLE_TEST_DEPENDENCY} ]]; then
 		eqawarn "${v} is invalid for distutils-r1, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#DISTUTILS_SRC_TEST"
 	fi
+
+	# python.eclass::progress
+	for v in PYTHON_BDEPEND PYTHON_MULTIPLE_ABIS PYTHON_ABI_TYPE \
+		PYTHON_RESTRICTED_ABIS PYTHON_TESTS_FAILURES_TOLERANT_ABIS \
+		PYTHON_CFFI_MODULES_GENERATION_COMMANDS
+	do
+		if [[ ${!v} ]]; then
+			eqawarn "${v} is invalid for python-r1 suite"
+		fi
+	done
 }
 
 python_pkg_setup() {
@@ -1298,6 +1308,32 @@ python_mod_optimize() {
 
 python_mod_cleanup() {
 	eqawarn "${FUNCNAME}() is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#Python_byte-code_compilation"
+}
+
+# python.eclass::progress
+
+python_abi_depend() {
+	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+}
+
+python_install_executables() {
+	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+}
+
+python_get_extension_module_suffix() {
+	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+}
+
+python_byte-compile_modules() {
+	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+}
+
+python_clean_byte-compiled_modules() {
+	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+}
+
+python_generate_cffi_modules() {
+	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
 }
 
 _PYTHON_UTILS_R1=1
