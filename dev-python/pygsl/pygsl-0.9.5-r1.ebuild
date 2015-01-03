@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/pygsl-0.9.5-r1.ebuild,v 1.1 2015/01/03 06:19:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/pygsl-0.9.5-r1.ebuild,v 1.2 2015/01/03 06:22:08 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -19,7 +19,7 @@ IUSE="examples"
 DEPEND="sci-libs/gsl
 	dev-python/numpy[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
-# Testsuite written to be run port install
+# Testsuite written to be run post install
 
 python_install_all() {
 	use examples && local EXAMPLES=( examples/. )
