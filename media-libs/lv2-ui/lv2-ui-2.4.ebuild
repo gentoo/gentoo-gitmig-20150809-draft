@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2-ui/lv2-ui-2.4.ebuild,v 1.3 2015/01/03 14:56:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2-ui/lv2-ui-2.4.ebuild,v 1.4 2015/01/03 15:00:17 mgorny Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="${PYTHON_DEPS}"
 RDEPEND=">=media-libs/lv2core-6.0"
 
 DOCS=( "NEWS" )
