@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-client/http-client-0.4.6.2.ebuild,v 1.1 2015/01/03 04:39:30 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-client/http-client-0.4.6.2.ebuild,v 1.2 2015/01/03 04:45:48 gienah Exp $
 
 EAPI=5
 
@@ -48,4 +48,9 @@ DEPEND="${RDEPEND}
 src_configure() {
 	haskell-cabal_src_configure \
 		$(cabal_flag network-uri network-uri)
+}
+
+# Run only the non-network tests.
+src_test() {
+	haskell-cabal_src_test spec-nonet
 }
