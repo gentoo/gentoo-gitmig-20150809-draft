@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/pdb2pqr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.46 2015/01/04 19:15:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.47 2015/01/04 19:17:35 jlec Exp $
+
+  04 Jan 2015; Justin Lecher <jlec@gentoo.org> -pdb2pqr-1.7.0.ebuild,
+  -pdb2pqr-1.7.0-r2.ebuild, -pdb2pqr-1.8.0-r1.ebuild, -pdb2pqr-1.9.0.ebuild:
+  Drop old
 
   04 Jan 2015; Justin Lecher <jlec@gentoo.org> pdb2pqr-1.9.0-r1.ebuild:
   Drop obsolete dep
