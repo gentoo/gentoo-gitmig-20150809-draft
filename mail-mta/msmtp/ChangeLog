@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.171 2015/01/04 07:04:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.172 2015/01/04 07:05:19 radhermit Exp $
+
+  04 Jan 2015; Tim Harder <radhermit@gentoo.org> -msmtp-1.4.30-r1.ebuild,
+  -msmtp-1.4.31.ebuild:
+  Remove old.
 
 *msmtp-1.6.0 (04 Jan 2015)
 
