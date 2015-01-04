@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvertor/uniconvertor-2.0_pre379-r1.ebuild,v 1.1 2015/01/04 12:35:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvertor/uniconvertor-2.0_pre379-r1.ebuild,v 1.2 2015/01/04 19:03:50 jlec Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ PATCHES=(
 
 python_prepare_all() {
 	local wand
-	wand=$(pkg-config --libs Wand | sed -e "s:-l:\':g" -e "s: :',:g" -e "s:$:':g" -e "s:,'$::g")
+	wand=$(pkg-config --libs Wand | sed -e "s:^ *::g" -e "s: *$::g" -e "s:-l:\':g" -e "s: :',:g" -e "s:$:':g" -e "s:,'$::g")
 
 	distutils-r1_python_prepare_all
 
