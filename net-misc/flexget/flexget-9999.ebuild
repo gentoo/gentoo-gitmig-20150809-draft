@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.53 2015/01/05 23:45:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.54 2015/01/05 23:48:38 floppym Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ DEPEND="
 	dev-python/pyyaml[${PYTHON_USEDEP}]
 	>=dev-python/beautifulsoup-4.1:4[${PYTHON_USEDEP}]
 	<dev-python/beautifulsoup-4.4:4[${PYTHON_USEDEP}]
-	!=dev-python/beautifulsoup-4.2.0
+	!~dev-python/beautifulsoup-4.2.0
 	>=dev-python/html5lib-0.11[${PYTHON_USEDEP}]
 	dev-python/PyRSS2Gen[${PYTHON_USEDEP}]
 	dev-python/pynzb[${PYTHON_USEDEP}]
