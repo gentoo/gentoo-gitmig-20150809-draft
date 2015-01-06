@@ -44,7 +44,7 @@
  	}
  	if (OptionLine[sizeof(OptionLine)-1] != '\0') {
 -	    sprintf(MsgBuf, "%s: optionline longer than %d\n",
-+	    sprintf(MsgBuf, "%s: optionline longer than %ld\n",
++	    sprintf(MsgBuf, "%s: optionline longer than %zd\n",
  	      myname, sizeof(OptionLine)-1);
  	    Exit(MsgBuf, 3);
  	}
