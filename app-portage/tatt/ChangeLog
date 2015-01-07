@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/tatt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/tatt/ChangeLog,v 1.9 2015/01/07 14:16:39 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/tatt/ChangeLog,v 1.10 2015/01/07 14:17:58 tomka Exp $
+
+  07 Jan 2015; Thomas Kahle <tomka@gentoo.org> tatt-0.2.ebuild:
+  Install manpages also in non-live ebuild
 
 *tatt-0.2 (07 Jan 2015)
 
