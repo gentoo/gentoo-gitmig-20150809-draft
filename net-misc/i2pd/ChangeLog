@@ -1,4 +1,6 @@
-
+# ChangeLog for net-misc/i2pd
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/i2pd/ChangeLog,v 1.2 2015/01/08 22:47:37 blueness Exp $
 
   07 Jan 2015; Francisco Blas Izquierdo Riera (klondike) i2pd-0.6.0.ebuild:
   Remove library USE as it doesn't work the expected way
