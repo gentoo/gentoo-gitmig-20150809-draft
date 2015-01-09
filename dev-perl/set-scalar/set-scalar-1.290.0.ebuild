@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/set-scalar-1.290.0.ebuild,v 1.1 2015/01/09 18:42:12 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/set-scalar-1.290.0.ebuild,v 1.2 2015/01/09 18:43:18 zlogene Exp $
 
 EAPI=5
 
 MY_PN=Set-Scalar
 MODULE_AUTHOR=DAVIDO
-MODULE_VERSION=1.28
+MODULE_VERSION=1.29
 inherit perl-module
 
 DESCRIPTION="Scalar set operations"
