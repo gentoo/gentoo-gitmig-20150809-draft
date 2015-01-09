@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipt_netflow/ipt_netflow-2.0.1.ebuild,v 1.1 2014/09/16 06:06:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipt_netflow/ipt_netflow-2.0.1.ebuild,v 1.2 2015/01/09 20:35:29 pinkbyte Exp $
 
 EAPI=5
 inherit eutils linux-info linux-mod multilib toolchain-funcs
@@ -32,6 +32,7 @@ IPT_LIB="/usr/$(get_libdir)/xtables"
 pkg_setup() {
 	local CONFIG_CHECK="~IP_NF_IPTABLES"
 	use debug && CONFIG_CHECK+=" ~DEBUG_FS"
+	kernel_is -gt 3 16 && die "${P} requires kernel version < 3.17"
 	linux-mod_pkg_setup
 }
 
