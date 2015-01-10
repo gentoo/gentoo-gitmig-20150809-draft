@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksokoban/ksokoban-9999.ebuild,v 1.1 2015/01/10 04:12:49 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ksokoban/ksokoban-9999.ebuild,v 1.2 2015/01/10 04:15:32 bircoph Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ else
 fi
 
 inherit cmake-utils
-DESCRIPTION="The japanese warehouse keeper game "
+DESCRIPTION="The japanese warehouse keeper game"
 HOMEPAGE="https://sourceforge.net/projects/ksokoban/"
 LICENSE="GPL-2"
 SLOT="0"
