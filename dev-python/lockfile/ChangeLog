@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/lockfile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/ChangeLog,v 1.25 2015/01/10 17:42:27 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/ChangeLog,v 1.26 2015/01/10 17:54:59 djc Exp $
+
+*lockfile-0.10.2 (10 Jan 2015)
+
+  10 Jan 2015; Dirkjan Ochtman <djc@gentoo.org> +lockfile-0.10.2.ebuild:
+  Version bump lockfile to 0.10.2 (drop sparc and pypy for pbr dep)
 
   10 Jan 2015; Dirkjan Ochtman <djc@gentoo.org> -lockfile-0.8-r1.ebuild,
   -lockfile-0.8.ebuild, -lockfile-0.9.1.ebuild:
