@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/dracut
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.182 2014/12/19 17:31:07 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.183 2015/01/11 14:20:14 aidecoe Exp $
+
+*dracut-040-r3 (11 Jan 2015)
+
+  11 Jan 2015; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-040-r3.ebuild,
+  +files/040-0007-Take-into-account-lib64-dirs-when-dete.patch:
+  Fix lsinitrd failure to detect version and modules - bug #533112.
+
+  Thanks to poncho <poncho@spahan.ch> and Jeroen Roovers <jer@gentoo.org> for
+  patch.
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> dracut-034-r4.ebuild,
   dracut-036-r4.ebuild, dracut-037-r3.ebuild, dracut-038-r2.ebuild,
