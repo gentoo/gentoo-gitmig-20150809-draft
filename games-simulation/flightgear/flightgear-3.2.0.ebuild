@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-3.2.0.ebuild,v 1.1 2015/01/11 13:53:40 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-3.2.0.ebuild,v 1.2 2015/01/11 13:57:39 reavertm Exp $
 
 EAPI=5
 
@@ -20,6 +20,8 @@ COMMON_DEPEND="
 	>=dev-games/openscenegraph-3.2.0[png]
 	~dev-games/simgear-${PV}
 	media-libs/openal
+	media-libs/speex
+	media-sound/gsm
 	sys-libs/zlib
 	x11-libs/libX11
 	dbus? ( >=sys-apps/dbus-1.6.18-r1 )
