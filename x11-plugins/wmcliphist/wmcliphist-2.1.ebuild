@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/wmcliphist-2.1.ebuild,v 1.1 2015/01/12 13:35:21 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/wmcliphist-2.1.ebuild,v 1.2 2015/01/12 13:39:22 voyageur Exp $
 
 EAPI=5
-inherit eutils toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="Dockable clipboard history application for Window Maker"
-HOMEPAGE="http://windowmaker.org/dockapps/?name=wmclock"
+HOMEPAGE="http://windowmaker.org/dockapps/?name=wmcliphist"
 # Grab from http://windowmaker.org/dockapps/?download=${P}.tar.gz
 SRC_URI="http://dev.gentoo.org/~voyageur/distfiles/${P}.tar.gz"
 
