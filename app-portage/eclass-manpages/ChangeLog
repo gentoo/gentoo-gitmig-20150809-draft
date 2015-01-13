@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/eclass-manpages
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.36 2015/01/13 22:06:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.37 2015/01/13 22:08:06 floppym Exp $
+
+  13 Jan 2015; Mike Gilbert <floppym@gentoo.org>
+  -eclass-manpages-20120718.ebuild, -eclass-manpages-20130110.ebuild,
+  eclass-manpages-20150113.ebuild:
+  Stable for all. Remove old.
 
 *eclass-manpages-20150113 (13 Jan 2015)
 
