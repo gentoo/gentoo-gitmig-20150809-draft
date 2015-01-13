@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.83 2015/01/13 21:34:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.84 2015/01/13 21:35:29 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -798,6 +798,9 @@ python_setup() {
 # EPYTHON & PYTHON will be exported.
 python_export_best() {
 	debug-print-function ${FUNCNAME} "${@}"
+
+	eqawarn "python_export_best() is deprecated. Please use python_setup instead,"
+	eqawarn "combined with python_export if necessary."
 
 	[[ ${#} -gt 0 ]] || set -- EPYTHON PYTHON
 
