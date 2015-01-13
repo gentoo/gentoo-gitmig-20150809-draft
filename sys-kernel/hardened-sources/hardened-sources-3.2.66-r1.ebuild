@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-3.2.66.ebuild,v 1.1 2015/01/07 20:52:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-3.2.66-r1.ebuild,v 1.1 2015/01/13 01:17:24 blueness Exp $
 
 EAPI="5"
 
