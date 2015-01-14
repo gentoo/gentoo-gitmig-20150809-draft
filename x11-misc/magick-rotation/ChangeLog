@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/magick-rotation
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/magick-rotation/ChangeLog,v 1.4 2015/01/14 05:35:54 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/magick-rotation/ChangeLog,v 1.5 2015/01/14 05:39:20 pinkbyte Exp $
+
+  14 Jan 2015; Sergey Popov <pinkbyte@gentoo.org>
+  magick-rotation-1.6.2-r1.ebuild:
+  Restrict SLOT in dev-python/pygobject dependency
 
 *magick-rotation-1.6.2-r1 (14 Jan 2015)
 
