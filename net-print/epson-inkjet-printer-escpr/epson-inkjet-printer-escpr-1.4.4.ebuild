@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/epson-inkjet-printer-escpr/epson-inkjet-printer-escpr-1.4.4.ebuild,v 1.2 2015/01/15 04:50:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/epson-inkjet-printer-escpr/epson-inkjet-printer-escpr-1.4.4.ebuild,v 1.3 2015/01/15 05:15:22 floppym Exp $
 
 EAPI=5
 
@@ -17,6 +17,10 @@ IUSE=""
 
 DEPEND="net-print/cups"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}/1.4.4-warnings.patch"
+}
 
 src_configure() {
 	econf --disable-static
