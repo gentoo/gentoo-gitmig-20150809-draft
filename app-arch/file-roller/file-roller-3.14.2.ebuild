@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.14.2.ebuild,v 1.1 2014/12/14 22:31:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.14.2.ebuild,v 1.2 2015/01/18 11:39:32 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -82,7 +82,6 @@ src_configure() {
 		--disable-debug \
 		--enable-magic \
 		--enable-libarchive \
-		--with-smclient=xsmp \
 		$(use_enable nautilus nautilus-actions) \
 		$(use_enable packagekit) \
 		ITSTOOL=$(type -P true)
