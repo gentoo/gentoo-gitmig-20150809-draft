@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_wsgi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.57 2015/01/18 12:43:51 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.58 2015/01/18 12:47:17 djc Exp $
+
+  18 Jan 2015; Dirkjan Ochtman <djc@gentoo.org> -mod_wsgi-4.2.7.ebuild,
+  -mod_wsgi-4.4.2.ebuild, -mod_wsgi-4.4.5.ebuild:
+  Remove old versions of mod_wsgi
 
 *mod_wsgi-4.4.6 (18 Jan 2015)
 
