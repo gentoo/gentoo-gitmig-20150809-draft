@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-19.ebuild,v 1.5 2015/01/18 18:34:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-19.ebuild,v 1.6 2015/01/18 18:45:46 williamh Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ if [[ ${PV} == 9999* ]]; then
 	inherit autotools git-2
 else
 	SRC_URI="mirror://kernel/linux/utils/kernel/kmod/${P}.tar.xz"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+	KEYWORDS="~alpha amd64 ~arm ~arm64 hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 	inherit libtool
 fi
 
@@ -33,7 +33,7 @@ RESTRICT="test"
 # Block systemd below 217 for -static-nodes-indicate-that-creation-of-static-nodes-.patch
 RDEPEND="!sys-apps/module-init-tools
 	!sys-apps/modutils
-	!<sys-apps/openrc-0.13
+	!<sys-apps/openrc-0.13.8
 	!<sys-apps/systemd-216-r3
 	lzma? ( >=app-arch/xz-utils-5.0.4-r1 )
 	python? ( ${PYTHON_DEPS} )

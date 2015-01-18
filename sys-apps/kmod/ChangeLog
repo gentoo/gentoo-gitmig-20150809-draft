@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.181 2015/01/18 18:34:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.182 2015/01/18 18:45:46 williamh Exp $
+
+  18 Jan 2015; William Hubbs <williamh@gentoo.org> kmod-19.ebuild,
+  kmod-9999.ebuild:
+  adjust the openrc blocker to !<0.13.8, restore amd64 stable and sync the live
+  ebuild.
 
   18 Jan 2015; Mike Gilbert <floppym@gentoo.org> kmod-18-r2.ebuild,
   kmod-19.ebuild:
