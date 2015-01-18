@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygit2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygit2/ChangeLog,v 1.31 2014/11/05 06:48:30 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygit2/ChangeLog,v 1.32 2015/01/18 23:33:39 radhermit Exp $
+
+*pygit2-0.22.0 (18 Jan 2015)
+
+  18 Jan 2015; Tim Harder <radhermit@gentoo.org> +pygit2-0.22.0.ebuild:
+  Version bump.
 
 *pygit2-0.21.4 (05 Nov 2014)
 
