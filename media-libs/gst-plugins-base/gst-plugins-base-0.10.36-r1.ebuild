@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.36-r1.ebuild,v 1.11 2014/10/11 12:41:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.36-r1.ebuild,v 1.12 2015/01/19 11:15:29 pacho Exp $
 
 EAPI="5"
 
 GST_ORG_MODULE="gst-plugins-base"
-inherit gstreamer
+inherit eutils gstreamer
 
 DESCRIPTION="Basepack of plugins for gstreamer"
 HOMEPAGE="http://gstreamer.freedesktop.org/"
@@ -37,6 +37,12 @@ src_prepare() {
 	# though they are not actually used. This needs to be fixed upstream by
 	# replacing AC_PATH_XTRA with PKG_CONFIG calls.
 	sed -i -e 's:X_PRE_LIBS -lSM -lICE:X_PRE_LIBS:' "${S}"/configure || die
+
+	# Fix compilation with gcc-4.9, bug #529962
+	epatch "${FILESDIR}"/${PN}-0.10.36-gcc-4.9.patch
+
+	# baseaudiosink: Resync when ringbuffer resets (from '0.10' branch)
+	epatch "${FILESDIR}"/${PN}-0.10.36-resync-ringbuffer.patch
 }
 
 multilib_src_configure() {
