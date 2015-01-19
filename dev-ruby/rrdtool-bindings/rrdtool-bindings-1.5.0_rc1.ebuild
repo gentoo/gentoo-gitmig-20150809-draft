@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rrdtool-bindings/rrdtool-bindings-1.5.0_rc1.ebuild,v 1.1 2015/01/19 15:13:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rrdtool-bindings/rrdtool-bindings-1.5.0_rc1.ebuild,v 1.2 2015/01/19 15:24:46 jer Exp $
 
 EAPI="5"
 
@@ -38,8 +38,11 @@ RUBY_PATCHES=(
 )
 
 each_ruby_configure() {
+	rm ../../src/rrd_config.h || die
+	touch ../../src/rrd_config.h || die
+
 	${RUBY} extconf.rb \
-		--with-cflags="${CFLAGS} $(usex graph -DHAVE_RRD_GRAPH '')" || die
+		--with-cflags="${CFLAGS} $(usex graph -DHAVE_RRD_GRAPH -UHAVE_RRD_GRAPH)" || die
 }
 
 each_ruby_compile() {
@@ -47,7 +50,9 @@ each_ruby_compile() {
 }
 
 each_ruby_test() {
-	${RUBY} -I. test.rb || die
+	if use graph; then
+		${RUBY} -I. test.rb || die
+	fi
 }
 
 all_ruby_install() {
