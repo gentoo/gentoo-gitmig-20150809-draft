@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev-init-scripts
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.109 2015/01/19 14:32:52 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.110 2015/01/19 15:01:05 blueness Exp $
+
+  19 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
+  udev-init-scripts-27.ebuild:
+  Stable on arm, bug #531602.
 
   19 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
   udev-init-scripts-27.ebuild:
