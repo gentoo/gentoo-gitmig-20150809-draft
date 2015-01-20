@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/otter/otter-9999.ebuild,v 1.4 2014/11/05 16:43:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/otter/otter-9999.ebuild,v 1.5 2015/01/20 17:46:13 jer Exp $
 
 EAPI=5
 WANT_CMAKE="always"
@@ -28,7 +28,7 @@ DEPEND="
 RDEPEND="
 	${DEPEND}
 "
-DOCS=( CHANGELOG HACKING TODO )
+DOCS=( CHANGELOG CONTRIBUTING.md TODO )
 
 src_prepare() {
 	if [[ -n ${LINGUAS} ]]; then
