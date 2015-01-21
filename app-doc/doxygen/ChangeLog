@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.279 2015/01/21 15:25:13 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.280 2015/01/21 15:29:06 tamiko Exp $
+
+  21 Jan 2015; Matthias Maier <tamiko@gentoo.org> -doxygen-1.7.6.1.ebuild:
+  drop old
 
 *doxygen-1.8.9.1 (21 Jan 2015)
 
