@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/opencpn-plugin-br24radar/opencpn-plugin-br24radar-1.1.ebuild,v 1.1 2015/01/21 23:19:37 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/opencpn-plugin-br24radar/opencpn-plugin-br24radar-1.1.ebuild,v 1.2 2015/01/21 23:23:30 mschiff Exp $
 
 EAPI=5
 
@@ -23,6 +23,7 @@ RDEPEND="
 	>=sci-geosciences/opencpn-4.0.0
 	sys-devel/gettext
 "
+
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
