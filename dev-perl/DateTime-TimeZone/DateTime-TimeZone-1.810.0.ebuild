@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/DateTime-TimeZone-1.810.0.ebuild,v 1.7 2015/01/25 11:08:40 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/DateTime-TimeZone-1.810.0.ebuild,v 1.8 2015/01/25 11:16:33 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Time zone object base class and factory"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~ppc64 ~x86"
 IUSE="test"
 
 RDEPEND="
