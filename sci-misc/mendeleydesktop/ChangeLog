@@ -1,6 +1,14 @@
 # ChangeLog for sci-misc/mendeleydesktop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/ChangeLog,v 1.18 2015/01/08 15:54:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/ChangeLog,v 1.19 2015/01/25 15:37:11 xmw Exp $
+
+*mendeleydesktop-1.13.1 (25 Jan 2015)
+
+  25 Jan 2015; Michael Weber <xmw@gentoo.org>
+  +files/mendeleydesktop-fix-python3.patch, +mendeleydesktop-1.13.1.ebuild,
+  -mendeleydesktop-1.12.1.ebuild, -mendeleydesktop-1.12.4.ebuild, metadata.xml:
+  Version bump (bug 536656, thanks Andrés Becerra Sandoval, Marius Brehler &
+  Alexander), changed license file (bug 536686), adding myself as co-maintainer.
 
 *mendeleydesktop-1.12.4 (08 Jan 2015)
 
