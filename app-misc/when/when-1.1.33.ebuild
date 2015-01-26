@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/when/when-1.1.33.ebuild,v 1.3 2015/01/17 14:00:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/when/when-1.1.33.ebuild,v 1.4 2015/01/26 10:36:42 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.lightandmatter.com/when/when.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ppc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}"
