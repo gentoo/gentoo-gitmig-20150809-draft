@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.2.ebuild,v 1.19 2015/01/26 13:45:35 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.2.ebuild,v 1.20 2015/01/26 13:53:45 dlan Exp $
 
 EAPI="5"
 
@@ -410,7 +410,7 @@ src_configure() {
 	# _FORTIFY_SOURCE is set to 2 in config.h, which is also the default value on Gentoo.
 	# Other values of _FORTIFY_SOURCE may break the build (bug 523144), so definition should not be removed from config.h.
 	# To prevent redefinition warnings, we undefine _FORTIFY_SOURCE at the very start of config.h file
-	sed -i '1i#undef _FORTIFY_SOURCE' ${S}/config.h || die
+	sed -i '1i#undef _FORTIFY_SOURCE' "${S}"/config.h || die
 }
 
 src_test() {
