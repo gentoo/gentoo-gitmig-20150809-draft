@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/inform-mode
 # Copyright 2002-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/inform-mode/ChangeLog,v 1.14 2015/01/27 18:20:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/inform-mode/ChangeLog,v 1.15 2015/01/27 18:28:15 ulm Exp $
+
+*inform-mode-1.6.2 (27 Jan 2015)
+
+  27 Jan 2015; Ulrich Müller <ulm@gentoo.org> +inform-mode-1.6.2.ebuild:
+  Version bump.
 
   27 Jan 2015; Ulrich Müller <ulm@gentoo.org> inform-mode-1.5.8.ebuild:
   Update HOMEPAGE, bug 537928. Update ebuild to EAPI 5. Specify LICENSE more
