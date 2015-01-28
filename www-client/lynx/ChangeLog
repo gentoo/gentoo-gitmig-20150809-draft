@@ -1,6 +1,11 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.162 2015/01/28 01:36:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.163 2015/01/28 01:37:52 radhermit Exp $
+
+  28 Jan 2015; Tim Harder <radhermit@gentoo.org> -lynx-2.8.8_rc1.ebuild,
+  -lynx-2.8.8_p1.ebuild, -files/lynx-2.8.7-configure-openssl.patch,
+  -files/lynx-2.8.8_pre14-parallel.patch:
+  Remove old.
 
 *lynx-2.8.9_pre4 (28 Jan 2015)
 
