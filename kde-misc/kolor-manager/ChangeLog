@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kolor-manager
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kolor-manager/ChangeLog,v 1.10 2015/01/28 15:18:24 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kolor-manager/ChangeLog,v 1.11 2015/01/28 15:21:20 kensington Exp $
+
+  28 Jan 2015; Michael Palimaka <kensington@gentoo.org>
+  +files/kolor-manager-1.0.2-cmake-3.patch, kolor-manager-1.0.2.ebuild:
+  Fix configure with >=dev-util/cmake-3 wrt bug #537138.
 
   28 Jan 2015; Michael Palimaka <kensington@gentoo.org>
   -files/FindOyranos.cmake:
