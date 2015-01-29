@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gwp/gwp-0.4.0-r2.ebuild,v 1.8 2014/06/25 06:04:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gwp/gwp-0.4.0-r2.ebuild,v 1.9 2015/01/29 10:12:01 pacho Exp $
 
 EAPI=2
 inherit eutils flag-o-matic gnome2
