@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.1.0_beta1_p20130710-r1.ebuild,v 1.10 2015/01/30 19:46:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.1.0_beta1_p20130710-r1.ebuild,v 1.11 2015/01/30 19:52:27 floppym Exp $
 
 EAPI="5"
 
@@ -77,7 +77,6 @@ DOCS=( README )
 PATCHES=(
 	"${FILESDIR}/${P}-ffmpeg.patch"
 	"${FILESDIR}/${PN}-1.1-CVE-2014-0250.patch"
-	"${FILESDIR}/freerdp-1.1-cmake-3.1.patch"
 )
 
 src_configure() {
