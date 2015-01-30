@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warnings/Test-Warnings-0.16.0.ebuild,v 1.15 2015/01/25 15:56:25 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warnings/Test-Warnings-0.16.0.ebuild,v 1.16 2015/01/30 11:33:06 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION='Test for warnings and the lack of them'
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
 IUSE="test"
 
 # Test::Builder -> perl-Test-Simple
