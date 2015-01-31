@@ -5,4 +5,7 @@
 	<longdescription>
 		Cryptographic numbers: functions and algorithms
 	</longdescription>
+	<use>
+		<flag name="integer-gmp">use integer-gmp library</flag>
+	</use>
 </pkgmetadata>
