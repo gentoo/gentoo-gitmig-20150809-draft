@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.5.1.ebuild,v 1.4 2015/01/31 16:42:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.5.1.ebuild,v 1.5 2015/01/31 19:36:49 grobian Exp $
 
 EAPI=5
 
@@ -35,6 +35,7 @@ COMMON_DEPEND="
 		xml? ( dev-libs/libxml2:2= )
 	)
 	gold? ( >=sys-devel/binutils-2.22:*[cxx] )
+	elibc_Darwin? ( >=sys-devel/binutils-apple-5.1 )
 	libedit? ( dev-libs/libedit:0=[${MULTILIB_USEDEP}] )
 	libffi? ( >=virtual/libffi-3.0.13-r1:0=[${MULTILIB_USEDEP}] )
 	ncurses? ( >=sys-libs/ncurses-5.9-r3:5=[${MULTILIB_USEDEP}] )
