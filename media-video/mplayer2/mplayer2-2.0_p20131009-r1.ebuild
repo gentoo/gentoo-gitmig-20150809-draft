@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.71 2015/02/01 23:21:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20131009-r1.ebuild,v 1.1 2015/02/01 23:21:49 mgorny Exp $
 
 EAPI=5
 
@@ -164,6 +164,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-py2compat.patch"
+	epatch "${FILESDIR}/${P}_support_libav10.patch"
 	epatch_user
 
 	# fix path to bash executable in configure scripts
