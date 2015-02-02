@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-218-r2.ebuild,v 1.1 2015/01/17 20:51:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-218-r2.ebuild,v 1.2 2015/02/02 21:14:51 floppym Exp $
 
 EAPI=5
 
@@ -356,7 +356,7 @@ multilib_src_install_all() {
 	# permanently.
 	rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-networkd.service
 	rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-resolved.service
-	rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-timesyncd.service
+	rm -f "${D}"/etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service
 	rm -rf "${D}"/etc/systemd/system/network-online.target.wants
 }
 
