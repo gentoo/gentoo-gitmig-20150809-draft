@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.236 2015/02/02 15:41:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.237 2015/02/02 15:51:38 jer Exp $
+
+  02 Feb 2015; Jeroen Roovers <jer@gentoo.org> use.mask:
+  Sort.
 
   02 Feb 2015; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Mask USE=gevent for dev-python/pyzor (bug #531068).
