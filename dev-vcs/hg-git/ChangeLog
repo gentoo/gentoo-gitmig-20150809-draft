@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/hg-git
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.60 2015/01/26 09:44:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.61 2015/02/02 10:07:57 djc Exp $
+
+  02 Feb 2015; Dirkjan Ochtman <djc@gentoo.org> -hg-git-0.5.0-r1.ebuild,
+  -hg-git-0.6.0.ebuild, -hg-git-0.6.1.ebuild:
+  Remove old versions of hg-git
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> hg-git-0.7.0.ebuild:
   Stable for x86, wrt bug #535412
