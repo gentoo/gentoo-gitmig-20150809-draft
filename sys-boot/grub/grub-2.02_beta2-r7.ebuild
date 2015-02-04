@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r7.ebuild,v 1.2 2015/02/04 02:25:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r7.ebuild,v 1.3 2015/02/04 02:27:28 floppym Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ else
 fi
 
 DEJAVU=dejavu-sans-ttf-2.34
-UNIFONT=unifont-7.0.01
+UNIFONT=unifont-7.0.06
 SRC_URI+=" mirror://gnu/unifont/${UNIFONT}/${UNIFONT}.pcf.gz
 	truetype? ( mirror://sourceforge/dejavu/${DEJAVU}.zip )"
 
