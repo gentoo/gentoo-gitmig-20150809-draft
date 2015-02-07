@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/imsettings-1.5.0.ebuild,v 1.2 2014/01/10 10:13:52 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/imsettings-1.5.0.ebuild,v 1.3 2015/02/07 13:41:34 naota Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit eutils autotools
 
 DESCRIPTION="Delivery framework for general Input Method configuration"
 HOMEPAGE="http://tagoh.github.com/imsettings/"
-SRC_URI="http://imsettings.googlecode.com/files/${P}.tar.bz2"
+SRC_URI="https://bitbucket.org/tagoh/imsettings/downloads/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/check-0.9.4
 	>=dev-libs/glib-2.26
 	sys-apps/dbus
 	>=x11-libs/gtk+-2.12:2
-	>=x11-libs/libgxim-0.3.1
+	>=x11-libs/libgxim-0.4.0
 	>=x11-libs/libnotify-0.7
 	x11-libs/libX11
 	gconf? ( gnome-base/gconf )
