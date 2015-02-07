@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.454 2015/02/07 02:21:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.455 2015/02/07 02:25:09 radhermit Exp $
+
+  07 Feb 2015; Tim Harder <radhermit@gentoo.org> gvim-9999.ebuild:
+  Use python-r1 instead of python-single-r1.
 
 *gvim-7.4.622 (07 Feb 2015)
 
