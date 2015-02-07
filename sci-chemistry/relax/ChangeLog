@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/relax
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/ChangeLog,v 1.33 2015/02/07 07:56:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/ChangeLog,v 1.34 2015/02/07 07:58:05 jlec Exp $
+
+  07 Feb 2015; Justin Lecher <jlec@gentoo.org> -files/relax-2.1.0-gentoo.patch,
+  -files/relax-2.2.1-gentoo.patch, -files/relax-3.0.1-gentoo.patch,
+  -files/relax-3.0.2-wxpython.patch, -files/relax-3.0.2-wxpython-2.patch,
+  -files/relax-3.1.0-sample-script.patch,
+  -files/relax-3.1.0-sample-script-backport.patch,
+  -files/relax-3.1.7-dpar.patch, -files/relax-3.2.2-gentoo.patch:
+  Drop old patches
 
 *relax-3.3.6 (07 Feb 2015)
 
