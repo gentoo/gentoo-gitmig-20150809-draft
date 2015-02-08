@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.19 2015/02/08 23:13:29 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.20 2015/02/08 23:22:18 twitch153 Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ IUSE="alsa ao bluetooth doc ffmpeg +lzo openal opengl openmp portaudio pulseaudi
 RDEPEND=">=media-libs/glew-1.10
 	>=media-libs/libsfml-2.1
 	>=net-libs/miniupnpc-1.8
-	sys-libs/readline
+	sys-libs/readline:=
 	x11-libs/libXext
 	x11-libs/libXrandr
 	media-libs/libsdl2[haptic,joystick]
