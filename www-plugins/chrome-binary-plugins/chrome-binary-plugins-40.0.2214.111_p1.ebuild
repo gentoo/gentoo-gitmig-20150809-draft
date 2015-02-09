@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-40.0.2214.111_p1.ebuild,v 1.2 2015/02/08 16:05:41 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-40.0.2214.111_p1.ebuild,v 1.3 2015/02/09 10:32:23 zx2c4 Exp $
 
 EAPI=5
 
@@ -42,7 +42,7 @@ SRC_URI="
 		https://dl.google.com/linux/chrome/deb/pool/main/g/${MY_PN}/${MY_P}_i386.deb
 	)
 "
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 fi
 
 LICENSE="google-chrome"
