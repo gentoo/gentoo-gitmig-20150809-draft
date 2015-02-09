@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/avrdude-6.1.ebuild,v 1.1 2014/11/24 07:08:46 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/avrdude-6.1.ebuild,v 1.2 2015/02/09 10:20:24 aballier Exp $
 
 EAPI=5
 
@@ -18,6 +18,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="doc ftdi ncurses readline"
 
 RDEPEND="virtual/libusb:1
+	virtual/libusb:0
 	ftdi? ( dev-embedded/libftdi )
 	ncurses? ( sys-libs/ncurses )
 	readline? ( sys-libs/readline )"
