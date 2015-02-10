@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16343 2015/02/10 13:47:56 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16344 2015/02/10 17:05:13 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,25 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (11 Feb 2015)
+# temp bump mask
+=liblxqt-mount/liblxqt-mount-0.9.0
+=liblxqt/liblxqt-0.9.0
+=lxqt-about/lxqt-about-0.9.0
+=lxqt-admin/lxqt-admin-0.9.0
+=lxqt-common/lxqt-common-0.9.0
+=lxqt-config/lxqt-config-0.9.0
+=lxqt-globalkeys/lxqt-globalkeys-0.9.0
+=lxqt-meta/lxqt-meta-0.9.0
+=lxqt-notificationd/lxqt-notificationd-0.9.0
+=lxqt-openssh-askpass/lxqt-openssh-askpass-0.9.0
+=lxqt-panel/lxqt-panel-0.9.0
+=lxqt-policykit/lxqt-policykit-0.9.0
+=lxqt-powermanagement/lxqt-powermanagement-0.9.0
+=lxqt-qtplugin/lxqt-qtplugin-0.9.0
+=lxqt-runner/lxqt-runner-0.9.0
+=lxqt-session/lxqt-session-0.9.0
 
 # Patrick Lauer <patrick@gentoo.org (10 Feb 2015)
 # Depends on versions of ffmpeg that are still missing keywords
