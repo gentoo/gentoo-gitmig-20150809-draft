@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.650 2015/02/09 20:05:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.651 2015/02/10 00:34:08 blueness Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -242,7 +242,8 @@ S=$(
 
 gentoo_urls() {
 	local devspace="HTTP~vapier/dist/URI HTTP~rhill/dist/URI
-	HTTP~halcy0n/patches/URI HTTP~zorry/patches/gcc/URI"
+	HTTP~halcy0n/patches/URI HTTP~zorry/patches/gcc/URI
+	HTTP~blueness/dist/URI"
 	devspace=${devspace//HTTP/http:\/\/dev.gentoo.org\/}
 	echo mirror://gentoo/$1 ${devspace//URI/$1}
 }
