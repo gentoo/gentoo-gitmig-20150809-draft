@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1532 2015/02/11 03:06:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1533 2015/02/11 03:25:52 patrick Exp $
+
+  11 Feb 2015; Patrick Lauer <patrick@gentoo.org> kde4-functions.eclass:
+  Better fix to kde4-functions so that kde-base/ category doesn't get horribly
+  broken
 
   11 Feb 2015; Patrick Lauer <patrick@gentoo.org> kde4-functions.eclass:
   Fix kde4-functions so that kde-base/ category doesn't get horribly broken
