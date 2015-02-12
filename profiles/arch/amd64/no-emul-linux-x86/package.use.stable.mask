@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.36 2015/02/11 22:33:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.37 2015/02/12 10:35:21 pacho Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -213,6 +213,7 @@ media-libs/libofa -abi_x86_32
 media-libs/libogg -abi_x86_32
 media-libs/libpng -abi_x86_32
 media-libs/libpostproc -abi_x86_32
+media-libs/libquicktime -abi_x86_32
 media-libs/libraw -abi_x86_32
 media-libs/libreplaygain -abi_x86_32
 media-libs/librosprite -abi_x86_32
