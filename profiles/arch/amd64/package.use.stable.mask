@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.114 2015/02/12 10:45:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.115 2015/02/12 10:47:13 pacho Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -240,6 +240,7 @@ media-libs/libpng abi_x86_32
 media-libs/libpostproc abi_x86_32
 media-libs/libquicktime abi_x86_32
 media-libs/libquvi abi_x86_32
+media-libs/libquvi-scripts abi_x86_32
 media-libs/libraw abi_x86_32
 media-libs/libreplaygain abi_x86_32
 media-libs/librosprite abi_x86_32
