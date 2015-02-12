@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.37 2015/02/12 10:35:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.38 2015/02/12 10:39:09 pacho Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -184,6 +184,7 @@ media-libs/libaacs -abi_x86_32
 media-libs/libao -abi_x86_32
 media-libs/libart_lgpl -abi_x86_32
 media-libs/libass -abi_x86_32
+media-libs/libbluray -abi_x86_32
 media-libs/libbs2b -abi_x86_32
 media-libs/libcaca -abi_x86_32
 media-libs/libcddb -abi_x86_32
