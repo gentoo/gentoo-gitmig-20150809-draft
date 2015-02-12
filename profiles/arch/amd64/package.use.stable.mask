@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.112 2015/02/12 10:39:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.113 2015/02/12 10:42:34 pacho Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -220,10 +220,12 @@ media-libs/libexif abi_x86_32
 media-libs/libfame abi_x86_32
 media-libs/libgii abi_x86_32
 media-libs/libgphoto2 abi_x86_32
+media-libs/libharu abi_x86_32
 media-libs/libid3tag abi_x86_32
 media-libs/libiec61883 abi_x86_32
 media-libs/libjpeg-turbo abi_x86_32
 media-libs/libmad abi_x86_32
+media-libs/libmetalink abi_x86_32
 media-libs/libmikmod abi_x86_32
 media-libs/libmimic abi_x86_32
 media-libs/libmms abi_x86_32
