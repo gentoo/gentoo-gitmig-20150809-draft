@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.116 2015/02/12 10:49:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.117 2015/02/12 10:51:09 pacho Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -253,6 +253,7 @@ media-libs/libsndfile abi_x86_32
 media-libs/libsoundtouch abi_x86_32
 media-libs/libsvgtiny abi_x86_32
 media-libs/libtheora abi_x86_32
+media-libs/libtimidity abi_x86_32
 media-libs/libv4l abi_x86_32
 media-libs/libvisual abi_x86_32
 media-libs/libvorbis abi_x86_32
