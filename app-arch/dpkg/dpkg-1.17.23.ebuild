@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.17.23.ebuild,v 1.1 2014/12/28 08:14:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.17.23.ebuild,v 1.2 2015/02/13 21:15:15 jer Exp $
 
 EAPI=5
 inherit eutils multilib autotools toolchain-funcs
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="+bzip2 +lzma nls selinux test unicode +update-alternatives +zlib"
 
 RDEPEND="
-	>=dev-lang/perl-5.6.0
+	>=dev-lang/perl-5.6.0:=
 	dev-perl/TimeDate
 	>=sys-libs/ncurses-5.2-r7
 	bzip2? ( app-arch/bzip2 )
