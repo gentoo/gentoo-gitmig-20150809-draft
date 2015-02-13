@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-9.20150101.ebuild,v 1.1 2015/01/04 10:49:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-9.20150101.ebuild,v 1.2 2015/02/13 21:11:42 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -21,7 +21,7 @@ NLS_DEPEND=$(
 )
 
 RDEPEND="
-	>=dev-lang/perl-5.10
+	>=dev-lang/perl-5.10:=
 	>=app-arch/dpkg-1.17
 	dev-perl/TimeDate
 	virtual/perl-Getopt-Long
