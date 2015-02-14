@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2015a.ebuild,v 1.1 2015/02/14 02:07:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2015a.ebuild,v 1.2 2015/02/14 02:27:33 floppym Exp $
 
 EAPI="4"
 
@@ -139,9 +139,12 @@ pkg_config() {
 		elog "Your ${etc_lt} has been reset to Factory; enjoy!"
 		tz="Factory"
 	fi
-	einfo "Updating ${etc_lt} with ${EROOT}usr/share/zoneinfo/${tz}"
-	[[ -L ${etc_lt} ]] && rm -f "${etc_lt}"
-	cp -f "${EROOT}"/usr/share/zoneinfo/"${tz}" "${etc_lt}"
+	if [[ -L ${etc_lt} ]]; then
+		einfo "Skipping symlinked ${etc_lt}"
+	else
+		einfo "Updating ${etc_lt} with ${EROOT}usr/share/zoneinfo/${tz}"
+		cp -f "${EROOT}"/usr/share/zoneinfo/"${tz}" "${etc_lt}"
+	fi
 }
 
 pkg_postinst() {
