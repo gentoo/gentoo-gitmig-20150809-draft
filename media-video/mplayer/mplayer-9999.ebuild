@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.166 2015/01/30 17:15:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.167 2015/02/14 20:44:56 aballier Exp $
 
 EAPI=5
 
@@ -107,7 +107,7 @@ RDEPEND+="
 	nut? ( >=media-libs/libnut-661 )
 	openal? ( media-libs/openal )
 	opengl? ( virtual/opengl )
-	png? ( media-libs/libpng )
+	png? ( media-libs/libpng:0= )
 	pnm? ( media-libs/netpbm )
 	pulseaudio? ( media-sound/pulseaudio )
 	rar? (
