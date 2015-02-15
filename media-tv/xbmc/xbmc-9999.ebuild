@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.167 2015/02/01 22:59:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.168 2015/02/15 18:03:49 vapier Exp $
 
 EAPI="5"
 
@@ -224,7 +224,6 @@ src_configure() {
 		--docdir=/usr/share/doc/${PF} \
 		--disable-ccache \
 		--disable-optimizations \
-		--enable-external-libraries \
 		$(usex libav "--enable-libav-compat" "") \
 		$(use_enable airplay) \
 		$(use_enable avahi) \
@@ -236,7 +235,6 @@ src_configure() {
 		$(use_enable fishbmc) \
 		$(use_enable gles) \
 		$(use_enable goom) \
-		--disable-hal \
 		$(use_enable joystick) \
 		$(use_enable midi mid) \
 		$(use_enable mysql) \
