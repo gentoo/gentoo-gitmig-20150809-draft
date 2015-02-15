@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libabw
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libabw/ChangeLog,v 1.8 2015/02/15 14:56:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libabw/ChangeLog,v 1.9 2015/02/15 14:58:31 ago Exp $
+
+  15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libabw-0.1.1.ebuild:
+  Stable for x86, wrt bug #534684
 
   15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libabw-0.1.1.ebuild:
   Stable for amd64, wrt bug #534684
