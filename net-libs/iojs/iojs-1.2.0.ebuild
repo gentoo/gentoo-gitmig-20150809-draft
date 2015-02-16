@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/iojs/iojs-1.2.0.ebuild,v 1.3 2015/02/16 11:26:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/iojs/iojs-1.2.0.ebuild,v 1.4 2015/02/16 11:28:47 vapier Exp $
 
 EAPI=5
 
@@ -54,6 +54,8 @@ src_prepare() {
 	sed -i -e "s/'lib'/'${LIBDIR}'/" lib/module.js || die
 	sed -i -e "s|\"lib\"|\"${LIBDIR}\"|" deps/npm/lib/npm.js || die
 
+	epatch "${FILESDIR}"/${PN}-1.2.0-pkgconfig.patch
+
 	# Avoid a test that I've only been able to reproduce from emerge. It doesnt
 	# seem sandbox related either (invoking it from a sandbox works fine).
 	# The issue is that no stdin handle is openened when asked for one.
@@ -61,7 +63,7 @@ src_prepare() {
 	# with more gentoo-knowledge than me (jbergstroem) figures it out.
 	rm test/parallel/test-stdout-close-unref.js
 
-	tc-export CC CXX
+	tc-export CC CXX PKG_CONFIG
 	export V=1
 }
 
