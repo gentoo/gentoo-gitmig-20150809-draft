@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/iojs/iojs-1.2.0.ebuild,v 1.2 2015/02/15 03:05:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/iojs/iojs-1.2.0.ebuild,v 1.3 2015/02/16 11:26:23 vapier Exp $
 
 EAPI=5
 
@@ -75,7 +75,7 @@ src_configure() {
 	case ${CHOST} in
 		i?86-*)
 			myarch="ia32"
-			myconf+=" -Dv8_target_arch=ia32" ;;
+			;;
 		x86_64-*)
 			if [[ $ABI = x86 ]]; then
 				myarch="ia32"
