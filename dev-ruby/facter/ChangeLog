@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.120 2015/02/17 06:45:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.121 2015/02/17 06:57:07 graaff Exp $
+
+  17 Feb 2015; Hans de Graaff <graaff@gentoo.org> facter-2.4.1.ebuild:
+  Use already stable mocha 0.13 to facilitate stabling this for security bug
+  540260.
 
 *facter-2.4.1-r1 (17 Feb 2015)
 
