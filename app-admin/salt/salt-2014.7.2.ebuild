@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-9999.ebuild,v 1.17 2015/02/17 20:07:03 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-2014.7.2.ebuild,v 1.1 2015/02/17 20:07:03 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -74,6 +74,10 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 DOCS=(README.rst AUTHORS)
 
 REQUIRED_USE="|| ( raet zeromq )"
+
+PATCHES=(
+	"${FILESDIR}/${PN}-2014.7.1-remove-pydsl-includes-test.patch"
+)
 
 python_prepare() {
 	# this test fails because it trys to "pip install distribute"
