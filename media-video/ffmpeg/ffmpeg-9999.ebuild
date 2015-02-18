@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.178 2015/02/18 09:58:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.179 2015/02/18 10:36:21 aballier Exp $
 
 EAPI="5"
 
@@ -34,17 +34,35 @@ else # Release
 fi
 FFMPEG_REVISION="${PV#*_p}"
 
-LICENSE="GPL-2 amr? ( GPL-3 ) encode? ( aac? ( GPL-3 ) ) samba? ( GPL-3 )"
 SLOT="0/${FFMPEG_SUBSLOT}"
+LICENSE="
+	!gpl? ( LGPL-2.1 )
+	gpl? ( GPL-2 )
+	amr? (
+		gpl? ( GPL-3 )
+		!gpl? ( LGPL-3 )
+	)
+	encode? (
+		aac? (
+			gpl? ( GPL-3 )
+			!gpl? ( LGPL-3 )
+		)
+		amrenc? (
+			gpl? ( GPL-3 )
+			!gpl? ( LGPL-3 )
+		)
+	)
+	samba? ( GPL-3 )
+"
 if [ "${PV#9999}" = "${PV}" ] ; then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 fi
 IUSE="
 	aac aacplus alsa amr amrenc bindist bluray bs2b +bzip2 cdio celt
 	cpudetection debug doc +encode examples faac fdk flite fontconfig frei0r
-	fribidi gme	gnutls gsm +hardcoded-tables +iconv iec61883 ieee1394 jack
+	fribidi gme	gnutls +gpl gsm +hardcoded-tables +iconv iec61883 ieee1394 jack
 	jpeg2k ladspa libass libcaca libsoxr libv4l lzma modplug mp3 +network
-	openal opengl openssl opus oss pic pulseaudio quvi rtmp samba schroedinger
+	openal opengl openssl opus oss pic +postproc pulseaudio quvi rtmp samba schroedinger
 	sdl speex ssh static-libs test theora threads truetype twolame v4l vaapi
 	vdpau vorbis vpx wavpack webp X x264 x265 xcb xvid +zlib zvbi
 	"
@@ -173,7 +191,7 @@ RDEPEND="
 	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
 	zvbi? ( >=media-libs/zvbi-0.2.35[${MULTILIB_USEDEP}] )
 	!media-video/qt-faststart
-	!media-libs/libpostproc
+	postproc? ( !media-libs/libpostproc )
 "
 
 DEPEND="${RDEPEND}
@@ -196,11 +214,29 @@ RDEPEND="${RDEPEND}
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20140508-r3
 		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 
+# Code requiring FFmpeg to be built under gpl license
+GPL_REQUIRED_USE="
+	postproc? ( gpl )
+	frei0r? ( gpl )
+	cdio? ( gpl )
+	samba? ( gpl )
+	encode? (
+		x264? ( gpl )
+		x265? ( gpl )
+		xvid? ( gpl )
+		X? ( gpl )
+	)
+"
 # faac is license-incompatible with ffmpeg
-REQUIRED_USE="bindist? ( encode? ( !faac !aacplus ) !openssl )
+REQUIRED_USE="
+	bindist? (
+		encode? ( !faac !aacplus )
+		gpl? ( !openssl !fdk )
+	)
 	libv4l? ( v4l )
 	fftools_cws2fws? ( zlib )
 	test? ( encode )
+	${GPL_REQUIRED_USE}
 	${CPU_REQUIRED_USE}"
 
 S=${WORKDIR}/${P/_/-}
@@ -224,10 +260,10 @@ multilib_src_configure() {
 	# or $(use_enable foo foo) if no :bar is set.
 	local ffuse=(
 		bzip2:bzlib cpudetection:runtime-cpudetect debug doc
-		gnutls hardcoded-tables iconv lzma network openssl samba:libsmbclient
+		gnutls gpl hardcoded-tables iconv lzma network openssl postproc samba:libsmbclient
 		sdl:ffplay vaapi vdpau X:xlib xcb:libxcb xcb:libxcb-shm xcb:libxcb-xfixes zlib
 	)
-	use openssl && myconf+=( --enable-nonfree )
+	use openssl && use gpl && myconf+=( --enable-nonfree )
 	use samba && myconf+=( --enable-version3 )
 
 	# Encoders
@@ -279,7 +315,7 @@ multilib_src_configure() {
 	for i in bluray celt gme gsm modplug opus quvi rtmp ssh schroedinger speex vorbis vpx zvbi; do
 		ffuse+=( ${i}:lib${i} )
 	done
-	use fdk && myconf+=( --enable-nonfree )
+	use fdk && use gpl && myconf+=( --enable-nonfree )
 
 	for i in "${ffuse[@]}" ; do
 		myconf+=( $(use_enable ${i%:*} ${i#*:}) )
@@ -317,8 +353,6 @@ multilib_src_configure() {
 
 	# Mandatory configuration
 	myconf=(
-		--enable-gpl
-		--enable-postproc
 		--enable-avfilter
 		--enable-avresample
 		--disable-stripping
