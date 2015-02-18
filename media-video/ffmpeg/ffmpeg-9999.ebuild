@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.180 2015/02/18 10:44:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.181 2015/02/18 10:47:35 aballier Exp $
 
 EAPI="5"
 
@@ -220,6 +220,7 @@ GPL_REQUIRED_USE="
 	frei0r? ( gpl )
 	cdio? ( gpl )
 	samba? ( gpl )
+	zvbi? ( gpl )
 	encode? (
 		x264? ( gpl )
 		x265? ( gpl )
