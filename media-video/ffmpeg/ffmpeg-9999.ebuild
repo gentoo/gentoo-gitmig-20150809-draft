@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.179 2015/02/18 10:36:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.180 2015/02/18 10:44:02 aballier Exp $
 
 EAPI="5"
 
@@ -184,10 +184,10 @@ RDEPEND="
 	X? (
 		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
 		>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
-		>=x11-libs/libXfixes-5.0.1[${MULTILIB_USEDEP}]
+		!xcb? ( >=x11-libs/libXfixes-5.0.1[${MULTILIB_USEDEP}] )
 		>=x11-libs/libXv-1.0.10[${MULTILIB_USEDEP}]
 	)
-	xcb? ( x11-libs/libxcb[${MULTILIB_USEDEP}] )
+	xcb? ( >=x11-libs/libxcb-1.4[${MULTILIB_USEDEP}] )
 	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
 	zvbi? ( >=media-libs/zvbi-0.2.35[${MULTILIB_USEDEP}] )
 	!media-video/qt-faststart
@@ -224,7 +224,7 @@ GPL_REQUIRED_USE="
 		x264? ( gpl )
 		x265? ( gpl )
 		xvid? ( gpl )
-		X? ( gpl )
+		X? ( !xcb? ( gpl ) )
 	)
 "
 # faac is license-incompatible with ffmpeg
@@ -293,7 +293,8 @@ multilib_src_configure() {
 	for i in alsa oss jack ; do
 		use ${i} || myconf+=( --disable-indev=${i} )
 	done
-	ffuse+=( libv4l:libv4l2 pulseaudio:libpulse X:x11grab )
+	ffuse+=( libv4l:libv4l2 pulseaudio:libpulse )
+	use xcb || ffuse+=( X:x11grab )
 
 	# Outdevs
 	for i in alsa oss sdl ; do
