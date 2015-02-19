@@ -1,10 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.8.0.ebuild,v 1.1 2015/02/19 09:58:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.8.0.ebuild,v 1.2 2015/02/19 09:59:26 mr_bones_ Exp $
 
 EAPI=5
-inherit autotools flag-o-matic eutils
-
 DESCRIPTION="An ncurses based console frontend for cdrtools and dvd+rw-tools"
 HOMEPAGE="http://cdw.sourceforge.net"
 SRC_URI="mirror://sourceforge/cdw/${P}.tar.gz"
