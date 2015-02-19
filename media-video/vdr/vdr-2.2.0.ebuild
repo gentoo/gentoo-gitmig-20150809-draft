@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-2.2.0.ebuild,v 1.1 2015/02/19 19:38:49 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-2.2.0.ebuild,v 1.2 2015/02/19 19:47:44 hd_brummy Exp $
 
 EAPI=5
 
@@ -277,13 +277,13 @@ src_install() {
 
 pkg_preinstall() {
 
-	has_version "<${CATEGORY}/${PN}-2.2"
-	previous_less_than_2_2=$
+	has_version "<${CATEGORY}/${PN}-2.2.0"
+	previous_less_than_2_2_0=$
 }
 
 pkg_postinst() {
 
-	if [[ $previous_less_than_2_2 = 0 ]] ; then
+	if [[ $previous_less_than_2_2_0 = 0 ]] ; then
 		elog "\n\t---- 15 YEARS ANNIVERSARY EDITON ----\n"
 		elog "\tA lot of thanks to Klaus Schmiedinger"
 		elog "\tfor this nice piece of Software...\n"
