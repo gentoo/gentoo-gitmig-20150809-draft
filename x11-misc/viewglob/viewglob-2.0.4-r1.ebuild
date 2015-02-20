@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.4-r1.ebuild,v 1.1 2015/02/20 14:54:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.4-r1.ebuild,v 1.2 2015/02/20 14:56:42 jlec Exp $
 
 EAPI=5
 
@@ -18,9 +18,9 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="
-	dev-libs/glib
+	dev-libs/glib:2
 	x11-libs/gtk+:2
-	|| ( app-shells/bash app-shells/zsh )"
+	|| ( app-shells/bash:* app-shells/zsh )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
