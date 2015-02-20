@@ -1,9 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.647 2015/02/18 07:41:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.648 2015/02/20 08:36:28 yngwin Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Ben de Groot <yngwin@gentoo.org>
+# Mask experimental feature on stable. This also needs not yet stable mupdf.
+app-text/qpdfview fitz
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (18 Feb 2015)
 # Experimental backend, plus it requires openvg support in mesa which is
