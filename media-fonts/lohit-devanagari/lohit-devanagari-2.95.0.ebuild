@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lohit-devanagari/lohit-devanagari-2.95.0.ebuild,v 1.1 2015/02/20 17:40:39 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lohit-devanagari/lohit-devanagari-2.95.0.ebuild,v 1.2 2015/02/20 17:48:47 yngwin Exp $
 
 EAPI=5
 inherit font
 FONTDIR="/usr/share/fonts/indic/${PN}"
 FONT_SUFFIX="ttf"
 
-DESCRIPTION="The Lohit Bengali font"
+DESCRIPTION="The Lohit Devanagari font"
 HOMEPAGE="https://fedorahosted.org/lohit"
 SRC_URI="https://fedorahosted.org/releases/l/o/lohit/${PN}-${FONT_SUFFIX}-${PV}.tar.gz"
 
