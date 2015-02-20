@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.99.2-r1.ebuild,v 1.1 2015/02/20 08:42:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.99.2-r1.ebuild,v 1.2 2015/02/20 08:54:35 jlec Exp $
 
 EAPI=5
 
@@ -54,6 +54,8 @@ PATCHES=(
 
 src_prepare() {
 	epatch ${PATCHES[@]}
+
+	mv configure.{in,ac} || die
 
 	eautoreconf
 }
