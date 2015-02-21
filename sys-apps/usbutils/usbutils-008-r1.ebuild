@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-008-r1.ebuild,v 1.2 2015/02/21 20:27:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-008-r1.ebuild,v 1.3 2015/02/21 20:29:18 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -18,7 +18,7 @@ IUSE="python"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 CDEPEND="virtual/libusb:1=
-	virtual/libudev"
+	virtual/libudev:="
 DEPEND="${CDEPEND}
 	app-arch/xz-utils
 	virtual/pkgconfig"
