@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.102 2015/02/21 11:37:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.103 2015/02/21 11:49:42 jer Exp $
+
+  21 Feb 2015; Jeroen Roovers <jer@gentoo.org> qca-2.0.3-r1.ebuild:
+  Drop HPPA.
 
 *qca-2.0.3-r1 (21 Feb 2015)
 
