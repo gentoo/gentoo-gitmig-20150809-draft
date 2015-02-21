@@ -1,10 +1,14 @@
 .# ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9810 2015/02/21 07:11:37 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9811 2015/02/21 07:17:08 swift Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Feb 2015; Sven Vermeulen <swift@gentoo.org> package.mask:
+  Recent comments on bug #125902 show that I was overzealous, hearse is not to
+  be unmasked
 
   21 Feb 2015; Sven Vermeulen <swift@gentoo.org> package.mask:
   Unmasking hearse as it was masked due to dependency with nethack; nethack was
