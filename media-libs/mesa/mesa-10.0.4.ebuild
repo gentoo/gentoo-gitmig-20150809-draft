@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.0.4.ebuild,v 1.12 2014/07/26 09:04:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.0.4.ebuild,v 1.13 2015/02/21 19:41:13 mattst88 Exp $
 
 EAPI=5
 
@@ -116,7 +116,7 @@ RDEPEND="
 				>=dev-libs/libelf-0.8.13-r2[${MULTILIB_USEDEP}]
 			) )
 		)
-		llvm-shared-libs? ( >=sys-devel/llvm-3.2[${MULTILIB_USEDEP}] )
+		llvm-shared-libs? ( >=sys-devel/llvm-3.3[${MULTILIB_USEDEP}] )
 	)
 	opencl? (
 				app-admin/eselect-opencl
@@ -141,7 +141,7 @@ done
 
 DEPEND="${RDEPEND}
 	llvm? (
-		>=sys-devel/llvm-3.2[${MULTILIB_USEDEP}]
+		>=sys-devel/llvm-3.3[${MULTILIB_USEDEP}]
 		r600-llvm-compiler? ( sys-devel/llvm[video_cards_radeon] )
 		video_cards_radeonsi? ( sys-devel/llvm[video_cards_radeon] )
 	)
