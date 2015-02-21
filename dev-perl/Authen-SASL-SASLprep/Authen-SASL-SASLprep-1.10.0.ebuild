@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL-SASLprep/Authen-SASL-SASLprep-1.10.0.ebuild,v 1.1 2015/02/21 20:36:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL-SASLprep/Authen-SASL-SASLprep-1.10.0.ebuild,v 1.2 2015/02/21 20:37:26 dilfridge Exp $
 
 EAPI=5
 
@@ -24,4 +24,3 @@ DEPEND="${RDEPEND}
 		dev-perl/Test-NoWarnings
 	)
 "
-
