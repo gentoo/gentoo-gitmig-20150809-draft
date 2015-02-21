@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/urxvt-font-size/urxvt-font-size-99999999.ebuild,v 1.2 2014/07/19 04:59:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/urxvt-font-size/urxvt-font-size-9999.ebuild,v 1.3 2015/02/21 23:21:42 radhermit Exp $
 
 EAPI=5
 inherit multilib
@@ -10,7 +10,7 @@ if [[ ${PV} == 9999* ]]; then
 	inherit git-r3
 else
 	KEYWORDS="~amd64 ~x86"
-	SRC_URI="http://dev.gentoo.org/~radhermit/dist/${P}.tar.gz"
+	SRC_URI="https://github.com/majutsushi/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
 
 DESCRIPTION="Perl extension for rxvt-unicode to change the font size on the fly"
