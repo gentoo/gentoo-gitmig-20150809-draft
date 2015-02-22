@@ -1,4 +1,4 @@
-From dd95441325d038d8e1d766e2b36ee9fb1171424d Mon Sep 17 00:00:00 2001
+From 43a4a28cdc60ac7347bb89f84cf049cb3401621d Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?R=C3=A9mi=20Cardona?= <remi@gentoo.org>
 Date: Sun, 26 Oct 2014 01:59:33 +0400
 Subject: [PATCH] gtk/Makefile.am: Remove bashisms
@@ -9,6 +9,8 @@ Content-Transfer-Encoding: 8bit
 - improve portability of ECHO
 - remove use of shopt
 
+https://bugzilla.gnome.org/show_bug.cgi?id=738835
+
 From: Alexander Tsoy <alexander@tsoy.me>
 Signed-off-by: Rémi Cardona <remi@gentoo.org>
 ---
@@ -16,7 +18,7 @@ Signed-off-by: Rémi Cardona <remi@gentoo.org>
  1 file changed, 5 insertions(+), 8 deletions(-)
 
 diff --git a/gtk/Makefile.am b/gtk/Makefile.am
-index 96c651a..3ef40d4 100644
+index 96c651a..b1478ce 100644
 --- a/gtk/Makefile.am
 +++ b/gtk/Makefile.am
 @@ -19,11 +19,7 @@ GTK_PRINT_PREVIEW_COMMAND="evince --unlink-tempfile --preview --print-settings %
@@ -42,7 +44,7 @@ index 96c651a..3ef40d4 100644
  	    for f in $(srcdir)/resources/icons/$$s/$$c/*.png; do \
 -	      n=`basename $$f`; \
 -	      $(ECHO) "    <file>icons/$$s/$$c/$$n</file>" >> $@; \
-+	      if [ -e "$f" ] ; then \
++	      if [ -e "$$f" ] ; then \
 +	        n=`basename $$f`; \
 +	        $(ECHO) "    <file>icons/$$s/$$c/$$n</file>" >> $@; \
 +	      fi; \
