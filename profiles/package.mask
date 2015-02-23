@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16383 2015/02/23 19:08:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16384 2015/02/23 19:13:31 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -55,6 +55,7 @@ dev-ruby/mixlib-config
 dev-ruby/mixlib-log
 dev-ruby/mixlib-shellout
 dev-ruby/ohai
+=dev-ruby/rest-client-1.6.7-r1
 
 # Ian Delaney <idella4@gentoo.org> (23 Feb 2015)
 # ancient and abandonned packages
