@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.129 2015/02/23 10:57:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.130 2015/02/23 10:59:44 pacho Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -50,12 +50,6 @@ fi
 # @DESCRIPTION:
 # Extra options passed to elibtoolize
 ELTCONF=${ELTCONF:-""}
-
-# @ECLASS-VARIABLE: USE_EINSTALL
-# @DEFAULT_UNSET
-# @DESCRIPTION:
-# Should we use EINSTALL instead of DESTDIR. DEPRECATED
-USE_EINSTALL=${USE_EINSTALL:-""}
 
 # @ECLASS-VARIABLE: DOCS
 # @DEFAULT_UNSET
@@ -200,17 +194,8 @@ gnome2_src_install() {
 	# we must delay gconf schema installation due to sandbox
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 
-	if [[ -z "${USE_EINSTALL}" || "${USE_EINSTALL}" = "0" ]]; then
-		debug-print "Installing with 'make install'"
-		emake DESTDIR="${D}" "scrollkeeper_localstate_dir=${ED}${sk_tmp_dir} " "$@" install || die "install failed"
-	else
-		debug-print "Installing with 'einstall'"
-		eqawarn
-		eqawarn "Support for USE_EINSTALL will be dropped in a month,"
-		eqawarn "please stop using it (#482082)"
-		eqawarn
-		einstall "scrollkeeper_localstate_dir=${ED}${sk_tmp_dir} " "$@" || die "einstall failed"
-	fi
+	debug-print "Installing with 'make install'"
+	emake DESTDIR="${D}" "scrollkeeper_localstate_dir=${ED}${sk_tmp_dir} " "$@" install || die "install failed"
 
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 
