@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.128 2015/01/29 09:59:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.129 2015/02/23 10:57:38 pacho Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -13,7 +13,17 @@
 inherit eutils fdo-mime libtool gnome.org gnome2-utils
 
 case "${EAPI:-0}" in
-	2|3|4|5)
+	2|3)
+		eqawarn
+		eqawarn "${CATEGORY}/${PF}: EAPI 2/3 support is now deprecated."
+		eqawarn "If you are the package maintainer, please"
+		eqawarn "update this package to a newer EAPI."
+		eqawarn "Support for EAPIs 2 and 3 for gnome2.eclass will be dropped"
+		eqawarn "in a month (around 23rd March)."
+		eqawarn
+		EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_install pkg_preinst pkg_postinst pkg_postrm
+		;;
+	4|5)
 		EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_install pkg_preinst pkg_postinst pkg_postrm
 		;;
 	*) die "EAPI=${EAPI} is not supported" ;;
