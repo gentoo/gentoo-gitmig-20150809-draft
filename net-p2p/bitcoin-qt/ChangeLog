@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bitcoin-qt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.94 2015/02/23 21:28:13 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.95 2015/02/24 00:31:54 patrick Exp $
+
+  24 Feb 2015; Patrick Lauer <patrick@gentoo.org> bitcoin-qt-0.10.0.ebuild:
+  Disable censoring by default
 
 *bitcoin-qt-0.9.4 (23 Feb 2015)
 *bitcoin-qt-0.10.0 (23 Feb 2015)
