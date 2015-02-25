@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/bundler-1.7.13.ebuild,v 1.1 2015/02/25 07:14:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/bundler-1.7.13.ebuild,v 1.2 2015/02/25 07:15:40 graaff Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ ruby_add_rdepend virtual/rubygems
 # The specs require a number of gems to be installed in a temporary
 # directory, but this requires network access. All tests should still
 # pass with network access.
-#RESTRICT="test"
+RESTRICT="test"
 
 RDEPEND+=" dev-vcs/git"
 
