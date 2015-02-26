@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/msgpack-0.6.0_pre20150220.ebuild,v 1.1 2015/02/26 05:47:39 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/msgpack-0.6.0_pre20150220.ebuild,v 1.2 2015/02/26 05:50:46 yngwin Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -13,7 +13,7 @@ if [[ ${PV} == 9999 ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="http://dev.gentoo.org/~yngwin/distfiles/${P}.tar.xz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 fi
 
 LICENSE="Apache-2.0"
