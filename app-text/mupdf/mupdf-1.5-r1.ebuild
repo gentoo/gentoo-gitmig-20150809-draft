@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.5-r1.ebuild,v 1.1 2014/10/10 13:50:49 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.5-r1.ebuild,v 1.2 2015/02/26 13:35:32 xmw Exp $
 
 EAPI=5
 
@@ -66,6 +66,7 @@ src_prepare() {
 		-e "1ibuild = debug" \
 		-e "1iprefix = ${ED}usr" \
 		-e "1ilibdir = ${ED}usr/$(get_libdir)" \
+		-e "1idocdir = ${ED}usr/share/doc/${PF}" \
 	    -e "1iHAVE_X11 = $(usex X)" \
 		-e "1iWANT_OPENSSL = $(usex openssl)" \
 		-e "1iWANT_CURL = $(usex curl)" \
@@ -87,7 +88,7 @@ src_prepare() {
 		-e "/^MUPDF_LIB :=/s:=.*:= \$(OUT)/${my_soname}:" \
 		-e "\$a\$(MUPDF_JS_NONE_LIB):" \
 		-e "\$a\\\t\$(QUIET_LINK) \$(CC) \$(LDFLAGS) --shared -Wl,-soname -Wl,${my_soname_js_none} -Wl,--no-undefined -o \$@ \$^ \$(LIBS)" \
-		-e "/^MUPDF_JS_NONE_LIB :=/s:=.*:= \$(OUT)/${my_soname_js_none}:" \
+		-e "/install/s: COPYING : :" \
 		-i Makefile || die
 }
 
