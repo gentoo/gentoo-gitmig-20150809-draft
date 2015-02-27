@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-silk/mediastreamer-silk-0.0.1.ebuild,v 1.10 2013/10/10 10:41:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-silk/mediastreamer-silk-0.0.1.ebuild,v 1.11 2015/02/27 04:24:39 bircoph Exp $
 
 EAPI=5
 
@@ -25,13 +25,7 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_PN}"
 
-RESTRICT="mirror" # silk license forbids distribution
-
-pkg_setup() {
-	if use bindist; then
-		die "This package can't be redistributable due to SILK license."
-	fi
-}
+RESTRICT="bindist mirror" # silk license forbids distribution
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-sdk.patch"
