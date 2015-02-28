@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.7.1-r2.ebuild,v 1.2 2015/02/28 21:34:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.7.1-r3.ebuild,v 1.1 2015/02/28 21:34:44 robbat2 Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=yes
