@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16389 2015/02/28 15:07:37 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16390 2015/02/28 15:26:06 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tomas Chvatal <scarabeus@gentoo.org> (28 Feb 2015)
+# Experiment, didn't proceed further so it is useless
+# to keep here. Remove in 30 days.
+dev-libs/libsolv
+app-admin/zypper
 
 # Justin Lecher <jlec@gentoo.org> (28 Feb 2015)
 # Unfixed security problems
