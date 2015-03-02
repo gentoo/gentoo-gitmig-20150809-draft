@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.3.1-r4.ebuild,v 1.3 2015/02/19 10:41:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.3.1-r4.ebuild,v 1.4 2015/03/02 09:20:56 armin76 Exp $
 
 EAPI="4"
 
@@ -154,6 +154,7 @@ src_configure() {
 			--disable-xorg \
 			--disable-xvfb \
 			--disable-xwin \
+			--disable-xwayland \
 			--enable-dri2 \
 			--with-pic \
 			--without-dtrace \
