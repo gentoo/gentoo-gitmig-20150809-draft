@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.185 2015/03/03 22:11:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.186 2015/03/03 22:24:13 hwoarang Exp $
+
+  03 Mar 2015; Markos Chandras <hwoarang@gentoo.org>
+  rb_libtorrent-0.16.17-r1.ebuild, rb_libtorrent-1.0.3.ebuild:
+  Fix openssl deps and move libtool to DEPEND. Bug #539368
 
   03 Mar 2015; Markos Chandras <hwoarang@gentoo.org>
   rb_libtorrent-0.16.17-r1.ebuild, rb_libtorrent-1.0.3.ebuild:

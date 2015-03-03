@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.16.17-r1.ebuild,v 1.2 2015/03/03 22:11:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.16.17-r1.ebuild,v 1.3 2015/03/03 22:24:13 hwoarang Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2:2.7"
@@ -23,12 +23,12 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc examples python ssl static-libs test"
 RESTRICT="test"
 
-DEPEND=">=dev-libs/boost-1.48:=[python?,threads(+)]
-	>=sys-devel/libtool-2.2
+RDEPEND=">=dev-libs/boost-1.48:=[python?,threads(+)]
 	sys-libs/zlib
 	examples? ( !net-p2p/mldonkey )
-	ssl? ( dev-libs/openssl )"
-RDEPEND="${DEPEND}"
+	ssl? ( dev-libs/openssl:= )"
+DEPEND="${RDEPEND}
+	>=sys-devel/libtool-2.2"
 
 pkg_setup() {
 	if use python; then
