@@ -1,18 +1,17 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-9999.ebuild,v 1.9 2015/03/04 17:21:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.6.3.ebuild,v 1.1 2015/03/04 17:21:13 jer Exp $
 
 EAPI=5
-
-inherit autotools eutils git-r3
+inherit eutils
 
 DESCRIPTION="featureful ncurses based MPD client inspired by ncmpc"
 HOMEPAGE="http://ncmpcpp.rybczak.net/"
-EGIT_REPO_URI="git://repo.or.cz/ncmpcpp.git"
-LICENSE="GPL-2"
+SRC_URI="http://ncmpcpp.rybczak.net/stable/${P}.tar.bz2"
 
+LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
 IUSE="clock curl outputs taglib unicode visualizer"
 
 RDEPEND="
@@ -30,9 +29,8 @@ DEPEND="
 "
 
 src_prepare() {
-	sed -i -e '/^docdir/d' {,doc/}Makefile.am || die
-	sed -i -e 's|COPYING||g' Makefile.am || die
-	eautoreconf
+	sed -i -e '/^docdir/d' {,doc/}Makefile{.am,.in} || die
+	sed -i -e 's|COPYING||g' Makefile{.am,.in} || die
 }
 
 src_configure() {
