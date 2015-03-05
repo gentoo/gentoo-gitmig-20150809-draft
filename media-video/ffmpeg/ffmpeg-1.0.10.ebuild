@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.0.10.ebuild,v 1.4 2015/03/05 13:57:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.0.10.ebuild,v 1.5 2015/03/05 14:00:41 aballier Exp $
 
 EAPI="4"
 
@@ -56,7 +56,7 @@ RDEPEND="
 	amr? ( media-libs/opencore-amr )
 	bluray? ( media-libs/libbluray )
 	bzip2? ( app-arch/bzip2 )
-	cdio? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
+	cdio? ( dev-libs/libcdio-paranoia )
 	celt? ( >=media-libs/celt-0.11.1 )
 	encode? (
 		aac? ( media-libs/vo-aacenc )
@@ -130,12 +130,10 @@ src_prepare() {
 		export revision=git-N-${FFMPEG_REVISION}
 	fi
 
-	if has_version dev-libs/libcdio-paranoia; then
-		sed -i \
-			-e 's:cdio/cdda.h:cdio/paranoia/cdda.h:' \
-			-e 's:cdio/paranoia.h:cdio/paranoia/paranoia.h:' \
-			configure libavdevice/libcdio.c || die
-	fi
+	sed -i \
+		-e 's:cdio/cdda.h:cdio/paranoia/cdda.h:' \
+		-e 's:cdio/paranoia.h:cdio/paranoia/paranoia.h:' \
+		configure libavdevice/libcdio.c || die
 
 	epatch "${FILESDIR}"/${PN}-1.0.8-freetype251.patch
 }
