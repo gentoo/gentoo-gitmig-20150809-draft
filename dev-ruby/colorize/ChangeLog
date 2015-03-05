@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/colorize
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/colorize/ChangeLog,v 1.13 2015/03/05 06:02:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/colorize/ChangeLog,v 1.14 2015/03/05 06:03:25 graaff Exp $
+
+  05 Mar 2015; Hans de Graaff <graaff@gentoo.org> -colorize-0.7.3.ebuild,
+  -colorize-0.7.4.ebuild:
+  Cleanup.
 
   05 Mar 2015; Hans de Graaff <graaff@gentoo.org> colorize-0.7.5.ebuild:
   Add ruby22. Remove obsolete rubyforge homepage.
