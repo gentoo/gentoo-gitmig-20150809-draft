@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.837 2015/02/20 11:17:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.838 2015/03/05 13:50:46 aballier Exp $
+
+  05 Mar 2015; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  convert to RESTRICT=bindist, bug #541588
 
 *ffmpeg-2.2.13 (20 Feb 2015)
 
