@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/droid-113-r4.ebuild,v 1.1 2015/03/07 03:47:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/droid-113-r4.ebuild,v 1.2 2015/03/07 03:47:57 yngwin Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/${P}-r1.tar.bz2
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 arm ~arm64 ppc ppc64 x86"
 IUSE=""
 
 S="${WORKDIR}/${PN}"
