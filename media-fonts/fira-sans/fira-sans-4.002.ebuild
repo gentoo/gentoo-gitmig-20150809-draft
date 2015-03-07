@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/fira-sans/fira-sans-4.002.ebuild,v 1.1 2015/03/07 03:02:36 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/fira-sans/fira-sans-4.002.ebuild,v 1.2 2015/03/07 03:24:10 yngwin Exp $
 
 EAPI=5
 inherit font versionator
@@ -16,6 +16,8 @@ LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+DEPEND="app-arch/unzip"
 
 S=${WORKDIR}/${MY_P}
 FONT_S="${S}/${MY_P/Fonts/Sans}/OTF"
