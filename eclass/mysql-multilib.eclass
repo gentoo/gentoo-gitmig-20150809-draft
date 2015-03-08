@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.15 2015/02/16 17:25:14 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.16 2015/03/08 09:39:55 ulm Exp $
 
 # @ECLASS: mysql-multilib.eclass
 # @MAINTAINER:
@@ -206,6 +206,7 @@ IUSE="+community cluster debug embedded extraengine jemalloc latin1 minimal
 
 if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
 	IUSE="bindist ${IUSE}"
+	RESTRICT="${RESTRICT} !bindist? ( bindist )"
 fi
 
 ### End readline/libedit
