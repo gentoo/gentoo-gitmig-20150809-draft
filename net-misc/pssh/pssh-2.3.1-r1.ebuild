@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pssh/pssh-2.3.1.ebuild,v 1.2 2015/03/08 20:18:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pssh/pssh-2.3.1-r1.ebuild,v 1.1 2015/03/08 20:20:50 xarthisius Exp $
 
 EAPI=5
 
