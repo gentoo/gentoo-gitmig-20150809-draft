@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.16 2015/03/08 09:39:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.17 2015/03/08 09:42:19 ulm Exp $
 
 # @ECLASS: mysql-multilib.eclass
 # @MAINTAINER:
@@ -374,8 +374,8 @@ if [[ -n "${WSREP_REVISION}" ]] ; then
 fi
 
 if [[ ${PN} == "mysql-cluster" ]] ; then
-       mysql_version_is_at_least "7.2.9" && RDEPEND="${RDEPEND} java? ( >=virtual/jre-1.6 )" && \
-               DEPEND="${DEPEND} java? ( >=virtual/jdk-1.6 )"
+	mysql_version_is_at_least "7.2.9" && RDEPEND="${RDEPEND} java? ( >=virtual/jre-1.6 )" && \
+		DEPEND="${DEPEND} java? ( >=virtual/jdk-1.6 )"
 fi
 
 # compile-time-only
@@ -557,7 +557,7 @@ multilib_src_configure() {
 		)
 
 		mysql_version_is_at_least "10.0.9" && mycmakeargs+=( -DWITH_PCRE=system )
-        fi
+	fi
 
 	configure_cmake_locale
 
