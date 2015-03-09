@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcip-annotations/jcip-annotations-1.0.1.ebuild,v 1.1 2015/03/09 23:43:05 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcip-annotations/jcip-annotations-1.0.1.ebuild,v 1.2 2015/03/09 23:46:56 chewi Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ MY_P="${PN}-$(replace_version_separator $(get_last_version_component_index) -)"
 
 DESCRIPTION="Clean room implementation of the JCIP Annotations"
 HOMEPAGE="https://github.com/stephenc/jcip-annotations"
-SRC_URI="https://github.com/stephenc//${PN}/archive/${MY_P}.tar.gz"
+SRC_URI="https://github.com/stephenc/${PN}/archive/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
