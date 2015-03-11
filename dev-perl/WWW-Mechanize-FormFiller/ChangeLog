@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/WWW-Mechanize-FormFiller
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize-FormFiller/ChangeLog,v 1.21 2015/03/11 16:18:50 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize-FormFiller/ChangeLog,v 1.22 2015/03/11 16:21:36 monsieurp Exp $
+
+  11 Mar 2015; Patrice Clement <monsieurp@gentoo.org>
+  WWW-Mechanize-FormFiller-0.100.0-r1.ebuild:
+  Get dependencies right and fix QA warnings.
 
 *WWW-Mechanize-FormFiller-0.110.0 (11 Mar 2015)
 
