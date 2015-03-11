@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-config/oslo-config-1.9.2.ebuild,v 1.1 2015/03/11 05:05:54 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-config/oslo-config-1.9.2.ebuild,v 1.2 2015/03/11 05:08:20 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
@@ -47,7 +47,7 @@ RDEPEND="
 "
 
 python_test() {
-	rm -rf .testrepository || die "couldn't remove '.testrepository' under ${EPTYHON}"
+	rm -rf .testrepository || die "could not remove '.testrepository' under ${EPTYHON}"
 
 	testr init || die "testr init failed under ${EPYTHON}"
 	testr run || die "testr run failed under ${EPYTHON}"
