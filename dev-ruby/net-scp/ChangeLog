@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-scp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.45 2015/03/11 16:50:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.46 2015/03/11 16:51:07 ago Exp $
+
+  11 Mar 2015; Agostino Sarubbo <ago@gentoo.org> net-scp-1.1.2-r1.ebuild:
+  Stable for x86, wrt bug #542200
 
   11 Mar 2015; Agostino Sarubbo <ago@gentoo.org> net-scp-1.1.2-r1.ebuild:
   Stable for amd64, wrt bug #542200
