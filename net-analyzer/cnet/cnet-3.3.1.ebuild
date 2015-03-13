@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/cnet-3.3.1.ebuild,v 1.1 2015/03/13 06:11:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/cnet-3.3.1.ebuild,v 1.2 2015/03/13 06:13:42 jer Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs
@@ -9,7 +9,7 @@ DESCRIPTION="Network simulation tool"
 HOMEPAGE="http://www.csse.uwa.edu.au/cnet3/"
 SRC_URI="https://dev.gentoo.org/~jer/${P}.tgz"
 
-LICENSE="GPL-2+"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples"

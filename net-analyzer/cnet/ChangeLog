@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cnet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.18 2015/03/13 06:11:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.19 2015/03/13 06:13:42 jer Exp $
+
+  13 Mar 2015; Jeroen Roovers <jer@gentoo.org> cnet-3.3.1.ebuild:
+  Fix LICENSE.
 
 *cnet-3.3.1 (13 Mar 2015)
 
