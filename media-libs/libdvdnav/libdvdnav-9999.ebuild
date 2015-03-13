@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-9999.ebuild,v 1.11 2015/03/13 14:47:11 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-9999.ebuild,v 1.12 2015/03/13 14:55:47 yngwin Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -22,7 +22,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+IUSE="static-libs"
 
 RDEPEND=">=media-libs/libdvdread-5.0.2[${MULTILIB_USEDEP}]
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r4
