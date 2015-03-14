@@ -1,21 +1,21 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/drqueue/drqueue-9999.ebuild,v 1.7 2015/03/14 05:11:45 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/drqueue/drqueue-0.64.4-r1.ebuild,v 1.1 2015/03/14 05:11:45 idella4 Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 DISTUTILS_SINGLE_IMPL=1
 
-inherit distutils-r1 git-2 user
+inherit distutils-r1 user
 
 DESCRIPTION="Render farm managing software"
 HOMEPAGE="http://www.drqueue.org/"
-EGIT_REPO_URI="https://ssl.drqueue.org/git/${PN}.git"
+SRC_URI="http://drqueue.org/files/${PN}.${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="X python ruby"
 
 RDEPEND="X? ( x11-libs/gtk+:2 )
@@ -28,11 +28,22 @@ DEPEND="${RDEPEND}
 	python? ( dev-python/setuptools[${PYTHON_USEDEP}] )
 	>=dev-util/scons-0.97"
 
+S=${WORKDIR}/DrQueue-${PV}
+
+PATCHES=( "${FILESDIR}"/${P}-fpic.patch
+	"${FILESDIR}"/${P}-git.patch )
+
 pkg_setup() {
 	enewgroup drqueue
 	enewuser drqueue -1 /bin/bash /dev/null daemon,drqueue
 
-	use python && python_pkg_setup
+	use python && python-single-r1_pkg_setup
+}
+
+python_prepare() {
+	distutils-r1_python_prepare
+	# Workaround broken SWIG path
+	ln -s ../libdrqueue python/libdrqueue || die
 }
 
 src_compile() {
@@ -109,8 +120,7 @@ src_install() {
 	# install documentation
 	dodoc AUTHORS ChangeLog INSTALL \
 			NEWS README README.mentalray \
-			README.python README.shell_variables \
-			setenv || die "dodoc failed"
+			README.python setenv || die "dodoc failed"
 
 	if use python; then
 		cd "${S}"/python/
