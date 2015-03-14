@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-6.0.ebuild,v 1.2 2015/03/14 19:33:49 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-6.0.ebuild,v 1.3 2015/03/14 19:48:14 perfinion Exp $
 
 EAPI=5
 inherit autotools bash-completion-r1 eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -22,7 +22,7 @@ KEYWORDS="~amd64 ~arm ~sh ~x86 ~amd64-linux ~x86-linux"
 # +alsa-plugin as discussed in bug #519530
 IUSE="+alsa +alsa-plugin +asyncns bluetooth +caps dbus doc equalizer +gdbm +glib
 	gnome gtk ipv6 jack libsamplerate lirc native-headset neon ofono-headset
-	+orc oss qt4 realtime ssl systemd system-wide tcpd test	+udev
+	+orc oss qt4 realtime selinux ssl systemd system-wide tcpd test +udev
 	+webrtc-aec +X xen zeroconf"
 
 # See "*** BLUEZ support not found (requires D-Bus)" in configure.ac
@@ -78,6 +78,7 @@ RDEPEND="
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20131008-r1
 		!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )
 	dev-libs/libltdl:0
+	selinux? ( sec-policy/selinux-pulseaudio )
 "
 # it's a valid RDEPEND, libltdl.so is used for native abi
 
