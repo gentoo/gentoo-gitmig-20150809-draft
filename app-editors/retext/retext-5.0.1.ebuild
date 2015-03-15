@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/retext-9999.ebuild,v 1.6 2015/03/15 13:28:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/retext-5.0.1.ebuild,v 1.1 2015/03/15 13:28:46 jlec Exp $
 
 EAPI=5
 
