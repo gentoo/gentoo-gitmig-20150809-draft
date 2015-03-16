@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ipxe-1.0.0_p20130624.ebuild,v 1.8 2015/03/16 21:23:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ipxe-1.0.0_p20130624.ebuild,v 1.9 2015/03/16 21:25:47 vapier Exp $
 
 EAPI=5
 
@@ -29,11 +29,6 @@ RDEPEND=""
 
 S="${WORKDIR}/ipxe-${GIT_SHORT}/src"
 
-pkg_setup() {
-	tc-ld-is-gold && \
-	ewarn "gold linker unable to handle 16-bit code using ld.bfd. bug #438058"
-}
-
 src_prepare() {
 	cat <<-EOF > "${S}"/config/local/general.h
 #undef BANNER_TIMEOUT
@@ -49,11 +44,12 @@ EOF
 }
 
 src_compile() {
+	tc-ld-disable-gold
 	ipxemake() {
 		# Q='' makes the build verbose since that's what everyone loves now
 		emake Q='' \
 			CC=$(tc-getCC) \
-			LD="$(tc-getLD).bfd" \
+			LD="$(tc-getLD)" \
 			AR=$(tc-getAR) \
 			OBJCOPY=$(tc-getOBJCOPY) \
 			RANLIB=$(tc-getRANLIB) \
