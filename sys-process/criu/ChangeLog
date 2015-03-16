@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/criu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/ChangeLog,v 1.17 2015/03/16 02:51:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/ChangeLog,v 1.18 2015/03/16 02:54:33 radhermit Exp $
+
+  16 Mar 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Drop myself as maintainer.
 
 *criu-1.5-r2 (16 Mar 2015)
 
