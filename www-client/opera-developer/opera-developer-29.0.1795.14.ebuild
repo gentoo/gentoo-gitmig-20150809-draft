@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-27.0.1689.69.ebuild,v 1.1 2015/02/11 17:08:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-developer/opera-developer-29.0.1795.14.ebuild,v 1.1 2015/03/18 17:29:34 jer Exp $
 
 EAPI=5
 CHROMIUM_LANGS="
@@ -16,7 +16,7 @@ LICENSE="OPERA-2014"
 SLOT="0"
 SRC_URI_BASE="http://get.geo.opera.com/pub/"
 SRC_URI="
-	amd64? ( "${SRC_URI_BASE}${PN}/desktop/${PV}/linux/${PN}-stable_${PV}_amd64.deb" )
+	amd64? ( "${SRC_URI_BASE}${PN}/${PV}/linux/${PN}_${PV}_amd64.deb" )
 "
 KEYWORDS="~amd64"
 
@@ -25,7 +25,6 @@ RDEPEND="
 	dev-libs/glib:2
 	dev-libs/nspr
 	dev-libs/nss
-	>=dev-libs/openssl-1.0.1:0
 	gnome-base/gconf:2
 	media-libs/alsa-lib
 	media-libs/fontconfig
@@ -33,8 +32,6 @@ RDEPEND="
 	net-misc/curl
 	net-print/cups
 	sys-apps/dbus
-	sys-libs/libcap
-	virtual/libudev
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
 	x11-libs/gtk+:2
@@ -66,8 +63,8 @@ src_prepare() {
 
 	rm usr/bin/${PN} || die
 
-	rm usr/share/doc/${PN}-stable/copyright || die
-	mv usr/share/doc/${PN}-stable usr/share/doc/${PF} || die
+	rm usr/share/doc/${PN}/copyright || die
+	mv usr/share/doc/${PN} usr/share/doc/${PF} || die
 
 	pushd "${OPERA_HOME}/localization" > /dev/null || die
 	chromium_remove_language_paks
@@ -81,7 +78,5 @@ src_prepare() {
 src_install() {
 	mv * "${D}" || die
 	dosym ../$(get_libdir)/${PN}/${PN} /usr/bin/${PN}
-	dodir /usr/$(get_libdir)/${PN}/lib
-	dosym /usr/$(get_libdir)/libudev.so /usr/$(get_libdir)/${PN}/lib/libudev.so.0
 	fperms 4711 /usr/$(get_libdir)/${PN}/opera_sandbox
 }
