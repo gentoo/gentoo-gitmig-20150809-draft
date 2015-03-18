@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libclxclient
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/ChangeLog,v 1.16 2015/03/18 10:06:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/ChangeLog,v 1.17 2015/03/18 10:29:45 aballier Exp $
+
+*libclxclient-3.9.0 (18 Mar 2015)
+
+  18 Mar 2015; Alexis Ballier <aballier@gentoo.org> +libclxclient-3.9.0.ebuild,
+  +files/libclxclient-3.9.0-Makefile.patch:
+  Version bump, fix libraries symlink by Rodrigo Severo (bug #418063)
 
   18 Mar 2015; Alexis Ballier <aballier@gentoo.org> libclxclient-3.3.2.ebuild,
   libclxclient-3.6.1.ebuild:
