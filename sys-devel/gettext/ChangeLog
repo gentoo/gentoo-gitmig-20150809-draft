@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.263 2015/03/19 19:39:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.264 2015/03/19 19:40:22 vapier Exp $
+
+  19 Mar 2015; Mike Frysinger <vapier@gentoo.org> gettext-0.19.3.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   19 Mar 2015; Mike Frysinger <vapier@gentoo.org> gettext-0.19.3.ebuild,
   gettext-0.19.4.ebuild:
