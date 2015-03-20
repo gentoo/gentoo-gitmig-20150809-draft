@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.71 2015/03/20 21:56:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.72 2015/03/20 21:58:12 hwoarang Exp $
+
+  20 Mar 2015; Markos Chandras <hwoarang@gentoo.org> -files/lxc.initd.2:
+  Remove unused file
 
   20 Mar 2015; Markos Chandras <hwoarang@gentoo.org> -lxc-1.1.0-r2.ebuild,
   -lxc-1.1.0-r3.ebuild, -lxc-1.1.0-r4.ebuild, lxc-1.1.0-r5.ebuild,
