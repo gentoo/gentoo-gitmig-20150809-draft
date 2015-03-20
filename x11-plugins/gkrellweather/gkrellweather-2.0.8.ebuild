@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-2.0.8.ebuild,v 1.2 2015/03/20 16:05:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-2.0.8.ebuild,v 1.3 2015/03/20 16:07:57 jlec Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="
 	>=dev-lang/perl-5.6.1
 	>=net-misc/wget-1.5.3"
 DEPEND=">=sys-apps/sed-4.0.5"
-pkg_setup() { :; }
+
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-Respect-LDFLAGS.patch \

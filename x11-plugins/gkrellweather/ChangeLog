@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellweather
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/ChangeLog,v 1.35 2015/03/20 16:05:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/ChangeLog,v 1.36 2015/03/20 16:07:57 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> gkrellweather-2.0.8.ebuild:
+  Remove workaround
 
   20 Mar 2015; Justin Lecher <jlec@gentoo.org> -gkrellweather-2.0.7-r1.ebuild,
   -gkrellweather-2.0.7-r2.ebuild, gkrellweather-2.0.8.ebuild, metadata.xml:
