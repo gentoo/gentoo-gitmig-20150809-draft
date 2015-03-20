@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activeldap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeldap/ChangeLog,v 1.14 2015/01/04 09:50:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeldap/ChangeLog,v 1.15 2015/03/20 10:52:42 graaff Exp $
+
+  20 Mar 2015; Hans de Graaff <graaff@gentoo.org> -activeldap-4.0.3.ebuild:
+  Cleanup.
 
 *activeldap-4.0.4 (04 Jan 2015)
 
