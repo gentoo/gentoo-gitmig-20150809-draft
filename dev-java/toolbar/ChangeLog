@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/toolbar
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/toolbar/ChangeLog,v 1.16 2015/03/21 11:39:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/toolbar/ChangeLog,v 1.17 2015/03/21 11:48:24 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> toolbar-1.1.0-r1.ebuild:
+  add missing eclass
 
   21 Mar 2015; Justin Lecher <jlec@gentoo.org> toolbar-1.1.0-r1.ebuild:
   use ecvs_clean
