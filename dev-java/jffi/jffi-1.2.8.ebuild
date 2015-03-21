@@ -1,16 +1,16 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.2.7-r2.ebuild,v 1.2 2015/03/21 18:29:53 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.2.8.ebuild,v 1.1 2015/03/21 18:29:53 monsieurp Exp $
 
 EAPI="5"
 
 JAVA_PKG_IUSE="doc source test"
 
-inherit eutils java-pkg-2 java-ant-2 versionator vcs-snapshot
+inherit eutils java-pkg-2 java-ant-2 versionator
 
 DESCRIPTION="An optimized Java interface to libffi"
 HOMEPAGE="https://github.com/jnr/jffi"
-SRC_URI="https://github.com/jnr/jffi/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/jnr/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="|| ( Apache-2.0 LGPL-3 )"
 SLOT="1.2"
@@ -31,8 +31,8 @@ DEPEND="${COMMON_DEP}
 
 java_prepare() {
 	cp "${FILESDIR}"/${PN}_maven-build.xml build.xml || die
-	epatch "${FILESDIR}"/${P}-makefile.patch
-	epatch "${FILESDIR}"/${P}-junit-4.11.patch
+	epatch "${FILESDIR}"/${PN}-1.2.8-makefile.patch
+	epatch "${FILESDIR}"/${PN}-1.2.8-junit-4.11.patch
 
 	# misc fixes for Darwin
 	if [[ ${CHOST} == *-darwin* ]] ; then
