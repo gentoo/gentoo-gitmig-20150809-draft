@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.2a.ebuild,v 1.3 2015/03/21 09:14:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.2a.ebuild,v 1.4 2015/03/21 10:59:58 vapier Exp $
 
 EAPI="4"
 
@@ -146,7 +146,6 @@ multilib_src_configure() {
 	echoit \
 	./${config} \
 		${sslout} \
-		$(use sctp && echo "sctp") \
 		$(use cpu_flags_x86_sse2 || echo "no-sse2") \
 		enable-camellia \
 		$(use_ssl !bindist ec) \
@@ -158,6 +157,7 @@ multilib_src_configure() {
 		$(use_ssl gmp gmp -lgmp) \
 		$(use_ssl kerberos krb5 --with-krb5-flavor=${krb5}) \
 		$(use_ssl rfc3779) \
+		$(use_ssl sctp) \
 		$(use_ssl tls-heartbeat heartbeats) \
 		$(use_ssl zlib) \
 		--prefix="${EPREFIX}"/usr \
