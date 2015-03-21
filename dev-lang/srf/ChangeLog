@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/srf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/srf/ChangeLog,v 1.8 2015/03/21 11:43:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/srf/ChangeLog,v 1.9 2015/03/21 11:49:31 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> srf-1.0-r1.ebuild:
+  add missing eclass
 
   21 Mar 2015; Justin Lecher <jlec@gentoo.org> srf-1.0-r1.ebuild:
   use ecvs_clean; bump EAPI
