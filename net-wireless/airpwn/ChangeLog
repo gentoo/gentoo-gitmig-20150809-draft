@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/airpwn
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airpwn/ChangeLog,v 1.4 2015/03/21 14:05:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airpwn/ChangeLog,v 1.5 2015/03/21 14:12:33 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> airpwn-1.4-r2.ebuild:
+  add missing eclass
 
   21 Mar 2015; Justin Lecher <jlec@gentoo.org> airpwn-1.4-r2.ebuild,
   metadata.xml:
