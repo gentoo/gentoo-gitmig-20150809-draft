@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/phoronix-test-suite-4.6.0.ebuild,v 1.1 2013/06/03 05:30:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/phoronix-test-suite-4.6.0.ebuild,v 1.2 2015/03/21 08:13:53 jlec Exp $
 
 EAPI=4
 
@@ -37,7 +37,6 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/share/${PN}
 	insinto /usr/share/${PN}
 
 	doman documentation/man-pages/phoronix-test-suite.1
@@ -49,8 +48,7 @@ src_install() {
 	rm -f pts-core/static/phoronix-test-suite.desktop
 
 	doins -r pts-core
-	exeinto /usr/bin
-	doexe phoronix-test-suite
+	dobin phoronix-test-suite
 
 	fperms a+x /usr/share/${PN}/pts-core/static/scripts/root-access.sh
 	fperms a+x /usr/share/${PN}/pts-core/external-test-dependencies/scripts/install-gentoo-packages.sh
