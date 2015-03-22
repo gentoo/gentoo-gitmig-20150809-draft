@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/openafs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.200 2015/03/22 21:01:39 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.201 2015/03/22 21:09:06 bircoph Exp $
+
+  22 Mar 2015; Andrew Savchenko <bircoph@gentoo.org> -openafs-1.6.2-r1.ebuild,
+  metadata.xml:
+  Add modules flag description (with a warning).
+  Remove old vulnerable version.
 
 *openafs-1.6.11 (22 Mar 2015)
 
