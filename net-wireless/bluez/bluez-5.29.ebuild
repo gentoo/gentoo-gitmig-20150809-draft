@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.27.ebuild,v 1.2 2015/02/11 16:10:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.29.ebuild,v 1.1 2015/03/22 13:36:53 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
@@ -15,7 +15,6 @@ LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0/3"
 KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86"
 IUSE="cups debug +obex +readline selinux systemd test +udev"
-REQUIRED_USE="test? ( ${PYTHON_REQUIRED_USE} )"
 
 CDEPEND="
 	>=dev-libs/glib-2.28:2
@@ -32,12 +31,16 @@ CDEPEND="
 	)
 "
 DEPEND="${CDEPEND}
+	app-arch/xz-utils
 	virtual/pkgconfig
 	test? (
-		${PYTHON_DEPS}
-		>=dev-python/dbus-python-1
-		dev-python/pygobject:2
-		dev-python/pygobject:3
+		$(python_gen_any_dep '
+			>=dev-python/dbus-python-1[${PYTHON_USEDEP}]
+			|| (
+				dev-python/pygobject:3[${PYTHON_USEDEP}]
+				dev-python/pygobject:2[${PYTHON_USEDEP}]
+			)
+		')
 	)
 "
 RDEPEND="${CDEPEND}
@@ -64,6 +67,10 @@ pkg_setup() {
 src_prepare() {
 	# Use static group "plugdev" if there is no ConsoleKit (or systemd logind)
 	epatch "${FILESDIR}"/bluez-plugdev.patch
+
+	# Try both udevadm paths to cover udev/systemd vs. eudev locations (#539844)
+	# http://www.spinics.net/lists/linux-bluetooth/msg58739.html
+	epatch "${FILESDIR}"/bluez-udevadm-path.patch
 
 	# Fedora patches
 	# http://www.spinics.net/lists/linux-bluetooth/msg38490.html
@@ -146,7 +153,7 @@ multilib_src_install() {
 	if multilib_is_native_abi; then
 		emake DESTDIR="${D}" install
 
-		# Upstream don't install this, bug #524640
+		# Upstream doesn't install this, bug #524640
 		# http://permalink.gmane.org/gmane.linux.bluez.kernel/53115
 		# http://comments.gmane.org/gmane.linux.bluez.kernel/54564
 		# gatttool is only built with readline, bug #530776
@@ -171,7 +178,7 @@ multilib_src_install_all() {
 	keepdir /var/lib/bluetooth
 
 	# Upstream don't want people to play with them
-	# But we keep installing them due 'historical' reasons
+	# But we keep installing them due to 'historical' reasons
 	insinto /etc/bluetooth
 	local d
 	for d in input network proximity; do
@@ -179,11 +186,6 @@ multilib_src_install_all() {
 	done
 	doins src/main.conf
 	doins src/bluetooth.conf
-
-# FIXME:
-# Looks like upstream installs it only for systemd, probably not needed
-#	insinto /usr/share/dbus-1/system-services
-#	doins src/org.bluez.service
 
 	newinitd "${FILESDIR}"/bluetooth-init.d-r3 bluetooth
 	newinitd "${FILESDIR}"/rfcomm-init.d-r2 rfcomm
