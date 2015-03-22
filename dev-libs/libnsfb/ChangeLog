@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libnsfb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/ChangeLog,v 1.13 2015/03/22 00:11:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/ChangeLog,v 1.14 2015/03/22 00:14:08 xmw Exp $
+
+  22 Mar 2015; Michael Weber <xmw@gentoo.org>
+  files/libnsfb-0.1.3-glibc2.20.patch:
+  Drop CFLAGS=-g
 
 *libnsfb-0.1.3 (22 Mar 2015)
 
