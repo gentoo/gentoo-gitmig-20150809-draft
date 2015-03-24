@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.160 2015/03/19 19:15:33 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.161 2015/03/24 09:12:33 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> django-1.4.20.ebuild,
+  django-1.6.11.ebuild:
+  Stable for amd64, wrt bug #543754
 
   19 Mar 2015; Andreas Schuerch <nativemad@gentoo.org> django-1.4.20.ebuild,
   django-1.6.11.ebuild:
