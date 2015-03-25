@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/zygrib-7.0.0.ebuild,v 1.1 2015/03/25 15:03:42 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/zygrib-7.0.0.ebuild,v 1.2 2015/03/25 15:05:32 mschiff Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ SRC_URI="http://www.zygrib.org/getfile.php?file=${MY_PN}-${PV}.tgz -> ${P}.tgz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="+maps"
 
 DEPEND="app-arch/bzip2
