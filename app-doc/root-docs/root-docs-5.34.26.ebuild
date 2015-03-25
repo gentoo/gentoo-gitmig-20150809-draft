@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/root-docs-5.34.26.ebuild,v 1.1 2015/03/02 08:25:14 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/root-docs-5.34.26.ebuild,v 1.2 2015/03/25 21:33:39 bircoph Exp $
 
 EAPI=5
 
@@ -92,6 +92,7 @@ src_compile() {
 	use math && pdf_target+=( minuit2 spectrum )
 	use http && pdf_target+=( HttpServer JSROOT )
 
+	local i
 	for (( i=0; i<${#pdf_target[@]}; i++ )); do
 		emake -C documentation/"${pdf_target[i]}" "${pdf_size}"
 	done
@@ -112,6 +113,7 @@ src_compile() {
 src_install() {
 	insinto "${DOC_DIR}"
 
+	local i
 	for (( i=0; i<${#pdf_target[@]}; i++ )); do
 		doins documentation/"${pdf_target[i]}"/*.pdf
 	done
