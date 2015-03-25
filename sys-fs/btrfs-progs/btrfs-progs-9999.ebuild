@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.41 2015/03/25 00:47:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.42 2015/03/25 01:00:23 floppym Exp $
 
 EAPI=5
 
@@ -64,6 +64,9 @@ src_prepare() {
 src_configure() {
 	local myeconfargs=(
 		--bindir="${EPREFIX}"/sbin
+
+		# --enable-convert is broken
+		# http://thread.gmane.org/gmane.comp.file-systems.btrfs/43873
 		$(usex convert '' --disable-convert)
 	)
 	econf "${myeconfargs[@]}"
