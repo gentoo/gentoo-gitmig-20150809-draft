@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.555 2015/03/24 07:07:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.556 2015/03/25 21:03:54 vapier Exp $
+
+  25 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  files/openssh-6.8_p1-ssh-keygen-no-ssh1.patch:
+  Update to the version merged upstream that also fixes USE=-ssl behavior.
 
   24 Mar 2015; Patrick Lauer <patrick@gentoo.org> openssh-6.8_p1-r1.ebuild,
   openssh-6.8_p1-r2.ebuild:
