@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.161 2015/03/24 20:15:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.162 2015/03/26 11:21:29 ago Exp $
+
+  26 Mar 2015; Agostino Sarubbo <ago@gentoo.org> ettercap-0.8.2.ebuild:
+  Stable for ppc, wrt bug #532764
 
   24 Mar 2015; Markus Meier <maekke@gentoo.org> ettercap-0.8.2.ebuild:
   arm stable, bug #532764
