@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/routes-2.1.ebuild,v 1.1 2015/03/26 04:12:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/routes-2.1.ebuild,v 1.2 2015/03/26 04:17:33 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -33,7 +33,7 @@ RESTRICT="test"
 S="${WORKDIR}/${MY_P}"
 
 # Comment out patch for tests for now
-#PATCHES=( "${FILESDIR}"/${PN}-2.0-setup.py.patch )
+#PATCHES=( "${FILESDIR}"/${PN}-2.0-tests-py3.patch )
 
 # The doc build possibly never built.  Just know that the doc builds in
 # neither the previous nor this
