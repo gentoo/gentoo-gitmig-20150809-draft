@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1052 2015/03/17 06:41:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1053 2015/03/29 19:17:06 vapier Exp $
+
+  29 Mar 2015; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add USE=cilk to control support for the Cilk Plus language.
 
   17 Mar 2015; Mike Frysinger <vapier@gentoo.org> gcc-4.7.0.ebuild,
   gcc-4.7.1.ebuild, gcc-4.7.2-r1.ebuild, gcc-4.7.3-r1.ebuild, gcc-4.7.4.ebuild:
