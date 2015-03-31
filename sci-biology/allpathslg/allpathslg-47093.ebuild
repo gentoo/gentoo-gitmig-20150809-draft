@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/allpathslg-47093.ebuild,v 1.3 2015/03/31 09:32:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/allpathslg-47093.ebuild,v 1.4 2015/03/31 09:35:15 jlec Exp $
 
 EAPI=5
 
-inherit autotools flag-o-matic
+inherit autotools eutils flag-o-matic
 
 DESCRIPTION="De novo assembly of whole-genome shotgun microreads"
 HOMEPAGE="http://www.broadinstitute.org/science/programs/genome-biology/crd"
@@ -31,6 +31,6 @@ src_install() {
 	default
 	# Provided by sci-biology/vaal
 	for i in QueryLookupTable ScaffoldAccuracy MakeLookupTable Fastb ShortQueryLookup; do
-		rm "${D}/usr/bin/$i" || die
+		rm "${ED}/usr/bin/$i" || die
 	done
 }
