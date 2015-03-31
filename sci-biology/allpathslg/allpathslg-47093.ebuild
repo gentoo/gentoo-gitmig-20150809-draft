@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/allpathslg-47093.ebuild,v 1.2 2013/11/13 02:34:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/allpathslg-47093.ebuild,v 1.3 2015/03/31 09:32:52 jlec Exp $
 
 EAPI=5
 
@@ -22,13 +22,13 @@ DEPEND="
 RDEPEND=""
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc4.9.patch
 	sed -i 's/-ggdb//' configure.ac || die
 	eautoreconf
 }
 
 src_install() {
 	default
-#	einstall || die
 	# Provided by sci-biology/vaal
 	for i in QueryLookupTable ScaffoldAccuracy MakeLookupTable Fastb ShortQueryLookup; do
 		rm "${D}/usr/bin/$i" || die
