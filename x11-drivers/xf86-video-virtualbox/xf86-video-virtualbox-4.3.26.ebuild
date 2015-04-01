@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.3.26.ebuild,v 1.2 2015/04/01 18:06:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.3.26.ebuild,v 1.3 2015/04/01 18:23:29 vapier Exp $
 
 EAPI=5
 
@@ -54,7 +54,7 @@ QA_TEXTRELS_x86="usr/lib/VBoxOGL.so"
 
 pkg_setup() {
 	linux-mod_pkg_setup
-	BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
+	BUILD_PARAMS="KERN_DIR=${KV_OUT_DIR} KERNOUT=${KV_OUT_DIR}"
 
 	python-single-r1_pkg_setup
 }
@@ -102,6 +102,7 @@ src_configure() {
 		--disable-pulse \
 		--disable-alsa \
 		--target-arch=${ARCH} \
+		--with-linux="${KV_OUT_DIR}" \
 		--build-headless || die "configure failed"
 	source ./env.sh
 }
