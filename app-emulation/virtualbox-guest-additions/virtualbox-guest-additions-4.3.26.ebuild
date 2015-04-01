@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.3.26.ebuild,v 1.1 2015/03/17 08:03:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.3.26.ebuild,v 1.2 2015/04/01 18:06:33 vapier Exp $
 
 EAPI=5
 
@@ -90,12 +90,14 @@ src_prepare() {
 
 src_configure() {
 	# build the user-space tools, warnings are harmless
-	./configure --nofatal \
-	--disable-xpcom \
-	--disable-sdl-ttf \
-	--disable-pulse \
-	--disable-alsa \
-	--build-headless || die "configure failed"
+	./configure \
+		--nofatal \
+		--disable-xpcom \
+		--disable-sdl-ttf \
+		--disable-pulse \
+		--disable-alsa \
+		--target-arch=${ARCH} \
+		--build-headless || die "configure failed"
 }
 
 src_compile() {
