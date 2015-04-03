@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ucspi-ssl-0.94.ebuild,v 1.1 2015/04/03 13:38:36 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ucspi-ssl-0.94.ebuild,v 1.2 2015/04/03 13:51:33 idella4 Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~alpha ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86-fbsd"
 IUSE="perl"
 
-DEPEND=">=dev-libs/openssl-0.9.6g"
+DEPEND=">=dev-libs/openssl-0.9.6g:="
 RDEPEND="${DEPEND}
 	sys-apps/ucspi-tcp"
 
@@ -44,4 +44,3 @@ src_install() {
 	dobin sslserver sslclient sslcat sslconnect https\@ || die
 	use perl && dobin sslperl
 }
-
