@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.8.1.ebuild,v 1.1 2015/04/03 15:24:27 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.8.1.ebuild,v 1.2 2015/04/03 15:29:58 blueness Exp $
 
 EAPI="5"
 inherit autotools eutils multilib
@@ -34,8 +34,7 @@ src_prepare() {
 
 src_configure() {
 	# configure searches for either attr/xattr.h or sys/xattr.h
-	use xattr || export ac_cv_header_attr_xattr_h=no
-	use xattr || export ac_cv_header_sys_xattr_h=no
+	use xattr || export ac_cv_header_{attr,sys}_xattr_h=no
 
 	econf \
 		$(use_enable nls) \
