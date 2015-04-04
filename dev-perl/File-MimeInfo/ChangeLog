@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-MimeInfo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.94 2015/04/04 23:44:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.95 2015/04/04 23:47:06 vapier Exp $
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> File-MimeInfo-0.210.0.ebuild:
+  Mark s390/sh stable.
 
   04 Apr 2015; Mike Frysinger <vapier@gentoo.org> File-MimeInfo-0.210.0.ebuild,
   File-MimeInfo-0.260.0.ebuild:
