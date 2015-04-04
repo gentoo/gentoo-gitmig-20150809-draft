@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amatch
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.40 2014/05/26 05:46:43 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.41 2015/04/04 10:25:54 graaff Exp $
+
+  04 Apr 2015; Hans de Graaff <graaff@gentoo.org> -amatch-0.2.11-r1.ebuild:
+  Cleanup.
 
   26 May 2014; Manuel Rüger <mrueg@gentoo.org> amatch-0.2.11-r1.ebuild:
   Remove ruby18 target.
