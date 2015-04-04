@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amatch
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.41 2015/04/04 10:25:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.42 2015/04/04 10:26:48 graaff Exp $
+
+  04 Apr 2015; Hans de Graaff <graaff@gentoo.org> amatch-0.3.0.ebuild:
+  Add ruby22.
 
   04 Apr 2015; Hans de Graaff <graaff@gentoo.org> -amatch-0.2.11-r1.ebuild:
   Cleanup.
