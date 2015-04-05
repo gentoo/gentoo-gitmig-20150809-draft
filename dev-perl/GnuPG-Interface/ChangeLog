@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/GnuPG-Interface
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.61 2015/04/05 13:02:58 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.62 2015/04/05 13:04:47 zlogene Exp $
+
+  05 Apr 2015; Mikle Kolyada <zlogene@gentoo.org>
+  GnuPG-Interface-0.460.0-r1.ebuild:
+  Drop ~ppc-macos
 
   05 Apr 2015; Mikle Kolyada <zlogene@gentoo.org>
   GnuPG-Interface-0.520.0.ebuild:
