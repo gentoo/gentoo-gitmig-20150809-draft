@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jing/jing-20091111-r2.ebuild,v 1.1 2015/04/05 20:55:52 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jing/jing-20091111-r2.ebuild,v 1.2 2015/04/05 20:58:05 monsieurp Exp $
 
 EAPI=5
 
@@ -26,9 +26,9 @@ COMMON_DEPEND="
 	dev-java/xerces:2
 	dev-java/xml-commons-resolver:0"
 RDEPEND="${COMMON_DEPEND}
-	>=virtual/jre-1.5"
+	>=virtual/jre-1.6"
 DEPEND="${COMMON_DEPEND}
-	>=virtual/jdk-1.5
+	>=virtual/jdk-1.6
 	app-arch/unzip"
 
 # Avoid bogous QA warning, no usable build.xml. The one that exists belongs to
