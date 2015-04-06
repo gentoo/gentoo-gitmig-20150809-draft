@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-37.0.1.ebuild,v 1.3 2015/04/06 19:31:44 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-37.0.1.ebuild,v 1.4 2015/04/06 19:37:26 axs Exp $
 
 EAPI="5"
 VIRTUALX_REQUIRED="pgo"
@@ -221,6 +221,9 @@ src_configure() {
 
 	# Other ff-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
+
+	# force jit
+	mozconfig_use_enable jit ion
 
 	# Allow for a proper pgo build
 	if use pgo; then
