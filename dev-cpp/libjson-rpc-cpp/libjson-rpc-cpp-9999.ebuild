@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libjson-rpc-cpp/libjson-rpc-cpp-9999.ebuild,v 1.2 2015/04/07 12:56:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libjson-rpc-cpp/libjson-rpc-cpp-9999.ebuild,v 1.3 2015/04/07 12:59:37 mgorny Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI=""
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="doc +http-client +http-server +stubgen test"
 
 RDEPEND="
