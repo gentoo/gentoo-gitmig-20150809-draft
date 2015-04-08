@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.59 2015/04/08 04:07:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.60 2015/04/08 04:08:52 radhermit Exp $
+
+  08 Apr 2015; Tim Harder <radhermit@gentoo.org> -pip-6.0.2.ebuild,
+  -pip-6.0.3.ebuild, -pip-6.0.6.ebuild, -pip-6.0.7.ebuild:
+  Remove old.
 
 *pip-6.1.1 (08 Apr 2015)
 
