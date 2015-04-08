@@ -1,20 +1,19 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-9999.ebuild,v 1.10 2015/04/08 17:42:08 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-9.4.1-r1.ebuild,v 1.1 2015/04/08 17:42:08 titanofold Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python{2_{6,7},3_{2,3,4}} )
 
-inherit base eutils flag-o-matic git-2 linux-info multilib pam prefix \
-		python-single-r1 systemd user versionator
+inherit eutils flag-o-matic linux-info multilib pam prefix python-single-r1 \
+		systemd user versionator
 
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
 
-# Fix if needed
-SLOT="9.5"
+SLOT="$(get_version_component_range 1-2)"
 
-EGIT_REPO_URI="git://git.postgresql.org/git/postgresql.git"
+SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2"
 
 LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL RDBMS"
@@ -22,7 +21,7 @@ HOMEPAGE="http://www.postgresql.org/"
 
 LINGUAS="af cs de en es fa fr hr hu it ko nb pl pt_BR ro ru sk sl sv tr
 		 zh_CN zh_TW"
-IUSE="kerberos kernel_linux ldap nls pam perl -pg_legacytimestamp python
+IUSE="doc kerberos kernel_linux ldap nls pam perl -pg_legacytimestamp python
 	  +readline selinux +server ssl static-libs tcl threads uuid xml zlib"
 
 for lingua in ${LINGUAS}; do
@@ -58,23 +57,11 @@ zlib? ( sys-libs/zlib )
 
 DEPEND="${CDEPEND}
 !!<sys-apps/sandbox-2.0
->=dev-lang/perl-5.8
-app-text/docbook-dsssl-stylesheets
-app-text/docbook-sgml-dtd:4.2
-app-text/docbook-xml-dtd:4.2
-app-text/docbook-xsl-stylesheets
-app-text/openjade
-dev-libs/libxml2
-dev-libs/libxslt
 sys-devel/bison
 sys-devel/flex
 nls? ( sys-devel/gettext )
 xml? ( virtual/pkgconfig )
 "
-src_unpack() {
-	base_src_unpack
-	git-2_src_unpack
-}
 
 RDEPEND="${CDEPEND}
 !dev-db/postgresql-docs:${SLOT}
@@ -101,6 +88,10 @@ src_prepare() {
 		-i src/include/pg_config_manual.h || die
 
 	use server || epatch "${FILESDIR}/${PN}-${SLOT}-no-server.patch"
+
+	# Fix bug 486556 where the server would crash at start up because of
+	# an infinite loop caused by a self-referencing symlink.
+	epatch "${FILESDIR}/postgresql-9.2-9.4-tz-dir-overflow.patch"
 
 	if use pam ; then
 		sed -e "s/\(#define PGSQL_PAM_SERVICE \"postgresql\)/\1-${SLOT}/" \
@@ -151,10 +142,6 @@ src_configure() {
 src_compile() {
 	emake
 	emake -C contrib
-
-	# If use doc, generate all documentation, otherwise just the
-	# man pages
-	#use doc && emake -C doc || emake -C doc man
 }
 
 src_install() {
@@ -163,16 +150,19 @@ src_install() {
 
 	dodoc README HISTORY doc/{TODO,bug.template}
 
+	# man pages are already built, but if we have the target make them,
+	# they'll be generated from source before being installed so we
+	# manually install man pages.
 	# We use ${SLOT} instead of doman for postgresql.eselect
-	#insinto /usr/share/postgresql-${SLOT}/man/
-	#doins -r doc/src/sgml/man{1,3,7}
-	#if ! use server; then
-	#	# Remove man pages for non-existent binaries
-	#	for m in {initdb,pg_{controldata,ctl,resetxlog},post{gres,master}}; do
-	#		rm "${ED}/usr/share/postgresql-${SLOT}/man/man1/${m}.1"
-	#	done
-	#fi
-	#docompress /usr/share/postgresql-${SLOT}/man/man{1,3,7}
+	insinto /usr/share/postgresql-${SLOT}/man/
+	doins -r doc/src/sgml/man{1,3,7}
+	if ! use server; then
+		# Remove man pages for non-existent binaries
+		for m in {initdb,pg_{controldata,ctl,resetxlog},post{gres,master}}; do
+			rm "${ED}/usr/share/postgresql-${SLOT}/man/man1/${m}.1"
+		done
+	fi
+	docompress /usr/share/postgresql-${SLOT}/man/man{1,3,7}
 
 	insinto /etc/postgresql-${SLOT}
 	newins src/bin/psql/psqlrc.sample psqlrc
@@ -183,13 +173,13 @@ src_install() {
 
 	use static-libs || find "${ED}" -name '*.a' -delete
 
-	#if use doc ; then
-	#	docinto html
-	#	dodoc doc/src/sgml/html/*
+	if use doc ; then
+		docinto html
+		dodoc doc/src/sgml/html/*
 
-	#	docinto sgml
-	#	dodoc doc/src/sgml/*.{sgml,dsl}
-	#fi
+		docinto sgml
+		dodoc doc/src/sgml/*.{sgml,dsl}
+	fi
 
 	if use server; then
 		sed -e "s|@SLOT@|${SLOT}|g" -e "s|@LIBDIR@|$(get_libdir)|g" \
