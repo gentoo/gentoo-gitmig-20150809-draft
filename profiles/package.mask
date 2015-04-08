@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16469 2015/04/08 18:19:06 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16470 2015/04/08 18:25:14 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (08 Apr 2015)
+# Upstream went away; GPL but no source.
+# masked for removal on 20150508
+games-arcade/mtp-target-bin
 
 # Andreas K. Huettel <dilfridge@gentoo.org) (07 Apr 2015)
 # EAPI=1, last upstream release 2007, last significant
@@ -94,6 +99,7 @@ dev-games/libgrapple
 games-simulation/stoned-bin
 games-sports/racer-bin
 games-strategy/savage-bin
+games-puzzle/drod-bin
 
 # Michael Sterrett <mr_bones_@gentoo.org> (30 Mar 2015)
 # Last release in 2004; doesn't work with newer tcl
