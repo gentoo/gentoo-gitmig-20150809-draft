@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.3-r1.ebuild,v 1.1 2015/04/10 20:03:20 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.3-r1.ebuild,v 1.2 2015/04/10 20:09:40 axs Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -20,9 +20,13 @@ IUSE="X doc python"
 
 RDEPEND="X? ( x11-libs/libXaw3d )
 	python? ( ${PYTHON_DEPS} )"
-DEPEND="${RDEPEND}
-	>=sys-devel/bison-1.2.2
-	X? ( x11-proto/xproto )"
+DEPEND=">=sys-devel/bison-1.2.2
+	X? (
+		x11-libs/libXaw3d
+		x11-proto/xproto
+	)"
+
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 S="${WORKDIR}/${MY_P}"
 

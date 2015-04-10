@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/snns
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/ChangeLog,v 1.26 2015/04/10 20:03:20 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/ChangeLog,v 1.27 2015/04/10 20:09:40 axs Exp $
+
+  10 Apr 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> snns-4.3-r1.ebuild:
+  added REQUIRED_USE to properly support the python-optional distutils-r1
+  required use flags
 
 *snns-4.3-r1 (10 Apr 2015)
 
