@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16475 2015/04/11 05:00:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16476 2015/04/11 05:08:05 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -786,11 +786,6 @@ app-admin/hwreport
 >=media-libs/ilmbase-2.2.0
 >=media-libs/openexr-2.2.0
 >=media-gfx/openexr_viewers-2.2.0
-
-# Sergey Popov <pinkbyte@gentoo.org> (05 Aug 2014)
-# Lacks patch in FILESDIR => fails to build
-# Masked by QA until maintainer will sort things out
-=app-emulation/fuse-1.1.1
 
 # Robin H. Johnson <robbat2@gentoo.org> (04 Aug 2014)
 # Masked for testing, presently fails upstream testsuite:
