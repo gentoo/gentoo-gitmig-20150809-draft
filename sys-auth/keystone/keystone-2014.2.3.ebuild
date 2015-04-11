@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.2.3.ebuild,v 1.1 2015/04/11 23:04:39 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.2.3.ebuild,v 1.2 2015/04/11 23:11:30 prometheanfire Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 user
 
-DESCRIPTION="The Openstack authentication, authorization, and service catalog written in Python"
+DESCRIPTION="The Openstack authentication, authorization, and service catalog"
 HOMEPAGE="https://launchpad.net/keystone"
 SRC_URI="http://launchpad.net/${PN}/juno/${PV}/+download/${P}.tar.gz"
 
