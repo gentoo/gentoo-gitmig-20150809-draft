@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.9.ebuild,v 1.11 2015/04/08 17:59:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.9.ebuild,v 1.12 2015/04/12 20:49:19 dilfridge Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -43,8 +43,8 @@ RDEPEND="
 		x11-libs/gtk+:2
 		opengl? ( x11-libs/gtkglext )
 	)
-	java? ( >=virtual/jre-1.6 )
-	jpeg? ( virtual/jpeg )
+	java? ( >=virtual/jre-1.6:* )
+	jpeg? ( virtual/jpeg:0 )
 	jpeg2k? ( media-libs/jasper )
 	ieee1394? (
 		media-libs/libdc1394
@@ -62,7 +62,7 @@ RDEPEND="
 		opengl? ( dev-qt/qtopengl:4 )
 	)
 	threads? ( dev-cpp/tbb )
-	tiff? ( media-libs/tiff )
+	tiff? ( media-libs/tiff:0 )
 	v4l? ( >=media-libs/libv4l-0.8.3 )
 	vtk? ( sci-libs/vtk[rendering] )
 	xine? ( media-libs/xine-lib )
