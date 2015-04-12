@@ -42,6 +42,8 @@
 # gpg_options='<opts>'               == Default are --quiet --decrypt
 # options='<opts>'                   == cryptsetup, for LUKS you can only use --readonly
 # loop_file='<file>'                 == Loopback file.
+#                                    Note: If you omit $source, then a free loopback will
+#                                    be looked up automatically.
 # pre_mount='cmds'                   == commands to execute before mounting partition.
 # post_mount='cmds'                  == commands to execute after mounting partition.
 #-----------
