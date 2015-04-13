@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.660 2015/03/29 19:17:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.661 2015/04/13 04:15:59 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1232,7 +1232,10 @@ toolchain_src_configure() {
 	# and now to do the actual configuration
 	addwrite /dev/zero
 	echo "${S}"/configure "${confgcc[@]}"
-	"${S}"/configure "${confgcc[@]}" || die "failed to run configure"
+	# Older gcc versions did not detect bash and re-exec itself, so force the
+	# use of bash.  Newer ones will auto-detect, but this is not harmeful.
+	CONFIG_SHELL="/bin/bash" \
+	bash "${S}"/configure "${confgcc[@]}" || die "failed to run configure"
 
 	# return to whatever directory we were in before
 	popd > /dev/null
