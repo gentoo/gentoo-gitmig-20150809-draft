@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2014.2.3.ebuild,v 1.1 2015/04/13 01:53:21 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2014.2.3.ebuild,v 1.2 2015/04/13 01:55:59 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python2_7 )
 inherit distutils-r1 user
 
 DESCRIPTION="Provides services for discovering, registering, and retrieving
-virtual machine images with Openstack"
+virtual machine images"
 HOMEPAGE="https://launchpad.net/glance"
 SRC_URI="http://launchpad.net/${PN}/juno/${PV}/+download/${P}.tar.gz"
 
