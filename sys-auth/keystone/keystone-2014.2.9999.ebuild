@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.2.9999.ebuild,v 1.5 2015/04/13 03:05:17 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.2.9999.ebuild,v 1.6 2015/04/13 03:17:25 prometheanfire Exp $
 
 EAPI=5
 
@@ -61,7 +61,7 @@ DEPEND="
 		<dev-python/testtools-1.5.1[${PYTHON_USEDEP}]
 		~dev-python/testscenarios-0.4[${PYTHON_USEDEP}]
 		>=dev-python/httplib2-0.7.5[${PYTHON_USEDEP}]
-		>=dev-python/requests-1.2.1[${PYTHON_USEDEP}]
+		>=dev-python/requests-2.1.0[${PYTHON_USEDEP}]
 		!~dev-python/requests-2.4.0[${PYTHON_USEDEP}]
 		>=dev-python/keyring-2.1[${PYTHON_USEDEP}]
 		!~dev-python/keyring-3.3[${PYTHON_USEDEP}]
