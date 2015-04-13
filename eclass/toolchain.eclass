@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.661 2015/04/13 04:15:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.662 2015/04/13 04:16:35 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -86,9 +86,9 @@ elif [[ ${GCC_PV} == *_rc* ]] ; then
 	SNAPSHOT=${GCC_PV%_rc*}-RC-${GCC_PV##*_rc}
 fi
 
-if [[ ${SNAPSHOT} == 5.0-* ]] ; then
-	# The gcc-5 release has dropped the .0 for some reason.
-	SNAPSHOT=${SNAPSHOT/5.0/5}
+if [[ ${SNAPSHOT} == [56789].0-* ]] ; then
+	# The gcc-5+ releases have dropped the .0 for some reason.
+	SNAPSHOT=${SNAPSHOT/.0}
 fi
 
 export GCC_FILESDIR=${GCC_FILESDIR:-${FILESDIR}}
