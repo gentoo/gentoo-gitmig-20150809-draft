@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/lsof
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/ChangeLog,v 1.110 2015/04/14 22:49:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/ChangeLog,v 1.111 2015/04/14 22:50:42 vapier Exp $
+
+  14 Apr 2015; Mike Frysinger <vapier@gentoo.org> files/lsof-4.85-cross.patch:
+  Fix building with gcc-5 #546636.
 
   14 Apr 2015; Mike Frysinger <vapier@gentoo.org> lsof-4.88.ebuild:
   Fix building with POSIX /bin/sh.
