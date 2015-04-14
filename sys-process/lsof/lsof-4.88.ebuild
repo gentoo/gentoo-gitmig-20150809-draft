@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/lsof-4.88.ebuild,v 1.2 2014/11/21 08:11:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/lsof-4.88.ebuild,v 1.3 2015/04/14 22:49:18 vapier Exp $
 
 EAPI="4"
 
@@ -32,6 +32,10 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.85-cross.patch #432120
+	# fix POSIX compliance with `echo`
+	sed -i \
+		-e 's:echo -n:printf:' \
+		AFSConfig Configure Customize Inventory tests/CkTestDB || die
 	# convert `test -r header.h` into a compile test
 	sed -i -r \
 		-e 's:test -r \$\{LSOF_INCLUDE\}/([[:alnum:]/._]*):echo "#include <\1>" | ${LSOF_CC} ${LSOF_CFGF} -E - >/dev/null 2>\&1:' \
