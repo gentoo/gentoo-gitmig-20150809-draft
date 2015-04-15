@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/musl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.51 2015/04/15 23:10:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.52 2015/04/15 23:14:59 blueness Exp $
+
+  15 Apr 2015; Anthony G. Basile <blueness@gentoo.org> -musl-1.1.5.ebuild,
+  -musl-1.1.6.ebuild, -musl-1.1.7-r3.ebuild:
+  Cleup older versions.
 
 *musl-1.1.8-r1 (15 Apr 2015)
 
