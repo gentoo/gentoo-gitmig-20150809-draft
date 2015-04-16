@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/clearlooks-phenix/clearlooks-phenix-5.0.7.ebuild,v 1.2 2015/04/16 08:43:01 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/clearlooks-phenix/clearlooks-phenix-5.0.7.ebuild,v 1.3 2015/04/16 08:50:32 idella4 Exp $
 
 EAPI=5
 
@@ -18,10 +18,6 @@ RDEPEND="
 	x11-themes/gtk-engines"
 
 src_install() {
-	insinto "/usr/share/themes/Clearlooks-Phenix-${SLOT}"
+	insinto "/usr/share/themes/Clearlooks-Phenix"
 	doins -r *
-}
-
-pkg_postinst() {
-	elog "The theme is named Clearlooks-Phenix-${SLOT}."
 }

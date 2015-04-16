@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/clearlooks-phenix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/clearlooks-phenix/ChangeLog,v 1.13 2015/04/16 08:43:01 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/clearlooks-phenix/ChangeLog,v 1.14 2015/04/16 08:50:32 idella4 Exp $
+
+  16 Apr 2015; Ian Delaney <idella4@gentoo.org> clearlooks-phenix-5.0.7.ebuild,
+  clearlooks-phenix-6.0.3.ebuild:
+  clearlooks-phenix-5.0.7.ebuild brought in line with vrsn 6.0.3
 
 *clearlooks-phenix-6.0.3 (16 Apr 2015)
 
