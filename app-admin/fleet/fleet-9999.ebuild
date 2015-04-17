@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fleet/fleet-9999.ebuild,v 1.4 2014/12/07 20:30:55 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fleet/fleet-9999.ebuild,v 1.5 2015/04/17 23:27:25 alunduil Exp $
 
 EAPI=5
 
@@ -42,11 +42,4 @@ src_install() {
 	keepdir /etc/${PN}
 	insinto /etc/${PN}
 	newins "${PN}".conf.sample "${PN}".conf
-}
-
-pkg_postinst() {
-	ewarn "If you're upgrading from a version less than 0.8.0, please read the messages!"
-	elog "The fleet binary name changed to fleetd."
-	elog "If you're using systemd, update your configuration:"
-	elog "  systemctl disable fleet; systemctl enable fleetd"
 }
