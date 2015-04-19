@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>gnome</herd>
+	<herd>gnome</herd>
+	<use>
+		<flag name="facebook">Enable indexing of Facebook</flag>
+		<flag name="flickr">Enable indexing of Flickr</flag>
+		<flag name="google">Enable indexing of Google Drive</flag>
+		<flag name="msn">Enable indexing of Microsoft OneDrive</flag>
+	</use>
 </pkgmetadata>
