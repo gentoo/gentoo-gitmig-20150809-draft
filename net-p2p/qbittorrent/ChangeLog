@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.243 2015/04/19 09:05:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.244 2015/04/19 09:27:25 hwoarang Exp $
+
+  19 Apr 2015; Markos Chandras <hwoarang@gentoo.org> qbittorrent-9999.ebuild:
+  A bit of cleanup and sync with regular ebuilds
 
   19 Apr 2015; Markos Chandras <hwoarang@gentoo.org> qbittorrent-9999.ebuild:
   Bump rb_libtorrent dep. Drop geoip support. Bug #546440

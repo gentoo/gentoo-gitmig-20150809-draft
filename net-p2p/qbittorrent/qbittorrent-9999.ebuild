@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-9999.ebuild,v 1.22 2015/04/19 09:05:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-9999.ebuild,v 1.23 2015/04/19 09:27:25 hwoarang Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit eutils python-r1 qmake-utils
+inherit eutils python-r1 qt4-r2
 
 DESCRIPTION="BitTorrent client in C++ and Qt"
 HOMEPAGE="http://www.qbittorrent.org/"
@@ -53,6 +53,7 @@ DOCS=(AUTHORS Changelog README.md TODO)
 
 src_prepare() {
 	epatch_user
+	qt4-r2_src_prepare
 }
 
 src_configure() {
@@ -72,8 +73,4 @@ src_configure() {
 	"${myconf[@]}" || die "configure failed"
 	use qt4 && eqmake4
 	use qt5 && eqmake5
-}
-
-src_install() {
-	emake INSTALL_ROOT="${D}" install
 }
