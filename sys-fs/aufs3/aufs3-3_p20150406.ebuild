@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20150406.ebuild,v 1.2 2015/04/20 07:07:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20150406.ebuild,v 1.3 2015/04/20 07:09:37 jlec Exp $
 
 EAPI=5
 
@@ -35,8 +35,6 @@ RDEPEND="
 S="${WORKDIR}"/${PN}-standalone
 
 MODULE_NAMES="aufs(misc:${S})"
-
-README_GENTOO_SUFFIX="-r1"
 
 pkg_setup() {
 	CONFIG_CHECK+=" !AUFS_FS"
