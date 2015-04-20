@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/sgt-puzzles-99999999.ebuild,v 1.6 2015/04/20 03:56:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/sgt-puzzles-99999999.ebuild,v 1.7 2015/04/20 03:58:09 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils gnome2-utils toolchain-funcs games
@@ -59,7 +59,7 @@ src_install() {
 	local file name
 	for file in *.R ; do
 		[[ ${file} == "nullgame.R" ]] && continue
-		name=$(sed -n 's/^[a-z]*\.exe://p' "${file}")
+		name=$(awk -F: '/exe:/ { print $3 }' "${file}")
 		file=${file%.R}
 		if [[ ${PV} -lt 99999999 ]] ; then
 			newicon -s 48 icons/${file}-48d24.png ${PN}-${file}.png
