@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20150406.ebuild,v 1.3 2015/04/20 07:09:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20150406.ebuild,v 1.4 2015/04/20 07:17:08 jlec Exp $
 
 EAPI=5
 
@@ -8,9 +8,9 @@ inherit eutils flag-o-matic linux-info linux-mod multilib readme.gentoo toolchai
 
 AUFS_VERSION="${PV%%_p*}"
 # highest branch version
-PATCH_MAX_VER=18
+PATCH_MAX_VER=19
 # highest supported version
-KERN_MAX_VER=19
+KERN_MAX_VER=20
 # lowest supported version
 KERN_MIN_VER=14
 
