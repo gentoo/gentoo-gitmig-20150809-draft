@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20150406.ebuild,v 1.1 2015/04/07 06:25:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20150406.ebuild,v 1.2 2015/04/20 07:07:16 jlec Exp $
 
 EAPI=5
 
@@ -29,7 +29,8 @@ DEPEND="
 RDEPEND="
 	sys-fs/aufs-util
 	!sys-fs/aufs
-	!sys-fs/aufs2"
+	!sys-fs/aufs2
+	!sys-fs/aufs4"
 
 S="${WORKDIR}"/${PN}-standalone
 
