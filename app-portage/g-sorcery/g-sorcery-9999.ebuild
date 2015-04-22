@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-sorcery/g-sorcery-9999.ebuild,v 1.1 2015/04/22 07:34:25 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-sorcery/g-sorcery-9999.ebuild,v 1.2 2015/04/22 08:00:18 jauhien Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="framework for ebuild generators"
 HOMEPAGE="https://github.com/jauhien/g-sorcery"
 SRC_URI=""
 EGIT_BRANCH="master"
-EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/g-sorcery.git"
+EGIT_REPO_URI="git://git.gentoo.org/proj/g-sorcery.git"
 
 LICENSE="GPL-2"
 SLOT="0"
