@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20121221-r2.ebuild,v 1.1 2015/04/25 01:47:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20121221-r2.ebuild,v 1.2 2015/04/25 01:54:49 vapier Exp $
 
 # For released versions, we precompile the man/html pages and store
 # them in a tarball on our mirrors.  This avoids ugly issues while
@@ -35,7 +35,8 @@ LIB_DEPEND="caps? ( sys-libs/libcap[static-libs(+)] )
 		)
 		!gnutls? ( dev-libs/openssl:0[static-libs(+)] )
 	) )"
-RDEPEND="rarpd? ( !net-misc/rarpd )
+RDEPEND="arping? ( !net-misc/arping )
+	rarpd? ( !net-misc/rarpd )
 	traceroute? ( !net-misc/traceroute )
 	!static? ( ${LIB_DEPEND//\[static-libs(+)]} )"
 DEPEND="${RDEPEND}
@@ -103,10 +104,15 @@ src_install() {
 	use ipv6 && dosym ping.8 "${EPREFIX}"/usr/share/man/man8/ping6.8
 	doman doc/ping.8
 
+	if use arping ; then
+		dobin arping
+		doman doc/arping.8
+	fi
+
 	into /usr
 
 	local u
-	for u in arping clockdiff rarpd rdisc tftpd tracepath ; do
+	for u in clockdiff rarpd rdisc tftpd tracepath ; do
 		if use ${u} ; then
 			dosbin ${u}
 			doman doc/${u}.8
@@ -137,6 +143,6 @@ pkg_postinst() {
 	fcaps cap_net_raw \
 		bin/ping \
 		$(usex ipv6 'bin/ping6' '') \
-		$(usex arping 'usr/bin/arping' '') \
+		$(usex arping 'bin/arping' '') \
 		$(usex clockdiff 'usr/bin/clockdiff' '')
 }
