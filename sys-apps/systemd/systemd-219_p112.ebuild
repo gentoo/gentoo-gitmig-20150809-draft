@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-219_p112.ebuild,v 1.1 2015/04/26 17:14:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-219_p112.ebuild,v 1.2 2015/04/26 17:18:00 floppym Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit autotools-utils bash-completion-r1 linux-info multilib \
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
-SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz
+SRC_URI="http://dev.gentoo.org/~floppym/dist/${P}.tar.xz
 	http://cgit.freedesktop.org/systemd/systemd/plain/tmpfiles.d/systemd.conf.m4?id=v219 -> systemd.conf.m4-v219"
 
 LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
