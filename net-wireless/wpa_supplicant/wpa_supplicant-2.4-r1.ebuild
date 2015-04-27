@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.4.ebuild,v 1.5 2015/04/26 16:51:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.4-r1.ebuild,v 1.1 2015/04/27 18:26:39 zerochaos Exp $
 
 EAPI=5
 
@@ -114,6 +114,8 @@ src_prepare() {
 	# SO WOULD BE NICE TO JUST DROP IT, IF IT IS NOT NEEDED.
 	# bug (374089)
 	#epatch "${FILESDIR}/${P}-dbus-WPAIE-fix.patch"
+
+	epatch "${FILESDIR}"/wpa_supplicant-2.4-cve-2015-1863.patch
 }
 
 src_configure() {
