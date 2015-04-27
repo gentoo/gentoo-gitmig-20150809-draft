@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-4.0_p2.ebuild,v 1.1 2015/04/27 20:36:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-4.0_p2.ebuild,v 1.2 2015/04/27 20:37:45 hwoarang Exp $
 
 EAPI="5"
 inherit readme.gentoo toolchain-funcs versionator
@@ -43,8 +43,8 @@ pkg_pretend() {
 	if [[ $(gcc-version) < 4.9 ]]; then
 			eerror ""
 			eerror "${P} needs an active GCC 4.9+ compiler"
-			eerror
-			die "${P} needs sys-devel/gcc >= 4.9"
+			eerror ""
+			die "${P} needs an active sys-devel/gcc >= 4.9"
 	fi
 }
 
