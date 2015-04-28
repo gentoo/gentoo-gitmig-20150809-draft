@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/ubuntu-wallpapers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ubuntu-wallpapers/ChangeLog,v 1.17 2015/04/28 21:18:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ubuntu-wallpapers/ChangeLog,v 1.18 2015/04/28 21:19:14 pacho Exp $
+
+  28 Apr 2015; Pacho Ramos <pacho@gentoo.org> -ubuntu-wallpapers-14.10.0.ebuild:
+  Drop old
 
 *ubuntu-wallpapers-15.04.1 (28 Apr 2015)
 
