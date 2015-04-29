@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/chktex-1.7.3.ebuild,v 1.1 2015/04/13 09:13:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/chktex-1.7.3.ebuild,v 1.2 2015/04/29 15:13:50 aballier Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=true
@@ -29,6 +29,8 @@ PATCHES=( "${FILESDIR}/${PN}-1.7.1-asneeded.patch" )
 DOCS=( NEWS )
 
 src_configure() {
+	export VARTEXFONTS="${T}/fonts" #538672
+
 	local myeconfargs=(
 		$(use_enable debug debug-info)
 		$(use_enable pcre)
