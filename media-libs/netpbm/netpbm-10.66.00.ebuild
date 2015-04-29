@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.66.00.ebuild,v 1.14 2015/04/28 03:04:13 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.66.00.ebuild,v 1.15 2015/04/29 01:58:05 vapier Exp $
 
 EAPI="4"
 
@@ -61,7 +61,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/netpbm-10.66-jpeg-dirs.patch
 	epatch "${FILESDIR}"/netpbm-10.66-jbig-2.patch
 	epatch "${FILESDIR}"/netpbm-10.66-failing-tests.patch
-	epatch "${FILESDIR}"/netpbm-10.66-wordaccess_be_aligned.patch
+	epatch "${FILESDIR}"/netpbm-10.66-wordaccess_be_aligned.patch #547252
 
 	# make sure we use system urt
 	sed -i '/SUPPORT_SUBDIRS/s:urt::' GNUmakefile || die
