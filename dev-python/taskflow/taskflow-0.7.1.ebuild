@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/taskflow/taskflow-0.7.1.ebuild,v 1.1 2015/04/30 18:40:30 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/taskflow/taskflow-0.7.1.ebuild,v 1.2 2015/04/30 18:48:12 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
@@ -50,6 +50,7 @@ python_prepare_all() {
 	sed -i '/ordereddict/d' requirements*
 	# only needed by py2.7 and included by the virtual
 	sed -i '/futures/d' requirements*
+	distutils-r1_python_prepare_all
 }
 
 python_test() {
