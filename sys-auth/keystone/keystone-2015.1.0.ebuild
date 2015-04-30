@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2015.1.0.ebuild,v 1.1 2015/04/30 17:23:27 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2015.1.0.ebuild,v 1.2 2015/04/30 20:17:09 prometheanfire Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://launchpad.net/${PN}/kilo/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="+sqlite memcached mongo mysql postgres ldap test"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
