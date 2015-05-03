@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sstp-client/sstp-client-1.0.9-r1.ebuild,v 1.1 2015/05/03 09:21:39 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sstp-client/sstp-client-1.0.9-r1.ebuild,v 1.2 2015/05/03 09:24:00 pinkbyte Exp $
 
 EAPI=5
 
-inherit eutils linux-info user
+inherit eutils linux-info multilib user
 
 DESCRIPTION="A client implementation of Secure Socket Tunneling Protocol (SSTP)"
 HOMEPAGE="http://sstp-client.sourceforge.net/"
@@ -44,7 +44,7 @@ src_configure() {
 		--enable-ppp-plugin \
 		--enable-group=sstpc \
 		--enable-user=sstpc \
-		--with-pppd-plugin-dir="/usr/lib64/pppd/${PPPD_VER}" \
+		--with-pppd-plugin-dir="/usr/$(get_libdir)/pppd/${PPPD_VER}" \
 		$(use_enable static)
 }
 
