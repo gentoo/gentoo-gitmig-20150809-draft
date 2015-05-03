@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.4.0-r2.ebuild,v 1.3 2015/05/03 06:58:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.4.0-r2.ebuild,v 1.4 2015/05/03 06:59:44 jer Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.inet.no/pub/socks/${MY_P}.tar.gz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="debug kerberos pam selinux static-libs tcpd upnp"
 
 CDEPEND="pam? ( virtual/pam )
