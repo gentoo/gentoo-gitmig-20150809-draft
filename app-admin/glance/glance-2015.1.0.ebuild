@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2015.1.0.ebuild,v 1.3 2015/05/04 15:49:30 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2015.1.0.ebuild,v 1.4 2015/05/04 15:55:00 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -174,9 +174,9 @@ python_install() {
 
 	insinto /etc/glance
 	insopts -m 0640 -o glance -g glance
-	doins "etc/*.ini"
-	doins "etc/*.conf"
-	doins "etc/*.sample"
+	doins etc/*.ini
+	doins etc/*.conf
+	doins etc/*.sample
 }
 
 python_install_all() {
