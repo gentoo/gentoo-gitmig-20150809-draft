@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.2_rc2.ebuild,v 1.1 2015/05/04 04:14:21 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.2_rc2.ebuild,v 1.2 2015/05/04 04:24:59 zerochaos Exp $
 
 EAPI="5"
 
@@ -27,7 +27,7 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 
-IUSE="+airdrop-ng +airgraph-ng kernel_linux kernel_FreeBSD +netlink +pcre +sqlite +unstable"
+IUSE="+airdrop-ng +airgraph-ng kernel_linux kernel_FreeBSD +netlink +pcre +sqlite +experimental"
 
 DEPEND="net-libs/libpcap
 	dev-libs/openssl:0=
@@ -35,6 +35,7 @@ DEPEND="net-libs/libpcap
 	pcre? ( dev-libs/libpcre )
 	airdrop-ng? ( ${PYTHON_DEPS} )
 	airgraph-ng? ( ${PYTHON_DEPS} )
+	experimental? ( sys-libs/zlib )
 	sqlite? ( >=dev-db/sqlite-3.4 )"
 RDEPEND="${DEPEND}
 	kernel_linux? (
@@ -66,7 +67,7 @@ src_compile() {
 	libnl=$(usex netlink true false) \
 	pcre=$(usex pcre true false) \
 	sqlite=$(usex sqlite true false) \
-	unstable=$(usex unstable true false) \
+	experimental=$(usex experimental true false) \
 	${liveflags}
 
 	if use airgraph-ng; then
@@ -88,7 +89,7 @@ src_test() {
 		libnl=$(usex netlink true false) \
 		pcre=$(usex pcre true false) \
 		sqlite=$(usex sqlite true false) \
-		unstable=$(usex unstable true false) \
+		experimental=$(usex experimental true false) \
 		${liveflags}
 }
 
@@ -102,7 +103,7 @@ src_install() {
 		libnl=$(usex netlink true false) \
 		pcre=$(usex pcre true false) \
 		sqlite=$(usex sqlite true false) \
-		unstable=$(usex unstable true false) \
+		experimental=$(usex experimental true false) \
 		${liveflags} \
 		install
 
