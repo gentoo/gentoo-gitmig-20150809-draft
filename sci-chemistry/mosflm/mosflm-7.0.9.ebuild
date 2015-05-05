@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/mosflm-7.0.9.ebuild,v 1.3 2013/05/05 13:15:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/mosflm-7.0.9.ebuild,v 1.4 2015/05/05 13:21:15 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils fortran-2 toolchain-funcs versionator
 
@@ -39,7 +39,7 @@ src_prepare() {
 		-e '/jinclude.h/d' \
 		-i mosflm/mosflm_jpeg.c || die
 
-	cp DATETIME.C mosflm/datetime.c
+	cp DATETIME.C mosflm/datetime.c || die
 
 	epatch \
 		"${FILESDIR}"/${PV}-parallel.patch \
