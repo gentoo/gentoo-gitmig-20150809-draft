@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/mosflm-7.0.9.ebuild,v 1.4 2015/05/05 13:21:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/mosflm-7.0.9.ebuild,v 1.5 2015/05/05 13:22:12 jlec Exp $
 
 EAPI=5
 
@@ -20,10 +20,10 @@ IUSE=""
 
 RDEPEND="
 	app-shells/tcsh
-	virtual/jpeg
 	sci-libs/cbflib
 	sci-libs/ccp4-libs
 	sys-libs/ncurses
+	virtual/jpeg:0=
 	x11-libs/libxdl_view"
 DEPEND="${RDEPEND}"
 
