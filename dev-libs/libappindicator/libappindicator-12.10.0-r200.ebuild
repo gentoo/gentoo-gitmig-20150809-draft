@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/libappindicator-12.10.0-r2.ebuild,v 1.1 2015/05/07 19:31:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/libappindicator-12.10.0-r200.ebuild,v 1.1 2015/05/07 19:49:14 mgorny Exp $
 
 EAPI=5
 VALA_MIN_API_VERSION="0.16"
@@ -13,7 +13,7 @@ HOMEPAGE="http://launchpad.net/libappindicator"
 SRC_URI="http://launchpad.net/${PN}/${PV%.*}/${PV}/+download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1 LGPL-3"
-SLOT="3"
+SLOT="2"
 KEYWORDS="~amd64 ~x86"
 IUSE="+introspection"
 
@@ -22,7 +22,7 @@ RDEPEND="
 	>=dev-libs/glib-2.26:2[${MULTILIB_USEDEP}]
 	>=dev-libs/libdbusmenu-0.6.2[gtk3,${MULTILIB_USEDEP}]
 	>=dev-libs/libindicator-12.10.0:3[${MULTILIB_USEDEP}]
-	>=x11-libs/gtk+-3.2:3[${MULTILIB_USEDEP}]
+	x11-libs/gtk+:2[${MULTILIB_USEDEP}]
 	introspection? ( >=dev-libs/gobject-introspection-1 )
 "
 DEPEND="${RDEPEND}
@@ -51,7 +51,7 @@ multilib_src_configure() {
 	econf \
 		--disable-silent-rules \
 		--disable-static \
-		--with-gtk=3
+		--with-gtk=2
 }
 
 multilib_src_install() {
@@ -62,4 +62,7 @@ multilib_src_install_all() {
 	dodoc AUTHORS ChangeLog
 
 	prune_libtool_files
+
+	# installed by slot 3 as well
+	rm -r "${D}"usr/share/gtk-doc || die
 }
