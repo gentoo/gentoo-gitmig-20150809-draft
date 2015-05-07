@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.142 2015/04/19 06:05:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.143 2015/05/07 05:55:49 graaff Exp $
+
+*rack-1.6.1 (07 May 2015)
+
+  07 May 2015; Hans de Graaff <graaff@gentoo.org> +rack-1.6.1.ebuild:
+  Version bump.
 
   19 Apr 2015; Hans de Graaff <graaff@gentoo.org> rack-1.6.0.ebuild:
   Avoid unneeded dependency on git.
