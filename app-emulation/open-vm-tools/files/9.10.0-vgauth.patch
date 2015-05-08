@@ -1,3 +1,14 @@
+--- a/vgauth/service/Makefile.am
++++ b/vgauth/service/Makefile.am
+@@ -78,7 +78,7 @@
+                             $(AM_CXXFLAGS) $(CXXFLAGS) $(AM_LDFLAGS) \
+                             $(LDFLAGS) -o $@
+ else
+-   VGAuthService_LINK = $(LINK)
++   VGAuthService_LINK = $(CXXLINK)
+ endif
+ 
+ # Message catalogs.
 --- a/vgauth/service/Makefile.in
 +++ b/vgauth/service/Makefile.in
 @@ -322,7 +322,7 @@
