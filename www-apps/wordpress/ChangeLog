@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.174 2015/05/08 17:10:33 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.175 2015/05/08 17:14:44 sping Exp $
+
+  08 May 2015; Sebastian Pipping <sping@gentoo.org> ChangeLog:
+  Sign manifest
 
 *wordpress-4.2.2 (08 May 2015)
 
