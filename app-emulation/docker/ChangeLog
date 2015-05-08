@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/docker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.45 2015/05/08 17:26:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.46 2015/05/08 17:27:58 xarthisius Exp $
+
+  08 May 2015; Kacper Kowalik <xarthisius@gentoo.org> -docker-1.5.0.ebuild:
+  drop old wrt #548884
 
 *docker-1.6.1 (08 May 2015)
 
