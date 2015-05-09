@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1608 2015/05/09 19:48:37 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1609 2015/05/09 19:51:00 pesa Exp $
+
+  09 May 2015; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
+  graphite support was dropped from gcc-4.7
 
   09 May 2015; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
   Move workaround for bug 367045 from qtgui ebuild to eclass.

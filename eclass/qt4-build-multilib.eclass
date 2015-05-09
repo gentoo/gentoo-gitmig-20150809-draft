@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.12 2015/05/09 19:48:37 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.13 2015/05/09 19:51:00 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -185,12 +185,6 @@ qt4-build-multilib_src_prepare() {
 	# Bug 261632
 	if use ppc64; then
 		append-flags -mminimal-toc
-	fi
-
-	# Bug 417105
-	# graphite on gcc 4.7 causes miscompilations
-	if [[ $(gcc-version) == "4.7" ]]; then
-		filter-flags -fgraphite-identity
 	fi
 
 	# Read also AR from the environment
