@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.8.5.ebuild,v 1.3 2015/05/09 11:36:02 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.8.6.ebuild,v 1.1 2015/05/09 11:36:02 yngwin Exp $
 
 EAPI=5
 inherit cmake-utils eutils gnome2-utils fdo-mime multilib readme.gentoo
@@ -11,7 +11,7 @@ SRC_URI="http://download.fcitx-im.org/fcitx/${P}_dict.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc ppc64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE="+X +autostart +cairo +dbus debug +enchant gtk gtk3 icu introspection lua
 nls opencc +pango qt4 static-libs +table test +xml"
 
@@ -64,7 +64,7 @@ HTML_DOCS=( doc/wb_fh.htm )
 src_prepare() {
 	use autostart && DOC_CONTENTS="You have enabled the autostart USE flag,
 	which will let fcitx start automatically on XDG compatible desktop
-	environments, such as Gnome, KDE, LXDE, Razor-qt and Xfce. If you use
+	environments, such as Gnome, KDE, LXDE, LXQt and Xfce. If you use
 	~/.xinitrc to configure your desktop, make sure to include the fcitx
 	command to start it."
 	epatch_user
