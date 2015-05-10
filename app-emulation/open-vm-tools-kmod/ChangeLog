@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/open-vm-tools-kmod
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/ChangeLog,v 1.46 2015/05/10 14:31:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/ChangeLog,v 1.47 2015/05/10 14:37:57 floppym Exp $
 
 *open-vm-tools-kmod-9.10.0_p2476743 (10 May 2015)
 
@@ -9,7 +9,8 @@
   +files/9.10.0-0002-Fix-d_alias-to-d_u.d_alias-for-kernel-3.18.patch,
   +files/9.10.0-0003-Fix-f_dentry-msghdr-kernel-3.19.patch,
   +open-vm-tools-kmod-9.10.0_p2476743.ebuild, metadata.xml:
-  Version bump. Resolves bug 507026.
+  Version bump. Resolves bug 507026. Thanks to Florian Steinel for
+  assembling patches.
 
   14 Feb 2015; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Add myself as a maintainer.
