@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/qtsingleapplication-2.6.1_p20130904-r3.ebuild,v 1.1 2015/05/10 14:16:36 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/qtsingleapplication-2.6.1_p20130904-r3.ebuild,v 1.2 2015/05/10 15:41:54 pesa Exp $
 
 EAPI=5
 
@@ -80,27 +80,18 @@ src_install() {
 	use doc && dodoc -r doc/html
 
 	myinstall() {
-		if [[ ${MULTIBUILD_VARIANT} == qt4 ]]; then
-			insinto /usr/include/qt4/QtSolutions
-			doins src/qtsinglecoreapplication.h
-			use X && doins src/{QtSingleApplication,${PN}.h}
-
-			insinto /usr/share/qt4/mkspecs/features
-			doins "${FILESDIR}"/qtsinglecoreapplication.prf
-			use X && doins "${FILESDIR}"/${PN}.prf
-		fi
-
-		if [[ ${MULTIBUILD_VARIANT} == qt5 ]]; then
-			insinto /usr/include/qt5/QtSolutions
-			doins src/qtsinglecoreapplication.h
-			use X && doins src/{QtSingleApplication,${PN}.h}
-
-			insinto /usr/$(get_libdir)/qt5/mkspecs/features
-			doins "${FILESDIR}"/qtsinglecoreapplication.prf
-			use X && doins "${FILESDIR}"/${PN}.prf
-		fi
-
+		# libraries
 		dolib.so lib/*
+
+		# headers
+		insinto "$(${MULTIBUILD_VARIANT}_get_headerdir)"/QtSolutions
+		doins src/qtsinglecoreapplication.h
+		use X && doins src/{QtSingleApplication,${PN}.h}
+
+		# .prf files
+		insinto "$(${MULTIBUILD_VARIANT}_get_mkspecsdir)"/features
+		doins "${FILESDIR}"/qtsinglecoreapplication.prf
+		use X && doins "${FILESDIR}"/${PN}.prf
 	}
 
 	multibuild_foreach_variant run_in_build_dir myinstall
