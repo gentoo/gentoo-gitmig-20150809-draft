@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/rubinius-2.5.3.ebuild,v 1.1 2015/05/11 19:04:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/rubinius-2.5.3.ebuild,v 1.2 2015/05/11 19:19:04 graaff Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib versionator
@@ -78,7 +78,7 @@ src_install() {
 
 	RBXOPT="-Xsystem.log=/dev/null" DESTDIR="${D}" rake install || die "Installation failed"
 
-	dosym /${librbx}/${minor_version}/bin/rbx /usr/bin/rbx || die "Couldn't make rbx symlink"
+	dosym /${librbx}/bin/rbx /usr/bin/rbx || die "Couldn't make rbx symlink"
 
 	insinto /${librbx}/${minor_version}/site
 	doins "${FILESDIR}/auto_gem.rb" || die "Couldn't install rbx auto_gem.rb"
