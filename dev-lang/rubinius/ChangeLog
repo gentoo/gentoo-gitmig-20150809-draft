@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/rubinius
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/ChangeLog,v 1.20 2015/05/11 19:04:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/ChangeLog,v 1.21 2015/05/11 19:04:46 graaff Exp $
+
+  11 May 2015; Hans de Graaff <graaff@gentoo.org> -rubinius-2.2.9.ebuild,
+  -rubinius-2.3.0.ebuild:
+  Remove old versions with issues.
 
 *rubinius-2.5.3 (11 May 2015)
 
