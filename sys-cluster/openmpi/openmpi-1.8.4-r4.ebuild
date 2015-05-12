@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.8.4-r3.ebuild,v 1.1 2015/05/10 22:33:19 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.8.4-r4.ebuild,v 1.1 2015/05/12 15:05:50 jsbronder Exp $
 
 EAPI=5
 
 FORTRAN_NEEDED=fortran
 
-inherit autotools cuda eutils flag-o-matic fortran-2 multilib toolchain-funcs versionator multilib-minimal
+inherit autotools cuda eutils flag-o-matic fortran-2 multilib toolchain-funcs versionator
 
 MY_P=${P/-mpi}
 S=${WORKDIR}/${MY_P}
@@ -54,16 +54,15 @@ MPI_UNCLASSED_DEP_STR="
 		!app-text/lcdf-typetools
 	)"
 
-# dev-util/nvidia-cuda-toolkit is always multilib
 RDEPEND="
 	!sys-cluster/mpich
 	!sys-cluster/mpich2
 	!sys-cluster/mpiexec
-	>=dev-libs/libevent-2.0.21[${MULTILIB_USEDEP}]
-	dev-libs/libltdl:0[${MULTILIB_USEDEP}]
-	>=sys-apps/hwloc-1.10.0-r2[${MULTILIB_USEDEP},numa?]
-	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
-	cuda? ( >=dev-util/nvidia-cuda-toolkit-6.5.19-r1 )
+	dev-libs/libevent
+	dev-libs/libltdl:0
+	>=sys-apps/hwloc-1.9.1[numa?]
+	sys-libs/zlib
+	cuda? ( dev-util/nvidia-cuda-toolkit )
 	elibc_FreeBSD? ( dev-libs/libexecinfo )
 	openmpi_fabrics_ofed? ( sys-infiniband/ofed )
 	openmpi_fabrics_knem? ( sys-cluster/knem )
@@ -74,10 +73,6 @@ RDEPEND="
 	openmpi_ofed_features_rdmacm? ( sys-infiniband/librdmacm )
 	"
 DEPEND="${RDEPEND}"
-
-MULTILIB_WRAPPED_HEADERS=(
-	/usr/include/mpi.h
-)
 
 pkg_setup() {
 	fortran-2_pkg_setup
@@ -111,7 +106,7 @@ src_prepare() {
 	AT_M4DIR=config eautoreconf
 }
 
-multilib_src_configure() {
+src_configure() {
 	local myconf=(
 		--sysconfdir="${EPREFIX}/etc/${PN}"
 		--enable-pretty-print-stacktrace
@@ -125,7 +120,7 @@ multilib_src_configure() {
 			--enable-opal-multi-threads)
 	fi
 
-	if multilib_is_native_abi && use fortran; then
+	if use fortran; then
 		myconf+=(--enable-mpi-fortran=all)
 	else
 		myconf+=(--enable-mpi-fortran=no)
@@ -133,59 +128,43 @@ multilib_src_configure() {
 
 	! use vt && myconf+=(--enable-contrib-no-build=vt)
 
-	ECONF_SOURCE=${S} econf "${myconf[@]}" \
+	econf "${myconf[@]}" \
 		$(use_enable cxx mpi-cxx) \
 		$(use_with cma) \
 		$(use_with cuda cuda "${EPREFIX}"/opt/cuda) \
 		$(use_enable romio io-romio) \
 		$(use_enable heterogeneous) \
 		$(use_enable ipv6) \
-		$(multilib_native_use_with openmpi_fabrics_ofed verbs "${EPREFIX}"/usr) \
-		$(multilib_native_use_with openmpi_fabrics_knem knem "${EPREFIX}"/usr) \
-		$(multilib_native_use_with openmpi_fabrics_open-mx mx "${EPREFIX}"/usr) \
-		$(multilib_native_use_with openmpi_fabrics_psm psm "${EPREFIX}"/usr) \
-		$(multilib_native_use_enable openmpi_ofed_features_control-hdr-padding openib-control-hdr-padding) \
-		$(multilib_native_use_enable openmpi_ofed_features_connectx-xrc openib-connectx-xrc) \
-		$(multilib_native_use_enable openmpi_ofed_features_rdmacm openib-rdmacm) \
-		$(multilib_native_use_enable openmpi_ofed_features_udcm openib-udcm) \
-		$(multilib_native_use_enable openmpi_ofed_features_dynamic-sl openib-dynamic-sl) \
-		$(multilib_native_use_enable openmpi_ofed_features_failover btl-openib-failover) \
-		$(multilib_native_use_with openmpi_rm_pbs tm) \
-		$(multilib_native_use_with openmpi_rm_slurm slurm)
+		$(use_with openmpi_fabrics_ofed verbs "${EPREFIX}"/usr) \
+		$(use_with openmpi_fabrics_knem knem "${EPREFIX}"/usr) \
+		$(use_with openmpi_fabrics_open-mx mx "${EPREFIX}"/usr) \
+		$(use_with openmpi_fabrics_psm psm "${EPREFIX}"/usr) \
+		$(use_enable openmpi_ofed_features_control-hdr-padding openib-control-hdr-padding) \
+		$(use_enable openmpi_ofed_features_connectx-xrc openib-connectx-xrc) \
+		$(use_enable openmpi_ofed_features_rdmacm openib-rdmacm) \
+		$(use_enable openmpi_ofed_features_udcm openib-udcm) \
+		$(use_enable openmpi_ofed_features_dynamic-sl openib-dynamic-sl) \
+		$(use_enable openmpi_ofed_features_failover btl-openib-failover) \
+		$(use_with openmpi_rm_pbs tm) \
+		$(use_with openmpi_rm_slurm slurm)
 }
 
-multilib_src_install() {
+src_install () {
 	emake DESTDIR="${D}" install
 
-	# Remove la files, no static libs are installed and we have pkg-config
-	find "${ED}"/usr/$(get_libdir)/ -type f -name '*.la' -delete
-
-	# fortran header cannot be wrapped (bug #540508), workaround part 1
-	if multilib_is_native_abi && use fortran; then
-		mkdir "${T}"/fortran || die
-		mv "${ED}"/usr/include/mpif* "${T}"/fortran || die
-	else
-		#some fortran files get installed unconditionally 
-		rm "${ED}"/usr/include/mpif* "${ED}"/usr/bin/mpif* || die
-	fi
-}
-
-multilib_src_install_all() {
 	# From USE=vt see #359917
 	rm "${ED}"/usr/share/libtool &> /dev/null
-
-	# fortran header cannot be wrapped (bug #540508), workaround part 2
-	if use fortran; then
-		mv "${T}"/fortran/mpif* "${ED}"/usr/include || die
-	fi
 
 	# Avoid collisions with libevent
 	rm -rf "${ED}"/usr/include/event2 &> /dev/null
 
+	# Remove la files, no static libs are installed and we have pkg-config
+	find "${ED}"/usr/$(get_libdir)/ -type f -name '*.la' -delete
+
 	dodoc README AUTHORS NEWS VERSION || die
 }
 
-multilib_src_test() {
+src_test() {
 	# Doesn't work with the default src_test as the dry run (-n) fails.
 	emake -j1 check
 }
