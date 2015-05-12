@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.3 2015/05/12 16:06:37 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.4 2015/05/12 16:27:59 zerochaos Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite,xml"
-inherit eutils flag-o-matic python-single-r1 toolchain-funcs
+inherit eutils fcaps flag-o-matic python-single-r1 toolchain-funcs user
 
 MY_P=${P/_beta/BETA}
 
@@ -154,3 +154,17 @@ src_install() {
 		python_optimize
 	fi
 }
+
+pkg_postinst() {
+	# Add group for users allowed to run nmap.
+	enewgroup nmap
+
+	fcaps -o 0 -g nmap -m 4755 -M 0755 \
+		cap_net_raw,cap_net_admin,cap_net_bind_service+eip \
+		"${EROOT}"/usr/bin/nmap
+
+	ewarn "NOTE: To run nmap  as normal user you have to add yourself to the"
+	ewarn "nmap group. This security measure ensures that only trusted users"
+	ewarn "are allowed to run nmap"
+}
+
