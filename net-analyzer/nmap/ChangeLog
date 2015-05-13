@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.341 2015/05/13 05:40:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.342 2015/05/13 05:51:15 jer Exp $
+
+  13 May 2015; Jeroen Roovers <jer@gentoo.org> nmap-6.47-r3.ebuild,
+  nmap-9999.ebuild:
+  Formatting. Do not say it twice. Remove more version based messaging.
 
 *nmap-6.47-r3 (13 May 2015)
 

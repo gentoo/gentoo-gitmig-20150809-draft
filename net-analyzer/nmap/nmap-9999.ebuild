@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.9 2015/05/13 05:40:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.10 2015/05/13 05:51:15 jer Exp $
 
 EAPI=5
 
@@ -64,7 +64,8 @@ S="${WORKDIR}/${MY_P}"
 DOC_CONTENTS="
 To run nmap as unprivileged user you:
  - add yourself to the nmap group
- - pass --privileged on the command line or set the NMAP_PRIVILEGED variable in your environment.
+ - pass --privileged on the command line or set the NMAP_PRIVILEGED variable in
+   your environment.
 "
 
 pkg_setup() {
@@ -172,13 +173,5 @@ pkg_postinst() {
 		cap_net_raw,cap_net_admin,cap_net_bind_service+eip \
 		"${EROOT}"/usr/bin/nmap
 
-	einfo "To run nmap as unprivileged user you:"
-	einfo " - add yourself to the nmap group"
-	einfo " - pass --privileged on the command line or set the"
-	einfo "   NMAP_PRIVILEGED variable in your environment."
-
-	if [[ ${REPLACING_VERSIONS} < 6.48 ]]; then
-		FORCE_PRINT_ELOG="true"
-	fi
 	readme.gentoo_print_elog
 }
