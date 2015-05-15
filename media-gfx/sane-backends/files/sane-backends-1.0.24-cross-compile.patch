@@ -1,5 +1,7 @@
-diff --git a/configure.in b/configure.in
-index a91d584..7db972c 100644
+https://alioth.debian.org/tracker/index.php?func=detail&aid=315060&group_id=30186&atid=410366
+
+do not hardcode /usr/local paths that break cross-compiles
+
 --- a/configure.in
 +++ b/configure.in
 @@ -82,7 +82,6 @@ AM_CONDITIONAL(CROSS_COMPILING, test x$cross_compiling = xyes)
