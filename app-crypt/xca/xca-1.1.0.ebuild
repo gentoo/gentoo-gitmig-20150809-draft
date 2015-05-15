@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-1.1.0.ebuild,v 1.5 2015/05/15 11:17:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-1.1.0.ebuild,v 1.6 2015/05/15 11:29:04 alonbl Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="bindist"
 
-RDEPEND=">=dev-libs/openssl-0.9.8[bindist=]
+RDEPEND=">=dev-libs/openssl-0.9.8:*[bindist=]
 	dev-qt/qtgui:4"
 DEPEND="${RDEPEND}"
 
