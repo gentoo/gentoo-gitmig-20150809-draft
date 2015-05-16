@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/weechat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.157 2015/05/16 19:17:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.158 2015/05/16 19:19:32 radhermit Exp $
+
+  16 May 2015; Tim Harder <radhermit@gentoo.org> -weechat-0.4.3-r1.ebuild,
+  -weechat-1.0.1.ebuild, -weechat-1.1.ebuild, weechat-9999.ebuild,
+  -files/weechat-0.4.3-always-link-against-pthreads.patch:
+  Remove old.
 
 *weechat-1.2 (16 May 2015)
 
