@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/task
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.52 2015/05/16 19:36:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.53 2015/05/16 19:37:36 radhermit Exp $
+
+  16 May 2015; Tim Harder <radhermit@gentoo.org> task-2.4.4.ebuild:
+  Add slot for readline dep.
 
 *task-2.4.4 (16 May 2015)
 
