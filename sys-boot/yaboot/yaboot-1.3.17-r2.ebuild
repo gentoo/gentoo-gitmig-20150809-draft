@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.17-r2.ebuild,v 1.7 2015/05/17 04:25:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.17-r2.ebuild,v 1.8 2015/05/17 04:27:34 vapier Exp $
 
 EAPI="5"
 
@@ -39,12 +39,7 @@ src_prepare() {
 	# dual boot patch
 	epatch "${FILESDIR}/yabootconfig-1.3.13.patch"
 	epatch "${FILESDIR}/chrpfix.patch"
-	if [[ "$(gcc-major-version)" -eq "3" ]]; then
-		epatch "${FILESDIR}/${PN}-nopiessp.patch"
-	fi
-	if [[ "$(gcc-major-version)" -eq "4" ]]; then
-		epatch "${FILESDIR}/${P}-nopiessp-gcc4.patch"
-	fi
+	epatch "${FILESDIR}/${P}-nopiessp-gcc4.patch"
 
 	# Error only on real errors, for prom printing format compile failure
 	sed -i "s:-Werror:-Wno-error:g" Makefile

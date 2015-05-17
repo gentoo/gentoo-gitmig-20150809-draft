@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.14-r2.ebuild,v 1.10 2015/05/17 04:25:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.14-r2.ebuild,v 1.11 2015/05/17 04:27:34 vapier Exp $
 
 EAPI="5"
 
@@ -32,12 +32,7 @@ src_prepare() {
 	# dual boot patch
 	epatch "${FILESDIR}/yabootconfig-1.3.13.patch"
 	epatch "${FILESDIR}/chrpfix.patch"
-	if [[ "$(gcc-major-version)" -eq "3" ]]; then
-		epatch "${FILESDIR}/yaboot-nopiessp.patch"
-	fi
-	if [[ "$(gcc-major-version)" -eq "4" ]]; then
-		epatch "${FILESDIR}/yaboot-nopiessp-gcc4.patch"
-	fi
+	epatch "${FILESDIR}/yaboot-nopiessp-gcc4.patch"
 	epatch "${FILESDIR}/sysfs-ofpath.patch"
 }
 
