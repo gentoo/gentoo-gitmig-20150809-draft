@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.14-r1.ebuild,v 1.3 2011/04/10 14:24:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.14-r1.ebuild,v 1.4 2015/05/17 03:42:57 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Static yaboot ppc boot loader for machines with open firmware"
 
-HOMEPAGE="http://penguinppc.org/projects/yaboot/"
+HOMEPAGE="http://yaboot.ozlabs.org/"
 SRC_URI="mirror://gentoo/yaboot-static-${PV}.tbz2"
 LICENSE="GPL-2"
 SLOT="0"
