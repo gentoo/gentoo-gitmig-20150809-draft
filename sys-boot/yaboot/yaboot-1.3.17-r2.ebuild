@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.17-r2.ebuild,v 1.2 2012/06/20 13:54:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.17-r2.ebuild,v 1.3 2015/05/17 04:09:05 vapier Exp $
 
 EAPI=2
 
@@ -48,8 +48,7 @@ src_prepare() {
 }
 
 src_compile() {
-	export -n CFLAGS
-	export -n CXXFLAGS
+	unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
 	[ -n "$(tc-getCC)" ] || CC="gcc"
 	emake PREFIX=/usr MANDIR=share/man CC="$(tc-getCC)" || die
 }

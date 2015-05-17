@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.14-r2.ebuild,v 1.4 2011/04/10 14:23:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.14-r2.ebuild,v 1.5 2015/05/17 04:09:05 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,8 +18,7 @@ RDEPEND="!ibm? ( sys-fs/hfsutils
 				 sys-fs/mac-fdisk )"
 
 src_compile() {
-	export -n CFLAGS
-	export -n CXXFLAGS
+	unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
 	[ -n "$(tc-getCC)" ] || CC="gcc"
 	# dual boot patch
 	epatch "${FILESDIR}/yabootconfig-1.3.13.patch"
