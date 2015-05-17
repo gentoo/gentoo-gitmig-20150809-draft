@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/yaboot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.48 2015/05/17 04:18:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.49 2015/05/17 04:20:56 vapier Exp $
+
+  17 May 2015; Mike Frysinger <vapier@gentoo.org> yaboot-1.3.14-r2.ebuild:
+  Use `sed -i` like we do in newer versions.
 
   17 May 2015; Mike Frysinger <vapier@gentoo.org> yaboot-1.3.14-r2.ebuild,
   yaboot-1.3.16.ebuild, yaboot-1.3.17-r2.ebuild:

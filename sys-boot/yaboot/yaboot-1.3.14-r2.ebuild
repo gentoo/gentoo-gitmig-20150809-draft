@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.14-r2.ebuild,v 1.8 2015/05/17 04:18:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.14-r2.ebuild,v 1.9 2015/05/17 04:20:56 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -42,8 +42,6 @@ src_compile() {
 }
 
 src_install() {
-	cp etc/yaboot.conf etc/yaboot.conf.bak
-	sed -e 's/\/local//' etc/yaboot.conf >| etc/yaboot.conf.edit
-	mv -f etc/yaboot.conf.edit etc/yaboot.conf
+	sed -i -e 's/\/local//' etc/yaboot.conf
 	make ROOT="${D}" PREFIX=/usr MANDIR=share/man install || die
 }
