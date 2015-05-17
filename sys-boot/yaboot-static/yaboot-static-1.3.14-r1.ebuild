@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.14-r1.ebuild,v 1.6 2015/05/17 03:56:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.14-r1.ebuild,v 1.7 2015/05/17 03:58:17 vapier Exp $
 
 inherit eutils
 
@@ -19,6 +19,12 @@ RDEPEND="!sys-boot/yaboot
 		sys-fs/hfsplusutils
 		sys-fs/mac-fdisk
 	)"
+
+QA_PRESTRIPPED="
+	/usr/lib/yaboot/yaboot
+	/usr/lib/yaboot/yaboot.chrp
+	/usr/lib/yaboot/addnote
+"
 
 src_unpack() {
 	unpack ${A}
