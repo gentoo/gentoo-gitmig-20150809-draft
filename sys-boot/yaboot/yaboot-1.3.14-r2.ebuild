@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.14-r2.ebuild,v 1.5 2015/05/17 04:09:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.14-r2.ebuild,v 1.6 2015/05/17 04:12:42 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,7 +19,6 @@ RDEPEND="!ibm? ( sys-fs/hfsutils
 
 src_compile() {
 	unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
-	[ -n "$(tc-getCC)" ] || CC="gcc"
 	# dual boot patch
 	epatch "${FILESDIR}/yabootconfig-1.3.13.patch"
 	epatch "${FILESDIR}/chrpfix.patch"
@@ -30,7 +29,7 @@ src_compile() {
 		epatch "${FILESDIR}/yaboot-nopiessp-gcc4.patch"
 	fi
 	epatch "${FILESDIR}/sysfs-ofpath.patch"
-	emake PREFIX=/usr MANDIR=share/man CC="$(tc-getCC)" || die
+	emake PREFIX=/usr MANDIR=share/man CC="$(tc-getCC)" LD="$(tc-getLD)" || die
 }
 
 src_install() {
