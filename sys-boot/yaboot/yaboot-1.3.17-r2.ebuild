@@ -1,16 +1,17 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.17-r2.ebuild,v 1.6 2015/05/17 04:18:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.17-r2.ebuild,v 1.7 2015/05/17 04:25:12 vapier Exp $
 
-EAPI=2
+EAPI="5"
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="PPC Bootloader"
-SRC_URI="http://yaboot.ozlabs.org/releases/${P}.tar.gz"
 HOMEPAGE="http://yaboot.ozlabs.org"
-SLOT="0"
+SRC_URI="http://yaboot.ozlabs.org/releases/${P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="-* ppc -ppc64"
 IUSE="ibm"
 
@@ -24,7 +25,7 @@ RDEPEND="!sys-boot/yaboot-static
 	)"
 
 src_unpack() {
-	unpack ${A}
+	default
 	cd "${S}"
 	cp "${FILESDIR}/new-ofpath" "${S}/ybin/ofpath"
 }
@@ -57,11 +58,11 @@ src_prepare() {
 
 src_compile() {
 	unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
-	emake PREFIX=/usr MANDIR=share/man CC="$(tc-getCC)" LD="$(tc-getLD)" || die
+	emake PREFIX=/usr MANDIR=share/man CC="$(tc-getCC)" LD="$(tc-getLD)"
 }
 
 src_install() {
-	sed -i -e 's/\/local//' etc/yaboot.conf
-	make ROOT="${D}" PREFIX=/usr MANDIR=share/man install || die
-	mv "${D}/etc/yaboot.conf" "${D}/etc/yaboot.conf.sample"
+	sed -i -e 's/\/local//' etc/yaboot.conf || die
+	emake ROOT="${D}" PREFIX=/usr MANDIR=share/man install
+	mv "${ED}"/etc/yaboot.conf{,.sample} || die
 }

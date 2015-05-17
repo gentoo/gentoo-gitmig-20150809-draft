@@ -1,14 +1,17 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.14-r2.ebuild,v 1.9 2015/05/17 04:20:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.14-r2.ebuild,v 1.10 2015/05/17 04:25:12 vapier Exp $
+
+EAPI="5"
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="PPC Bootloader"
-SRC_URI="http://yaboot.ozlabs.org/releases/${P}.tar.gz"
 HOMEPAGE="http://yaboot.ozlabs.org"
-SLOT="0"
+SRC_URI="http://yaboot.ozlabs.org/releases/${P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="-* ppc -ppc64"
 IUSE="ibm"
 
@@ -20,9 +23,7 @@ RDEPEND="!sys-boot/yaboot-static
 		sys-fs/mac-fdisk
 	)"
 
-src_compile() {
-	unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
-
+src_prepare() {
 	# No need to hardcode this path -- the compiler already knows to use it.
 	sed -i \
 		-e 's:-I/usr/include::' \
@@ -38,10 +39,14 @@ src_compile() {
 		epatch "${FILESDIR}/yaboot-nopiessp-gcc4.patch"
 	fi
 	epatch "${FILESDIR}/sysfs-ofpath.patch"
-	emake PREFIX=/usr MANDIR=share/man CC="$(tc-getCC)" LD="$(tc-getLD)" || die
+}
+
+src_compile() {
+	unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
+	emake PREFIX=/usr MANDIR=share/man CC="$(tc-getCC)" LD="$(tc-getLD)"
 }
 
 src_install() {
 	sed -i -e 's/\/local//' etc/yaboot.conf
-	make ROOT="${D}" PREFIX=/usr MANDIR=share/man install || die
+	emake ROOT="${D}" PREFIX=/usr MANDIR=share/man install
 }
