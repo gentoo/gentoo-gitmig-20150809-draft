@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.10-r1.ebuild,v 1.2 2015/05/18 04:19:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.10-r1.ebuild,v 1.3 2015/05/18 04:25:36 vapier Exp $
 
 EAPI="4"
 
@@ -31,9 +31,9 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}-ng-${PV}
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${PN}-3.3.8-kill-neg-pid.patch \
-		"${FILESDIR}"/${P}-pmap-unreadable.patch
+	epatch "${FILESDIR}"/${PN}-3.3.8-kill-neg-pid.patch # http://crbug.com/255209
+	epatch "${FILESDIR}"/${P}-pmap-unreadable.patch #404389
+	epatch "${FILESDIR}"/${P}-tests-no-tty.patch #461302
 	sed -i -e 's:systemd-login:systemd:' configure || die #501306
 }
 
@@ -51,7 +51,7 @@ src_configure() {
 }
 
 src_test() {
-	emake check </dev/null
+	emake check </dev/null #461302
 }
 
 src_install() {
