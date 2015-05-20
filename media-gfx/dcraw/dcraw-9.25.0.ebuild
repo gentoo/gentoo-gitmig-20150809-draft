@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-9.25.0.ebuild,v 1.1 2015/05/20 06:49:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-9.25.0.ebuild,v 1.2 2015/05/20 06:50:54 radhermit Exp $
 
 EAPI=5
 inherit eutils readme.gentoo toolchain-funcs
@@ -18,7 +18,7 @@ LANGS=" ca cs de da eo es fr hu it nl pl pt ru sv zh_CN zh_TW"
 IUSE="nls gimp jpeg jpeg2k lcms ${LANGS// / linguas_}"
 
 COMMON_DEPEND="
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	lcms? ( media-libs/lcms:2 )
 	jpeg2k? ( media-libs/jasper )
 	gimp? ( media-gfx/gimp )
