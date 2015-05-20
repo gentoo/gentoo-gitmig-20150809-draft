@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.53 2015/02/05 16:00:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.54 2015/05/20 15:17:08 floppym Exp $
 
-EAPI=4
+EAPI=5
 inherit multilib toolchain-funcs multilib-minimal
 
 LIBVPX_TESTDATA_VER=1.3.0
@@ -27,7 +27,7 @@ DESCRIPTION="WebM VP8 Codec SDK"
 HOMEPAGE="http://www.webmproject.org"
 
 LICENSE="BSD"
-SLOT="0"
+SLOT="0/2"
 IUSE="altivec cpu_flags_x86_avx cpu_flags_x86_avx2 doc cpu_flags_x86_mmx postproc cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse3 cpu_flags_x86_ssse3 cpu_flags_x86_sse4_1 static-libs test +threads"
 
 RDEPEND="abi_x86_32? ( !app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
