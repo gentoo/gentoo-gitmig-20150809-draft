@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-tools/go-tools-9999.ebuild,v 1.1 2015/05/18 07:58:45 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-tools/go-tools-9999.ebuild,v 1.2 2015/05/21 07:18:42 zmedico Exp $
 
 EAPI=5
 inherit git-r3
@@ -27,6 +27,15 @@ src_compile() {
 	rm -rf "${GOROOT}/src/${GO_PN}" \
 		"${GOROOT}/pkg/linux_${ARCH}/${GO_PN}" || die
 	GOROOT="${GOROOT}" GOPATH=${WORKDIR} go install -v -x -work ${GO_PN}/... || die
+}
+
+src_test() {
+	GOROOT="${GOROOT}" GOPATH=${WORKDIR} \
+		go test -run "^"$(
+		echo -n 'Test(ParseLine|ParseSet|SelectBest|Delta|Correlate|'
+		echo -n 'BenchCmpSorting|Callgraph-4|Cover|Digraph|Split|'
+		echo -n 'QuotedLength|FixImports|DryRun)$') \
+		-x -v ${GO_PN}/... || die $?
 }
 
 src_install() {
