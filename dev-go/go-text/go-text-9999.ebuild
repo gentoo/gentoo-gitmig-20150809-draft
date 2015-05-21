@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-text/go-text-9999.ebuild,v 1.1 2015/05/18 07:48:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-text/go-text-9999.ebuild,v 1.2 2015/05/21 05:31:35 zmedico Exp $
 
 EAPI=5
 inherit git-r3
@@ -26,6 +26,20 @@ src_compile() {
 	rm -rf "${GOROOT}/src/${GO_PN}" \
 		"${GOROOT}/pkg/linux_${ARCH}/${GO_PN}" || die
 	GOROOT="${GOROOT}" GOPATH=${WORKDIR} go install -v -x -work ${GO_PN}/... || die
+}
+
+src_test() {
+	GOROOT="${GOROOT}" GOPATH=${WORKDIR} \
+		go test -run "^(Example.*|"$(
+			echo -n 'Test(Flush|Insert|Decomposition|Composition|IterNext|'
+			echo -n 'IterSegmentation|DecomposeSegment|FirstBoundary|'
+			echo -n 'DecomposeToLastBoundary|LastBoundary|QuickSpan|IsNormal|'
+			echo -n 'IsNormalString|Append|AppendString|Bytes|String|Reader|'
+			echo -n 'Writer|Transform|TransformNorm|CharacterByCharacter|'
+			echo -n 'StandardTests|Performance|PlaceHolder|ExampleIter|Merge|'
+			echo -n 'Tables|Ambiguous|FoldSingleRunes|Fold|WidenSingleRunes|'
+			echo -n 'Widen|NarrowSingleRunes|Narrow))$') \
+			-x -v ${GO_PN}/... || die $?
 }
 
 src_install() {
