@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.309 2015/05/21 13:22:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.310 2015/05/21 13:26:09 blueness Exp $
+
+  21 May 2015; Anthony G. Basile <blueness@gentoo.org>
+  +files/e2fsprogs-1.42.10-e2fsck-fix-makefile-dependency.patch:
+  Restore missing patch.
 
 *e2fsprogs-1.42.10 (21 May 2015)
 
