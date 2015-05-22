@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-1.3.8.ebuild,v 1.7 2015/03/09 10:05:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-1.3.8.ebuild,v 1.8 2015/05/22 18:00:51 billie Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ REQUIRED_USE="frontend-optional? ( || ( launch-frontend launch-frontend-setuid )
 
 RDEPEND=">=dev-libs/libburn-1.3.8
 	>=dev-libs/libisofs-1.3.8
-	readline? ( sys-libs/readline )
+	readline? ( sys-libs/readline:0= )
 	!readline? ( libedit? ( dev-libs/libedit ) )
 	acl? ( virtual/acl )
 	xattr? ( sys-apps/attr )
