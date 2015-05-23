@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-4.3-r1.ebuild,v 1.3 2015/05/23 21:39:29 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-4.3-r1.ebuild,v 1.4 2015/05/23 21:40:39 monsieurp Exp $
 
 EAPI="5"
 
@@ -45,7 +45,7 @@ java_prepare() {
 	epatch "${FILESDIR}"/${P}-secitem.patch
 }
 
-# bug 539100
+# See bug 539100.
 pkg_setup() {
 	linux-info_pkg_setup
 	java-pkg-2_pkg_setup
