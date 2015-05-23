@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cmucl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.44 2015/01/28 19:40:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.45 2015/05/23 15:16:34 pacho Exp $
+
+  23 May 2015; Pacho Ramos <pacho@gentoo.org> cmucl-20e.ebuild:
+  x86 stable wrt bug #526744
 
   28 Jan 2015; Michał Górny <mgorny@gentoo.org> cmucl-20a.ebuild,
   cmucl-20b_p001.ebuild, cmucl-20d-r3.ebuild, cmucl-20e.ebuild:
