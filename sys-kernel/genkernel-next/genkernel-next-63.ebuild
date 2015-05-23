@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/genkernel-next-63.ebuild,v 1.1 2015/05/23 09:22:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/genkernel-next-63.ebuild,v 1.2 2015/05/23 09:27:15 pacho Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ RDEPEND="${DEPEND}
 	gpg? ( app-crypt/gnupg )
 	iscsi? ( sys-block/open-iscsi )
 	mdadm? ( sys-fs/mdadm )
-	plymouth? ( sys-boot/plymouth )
+	plymouth? ( sys-boot/plymouth[libkms] )
 	app-portage/portage-utils
 	app-arch/cpio
 	>=app-misc/pax-utils-0.6
