@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/godep/godep-0_p20150520.ebuild,v 1.1 2015/05/24 21:39:01 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/godep/godep-0_p20150520.ebuild,v 1.2 2015/05/24 21:47:40 zmedico Exp $
 
 EAPI=5
 
@@ -25,6 +25,12 @@ src_unpack() {
 	mv ${PN}-${EGIT_COMMIT} src/${GO_PN} || die
 	mkdir -p src/github.com/kr || die
 	mv fs-2788f0dbd16903de03cb8186e5c7d97b69ad387b  src/github.com/kr/fs || die
+}
+
+src_prepare() {
+	# disable broken tests
+	sed -e 's:TestSave(:_\0:' -i save_test.go || die
+	sed -e 's:TestUpdate(:_\0:' -i update_test.go || die
 }
 
 src_compile() {
