@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-geode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-geode/ChangeLog,v 1.28 2015/05/24 02:58:31 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-geode/ChangeLog,v 1.29 2015/05/24 02:59:03 mattst88 Exp $
+
+  24 May 2015; Matt Turner <mattst88@gentoo.org>
+  -xf86-video-geode-2.11.15.ebuild, -xf86-video-geode-2.11.16.ebuild:
+  Drop old.
 
 *xf86-video-geode-2.11.17 (24 May 2015)
 
