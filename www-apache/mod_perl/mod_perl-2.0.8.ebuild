@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.8.ebuild,v 1.11 2014/11/27 23:45:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.8.ebuild,v 1.12 2015/05/24 02:44:06 vapier Exp $
 
 EAPI="5"
 
@@ -31,7 +31,7 @@ PDEPEND=">=dev-perl/Apache-Reload-0.11
 	>=dev-perl/Apache-SizeLimit-0.95"
 
 APACHE2_MOD_FILE="${S}/src/modules/perl/mod_perl.so"
-APACHE2_MOD_CONF="2.0.3/75_${PN}"
+APACHE2_MOD_CONF="2.0.3/75_${PN}.2.2"
 APACHE2_MOD_DEFINE="PERL"
 
 SRC_TEST="do"
