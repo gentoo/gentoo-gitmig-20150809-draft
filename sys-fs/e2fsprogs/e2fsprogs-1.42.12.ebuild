@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.12.ebuild,v 1.11 2015/05/25 10:23:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.12.ebuild,v 1.12 2015/05/25 10:29:17 vapier Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ case ${PV} in
 *)      UP_PV=${PV} ;;
 esac
 
-inherit autotools eutils flag-o-matic multilib toolchain-funcs
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Standard EXT2/EXT3/EXT4 filesystem utilities"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
@@ -53,7 +53,6 @@ src_prepare() {
 
 	# Avoid rebuild
 	echo '#include_next <ss/ss_err.h>' > lib/ss/ss_err.h
-	eautoreconf
 }
 
 src_configure() {
