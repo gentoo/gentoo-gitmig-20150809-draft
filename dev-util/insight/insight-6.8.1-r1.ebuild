@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.8.1-r1.ebuild,v 1.6 2015/05/26 09:28:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.8.1-r1.ebuild,v 1.7 2015/05/26 09:29:49 vapier Exp $
 
 EAPI=4
 
@@ -52,9 +52,9 @@ src_prepare() {
 	rm -rf "${S}"/{itcl,tcl,tk,readline} || die
 
 	for location in gdb/gdbtk/plugins libgui; do
-		pushd ${location} > /dev/null
+		pushd ${location} >/dev/null
 		eautoreconf
-		popd > /dev/null
+		popd >/dev/null
 	done
 
 	# disable regeneration of info pages we never install. #465460
@@ -99,7 +99,7 @@ src_install() {
 	# the tcl-related subdirs are not parallel safe
 	emake -j1 DESTDIR="${D}" install
 
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	find "${ED}" -name '*.la' -delete
 
 	dodoc gdb/gdbtk/{README,TODO}
 
