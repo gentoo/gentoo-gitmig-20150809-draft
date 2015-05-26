@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.8.1-r1.ebuild,v 1.4 2015/05/26 09:26:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.8.1-r1.ebuild,v 1.5 2015/05/26 09:27:59 vapier Exp $
 
 EAPI=4
 
@@ -56,6 +56,10 @@ src_prepare() {
 		eautoreconf
 		popd > /dev/null
 	done
+
+	# disable regeneration of info pages we never install. #465460
+	sed -i -e '/^SUBDIRS/s:doc::' bfd/Makefile.in || die
+	sed -i -e '/^AC_CONFIG_SUBDIRS/s:doc::' gdb/configure.ac || die
 
 	cd gdb
 	eautoconf
