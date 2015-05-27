@@ -1,15 +1,15 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/hepmc-2.06.09.ebuild,v 1.1 2013/08/26 10:56:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/hepmc-2.06.09-r1.ebuild,v 1.1 2015/05/27 21:37:48 bircoph Exp $
 
-EAPI=4
+EAPI=5
 
 inherit cmake-utils
 
 MYP=HepMC-${PV}
 
 DESCRIPTION="Event Record for Monte Carlo Generators"
-HOMEPAGE="https://savannah.cern.ch/projects/hepmc/"
+HOMEPAGE="http://lcgapp.cern.ch/project/simu/HepMC/"
 SRC_URI="http://lcgapp.cern.ch/project/simu/HepMC/download/${MYP}.tar.gz"
 
 LICENSE="GPL-2"
@@ -19,7 +19,13 @@ IUSE="cm doc examples gev static-libs test"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen dev-tex/floatflt )"
+	doc? (
+		app-doc/doxygen
+		|| (
+			dev-texlive/texlive-latex
+			dev-tex/floatflt
+		)
+	)"
 
 S="${WORKDIR}/${MYP}"
 
