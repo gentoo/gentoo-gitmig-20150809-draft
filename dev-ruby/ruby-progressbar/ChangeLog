@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-progressbar
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.72 2015/02/05 10:23:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.73 2015/05/28 04:19:43 graaff Exp $
+
+  28 May 2015; Hans de Graaff <graaff@gentoo.org>
+  -ruby-progressbar-1.4.1.ebuild:
+  Cleanup.
 
   05 Feb 2015; Agostino Sarubbo <ago@gentoo.org> ruby-progressbar-1.4.2.ebuild:
   Stable for ppc, wrt bug #534306
