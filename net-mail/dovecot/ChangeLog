@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.511 2015/05/28 08:42:37 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.512 2015/05/28 08:46:46 eras Exp $
+
+  28 May 2015; Eray Aslan <eras@gentoo.org> dovecot-2.2.18.ebuild:
+  Fix dev-libs/icu automagic dependency - bug #550544
 
   28 May 2015; Eray Aslan <eras@gentoo.org> -dovecot-2.2.13-r1.ebuild,
   -dovecot-2.2.15-r3.ebuild, -dovecot-2.2.16.ebuild:
