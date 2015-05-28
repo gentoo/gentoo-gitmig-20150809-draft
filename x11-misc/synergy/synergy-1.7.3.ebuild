@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.7.2.ebuild,v 1.1 2015/05/22 05:11:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.7.3.ebuild,v 1.1 2015/05/28 05:37:30 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic gnome2-utils cmake-utils qt4-r2
@@ -88,7 +88,7 @@ src_test() {
 }
 
 src_install () {
-	dobin bin/${PN}{c,s}
+	dobin bin/${PN}{c,s} bin/syntool
 
 	if use qt4 ; then
 		newbin bin/${PN} qsynergy
