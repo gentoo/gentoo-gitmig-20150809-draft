@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-SSLeay
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.91 2015/05/31 19:32:08 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.92 2015/05/31 19:54:00 zlogene Exp $
+
+  31 May 2015; Mikle Kolyada <zlogene@gentoo.org> Crypt-SSLeay-0.720.0.ebuild:
+  ia64 stable wrt bug #548416
 
   31 May 2015; Mikle Kolyada <zlogene@gentoo.org> Crypt-SSLeay-0.720.0.ebuild:
   Add ~sparc keyword wrt bug #548416
