@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.323 2015/05/31 21:48:17 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.324 2015/05/31 21:55:12 johu Exp $
+
+  31 May 2015; Johannes Huber <johu@gentoo.org> package.use.mask:
+  Revert mask kde-plasma/plasma-workspace[prison], will be handled in base for
+  uclibs.
 
   31 May 2015; Johannes Huber <johu@gentoo.org> package.use.mask:
   Mask kde-plasma/plasma-workspace[prison].
