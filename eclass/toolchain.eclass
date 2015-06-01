@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.673 2015/06/01 07:04:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.674 2015/06/01 07:17:40 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -134,7 +134,7 @@ IUSE="multislot regression-test vanilla"
 IUSE_DEF=( nls nptl )
 
 if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
-	IUSE+=" altivec"
+	IUSE+=" altivec debug"
 	IUSE_DEF+=( cxx fortran )
 	[[ -n ${PIE_VER} ]] && IUSE+=" nopie"
 	[[ -n ${HTB_VER} ]] && IUSE+=" boundschecking"
@@ -880,10 +880,8 @@ toolchain_src_configure() {
 
 	# Use the default ("release") checking because upstream usually neglects
 	# to test "disabled" so it has a history of breaking. #317217
-	if tc_version_is_at_least 4 || [[ -n ${GCC_CHECKS_LIST} ]] ; then
-		confgcc+=( --enable-checking=${GCC_CHECKS_LIST:-release} )
-	else
-		confgcc+=( --disable-checking )
+	if tc_version_is_at_least 3.4 ; then
+		confgcc+=( --enable-checking="${GCC_CHECKS_LIST:-$(usex debug yes release)}" )
 	fi
 
 	# Branding
