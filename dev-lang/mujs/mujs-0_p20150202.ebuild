@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mujs/mujs-0_p20150202.ebuild,v 1.1 2015/06/01 12:05:28 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mujs/mujs-0_p20150202.ebuild,v 1.2 2015/06/01 12:27:21 xmw Exp $
 
 EAPI=5
 
-inherit eutils toolchain-funcs vcs-snapshot
+inherit eutils flag-o-matic toolchain-funcs vcs-snapshot
 
 DESCRIPTION="lightweight Javascript interpreter"
 HOMEPAGE="http://mujs.com/"
@@ -20,5 +20,8 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-Makefile.patch
+	# workaround for linkage of app-text/mupdf-1.7a
+	# TODO: generate a shared library and IUSE=static-libs
+	append-cflags -fPIC 
 	tc-export CC
 }
