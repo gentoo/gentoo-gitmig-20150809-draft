@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.672 2015/05/27 10:29:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.673 2015/06/01 07:04:04 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -26,7 +26,7 @@ FEATURES=${FEATURES/multilib-strict/}
 
 EXPORTED_FUNCTIONS="pkg_setup src_unpack src_compile src_test src_install pkg_postinst pkg_postrm"
 case ${EAPI:-0} in
-	0|1)	;;
+	0|1)    die "Need to upgrade to at least EAPI=2";;
 	2|3)    EXPORTED_FUNCTIONS+=" src_prepare src_configure" ;;
 	4*|5*)  EXPORTED_FUNCTIONS+=" pkg_pretend src_prepare src_configure" ;;
 	*)      die "I don't speak EAPI ${EAPI}."
@@ -154,8 +154,7 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 	tc_version_is_at_least 4.9 && IUSE+=" cilk"
 fi
 
-[[ ${EAPI:-0} != 0 ]] && IUSE_DEF=( "${IUSE_DEF[@]/#/+}" )
-IUSE+=" ${IUSE_DEF[*]}"
+IUSE+=" ${IUSE_DEF[*]/#/+}"
 
 # Support upgrade paths here or people get pissed
 if ! tc_version_is_at_least 4.7 || is_crosscompile || use multislot || [[ ${GCC_PV} == *_alpha* ]] ; then
@@ -391,8 +390,8 @@ toolchain_pkg_pretend() {
 #---->> pkg_setup <<----
 
 toolchain_pkg_setup() {
-	case "${EAPI:-0}" in
-		0|1|2|3)    toolchain_pkg_pretend ;;
+	case ${EAPI} in
+	2|3) toolchain_pkg_pretend ;;
 	esac
 
 	# we dont want to use the installed compiler's specs to build gcc
@@ -408,10 +407,6 @@ toolchain_src_unpack() {
 	else
 		gcc_quick_unpack
 	fi
-
-	case ${EAPI:-0} in
-		0|1)   toolchain_src_prepare ;;
-	esac
 }
 
 gcc_quick_unpack() {
@@ -1498,10 +1493,6 @@ gcc-abi-map() {
 #----> src_compile <----
 
 toolchain_src_compile() {
-	case ${EAPI:-0} in
-		0|1)   toolchain_src_configure ;;
-	esac
-
 	touch "${S}"/gcc/c-gperf.h
 
 	# Do not make manpages if we do not have perl ...
