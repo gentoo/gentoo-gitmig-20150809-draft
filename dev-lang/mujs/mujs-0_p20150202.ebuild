@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mujs/mujs-0_p20150202.ebuild,v 1.2 2015/06/01 12:27:21 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mujs/mujs-0_p20150202.ebuild,v 1.3 2015/06/01 12:30:38 xmw Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://git.ghostscript.com/?p=mujs.git;a=snapshot;h=c1ad1ba1e482e7d0174
 
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE=""
 
 DEPEND=""
@@ -22,6 +22,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-Makefile.patch
 	# workaround for linkage of app-text/mupdf-1.7a
 	# TODO: generate a shared library and IUSE=static-libs
-	append-cflags -fPIC 
+	append-cflags -fPIC
 	tc-export CC
 }
