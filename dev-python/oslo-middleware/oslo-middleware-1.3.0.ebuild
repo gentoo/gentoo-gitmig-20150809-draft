@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-middleware/oslo-middleware-1.3.0.ebuild,v 1.1 2015/06/02 18:59:02 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-middleware/oslo-middleware-1.3.0.ebuild,v 1.2 2015/06/02 19:00:49 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_4 )
 
 inherit distutils-r1
 
-DESCRIPTION="Library includes components to be injected into wsgi pipelines to intercept request/response flows"
+DESCRIPTION="Library includes components to be injected into wsgi pipelines to intercept request/response flows."
 HOMEPAGE="https://pypi.python.org/pypi/oslo.middleware"
 SRC_URI="mirror://pypi/${PN:0:1}/oslo.middleware/oslo.middleware-${PV}.tar.gz"
 S="${WORKDIR}/oslo.middleware-${PV}"
