@@ -1,6 +1,11 @@
 # ChangeLog for dev-go/go-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-tools/ChangeLog,v 1.8 2015/06/03 07:05:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-tools/ChangeLog,v 1.9 2015/06/03 07:15:38 zmedico Exp $
+
+*go-tools-1.4.2_p20150602 (03 Jun 2015)
+
+  03 Jun 2015; Zac Medico <zmedico@gentoo.org> +go-tools-1.4.2_p20150602.ebuild:
+  Add 1.4.2_p20150602 snapshot.
 
 *go-tools-1.4.2_p20150520-r1 (03 Jun 2015)
 
