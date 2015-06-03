@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.350 2015/06/03 14:41:12 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.351 2015/06/03 14:45:09 monsieurp Exp $
+
+  03 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  -files/tomcat-7.0.56-build.xml.patch, -files/tomcat-7.0.57-build.xml.patch,
+  -tomcat-7.0.56.ebuild, -tomcat-7.0.57.ebuild:
+  Remove vulnerable versions < Tomcat 7.0.59. Fix security bug 549536.
 
 *tomcat-6.0.44 (03 Jun 2015)
 
