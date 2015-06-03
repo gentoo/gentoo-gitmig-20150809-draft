@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.223 2015/06/03 20:07:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.224 2015/06/03 20:09:24 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> lxml-3.4.4.ebuild:
+  Add missing eutils.eclass
 
   03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add pypi to remote-id in metadata.xml
