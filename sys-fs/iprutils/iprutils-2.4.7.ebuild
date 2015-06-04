@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/iprutils-2.4.7.ebuild,v 1.1 2015/06/04 17:07:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/iprutils-2.4.7.ebuild,v 1.2 2015/06/04 17:17:16 jer Exp $
 
 EAPI=5
 
@@ -38,9 +38,9 @@ src_configure() {
 src_install () {
 	default
 
-	newinitd "${FILESDIR}"/iprinit iprinit
-	newinitd "${FILESDIR}"/iprupdate iprupdate
-	newinitd "${FILESDIR}"/iprdump iprdump
+	newinitd "${FILESDIR}"/iprinit-r1 iprinit
+	newinitd "${FILESDIR}"/iprupdate-r1 iprupdate
+	newinitd "${FILESDIR}"/iprdump-r1 iprdump
 
 	prune_libtool_files
 }

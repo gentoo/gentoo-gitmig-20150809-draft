@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/iprutils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.42 2015/06/04 17:07:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.43 2015/06/04 17:17:16 jer Exp $
+
+  04 Jun 2015; Jeroen Roovers <jer@gentoo.org> iprutils-2.4.7.ebuild,
+  +files/iprdump-r1, +files/iprinit-r1, +files/iprupdate-r1:
+  Fix init.d scripts.
 
 *iprutils-2.4.7 (04 Jun 2015)
 
