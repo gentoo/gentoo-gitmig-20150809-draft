@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/perl-File-Temp-0.230.400-r2.ebuild,v 1.11 2015/03/21 17:13:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/perl-File-Temp-0.230.400-r3.ebuild,v 1.1 2015/06/05 23:13:48 dilfridge Exp $
 
 EAPI=5
 
@@ -18,4 +18,4 @@ RDEPEND="
 	!=perl-core/File-Temp-0.230.400
 "
 
-# this is the Perl 5.20 version but we need the security patch
+# this is the dev-lang/perl-5.20 and dev-lang/perl-5.22 version but we need the security patch
