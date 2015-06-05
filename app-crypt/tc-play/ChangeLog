@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/tc-play
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tc-play/ChangeLog,v 1.4 2015/06/05 12:08:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tc-play/ChangeLog,v 1.5 2015/06/05 12:09:50 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> -tc-play-1.1.ebuild,
+  tc-play-2.0.ebuild:
+  Add slot operators; drop old
 
   05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml
