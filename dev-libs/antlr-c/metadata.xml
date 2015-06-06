@@ -8,6 +8,6 @@
     <flag name="debugger">Compiles debug info into the library</flag>
   </use>
   <upstream>
-    <remote-id type="github">antlr/antlr3/tree/master/runtime/C</remote-id>
+    <remote-id type="github">antlr/antlr3</remote-id>
   </upstream>
 </pkgmetadata>
