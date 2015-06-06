@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-commander/gnome-commander-1.4.7.ebuild,v 1.1 2015/06/06 12:46:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-commander/gnome-commander-1.4.7.ebuild,v 1.2 2015/06/06 12:48:00 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -34,6 +34,7 @@ RDEPEND="
 	taglib? ( >=media-libs/taglib-1.4 )
 "
 DEPEND="${RDEPEND}
+	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.35.0
 	sys-devel/gettext
 	virtual/pkgconfig
