@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/install-xattr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/ChangeLog,v 1.36 2015/06/08 13:12:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/ChangeLog,v 1.37 2015/06/08 13:14:58 blueness Exp $
+
+  08 Jun 2015; Anthony G. Basile <blueness@gentoo.org>
+  -install-xattr-0.3.ebuild:
+  Remove older stable version.
 
 *install-xattr-0.5 (08 Jun 2015)
 
