@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bson/bson-3.0.4.ebuild,v 1.1 2015/06/08 19:11:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bson/bson-3.0.4.ebuild,v 1.2 2015/06/08 19:14:14 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 ruby22"
@@ -23,7 +23,7 @@ SRC_URI="https://github.com/${GITHUB_USER}/${GITHUB_PROJECT}/archive/v${PV}.tar.
 RUBY_S="bson-ruby-${PV}"
 
 LICENSE="APSL-2"
-SLOT="2"
+SLOT="3"
 KEYWORDS="~amd64"
 IUSE="test doc"
 
