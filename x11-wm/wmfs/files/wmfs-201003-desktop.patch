@@ -1,0 +1,10 @@
+--- a/wmfs.desktop
++++ b/wmfs.desktop
+@@ -1,5 +1,6 @@
+-[Desktop Entry] 
++[Desktop Entry]
+ Encoding=UTF-8
++Type=Application
+ Name=wmfs
+ Comment=Window manager from scratch
+ TryExec=wmfs
