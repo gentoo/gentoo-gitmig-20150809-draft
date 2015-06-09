@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-3.12.1-r1.ebuild,v 1.4 2015/04/08 17:54:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-3.16.1.ebuild,v 1.1 2015/06/09 14:49:42 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,15 +15,15 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Devhelp"
 
 LICENSE="GPL-2+"
 SLOT="0/3-1" # subslot = 3-(libdevhelp-3 soname version)
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="gedit"
 REQUIRED_USE="gedit? ( ${PYTHON_REQUIRED_USE} )"
 
 # FIXME: automagic python dependency
 COMMON_DEPEND="
 	>=dev-libs/glib-2.37.3:2
-	>=x11-libs/gtk+-3.9.10:3
-	>=net-libs/webkit-gtk-2:3
+	>=x11-libs/gtk+-3.13.4:3
+	>=net-libs/webkit-gtk-2:4
 "
 RDEPEND="${COMMON_DEPEND}
 	gedit? (
