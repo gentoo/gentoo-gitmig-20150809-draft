@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-screenshot/gnome-screenshot-3.12.0.ebuild,v 1.3 2014/07/23 15:18:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-screenshot/gnome-screenshot-3.16.2.ebuild,v 1.1 2015/06/09 16:30:50 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,16 +8,16 @@ GCONF_DEBUG="no"
 inherit gnome2 readme.gentoo
 
 DESCRIPTION="Screenshot utility for GNOME"
-HOMEPAGE="https://live.gnome.org/GnomeUtils"
+HOMEPAGE="https://git.gnome.org/browse/gnome-screenshot"
 
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE=""
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 
 # libcanberra 0.26-r2 is needed for gtk+:3 fixes
 COMMON_DEPEND="
-	>=dev-libs/glib-2.35.1:2
+	>=dev-libs/glib-2.35.1:2[dbus]
 	>=media-libs/libcanberra-0.26-r2[gtk3]
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf

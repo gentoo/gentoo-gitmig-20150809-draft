@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-3.12.2.ebuild,v 1.3 2014/07/23 15:18:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-3.16.2.ebuild,v 1.1 2015/06/09 16:26:48 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -14,18 +14,16 @@ HOMEPAGE="https://wiki.gnome.org/Apps/EyeOfGnome"
 LICENSE="GPL-2+"
 SLOT="1"
 IUSE="+exif +introspection +jpeg lcms +svg tiff xmp"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 REQUIRED_USE="exif? ( jpeg )"
 
 RDEPEND="
-	>=x11-libs/gtk+-3.10.6:3[introspection,X]
 	>=dev-libs/glib-2.38:2
-	>=dev-libs/libxml2-2:2
 	>=dev-libs/libpeas-0.7.4:=[gtk]
 	>=gnome-base/gnome-desktop-2.91.2:3=
 	>=gnome-base/gsettings-desktop-schemas-2.91.92
-	>=x11-themes/gnome-icon-theme-2.19.1
+	>=x11-libs/gtk+-3.14:3[introspection,X]
 	>=x11-misc/shared-mime-info-0.20
 
 	x11-libs/gdk-pixbuf:2[jpeg?,tiff?]
