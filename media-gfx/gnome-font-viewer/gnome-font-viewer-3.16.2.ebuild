@@ -1,14 +1,14 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-font-viewer/gnome-font-viewer-3.14.0.ebuild,v 1.1 2014/12/23 22:03:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-font-viewer/gnome-font-viewer-3.16.2.ebuild,v 1.1 2015/06/09 16:28:17 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
 inherit gnome2
 
-DESCRIPTION="Font viewer for GNOME 3"
-HOMEPAGE="https://live.gnome.org/GnomeUtils"
+DESCRIPTION="Font viewer for GNOME"
+HOMEPAGE="https://git.gnome.org/browse/gnome-font-viewer"
 
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0"
