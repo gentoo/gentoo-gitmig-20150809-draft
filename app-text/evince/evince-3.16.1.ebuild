@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.14.1-r1.ebuild,v 1.2 2015/02/25 11:55:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.16.1.ebuild,v 1.1 2015/06/09 15:00:29 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
-inherit autotools eutils gnome2
+inherit gnome2
 
 DESCRIPTION="Simple document viewer for GNOME"
 HOMEPAGE="https://wiki.gnome.org/Apps/Evince"
@@ -14,7 +14,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Evince"
 LICENSE="GPL-2+ CC-BY-SA-3.0"
 # subslot = evd3.(suffix of libevdocument3)-evv3.(suffix of libevview3)
 SLOT="0/evd3.4-evv3.3"
-IUSE="debug djvu dvi gnome +introspection libsecret nautilus +postscript t1lib tiff xps"
+IUSE="djvu dvi gnome +introspection libsecret nautilus nsplugin +postscript t1lib tiff xps"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris"
 
 # Since 2.26.2, can handle poppler without cairo support. Make it optional ?
@@ -24,11 +24,11 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-
 # libX11 used for totem-screensaver
 COMMON_DEPEND="
 	dev-libs/atk
-	>=dev-libs/glib-2.36:2
+	>=dev-libs/glib-2.36:2[dbus]
 	>=dev-libs/libxml2-2.5:2
 	sys-libs/zlib:=
 	x11-libs/gdk-pixbuf:2
-	>=x11-libs/gtk+-3.14:3[introspection?]
+	>=x11-libs/gtk+-3.15.3:3[introspection?]
 	gnome-base/gsettings-desktop-schemas
 	>=x11-libs/cairo-1.10:=
 	>=app-text/poppler-0.24:=[cairo]
@@ -67,31 +67,6 @@ DEPEND="${COMMON_DEPEND}
 #  app-text/yelp-tools
 
 src_prepare() {
-	# Disable toggle-find action for documents not supporting find (from '3.14')
-	epatch "${FILESDIR}"/${P}-disable-toggle-find.patch
-
-	# Handle incorrect 0 resolution found in TIFF files (from '3.14')
-	epatch "${FILESDIR}"/${P}-incorrect-resolution.patch
-
-	# Fix runtime critical warning when starting in fullscreen mode (from '3.14')
-	epatch "${FILESDIR}"/${P}-critical-warning.patch
-
-	# configure.ac: workaround quoting issues (from '3.14')
-	epatch "${FILESDIR}"/${PN}-3.14.0-non-bash-support.patch
-
-	# Scroll to the search result selected by user (from '3.14')
-	epatch "${FILESDIR}"/${P}-scroll-search.patch
-
-	# Show correct page when next search result requested (from '3.14')
-	epatch "${FILESDIR}"/${P}-show-correct.patch
-
-	# Fix configuration with ligbnome-desktop (from '3.14')
-	epatch "${FILESDIR}"/${P}-gnome-desktop.patch
-
-	# Use correct maximum size for thumbnail images (from '3.14')
-	epatch "${FILESDIR}"/${P}-thumbnail-size.patch
-
-	eautoreconf
 	gnome2_src_prepare
 
 	# Do not depend on adwaita-icon-theme, bug #326855, #391859
@@ -108,13 +83,13 @@ src_configure() {
 		--enable-thumbnailer \
 		--with-platform=gnome \
 		--enable-dbus \
-		--enable-browser-plugin \
 		$(use_enable djvu) \
 		$(use_enable dvi) \
 		$(use_with libsecret keyring) \
 		$(use_enable gnome libgnome-desktop) \
 		$(use_enable introspection) \
 		$(use_enable nautilus) \
+		$(use_enable nsplugin browser-plugin) \
 		$(use_enable postscript ps) \
 		$(use_enable t1lib) \
 		$(use_enable tiff) \
