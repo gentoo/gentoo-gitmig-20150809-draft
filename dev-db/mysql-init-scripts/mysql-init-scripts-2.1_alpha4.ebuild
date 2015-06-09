@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/mysql-init-scripts-2.1_alpha3.ebuild,v 1.1 2015/05/27 21:01:03 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/mysql-init-scripts-2.1_alpha4.ebuild,v 1.1 2015/06/09 16:16:26 grknight Exp $
 
 EAPI=5
 
-inherit systemd
+inherit systemd s6
 
 DESCRIPTION="Gentoo MySQL init scripts."
 HOMEPAGE="http://www.gentoo.org/"
@@ -33,10 +33,8 @@ src_install() {
 	if use amd64 || use x86 ; then
 		newconfd "${FILESDIR}/conf.d-2.0" "mysql-s6"
 		newinitd "${FILESDIR}/init.d-s6" "mysql-s6"
-		exeinto /var/svc.d/mysql-s6
-		newexe "${FILESDIR}/run-s6" "run"
-		exeinto /var/svc.d/mysql-s6/log
-		newexe "${FILESDIR}/log-s6" "run"
+		s6_install_service mysql "${FILESDIR}/run-s6"
+		s6_install_service mysql/log "${FILESDIR}/log-s6"
 	fi
 
 	newinitd "${FILESDIR}/init.d-2.0" "mysql"
@@ -53,7 +51,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To use the mysql-s6 script, you need to install the optional sys-apps/s6 package."
-	einfo "If you wish to use s6 logging support, "
-	einfo "comment out the log-error setting in your my.cnf"
+	if use amd64 || use x86 ; then
+		elog "To use the mysql-s6 script, you need to install the optional sys-apps/s6 package."
+		elog "If you wish to use s6 logging support, comment out the log-error setting in your my.cnf"
+	fi
 }
