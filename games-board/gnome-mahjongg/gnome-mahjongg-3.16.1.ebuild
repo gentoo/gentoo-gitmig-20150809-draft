@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mahjongg/gnome-mahjongg-3.12.2.ebuild,v 1.4 2014/09/13 07:11:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mahjongg/gnome-mahjongg-3.16.1.ebuild,v 1.1 2015/06/09 15:12:52 eva Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
-VALA_MIN_API_VERSION="0.18"
+VALA_MIN_API_VERSION="0.24"
 
 inherit gnome-games vala
 
@@ -13,17 +13,18 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Mahjongg"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 RDEPEND="
-	dev-libs/glib:2
+	>=dev-libs/glib-2.40:2
 	>=gnome-base/librsvg-2.32
-	>=x11-libs/gtk+-3.10:3
+	>=x11-libs/gtk+-3.13.2:3
 "
 DEPEND="${RDEPEND}
 	$(vala_depend)
 	app-text/yelp-tools
+	dev-libs/appstream-glib
 	>=dev-util/intltool-0.50
 	virtual/pkgconfig
 "
