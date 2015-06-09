@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadrapassel/quadrapassel-3.12.2.ebuild,v 1.3 2014/07/23 15:16:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadrapassel/quadrapassel-3.16.1.ebuild,v 1.1 2015/06/09 16:01:28 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-VALA_MIN_API_VERSION="0.16"
+VALA_MIN_API_VERSION="0.24"
 
 inherit gnome-games vala
 
@@ -13,7 +13,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Quadrapassel"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 RDEPEND="
@@ -22,11 +22,12 @@ RDEPEND="
 	>=media-libs/clutter-1:1.0
 	>=media-libs/clutter-gtk-0.91.6:1.0
 	>=media-libs/libcanberra-0.26[gtk3]
-	>=x11-libs/gtk+-3.10:3
+	>=x11-libs/gtk+-3.12:3
 "
 DEPEND="${RDEPEND}
 	$(vala_depend)
 	app-text/yelp-tools
+	dev-libs/appstream-glib
 	>=dev-util/intltool-0.50
 	sys-devel/gettext
 	virtual/pkgconfig
