@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.12.2-r2.ebuild,v 1.1 2015/01/02 11:24:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.16.1.1.ebuild,v 1.1 2015/06/09 15:26:22 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -23,7 +23,7 @@ LICENSE="
 SLOT="0"
 IUSE="accessibility audit branding fprint +introspection ipv6 plymouth selinux smartcard +systemd tcpd test wayland xinerama"
 REQUIRED_USE="wayland? ( systemd )"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 
 # NOTE: x11-base/xorg-server dep is for X_SERVER_PATH etc, bug #295686
 # nspr used by smartcard extension
@@ -49,7 +49,6 @@ COMMON_DEPEND="
 	x11-libs/libXdmcp
 	x11-libs/libXext
 	x11-libs/libXft
-	x11-libs/libXrandr
 	>=x11-misc/xdg-utils-1.0.2-r3
 
 	virtual/pam
@@ -80,7 +79,6 @@ RDEPEND="${COMMON_DEPEND}
 
 	accessibility? (
 		>=app-accessibility/orca-3.10
-		app-accessibility/caribou
 		gnome-extra/mousetweaks )
 	fprint? (
 		sys-auth/fprintd
@@ -140,9 +138,6 @@ src_prepare() {
 
 	# Show logo when branding is enabled
 	use branding && epatch "${FILESDIR}/${PN}-3.8.4-logo.patch"
-
-	# Don't block SIGUSR1, bug #524008 (from 'master')
-	epatch "${FILESDIR}"/${PN}-3.12.2-SIGUSR1-blocking{,-1}.patch
 
 	eautoreconf
 
