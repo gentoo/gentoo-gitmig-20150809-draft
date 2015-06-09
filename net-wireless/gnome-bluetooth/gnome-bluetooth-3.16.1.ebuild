@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.12.0.ebuild,v 1.5 2014/07/23 15:37:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.16.1.ebuild,v 1.1 2015/06/09 14:56:23 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 
-inherit autotools eutils gnome2 udev user
+inherit eutils gnome2 udev user
 
 DESCRIPTION="Bluetooth graphical utilities integrated with GNOME"
 HOMEPAGE="https://wiki.gnome.org/GnomeBluetooth"
@@ -13,11 +13,11 @@ HOMEPAGE="https://wiki.gnome.org/GnomeBluetooth"
 LICENSE="GPL-2+ LGPL-2.1+ FDL-1.1+"
 SLOT="2/13" # subslot = libgnome-bluetooth soname version
 IUSE="+introspection"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
 COMMON_DEPEND="
-	>=dev-libs/glib-2.37.3:2
-	>=x11-libs/gtk+-3.11.2:3[introspection?]
+	>=dev-libs/glib-2.38:2
+	>=x11-libs/gtk+-3.12:3[introspection?]
 	virtual/udev
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 "
@@ -35,12 +35,8 @@ DEPEND="${COMMON_DEPEND}
 	virtual/libudev
 	virtual/pkgconfig
 	x11-proto/xproto
-
-	app-text/yelp-tools
-	gnome-base/gnome-common
 "
 # eautoreconf needs:
-#	app-text/yelp-tools
 #	gnome-base/gnome-common
 
 pkg_setup() {
@@ -50,11 +46,6 @@ pkg_setup() {
 src_prepare() {
 	# Regenerate gdbus-codegen files to allow using any glib version; bug #436236
 	rm -v lib/bluetooth-client-glue.{c,h} || die
-
-	# Fix link failure with gold; fixed upstream in 3.12.1
-	epatch "${FILESDIR}/${P}-gold.patch"
-	eautoreconf
-
 	gnome2_src_prepare
 }
 
