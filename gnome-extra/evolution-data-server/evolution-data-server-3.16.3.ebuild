@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.12.8.ebuild,v 1.4 2015/04/08 17:56:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.16.3.ebuild,v 1.1 2015/06/09 14:44:00 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-# python3 not really supported, bug #478678
-PYTHON_COMPAT=( python2_7 pypy )
-VALA_MIN_API_VERSION="0.18"
+GNOME2_LA_PUNT="yes"
+PYTHON_COMPAT=( python2_7 python3_4 pypy pypy2_0 )
+VALA_MIN_API_VERSION="0.22"
 VALA_USE_DEPEND="vapigen"
 
 inherit db-use flag-o-matic gnome2 python-any-r1 vala virtualx
@@ -16,17 +16,19 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Evolution"
 
 # Note: explicitly "|| ( LGPL-2 LGPL-3 )", not "LGPL-2+".
 LICENSE="|| ( LGPL-2 LGPL-3 ) BSD Sleepycat"
-SLOT="0/49" # subslot = libcamel-1.2 soname version
+SLOT="0/52" # subslot = libcamel-1.2 soname version
 IUSE="api-doc-extras +gnome-online-accounts +gtk +introspection ipv6 ldap kerberos vala +weather"
 REQUIRED_USE="vala? ( introspection )"
 
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
 
+# sys-libs/db is only required for migrating from <3.13 versions
+# gdata-0.15.1 is required for google tasks
 RDEPEND="
 	>=app-crypt/gcr-3.4
 	>=app-crypt/libsecret-0.5[crypt]
 	>=dev-db/sqlite-3.5:=
-	>=dev-libs/glib-2.36:2
+	>=dev-libs/glib-2.40:2
 	>=dev-libs/libgdata-0.10:=
 	>=dev-libs/libical-0.43:=
 	>=net-libs/libsoup-2.42:2.4
@@ -41,7 +43,7 @@ RDEPEND="
 
 	gtk? (
 		>=app-crypt/gcr-3.4[gtk]
-		>=x11-libs/gtk+-3.2:3
+		>=x11-libs/gtk+-3.6:3
 	)
 	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.8 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.12 )
@@ -58,7 +60,8 @@ DEPEND="${RDEPEND}
 	>=gnome-base/gnome-common-3.5.5
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
-	vala? ( $(vala_depend) )"
+	vala? ( $(vala_depend) )
+"
 # eautoreconf needs:
 #	>=gnome-base/gnome-common-2
 
@@ -98,6 +101,7 @@ src_configure() {
 		$(use_enable introspection) \
 		$(use_enable ipv6) \
 		$(use_with kerberos krb5 "${EPREFIX}"/usr) \
+		$(use_with kerberos krb5-libs "${EPREFIX}"/usr/$(get_libdir)) \
 		$(use_with ldap openldap) \
 		$(use_enable vala vala-bindings) \
 		$(use_enable weather) \
