@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.42.0.ebuild,v 1.1 2014/12/21 12:18:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.44.0.ebuild,v 1.1 2015/06/09 15:02:55 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit gnome2 multilib-minimal
 
 DESCRIPTION="C++ interface for glib2"
 HOMEPAGE="http://www.gtkmm.org"
@@ -15,11 +15,16 @@ SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="doc debug examples test"
 
-RDEPEND="
-	>=dev-libs/libsigc++-2.2.10:2
-	>=dev-libs/glib-2.42:2
+COMMON_DEPEND="
+	>=dev-libs/libsigc++-2.3.2:2[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.44:2[${MULTILIB_USEDEP}]
 "
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-gtkmmlibs-20140508
+		!app-emulation/emul-linux-x86-gtkmmlibs[-abi_x86_32(-)] )
+"
+DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
 "
@@ -32,11 +37,9 @@ src_prepare() {
 			-i Makefile.am Makefile.in || die "sed 1 failed"
 	fi
 
-	if ! use examples; then
-		# don't waste time building examples
-		sed 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' \
-			-i Makefile.am Makefile.in || die "sed 2 failed"
-	fi
+	# don't build examples - we want to install example sources, not binaries
+	sed 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' \
+		-i Makefile.am Makefile.in || die "sed 2 failed"
 
 	# Test fails with IPv6 but not v4, upstream bug #720073
 	sed -e 's:giomm_tls_client/test::' \
@@ -45,15 +48,15 @@ src_prepare() {
 	gnome2_src_prepare
 }
 
-src_configure() {
-	gnome2_src_configure \
+multilib_src_configure() {
+	ECONF_SOURCE="${S}" gnome2_src_configure \
 		$(use_enable debug debug-refcounting) \
-		$(use_enable doc documentation) \
+		$(multilib_native_use_enable doc documentation) \
 		--enable-deprecated-api
 }
 
-src_test() {
-	cd "${S}/tests/"
+multilib_src_test() {
+	cd tests
 	default
 
 	for i in */test; do
@@ -61,8 +64,12 @@ src_test() {
 	done
 }
 
-src_install() {
+multilib_src_install() {
 	gnome2_src_install
+}
+
+multilib_src_install_all() {
+	einstalldocs
 
 	if ! use doc && ! use examples; then
 		rm -fr "${ED}usr/share/doc/glibmm*"
