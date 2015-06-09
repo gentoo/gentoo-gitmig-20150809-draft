@@ -1,33 +1,33 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.12.0.ebuild,v 1.4 2015/04/08 17:54:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.16.0.ebuild,v 1.1 2015/06/09 15:07:18 eva Exp $
 
 EAPI="5"
-GCONF_DEBUG="yes"
+GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python2_7 )
 # libanjuta-language-vala.so links to a specific slot of libvala; we want to
 # avoid automagic behavior.
-VALA_MIN_API_VERSION="0.24"
+VALA_MIN_API_VERSION="0.28"
 VALA_MAX_API_VERSION="${VALA_MIN_API_VERSION}"
 
 inherit gnome2 flag-o-matic readme.gentoo python-single-r1 vala
 
 DESCRIPTION="A versatile IDE for GNOME"
-HOMEPAGE="http://projects.gnome.org/anjuta/"
+HOMEPAGE="https://wiki.gnome.org/Apps/Anjuta"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86 ~x86-fbsd"
-IUSE="debug devhelp glade +introspection packagekit subversion terminal test vala"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 
+IUSE="debug devhelp glade +introspection packagekit subversion terminal test vala"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 # FIXME: make python dependency non-automagic
 COMMON_DEPEND="
 	>=dev-libs/glib-2.34:2
 	x11-libs/gdk-pixbuf:2
-	>=x11-libs/gtk+-3.6:3
+	>=x11-libs/gtk+-3.10:3
 	>=dev-libs/libxml2-2.4.23
 	>=dev-libs/gdl-3.5.5:3=
 	>=x11-libs/gtksourceview-3:3.0
@@ -50,7 +50,7 @@ COMMON_DEPEND="
 		>=net-libs/serf-1.2:1=
 		>=dev-libs/apr-1:=
 		>=dev-libs/apr-util-1:= )
-	terminal? ( >=x11-libs/vte-0.27.6:2.90 )
+	terminal? ( >=x11-libs/vte-0.27.6:2.91 )
 	vala? ( $(vala_depend) )
 "
 RDEPEND="${COMMON_DEPEND}
@@ -112,7 +112,6 @@ src_configure() {
 	gnome2_src_configure \
 		--disable-neon \
 		--disable-static \
-		--docdir=/usr/share/doc/${PF} \
 		$(use_enable debug) \
 		$(use_enable devhelp plugin-devhelp) \
 		$(use_enable glade plugin-glade) \
