@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.27 2015/06/06 04:39:21 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.28 2015/06/10 22:55:51 twitch153 Exp $
 
 EAPI=5
 
@@ -117,6 +117,7 @@ src_configure() {
 		"-Dprefix=${GAMES_PREFIX}"
 		"-Ddatadir=${GAMES_DATADIR}/${PN}"
 		"-Dplugindir=$(games_get_libdir)/${PN}"
+		"-DUSE_SHARED_ENET=ON"
 		$( cmake-utils_use ffmpeg ENCODE_FRAMEDUMPS )
 		$( cmake-utils_use openmp OPENMP )
 	)
