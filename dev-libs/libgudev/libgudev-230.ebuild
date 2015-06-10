@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgudev/libgudev-230.ebuild,v 1.1 2015/06/10 02:05:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgudev/libgudev-230.ebuild,v 1.2 2015/06/10 02:12:58 floppym Exp $
 
 EAPI=5
 
@@ -17,7 +17,10 @@ IUSE="doc introspection"
 
 DEPEND=">=dev-libs/glib-2.22.0:2=
 	virtual/libudev:="
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!sys-fs/eudev[gudev(-)]
+	!sys-fs/udev[gudev(-)]
+	!sys-apps/systemd[gudev(-)]"
 
 multilib_src_configure() {
 	ECONF_SOURCE=${S} gnome2_src_configure $(use_enable introspection)
