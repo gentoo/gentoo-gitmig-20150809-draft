@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libgudev/libgudev-215-r2.ebuild,v 1.1 2015/06/10 02:43:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libgudev/libgudev-215-r2.ebuild,v 1.2 2015/06/10 02:45:13 floppym Exp $
 
 EAPI=5
 inherit multilib-build
@@ -16,7 +16,7 @@ IUSE="introspection static-libs systemd"
 
 DEPEND=""
 RDEPEND="
-	|| ( dev-libs/libgudev[${MULTILIB_USEDEP},introspection?,static-libs?]
+	|| ( dev-libs/libgudev:0/0[${MULTILIB_USEDEP},introspection?,static-libs?]
 		!systemd? ( || (
 			>=sys-fs/udev-208-r1:0/0[${MULTILIB_USEDEP},gudev(-),introspection?,static-libs?]
 			>=sys-fs/eudev-1.5.3-r1:0/0[${MULTILIB_USEDEP},gudev(-),introspection?,static-libs?] )
