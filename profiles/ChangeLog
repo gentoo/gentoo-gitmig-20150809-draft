@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10095 2015/06/10 22:56:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10096 2015/06/10 23:00:01 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Add Safe to Perl 5.22 mask
 
   10 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Add Pod::Simple to Perl 5.22 mask
