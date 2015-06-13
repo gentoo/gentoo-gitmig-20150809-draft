@@ -8,6 +8,9 @@
 		<name>Nicolas Bock</name>
 	</maintainer>
 	<longdescription lang="en">
+		JabRef is an open source bibliography reference manager. The native
+		file format used by JabRef is BibTeX, the standard LaTeX bibliography
+		format.
 	</longdescription>
 	<upstream>
 		<remote-id type="sourceforge">jabref</remote-id>
