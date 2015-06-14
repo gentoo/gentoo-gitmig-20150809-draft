@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-220-r2.ebuild,v 1.6 2015/06/14 00:19:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-220-r2.ebuild,v 1.7 2015/06/14 00:21:26 floppym Exp $
 
 EAPI=5
 
@@ -158,7 +158,7 @@ src_prepare() {
 
 	# http://lists.freedesktop.org/archives/systemd-devel/2015-May/032149.html
 	rm src/journal/audit_type-to-name.h src/udev/keyboard-keys-from-name.gperf || die
-	
+
 	cp "${FILESDIR}"/compile-unifont.py tools/compile-unifont.py || die
 	chmod +x tools/compile-unifont.py || die
 
