@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmlrpc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/ChangeLog,v 1.19 2015/06/15 15:43:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/ChangeLog,v 1.20 2015/06/15 15:44:08 ago Exp $
+
+  15 Jun 2015; Agostino Sarubbo <ago@gentoo.org> xmlrpc-3.1.3.ebuild:
+  Stable for x86, wrt bug #551992
 
   15 Jun 2015; Agostino Sarubbo <ago@gentoo.org> xmlrpc-3.1.3.ebuild:
   Stable for amd64, wrt bug #551992
