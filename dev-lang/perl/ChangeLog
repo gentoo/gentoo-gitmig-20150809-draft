@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.487 2015/06/16 13:18:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.488 2015/06/16 13:20:30 dilfridge Exp $
+
+  16 Jun 2015; Andreas K. Hüttel <dilfridge@gentoo.org> perl-5.20.2-r1.ebuild,
+  perl-5.20.2.ebuild, perl-5.22.0.ebuild:
+  Any db slot works
 
   16 Jun 2015; Andreas K. Hüttel <dilfridge@gentoo.org>
   +files/eblits/pkg_postinst-v50220001.eblit,
