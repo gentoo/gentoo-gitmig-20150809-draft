@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pastescript
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pastescript/ChangeLog,v 1.22 2015/06/17 07:31:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pastescript/ChangeLog,v 1.23 2015/06/17 07:46:52 jlec Exp $
+
+  17 Jun 2015; Justin Lecher <jlec@gentoo.org> -pastescript-1.7.5-r2.ebuild:
+  Drop vulnerable version
 
   17 Jun 2015; Agostino Sarubbo <ago@gentoo.org> pastescript-2.0.2.ebuild:
   Stable for x86, wrt bug #405821
