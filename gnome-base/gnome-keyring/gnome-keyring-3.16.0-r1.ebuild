@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.16.0-r1.ebuild,v 1.2 2015/06/20 10:44:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.16.0-r1.ebuild,v 1.3 2015/06/20 10:45:41 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes" # Not gnome macro but similar
@@ -31,6 +31,7 @@ RDEPEND="
 	>=app-crypt/gnupg-2.0.28
 "
 DEPEND="${RDEPEND}
+	>=app-eselect/eselect-pinentry-0.5
 	app-text/docbook-xml-dtd:4.3
 	dev-libs/libxslt
 	>=dev-util/intltool-0.35
