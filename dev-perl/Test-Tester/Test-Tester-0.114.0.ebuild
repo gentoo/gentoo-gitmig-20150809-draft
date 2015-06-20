@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/Test-Tester-0.114.0.ebuild,v 1.1 2015/06/20 19:55:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/Test-Tester-0.114.0.ebuild,v 1.2 2015/06/20 20:13:23 dilfridge Exp $
 
 EAPI=5
 
@@ -14,4 +14,4 @@ LICENSE="GPL-2"
 # this is just a dummy ebuild to help with portage dependency resolution on
 # Perl 5.22 upgrade - it does not install any files
 
-RDEPEND="=virtual/perl-Test-Simple-1.1.14"
+RDEPEND="~virtual/perl-Test-Simple-1.1.14"
