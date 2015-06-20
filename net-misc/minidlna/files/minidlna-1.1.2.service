@@ -1,5 +1,5 @@
 [Unit]
-Description=MiniDLNA is a DLNA/UPnP-AV server software
+Description=MiniDLNA server
 After=network.target
 
 [Service]
