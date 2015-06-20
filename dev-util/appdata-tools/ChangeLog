@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/appdata-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/appdata-tools/ChangeLog,v 1.24 2015/06/20 19:16:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/appdata-tools/ChangeLog,v 1.25 2015/06/20 19:18:04 pacho Exp $
+
+  20 Jun 2015; Pacho Ramos <pacho@gentoo.org> appdata-tools-0.1.8-r1.ebuild:
+  sparc keyword, bug #523924
 
   20 Jun 2015; Pacho Ramos <pacho@gentoo.org> -appdata-tools-0.1.8.ebuild:
   Drop old
