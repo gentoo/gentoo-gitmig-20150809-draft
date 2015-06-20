@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.16.0-r1.ebuild,v 1.1 2015/06/14 13:59:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.16.0-r1.ebuild,v 1.2 2015/06/20 10:44:26 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes" # Not gnome macro but similar
@@ -77,4 +77,9 @@ pkg_postinst() {
 	# Never install as suid root, this breaks dbus activation, see bug #513870
 	use caps && fcaps -m 755 cap_ipc_lock usr/bin/gnome-keyring-daemon
 	gnome2_pkg_postinst
+
+	if ! [[ $(eselect pinentry show | grep "pinentry-gnome3") ]] ; then
+		ewarn "Please select pinentry-gnome3 as default pinentry provider:"
+		ewarn " # eselect pinentry set pinentry-gnome3"
+	fi
 }
