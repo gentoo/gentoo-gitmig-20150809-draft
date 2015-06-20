@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.266 2015/06/20 19:42:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.267 2015/06/20 19:45:56 ulm Exp $
 
 # Please report bugs or other requests at bugs.gentoo.org and assign to
 # licenses@gentoo.org
 
-# GLEP-0023
-# http://www.gentoo.org/proj/en/glep/glep-0023.html
+# GLEP 23
+# https://wiki.gentoo.org/wiki/GLEP:23
 
 ######################################################################
 
@@ -60,7 +60,7 @@ FREE-DOCUMENTS @FSF-APPROVED-OTHER @MISC-FREE-DOCS
 # and share modifications
 FREE @FREE-SOFTWARE @FREE-DOCUMENTS
 
-# As proposed: http://archives.gentoo.org/gentoo-dev/msg_6c950b46c50fe72ebc5e650bbf70f77c.xml
+# As proposed: https://archives.gentoo.org/gentoo-dev/message/6c950b46c50fe72ebc5e650bbf70f77c
 # Excerpt of the rules for this license group:
 # - MUST permit redistribution in binary form
 # - MUST NOT require explicit approval (No items from @EULA)
