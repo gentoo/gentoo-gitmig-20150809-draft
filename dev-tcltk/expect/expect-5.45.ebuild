@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.45.ebuild,v 1.7 2015/03/20 10:22:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.45.ebuild,v 1.8 2015/06/22 13:35:33 jlec Exp $
 
 EAPI="3"
 
@@ -35,11 +35,14 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.45-gfbsd.patch
 	epatch "${FILESDIR}"/${PN}-5.44.1.15-ldflags.patch
 	epatch "${FILESDIR}"/${PN}-5.45-headers.patch #337943
+	epatch "${FILESDIR}"/${PN}-5.45-format-security.patch
 	sed -i 's:ifdef HAVE_SYS_WAIT_H:ifndef NO_SYS_WAIT_H:' *.c
 
 	# fix install_name on darwin
 	[[ ${CHOST} == *-darwin* ]] && \
 		epatch "${FILESDIR}"/${P}-darwin-install_name.patch
+
+	mv configure.{in,ac} || die
 
 	eautoconf
 }
