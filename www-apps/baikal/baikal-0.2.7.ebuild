@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/baikal/baikal-0.2.7.ebuild,v 1.1 2014/06/06 18:37:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/baikal/baikal-0.2.7.ebuild,v 1.2 2015/06/24 16:48:24 grobian Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64"
 IUSE="+mysql sqlite"
 REQUIRED_USE="|| ( mysql sqlite )"
 
-RDEPEND=">=dev-lang/php-5.3[pdo,xml,mysql?,sqlite?]
+RDEPEND=">=dev-lang/php-5.3[ctype,filter,pdo,session,xml,mysql?,sqlite?]
 	mysql? ( virtual/mysql )
 	sqlite? ( dev-db/sqlite )
 	virtual/httpd-php"
