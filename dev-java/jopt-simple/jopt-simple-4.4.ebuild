@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jopt-simple/jopt-simple-4.4.ebuild,v 1.2 2015/06/25 15:09:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jopt-simple/jopt-simple-4.4.ebuild,v 1.3 2015/06/25 15:09:46 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/pholser/${PN}/tarball/${P} -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="4.4"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 

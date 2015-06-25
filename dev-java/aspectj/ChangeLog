@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/aspectj
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.31 2015/06/25 15:08:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.32 2015/06/25 15:09:42 ago Exp $
+
+  25 Jun 2015; Agostino Sarubbo <ago@gentoo.org> aspectj-1.7.4.ebuild:
+  Stable for x86, wrt bug #553210
 
   25 Jun 2015; Agostino Sarubbo <ago@gentoo.org> aspectj-1.7.4.ebuild:
   Stable for amd64, wrt bug #553210

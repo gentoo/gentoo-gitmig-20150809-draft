@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/easymock/easymock-3.2-r1.ebuild,v 1.6 2015/06/25 15:08:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/easymock/easymock-3.2-r1.ebuild,v 1.7 2015/06/25 15:09:26 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/EasyMock/${PV}/${P}.zip"
 
 LICENSE="|| ( MIT Apache-2.0 )"
 SLOT="3.2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 CDEPEND="dev-java/junit:4
