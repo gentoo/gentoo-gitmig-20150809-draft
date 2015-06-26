@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-2.0.ebuild,v 1.1 2015/06/26 23:05:10 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-2.0.ebuild,v 1.2 2015/06/26 23:09:14 monsieurp Exp $
 
 # TODO: if 'doc' use flag is used then should build also extra docs ('docs' ant target), currently it cannot
 #       be built as it needs forrest which we do not have
@@ -20,7 +20,7 @@ SRC_URI="mirror://apache/xmlgraphics/${PN}/source/${P}-src.zip"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~ppc-macos ~sparc-solaris ~x86-linux ~x86-macos ~x86-solaris"
 IUSE="hyphenation jai"
 LICENSE="Apache-2.0"
-SLOT="0"
+SLOT="2"
 
 # Doesn't work with java.awt.headless, requires Mockito.
 RESTRICT="test"
