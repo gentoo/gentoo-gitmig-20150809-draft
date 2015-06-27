@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/gmic-1.6.5.0.ebuild,v 1.1 2015/06/27 03:19:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/gmic-1.6.5.0.ebuild,v 1.2 2015/06/27 03:20:46 radhermit Exp $
 
 EAPI=5
 
@@ -18,14 +18,14 @@ IUSE="ffmpeg fftw graphicsmagick jpeg opencv openexr openmp png tiff X zlib"
 DEPEND="
 	fftw? ( sci-libs/fftw:3.0[threads] )
 	graphicsmagick? ( media-gfx/graphicsmagick )
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	opencv? ( >=media-libs/opencv-2.3.1a-r1 )
 	openexr? (
 		media-libs/ilmbase
 		media-libs/openexr
 	)
-	png? ( media-libs/libpng )
-	tiff? ( media-libs/tiff )
+	png? ( media-libs/libpng:0 )
+	tiff? ( media-libs/tiff:0 )
 	X? (
 		x11-libs/libX11
 		x11-libs/libXext
