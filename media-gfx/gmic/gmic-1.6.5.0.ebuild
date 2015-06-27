@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/gmic-1.6.5.0.ebuild,v 1.2 2015/06/27 03:20:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/gmic-1.6.5.0.ebuild,v 1.3 2015/06/27 03:23:19 radhermit Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ DEPEND="
 		media-libs/ilmbase
 		media-libs/openexr
 	)
-	png? ( media-libs/libpng:0 )
+	png? ( media-libs/libpng:0= )
 	tiff? ( media-libs/tiff:0 )
 	X? (
 		x11-libs/libX11
