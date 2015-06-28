@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyspf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.32 2015/06/28 11:33:38 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.33 2015/06/28 12:00:04 mrueg Exp $
+
+  28 Jun 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/pyspf-2.0.7-catch_unicode.patch, -pyspf-2.0.7.ebuild:
+  Remove old.
 
   28 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> pyspf-2.0.10.ebuild:
   x86 stable wrt bug #537634
