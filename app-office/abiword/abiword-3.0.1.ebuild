@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.1.ebuild,v 1.5 2015/06/29 18:35:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.1.ebuild,v 1.6 2015/06/29 18:37:33 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -28,8 +28,8 @@ RDEPEND="
 	dev-libs/libxslt
 	>=gnome-base/librsvg-2.16:2
 	>=gnome-extra/libgsf-1.14.18
-	>=media-libs/libpng-1.2
-	virtual/jpeg
+	>=media-libs/libpng-1.2:0=
+	virtual/jpeg:0
 	>=x11-libs/cairo-1.10[X]
 	>=x11-libs/gtk+-3.0.8:3[cups?]
 	calendar? ( >=dev-libs/libical-0.46:= )
@@ -46,7 +46,7 @@ RDEPEND="
 		grammar? ( >=dev-libs/link-grammar-4.2.1 )
 		math? ( >=x11-libs/gtkmathview-0.7.5 )
 		ots? ( >=app-text/ots-0.5-r1 )
-		readline? ( sys-libs/readline )
+		readline? ( sys-libs/readline:* )
 		thesaurus? ( >=app-text/aiksaurus-1.2[gtk] )
 		wordperfect? (
 			app-text/libwpd:0.9
