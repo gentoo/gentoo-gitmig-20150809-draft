@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.1.ebuild,v 1.4 2015/06/13 10:05:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.1.ebuild,v 1.5 2015/06/29 18:35:52 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -32,7 +32,7 @@ RDEPEND="
 	virtual/jpeg
 	>=x11-libs/cairo-1.10[X]
 	>=x11-libs/gtk+-3.0.8:3[cups?]
-	calendar? ( >=dev-libs/libical-0.46 )
+	calendar? ( >=dev-libs/libical-0.46:= )
 	eds? ( >=gnome-extra/evolution-data-server-3.6.0:= )
 	goffice? ( >=x11-libs/goffice-0.10.2:0.10 )
 	introspection? ( >=dev-libs/gobject-introspection-1.0.0 )
