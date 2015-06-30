@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.15.ebuild,v 1.20 2015/04/08 17:51:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.15.ebuild,v 1.21 2015/06/30 01:03:49 naota Exp $
 
 EAPI="5"
 
@@ -56,7 +56,8 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${PN}-0.52.13-gold.patch \
 		"${FILESDIR}"/${PN}-0.52.15-snack.patch \
-		"${FILESDIR}"/${PN}-0.52.14-tcl.patch
+		"${FILESDIR}"/${PN}-0.52.14-tcl.patch \
+		"${FILESDIR}"/${PN}-0.52.15-makefile.patch
 	eautoreconf
 }
 
