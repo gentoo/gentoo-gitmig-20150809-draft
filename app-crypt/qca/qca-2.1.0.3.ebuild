@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.1.0.3.ebuild,v 1.10 2015/06/29 00:55:26 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.1.0.3.ebuild,v 1.11 2015/06/30 21:32:40 pesa Exp $
 
 EAPI=5
 
@@ -99,7 +99,12 @@ src_compile() {
 }
 
 src_test() {
-	multibuild_foreach_variant cmake-utils_src_test
+	mytest() {
+		local -x QCA_PLUGIN_PATH="${BUILD_DIR}/lib/qca"
+		cmake-utils_src_test
+	}
+
+	multibuild_foreach_variant mytest
 }
 
 src_install() {
