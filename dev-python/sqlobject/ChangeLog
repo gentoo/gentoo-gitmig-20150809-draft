@@ -1,12 +1,12 @@
 # ChangeLog for dev-python/sqlobject
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/ChangeLog,v 1.62 2015/06/30 13:02:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/ChangeLog,v 1.63 2015/06/30 13:04:19 jlec Exp $
 
 *sqlobject-2.1.1-r1 (30 Jun 2015)
 
   30 Jun 2015; Justin Lecher <jlec@gentoo.org> +sqlobject-2.1.1-r1.ebuild,
   -sqlobject-2.0.0.ebuild, -sqlobject-2.1.0.ebuild, -sqlobject-2.1.1.ebuild:
-  Don't install docs into side-packages
+  Don't install docs into side-packages, bug 553638
 
 *sqlobject-2.1.1 (26 Mar 2015)
 
