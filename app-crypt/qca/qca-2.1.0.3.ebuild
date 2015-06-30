@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.1.0.3.ebuild,v 1.11 2015/06/30 21:32:40 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.1.0.3.ebuild,v 1.12 2015/06/30 21:48:14 pesa Exp $
 
 EAPI=5
 
@@ -113,12 +113,11 @@ src_install() {
 	if use doc; then
 		pushd "${BUILD_DIR}" >/dev/null || die
 		doxygen Doxyfile.in || die
-		dohtml apidocs/html/*
+		dodoc -r apidocs/html
 		popd >/dev/null || die
 	fi
 
 	if use examples; then
-		insinto /usr/share/doc/${PF}
-		doins -r "${S}"/examples
+		dodoc -r "${S}"/examples
 	fi
 }
