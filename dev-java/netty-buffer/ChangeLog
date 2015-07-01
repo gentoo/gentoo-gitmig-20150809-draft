@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/netty-buffer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-buffer/ChangeLog,v 1.4 2015/07/01 08:46:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-buffer/ChangeLog,v 1.5 2015/07/01 08:47:10 ago Exp $
+
+  01 Jul 2015; Agostino Sarubbo <ago@gentoo.org> netty-buffer-4.0.21.ebuild:
+  Stable for x86, wrt bug #553680
 
   01 Jul 2015; Agostino Sarubbo <ago@gentoo.org> netty-buffer-4.0.21.ebuild:
   Stable for amd64, wrt bug #553680
