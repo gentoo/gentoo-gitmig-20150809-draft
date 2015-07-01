@@ -1,6 +1,10 @@
 # ChangeLog for dev-go/go-crypto
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-crypto/ChangeLog,v 1.8 2015/07/01 20:09:14 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-crypto/ChangeLog,v 1.9 2015/07/01 20:11:53 williamh Exp $
+
+  01 Jul 2015; William Hubbs <williamh@gentoo.org>
+  go-crypto-0_pre20150608.ebuild:
+  fix manifest
 
 *go-crypto-0_pre20150608 (01 Jul 2015)
 
