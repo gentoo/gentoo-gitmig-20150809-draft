@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/grs/grs-9999.ebuild,v 1.1 2015/07/01 10:42:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/grs/grs-9999.ebuild,v 1.2 2015/07/01 10:51:44 blueness Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python{3_3,3_4} pypy )
 inherit distutils-r1
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://tweedledum.dyc.edu/gentoo-ref-sys"
+	EGIT_REPO_URI="git://anongit.gentoo.org/proj/grss.git"
 	inherit git-2
 else
 	SRC_URI="http://dev.gentoo.org/~blueness/${PN}/${P}.tar.bz2"
