@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-crypto/go-crypto-1.4.2_p20150608.ebuild,v 1.1 2015/06/09 03:22:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-crypto/go-crypto-0_pre20150608.ebuild,v 1.1 2015/07/01 20:09:14 williamh Exp $
 
 EAPI=5
 
