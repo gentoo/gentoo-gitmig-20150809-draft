@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-sys/go-sys-1.4.2_p20150518-r1.ebuild,v 1.1 2015/06/09 03:28:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-sys/go-sys-0_pre20150518.ebuild,v 1.1 2015/07/01 21:12:32 williamh Exp $
 
 EAPI=5
 
