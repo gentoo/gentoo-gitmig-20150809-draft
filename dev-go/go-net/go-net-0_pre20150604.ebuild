@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-net/go-net-1.4.2_p20150520.ebuild,v 1.3 2015/05/24 08:52:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-net/go-net-0_pre20150604.ebuild,v 1.1 2015/07/01 20:24:19 williamh Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ DESCRIPTION="Go supplementary network libraries"
 MY_PN=${PN##*-}
 GO_PN=golang.org/x/${MY_PN}
 HOMEPAGE="https://godoc.org/${GO_PN}"
-EGIT_COMMIT="7212a0803472eb1ec2686896a7c626528172a7a6"
+EGIT_COMMIT="dfe268fd2bb5c793f4c083803609fce9806c6f80"
 SRC_URI="https://github.com/golang/${MY_PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
@@ -30,7 +30,9 @@ src_unpack() {
 src_prepare() {
 	# disable broken tests
 	sed -e 's:TestReadProppatch(:_\0:' -i webdav/xml_test.go || die
-	sed -e 's:TestPingGoogle(:_\0:' -i icmp/ping_test.go || die
+	sed -e 's:TestPingGoogle(:_\0:' \
+		-e 's:TestNonPrivilegedPing(:_\0:' \
+		-i icmp/ping_test.go || die
 }
 
 src_compile() {
@@ -50,5 +52,6 @@ src_test() {
 src_install() {
 	insinto /usr/lib/go
 	find "${WORKDIR}"/{pkg,src} -name '.git*' -exec rm -rf {} \; 2>/dev/null
+	insopts -m0644 -p # preserve timestamps for bug 551486
 	doins -r "${WORKDIR}"/{pkg,src}
 }
