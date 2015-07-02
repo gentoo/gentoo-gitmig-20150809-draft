@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-25.0.9999-r1.ebuild,v 1.8 2015/07/02 16:16:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-25.0.9999-r1.ebuild,v 1.9 2015/07/02 16:22:10 ulm Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ HOMEPAGE="http://www.gnu.org/software/emacs/"
 
 LICENSE="GPL-3+ FDL-1.3+ BSD HPND MIT W3C unicode PSF-2"
 SLOT="25"
-IUSE="acl alsa aqua athena dbus games gconf gfile gif gnutls gpm gsettings gtk +gtk3 gzip-el hesiod imagemagick +inotify jpeg kerberos libxml2 livecd m17n-lib motif pax_kernel png selinux sound source svg tiff toolkit-scroll-bars wide-int X Xaw3d xft +xpm zlib"
+IUSE="acl alsa aqua athena cairo dbus games gconf gfile gif gnutls gpm gsettings gtk +gtk3 gzip-el hesiod imagemagick +inotify jpeg kerberos libxml2 livecd m17n-lib motif pax_kernel png selinux sound source svg tiff toolkit-scroll-bars wide-int X Xaw3d xft +xpm zlib"
 REQUIRED_USE="?? ( aqua X )"
 
 RDEPEND="sys-libs/ncurses
@@ -51,6 +51,7 @@ RDEPEND="sys-libs/ncurses
 		x11-libs/libXmu
 		x11-libs/libXt
 		x11-misc/xbitmaps
+		cairo? ( >=x11-libs/cairo-1.12.18 )
 		gconf? ( >=gnome-base/gconf-2.26.2 )
 		gsettings? ( >=dev-libs/glib-2.28.6 )
 		gif? ( media-libs/giflib )
@@ -143,6 +144,7 @@ src_configure() {
 
 	if use X; then
 		myconf+=" --with-x --without-ns"
+		myconf+=" $(use_with cairo)"
 		myconf+=" $(use_with gconf)"
 		myconf+=" $(use_with gsettings)"
 		myconf+=" $(use_with toolkit-scroll-bars)"
