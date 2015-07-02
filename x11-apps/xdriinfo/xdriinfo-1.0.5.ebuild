@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/xdriinfo-1.0.5.ebuild,v 1.1 2015/07/02 01:24:48 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/xdriinfo-1.0.5.ebuild,v 1.2 2015/07/02 01:29:20 mrueg Exp $
 
-EAPI=3
-inherit xorg-2 flag-o-matic
+EAPI=5
+inherit xorg-2 flag-o-matic multilib
 
 DESCRIPTION="query configuration information of DRI drivers"
 
@@ -18,6 +18,6 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	xorg-2_pkg_setup
 
-	append-cppflags "-I${EPREFIX}/usr/lib64/opengl/xorg-x11/include/"
+	append-cppflags "-I${EPREFIX}/usr/$(get_libdir)/opengl/xorg-x11/include/"
 
 }
