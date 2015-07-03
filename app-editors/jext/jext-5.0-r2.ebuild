@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/jext-5.0-r2.ebuild,v 1.1 2015/07/03 17:12:09 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/jext-5.0-r2.ebuild,v 1.2 2015/07/03 17:13:12 monsieurp Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ MY_PV="${PV/_}"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-sources-${MY_PV}.tar.gz"
 LICENSE="|| ( GPL-2 JPython )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 CDEPEND="dev-java/jython:2.7

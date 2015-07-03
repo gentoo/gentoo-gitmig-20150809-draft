@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jext
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/ChangeLog,v 1.24 2015/07/03 17:12:09 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/ChangeLog,v 1.25 2015/07/03 17:13:12 monsieurp Exp $
+
+  03 Jul 2015; Patrice Clement <monsieurp@gentoo.org> jext-5.0-r2.ebuild:
+  Stable for amd64+x86.
 
 *jext-5.0-r2 (03 Jul 2015)
 
