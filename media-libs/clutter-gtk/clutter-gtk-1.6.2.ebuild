@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/clutter-gtk-1.6.2.ebuild,v 1.1 2015/07/04 13:53:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/clutter-gtk-1.6.2.ebuild,v 1.2 2015/07/04 13:53:43 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -18,7 +18,7 @@ IUSE="examples +introspection"
 
 RDEPEND="
 	>=x11-libs/gtk+-3.6.0:3[introspection?]
-	>=media-libs/clutter-1.22.2-r1:1.0[introspection?]
+	>=media-libs/clutter-1.22.3:1.0[introspection?]
 	media-libs/cogl:1.0=[introspection?]
 	introspection? ( >=dev-libs/gobject-introspection-0.9.12:= )
 "
