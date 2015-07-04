@@ -17,6 +17,10 @@
 		<email>xarthisius@gentoo.org</email>
 		<name>Kacper Kowalik</name>
 	</maintainer>
+	<maintainer>
+		<email>alunduil@gentoo.org</email>
+		<name>Alex Brandt</name>
+	</maintainer>
 	<use>
 		<flag name="aufs">
 			Enables dependencies for the "aufs" graph driver, including
