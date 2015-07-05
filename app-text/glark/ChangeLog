@@ -1,6 +1,9 @@
 # ChangeLog for app-text/glark
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.78 2015/07/05 09:59:06 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.79 2015/07/05 10:00:19 mrueg Exp $
+
+  05 Jul 2015; Manuel Rüger <mrueg@gentoo.org> -glark-1.8.0.ebuild:
+  Remove old.
 
   05 Jul 2015; Manuel Rüger <mrueg@gentoo.org> glark-1.10.5-r1.ebuild,
   glark-1.10.5.ebuild:
