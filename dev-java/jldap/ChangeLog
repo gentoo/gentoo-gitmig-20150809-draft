@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jldap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/ChangeLog,v 1.18 2015/07/05 17:34:55 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/ChangeLog,v 1.19 2015/07/05 17:37:35 monsieurp Exp $
+
+  05 Jul 2015; Patrice Clement <monsieurp@gentoo.org>
+  -files/200603-javac.xml.patch, -jldap-20060300.ebuild:
+  Remove old.
 
   05 Jul 2015; Patrice Clement <monsieurp@gentoo.org> jldap-4.6.ebuild:
   Stable for amd64. Stable for x86 with ALLARCHES. Fix bug 554030.
