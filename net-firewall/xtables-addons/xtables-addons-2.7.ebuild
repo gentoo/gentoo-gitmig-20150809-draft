@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-2.7.ebuild,v 1.3 2015/07/06 13:13:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-2.7.ebuild,v 1.4 2015/07/06 13:28:54 blueness Exp $
 
 EAPI="5"
 
@@ -137,9 +137,7 @@ src_prepare() {
 	XA_qa_check
 	XA_has_something_to_build
 
-	# Bug #553630#c0.  tarpit fails on linux-4.1 and above.
 	# Bug #553630#c2.  echo fails on linux-4 and above.
-	XA_known_failure "tarpit" 4.1
 	XA_known_failure "echo" 4
 
 	local mod module_name
