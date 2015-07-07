@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.11.1-r1.ebuild,v 1.2 2015/04/08 18:14:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.11.1-r1.ebuild,v 1.3 2015/07/07 18:44:09 pacho Exp $
 
 EAPI="5"
 
@@ -91,7 +91,7 @@ RDEPEND="${COMMONDEPEND}
 	pdf? ( app-text/ghostscript-gpl )
 	clamav? ( app-antivirus/clamav )
 	networkmanager? ( net-misc/networkmanager )
-	perl? ( dev-lang/perl )
+	perl? ( dev-lang/perl:= )
 	python? ( ${PYTHON_DEPS}
 		>=dev-python/pygtk-2.10.3 )
 	rss? ( net-misc/curl
