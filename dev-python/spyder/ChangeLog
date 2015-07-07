@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/spyder
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/ChangeLog,v 1.39 2015/07/02 06:07:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/ChangeLog,v 1.40 2015/07/07 14:03:16 idella4 Exp $
+
+  07 Jul 2015; Ian Delaney <idella4@gentoo.org> spyder-2.3.5.2.ebuild:
+  tidy doc build & install
 
 *spyder-2.3.5.2 (02 Jul 2015)
 
