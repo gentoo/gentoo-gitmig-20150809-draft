@@ -11,7 +11,8 @@
  SHARED_LIBDIR_REL = ../..$(SHARED_LIBDIR)
 -DEVEL_LIBDIR = /usr/lib
 +DEVEL_LIBDIR = /usr/$(LIBDIR)
- SECUREDIR = /lib/security
+-SECUREDIR = /lib/security
++SECUREDIR = /$(LIBDIR)/security
  SECUREDIR_SUN = /usr/lib/security
  SECUREDIR_DARWIN = /usr/lib/pam
 @@ -48,7 +49,7 @@
