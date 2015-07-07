@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.11.1-r1.ebuild,v 1.3 2015/07/07 18:44:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.11.1-r1.ebuild,v 1.4 2015/07/07 18:44:52 pacho Exp $
 
 EAPI="5"
 
@@ -71,7 +71,7 @@ COMMONDEPEND=">=sys-devel/gettext-0.12.1
 		libnotify? ( x11-libs/libnotify )
 		libcanberra? (  media-libs/libcanberra[gtk] )
 		libindicate? ( dev-libs/libindicate:3[gtk] )
-		dev-libs/glib
+		dev-libs/glib:2
 	)
 	smime? ( >=app-crypt/gpgme-0.4.5 )
 	calendar? ( >=net-misc/curl-7.9.7 )
