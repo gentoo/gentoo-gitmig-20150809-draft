@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.8.1-r2.ebuild,v 1.2 2015/07/09 09:45:49 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.8.1-r2.ebuild,v 1.3 2015/07/09 09:48:50 monsieurp Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="doc examples source test"
@@ -33,20 +33,12 @@ S="${WORKDIR}/${P}-src"
 
 # don't rewrite build.xml in examples
 JAVA_PKG_BSFIX_ALL="no"
+
 JAVA_ANT_REWRITE_CLASSPATH="true"
 EANT_GENTOO_CLASSPATH="commons-beanutils-1.7,commons-collections,commons-logging"
 
 java_prepare() {
 	epatch "${FILESDIR}/${PV}-build.xml-jar-target.patch"
-
-	# this build.xml honours build.properties so we use it for common depends
-	# needed for both compile and test, so getjar is called only once
-#	echo "commons-beanutils.jar=$(java-pkg_getjar commons-beanutils-1.7 \
-#		commons-beanutils.jar)" > build.properties
-#	echo "commons-collections.jar=$(java-pkg_getjar commons-collections \
-#		commons-collections.jar)" >> build.properties
-#	echo "commons-logging.jar=$(java-pkg_getjar commons-logging \
-#		commons-logging.jar)" >> build.properties
 }
 
 EANT_TEST_GENTOO_CLASSPATH="${EANT_GENTOO_CLASSPATH},junit"
