@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.219 2015/07/09 19:45:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.220 2015/07/09 19:49:57 swegener Exp $
+
+  09 Jul 2015; Sven Wegener <swegener@gentoo.org> irssi-0.8.16.ebuild,
+  irssi-0.8.17.ebuild, irssi-9999.ebuild:
+  Use SLOT operator for openssl.
 
   09 Jul 2015; Sven Wegener <swegener@gentoo.org> irssi-0.8.16.ebuild,
   irssi-0.8.17.ebuild:
