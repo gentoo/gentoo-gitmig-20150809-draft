@@ -1,8 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.17.ebuild,v 1.13 2015/04/14 10:49:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.17.ebuild,v 1.14 2015/07/09 19:45:36 swegener Exp $
 
 EAPI=5
+
+AUTOTOOLS_AUTORECONF=1
 
 inherit autotools-utils eutils flag-o-matic perl-module toolchain-funcs
 
@@ -35,7 +37,6 @@ src_prepare() {
 	cd m4
 	epatch "${FILESDIR}/${PN}-0.8.15-tinfo.patch"
 	cd ..
-	AUTOTOOLS_AUTORECONF=1
 	autotools-utils_src_prepare
 }
 
