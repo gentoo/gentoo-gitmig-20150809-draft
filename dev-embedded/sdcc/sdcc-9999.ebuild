@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-9999.ebuild,v 1.2 2015/07/10 09:38:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-9999.ebuild,v 1.3 2015/07/13 07:35:52 vapier Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit eutils
 
 if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="https://sdcc.svn.sourceforge.net/svnroot/sdcc/trunk/sdcc"
-	inherit subversion autotools
+	inherit subversion
 	docs_compile() { return 0; }
 else
 	SRC_URI="mirror://sourceforge/sdcc/${PN}-src-${PV}.tar.bz2
@@ -53,7 +53,8 @@ src_prepare() {
 	sed -i -e '/SDCC_DOC/d' Makefile.in || die
 	sed -i -e 's/ doc//' sim/ucsim/packages_in.mk || die
 
-	[[ ${PV} == "9999" ]] && eautoreconf
+	# Make sure timestamps don't get messed up.
+	[[ ${PV} == "9999" ]] && find "${S}" -type f -exec touch -r . {} +
 
 	# workaround parallel build issues with lyx
 	mkdir -p "${HOME}"/.lyx
