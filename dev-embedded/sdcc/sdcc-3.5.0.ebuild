@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-3.5.0.ebuild,v 1.4 2015/07/13 07:46:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-3.5.0.ebuild,v 1.5 2015/07/13 07:52:56 vapier Exp $
 
 EAPI="5"
 
@@ -9,9 +9,12 @@ inherit eutils
 if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="https://sdcc.svn.sourceforge.net/svnroot/sdcc/trunk/sdcc"
 	inherit subversion
+	docs_compile() { return 0; }
 else
-	SRC_URI="mirror://sourceforge/sdcc/${PN}-src-${PV}.tar.bz2"
+	SRC_URI="mirror://sourceforge/sdcc/${PN}-src-${PV}.tar.bz2
+		doc? ( mirror://sourceforge/sdcc/${PN}-doc-${PV}.tar.bz2 )"
 	KEYWORDS="~amd64 ~ppc ~x86"
+	docs_compile() { return 1; }
 fi
 
 DESCRIPTION="Small device C compiler (for various microprocessors)"
@@ -22,7 +25,7 @@ LICENSE="GPL-2 ZLIB
 	packihx? ( public-domain )"
 SLOT="0"
 IUSE="mcs51 z80 z180 r2k r3ka gbz80 tlcs90 ds390 ds400 pic14 pic16 hc08 s08 stm8
-ucsim device-lib packihx +sdcpp sdcdb sdbinutils non-free +boehm-gc"
+ucsim device-lib packihx +sdcpp sdcdb sdbinutils non-free +boehm-gc doc"
 
 REQUIRED_USE="
 	mcs51? ( sdbinutils )
@@ -42,6 +45,13 @@ RDEPEND="dev-libs/boost:=
 	dev-embedded/gputils
 	boehm-gc? ( dev-libs/boehm-gc:= )"
 DEPEND="${RDEPEND}"
+if docs_compile ; then
+	DEPEND+="
+		doc? (
+			>=app-office/lyx-1.3.4
+			dev-tex/latex2html
+		)"
+fi
 
 src_prepare() {
 	# Fix conflicting variable names between Gentoo and sdcc
@@ -79,7 +89,8 @@ src_configure() {
 		$(use_enable sdcdb sdcdb) \
 		$(use_enable sdbinutils sdbinutils) \
 		$(use_enable non-free non-free) \
-		$(use_enable boehm-gc libgc)
+		$(use_enable boehm-gc libgc) \
+		$(docs_compile && use_enable doc || echo --disable-doc)
 }
 
 src_install() {
@@ -88,6 +99,11 @@ src_install() {
 	dodoc doc/README.txt
 
 	find "${D}" -name .deps -exec rm -rf {} + || die
+
+	if use doc ; then
+		docs_compile || cd "${WORKDIR}"/doc
+		dohtml -r *
+	fi
 
 	# See /usr/lib/portage/python${version}/install-qa-check.d/10executable-issues
 	# Installed libs are not for our CHOST but for microcontrollers
