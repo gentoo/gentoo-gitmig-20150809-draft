@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-3.5.0.ebuild,v 1.7 2015/07/13 08:01:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-3.5.0.ebuild,v 1.8 2015/07/13 08:24:46 vapier Exp $
 
 EAPI="5"
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="https://sdcc.svn.sourceforge.net/svnroot/sdcc/trunk/sdcc"
@@ -61,12 +61,20 @@ src_prepare() {
 		-e 's:\<(PORTDIR|ARCH)\>:SDCC\1:g' \
 		{} + || die
 
+	# https://sourceforge.net/p/sdcc/bugs/2398/
+	sed -i '1iAR = @AR@' Makefile.common.in || die
+	sed -i \
+		-e "/^AR =/s:=.*:=$(tc-getAR):" \
+		support/cpp/Makefile.in || die
+
 	# Make sure timestamps don't get messed up.
 	[[ ${PV} == "9999" ]] && find "${S}" -type f -exec touch -r . {} +
 }
 
 src_configure() {
 	econf \
+		ac_cv_prog_AS="$(tc-getAS)" \
+		ac_cv_prog_AR="$(tc-getAR)" \
 		--docdir='$(datarootdir)'/doc/${PF} \
 		--without-ccache \
 		$(use_enable mcs51 mcs51-port) \
