@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-9999.ebuild,v 1.5 2015/07/13 07:54:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-9999.ebuild,v 1.6 2015/07/13 08:01:30 vapier Exp $
 
 EAPI="5"
 
@@ -63,6 +63,7 @@ src_prepare() {
 src_configure() {
 	ac_cv_prog_STRIP=true \
 	econf \
+		--without-ccache \
 		$(use_enable boehm-gc libgc) \
 		$(docs_compile && use_enable doc || echo --disable-doc)
 }

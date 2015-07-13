@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-3.5.0.ebuild,v 1.6 2015/07/13 07:54:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-3.5.0.ebuild,v 1.7 2015/07/13 08:01:30 vapier Exp $
 
 EAPI="5"
 
@@ -68,6 +68,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--docdir='$(datarootdir)'/doc/${PF} \
+		--without-ccache \
 		$(use_enable mcs51 mcs51-port) \
 		$(use_enable z80 z80-port) \
 		$(use_enable z180 z180-port) \
