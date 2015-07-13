@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/sdcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.57 2015/07/13 08:38:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.58 2015/07/13 09:17:29 vapier Exp $
+
+  13 Jul 2015; Mike Frysinger <vapier@gentoo.org> sdcc-3.5.0.ebuild:
+  Revert invalid CTARGET munging and restore proper stripping logic -- the
+  scanelf ar warning is fixed with newer pax-utils #553754 by Tiger.
 
   13 Jul 2015; Mike Frysinger <vapier@gentoo.org> sdcc-3.5.0.ebuild,
   sdcc-9999.ebuild:

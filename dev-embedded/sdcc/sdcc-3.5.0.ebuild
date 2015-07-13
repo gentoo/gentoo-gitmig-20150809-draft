@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-3.5.0.ebuild,v 1.9 2015/07/13 08:38:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-3.5.0.ebuild,v 1.10 2015/07/13 09:17:29 vapier Exp $
 
 EAPI="5"
 
@@ -34,8 +34,6 @@ REQUIRED_USE="
 	hc08?  ( sdbinutils )
 	s08?   ( sdbinutils )"
 
-# ADD "binchecks" to fix the "scanelf: Invalid 'ar' entry" messages
-# OR leave the overwrite of CTARGET in src_install()
 RESTRICT="strip"
 
 RDEPEND="dev-libs/boost:=
@@ -75,6 +73,7 @@ src_configure() {
 	# sdbinutils subdir doesn't pass down --docdir properly, so need to
 	# expand $(datarootdir) ourselves.
 	econf \
+		ac_cv_prog_STRIP=true \
 		ac_cv_prog_AS="$(tc-getAS)" \
 		ac_cv_prog_AR="$(tc-getAR)" \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
@@ -114,8 +113,8 @@ src_install() {
 		dohtml -r *
 	fi
 
-	# See /usr/lib/portage/python${version}/install-qa-check.d/10executable-issues
-	# Installed libs are not for our CHOST but for microcontrollers
-	# This disable QA_EXECSTACK, QA_WX_LOAD and scanelf -qyRAF '%e %p'
-	CTARGET="undefined"
+	# a bunch of archives (*.a) are built & installed by gputils
+	# for PIC processors, but they do not work with standard `ar`
+	# & `scanelf` utils and they're not for the host.
+	env RESTRICT="" prepstrip "${D%/}"/usr/bin
 }
