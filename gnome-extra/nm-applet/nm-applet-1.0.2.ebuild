@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-1.0.2.ebuild,v 1.3 2015/05/17 15:55:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-1.0.2.ebuild,v 1.4 2015/07/13 20:27:15 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -34,13 +34,14 @@ RDEPEND="
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6:= )
 	modemmanager? ( >=net-misc/modemmanager-0.7.990 )
 	virtual/freedesktop-icon-theme
-	virtual/notification-daemon
 	virtual/libgudev:=
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=dev-util/intltool-0.40
 "
+
+PDEPEND="virtual/notification-daemon" #546134
 
 src_configure() {
 	gnome2_src_configure \
