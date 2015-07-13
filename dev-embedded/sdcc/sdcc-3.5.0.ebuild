@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-3.5.0.ebuild,v 1.10 2015/07/13 09:17:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-3.5.0.ebuild,v 1.11 2015/07/13 09:21:51 vapier Exp $
 
 EAPI="5"
 
@@ -37,12 +37,13 @@ REQUIRED_USE="
 RESTRICT="strip"
 
 RDEPEND="dev-libs/boost:=
-	dev-util/gperf
 	sys-libs/ncurses:=
-	sys-libs/readline:=
-	dev-embedded/gputils
-	boehm-gc? ( dev-libs/boehm-gc:= )"
-DEPEND="${RDEPEND}"
+	sys-libs/readline:0=
+	>=dev-embedded/gputils-0.13.7
+	boehm-gc? ( dev-libs/boehm-gc:= )
+	!dev-embedded/sdcc-svn"
+DEPEND="${RDEPEND}
+	dev-util/gperf"
 if docs_compile ; then
 	DEPEND+="
 		doc? (
