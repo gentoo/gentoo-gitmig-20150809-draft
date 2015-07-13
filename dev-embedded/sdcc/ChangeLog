@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/sdcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.59 2015/07/13 09:21:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.60 2015/07/13 09:23:02 vapier Exp $
+
+  13 Jul 2015; Mike Frysinger <vapier@gentoo.org> sdcc-3.5.0.ebuild:
+  Revert style change w/find+sed as the indented flags are for sed, not find
+  #553754 by Tiger.
 
   13 Jul 2015; Mike Frysinger <vapier@gentoo.org> sdcc-3.5.0.ebuild,
   sdcc-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-3.5.0.ebuild,v 1.11 2015/07/13 09:21:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-3.5.0.ebuild,v 1.12 2015/07/13 09:23:02 vapier Exp $
 
 EAPI="5"
 
@@ -57,8 +57,8 @@ src_prepare() {
 	find \
 		'(' -name 'Makefile*.in' -o -name 'configure' ')' \
 		-exec sed -r -i \
-		-e 's:\<(PORTDIR|ARCH)\>:SDCC\1:g' \
-		{} + || die
+			-e 's:\<(PORTDIR|ARCH)\>:SDCC\1:g' \
+			{} + || die
 
 	# https://sourceforge.net/p/sdcc/bugs/2398/
 	sed -i '1iAR = @AR@' Makefile.common.in || die
