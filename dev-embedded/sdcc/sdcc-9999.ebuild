@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-9999.ebuild,v 1.3 2015/07/13 07:35:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-9999.ebuild,v 1.4 2015/07/13 07:37:09 vapier Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit eutils
 
@@ -25,10 +25,10 @@ SLOT="0"
 IUSE="+boehm-gc doc"
 RESTRICT="strip"
 
-RDEPEND="sys-libs/ncurses
-	sys-libs/readline
+RDEPEND="sys-libs/ncurses:=
+	sys-libs/readline:0=
 	>=dev-embedded/gputils-0.13.7
-	boehm-gc? ( dev-libs/boehm-gc )
+	boehm-gc? ( dev-libs/boehm-gc:= )
 	!dev-embedded/sdcc-svn"
 DEPEND="${RDEPEND}"
 if docs_compile ; then
@@ -68,8 +68,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc doc/*.txt doc/*/*.txt
+	default
+	dodoc doc/*.txt
 	find "${D}" -name .deps -exec rm -rf {} +
 
 	if use doc ; then

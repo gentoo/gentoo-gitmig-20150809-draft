@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/sdcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.48 2015/07/13 07:35:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.49 2015/07/13 07:37:09 vapier Exp $
+
+  13 Jul 2015; Mike Frysinger <vapier@gentoo.org> sdcc-9999.ebuild:
+  Update to EAPI=5.
 
   13 Jul 2015; Mike Frysinger <vapier@gentoo.org> sdcc-9999.ebuild:
   Stop running autotools w/svn repo as upstream checks in the generated files.
