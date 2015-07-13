@@ -1,12 +1,19 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-3.5.0.ebuild,v 1.3 2015/07/13 07:44:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-3.5.0.ebuild,v 1.4 2015/07/13 07:46:57 vapier Exp $
 
 EAPI="5"
 
 inherit eutils
 
-SRC_URI="mirror://sourceforge/sdcc/${PN}-src-${PV}.tar.bz2"
+if [[ ${PV} == "9999" ]] ; then
+	ESVN_REPO_URI="https://sdcc.svn.sourceforge.net/svnroot/sdcc/trunk/sdcc"
+	inherit subversion
+else
+	SRC_URI="mirror://sourceforge/sdcc/${PN}-src-${PV}.tar.bz2"
+	KEYWORDS="~amd64 ~ppc ~x86"
+fi
+
 DESCRIPTION="Small device C compiler (for various microprocessors)"
 HOMEPAGE="http://sdcc.sourceforge.net/"
 
@@ -14,7 +21,6 @@ LICENSE="GPL-2 ZLIB
 	non-free? ( MicroChip-SDCC )
 	packihx? ( public-domain )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="mcs51 z80 z180 r2k r3ka gbz80 tlcs90 ds390 ds400 pic14 pic16 hc08 s08 stm8
 ucsim device-lib packihx +sdcpp sdcdb sdbinutils non-free +boehm-gc"
 
@@ -44,6 +50,9 @@ src_prepare() {
 		-exec sed -r -i \
 		-e 's:\<(PORTDIR|ARCH)\>:SDCC\1:g' \
 		{} + || die
+
+	# Make sure timestamps don't get messed up.
+	[[ ${PV} == "9999" ]] && find "${S}" -type f -exec touch -r . {} +
 }
 
 src_configure() {
