@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-3.5.0.ebuild,v 1.1 2015/07/12 14:39:54 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-3.5.0.ebuild,v 1.2 2015/07/13 07:39:32 vapier Exp $
 
 EAPI="5"
 
@@ -18,28 +18,26 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="mcs51 z80 z180 r2k r3ka gbz80 tlcs90 ds390 ds400 pic14 pic16 hc08 s08 stm8
 ucsim device-lib packihx +sdcpp sdcdb sdbinutils non-free +boehm-gc"
 
-REQUIRED_USE="mcs51? ( sdbinutils )
-			ds390? ( sdbinutils )
-			ds400? ( sdbinutils )
-			hc08?  ( sdbinutils )
-			s08?   ( sdbinutils )"
+REQUIRED_USE="
+	mcs51? ( sdbinutils )
+	ds390? ( sdbinutils )
+	ds400? ( sdbinutils )
+	hc08?  ( sdbinutils )
+	s08?   ( sdbinutils )"
 
 # ADD "binchecks" to fix the "scanelf: Invalid 'ar' entry" messages
 # OR leave the overwrite of CTARGET in src_install()
 RESTRICT="strip"
 
 RDEPEND="dev-libs/boost:=
-		dev-util/gperf
-		sys-libs/ncurses:=
-		sys-libs/readline:=
-		dev-embedded/gputils
-		boehm-gc? ( dev-libs/boehm-gc:= )"
+	dev-util/gperf
+	sys-libs/ncurses:=
+	sys-libs/readline:=
+	dev-embedded/gputils
+	boehm-gc? ( dev-libs/boehm-gc:= )"
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${PN}-${PV}"
-
-src_prepare()
-{
+src_prepare() {
 	# Fix conflicting variable names between Gentoo and sdcc
 	find \
 		'(' -name 'Makefile*.in' -o -name 'configure' ')' \
@@ -48,8 +46,7 @@ src_prepare()
 		{} + || die
 }
 
-src_configure()
-{
+src_configure() {
 	econf \
 		--prefix="${EPREFIX}"/usr \
 		--docdir="${EPREFIX}"/usr/share/doc/${P} \
@@ -77,8 +74,7 @@ src_configure()
 		$(use_enable boehm-gc libgc)
 }
 
-src_install()
-{
+src_install() {
 	emake DESTDIR="${D}" install
 
 	dodoc doc/README.txt
