@@ -1,3 +1,10 @@
+Replace INCLUDES with AM_CPPFLAGS in Makefile.am
+
+We replace the deprecated INCLUDES with AM_CPPFLAGS in all
+Makefile.am's.
+
+Signed-off-by: Anthony G. Basile <blueness@gentoo.org>
+
 diff -Naur libcgroup-0.41.orig/src/Makefile.am libcgroup-0.41/src/Makefile.am
 --- libcgroup-0.41.orig/src/Makefile.am	2014-01-13 14:05:56.000000000 +0000
 +++ libcgroup-0.41/src/Makefile.am	2015-07-13 14:36:38.922428040 +0000
