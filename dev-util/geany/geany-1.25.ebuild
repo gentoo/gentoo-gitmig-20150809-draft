@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-1.25.ebuild,v 1.1 2015/07/14 09:08:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-1.25.ebuild,v 1.2 2015/07/14 09:15:51 polynomial-c Exp $
 
 EAPI=5
 inherit eutils fdo-mime gnome2-utils
@@ -18,7 +18,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linu
 IUSE="gtk3 +vte"
 
 RDEPEND=">=dev-libs/glib-2.28:2
-	!gtk3? ( >=x11-libs/gtk+-2.16:2 )
+	!gtk3? ( >=x11-libs/gtk+-2.24:2 )
 	gtk3? ( >=x11-libs/gtk+-3.0:3 )
 	vte? ( x11-libs/vte:0 )"
 DEPEND="${RDEPEND}
