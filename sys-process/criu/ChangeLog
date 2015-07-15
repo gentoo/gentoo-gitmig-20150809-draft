@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/criu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/ChangeLog,v 1.26 2015/07/15 09:07:25 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/ChangeLog,v 1.27 2015/07/15 09:12:55 dlan Exp $
+
+  15 Jul 2015; Yixun Lan <dlan@gentoo.org> -criu-1.6.ebuild:
+  drop it, since we've got 1.6-r1
 
 *criu-1.6-r1 (15 Jul 2015)
 
