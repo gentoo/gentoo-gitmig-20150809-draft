@@ -1,11 +1,11 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.183 2015/07/18 06:55:17 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.184 2015/07/18 06:57:26 idella4 Exp $
 
 *ipython-3.2.1 (18 Jul 2015)
 
   18 Jul 2015; Ian Delaney <idella4@gentoo.org> +ipython-3.2.1.ebuild:
-  bump wrt security bug #541628, minot tidy to ebuild in deps
+  bump wrt security bug #541628, minor tidy to ebuild in deps
 
   29 Jun 2015; Justin Lecher <jlec@gentoo.org> ipython-3.2.0.ebuild:
   Fix sandbox violation
