@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppetserver/puppetserver-2.1.1.ebuild,v 1.1 2015/07/18 23:24:56 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppetserver/puppetserver-2.1.1.ebuild,v 1.2 2015/07/18 23:26:01 prometheanfire Exp $
 
 EAPI=5
 
@@ -100,7 +100,7 @@ pkg_postinst() {
 	elog "puppet config set --section master rundir  /run/puppetlabs/puppetserver"
 	elog "puppet config set --section master pidfile /run/puppetlabs/puppetserver/puppetserver.pid"
 	elog "puppet config set --section master codedir /etc/puppetlabs/code"
-	elog
-	elog "the jruby needs it's own puppet gem installed..."
-	elog "/opt/puppetlabs/server/apps/puppetserver/bin/puppetserver gem install puppet"
+#	elog
+#	elog "the jruby needs it's own puppet gem installed..."
+#	elog "/opt/puppetlabs/server/apps/puppetserver/bin/puppetserver gem install puppet"
 }
