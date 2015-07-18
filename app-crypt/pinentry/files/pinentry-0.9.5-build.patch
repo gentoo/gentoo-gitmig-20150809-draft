@@ -1,0 +1,25 @@
+From f1818d9fe0984d81e6e74abc4f0539296d1efc4c Mon Sep 17 00:00:00 2001
+From: Alon Bar-Lev <alon.barlev@gmail.com>
+Date: Sat, 18 Jul 2015 10:14:49 +0300
+Subject: [PATCH] build: add pkg-config detection
+
+Signed-off-by: Alon Bar-Lev <alon.barlev@gmail.com>
+---
+ configure.ac | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/configure.ac b/configure.ac
+index b71cb17..44ff395 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -85,6 +85,7 @@ AC_PROG_RANLIB
+ # for Qt and autoconf does does not allow that.
+ AC_PROG_CXX
+ AC_PROG_LN_S
++PKG_PROG_PKG_CONFIG
+ AC_CHECK_TOOL(WINDRES, windres, :)
+ AC_CHECK_PROGS(GITLOG_TO_CHANGELOG, gitlog-to-changelog,
+                [build-aux/gitlog-to-changelog])
+-- 
+2.3.6
+
