@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.26.ebuild,v 1.7 2015/07/18 13:43:07 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.32.ebuild,v 1.1 2015/07/18 13:43:07 bircoph Exp $
 
 EAPI=5
 
@@ -22,16 +22,16 @@ HOMEPAGE="http://root.cern.ch/"
 
 SLOT="0/$(get_version_component_range 1-3 ${PV})"
 LICENSE="LGPL-2.1 freedist MSttfEULA LGPL-3 libpng UoI-NCSA"
-IUSE="+X afs avahi c++11 c++14 doc emacs examples fits fftw
-	graphviz http kerberos ldap +math minimal mpi mysql odbc
+IUSE="+X afs avahi c++11 c++14 doc emacs examples fits fftw gdml
+	graphviz http kerberos ldap +math +memstat mpi mysql odbc
 	+opengl openmp oracle postgres prefix pythia6 pythia8
-	python qt4 +reflex ruby sqlite ssl xinetd xml xrootd"
+	python qt4 +reflex ruby shadow sqlite ssl table +tiff xinetd xml xrootd"
 
 # TODO: add support for: davix
 # TODO: unbundle: vdt
 
 REQUIRED_USE="
-	!X? ( !minimal? ( !opengl !qt4 ) )
+	!X? ( !opengl !qt4 !tiff )
 	mpi? ( math !openmp )
 	openmp? ( math !mpi )
 	python? ( ${PYTHON_REQUIRED_USE} )
@@ -43,66 +43,60 @@ CDEPEND="
 	dev-libs/libpcre:3=
 	media-fonts/dejavu
 	media-libs/freetype:2=
-	media-libs/giflib:0=
 	media-libs/libpng:0=
-	media-libs/tiff:0=
 	sys-libs/zlib:0=
-	virtual/jpeg:0
-	virtual/shadow
 	X? (
 		media-libs/ftgl:0=
 		media-libs/glew:0=
 		x11-libs/libX11:0=
 		x11-libs/libXext:0=
 		x11-libs/libXpm:0=
-		!minimal? (
-			|| (
-				media-libs/libafterimage:0=[gif,jpeg,png,tiff]
-				>=x11-wm/afterstep-2.2.11:0=[gif,jpeg,png,tiff]
-			)
-			opengl? ( virtual/opengl virtual/glu x11-libs/gl2ps:0= )
-			qt4? (
-				dev-qt/qtgui:4=
-				dev-qt/qtopengl:4=
-				dev-qt/qt3support:4=
-				dev-qt/qtsvg:4=
-				dev-qt/qtwebkit:4=
-				dev-qt/qtxmlpatterns:4=
-			)
-			x11-libs/libXft:0=
+		|| (
+			media-libs/libafterimage:0=[gif,jpeg,png,tiff?]
+			>=x11-wm/afterstep-2.2.11:0=[gif,jpeg,png,tiff?]
 		)
+		opengl? ( virtual/opengl virtual/glu x11-libs/gl2ps:0= )
+		qt4? (
+			dev-qt/qtgui:4=
+			dev-qt/qtopengl:4=
+			dev-qt/qt3support:4=
+			dev-qt/qtsvg:4=
+			dev-qt/qtwebkit:4=
+			dev-qt/qtxmlpatterns:4=
+		)
+		x11-libs/libXft:0=
 	)
-	!minimal? (
-		afs? ( net-fs/openafs )
-		avahi? ( net-dns/avahi:0= )
-		emacs? ( virtual/emacs )
-		fits? ( sci-libs/cfitsio:0= )
-		fftw? ( sci-libs/fftw:3.0= )
-		graphviz? ( media-gfx/graphviz:0= )
-		http? ( dev-libs/fcgi:0= )
-		kerberos? ( virtual/krb5 )
-		ldap? ( net-nds/openldap:0= )
-		math? (
-			sci-libs/gsl:0=
-			sci-mathematics/unuran:0=
-			mpi? ( virtual/mpi )
-		)
-		mysql? ( virtual/mysql )
-		odbc? ( || ( dev-db/libiodbc:0= dev-db/unixODBC:0= ) )
-		oracle? ( dev-db/oracle-instantclient-basic:0= )
-		postgres? ( dev-db/postgresql:= )
-		pythia6? ( sci-physics/pythia:6= )
-		pythia8? ( >=sci-physics/pythia-8.1.80:8= <sci-physics/pythia-8.2.0:8= )
-		python? ( ${PYTHON_DEPS} )
-		ruby? (
-			dev-lang/ruby:=
-			dev-ruby/rubygems:=
-		)
-		sqlite? ( dev-db/sqlite:3= )
-		ssl? ( dev-libs/openssl:0= )
-		xml? ( dev-libs/libxml2:2= )
-		xrootd? ( >=net-libs/xrootd-3.3.5:0= )
-	)"
+	afs? ( net-fs/openafs )
+	avahi? ( net-dns/avahi:0= )
+	emacs? ( virtual/emacs )
+	fits? ( sci-libs/cfitsio:0= )
+	fftw? ( sci-libs/fftw:3.0= )
+	graphviz? ( media-gfx/graphviz:0= )
+	http? ( dev-libs/fcgi:0= )
+	kerberos? ( virtual/krb5 )
+	ldap? ( net-nds/openldap:0= )
+	math? (
+		sci-libs/gsl:0=
+		sci-mathematics/unuran:0=
+		mpi? ( virtual/mpi )
+	)
+	mysql? ( virtual/mysql )
+	odbc? ( || ( dev-db/libiodbc:0= dev-db/unixODBC:0= ) )
+	oracle? ( dev-db/oracle-instantclient-basic:0= )
+	postgres? ( dev-db/postgresql:= )
+	pythia6? ( sci-physics/pythia:6= )
+	pythia8? ( >=sci-physics/pythia-8.1.80:8= <sci-physics/pythia-8.2.0:8= )
+	python? ( ${PYTHON_DEPS} )
+	ruby? (
+		dev-lang/ruby:=
+		dev-ruby/rubygems:=
+	)
+	shadow? ( virtual/shadow )
+	sqlite? ( dev-db/sqlite:3= )
+	ssl? ( dev-libs/openssl:0= )
+	xml? ( dev-libs/libxml2:2= )
+	xrootd? ( >=net-libs/xrootd-3.3.5:0= )
+"
 
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
@@ -111,7 +105,7 @@ RDEPEND="${CDEPEND}
 	reflex? ( dev-cpp/gccxml )
 	xinetd? ( sys-apps/xinetd )"
 
-PDEPEND="doc? ( !minimal? ( ~app-doc/root-docs-${PV}[http=,math=] ) )"
+PDEPEND="doc? ( ~app-doc/root-docs-${PV}[http=,math=] )"
 
 S="${WORKDIR}/${PN}"
 
@@ -167,8 +161,6 @@ pkg_setup() {
 	enewgroup rootd
 	enewuser rootd -1 -1 /var/spool/rootd rootd
 
-	use minimal && return
-
 	if use math; then
 		if use openmp; then
 			if [[ "$(tc-getCXX)" == *g++* && "$(tc-getCXX)" != *clang++* ]] && ! tc-has-openmp; then
@@ -195,7 +187,6 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-5.32.00-dotfont.patch \
 		"${FILESDIR}"/${PN}-5.34.05-nobyte-compile.patch \
 		"${FILESDIR}"/${PN}-5.34.13-unuran.patch \
-		"${FILESDIR}"/${PN}-5.34.13-desktop.patch \
 		"${FILESDIR}"/${PN}-5.34.26-ldflags.patch
 
 	# make sure we use system libs and headers
@@ -271,77 +262,72 @@ src_configure() {
 		--docdir="${EPREFIX}${DOC_DIR}"
 		--tutdir="${EPREFIX}${DOC_DIR}/examples/tutorials"
 		--testdir="${EPREFIX}${DOC_DIR}/examples/tests"
-		--disable-werror
-		--nohowto
 		--cflags='${CFLAGS}'
 		--cxxflags='${CXXFLAGS}'
+		--disable-builtin-afterimage
+		--disable-builtin-ftgl
+		--disable-builtin-freetype
+		--disable-builtin-glew
+		--disable-builtin-lzma
+		--disable-builtin-pcre
+		--disable-builtin-zlib
+		--disable-cling
+		--disable-werror
+		--enable-explicitlink
+		--enable-shared
+		--enable-soversion
+		--fail-on-missing
+		--nohowto
+		--with-afs-shared=yes
+		--with-sys-iconpath="${EPREFIX}/usr/share/pixmaps"
+		$(use_enable X x11)
+		$(use_enable X asimage)
+		$(use_enable X xft)
+		$(use_enable afs)
+		$(use_enable avahi bonjour)
+		$(use_enable c++11 cxx11)
+		$(use_enable c++14 cxx14)
+		$(use_enable fits fitsio)
+		$(use_enable fftw fftw3)
+		$(use_enable gdml)
+		$(use_enable graphviz gviz)
+		$(use_enable http)
+		$(use_enable kerberos krb5)
+		$(use_enable ldap)
+		$(use_enable math genvector)
+		$(use_enable math gsl-shared)
+		$(use_enable math mathmore)
+		$(use_enable math minuit2)
+		$(use_enable math roofit)
+		$(use_enable math tmva)
+		$(use_enable math vc)
+		$(use_enable math vdt)
+		$(use_enable math unuran)
+		$(use_enable memstat)
+		$(use_enable mysql)
+		$(usex mysql "--with-mysql-incdir=${EPREFIX}/usr/include/mysql" "")
+		$(use_enable odbc)
+		$(use_enable opengl)
+		$(use_enable oracle)
+		$(use_enable postgres pgsql)
+		$(use_enable prefix rpath)
+		$(use_enable pythia6)
+		$(use_enable pythia8)
+		$(use_enable python)
+		$(use_enable qt4 qt)
+		$(use_enable qt4 qtgsi)
+		$(use_enable reflex cintex)
+		$(use_enable reflex)
+		$(use_enable ruby)
+		$(use_enable shadow shadowpw)
+		$(use_enable sqlite)
+		$(use_enable ssl)
+		$(use_enable table)
+		$(use_enable tiff astiff)
+		$(use_enable xml)
+		$(use_enable xrootd)
+		${EXTRA_ECONF}
 	)
-
-	if use minimal; then
-		myconf+=( $(usex X --gminimal --minimal) )
-	else
-		myconf+=(
-			--with-afs-shared=yes
-			--with-sys-iconpath="${EPREFIX}/usr/share/pixmaps"
-			--disable-builtin-afterimage
-			--disable-builtin-ftgl
-			--disable-builtin-freetype
-			--disable-builtin-glew
-			--disable-builtin-pcre
-			--disable-builtin-zlib
-			--disable-builtin-lzma
-			--disable-cling
-			--enable-astiff
-			--enable-explicitlink
-			--enable-gdml
-			--enable-memstat
-			--enable-shadowpw
-			--enable-shared
-			--enable-soversion
-			--enable-table
-			--fail-on-missing
-			$(use_enable X x11)
-			$(use_enable X asimage)
-			$(use_enable X xft)
-			$(use_enable afs)
-			$(use_enable avahi bonjour)
-			$(use_enable c++11 cxx11)
-			$(use_enable c++14 cxx14)
-			$(use_enable fits fitsio)
-			$(use_enable fftw fftw3)
-			$(use_enable graphviz gviz)
-			$(use_enable http)
-			$(use_enable kerberos krb5)
-			$(use_enable ldap)
-			$(use_enable math gsl-shared)
-			$(use_enable math genvector)
-			$(use_enable math mathmore)
-			$(use_enable math minuit2)
-			$(use_enable math roofit)
-			$(use_enable math tmva)
-			$(use_enable math unuran)
-			$(use_enable mysql)
-			$(usex mysql "--with-mysql-incdir=${EPREFIX}/usr/include/mysql" "")
-			$(use_enable odbc)
-			$(use_enable opengl)
-			$(use_enable oracle)
-			$(use_enable postgres pgsql)
-			$(use_enable prefix rpath)
-			$(use_enable pythia6)
-			$(use_enable pythia8)
-			$(use_enable python)
-			$(use_enable qt4 qt)
-			$(use_enable qt4 qtgsi)
-			$(use_enable reflex cintex)
-			$(use_enable reflex)
-			$(use_enable ruby)
-			$(use_enable sqlite)
-			$(use_enable ssl)
-			$(use_enable xml)
-			$(use_enable xrootd)
-			${EXTRA_ECONF}
-		)
-	fi
 
 	# usex can't be used here, because pg_config may be not
 	# installed with USE="-postgres"
@@ -356,7 +342,7 @@ src_compile() {
 		F77OPT="${FFLAGS}" \
 		ROOTSYS="${S}" \
 		LD_LIBRARY_PATH="${S}/lib"
-	use emacs && ! use minimal && elisp-compile build/misc/*.el
+	use emacs && elisp-compile build/misc/*.el
 }
 
 daemon_install() {
@@ -412,21 +398,19 @@ src_install() {
 
 	echo "LDPATH=${EPREFIX%/}/usr/$(get_libdir)/root" > 99root
 
-	if ! use minimal; then
-		use pythia8 && echo "PYTHIA8=${EPREFIX%/}/usr" >> 99root
-		if use python; then
-			echo "PYTHONPATH=${EPREFIX%/}/usr/$(get_libdir)/root" >> 99root
-			python_optimize "${D}/usr/$(get_libdir)/root"
-			use reflex && python_optimize "${D}/usr/$(get_libdir)/root/python/genreflex/"
-		fi
-		use ruby && \
-			echo "RUBYLIB=${EPREFIX%/}/usr/$(get_libdir)/root" >> 99root
-		use emacs && elisp-install ${PN} build/misc/*.{el,elc}
-		if use examples; then
-			# these should really be taken care of by the root make install
-			insinto ${DOC_DIR}/examples/tutorials/tmva
-			doins -r tmva/test
-		fi
+	use pythia8 && echo "PYTHIA8=${EPREFIX%/}/usr" >> 99root
+	if use python; then
+		echo "PYTHONPATH=${EPREFIX%/}/usr/$(get_libdir)/root" >> 99root
+		python_optimize "${D}/usr/$(get_libdir)/root"
+		use reflex && python_optimize "${D}/usr/$(get_libdir)/root/python/genreflex/"
+	fi
+	use ruby && \
+		echo "RUBYLIB=${EPREFIX%/}/usr/$(get_libdir)/root" >> 99root
+	use emacs && elisp-install ${PN} build/misc/*.{el,elc}
+	if use examples; then
+		# these should really be taken care of by the root make install
+		insinto ${DOC_DIR}/examples/tutorials/tmva
+		doins -r tmva/test
 	fi
 	doenvd 99root
 
