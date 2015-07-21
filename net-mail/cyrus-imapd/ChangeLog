@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.217 2015/07/21 15:37:46 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.218 2015/07/21 15:39:59 eras Exp $
+
+  21 Jul 2015; Eray Aslan <eras@gentoo.org> cyrus-imapd-2.4.18.ebuild:
+  Add missing slot to sqlite
 
 *cyrus-imapd-2.4.18 (21 Jul 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.18.ebuild,v 1.1 2015/07/21 15:37:46 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.18.ebuild,v 1.2 2015/07/21 15:39:59 eras Exp $
 
 EAPI=5
 inherit autotools db-use eutils multilib pam ssl-cert user toolchain-funcs
@@ -30,7 +30,7 @@ RDEPEND="sys-libs/zlib
 		)
 	postgres? ( dev-db/postgresql:* )
 	snmp? ( >=net-analyzer/net-snmp-5.2.2-r1 )
-	sqlite? ( dev-db/sqlite )
+	sqlite? ( dev-db/sqlite:3 )
 	ssl? ( >=dev-libs/openssl-0.9.6:* )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 snmp? ( net-analyzer/net-snmp[tcpd=] ) )"
 
