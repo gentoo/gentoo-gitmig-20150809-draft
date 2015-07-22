@@ -1,16 +1,16 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.6.0.ebuild,v 1.5 2015/07/22 12:48:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.9.0.ebuild,v 1.1 2015/07/22 12:48:53 xmw Exp $
 
 EAPI=5
 
-inherit autotools eutils check-reqs multilib java-pkg-opt-2 flag-o-matic versionator
+inherit autotools eutils check-reqs multilib java-pkg-opt-2 flag-o-matic
 
 DESCRIPTION="Software development platform for CAD/CAE, 3D surface/solid modeling and data exchange"
 HOMEPAGE="http://www.opencascade.org/"
-SRC_URI="http://files.opencascade.com/OCCT/OCC_${PV}_release/OpenCASCADE$(delete_all_version_separators).tgz"
+SRC_URI="http://files.opencascade.com/OCCT/OCC_${PV}_release/opencascade-${PV}.tgz"
 
-LICENSE="Open-CASCADE-Technology-Public-License-6.6"
+LICENSE="|| ( Open-CASCADE-LGPL-2.1-Exception-1.0 LGPL-2.1 )"
 SLOT="${PV}"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc examples freeimage gl2ps java qt4 +tbb"
@@ -31,8 +31,6 @@ DEPEND="app-eselect/eselect-opencascade
 	tbb? ( dev-cpp/tbb )"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/ros
-
 # http://bugs.gentoo.org/show_bug.cgi?id=352435
 # http://www.gentoo.org/foundation/en/minutes/2011/20110220_trustees.meeting_log.txt
 RESTRICT="bindist mirror"
@@ -49,9 +47,7 @@ src_prepare() {
 	java-pkg-opt-2_src_prepare
 
 	epatch \
-		"${FILESDIR}"/${P}-deprecated-glx-api.patch \
-		"${FILESDIR}"/${P}-fixed-DESTDIR.patch \
-		"${FILESDIR}"/${PN}-6.5.4-fixed-tbb-VERSION.patch
+		"${FILESDIR}"/${PN}-6.8.0-fixed-DESTDIR.patch
 
 	# Feed environment variables used by Opencascade compilation
 	my_install_dir=${EROOT}usr/$(get_libdir)/${P}/ros
@@ -112,7 +108,7 @@ TCL_LIBRARY=${my_sys_lib}/tcl$(grep TCL_VER /usr/include/tcl.h | sed 's/^.*"\(.*
 		-e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" \
 		-e "s:\$qt/include:\$qt/include/qt4:g"\
 		-e "s:\$qt/lib:\$qt/$(get_libdir)/qt4:g"\
-		-i configure.* || die
+		-i configure.ac || die
 	eautoreconf
 }
 
@@ -130,7 +126,6 @@ src_configure() {
 		$(use java && echo "--with-java-include=$(java-config -O)/include" || echo "--without-java-include") \
 		$(use_enable debug) \
 		$(use_enable !debug production)
-	#$(use_with freeimage) \
 }
 
 src_install() {
@@ -152,10 +147,9 @@ src_install() {
 		doins -r data
 		doins -r samples
 	fi
-	dodoc doc/*.pdf
 	if use doc; then
 		insinto /usr/share/doc/${PF}
-		doins -r doc/{overview,ReferenceDocumentation}
+		doins -r doc/{overview,pdf,refman}
 	fi
 }
 
