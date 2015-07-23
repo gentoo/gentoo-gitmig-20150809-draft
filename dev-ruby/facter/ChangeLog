@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.142 2015/07/23 22:47:41 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.143 2015/07/23 22:49:45 prometheanfire Exp $
+
+  23 Jul 2015; Matthew Thode <prometheanfire@gentoo.org> facter-3.0.2-r1.ebuild:
+  signing, also, previous commit fixed bug 555624
 
 *facter-3.0.2-r1 (23 Jul 2015)
 
