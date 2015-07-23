@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.12.5284-r4.ebuild,v 1.2 2015/07/23 21:32:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.12.5284-r4.ebuild,v 1.3 2015/07/23 21:37:17 xmw Exp $
 
 EAPI=5
 
@@ -34,8 +34,7 @@ RDEPEND="dev-cpp/eigen:3
 	media-libs/SoQt
 	media-libs/coin[doc]
 	sci-libs/gts
-	>=sci-libs/opencascade-6.5.5
-	<sci-libs/opencascade-6.8.0
+	|| ( sci-libs/opencascade:6.7.1 sci-libs/opencascade:6.6.0 sci-libs/opencascade:6.5.5 )
 	sys-libs/zlib
 	virtual/glu"
 DEPEND="${RDEPEND}
@@ -50,7 +49,7 @@ S="${WORKDIR}/FreeCAD-${PV}"
 pkg_setup() {
 	fortran-2_pkg_setup
 	python_set_active_version 2
-	
+
 	[ -z "${CASROOT}" ] && die "empty \$CASROOT, run eselect opencascade set or define otherwise"
 }
 
