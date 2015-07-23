@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-3.0.1-r4.ebuild,v 1.2 2015/07/19 08:47:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-3.0.2-r1.ebuild,v 1.1 2015/07/23 22:47:41 prometheanfire Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 ruby22"
@@ -44,6 +44,7 @@ src_configure() {
 		-DCMAKE_INSTALL_PREFIX=/usr
 		-DCMAKE_INSTALL_SYSCONFDIR=/etc
 		-DCMAKE_INSTALL_LOCALSTATEDIR=/var
+		-DUSE_JRUBY_SUPPORT=FALSE
 	)
 	if use debug; then
 		mycmakeargs+=(
