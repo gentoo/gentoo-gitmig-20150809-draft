@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/files/run-crons-0.3.5,v 1.1 2015/07/22 07:12:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/files/run-crons-0.3.5,v 1.2 2015/07/23 02:53:54 vapier Exp $
 #
 # 12 Oct 2008; Thilo Bangert <bangert@gentoo.org> run-crons:
 #     ignore emacs backup files (bug #237200)
@@ -33,9 +33,12 @@
 LOCKDIR=/var/spool/cron/lastrun
 LOCKFILE=${LOCKDIR}/lock
 
-# Usage: log <args to logger>
+# Usage: log <level> <args to logger>
+# Log a message via syslog.
 log() {
-	logger -i -p cron.info -t run-crons "$@"
+	local level=$1
+	shift
+	logger -i -p "cron.${level}" -t run-crons "$@"
 }
 
 mkdir -p ${LOCKDIR}
@@ -108,11 +111,11 @@ for BASE in hourly daily weekly monthly ; do
 				.*|*~) continue ;;
 				esac
 
-				log "($(whoami)) CMD (${SCRIPT})"
+				log info "($(whoami)) CMD (${SCRIPT})"
 				$SCRIPT
 				ret=$?
 				if [ ${ret} -ne 0 ] ; then
-					log "CMD (${SCRIPT}) failed with exit status ${ret}"
+					log err "CMD (${SCRIPT}) failed with exit status ${ret}"
 					EXIT_STATUS=1
 				fi
 			fi
