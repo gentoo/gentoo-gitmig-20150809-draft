@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/qtwebkit-4.10.4.ebuild,v 1.1 2015/07/23 20:36:44 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/qtwebkit-4.10.4.ebuild,v 1.2 2015/07/23 20:49:20 pesa Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -51,6 +51,7 @@ DEPEND="${RDEPEND}
 	virtual/perl-Digest-MD5
 	virtual/perl-File-Spec
 	virtual/perl-Getopt-Long
+	virtual/pkgconfig[${MULTILIB_USEDEP}]
 "
 
 S=${WORKDIR}
