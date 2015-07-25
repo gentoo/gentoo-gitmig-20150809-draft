@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-0.1.3.ebuild,v 1.1 2015/07/25 21:15:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-0.1.3.ebuild,v 1.2 2015/07/25 21:16:53 dilfridge Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ HOMEPAGE="https://wiki.documentfoundation.org/DLP/Libraries/libvisio"
 LICENSE="|| ( GPL-2+ LGPL-2.1 MPL-1.1 )"
 SLOT="0"
 [[ ${PV} == 9999 ]] || \
-KEYWORDS="~amd64 ~arm ~hppa ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc64 ~x86"
 IUSE="doc static-libs test tools"
 
 RDEPEND="
