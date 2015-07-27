@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.85 2015/07/27 16:32:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.86 2015/07/27 16:34:10 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -873,7 +873,10 @@ python_wrapper_setup() {
 				#!/bin/sh
 				exec "${PYTHON}-config" "\${@}"
 			_EOF_
-			chmod +x "${workdir}/bin/python-config" || die
+			cp "${workdir}/bin/python-config" \
+				"${workdir}/bin/python${pyver}-config" || die
+			chmod +x "${workdir}/bin/python-config" \
+				"${workdir}/bin/python${pyver}-config" || die
 
 			# Python 2.6+.
 			ln -s "${PYTHON/python/2to3-}" "${workdir}"/bin/2to3 || die
@@ -883,7 +886,7 @@ python_wrapper_setup() {
 				"${workdir}"/pkgconfig/python.pc || die
 			ln -s python.pc "${workdir}"/pkgconfig/python${pyver}.pc || die
 		else
-			nonsupp+=( 2to3 python-config )
+			nonsupp+=( 2to3 python-config "python${pyver}-config" )
 		fi
 
 		local x
