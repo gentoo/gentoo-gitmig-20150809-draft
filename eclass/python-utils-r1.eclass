@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.87 2015/07/27 16:34:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.88 2015/07/27 16:35:19 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -896,7 +896,7 @@ python_wrapper_setup() {
 			cat >"${workdir}"/bin/${x} <<__EOF__
 #!/bin/sh
 echo "${x} is not supported by ${EPYTHON}" >&2
-exit 1
+exit 127
 __EOF__
 			chmod +x "${workdir}"/bin/${x} || die
 		done

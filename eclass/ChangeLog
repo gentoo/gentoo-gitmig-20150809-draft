@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1731 2015/07/27 16:34:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1732 2015/07/27 16:35:19 mgorny Exp $
+
+  27 Jul 2015; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
+  python_wrapper_setup(): make banned helpers exit with 127.
 
   27 Jul 2015; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
   Ban calling pythonN and pythonN-config when the other version of Python is
