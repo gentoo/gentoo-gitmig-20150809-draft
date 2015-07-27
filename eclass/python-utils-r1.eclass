@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.86 2015/07/27 16:34:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.87 2015/07/27 16:34:48 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -847,11 +847,13 @@ python_wrapper_setup() {
 		local EPYTHON PYTHON
 		python_export "${impl}" EPYTHON PYTHON
 
-		local pyver
+		local pyver pyother
 		if python_is_python3; then
 			pyver=3
+			pyother=2
 		else
 			pyver=2
+			pyother=3
 		fi
 
 		# Python interpreter
@@ -865,7 +867,7 @@ python_wrapper_setup() {
 		cp "${workdir}/bin/python" "${workdir}/bin/python${pyver}" || die
 		chmod +x "${workdir}/bin/python" "${workdir}/bin/python${pyver}" || die
 
-		local nonsupp=()
+		local nonsupp=( "python${pyother}" "python${pyother}-config" )
 
 		# CPython-specific
 		if [[ ${EPYTHON} == python* ]]; then
