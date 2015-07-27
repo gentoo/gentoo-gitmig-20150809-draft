@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.84 2015/07/25 10:07:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.85 2015/07/27 16:32:46 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -855,14 +855,25 @@ python_wrapper_setup() {
 		fi
 
 		# Python interpreter
-		ln -s "${PYTHON}" "${workdir}"/bin/python || die
-		ln -s python "${workdir}"/bin/python${pyver} || die
+		# note: we don't use symlinks because python likes to do some
+		# symlink reading magic that breaks stuff
+		# https://bugs.gentoo.org/show_bug.cgi?id=555752
+		cat > "${workdir}/bin/python" <<-_EOF_
+			#!/bin/sh
+			exec "${PYTHON}" "\${@}"
+		_EOF_
+		cp "${workdir}/bin/python" "${workdir}/bin/python${pyver}" || die
+		chmod +x "${workdir}/bin/python" "${workdir}/bin/python${pyver}" || die
 
 		local nonsupp=()
 
 		# CPython-specific
 		if [[ ${EPYTHON} == python* ]]; then
-			ln -s "${PYTHON}-config" "${workdir}"/bin/python-config || die
+			cat > "${workdir}/bin/python-config" <<-_EOF_
+				#!/bin/sh
+				exec "${PYTHON}-config" "\${@}"
+			_EOF_
+			chmod +x "${workdir}/bin/python-config" || die
 
 			# Python 2.6+.
 			ln -s "${PYTHON/python/2to3-}" "${workdir}"/bin/2to3 || die
