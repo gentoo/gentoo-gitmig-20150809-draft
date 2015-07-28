@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r13.ebuild,v 1.1 2015/07/28 12:35:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r13.ebuild,v 1.2 2015/07/28 12:45:26 jlec Exp $
 
 EAPI=5
 
@@ -53,6 +53,7 @@ src_prepare() {
 
 	sed \
 		-e "/AR/s:ar:$(tc-getAR):g" \
+		-e 's:0444:0644:g' \
 		-i src/Makefile.in || die
 
 	epatch \
@@ -64,6 +65,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-aclocal.patch
 
 	append-cflags -fPIC
+
+	mv configure.{in,ac} || die
 
 	eautoreconf
 }
