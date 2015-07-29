@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/glance
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.77 2015/07/29 18:16:39 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.78 2015/07/29 23:24:16 prometheanfire Exp $
+
+*glance-2015.1.1 (29 Jul 2015)
+
+  29 Jul 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +glance-2015.1.1.ebuild:
+  bup
 
   29 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> -glance-2015.1.0.ebuild:
   Drop insecure version (bug #556188)
