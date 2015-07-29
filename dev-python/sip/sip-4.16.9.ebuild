@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.16.9.ebuild,v 1.1 2015/07/22 03:21:29 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.16.9.ebuild,v 1.2 2015/07/29 16:55:44 pesa Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -33,23 +33,25 @@ IUSE="debug doc"
 
 DEPEND="${PYTHON_DEPS}"
 RDEPEND="${DEPEND}"
-
 [[ ${PV} == *9999* ]] && DEPEND+="
-	=dev-lang/python-2*
 	sys-devel/bison
 	sys-devel/flex
 	doc? ( dev-python/sphinx[$(python_gen_usedep 'python2*')] )
 "
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+[[ ${PV} == *9999* ]] && REQUIRED_USE+="
+	|| ( $(python_gen_useflags 'python2*') )
+"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.15.5-darwin.patch
 
 	if [[ ${PV} == *9999* ]]; then
-		python2 build.py prepare || die
+		python_setup 'python2*'
+		"${PYTHON}" build.py prepare || die
 		if use doc; then
-			python2 build.py doc || die
+			"${PYTHON}" build.py doc || die
 		fi
 	fi
 
