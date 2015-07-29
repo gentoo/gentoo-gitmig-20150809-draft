@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2015.1.9999.ebuild,v 1.4 2015/05/22 06:08:33 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2015.1.9999.ebuild,v 1.5 2015/07/29 23:26:39 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -30,7 +30,9 @@ DEPEND="
 			~dev-python/Babel-1.3[${PYTHON_USEDEP}]
 			>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
 			>=dev-python/fixtures-0.3.14[${PYTHON_USEDEP}]
+			<dev-python/fixtures-1.3.0[${PYTHON_USEDEP}]
 			>=dev-python/mock-1.0[${PYTHON_USEDEP}]
+			<dev-python/mock-1.1.0[${PYTHON_USEDEP}]
 			>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
 			!~dev-python/sphinx-1.2.0[${PYTHON_USEDEP}]
 			<dev-python/sphinx-1.3[${PYTHON_USEDEP}]
@@ -100,6 +102,7 @@ RDEPEND="
 	>=dev-python/keystonemiddleware-1.5.0[${PYTHON_USEDEP}]
 	<dev-python/keystonemiddleware-1.6.0[${PYTHON_USEDEP}]
 	>=dev-python/WSME-0.6[${PYTHON_USEDEP}]
+	<dev-python/WSME-0.7[${PYTHON_USEDEP}]
 	dev-python/posix_ipc[${PYTHON_USEDEP}]
 	swift? (
 		>=dev-python/python-swiftclient-2.2.0[${PYTHON_USEDEP}]
@@ -110,7 +113,7 @@ RDEPEND="
 	dev-python/paste[${PYTHON_USEDEP}]
 	>=dev-python/jsonschema-2.0.0[${PYTHON_USEDEP}]
 	<dev-python/jsonschema-3.0.0[${PYTHON_USEDEP}]
-	>=dev-python/python-keystoneclient-1.1.0[${PYTHON_USEDEP}]
+	>=dev-python/python-keystoneclient-1.2.0[${PYTHON_USEDEP}]
 	<dev-python/python-keystoneclient-1.4.0[${PYTHON_USEDEP}]
 	>=dev-python/pyopenssl-0.11[${PYTHON_USEDEP}]
 	>=dev-python/six-1.9.0[${PYTHON_USEDEP}]
@@ -126,7 +129,7 @@ RDEPEND="
 	<dev-python/oslo-policy-0.4.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-serialization-1.4.0[${PYTHON_USEDEP}]
 	<dev-python/oslo-serialization-1.5.0[${PYTHON_USEDEP}]
-	>=dev-python/retrying-1.2.2[${PYTHON_USEDEP}]
+	>=dev-python/retrying-1.2.3[${PYTHON_USEDEP}]
 	!~dev-python/retrying-1.3.0[${PYTHON_USEDEP}]
 	>=dev-python/osprofiler-0.3.0[${PYTHON_USEDEP}]
 	>=dev-python/glance_store-0.3.0[${PYTHON_USEDEP}]
