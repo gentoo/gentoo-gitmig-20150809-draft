@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/crossover-bin-14.0.3.ebuild,v 1.4 2015/07/29 22:06:16 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/crossover-bin-14.1.4.ebuild,v 1.1 2015/07/29 22:06:16 ryao Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -90,7 +90,7 @@ src_prepare() {
 
 	sed -i -e "s:\$link=\"\$xdgdir:\$link=\"${ED}\/\$xdgdir:" "${S}/lib/perl/CXMenu.pm"
 	sed -i \
-	-e "s:\"\(.*\)/applications:\"${ED}/\1/applications:" \
+		-e "s:\"\(.*\)/applications:\"${ED}/\1/applications:" \
 		-e "s:\"\(.*\)/desktop-directories:\"${ED}/\1/desktop-directories:" \
 		"${S}/lib/perl/CXMenuXDG.pm"
 
