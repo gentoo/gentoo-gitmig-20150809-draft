@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet-agent/puppet-agent-1.2.2-r2.ebuild,v 1.1 2015/07/29 22:12:50 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet-agent/puppet-agent-1.2.2-r2.ebuild,v 1.2 2015/07/29 22:15:01 prometheanfire Exp $
 
 EAPI=5
 inherit eutils systemd unpacker
@@ -16,7 +16,7 @@ SRC_URI="
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="puppetdb"
+IUSE="puppetdb selinux"
 RESTRICT="strip"
 
 CDEPEND="!app-admin/puppet
@@ -29,6 +29,10 @@ DEPEND="
 		${CDEPEND}"
 RDEPEND="${CDEPEND}
 		sys-apps/dmidecode
+		selinux? (
+			sys-libs/libselinux[ruby]
+			sec-policy/selinux-puppet
+		)
 		puppetdb? ( >=dev-ruby/puppetdb-termini-3.0.1-r2 )"
 
 S=${WORKDIR}
