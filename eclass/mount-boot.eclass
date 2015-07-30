@@ -1,14 +1,17 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mount-boot.eclass,v 1.18 2011/01/09 03:18:38 vapier Exp $
-#
+# $Header: /var/cvsroot/gentoo-x86/eclass/mount-boot.eclass,v 1.19 2015/07/30 06:53:02 vapier Exp $
+
+# @ECLASS: mount-boot.eclass
+# @MAINTAINER:
+# base-system@gentoo.org
+# @BLURB: functions for packages that install files into /boot
+# @DESCRIPTION:
 # This eclass is really only useful for bootloaders.
 #
 # If the live system has a separate /boot partition configured, then this
 # function tries to ensure that it's mounted in rw mode, exiting with an
-# error if it cant. It does nothing if /boot isn't a separate partition.
-#
-# MAINTAINER: base-system@gentoo.org
+# error if it can't. It does nothing if /boot isn't a separate partition.
 
 EXPORT_FUNCTIONS pkg_preinst pkg_postinst pkg_prerm pkg_postrm
 
