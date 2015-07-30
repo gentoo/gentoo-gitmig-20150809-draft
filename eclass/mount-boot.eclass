@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mount-boot.eclass,v 1.21 2015/07/30 07:03:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mount-boot.eclass,v 1.22 2015/07/30 07:14:49 vapier Exp $
 
 # @ECLASS: mount-boot.eclass
 # @MAINTAINER:
@@ -15,18 +15,37 @@
 
 EXPORT_FUNCTIONS pkg_preinst pkg_postinst pkg_prerm pkg_postrm
 
-mount-boot_mount_boot_partition() {
+# @FUNCTION: mount-boot_disabled
+# @INTERNAL
+# @DESCRIPTION:
+# Detect whether the current environment/build settings are such that we do not
+# want to mess with any mounts.
+mount-boot_is_disabled() {
 	# Since this eclass only deals with /boot, skip things when ROOT is active.
 	if [[ "${ROOT:-/}" != "/" ]] ; then
-		return
+		return 0
 	fi
 
-	if [[ -n ${DONT_MOUNT_BOOT} ]] ; then
-		return
-	else
-		elog "To avoid automounting and auto(un)installing with /boot,"
-		elog "just export the DONT_MOUNT_BOOT variable."
+	# If we're only building a package, then there's no need to check things.
+	if [[ "${MERGE_TYPE}" == "buildonly" ]] ; then
+		return 0
 	fi
+
+	# The user wants us to leave things be.
+	if [[ -n ${DONT_MOUNT_BOOT} ]] ; then
+		return 0
+	fi
+
+	# OK, we want to handle things ourselves.
+	return 1
+}
+
+mount-boot_mount_boot_partition() {
+	# Get out fast if possible.
+	mount-boot_is_disabled && return 0
+
+	elog "To avoid automounting and auto(un)installing with /boot,"
+	elog "just export the DONT_MOUNT_BOOT variable."
 
 	# note that /dev/BOOT is in the Gentoo default /etc/fstab file
 	local fstabstate=$(awk '!/^#|^[[:blank:]]+#|^\/dev\/BOOT/ {print $2}' /etc/fstab | egrep "^/boot$" )
@@ -80,9 +99,8 @@ mount-boot_pkg_prerm() {
 }
 
 mount-boot_umount_boot_partition() {
-	if [[ -n ${DONT_MOUNT_BOOT} ]] ; then
-		return
-	fi
+	# Get out fast if possible.
+	mount-boot_is_disabled && return 0
 
 	if [ -e /boot/.e.remount ] ; then
 		einfo "Automatically remounting /boot as ro as it was previously."
