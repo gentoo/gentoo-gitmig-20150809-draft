@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-resiliency/go-resiliency-9999.ebuild,v 1.1 2015/07/30 20:40:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-resiliency/go-resiliency-9999.ebuild,v 1.2 2015/07/30 20:41:40 zmedico Exp $
 
 EAPI=5
 
@@ -53,6 +53,6 @@ src_unpack() {
 fi
 
 src_install() {
-    rm -rf src/${EGO_SRC}/.git* || die
+	rm -rf src/${EGO_SRC}/.git* || die
 	golang-build_src_install
 }
