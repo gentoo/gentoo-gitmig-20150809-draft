@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mount-boot.eclass,v 1.20 2015/07/30 07:00:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mount-boot.eclass,v 1.21 2015/07/30 07:03:14 vapier Exp $
 
 # @ECLASS: mount-boot.eclass
 # @MAINTAINER:
@@ -16,6 +16,11 @@
 EXPORT_FUNCTIONS pkg_preinst pkg_postinst pkg_prerm pkg_postrm
 
 mount-boot_mount_boot_partition() {
+	# Since this eclass only deals with /boot, skip things when ROOT is active.
+	if [[ "${ROOT:-/}" != "/" ]] ; then
+		return
+	fi
+
 	if [[ -n ${DONT_MOUNT_BOOT} ]] ; then
 		return
 	else
