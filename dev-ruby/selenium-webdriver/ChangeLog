@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/selenium-webdriver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/selenium-webdriver/ChangeLog,v 1.69 2015/07/31 05:20:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/selenium-webdriver/ChangeLog,v 1.70 2015/07/31 05:23:04 graaff Exp $
+
+*selenium-webdriver-2.47.0 (31 Jul 2015)
+
+  31 Jul 2015; Hans de Graaff <graaff@gentoo.org>
+  +selenium-webdriver-2.47.0.ebuild:
+  Version bump.
 
   31 Jul 2015; Hans de Graaff <graaff@gentoo.org>
   -selenium-webdriver-2.43.0.ebuild, -selenium-webdriver-2.44.0.ebuild:
