@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/supernova
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/supernova/ChangeLog,v 1.13 2015/08/01 22:14:19 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/supernova/ChangeLog,v 1.14 2015/08/01 22:19:53 alunduil Exp $
+
+  01 Aug 2015; Alex Brandt <alunduil@gentoo.org> -supernova-1.0.5.ebuild:
+  remove version 1.0.5
 
 *supernova-2.0.5 (01 Aug 2015)
 
