@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/annogen/annogen-0.1.0.ebuild,v 1.4 2015/08/01 19:10:45 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/annogen/annogen-0.1.0.ebuild,v 1.5 2015/08/01 19:12:59 monsieurp Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="http://dist.codehaus.org/${PN}/distributions/${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 CDEPEND="java-virtuals/stax-api:0
 	java-virtuals/jdk-with-com-sun:0
@@ -24,7 +24,7 @@ CDEPEND="java-virtuals/stax-api:0
 RDEPEND=">=virtual/jdk-1.6
 		${CDEPEND}"
 
-DEPEND=">=virtual/jdk-1.6
+DEPEND=">=virtual/jre-1.6
 		app-arch/unzip
 		${CDEPEND}"
 
