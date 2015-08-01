@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/bnfc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/ChangeLog,v 1.23 2014/12/24 04:28:23 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/ChangeLog,v 1.24 2015/08/01 11:33:36 slyfox Exp $
+
+*bnfc-2.8 (01 Aug 2015)
+
+  01 Aug 2015; Sergei Trofimovich <slyfox@gentoo.org> +bnfc-2.8.ebuild:
+  Version bump.
 
 *bnfc-2.7.1 (24 Dec 2014)
 
