@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/libgrss-0.7.0.ebuild,v 1.1 2015/08/01 18:10:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/libgrss-0.7.0.ebuild,v 1.2 2015/08/01 18:11:11 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
-inherit autotools eutils gnome2
+inherit gnome2
 
 DESCRIPTION="LibGRSS is a library for easy management of RSS/Atom/Pie feeds"
 HOMEPAGE="http://live.gnome.org/Libgrss"

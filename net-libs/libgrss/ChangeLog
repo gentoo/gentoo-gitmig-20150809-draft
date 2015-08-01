@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgrss
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/ChangeLog,v 1.22 2015/08/01 18:10:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/ChangeLog,v 1.23 2015/08/01 18:11:11 eva Exp $
+
+  01 Aug 2015; Gilles Dartiguelongue <eva@gentoo.org> libgrss-0.7.0.ebuild:
+  Drop unused inherits.
 
 *libgrss-0.7.0 (01 Aug 2015)
 
