@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/parallel-3.2.0.3.ebuild,v 1.6 2015/08/02 11:15:48 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/parallel-3.2.0.3.ebuild,v 1.7 2015/08/02 11:17:06 slyfox Exp $
 
 EAPI=5
 
@@ -24,5 +24,6 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	cabal_chdeps \
-		'array      >= 0.1 && < 0.5' 'array      >= 0.1 && < 0.6'
+		'array      >= 0.1 && < 0.5' 'array      >= 0.1 && < 0.6' \
+		'deepseq >= 1.1 && < 1.4' 'deepseq >= 1.1'
 }
