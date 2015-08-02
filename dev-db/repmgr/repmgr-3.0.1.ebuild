@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/repmgr/repmgr-3.0.1.ebuild,v 1.1 2015/08/02 16:11:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/repmgr/repmgr-3.0.1.ebuild,v 1.2 2015/08/02 16:19:25 robbat2 Exp $
 
 EAPI=5
 inherit eutils
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
-DEPEND=">=dev-db/postgresql-9.3[server]"
+DEPEND=">=dev-db/postgresql-9.3[server,static-libs]"
 RDEPEND="${DEPEND}
 	net-misc/rsync"
 
