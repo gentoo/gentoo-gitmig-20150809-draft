@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/repmgr/repmgr-3.0.1.ebuild,v 1.2 2015/08/02 16:19:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/repmgr/repmgr-3.0.1.ebuild,v 1.3 2015/08/02 16:21:55 robbat2 Exp $
 
 EAPI=5
-inherit eutils
+inherit eutils multilib
 DESCRIPTION="PostgreSQL Replication Manager"
 HOMEPAGE="http://www.repmgr.org/"
 SRC_URI="http://www.repmgr.org/download/${P}.tar.gz"
@@ -23,9 +23,9 @@ src_compile() {
 
 src_install() {
     emake DESTDIR="${D}" USE_PGXS=1 install
-	find $D -ls
 	export PGSLOT="$(postgresql-config show)"
 	einfo "PGSLOT: ${PGSLOT}"
+	PGBASEDIR=/usr/$(get_libdir)/postgresql-${PGSLOT}
 	PGBINDIR=${PGBASEDIR}/bin/
 	PGCONTRIB=/usr/share/postgresql-${PGSLOT}/contrib/
 	dodir $PGCONTRIB $PGBINDIR
