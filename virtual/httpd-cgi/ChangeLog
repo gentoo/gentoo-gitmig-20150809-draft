@@ -1,6 +1,9 @@
 # ChangeLog for virtual/httpd-cgi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-cgi/ChangeLog,v 1.15 2015/08/02 22:03:49 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-cgi/ChangeLog,v 1.16 2015/08/02 22:08:02 monsieurp Exp $
+
+  02 Aug 2015; Patrice Clement <monsieurp@gentoo.org> -httpd-cgi-0.ebuild:
+  Remove old.
 
   02 Aug 2015; Patrice Clement <monsieurp@gentoo.org> httpd-cgi-0-r1.ebuild,
   httpd-cgi-0.ebuild:
