@@ -1,0 +1,10 @@
+# ChangeLog for dev-db/repmgr
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/repmgr/ChangeLog,v 1.1 2015/08/02 16:11:45 robbat2 Exp $
+
+*repmgr-3.0.1 (02 Aug 2015)
+
+  02 Aug 2015; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +repmgr-3.0.1.ebuild:
+  Initial commit, based on ebuild from https://github.com/uu/ubuilds/blob/master
+  /dev-db/repmgr/repmgr-9999.ebuild.
