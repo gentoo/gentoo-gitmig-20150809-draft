@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/cppcheck-1.69-r1.ebuild,v 1.1 2015/08/04 16:57:58 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/cppcheck-1.69-r1.ebuild,v 1.2 2015/08/04 16:59:08 pinkbyte Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE="htmlreport pcre qt4"
 
 RDEPEND="htmlreport? ( dev-python/pygments[${PYTHON_USEDEP}] )
