@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pxml/pxml-0.2.11.ebuild,v 1.1 2015/08/04 09:36:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pxml/pxml-0.2.11-r1.ebuild,v 1.1 2015/08/04 09:56:10 jlec Exp $
 
 EAPI=5
 
@@ -26,6 +26,13 @@ DEPEND="${RDEPEND}
 	test? (
 		>=dev-python/nose-1.3.0[${PYTHON_USEDEP}]
 	)"
+
+python_prepare_all() {
+	sed \
+		-e '/distribute/d' \
+		-i setup.py || die
+	distutils-r1_python_prepare_all
+}
 
 python_test() {
 	nosetests --verbose || die
