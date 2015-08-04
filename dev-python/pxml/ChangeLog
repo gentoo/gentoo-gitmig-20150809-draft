@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pxml
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pxml/ChangeLog,v 1.1 2015/08/04 09:36:40 jlec Exp $
+
+*pxml-0.2.11 (04 Aug 2015)
+
+  04 Aug 2015; Justin Lecher <jlec@gentoo.org> +metadata.xml,
+  +pxml-0.2.11.ebuild:
+  New package, ebuild written by me
