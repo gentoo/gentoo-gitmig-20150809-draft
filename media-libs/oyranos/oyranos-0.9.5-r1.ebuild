@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.5-r1.ebuild,v 1.1 2015/08/05 11:03:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.5-r1.ebuild,v 1.2 2015/08/05 11:06:52 xmw Exp $
 
 EAPI=5
 
@@ -53,7 +53,7 @@ RDEPEND="${COMMON_DEPEND}
 	media-libs/icc-profiles-basiccolor-printing2009
 	media-libs/icc-profiles-openicc"
 
-DOCS=( AUTHORS.md ChangeLog.md README.md )
+DOCS=( AUTHORS ChangeLog README )
 RESTRICT="test"
 
 MULTILIB_CHOST_TOOLS=(
