@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.104 2015/08/05 06:27:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.105 2015/08/05 06:43:00 vapier Exp $
 
 EAPI=5
 
@@ -522,14 +522,14 @@ src_install() {
 	newdoc pc-bios/README README.pc-bios
 	dodoc docs/qmp/*.txt
 
-	# Remove SeaBIOS since we're using the SeaBIOS packaged one
-	rm "${ED}/usr/share/qemu/bios.bin"
-	if use qemu_softmmu_targets_x86_64 || use qemu_softmmu_targets_i386; then
-		dosym ../seabios/bios.bin /usr/share/qemu/bios.bin
-	fi
-
-	# Remove vgabios since we're using the vgabios packaged one
 	if [[ -n ${softmmu_targets} ]]; then
+		# Remove SeaBIOS since we're using the SeaBIOS packaged one
+		rm "${ED}/usr/share/qemu/bios.bin"
+		if use qemu_softmmu_targets_x86_64 || use qemu_softmmu_targets_i386; then
+			dosym ../seabios/bios.bin /usr/share/qemu/bios.bin
+		fi
+
+		# Remove vgabios since we're using the vgabios packaged one
 		rm "${ED}/usr/share/qemu/vgabios.bin"
 		rm "${ED}/usr/share/qemu/vgabios-cirrus.bin"
 		rm "${ED}/usr/share/qemu/vgabios-qxl.bin"
