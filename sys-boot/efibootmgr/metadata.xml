@@ -8,7 +8,6 @@
 	<maintainer>
 		<email>yannick.schaeffer@epfl.ch</email>
 		<name>Yannick Schaeffer</name>
-		<description>Mantainer. Assign bugs to him</description>
 	</maintainer>
 	<herd>proxy-maintainers</herd>
 	<longdescription>
