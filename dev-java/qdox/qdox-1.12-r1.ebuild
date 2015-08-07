@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/qdox-1.12-r1.ebuild,v 1.9 2015/02/23 12:21:28 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/qdox-1.12-r1.ebuild,v 1.10 2015/08/07 23:12:51 sping Exp $
 
 EAPI="5"
 
@@ -33,7 +33,7 @@ RDEPEND=">=virtual/jre-1.4
 
 java_prepare() {
 	if ! use test ; then
-		rm src/main/com/thoughtworks/qdox/tools/QDoxTester.java
+		rm src/java/com/thoughtworks/qdox/tools/QDoxTester.java
 		rm -rf src/java/com/thoughtworks/qdox/junit
 		rm -rf src/test
 	fi
