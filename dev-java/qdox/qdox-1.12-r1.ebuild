@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/qdox-1.12-r1.ebuild,v 1.10 2015/08/07 23:12:51 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/qdox-1.12-r1.ebuild,v 1.11 2015/08/07 23:30:38 sping Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="Parser for extracting class/interface/method definitions"
-HOMEPAGE="http://qdox.codehaus.org/"
+HOMEPAGE="https://github.com/codehaus/qdox"
 SRC_URI="http://snapshots.repository.codehaus.org/com/thoughtworks/qdox/qdox/1.12-SNAPSHOT/qdox-1.12-20100531.205010-5-project.tar.gz  "
 
 LICENSE="Apache-2.0"
