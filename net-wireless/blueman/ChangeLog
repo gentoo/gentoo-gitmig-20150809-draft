@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/blueman
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.37 2015/08/08 15:35:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.38 2015/08/08 15:42:23 mgorny Exp $
+
+  08 Aug 2015; Michał Górny <mgorny@gentoo.org> -blueman-1.23-r1.ebuild,
+  -blueman-1.23.ebuild, -blueman-1.23_p20140717-r1.ebuild,
+  -files/blueman-1.23_p20140717-set-codeset-for-gettext-to-UTF-8-always.patch,
+  blueman-1.23-r2.ebuild, blueman-1.98_p20150105.ebuild:
+  Clean up old. Update HOMEPAGE in the remaining ebuilds.
 
 *blueman-2.0 (08 Aug 2015)
 
