@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tablelayout/tablelayout-1.0.ebuild,v 1.1 2015/08/08 10:47:05 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tablelayout/tablelayout-1.0.ebuild,v 1.2 2015/08/08 10:48:07 monsieurp Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ DESCRIPTION="Layout manager that makes creating user interfaces fast and easy"
 HOMEPAGE="https://tablelayout.dev.java.net/"
 SRC_URI="http://www.oracle.com/technetwork/java/${PN}.jar"
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE=""
 
