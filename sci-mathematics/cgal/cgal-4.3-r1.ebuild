@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-4.3.ebuild,v 1.5 2015/08/08 10:42:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-4.3-r1.ebuild,v 1.1 2015/08/08 10:42:39 xmw Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SRC_URI="
 
 LICENSE="LGPL-3 GPL-3 Boost-1.0"
 SLOT="0"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples +gmp mpfi qt4"
 
 RDEPEND="
@@ -45,6 +45,8 @@ S="${WORKDIR}/${MY_P}"
 DOCS="AUTHORS CHANGES* README"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-cmake-3.3.patch
+
 	cmake-utils_src_prepare
 	sed \
 		-e '/install(FILES AUTHORS/d' \
@@ -52,7 +54,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local mycmakeargs+=(
+	local mycmakeargs=(
 		-DCGAL_INSTALL_LIB_DIR=$(get_libdir)
 		-DWITH_CGAL_Qt3=OFF
 		-DWITH_LEDA=OFF
