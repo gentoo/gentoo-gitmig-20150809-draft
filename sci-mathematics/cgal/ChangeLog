@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/cgal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/ChangeLog,v 1.27 2015/08/08 10:42:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/ChangeLog,v 1.28 2015/08/08 10:57:06 xmw Exp $
+
+*cgal-4.6.1 (08 Aug 2015)
+
+  08 Aug 2015; Michael Weber <xmw@gentoo.org> +cgal-4.6.1.ebuild:
+  Version bump (thanks Helmut Jarausch, bug 555732).
 
 *cgal-4.3-r1 (08 Aug 2015)
 
