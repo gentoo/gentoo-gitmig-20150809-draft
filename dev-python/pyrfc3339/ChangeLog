@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyrfc3339
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrfc3339/ChangeLog,v 1.1 2015/08/08 13:43:28 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrfc3339/ChangeLog,v 1.2 2015/08/08 13:44:06 mrueg Exp $
+
+  08 Aug 2015; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
+  Add python herd.
 
 *pyrfc3339-0.2 (08 Aug 2015)
 
