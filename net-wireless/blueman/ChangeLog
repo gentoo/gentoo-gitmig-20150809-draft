@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/blueman
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.35 2015/08/08 15:03:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.36 2015/08/08 15:11:45 mgorny Exp $
+
+  08 Aug 2015; Michał Górny <mgorny@gentoo.org> blueman-9999.ebuild:
+  Fix USE=appindicator and deps for USE=pulseaudio.
 
   08 Aug 2015; Michał Górny <mgorny@gentoo.org>
   -files/blueman-9999-plugins-conf-file.patch, blueman-9999.ebuild,

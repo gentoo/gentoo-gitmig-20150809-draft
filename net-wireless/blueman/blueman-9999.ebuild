@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-9999.ebuild,v 1.9 2015/08/08 15:03:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-9999.ebuild,v 1.10 2015/08/08 15:11:45 mgorny Exp $
 
 EAPI="5"
 
@@ -47,7 +47,7 @@ RDEPEND="${COMMON_DEPEND}
 		net-misc/dhcp
 		>=net-misc/networkmanager-0.8 ) )
 	policykit? ( sys-auth/polkit )
-	pulseaudio? ( media-sound/pulseaudio )
+	pulseaudio? ( media-sound/pulseaudio[bluetooth] )
 	thunar? ( xfce-base/thunar )
 	!net-wireless/gnome-bluetooth
 "
@@ -65,6 +65,7 @@ src_configure() {
 		--docdir=/usr/share/doc/${PF} \
 		--disable-runtime-deps-check \
 		--disable-static \
+		$(use_enable appindicator) \
 		$(use_enable policykit polkit) \
 		$(use_enable nls) \
 		$(use_enable pulseaudio) \
